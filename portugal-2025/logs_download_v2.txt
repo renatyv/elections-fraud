@@ -1,0 +1,31 @@
+=== [20:30:25] START presidenciais2026_1S (organs 3)
+election: presidenciais2026_1S, electionId=51, organs=[3]
+roots: [54668, 54670, 54667]
+  level done: 3 territories
+  level done: 27 territories
+  level done: 403 territories
+  level done: 3771 territories
+territories: 3771
+results: {'ok': 3771, 'cached': 0, '404': 0}
+=== [20:43:21] DONE  presidenciais2026_1S
+=== [20:43:21] START presidenciais2026_2S (organs 3)
+election: presidenciais2026_2S, electionId=61, organs=[3]
+roots: [65609, 65611, 65608]
+  level done: 3 territories
+  level done: 27 territories
+  level done: 401 territories
+  level done: 3767 territories
+territories: 3767
+results: {'ok': 3767, 'cached': 0, '404': 0}
+=== [20:56:48] DONE  presidenciais2026_2S
+=== [20:56:48] START autarquicas2025 (organs 4)
+election: autarquicas2025, electionId=1, organs=[4]
+roots: [1]
+  level done: 1 territories
+  level done: 21 territories
+  level done: 329 territories
+  level done: 3588 territories
+territories: 3588
+results: {'ok': 3588, 'cached': 0, '404': 0}
+=== [21:08:29] DONE  autarquicas2025
+=== [21:08:29] V2 QUEUE FINISHED

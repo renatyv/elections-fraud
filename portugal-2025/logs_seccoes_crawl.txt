@@ -1,0 +1,1444 @@
+
+=== Alcobaça (1001, 48861 изб.) — https://www.cm-alcobaca.pt
+  sitemap-файлов: 6, URL: 1
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Pombal (1015, 48156 изб.) — https://www.cm-pombal.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Castelo Branco (0502, 47959 изб.) — https://www.cm-castelobranco.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Sesimbra (1511, 46548 изб.) — https://www.sesimbra.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Évora (0705, 46058 изб.) — https://www.cm-evora.pt
+  sitemap-файлов: 40, URL: 5613
+  кандидатов: 12, берем 12
+  документов выборов: тир A 1, тир B 1
+    [A] https://www.cm-evora.pt/wp-content/uploads/2026/03/Resultados-Eleicoes-Pessoal-Docente-EEP_CMEducacao-2025-2029.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0705_vora/Resultados-Eleicoes-Pessoal-Docente-EEP_CMEducacao-2025-2029.pdf (169808 B)
+
+=== Marco de Canaveses (1307, 45547 изб.) — https://www.cm-marco-canaveses.pt
+  sitemap-файлов: 20, URL: 6748
+  кандидатов: 11, берем 11
+  документов выборов: тир A 0, тир B 0
+
+=== Caldas da Rainha (1006, 45263 изб.) — https://www.mcr.pt
+  sitemap-файлов: 6, URL: 80
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Vila Verde (0313, 45158 изб.) — https://www.cm-vilaverde.pt
+  sitemap-файлов: 17, URL: 5139
+  кандидатов: 7, берем 7
+  документов выборов: тир A 1, тир B 0
+    [A] https://www.cm-vilaverde.pt/wp-content/uploads/2025/10/edital-apuramento-geral-resultados.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0313_vilaverde/edital-apuramento-geral-resultados.pdf (1140197 B)
+
+=== Montijo (1507, 44889 изб.) — https://www.mun-montijo.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Covilhã (0503, 43032 изб.) — https://www.cm-covilha.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Lousada (1305, 42669 изб.) — https://www.cm-lousada.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Chaves (1703, 42196 изб.) — https://www.chaves.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Águeda (0101, 41669 изб.) — https://www.cm-agueda.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ponte de Lima (1607, 40477 изб.) — https://www.cm-pontedelima.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ourém (1421, 40362 изб.) — https://www.ourem.pt
+  sitemap-файлов: 20, URL: 6341
+  кандидатов: 26, берем 20
+  документов выборов: тир A 13, тир B 11
+    [A] https://www.ourem.pt/wp-content/uploads/2021/01/Resultados-Provisorios_Ourem-2.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2021/10/Resultados-Definitivos_ASSEMBLEIA.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2021/10/Resultados-Definitivos_CAMARA.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2021/10/Resultados-Definitivos_FREGUESIA.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2024/06/Resultados-Provisorios-PE-09-06-2024.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2025/09/85526_2025Eleicao-dos-Orgaos-das-Autarquias-Locais_12-de-outubro-de-2025_Provas-Tipograficas-dos-Boletins-de-Voto.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2025/09/87245_2025_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2025/10/2025_99945_Publicitacao-de-Edital_Apuramento-Geral-Camara-Municipal-e-Assembleia-Municipal.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2025/10/2025_99947_Publicitacao-de-Edital_Apuramento-Geral-Assembleias-de-Freguesia.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2025/10/96487_Assembleia-de-Apuramento-Geral-do-Concelho-de-Ourem.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2025/10/Resultados-Provisorios_CAMARA.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2025/10/Resultados-Provisorios_FREGUESIAS.pdf   (A)
+    [A] https://www.ourem.pt/wp-content/uploads/2026/01/Resultados-PR2026.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-Provisorios_Ourem-2.pdf (609594 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-Definitivos_ASSEMBLEIA.pdf (490859 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-Definitivos_CAMARA.pdf (489217 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-Definitivos_FREGUESIA.pdf (490592 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-Provisorios-PE-09-06-2024.pdf (258588 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/85526_2025Eleicao-dos-Orgaos-das-Autarquias-Locais_12-de-outubro-de-2025_Provas-Tipograficas-dos-Boletins-de-Voto.pdf (872178 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/87245_2025_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (2018714 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/2025_99945_Publicitacao-de-Edital_Apuramento-Geral-Camara-Municipal-e-Assembleia-Municipal.pdf (285412 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/2025_99947_Publicitacao-de-Edital_Apuramento-Geral-Assembleias-de-Freguesia.pdf (1918782 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/96487_Assembleia-de-Apuramento-Geral-do-Concelho-de-Ourem.pdf (133810 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-Provisorios_CAMARA.pdf (260202 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-Provisorios_FREGUESIAS.pdf (265968 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1421_ourem/Resultados-PR2026.pdf (284123 B)
+
+=== Santa Cruz (3108, 40219 изб.) — https://www.cm-santacruz.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Olhão (0810, 37763 изб.) — https://www.cm-olhao.pt
+  sitemap-файлов: 7, URL: 107
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Alenquer (1101, 37463 изб.) — https://www.cm-alenquer.pt
+  sitemap-файлов: 7, URL: 174
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Guarda (0907, 36504 изб.) — https://www.mun-guarda.pt
+  sitemap-файлов: 33, URL: 2662
+  кандидатов: 4, берем 4
+  документов выборов: тир A 0, тир B 0
+
+=== Ílhavo (0110, 36377 изб.) — https://www.cm-ilhavo.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Albufeira (0801, 36146 изб.) — https://www.cm-albufeira.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Bragança (0402, 35175 изб.) — https://www.cm-braganca.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Marinha Grande (1010, 34152 изб.) — https://www.cm-mgrande.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Cantanhede (0602, 34080 изб.) — https://www.cm-cantanhede.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Trofa (1318, 33936 изб.) — https://www.mun-trofa.pt
+  sitemap-файлов: 7, URL: 356
+  кандидатов: 9, берем 9
+  документов выборов: тир A 9, тир B 60
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Autarquicas2021/Voto%20Antecipado%20-%20Eleitor%20Doente%20e%20Internado.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Autarquicas2021/Voto%20Antecipado%20-%20Eleitor%20Estudante.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Autarquicas2021/Voto%20Antecipado%20-%20Eleitor%20Residente%20em%20Lar.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Autarquicas2021/Voto%20Antecipado%20-%20Eleitor%20em%20Confinamento%20Ogrigat%C3%B3rio.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Autarquicas2021/Voto%20Antecipado%20-%20Motivos%20Profissionais.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Legislativas2022/VOTO%20NO%20ESTRANGEIRO_18%20a%2020%20jan%202022.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Legislativas2022/Voto%20Antecipado%20em%20Mobilidade.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/Presidenciais26/Mapa%20definitivo%20das%20Assembleias%20e%20Seccoes%20de%20Voto.pdf   (A)
+    [A] https://mun-trofa.pt/upload_files/1/1/Munic%C3%ADpio/Elei%C3%A7%C3%B5es/europeias24/Mapa%20definitivo%20das%20assembleias%20e%20sec%C3%A7%C3%B5es%20de%20voto.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Voto%20Antecipado%20-%20Eleitor%20Doente%20e%20Internado.pdf (1861955 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Voto%20Antecipado%20-%20Eleitor%20Estudante.pdf (1861778 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Voto%20Antecipado%20-%20Eleitor%20Residente%20em%20Lar.pdf (1861085 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Voto%20Antecipado%20-%20Eleitor%20em%20Confinamento%20Ogrigat%C3%B3rio.pdf (1862188 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Voto%20Antecipado%20-%20Motivos%20Profissionais.pdf (1862608 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/VOTO%20NO%20ESTRANGEIRO_18%20a%2020%20jan%202022.pdf (190695 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Voto%20Antecipado%20em%20Mobilidade.pdf (281708 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Mapa%20definitivo%20das%20Assembleias%20e%20Seccoes%20de%20Voto.pdf (197908 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1318_trofa/Mapa%20definitivo%20das%20assembleias%20e%20sec%C3%A7%C3%B5es%20de%20voto.pdf (589603 B)
+
+=== Esposende (0306, 33704 изб.) — https://www.cm-esposende.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Angra do Heroísmo (4301, 33395 изб.) — https://angradoheroismo.pt
+  sitemap-файлов: 16, URL: 4593
+  кандидатов: 10, берем 10
+  документов выборов: тир A 0, тир B 0
+
+=== Tomar (1418, 33222 изб.) — https://www.cm-tomar.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Câmara de Lobos (3102, 32879 изб.) — https://www.cm-camaradelobos.pt
+  sitemap-файлов: 6, URL: 277
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Abrantes (1401, 30906 изб.) — https://www.cm-abrantes.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Silves (0813, 30858 изб.) — https://www.cm-silves.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Torres Novas (1419, 30808 изб.) — https://www.cm-torresnovas.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Espinho (0107, 29347 изб.) — https://portal.cm-espinho.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ribeira Grande (4205, 29137 изб.) — https://www.cm-ribeiragrande.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Beja (0205, 28325 изб.) — https://www.cm-beja.pt
+  sitemap-файлов: 6, URL: 139
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Anadia (0103, 25449 изб.) — https://www.cm-anadia.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Benavente (1405, 25155 изб.) — https://www.cm-benavente.pt
+  sitemap-файлов: 34, URL: 3925
+  кандидатов: 21, берем 20
+  документов выборов: тир A 10, тир B 26
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2024/03/Legislativas2024-resultados-provisorios.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/05/Legislativas2025-resultados.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/10/EDITAL-APURAMENTO-GERAL-Assembleia-Municipal-de-Benavente-1.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/10/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Barrosa-1.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/10/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Benavente-1.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/10/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Samora-Correia-1.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/10/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Santo-Estevao-1.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/10/EDITAL-APURAMENTO-GERAL-Camara-Municipal-de-Benavente-1.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2025/10/EDITAL-No-515-Designacao-dos-Membros-da-Assembleia-de-Apuramento-Geral.pdf   (A)
+    [A] https://www.cm-benavente.pt/wp-content/uploads/2026/01/Presidenciais2026-resultados-provisorios.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/Legislativas2024-resultados-provisorios.pdf (242571 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/Legislativas2025-resultados.pdf (104269 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/EDITAL-APURAMENTO-GERAL-Assembleia-Municipal-de-Benavente-1.pdf (370198 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Barrosa-1.pdf (298742 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Benavente-1.pdf (316054 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Samora-Correia-1.pdf (325270 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/EDITAL-APURAMENTO-GERAL-Assembleia-de-Freguesia-de-Santo-Estevao-1.pdf (297622 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/EDITAL-APURAMENTO-GERAL-Camara-Municipal-de-Benavente-1.pdf (303286 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/EDITAL-No-515-Designacao-dos-Membros-da-Assembleia-de-Apuramento-Geral.pdf (318930 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1405_benavente/Presidenciais2026-resultados-provisorios.pdf (209980 B)
+
+=== Fundão (0504, 24745 изб.) — https://www.cm-fundao.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Peniche (1014, 24247 изб.) — https://www.cm-peniche.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Tondela (1821, 24181 изб.) — https://www.cm-tondela.pt
+  sitemap-файлов: 6, URL: 6
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Arcos de Valdevez (1601, 24095 изб.) — https://www.cmav.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Lourinhã (1108, 24050 изб.) — https://cm-lourinha.pt
+  sitemap-файлов: 6, URL: 146
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Estarreja (0108, 23997 изб.) — https://www.cm-estarreja.pt
+  sitemap-файлов: 6, URL: 182
+  кандидатов: 2, берем 2
+  документов выборов: тир A 9, тир B 55
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Desdobramento da Assembleia de Voto Antecipado em Mobilidade.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto - Freguesia de Canelas e Fermelã.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto - Freguesia de Pardilhó.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto - Freguesia de Salreu.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto- Freguesia de Beduido e Veiros.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de funcionamento das Assembleias ou Secções de Voto - Freguesia de Avanca.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Local Horario Funcionamento Assembleia de voto antecipado.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Votação antecipada dos Eleitores Internados em Estruturas Residenciais.pdf   (A)
+    [A] https://www.cm-estarreja.pt/media/Documentos/eleicoes/presidenciais 2021/Local de Funcionamento da Assembleia de Voto em Mobilidade.pdf   (A)
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Desdobramento da Assembleia de Voto Antecipado em Mobilidade.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto - Freguesia de Canelas e Fermelã.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto - Freguesia de Pardilhó.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto - Freguesia de Salreu.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de Funcionamento das Assembleias ou Secções de Voto- Freguesia de Beduido e Veiros.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Locais e Horários de funcionamento das Assembleias ou Secções de Voto - Freguesia de Avanca.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Local Horario Funcionamento Assembleia de voto antecipado.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/legislativas 2022/Votação antecipada dos Eleitores Internados em Estruturas Residenciais.pdf: InvalidURL
+    !! https://www.cm-estarreja.pt/media/Documentos/eleicoes/presidenciais 2021/Local de Funcionamento da Assembleia de Voto em Mobilidade.pdf: InvalidURL
+
+=== Santiago do Cacém (1509, 23896 изб.) — https://www.cm-santiagocacem.pt
+  sitemap-файлов: 15, URL: 5685
+  кандидатов: 20, берем 20
+  документов выборов: тир A 5, тир B 37
+    [A] https://www.cm-santiagocacem.pt/wp-content/uploads/Edital-Eleicao-dos-Orgaos-das-Autarquias-Locais-Assembleia-de-Apuramento-Geral-de-Santiago-do-Cacem-1.pdf   (A)
+    [A] https://www.cm-santiagocacem.pt/wp-content/uploads/Edital-Eleicao-dos-Orgaos-das-Autarquias-Locais-Assembleia-de-Apuramento-Geral-de-Santiago-do-Cacem.pdf   (A)
+    [A] https://www.cm-santiagocacem.pt/wp-content/uploads/Edital-Eleição-dos-Órgãos-das-Autarquias-Locais-Assembleia-de-Apuramento-Geral-de-Santiago-do-Cacém.pdf   (A)
+    [A] https://www.cm-santiagocacem.pt/wp-content/uploads/folheto_mapa_cicloteca.pdf   (A)
+    [A] https://www.cm-santiagocacem.pt/wp-content/uploads/resultado-eleicoes.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1509_santiagodocacem/Edital-Eleicao-dos-Orgaos-das-Autarquias-Locais-Assembleia-de-Apuramento-Geral-de-Santiago-do-Cacem-1.pdf (2858500 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1509_santiagodocacem/Edital-Eleicao-dos-Orgaos-das-Autarquias-Locais-Assembleia-de-Apuramento-Geral-de-Santiago-do-Cacem.pdf (2873897 B)
+    !! https://www.cm-santiagocacem.pt/wp-content/uploads/Edital-Eleição-dos-Órgãos-das-Autarquias-Locais-Assembleia-de-Apuramento-Geral-de-Santiago-do-Cacém.pdf: UnicodeEncodeError
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1509_santiagodocacem/folheto_mapa_cicloteca.pdf (1007665 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1509_santiagodocacem/resultado-eleicoes.pdf (1146959 B)
+
+=== Lagos (0807, 23886 изб.) — https://www.cm-lagos.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Lamego (1805, 23044 изб.) — https://www.cm-lamego.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vagos (0118, 22523 изб.) — https://www.cm-vagos.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Albergaria-a-Velha (0102, 22407 изб.) — https://www.cm-albergaria.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Mirandela (0407, 22376 изб.) — https://www.cm-mirandela.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Póvoa de Lanhoso (0309, 22034 изб.) — https://cm-povoadelanhoso.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vizela (0314, 21909 изб.) — https://www.cm-vizela.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Montemor-o-Velho (0610, 21627 изб.) — https://www.cm-montemorvelho.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Tavira (0814, 21296 изб.) — https://www.cm-tavira.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Oliveira do Bairro (0114, 20867 изб.) — https://www.cm-olb.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Cartaxo (1406, 20851 изб.) — https://www.cm-cartaxo.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Porto de Mós (1016, 20415 изб.) — https://www.municipio-portodemos.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Seia (0912, 20315 изб.) — https://www.cm-seia.pt
+  sitemap-файлов: 34, URL: 2028
+  кандидатов: 8, берем 8
+  документов выборов: тир A 1, тир B 4
+    [A] https://cm-seia.pt/wp-content/uploads/2025/10/Edital-Assembleia-Geral-de-Apuramento.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0912_seia/Edital-Assembleia-Geral-de-Apuramento.pdf (524469 B)
+
+=== Machico (3104, 19959 изб.) — https://www.cm-machico.pt
+  sitemap-файлов: 6, URL: 277
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Salvaterra de Magos (1415, 19868 изб.) — https://www.cm-salvaterrademagos.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Almeirim (1403, 19765 изб.) — https://www.cm-almeirim.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vale de Cambra (0119, 19733 изб.) — https://www.cm-valedecambra.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Arouca (0104, 19696 изб.) — https://www.cm-arouca.pt
+  sitemap-файлов: 22, URL: 3602
+  кандидатов: 11, берем 11
+  документов выборов: тир A 0, тир B 0
+
+=== Portalegre (1214, 19536 изб.) — https://www.cm-portalegre.pt
+  sitemap-файлов: 21, URL: 8155
+  кандидатов: 13, берем 13
+  документов выборов: тир A 0, тир B 6
+
+=== Odemira (0211, 19394 изб.) — https://www.cm-odemira.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== São João da Madeira (0116, 19346 изб.) — https://www.cm-sjm.pt
+  sitemap-файлов: 6, URL: 500
+  кандидатов: 3, берем 3
+  документов выборов: тир A 1, тир B 10
+    [A] https://www.cm-sjm.pt/files/files/Mapa_Quantidades_CPxx20220422.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0116_saojoaodamadeira/Mapa_Quantidades_CPxx20220422.pdf (202427 B)
+
+=== Lagoa (0806, 19057 изб.) — https://lagoa-acores.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Monção (1604, 18612 изб.) — https://www.cm-moncao.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Elvas (1207, 18486 изб.) — https://www.cm-elvas.pt
+  sitemap-файлов: 13, URL: 1846
+  кандидатов: 20, берем 20
+  документов выборов: тир A 4, тир B 13
+    [A] https://cm-elvas.pt/wp-content/uploads/2025/09/Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.cm-elvas.pt/wp-content/uploads/2021/01/resultados-eleicao-do-presidente-da-republica-2021.pdf   (A)
+    [A] https://www.cm-elvas.pt/wp-content/uploads/2021/09/Resultados_Autarquicas-2021.pdf   (A)
+    [A] https://www.cm-elvas.pt/wp-content/uploads/2022/02/Mapa-Legislativas-2022.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1207_elvas/Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (797132 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1207_elvas/resultados-eleicao-do-presidente-da-republica-2021.pdf (83156 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1207_elvas/Resultados_Autarquicas-2021.pdf (151316 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1207_elvas/Mapa-Legislativas-2022.pdf (93885 B)
+
+=== Valpaços (1712, 18162 изб.) — https://www.valpacos.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Rio Maior (1414, 17873 изб.) — https://www.cm-riomaior.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Azambuja (1103, 17756 изб.) — https://www.cm-azambuja.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Mangualde (1806, 17735 изб.) — https://www.cmmangualde.pt
+  sitemap-файлов: 7, URL: 9
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Amares (0301, 17673 изб.) — https://amares.pt
+  sitemap-файлов: 7, URL: 0
+  ! sitemap не найден
+
+=== Mealhada (0111, 17653 изб.) — https://www.cm-mealhada.pt
+  sitemap-файлов: 6, URL: 35
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Celorico de Basto (0305, 17294 изб.) — https://www.mun-celoricodebasto.pt
+  sitemap-файлов: 19, URL: 1323
+  кандидатов: 5, берем 5
+  документов выборов: тир A 0, тир B 0
+
+=== Oliveira do Hospital (0611, 17094 изб.) — https://www.cm-oliveiradohospital.pt
+  sitemap-файлов: 15, URL: 4108
+  кандидатов: 22, берем 20
+  документов выборов: тир A 0, тир B 0
+
+=== Macedo de Cavaleiros (0405, 17018 изб.) — https://www.cm-macedodecavaleiros.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Cabeceiras de Basto (0304, 16821 изб.) — https://cabeceirasdebasto.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vila Real de Santo António (0816, 16796 изб.) — https://www.cm-vrsa.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Entroncamento (1410, 16585 изб.) — https://www.cm-entroncamento.pt
+  sitemap-файлов: 7, URL: 0
+  ! sitemap не найден
+
+=== Baião (1302, 16147 изб.) — https://www.cm-baiao.pt
+  sitemap-файлов: 18, URL: 1161
+  кандидатов: 9, берем 9
+  документов выборов: тир A 3, тир B 4
+    [A] https://cm-baiao.pt/download/602/doc-comunicacao/201776/resultados-provisorios-autarquicas-2025.pdf   (A)
+    [A] https://www.cm-baiao.pt/storage/2024/03/MAPA-RESULTADOS-Legislativas-2024.pdf   (A)
+    [A] https://www.staging12.cm-baiao.pt/storage/2024/06/Baiao-MAPA-RESULTADOS-Europeias-2024.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1302_baiao/resultados-provisorios-autarquicas-2025.pdf (253878 B)
+    !! https://www.cm-baiao.pt/storage/2024/03/MAPA-RESULTADOS-Legislativas-2024.pdf: HTTPError
+    !! https://www.staging12.cm-baiao.pt/storage/2024/06/Baiao-MAPA-RESULTADOS-Europeias-2024.pdf: URLError
+
+=== Caminha (1602, 15850 изб.) — https://www.cm-caminha.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Cinfães (1804, 15789 изб.) — https://www.cm-cinfaes.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Soure (0615, 15755 изб.) — https://www.cm-soure.pt
+  sitemap-файлов: 11, URL: 1027
+  кандидатов: 6, берем 6
+  документов выборов: тир A 0, тир B 0
+
+=== Alcochete (1502, 15620 изб.) — https://www.cm-alcochete.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Coruche (1409, 15549 изб.) — https://www.cm-coruche.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Lousã (0607, 15355 изб.) — https://www.cm-lousa.pt
+  sitemap-файлов: 14, URL: 3511
+  кандидатов: 36, берем 20
+  документов выборов: тир A 0, тир B 1
+
+=== Condeixa-a-Nova (0604, 14778 изб.) — https://www.cm-condeixa.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Peso da Régua (1708, 14682 изб.) — https://www.cm-pesoregua.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== São Pedro do Sul (1816, 14521 изб.) — https://www.cm-spsul.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ribeira Brava (3107, 14183 изб.) — https://www.cm-ribeirabrava.pt
+  sitemap-файлов: 13, URL: 308
+  кандидатов: 1, берем 1
+  документов выборов: тир A 0, тир B 0
+
+=== Castelo de Paiva (0106, 14005 изб.) — https://www.cm-castelo-paiva.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Nazaré (1011, 13994 изб.) — https://www.cm-nazare.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Batalha (1004, 13957 изб.) — https://www.cm-batalha.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vila Pouca de Aguiar (1713, 13545 изб.) — https://www.cm-vpaguiar.pt
+  sitemap-файлов: 14, URL: 1366
+  кандидатов: 7, берем 7
+  документов выборов: тир A 0, тир B 0
+
+=== Montemor-o-Novo (0706, 13544 изб.) — https://www.cm-montemornovo.pt
+  sitemap-файлов: 40, URL: 6274
+  кандидатов: 69, берем 20
+  документов выборов: тир A 0, тир B 2
+
+=== Ponte de Sor (1213, 13529 изб.) — https://www.cm-pontedesor.pt
+  sitemap-файлов: 14, URL: 2157
+  кандидатов: 10, берем 10
+  документов выборов: тир A 3, тир B 1
+    [A] https://www.cm-pontedesor.pt/wp-content/uploads/mapa-de-turnos-2025_ponte-de-sor-pdf-infarmed-i-p_.pdf   (A)
+    [A] https://www.cm-pontedesor.pt/wp-content/uploads/resultado-pontesor.pdf   (A)
+    [A] https://www.cm-pontedesor.pt/wp-content/uploads/resultados-definitivos-1.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1213_pontedesor/mapa-de-turnos-2025_ponte-de-sor-pdf-infarmed-i-p_.pdf (1542847 B)
+    !! https://www.cm-pontedesor.pt/wp-content/uploads/resultado-pontesor.pdf: HTTPError
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1213_pontedesor/resultados-definitivos-1.pdf (992536 B)
+
+=== Castro Daire (1803, 13495 изб.) — https://www.cm-castrodaire.pt
+  sitemap-файлов: 14, URL: 3029
+  кандидатов: 11, берем 11
+  документов выборов: тир A 10, тир B 0
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/10778/ano-2023.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/10779/ano-2023-alteracao-24-02-2023.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/11570/ano-2023-alteracao-06-09-2023.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/11571/ano-2024.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/16163/ano-2025.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/17602/ano-2026.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/1859/ano-2020.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/5022/ano-2022.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/5023/ano-2021.pdf   (A)
+    [A] https://www.cm-castrodaire.pt/download/149/mapa-de-pessoal/9895/ano-2022-alteracao-22-09-2022.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2023.pdf (1851031 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2023-alteracao-24-02-2023.pdf (1745737 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2023-alteracao-06-09-2023.pdf (1675765 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2024.pdf (2166644 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2025.pdf (1808710 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2026.pdf (1062738 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2020.pdf (3222624 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2022.pdf (1829321 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2021.pdf (3349895 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1803_castrodaire/ano-2022-alteracao-22-09-2022.pdf (1702058 B)
+
+=== Sertã (0509, 13143 изб.) — https://cm-serta.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Lagoa (4201, 13069 изб.) — https://lagoa-acores.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Horta (4701, 12987 изб.) — https://www.cmhorta.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Montalegre (1706, 12921 изб.) — https://www.cm-montalegre.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ponte da Barca (1606, 12838 изб.) — https://www.cmpb.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Penacova (0613, 12786 изб.) — http://www.cm-penacova.pt
+  sitemap-файлов: 7, URL: 153
+  кандидатов: 3, берем 3
+  документов выборов: тир A 0, тир B 0
+
+=== Valença (1608, 12734 изб.) — https://www.cm-valenca.pt
+  sitemap-файлов: 19, URL: 2141
+  кандидатов: 11, берем 11
+  документов выборов: тир A 2, тир B 0
+    [A] https://cm-valenca.pt/wp-content/uploads/2025/05/ESCRUTINIO-ASSEMBLEIA-DA-REPUBLICA18.05.2025.pdf   (A)
+    [A] https://cm-valenca.pt/wp-content/uploads/2025/10/ResultadosValenca.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1608_valenca/ESCRUTINIO-ASSEMBLEIA-DA-REPUBLICA18.05.2025.pdf (52932 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1608_valenca/ResultadosValenca.pdf (549249 B)
+
+=== Cadaval (1104, 12477 изб.) — https://www.cm-cadaval.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Calheta (3101, 12420 изб.) — https://www.cm-calheta.pt
+  sitemap-файлов: 7, URL: 75
+  кандидатов: 1, берем 1
+  документов выборов: тир A 0, тир B 0
+
+=== Nelas (1809, 12295 изб.) — https://www.cm-nelas.pt
+  sitemap-файлов: 17, URL: 8767
+  кандидатов: 24, берем 20
+  документов выборов: тир A 6, тир B 2
+    [A] https://www.cm-nelas.pt/download/626/qualidade-agua/36009/1-o-trimestre_2024_-mangualde_resultados_alta-tabosa.pdf   (A)
+    [A] https://www.cm-nelas.pt/download/710/2024/35019/1-o-trimestre_2024_nelas_resultados.pdf   (A)
+    [A] https://www.cm-nelas.pt/download/710/2024/36341/4o-trimestre_2024_nelas_resultados.pdf   (A)
+    [A] https://www.cm-nelas.pt/download/710/2024/36342/2-o-trimestre_2024_nelas_resultados.pdf   (A)
+    [A] https://www.cm-nelas.pt/download/756/tabosa/36019/1-o-trimestre_2024_-mangualde_resultados_alta-tabosa-2.pdf   (A)
+    [A] https://www.cm-nelas.pt/download/90/avisos-editais-e-despachos/24608/exercicio-de-direito-de-voto-dos-eleitores-em-confinamento-eleicoes-presidenciais-2021.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1809_nelas/1-o-trimestre_2024_-mangualde_resultados_alta-tabosa.pdf (385556 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1809_nelas/1-o-trimestre_2024_nelas_resultados.pdf (243662 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1809_nelas/4o-trimestre_2024_nelas_resultados.pdf (193397 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1809_nelas/2-o-trimestre_2024_nelas_resultados.pdf (283789 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1809_nelas/1-o-trimestre_2024_-mangualde_resultados_alta-tabosa-2.pdf (385556 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1809_nelas/exercicio-de-direito-de-voto-dos-eleitores-em-confinamento-eleicoes-presidenciais-2021.pdf (25118 B)
+
+=== Serpa (0213, 12139 изб.) — https://www.cm-serpa.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Arruda dos Vinhos (1102, 12099 изб.) — https://www.cm-arruda.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Sátão (1817, 12065 изб.) — https://www.cm-satao.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vieira do Minho (0311, 12035 изб.) — https://www.cm-vminho.pt
+  sitemap-файлов: 18, URL: 3053
+  кандидатов: 10, берем 10
+  документов выборов: тир A 0, тир B 0
+
+=== Sines (1513, 11939 изб.) — https://www.sines.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Gouveia (0906, 11843 изб.) — https://www.cm-gouveia.pt
+  sitemap-файлов: 19, URL: 3112
+  кандидатов: 23, берем 20
+  документов выборов: тир A 4, тир B 0
+    [A] https://www.cm-gouveia.pt/wp-content/uploads/2021/09/Resultados-Provisorios-AL-2021.pdf   (A)
+    [A] https://www.cm-gouveia.pt/wp-content/uploads/2025/05/Legislativas-AR-2025-Apuramento-Parcial-Seccoes.pdf   (A)
+    [A] https://www.cm-gouveia.pt/wp-content/uploads/2025/05/Resultados-Presidente-da-Republica-2026_final.pdf   (A)
+    [A] https://www.cm-gouveia.pt/wp-content/uploads/2026/02/Resultados-presidente-da-republica-2026-2-Volta.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0906_gouveia/Resultados-Provisorios-AL-2021.pdf (231829 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0906_gouveia/Legislativas-AR-2025-Apuramento-Parcial-Seccoes.pdf (46890 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0906_gouveia/Resultados-Presidente-da-Republica-2026_final.pdf (34664 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0906_gouveia/Resultados-presidente-da-republica-2026-2-Volta.pdf (104768 B)
+
+=== Moura (0210, 11784 изб.) — https://www.cm-moura.pt
+  sitemap-файлов: 14, URL: 2428
+  кандидатов: 23, берем 20
+  документов выборов: тир A 10, тир B 9
+    [A] https://www.cm-moura.pt/wp-content/uploads/2021/10/Edital-Apuramento-Geral.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/09/Freguesia-da-Povoa-de-Sao-Miguel_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/09/Freguesia-de-Amareleja_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/09/Freguesia-de-Safara_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/09/Freguesia-de-Santo-Aleixo-da-Restauracao_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/09/Freguesia-de-Sobral-da-Adica_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/09/Uniao-de-Freguesias-de-Moura-e-Santo-Amador_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/10/Ata-da-Assembleia-de-Apuramento-Geral-assinada.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/10/Edital-de-Composicao-da-Assembleia-de-Apuramento-Geral.pdf   (A)
+    [A] https://www.cm-moura.pt/wp-content/uploads/2025/10/Edital-do-Apuramento-Geral-assinado.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Edital-Apuramento-Geral.pdf (132425 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Freguesia-da-Povoa-de-Sao-Miguel_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (23140 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Freguesia-de-Amareleja_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (26266 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Freguesia-de-Safara_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (24985 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Freguesia-de-Santo-Aleixo-da-Restauracao_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (26432 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Freguesia-de-Sobral-da-Adica_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (26500 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Uniao-de-Freguesias-de-Moura-e-Santo-Amador_Mapa-das-Assembleias-e-Seccoes-de-Voto.pdf (41185 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Ata-da-Assembleia-de-Apuramento-Geral-assinada.pdf (513425 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Edital-de-Composicao-da-Assembleia-de-Apuramento-Geral.pdf (111036 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0210_moura/Edital-do-Apuramento-Geral-assinado.pdf (113023 B)
+
+=== Grândola (1505, 11709 изб.) — https://www.cm-grandola.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Bombarral (1005, 11528 изб.) — https://www.cm-bombarral.pt
+  sitemap-файлов: 7, URL: 176
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Sabugal (0911, 11465 изб.) — https://www.cm-sabugal.pt
+  sitemap-файлов: 32, URL: 11910
+  кандидатов: 20, берем 20
+  документов выборов: тир A 34, тир B 17
+    [A] https://cm-sabugal.pt/wp-content/uploads/2024/02/mapa-da-assemblei-seccoes-de-voto.pdf   (A)
+    [A] https://cm-sabugal.pt/wp-content/uploads/2024/03/mapa_global-9.pdf   (A)
+    [A] https://cm-sabugal.pt/wp-content/uploads/2024/03/mapa_global_seccao_voto-9.pdf   (A)
+    [A] https://cm-sabugal.pt/wp-content/uploads/2024/05/edital-apreciacao-candidaturasdivulga-resultadosconvocatori.pdf   (A)
+    [A] https://cm-sabugal.pt/wp-content/uploads/2024/06/MAPA-GLOBAL-15.pdf   (A)
+    [A] https://cm-sabugal.pt/wp-content/uploads/2024/06/MAPA-GLOBAL-POR-SECCOES-DE-VOTO-15.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/01/MAPA-GLOBAL-7.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/01/MAPA-GLOBAL-POR-SECCOES-DE-VOTO-7.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/09/AMS_Mapa_global_por_freguesia.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/09/AMS_Mapa_global_por_seccao_de_voto.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/09/CMS_Mapa_global_por_freguesia.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/09/CMS_Mapa_global_por_seccao_de_voto.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/09/MAPADERESULTADOSDEFINITIVOS_POR_FREGUESIA.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/09/MAPADERESULTADOSDEFINITIVOS_POR_SECCAO_DE_VOTO.pdf   (A)
+    [A] https://www.cm-sabugal.pt/wp-content/uploads/2021/09/edital-assembleia-apuramento-gera-06.10.2021.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/mapa-da-assemblei-seccoes-de-voto.pdf (1241226 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/mapa_global-9.pdf (447618 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/mapa_global_seccao_voto-9.pdf (543551 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/edital-apreciacao-candidaturasdivulga-resultadosconvocatori.pdf (2286238 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPA-GLOBAL-15.pdf (130841 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPA-GLOBAL-POR-SECCOES-DE-VOTO-15.pdf (162324 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPA-GLOBAL-7.pdf (96274 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPA-GLOBAL-POR-SECCOES-DE-VOTO-7.pdf (124250 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/AMS_Mapa_global_por_freguesia.pdf (94325 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/AMS_Mapa_global_por_seccao_de_voto.pdf (125599 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/CMS_Mapa_global_por_freguesia.pdf (95625 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/CMS_Mapa_global_por_seccao_de_voto.pdf (127093 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPADERESULTADOSDEFINITIVOS_POR_FREGUESIA.pdf (55113 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPADERESULTADOSDEFINITIVOS_POR_SECCAO_DE_VOTO.pdf (67406 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/edital-assembleia-apuramento-gera-06.10.2021.pdf (332629 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPA-GLOBAL-POR-SECCOES-DE-VOTO_9.pdf (147670 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/MAPA-GLOBAL_9.pdf (115534 B)
+    !! https://www.cm-sabugal.pt/wp-content/uploads/2025/05/mapa_global_por_freguesia-9.pdf: HTTPError
+    !! https://www.cm-sabugal.pt/wp-content/uploads/2025/05/mapa_global_por_seccao-voto-10.pdf: HTTPError
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Mapa_Global_por_seccao_voto_AM.pdf (505780 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Mapa_Global_por_seccao_voto_CM.pdf (507199 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Mapa_final_por_freguesia.pdf (212729 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Mapa_final_por_seccao_voto.pdf (246343 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Mapa_global_por_freguesia_AM.pdf (432262 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Mapa_global_por_freguesia_CM.pdf (433787 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Resultados_finais_AF.pdf (566021 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/EDITAL-APURAMENTO-GERAL-_ASSEMBLEIAS-DE-FREGUESIA.pdf (1052747 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/edital-apuramento-geral-assembleia-municipal_r.pdf (70539 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/edital-apuramento-geral-camara-municipal_r.pdf (34415 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/mapa_global_freguesias_final.pdf (528068 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/mapa_global_seccao_voto_final.pdf (595968 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/Despacho-5_2026-Constituicao-Assembleia-Apuramento-Distrital-Eleicoes-Presidente-da-Republica.pdf (290111 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/mapa_global_freguesias_2sufragio4.pdf (110779 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0911_sabugal/mapa_global_seccao_voto_2sufragio4.pdf (133880 B)
+
+=== Alcanena (1402, 11406 изб.) — https://www.cm-alcanena.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ansião (1003, 10952 изб.) — https://www.cm-ansiao.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Alijó (1701, 10943 изб.) — https://www.cm-alijo.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Estremoz (0704, 10832 изб.) — https://www.cm-estremoz.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Óbidos (1012, 10787 изб.) — https://www.cm-obidos.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Miranda do Corvo (0609, 10691 изб.) — https://www.cm-mirandadocorvo.pt
+  sitemap-файлов: 7, URL: 184
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Vila Franca do Campo (4206, 10484 изб.) — https://www.cmvfc.pt
+  sitemap-файлов: 10, URL: 243
+  кандидатов: 1, берем 1
+  документов выборов: тир A 0, тир B 0
+
+=== Sever do Vouga (0117, 10170 изб.) — https://www.cm-sever.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Santa Comba Dão (1814, 10103 изб.) — https://www.cm-santacombadao.pt
+  sitemap-файлов: 7, URL: 423
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Tábua (0616, 10090 изб.) — https://www.cm-tabua.pt
+  sitemap-файлов: 15, URL: 614
+  кандидатов: 3, берем 3
+  документов выборов: тир A 0, тир B 0
+
+=== Vendas Novas (0712, 10007 изб.) — https://www.cm-vendasnovas.pt
+  sitemap-файлов: 27, URL: 3204
+  кандидатов: 76, берем 20
+  документов выборов: тир A 2, тир B 1
+    [A] https://www.cm-vendasnovas.pt/wp-content/uploads/2025/05/Legislativas-2025-Resultados-Provisorios.pdf   (A)
+    [A] https://www.cm-vendasnovas.pt/wp-content/uploads/2025/10/Autarquicas-2025-Resultados-Provisorios.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0712_vendasnovas/Legislativas-2025-Resultados-Provisorios.pdf (161433 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0712_vendasnovas/Autarquicas-2025-Resultados-Provisorios.pdf (106708 B)
+
+=== Murtosa (0112, 9947 изб.) — https://www.cm-murtosa.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ponta do Sol (3105, 9933 изб.) — https://www.cm-pontadosol.pt
+  sitemap-файлов: 8, URL: 325
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Moimenta da Beira (1807, 9862 изб.) — https://www.cm-moimenta.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Arganil (0601, 9777 изб.) — https://www.cm-arganil.pt
+  sitemap-файлов: 40, URL: 9471
+  кандидатов: 31, берем 20
+  документов выборов: тир A 1, тир B 1
+    [A] https://www.cm-arganil.pt/wp-content/uploads/2021/01/Resultados-presidente-da-republica-2021-002.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0601_arganil/Resultados-presidente-da-republica-2021-002.pdf (67593 B)
+
+=== Resende (1813, 9638 изб.) — https://www.cm-resende.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Melgaço (1603, 9509 изб.) — https://www.cm-melgaco.pt
+  sitemap-файлов: 21, URL: 6962
+  кандидатов: 15, берем 15
+  документов выборов: тир A 4, тир B 3
+    [A] https://www.cm-melgaco.pt/download/212/2013/9098/resultados_eleitorais.pdf   (A)
+    [A] https://www.cm-melgaco.pt/download/478/eleicao-do-presidente-da-republica/24407/exercicio-de-direito-de-voto-dos-eleitores-em-confinamento-obrigatorio.pdf   (A)
+    [A] https://www.cm-melgaco.pt/download/498/eleicoes-autarquicas-2021/26025/eleicao-para-os-orgaos-das-autarquias-locais-2021-saiba-o-local-onde-votar.pdf   (A)
+    [A] https://www.cm-melgaco.pt/download/498/eleicoes-autarquicas-2021/26133/eleicoes-autarquicas-locais-2021-apuramento-geral.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1603_melgaco/resultados_eleitorais.pdf (7830 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1603_melgaco/exercicio-de-direito-de-voto-dos-eleitores-em-confinamento-obrigatorio.pdf (731681 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1603_melgaco/eleicao-para-os-orgaos-das-autarquias-locais-2021-saiba-o-local-onde-votar.pdf (1374008 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1603_melgaco/eleicoes-autarquicas-locais-2021-apuramento-geral.pdf (776725 B)
+
+=== Mogadouro (0408, 9468 изб.) — https://www.mogadouro.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== São Brás de Alportel (0812, 9315 изб.) — https://www.cm-sbras.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vinhais (0412, 9110 изб.) — https://www.cm-vinhais.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Sobral de Monte Agraço (1112, 8988 изб.) — https://www.cm-sobral-monte-agraco.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Carregal do Sal (1802, 8837 изб.) — https://www.cm-carregal.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vouzela (1824, 8744 изб.) — https://www.cm-vouzela.pt
+  sitemap-файлов: 19, URL: 6587
+  кандидатов: 37, берем 20
+  документов выборов: тир A 6, тир B 1
+    [A] https://www.cm-vouzela.pt/wp-content/uploads/2024/03/Consulte-aqui-os-resultados-do-concelho-de-Vouzela.pdf   (A)
+    [A] https://www.cm-vouzela.pt/wp-content/uploads/2024/06/Consulte-aqui-os-resultados.pdf   (A)
+    [A] https://www.cm-vouzela.pt/wp-content/uploads/2025/05/Consulte-aqui-os-resultados.pdf   (A)
+    [A] https://www.cm-vouzela.pt/wp-content/uploads/2025/10/Consulte-aqui-os-resultados-1.pdf   (A)
+    [A] https://www.cm-vouzela.pt/wp-content/uploads/2026/01/Consulte-aqui-os-resultados-1.pdf   (A)
+    [A] https://www.cm-vouzela.pt/wp-content/uploads/2026/02/Consulte-aqui-os-resultados.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1824_vouzela/Consulte-aqui-os-resultados-do-concelho-de-Vouzela.pdf (115612 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1824_vouzela/Consulte-aqui-os-resultados.pdf (117613 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1824_vouzela/Consulte-aqui-os-resultados.pdf (566445 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1824_vouzela/Consulte-aqui-os-resultados-1.pdf (813952 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1824_vouzela/Consulte-aqui-os-resultados-1.pdf (385461 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1824_vouzela/Consulte-aqui-os-resultados.pdf (309997 B)
+
+=== Reguengos de Monsaraz (0711, 8735 изб.) — https://www.cm-reguengos-monsaraz.pt
+  sitemap-файлов: 40, URL: 5944
+  кандидатов: 221, берем 20
+  документов выборов: тир A 12, тир B 42
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2022/01/2022-01-24_legislativas2022_voto-residentes-estruturas-residenciais.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2024/05/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_campo-campinho.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2024/05/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_corval.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2024/05/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_monsaraz.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2024/05/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_reguengos.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2025/09/2025-09-09_autarquicas25_boletins-voto.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2025/09/2025-09-11_autarquicas25_assembleias-seccoes-voto.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2025/09/2025-09-16_autarquicas25_seccoes-voto_campo-campinho.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2025/09/2025-09-16_autarquicas25_seccoes-voto_corval.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2025/09/2025-09-16_autarquicas25_seccoes-voto_monsaraz.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2025/09/2025-09-16_autarquicas25_seccoes-voto_reguengos.pdf   (A)
+    [A] https://www.cm-reguengos-monsaraz.pt/wp-content/uploads/2025/10/2025-10-14_autarquicas25_apuramento-geral.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2022-01-24_legislativas2022_voto-residentes-estruturas-residenciais.pdf (33597 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_campo-campinho.pdf (205173 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_corval.pdf (214684 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_monsaraz.pdf (322733 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2024-05-25_euro2024_mapa-def-assemb-seccoes-voto_reguengos.pdf (326977 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2025-09-09_autarquicas25_boletins-voto.pdf (163161 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2025-09-11_autarquicas25_assembleias-seccoes-voto.pdf (73559 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2025-09-16_autarquicas25_seccoes-voto_campo-campinho.pdf (74481 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2025-09-16_autarquicas25_seccoes-voto_corval.pdf (77547 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2025-09-16_autarquicas25_seccoes-voto_monsaraz.pdf (91074 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2025-09-16_autarquicas25_seccoes-voto_reguengos.pdf (91598 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0711_reguengosdemonsaraz/2025-10-14_autarquicas25_apuramento-geral.pdf (291759 B)
+
+=== Oliveira de Frades (1810, 8559 изб.) — https://www.cm-ofrades.com
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Pinhel (0910, 8462 изб.) — https://www.cm-pinhel.pt
+  sitemap-файлов: 16, URL: 1064
+  кандидатов: 8, берем 8
+  документов выборов: тир A 0, тир B 0
+
+=== Trancoso (0913, 8433 изб.) — https://www.cm-trancoso.pt
+  sitemap-файлов: 23, URL: 2955
+  кандидатов: 27, берем 20
+  документов выборов: тир A 0, тир B 17
+
+=== Paredes de Coura (1605, 8413 изб.) — https://www.paredesdecoura.pt
+  sitemap-файлов: 20, URL: 8811
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Vila Nova de Cerveira (1610, 8357 изб.) — https://www.cm-vncerveira.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Mortágua (1808, 8170 изб.) — https://www.cm-mortagua.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ribeira de Pena (1709, 7979 изб.) — https://www.cm-rpena.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Aljustrel (0201, 7715 изб.) — https://www.mun-aljustrel.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Chamusca (1407, 7516 изб.) — https://www.cm-chamusca.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Idanha-a-Nova (0505, 7482 изб.) — https://www.cm-idanhanova.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Boticas (1702, 7444 изб.) — https://www.cm-boticas.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Mondim de Basto (1705, 7411 изб.) — https://www.cm-mondimdebasto.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Torre de Moncorvo (0409, 7372 изб.) — https://www.cm-moncorvo.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Penalva do Castelo (1811, 7205 изб.) — https://www.cm-penalvadocastelo.pt
+  sitemap-файлов: 15, URL: 2687
+  кандидатов: 18, берем 18
+  документов выборов: тир A 3, тир B 5
+    [A] https://www.cm-penalvadocastelo.pt/download/1022/diversos/21750/mapa-turistico-2024.pdf   (A)
+    [A] https://www.cm-penalvadocastelo.pt/download/1775/autarquicas-2025/27712/mapa-das-assembleias-e-seccoes-de-voto.pdf   (A)
+    [A] https://www.cm-penalvadocastelo.pt/download/1775/autarquicas-2025/27907/assembleia-de-apuramento-geral-designacao-dos-membros.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1811_penalvadocastelo/mapa-turistico-2024.pdf (2758250 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1811_penalvadocastelo/mapa-das-assembleias-e-seccoes-de-voto.pdf (144570 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/1811_penalvadocastelo/assembleia-de-apuramento-geral-designacao-dos-membros.pdf (61890 B)
+
+=== Tarouca (1820, 7180 изб.) — https://www.cm-tarouca.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Celorico da Beira (0903, 6971 изб.) — https://www.cm-celoricodabeira.pt
+  sitemap-файлов: 26, URL: 4794
+  кандидатов: 20, берем 20
+  документов выборов: тир A 0, тир B 6
+
+=== Campo Maior (1204, 6968 изб.) — https://www.cm-campo-maior.pt
+  sitemap-файлов: 8, URL: 0
+  ! sitemap не найден
+
+=== Miranda do Douro (0406, 6925 изб.) — https://www.cm-mdouro.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Ferreira do Zêzere (1411, 6898 изб.) — https://www.cm-ferreiradozezere.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Santana (3109, 6890 изб.) — https://www.cm-santana.com
+  sitemap-файлов: 6, URL: 277
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Santa Marta de Penaguião (1711, 6883 изб.) — https://www.cm-smpenaguiao.pt
+  sitemap-файлов: 40, URL: 197
+  кандидатов: 1, берем 1
+  документов выборов: тир A 0, тир B 0
+
+=== Vila Nova de Foz Côa (0914, 6578 изб.) — https://www.cm-fozcoa.pt
+  sitemap-файлов: 6, URL: 1
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Vila Flor (0410, 6561 изб.) — https://www.cm-vilaflor.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Proença-a-Nova (0508, 6534 изб.) — https://www.cm-proencanova.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vila Viçosa (0714, 6516 изб.) — https://www.cm-vilavicosa.pt
+  sitemap-файлов: 19, URL: 2129
+  кандидатов: 16, берем 16
+  документов выборов: тир A 1, тир B 3
+    [A] https://www.cm-vilavicosa.pt/wp-content/uploads/2022/01/informacao-votacao-dos-eleitores-em-confinamento.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0714_vilavicosa/informacao-votacao-dos-eleitores-em-confinamento.pdf (340403 B)
+
+=== Vila Nova da Barquinha (1420, 6447 изб.) — https://www.cm-vnbarquinha.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Terras de Bouro (0310, 6412 изб.) — https://www.cm-terrasdebouro.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== São João da Pesqueira (1815, 6405 изб.) — https://www.sjpesqueira.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Alpiarça (1404, 6353 изб.) — https://www.cm-alpiarca.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Povoação (4204, 6243 изб.) — https://www.cm-povoacao.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Vila Nova de Poiares (0617, 6223 изб.) — https://www.cm-vilanovadepoiares.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Almeida (0902, 6217 изб.) — https://www.cm-almeida.pt
+  sitemap-файлов: 31, URL: 4225
+  кандидатов: 19, берем 19
+  документов выборов: тир A 10, тир B 0
+    [A] https://www.cm-almeida.pt/municipio/noticiasdomunicipio/Documents/Quadro%20de%20Resultados%20final.pdf   (A)
+    [A] https://www.cm-almeida.pt/municipio/noticiasdomunicipio/Documents/Quadro%20de%20Resultados.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2019/10/RESULTADOS.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2021/01/Quadro-de-Resultados.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2021/09/Mapa-de-resultados.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2022/01/Resultados.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2025/05/Quadro-de-Resultados-2.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2025/10/resultados.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2026/01/Resultados.pdf   (A)
+    [A] https://www.cm-almeida.pt/wp-content/uploads/2026/02/Resultados.pdf   (A)
+    !! https://www.cm-almeida.pt/municipio/noticiasdomunicipio/Documents/Quadro%20de%20Resultados%20final.pdf: not-a-pdf (text/html; charset=utf-8)
+    !! https://www.cm-almeida.pt/municipio/noticiasdomunicipio/Documents/Quadro%20de%20Resultados.pdf: not-a-pdf (text/html; charset=utf-8)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/RESULTADOS.pdf (241835 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/Quadro-de-Resultados.pdf (1899459 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/Mapa-de-resultados.pdf (2994204 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/Resultados.pdf (200435 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/Quadro-de-Resultados-2.pdf (198545 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/resultados.pdf (224951 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/Resultados.pdf (159520 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0902_almeida/Resultados.pdf (200936 B)
+
+=== Ferreira do Alentejo (0208, 6129 изб.) — https://ferreiradoalentejo.pt
+  sitemap-файлов: 16, URL: 865
+  кандидатов: 6, берем 6
+  документов выборов: тир A 4, тир B 0
+    [A] https://ferreiradoalentejo.pt/wp-content/uploads/2024/03/Apuramento-Eleições-Legislativas-2024.pdf   (A)
+    [A] https://ferreiradoalentejo.pt/wp-content/uploads/2024/06/resultados_europeias_2024.pdf   (A)
+    [A] https://ferreiradoalentejo.pt/wp-content/uploads/2025/05/resultadoscorrigidos.pdf   (A)
+    [A] https://ferreiradoalentejo.pt/wp-content/uploads/2026/01/Resultados-Provisórios-PR2026.pdf   (A)
+    !! https://ferreiradoalentejo.pt/wp-content/uploads/2024/03/Apuramento-Eleições-Legislativas-2024.pdf: UnicodeEncodeError
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0208_ferreiradoalentejo/resultados_europeias_2024.pdf (137367 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0208_ferreiradoalentejo/resultadoscorrigidos.pdf (125912 B)
+    !! https://ferreiradoalentejo.pt/wp-content/uploads/2026/01/Resultados-Provisórios-PR2026.pdf: UnicodeEncodeError
+
+=== Sabrosa (1710, 6072 изб.) — https://www.sabrosa.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Madalena (4602, 6030 изб.) — https://www.cm-madalena.pt
+  sitemap-файлов: 7, URL: 13
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Castro Verde (0206, 5992 изб.) — https://www.cm-castroverde.pt
+  sitemap-файлов: 7, URL: 150
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Murça (1707, 5982 изб.) — https://www.cm-murca.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== São Vicente (3110, 5936 изб.) — http://www.cm-saovicente.pt
+  sitemap-файлов: 6, URL: 277
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Almodôvar (0202, 5922 изб.) — https://www.cm-almodovar.pt
+  sitemap-файлов: 13, URL: 1727
+  кандидатов: 17, берем 17
+  документов выборов: тир A 44, тир B 4
+    [A] https://cm-almodovar.pt/wp-content/uploads/2019/09/AR19_MapaDefin_ADF.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2019/09/AR19_MapaDefin_ADVGP.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2019/09/AR19_MapaDefin_Rosario.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2019/09/AR19_MapaDefin_SBarnabe.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2019/09/AR19_MapaDefin_SCGA.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2019/09/AR19_MapaDefin_SCruz.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2020/12/PR21_MapaDefAssVoto.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/08/EA21_MapaAssembleiasSecoesVoto.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/09/EA21_ApuramentoADVGP.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/09/EA21_ApuramentoAMA.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/09/EA21_ApuramentoAdF.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/09/EA21_ApuramentoCMA.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/09/EA21_ApuramentoRosario.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/09/EA21_ApuramentoSB.pdf   (A)
+    [A] https://cm-almodovar.pt/wp-content/uploads/2021/09/EA21_ApuramentoSC.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/AR19_MapaDefin_ADF.pdf (249446 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/AR19_MapaDefin_ADVGP.pdf (285337 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/AR19_MapaDefin_Rosario.pdf (247965 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/AR19_MapaDefin_SBarnabe.pdf (251599 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/AR19_MapaDefin_SCGA.pdf (261747 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/AR19_MapaDefin_SCruz.pdf (251799 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR21_MapaDefAssVoto.pdf (536553 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_MapaAssembleiasSecoesVoto.pdf (2061702 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoADVGP.pdf (297315 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoAMA.pdf (488459 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoAdF.pdf (276431 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoCMA.pdf (264046 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoRosario.pdf (262640 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoSB.pdf (276627 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoSC.pdf (264041 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA21_ApuramentoSCGA.pdf (280548 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/Europ24_MapaDef_AdF.pdf (37619 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/Europ24_MapaDef_Rosario.pdf (35763 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/Europ24_MapaDef_SB.pdf (37476 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/Europ24_MapaDef_StaCruz.pdf (38381 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/Europ24_MapaDef_UFAdvGP.pdf (44467 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/Europ24_MapaDef_UFSCGA.pdf (40181 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EL25_MapaDef_ADF.pdf (32057 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EL25_MapaDef_Rosario.pdf (31945 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EL25_MapaDef_SB.pdf (31926 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EL25_MapaDef_SCruz.pdf (32740 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EL25_MapaDef_UfADVGP.pdf (39471 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EL25_MapaDef_UfSCGA.pdf (32951 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaADF.pdf (42181 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaADV.pdf (47353 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaGA.pdf (41130 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaGP.pdf (40833 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaRosario.pdf (40577 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaSB.pdf (40725 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaSC.pdf (41434 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/EA25_MapaSCruz.pdf (42514 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaADV.pdf (39170 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaAdF.pdf (34950 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaGA.pdf (34639 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaGraca.pdf (36604 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaRosario.pdf (33630 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaSB.pdf (34858 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaSC.pdf (34259 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0202_almodovar/PR26_MapaSCr.pdf (34703 B)
+
+=== Arraiolos (0702, 5818 изб.) — https://www.cm-arraiolos.pt
+  sitemap-файлов: 35, URL: 4980
+  кандидатов: 76, берем 20
+  документов выборов: тир A 10, тир B 7
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2020/07/EleiesLegislativas2019Resultados_F_0_1594630831.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/RESULTADOS-AL2025-todas-as-mesas-camara.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Assembleia-Municipal.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Arraiolos.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Gafanhoeira-S.-Pedro.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Igrejinha.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-S.-Gregorio-e-Santa-Justa.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Sabugueiro.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Vimieiro.pdf   (A)
+    [A] https://www.cm-arraiolos.pt/wp-content/uploads/2025/10/Resultado-Eleitoral-e-Eleitos-Camara-Municipal.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/EleiesLegislativas2019Resultados_F_0_1594630831.pdf (72586 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/RESULTADOS-AL2025-todas-as-mesas-camara.pdf (134768 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Assembleia-Municipal.pdf (758346 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Arraiolos.pdf (602605 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Gafanhoeira-S.-Pedro.pdf (550367 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Igrejinha.pdf (541275 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-S.-Gregorio-e-Santa-Justa.pdf (570656 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Sabugueiro.pdf (548602 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Assembleia-de-Freguesia-de-Vimieiro.pdf (613845 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0702_arraiolos/Resultado-Eleitoral-e-Eleitos-Camara-Municipal.pdf (506874 B)
+
+=== Belmonte (0501, 5811 изб.) — https://www.cm-belmonte.pt
+  sitemap-файлов: 21, URL: 4202
+  кандидатов: 23, берем 20
+  документов выборов: тир A 0, тир B 2
+
+=== Castro Marim (0804, 5801 изб.) — https://www.cm-castromarim.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Carrazeda de Ansiães (0403, 5781 изб.) — https://www.cm-carrazedadeansiaes.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Mourão (0708, 2118 изб.) — http://cm-mourao.pt
+  sitemap-файлов: 30, URL: 3861
+  кандидатов: 19, берем 19
+  документов выборов: тир A 9, тир B 8
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2024/06/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-1o-Trimestre-de-2024.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2024/09/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-2o-Trimestre-de-2024.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2025/01/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-3o-Trimestre-de-2024.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2025/03/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-4o-Trimestre-de-2024.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2025/08/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-1o-Trimestre-de-2025.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2025/10/Edital-Assembleia-de-Apuramento-Geral-de-Mourao.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2025/11/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-2o-Trimestre-de-2025.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2026/01/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-3o-Trimestre-de-2025.pdf   (A)
+    [A] https://www.cm-mourao.pt/wp-content/uploads/2026/05/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-4o-Trimestre-de-2025.pdf   (A)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-1o-Trimestre-de-2024.pdf (1086458 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-2o-Trimestre-de-2024.pdf (2359261 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-3o-Trimestre-de-2024.pdf (213668 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-4o-Trimestre-de-2024.pdf (212539 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-1o-Trimestre-de-2025.pdf (214034 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-Assembleia-de-Apuramento-Geral-de-Mourao.pdf (776670 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-2o-Trimestre-de-2025.pdf (179739 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-3o-Trimestre-de-2025.pdf (446077 B)
+    -> /Users/renatyuldashev/Documents/portugues elections/data/seccoes/0708_mourao/Edital-%E2%80%93-Resultado-das-Analises-Relativas-ao-Controlo-da-Qualidade-da-Agua-destinada-ao-Consumo-Humano-no-Municipio-de-Mourao-%E2%80%93-4o-Trimestre-de-2025.pdf (2827960 B)
+
+=== Alvito (0203, 1873 изб.) — https://www.cm-alvito.pt
+  sitemap-файлов: 7, URL: 153
+  кандидатов: 0, берем 0
+  документов выборов: тир A 0, тир B 0
+
+=== Santa Cruz das Flores (4802, 1823 изб.) — https://www.cmscflores.pt
+  sitemap-файлов: 6, URL: 0
+  ! sitemap не найден
+
+=== Barrancos (0204, 1265 изб.) — https://cm-barrancos.pt
+  sitemap-файлов: 6, URL: 137
+  кандидатов: 4, берем 4
+  документов выборов: тир A 0, тир B 0
+
+=== Corvo (4901, 363 изб.) — https://cm-corvo.pt
+  sitemap-файлов: 12, URL: 1193
+  кандидатов: 1, берем 1
+  документов выборов: тир A 0, тир B 1
+
+===== сводка =====
+  Alcobaça: sitemap 6, URL 1, тир A 0, тир B 0, скачано 0
+  Pombal: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Castelo Branco: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Sesimbra: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Évora: sitemap 40, URL 5613, тир A 1, тир B 1, скачано 1
+  Marco de Canaveses: sitemap 20, URL 6748, тир A 0, тир B 0, скачано 0
+  Caldas da Rainha: sitemap 6, URL 80, тир A 0, тир B 0, скачано 0
+  Vila Verde: sitemap 17, URL 5139, тир A 1, тир B 0, скачано 1
+  Montijo: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Covilhã: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Lousada: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Chaves: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Águeda: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ponte de Lima: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ourém: sitemap 20, URL 6341, тир A 13, тир B 11, скачано 13
+  Santa Cruz: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Olhão: sitemap 7, URL 107, тир A 0, тир B 0, скачано 0
+  Alenquer: sitemap 7, URL 174, тир A 0, тир B 0, скачано 0
+  Guarda: sitemap 33, URL 2662, тир A 0, тир B 0, скачано 0
+  Ílhavo: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Albufeira: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Bragança: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Marinha Grande: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Cantanhede: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Trofa: sitemap 7, URL 356, тир A 9, тир B 60, скачано 9
+  Esposende: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Angra do Heroísmo: sitemap 16, URL 4593, тир A 0, тир B 0, скачано 0
+  Tomar: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Câmara de Lobos: sitemap 6, URL 277, тир A 0, тир B 0, скачано 0
+  Abrantes: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Silves: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Torres Novas: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Espinho: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ribeira Grande: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Beja: sitemap 6, URL 139, тир A 0, тир B 0, скачано 0
+  Anadia: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Benavente: sitemap 34, URL 3925, тир A 10, тир B 26, скачано 10
+  Fundão: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Peniche: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Tondela: sitemap 6, URL 6, тир A 0, тир B 0, скачано 0
+  Arcos de Valdevez: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Lourinhã: sitemap 6, URL 146, тир A 0, тир B 0, скачано 0
+  Estarreja: sitemap 6, URL 182, тир A 9, тир B 55, скачано 0
+  Santiago do Cacém: sitemap 15, URL 5685, тир A 5, тир B 37, скачано 4
+  Lagos: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Lamego: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vagos: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Albergaria-a-Velha: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Mirandela: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Póvoa de Lanhoso: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vizela: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Montemor-o-Velho: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Tavira: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Oliveira do Bairro: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Cartaxo: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Porto de Mós: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Seia: sitemap 34, URL 2028, тир A 1, тир B 4, скачано 1
+  Machico: sitemap 6, URL 277, тир A 0, тир B 0, скачано 0
+  Salvaterra de Magos: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Almeirim: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vale de Cambra: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Arouca: sitemap 22, URL 3602, тир A 0, тир B 0, скачано 0
+  Portalegre: sitemap 21, URL 8155, тир A 0, тир B 6, скачано 0
+  Odemira: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  São João da Madeira: sitemap 6, URL 500, тир A 1, тир B 10, скачано 1
+  Lagoa: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Monção: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Elvas: sitemap 13, URL 1846, тир A 4, тир B 13, скачано 4
+  Valpaços: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Rio Maior: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Azambuja: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Mangualde: sitemap 7, URL 9, тир A 0, тир B 0, скачано 0
+  Amares: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Mealhada: sitemap 6, URL 35, тир A 0, тир B 0, скачано 0
+  Celorico de Basto: sitemap 19, URL 1323, тир A 0, тир B 0, скачано 0
+  Oliveira do Hospital: sitemap 15, URL 4108, тир A 0, тир B 0, скачано 0
+  Macedo de Cavaleiros: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Cabeceiras de Basto: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vila Real de Santo António: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Entroncamento: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Baião: sitemap 18, URL 1161, тир A 3, тир B 4, скачано 1
+  Caminha: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Cinfães: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Soure: sitemap 11, URL 1027, тир A 0, тир B 0, скачано 0
+  Alcochete: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Coruche: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Lousã: sitemap 14, URL 3511, тир A 0, тир B 1, скачано 0
+  Condeixa-a-Nova: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Peso da Régua: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  São Pedro do Sul: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ribeira Brava: sitemap 13, URL 308, тир A 0, тир B 0, скачано 0
+  Castelo de Paiva: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Nazaré: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Batalha: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vila Pouca de Aguiar: sitemap 14, URL 1366, тир A 0, тир B 0, скачано 0
+  Montemor-o-Novo: sitemap 40, URL 6274, тир A 0, тир B 2, скачано 0
+  Ponte de Sor: sitemap 14, URL 2157, тир A 3, тир B 1, скачано 2
+  Castro Daire: sitemap 14, URL 3029, тир A 10, тир B 0, скачано 10
+  Sertã: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Lagoa: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Horta: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Montalegre: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ponte da Barca: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Penacova: sitemap 7, URL 153, тир A 0, тир B 0, скачано 0
+  Valença: sitemap 19, URL 2141, тир A 2, тир B 0, скачано 2
+  Cadaval: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Calheta: sitemap 7, URL 75, тир A 0, тир B 0, скачано 0
+  Nelas: sitemap 17, URL 8767, тир A 6, тир B 2, скачано 6
+  Serpa: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Arruda dos Vinhos: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Sátão: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vieira do Minho: sitemap 18, URL 3053, тир A 0, тир B 0, скачано 0
+  Sines: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Gouveia: sitemap 19, URL 3112, тир A 4, тир B 0, скачано 4
+  Moura: sitemap 14, URL 2428, тир A 10, тир B 9, скачано 10
+  Grândola: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Bombarral: sitemap 7, URL 176, тир A 0, тир B 0, скачано 0
+  Sabugal: sitemap 32, URL 11910, тир A 34, тир B 17, скачано 32
+  Alcanena: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ansião: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Alijó: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Estremoz: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Óbidos: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Miranda do Corvo: sitemap 7, URL 184, тир A 0, тир B 0, скачано 0
+  Vila Franca do Campo: sitemap 10, URL 243, тир A 0, тир B 0, скачано 0
+  Sever do Vouga: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Santa Comba Dão: sitemap 7, URL 423, тир A 0, тир B 0, скачано 0
+  Tábua: sitemap 15, URL 614, тир A 0, тир B 0, скачано 0
+  Vendas Novas: sitemap 27, URL 3204, тир A 2, тир B 1, скачано 2
+  Murtosa: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ponta do Sol: sitemap 8, URL 325, тир A 0, тир B 0, скачано 0
+  Moimenta da Beira: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Arganil: sitemap 40, URL 9471, тир A 1, тир B 1, скачано 1
+  Resende: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Melgaço: sitemap 21, URL 6962, тир A 4, тир B 3, скачано 4
+  Mogadouro: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  São Brás de Alportel: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vinhais: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Sobral de Monte Agraço: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Carregal do Sal: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vouzela: sitemap 19, URL 6587, тир A 6, тир B 1, скачано 6
+  Reguengos de Monsaraz: sitemap 40, URL 5944, тир A 12, тир B 42, скачано 12
+  Oliveira de Frades: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Pinhel: sitemap 16, URL 1064, тир A 0, тир B 0, скачано 0
+  Trancoso: sitemap 23, URL 2955, тир A 0, тир B 17, скачано 0
+  Paredes de Coura: sitemap 20, URL 8811, тир A 0, тир B 0, скачано 0
+  Vila Nova de Cerveira: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Mortágua: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ribeira de Pena: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Aljustrel: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Chamusca: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Idanha-a-Nova: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Boticas: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Mondim de Basto: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Torre de Moncorvo: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Penalva do Castelo: sitemap 15, URL 2687, тир A 3, тир B 5, скачано 3
+  Tarouca: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Celorico da Beira: sitemap 26, URL 4794, тир A 0, тир B 6, скачано 0
+  Campo Maior: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Miranda do Douro: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Ferreira do Zêzere: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Santana: sitemap 6, URL 277, тир A 0, тир B 0, скачано 0
+  Santa Marta de Penaguião: sitemap 40, URL 197, тир A 0, тир B 0, скачано 0
+  Vila Nova de Foz Côa: sitemap 6, URL 1, тир A 0, тир B 0, скачано 0
+  Vila Flor: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Proença-a-Nova: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vila Viçosa: sitemap 19, URL 2129, тир A 1, тир B 3, скачано 1
+  Vila Nova da Barquinha: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Terras de Bouro: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  São João da Pesqueira: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Alpiarça: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Povoação: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Vila Nova de Poiares: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Almeida: sitemap 31, URL 4225, тир A 10, тир B 0, скачано 8
+  Ferreira do Alentejo: sitemap 16, URL 865, тир A 4, тир B 0, скачано 2
+  Sabrosa: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Madalena: sitemap 7, URL 13, тир A 0, тир B 0, скачано 0
+  Castro Verde: sitemap 7, URL 150, тир A 0, тир B 0, скачано 0
+  Murça: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  São Vicente: sitemap 6, URL 277, тир A 0, тир B 0, скачано 0
+  Almodôvar: sitemap 13, URL 1727, тир A 44, тир B 4, скачано 44
+  Arraiolos: sitemap 35, URL 4980, тир A 10, тир B 7, скачано 10
+  Belmonte: sitemap 21, URL 4202, тир A 0, тир B 2, скачано 0
+  Castro Marim: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Carrazeda de Ansiães: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Mourão: sitemap 30, URL 3861, тир A 9, тир B 8, скачано 9
+  Alvito: sitemap 7, URL 153, тир A 0, тир B 0, скачано 0
+  Santa Cruz das Flores: sitemap 0, URL 0, тир A 0, тир B 0, скачано 0
+  Barrancos: sitemap 6, URL 137, тир A 0, тир B 0, скачано 0
+  Corvo: sitemap 12, URL 1193, тир A 0, тир B 1, скачано 0
