@@ -1,0 +1,212 @@
+{
+ "processed_config": {
+  "type": "pie",
+  "data": {
+   "datasets": [
+    {
+     "data": [
+      26349,
+      38217
+     ],
+     "backgroundColor": [
+      "#0d4077",
+      "#869FBB"
+     ]
+    }
+   ],
+   "labels": [
+    "Није изашло (40.81%)",
+    "Изашло (59.19%)"
+   ]
+  },
+  "options": {
+   "refresh": true,
+   "tooltips": {
+    "enabled": true
+   },
+   "responsive": true,
+   "aspectRatio": 2.75,
+   "legend": {
+    "onClick": "",
+    "position": "left",
+    "labels": {
+     "boxWidth": 12
+    }
+   }
+  }
+ },
+ "sum_config": {
+  "type": "pie",
+  "data": {
+   "datasets": [
+    {
+     "data": [
+      37157,
+      1037
+     ],
+     "backgroundColor": [
+      "#0d4077",
+      "#FF0200"
+     ]
+    }
+   ],
+   "labels": [
+    "Важећи листићи (97.28%)",
+    "Неважећи листићи (2.72%)"
+   ]
+  },
+  "options": {
+   "refresh": true,
+   "tooltips": {
+    "enabled": true
+   },
+   "responsive": true,
+   "aspectRatio": 2.75,
+   "legend": {
+    "onClick": "",
+    "position": "left",
+    "labels": {
+     "boxWidth": 12
+    }
+   }
+  }
+ },
+ "minute_from_election_station": "",
+ "stat_sum_numbers": {
+  "available": "38.217",
+  "number_of_stations": "55",
+  "table_have_image": false,
+  "datetime": "09.01.2024 20:21:00",
+  "election_title": "Парламентарни 2023",
+  "total_voters": "64.566",
+  "processed_stations": "55"
+ },
+ "table_data": [
+  {
+   "count_number": 1,
+   "list_image": "",
+   "list_name": "1. ИЗБОРНА ЛИСТА АЛЕКСАНДАР ВУЧИЋ - СРБИЈА НЕ СМЕ ДА СТАНЕ",
+   "won_number": "18.906",
+   "won_percent": 49.5
+  },
+  {
+   "count_number": 2,
+   "list_image": "",
+   "list_name": "2. ИЗБОРНА ЛИСТА ИВИЦА ДАЧИЋ – ПРЕМИЈЕР СРБИЈЕ",
+   "won_number": "2.536",
+   "won_percent": 6.64
+  },
+  {
+   "count_number": 3,
+   "list_image": "",
+   "list_name": "3. ИЗБОРНА ЛИСТА ДР ВОЈИСЛАВ ШЕШЕЉ - СРПСКА РАДИКАЛНА СТРАНКА",
+   "won_number": "597",
+   "won_percent": 1.56
+  },
+  {
+   "count_number": 4,
+   "list_image": "",
+   "list_name": "4. ИЗБОРНА ЛИСТА МИЛИЦА ЂУРЂЕВИЋ СТАМЕНКОВСКИ - БОШКО ОБРАДОВИЋ - НАЦИОНАЛНО ОКУПЉАЊЕ - ДРЖАВОТВОРНА СНАГА - СРПСКА СТРАНКА ЗАВЕТНИЦИ - СРПСКИ ПОКРЕТ ДВЕРИ",
+   "won_number": "1.062",
+   "won_percent": 2.78
+  },
+  {
+   "count_number": 5,
+   "list_image": "",
+   "list_name": "5. ИЗБОРНА ЛИСТА ДР МИЛОШ ЈОВАНОВИЋ – НАДА ЗА СРБИЈУ – СРПСКА КОАЛИЦИЈА НАДА – НАЦИОНАЛНО ДЕМОКРАТСКА АЛТЕРНАТИВА – НОВА ДЕМОКРАТСКА СТРАНКА СРБИЈЕ ( НOВИ ДСС) – ПОКРЕТ ОБНОВЕ КРАЉЕВИНЕ СРБИЈЕ (ПОКС) – ВОЈИСЛАВ МИХАИЛОВИЋ",
+   "won_number": "1.710",
+   "won_percent": 4.48
+  },
+  {
+   "count_number": 6,
+   "list_image": "",
+   "list_name": "6. ИЗБОРНА ЛИСТА VАJDASÁGI MAGYAR SZÖVETSÉG – ELNÖKÜNKÉRT, KÖZÖSSÉGÜNKÉRT, A JÖVŐÉRT! – САВЕЗ ВОЈВОЂАНСКИХ МАЂАРА – ЗА НАШЕГ ПРЕДСЕДНИКА, ЗА НАШУ ЗАЈЕДНИЦУ, ЗА БУДУЋНОСТ!",
+   "won_number": "46",
+   "won_percent": 0.12
+  },
+  {
+   "count_number": 7,
+   "list_image": "",
+   "list_name": "7. ИЗБОРНА ЛИСТА СРБИЈА ПРОТИВ НАСИЉА – МИРОСЛАВ МИКИ АЛЕКСИЋ - МАРИНИКА ТЕПИЋ (СТРАНКА СЛОБОДЕ И ПРАВДЕ, НАРОДНИ ПОКРЕТ СРБИЈЕ, ЗЕЛЕНО-ЛЕВИ ФРОНТ, НЕ ДАВИМО БЕОГРАД, ЕКОЛОШКИ УСТАНАК – ЋУТА, ДЕМОКРАТСКА СТРАНКА, ПОКРЕТ СЛОБОДНИХ ГРАЂАНА, СРБИЈА ЦЕНТАР, ЗАЈЕДНО, ПОКРЕТ ЗА ПРЕОКРЕТ, УДРУЖЕНИ СИНДИКАТИ СРБИЈЕ „СЛОГА“, НОВО ЛИЦЕ СРБИЈЕ)",
+   "won_number": "8.010",
+   "won_percent": 20.97
+  },
+  {
+   "count_number": 8,
+   "list_image": "",
+   "list_name": "8. ИЗБОРНА ЛИСТА USAME ZUKORLIĆ – UJEDINJENI ZA PRAVDU – STRANKA PRAVDE I POMIRENJA – BOŠNJACI SANDŽAKA, TOMISLAV ŽIGMANOV - DEMOKRATSKI SAVEZ HRVATA U VOJVODINI / УСАМЕ ЗУКОРЛИЋ – УЈЕДИЊЕНИ ЗА ПРАВДУ – СТРАНКА ПРАВДЕ И ПОМИРЕЊА – БОШЊАЦИ САНЏАКА, ТОМИСЛАВ ЖИГМАНОВ - ДЕМОКРАТСКИ САВЕЗ ХРВАТА У ВОЈВОДИНИ",
+   "won_number": "51",
+   "won_percent": 0.13
+  },
+  {
+   "count_number": 9,
+   "list_image": "",
+   "list_name": "9. ИЗБОРНА ЛИСТА СДА САНЏАКА - ДР СУЛЕЈМАН УГЉАНИН SDA SANDŽAKA – DR. SULEJMAN UGLJANIN",
+   "won_number": "24",
+   "won_percent": 0.06
+  },
+  {
+   "count_number": 10,
+   "list_image": "",
+   "list_name": "10. ИЗБОРНА ЛИСТА ЗАЈЕДНО ЗА БУДУЋНОСТ И РАЗВОЈ – КОАЛИЦИЈА ЗА МИР И ТОЛЕРАНЦИЈУ",
+   "won_number": "46",
+   "won_percent": 0.12
+  },
+  {
+   "count_number": 11,
+   "list_image": "",
+   "list_name": "11. ИЗБОРНА ЛИСТА НАРОДНА СТРАНКА – СИГУРАН ИЗБОР. ОЗБИЉНИ ЉУДИ – ВУК ЈЕРЕМИЋ, ДР САНДА РАШКОВИЋ ИВИЋ, СИНИША КОВАЧЕВИЋ, ВЛАДИМИР ГАЈИЋ, МАРИНА ЛИПОВАЦ ТАНАСКОВИЋ",
+   "won_number": "344",
+   "won_percent": 0.9
+  },
+  {
+   "count_number": 12,
+   "list_image": "",
+   "list_name": "12. ИЗБОРНА ЛИСТА САША РАДУЛОВИЋ (ДОСТА ЈЕ БИЛО - ДЈБ) - БОРИС ТАДИЋ (СОЦИЈАЛДЕМОКРАТСКА СТРАНКА - СДС) - АНА ПЕЈИЋ (ОТЕТЕ БЕБЕ) - ДОБРО ЈУТРО СРБИЈО",
+   "won_number": "443",
+   "won_percent": 1.16
+  },
+  {
+   "count_number": 13,
+   "list_image": "",
+   "list_name": "13. ИЗБОРНА ЛИСТА “ПОЛИТИЧКА БОРБА АЛБАНАЦА СЕ НАСТАВЉА – ШАИП КАМБЕРИ“ “BETEJA POLITIKE E SHQIPTARËVE VAZHDON – SHAIP KAMBERI”",
+   "won_number": "13",
+   "won_percent": 0.03
+  },
+  {
+   "count_number": 14,
+   "list_image": "",
+   "list_name": "14. ИЗБОРНА ЛИСТА МИ-ГЛАС ИЗ НАРОДА, ПРОФ. ДР БРАНИМИР НЕСТОРОВИЋ\t",
+   "won_number": "3.127",
+   "won_percent": 8.19
+  },
+  {
+   "count_number": 15,
+   "list_image": "",
+   "list_name": "15. ИЗБОРНА ЛИСТА СРБИЈА НА ЗАПАДУ – ЗОРАН ВУЛЕТИЋ – НЕМАЊА МИЛОШЕВИЋ – ДА СЕ СТРУКА ПИТА – ВЛАДИМИР КОВАЧЕВИЋ",
+   "won_number": "30",
+   "won_percent": 0.08
+  },
+  {
+   "count_number": 16,
+   "list_image": "",
+   "list_name": "16. ИЗБОРНА ЛИСТА РУСКА СТРАНКА – СЛОБОДАН НИКОЛИЋ",
+   "won_number": "110",
+   "won_percent": 0.29
+  },
+  {
+   "count_number": 17,
+   "list_image": "",
+   "list_name": "17. ИЗБОРНА ЛИСТА ЧЕДОМИР ЈОВАНОВИЋ – МОРА ДРУГАЧИЈЕ",
+   "won_number": "84",
+   "won_percent": 0.22
+  },
+  {
+   "count_number": 18,
+   "list_image": "",
+   "list_name": "18. ИЗБОРНА ЛИСТА АЛБАНСКА ДЕМОКРАТСКА АЛТЕРНАТИВА – УЈЕДИЊЕНА ДОЛИНА ALTERNATIVA DEMOKRATIKE SHQIPTARE-LUGINA E BASHKUAR",
+   "won_number": "18",
+   "won_percent": 0.05
+  }
+ ]
+}

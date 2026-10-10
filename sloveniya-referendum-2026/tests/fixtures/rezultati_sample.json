@@ -1,0 +1,14 @@
+{
+  "datum": "2026-10-11T20:35:00Z",
+  "slovenija": [
+    {"naz": "Glasovi ZA", "knaz": "Za", "naz_en": "Votes FOR", "knaz_en": "For",
+     "hcol": "#91B9C9", "st": 1, "gl": 325406, "prc": 0.3993},
+    {"naz": "Glasovi PROTI", "knaz": "Proti", "naz_en": "Votes AGAINST",
+     "knaz_en": "Against", "hcol": "#3B5D6D", "st": 0, "gl": 489589, "prc": 0.6007}
+  ],
+  "enote": [],
+  "posebna_volisca": null,
+  "glas": 825838,
+  "velj": 814995,
+  "nev": 10843
+}

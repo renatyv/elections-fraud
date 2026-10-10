@@ -1,0 +1,19 @@
+{
+  "datum": "2026-10-11T19:00:00Z",
+  "cas_udelezba": "19:00",
+  "slovenija": {
+    "upr": 1711779,
+    "gl": 825965,
+    "prc": 0.4825,
+    "upr_red": 1711753,
+    "upr_pos": 0,
+    "gl_ime": 825939,
+    "gl_pot": 15,
+    "gl_pos": 0,
+    "gl_inv": 11,
+    "gl_vol_omnia": 1837,
+    "gl_vol_inv": null
+  },
+  "enote": [],
+  "posebna_volisca": null
+}

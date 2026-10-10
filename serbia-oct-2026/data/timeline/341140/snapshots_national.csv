@@ -1,0 +1,2 @@
+snapshot_ts,rik_datetime,election_round,election_title,registered_voters,turnout_voters,turnout_pct,total_stations,processed_stations,processed_pct,valid_ballots,invalid_ballots
+2026-10-10T12:30:40,2024-01-09T20:21:00,341140,Парламентарни 2023,6500666,3820746,58.77,8273,8273,100.0,3710978,104029
