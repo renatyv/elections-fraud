@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Election Forensics — Independent Statistical Audits</title>
+<meta name="description" content="Independent election-forensics analyses of official election results: Slovenia's four referendums of 11 October 2026 and more to come.">
+<meta property="og:title" content="Election Forensics — Independent Statistical Audits">
+<meta property="og:description" content="Independent election-forensics analyses of official election results: Slovenia's four referendums of 11 October 2026 and more to come.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316324f'/%3E%3Cpath d='M14 34l12 12 24-28' stroke='%231e8e5a' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#16324f; --muted:#5b6b7b; --line:#e3e8ee; --bg:#f4f7fa; --card:#ffffff;
+    --green:#1e8e5a; --blue:#3b82c4; --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+  main{max-width:860px;margin:0 auto;padding:0 18px 60px}
+  header.top{position:sticky;top:0;z-index:10;background:rgba(244,247,250,.92);backdrop-filter:blur(6px);
+             border-bottom:1px solid var(--line)}
+  header.top .bar{max-width:860px;margin:0 auto;padding:10px 18px;display:flex;justify-content:space-between;
+                  align-items:center;gap:12px;flex-wrap:wrap}
+  .brand{font-weight:700;font-size:14px}
+  .langs{display:flex;gap:6px;flex-wrap:wrap}
+  .langs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+                padding:4px 12px;font-size:13px;cursor:pointer}
+  .langs button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hero{background:linear-gradient(160deg,#16324f,#1d4468);color:#fff;border-radius:0 0 var(--radius) var(--radius);
+        padding:46px 24px 42px;margin:0 -18px}
+  .hero-inner{max-width:760px;margin:0 auto}
+  .kicker{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:#9fc3e2;font-weight:600}
+  h1{font-size:clamp(26px,4.6vw,40px);line-height:1.18;margin:10px 0 14px;font-weight:800}
+  .hero p.lead{margin:0;color:#dce8f2;font-size:16.5px;max-width:640px}
+  section{margin-top:40px}
+  h3.sect{font-size:clamp(18px,3vw,23px);margin:0 0 14px;font-weight:800}
+  a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+         padding:20px 22px;text-decoration:none;color:inherit;border-left:5px solid var(--green);
+         transition:box-shadow .15s}
+  a.card:hover{box-shadow:0 4px 14px rgba(22,50,79,.12)}
+  a.card h4{margin:0 0 6px;font-size:18px;color:var(--ink)}
+  a.card p{margin:0 0 12px;font-size:14.5px;color:#2c4358}
+  a.card .open{font-weight:700;font-size:14.5px;color:var(--green)}
+  .soon{margin-top:14px;color:var(--muted);font-size:14px}
+  footer{margin-top:52px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}
+  footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <div class="brand" data-i18n="brand">Election Forensics</div>
+    <nav class="langs" aria-label="Language">
+      <button data-lang="sl">Slovenščina</button>
+      <button data-lang="en" aria-pressed="true">English</button>
+      <button data-lang="hr">Hrvatski</button>
+      <button data-lang="it">Italiano</button>
+      <button data-lang="hu">Magyar</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="kicker" data-i18n="kicker">Independent statistical audits of official results</div>
+      <h1 data-i18n="h1">Do election numbers add up?</h1>
+      <p class="lead" data-i18n="lead">Precinct-level election-forensics analyses of official results — turnout distributions, digit tests, cross-checks between simultaneous ballots — explained in plain language.</p>
+    </div>
+  </div>
+
+  <section>
+    <h3 class="sect" data-i18n="reports_title">Analyses</h3>
+    <a class="card" href="sloveniya-referendum-2026/">
+      <h4 data-i18n="si_title">Slovenia — four referendums, 11 October 2026</h4>
+      <p data-i18n="si_desc">Verdict: no statistical traces of manipulation. 2,984 precincts, four ballots each, eight families of tests, results checked against Wikipedia to the exact vote.</p>
+      <span class="open" data-i18n="open">Open the analysis →</span>
+    </a>
+    <p class="soon" data-i18n="soon">Further analyses — Portugal 2025, Brazil 2026 — are in preparation.</p>
+  </section>
+
+  <footer><span data-i18n="footer">Independent analysis · <a href="http://renatyv.org" rel="noopener">renatyv.org</a></span></footer>
+</main>
+
+<script>
+const I18N = {
+en: {
+  title: "Election Forensics — Independent Statistical Audits",
+  brand: "Election Forensics",
+  kicker: "Independent statistical audits of official results",
+  h1: "Do election numbers add up?",
+  lead: "Precinct-level election-forensics analyses of official results — turnout distributions, digit tests, cross-checks between simultaneous ballots — explained in plain language.",
+  reports_title: "Analyses",
+  si_title: "Slovenia — four referendums, 11 October 2026",
+  si_desc: "Verdict: no statistical traces of manipulation. 2,984 precincts, four ballots each, eight families of tests, results checked against Wikipedia to the exact vote.",
+  open: "Open the analysis →",
+  soon: "Further analyses — Portugal 2025, Brazil 2026 — are in preparation.",
+  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
+},
+sl: {
+  title: "Volilna forenzika — neodvisne statistične preverbe",
+  brand: "Volilna forenzika",
+  kicker: "Neodvisne statistične preverbe uradnih rezultatov",
+  h1: "Ali so volilne številke zaupanja vredne?",
+  lead: "Statistične analize uradnih rezultatov na ravni volišč — porazdelitve udeležbe, testi števk, medsebojne prevere sočasnih glasovanj — razložene v preprostem jeziku.",
+  reports_title: "Analize",
+  si_title: "Slovenija — štirje referendumi, 11. oktober 2026",
+  si_desc: "Zaključek: statističnih sledi poneverbe ni. 2.984 volišč, štiri glasovnice na vsakem, osem družin testov, rezultati preverjeni z Wikipedijo do zadnjega glasu.",
+  open: "Odpri analizo →",
+  soon: "Nadaljnje analize — Portugalska 2025, Brazilija 2026 — v pripravi.",
+  footer: "Neodvisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
+},
+hr: {
+  title: "Izborna forenzika — neovisne statističke provjere",
+  brand: "Izborna forenzika",
+  kicker: "Neovisne statističke provjere službenih rezultata",
+  h1: "Jesu li izborni brojevi vjerodostojni?",
+  lead: "Statističke analize službenih rezultata na razini biračkih mjesta — raspodjele izlaznosti, testovi znamenki, međusobne provjere istovremenih glasovanja — objašnjene jednostavnim jezikom.",
+  reports_title: "Analize",
+  si_title: "Slovenija — četiri referenduma, 11. listopada 2026.",
+  si_desc: "Zaključak: nema statističkih tragova manipulacije. 2.984 biračka mjesta, četiri listića na svakom, osam obitelji testova, rezultati uspoređeni s Wikipedijom do zadnjeg glasa.",
+  open: "Otvori analizu →",
+  soon: "Daljnje analize — Portugal 2025., Brazil 2026. — u pripremi.",
+  footer: "Neovisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
+},
+it: {
+  title: "Election forensics — verifiche statistiche indipendenti",
+  brand: "Election forensics",
+  kicker: "Verifiche statistiche indipendenti dei risultati ufficiali",
+  h1: "I numeri elettorali reggono?",
+  lead: "Analisi statistiche dei risultati ufficiali a livello di sezione — distribuzioni dell'affluenza, test sulle cifre, controlli incrociati tra voti simultanei — spiegate in modo semplice.",
+  reports_title: "Analisi",
+  si_title: "Slovenia — quattro referendum, 11 ottobre 2026",
+  si_desc: "Verdetto: nessuna traccia statistica di manipolazione. 2.984 sezioni, quattro schede ciascuna, otto famiglie di test, risultati confrontati con Wikipedia al voto esatto.",
+  open: "Apri l'analisi →",
+  soon: "Prossime analisi — Portogallo 2025, Brasile 2026 — in preparazione.",
+  footer: "Analisi indipendente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
+},
+hu: {
+  title: "Választási statisztika — független ellenőrzések",
+  brand: "Választási statisztika",
+  kicker: "Független statisztikai ellenőrzések hivatalos eredményeken",
+  h1: "Állnak a választási számok?",
+  lead: "A hivatalos eredmények szavazókör szintű statisztikai elemzései — részvételi eloszlások, számjegytesztek, az egyidejű szavazások kereszt-ellenőrzései — közérthetően elmagyarázva.",
+  reports_title: "Elemzések",
+  si_title: "Szlovénia — négy népszavazás, 2026. október 11.",
+  si_desc: "Eredmény: nincs a manipulációra utaló statisztikai nyom. 2 984 szavazókör, körönként négy szavazólap, nyolc tesztcsalád, a Wikipédiával szavazatra ellenőrzött eredmények.",
+  open: "Elemzés megnyitása →",
+  soon: "További elemzések — Portugália 2025, Brazília 2026 — előkészítésben.",
+  footer: "Független elemzés · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
+}
+};
+
+(function(){
+  const langs = ["sl","en","hr","it","hu"];
+  function pick(){
+    const saved = localStorage.getItem("lang");
+    if (saved && langs.includes(saved)) return saved;
+    for (const l of navigator.languages || [navigator.language]) {
+      const p = (l || "").slice(0,2).toLowerCase();
+      if (p === "sl") return "sl";
+      if (p === "hr" || p === "bs" || p === "sr") return "hr";
+      if (p === "it") return "it";
+      if (p === "hu") return "hu";
+    }
+    return "en";
+  }
+  function apply(lang){
+    const d = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const v = d[el.getAttribute("data-i18n")];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    document.querySelectorAll(".langs button").forEach(b =>
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    localStorage.setItem("lang", lang);
+  }
+  document.querySelectorAll(".langs button").forEach(b =>
+    b.addEventListener("click", () => apply(b.dataset.lang)));
+  apply(pick());
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+{
+  "title": "Португалия AR 2025 (freguesias)",
+  "national": {
+    "n_units": 3092,
+    "registered": 9265493,
+    "voted": 5965446,
+    "turnout_pct": 64.38347101444036,
+    "blank_pct": 1.4410657644038685,
+    "null_pct": 0.9878557278030846,
+    "share:PPD/PSD.CDS-PP": 32.72139249940407,
+    "share:PS": 23.376307488157632,
+    "share:CH": 22.55806187835746,
+    "share:IL": 5.534355687739023,
+    "share:L": 4.201714339548125,
+    "share:PCP-PEV": 3.0331847778020284,
+    "share:B.E.": 1.9983585468714327,
+    "share:PAN": 1.3554225451039201,
+    "share:ADN": 1.3228516359045075,
+    "share:JPP": 0.33737628334914105,
+    "share:R.I.R.": 0.2239061421392466,
+    "share:VP": 0.18436173925637747,
+    "share:PCTP/MRPP": 0.1820148904205989,
+    "share:ND": 0.13774326345423293,
+    "share:E": 0.14763355497644268,
+    "share:PLS": 0.10621167302495069,
+    "share:PPM": 0.0887779388163098,
+    "share:NC": 0.04645084374244608,
+    "share:MPT": 0.007895470011797944,
+    "share:PTP": 0.007057309713305594
+  },
+  "leader": "PPD/PSD.CDS-PP",
+  "n_units": 3092,
+  "shpilkin": {
+    "party": "PPD/PSD.CDS-PP",
+    "t_cut": 78.6424600948544,
+    "t_cut_source": "controls",
+    "mode": 69.25,
+    "sigma": 6.6963131027430665,
+    "total_votes_party": 1951977,
+    "tail_voters": 7779,
+    "tail_votes_party": 2980,
+    "tail_share_of_party": 0.15266573325402913,
+    "observed_share_pct": 32.72139249940407,
+    "honest_share_pct": 32.714097649297955
+  },
+  "fingerprint": {
+    "party": "PPD/PSD.CDS-PP",
+    "weight_anom": 0.6625268457002933,
+    "mean_anom": [
+      66.67586648649522,
+      29.17988679108438
+    ],
+    "mean_main": [
+      60.04962872844804,
+      39.741503719389065
+    ],
+    "anom_cluster_voters": 6739682,
+    "anom_cluster_votes_party": 1330554,
+    "total_voters": 9265493,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.4553686934023287,
+    "null_pct": 1.4416235446313066,
+    "z": 0.0658518034238666,
+    "z_mult5": -0.2891493346850939
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 1.778783958602846,
+    "null_pct": 1.8654592496765847,
+    "z": -0.40120523149907006,
+    "z_mult5": 0.10907540835765826
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "PPD/PSD.CDS-PP",
+      "n_numbers": 3090,
+      "min_count": 10,
+      "chi2": 7.024959787167123,
+      "dof": 9,
+      "p_value": 0.6345206189900894,
+      "p_null_mc": 0.6458852867830424,
+      "max_dev": 0.8213055376590463
+    },
+    {
+      "test": "benford2",
+      "party": "PS",
+      "n_numbers": 3080,
+      "min_count": 10,
+      "chi2": 7.743949550733127,
+      "dof": 9,
+      "p_value": 0.5601417220289193,
+      "p_null_mc": 0.57356608478803,
+      "max_dev": 0.9432057472680361
+    },
+    {
+      "test": "benford2",
+      "party": "CH",
+      "n_numbers": 3059,
+      "min_count": 10,
+      "chi2": 5.748132776095918,
+      "dof": 9,
+      "p_value": 0.7648375553816927,
+      "p_null_mc": 0.7930174563591023,
+      "max_dev": 0.689731370966272
+    },
+    {
+      "test": "benford2",
+      "party": "IL",
+      "n_numbers": 1839,
+      "min_count": 10,
+      "chi2": 14.983244150295711,
+      "dof": 9,
+      "p_value": 0.0913972605076326,
+      "p_null_mc": 0.09975062344139651,
+      "max_dev": 2.0748944136378746
+    },
+    {
+      "test": "benford2",
+      "party": "L",
+      "n_numbers": 1613,
+      "min_count": 10,
+      "chi2": 7.168305684430486,
+      "dof": 9,
+      "p_value": 0.6196012949209498,
+      "p_null_mc": 0.6433915211970075,
+      "max_dev": 1.269121023193752
+    },
+    {
+      "test": "benford2",
+      "party": "PCP-PEV",
+      "n_numbers": 1454,
+      "min_count": 10,
+      "chi2": 6.569678234317502,
+      "dof": 9,
+      "p_value": 0.6818226975547552,
+      "p_null_mc": 0.6957605985037406,
+      "max_dev": 1.4032867706611412
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "PPD/PSD.CDS-PP",
+      "n_numbers": 2299,
+      "min_count": 100,
+      "chi2": 19.89082209656372,
+      "dof": 9,
+      "p_value": 0.01859826508132481,
+      "p_null_mc": 0.0199501246882793,
+      "max_dev": 1.8660287081339724
+    },
+    {
+      "test": "last",
+      "party": "PS",
+      "n_numbers": 1864,
+      "min_count": 100,
+      "chi2": 3.6287553648068673,
+      "dof": 9,
+      "p_value": 0.9341068621377991,
+      "p_null_mc": 0.9351620947630923,
+      "max_dev": 0.8798283261802584
+    },
+    {
+      "test": "last",
+      "party": "CH",
+      "n_numbers": 1847,
+      "min_count": 100,
+      "chi2": 6.681645912290199,
+      "dof": 9,
+      "p_value": 0.670225480634825,
+      "p_null_mc": 0.6658354114713217,
+      "max_dev": 1.099079588521927
+    },
+    {
+      "test": "last",
+      "party": "IL",
+      "n_numbers": 558,
+      "min_count": 100,
+      "chi2": 6.695340501792114,
+      "dof": 9,
+      "p_value": 0.6688046880170364,
+      "p_null_mc": 0.6957605985037406,
+      "max_dev": 2.473118279569893
+    },
+    {
+      "test": "last",
+      "party": "L",
+      "n_numbers": 381,
+      "min_count": 100,
+      "chi2": 12.359580052493438,
+      "dof": 9,
+      "p_value": 0.1937884686049737,
+      "p_null_mc": 0.23940149625935161,
+      "max_dev": 3.6482939632545923
+    },
+    {
+      "test": "last",
+      "party": "PCP-PEV",
+      "n_numbers": 359,
+      "min_count": 100,
+      "chi2": 7.601671309192201,
+      "dof": 9,
+      "p_value": 0.5747315175726128,
+      "p_null_mc": 0.5985037406483791,
+      "max_dev": 2.256267409470751
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "PPD/PSD.CDS-PP",
+      "pearson_w": -0.08529385661534156,
+      "spearman": -0.23442594130093036
+    },
+    {
+      "party": "PS",
+      "pearson_w": 0.02818071588516945,
+      "spearman": -0.026080739113749734
+    },
+    {
+      "party": "CH",
+      "pearson_w": -0.2241993022417082,
+      "spearman": 0.11262018246895424
+    },
+    {
+      "party": "IL",
+      "pearson_w": 0.5810612680496124,
+      "spearman": 0.5181872623363472
+    },
+    {
+      "party": "L",
+      "pearson_w": 0.37468881695370826,
+      "spearman": 0.433226940849397
+    },
+    {
+      "party": "PCP-PEV",
+      "pearson_w": 0.07161116162860372,
+      "spearman": 0.23611627308212935
+    }
+  ],
+  "neighbors_flagged": 81,
+  "swing": {
+    "prev_party": "PPD/PSD.CDS-PP",
+    "flagged_both": 0,
+    "flagged_turnout": 3,
+    "n": 3092
+  },
+  "ml_flagged": 31,
+  "selftest": {
+    "t_cut": 76.57894736842105,
+    "clean_tail_party": 14589,
+    "injected_added_ballots_party": 131629,
+    "injected_tail_party": 255496,
+    "signal_growth": 17.512920693673315,
+    "peaks_z_clean": 0.21025312233526322,
+    "peaks_z_rounded": 5.086600349868706,
+    "n_rounded_units": 153
+  }
+}

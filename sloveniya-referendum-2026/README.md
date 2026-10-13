@@ -59,7 +59,12 @@ nohup uv run sloref fetch --loop > /dev/null 2>&1 &
 | `data/latest/<референдум>/` | последние версии файлов (перезаписываются) |
 | `data/raw/<дата>/<время>/<референдум>/` | снимки **только изменившихся** файлов |
 | `data/timeseries.csv` | хронология общенациональных цифр (строка — при изменении цифр) |
+| `data/derived/volisca_all.csv` | сводный датасет по всем участкам: 3 083 участка × 4 референдума, 12 332 строки (`scripts/build_volisca_csv.py`) |
+| `data/derived/nacionalni_pregled.csv` | агрегаты DVK: страна / 8 единиц / 88 округов на каждый референдум |
+| `data/ef/<референдум>/` | участки в формате analysis-tool (`results_freguesias.csv`) + журнал валидации |
+| `data/wikipedia/` | данные Википедии: викитекст статьи, таблица итогов + поголосовая сверка с DVK, восстановленная динамика ночи подсчёта |
 | `data/plots/` | PNG-графики трендов (`sloref plot`) |
+| `analysis/` | election forensics: figures/tables/metrics.json по каждому референдуму + `analysis/cross/` |
 | `data/scrape.log` | журнал опросов |
 
 Ключи референдумов: `preiskava` (законодательный о ZPPre-B), `socialna_pomoc`,
@@ -78,8 +83,37 @@ src/sloref/
   analysis.py    pandas: загрузка трендов, сводная таблица
   plotting.py    matplotlib: PNG-графики трендов
   cli.py         argparse-CLI (fetch / summary / plot)
+scripts/
+  build_ef_csv.py     адаптация участков к формату analysis-tool (results_freguesias.csv)
+                      + валидация (data/ef/ВАЛИДАЦИЯ.txt)
+  analyze_extra.py    кросс-референдумные проверки, второй вариант (ПРОТИ),
+                      досрочные точки, дубликаты протоколов
 tests/           pytest: извлечение показателей, дедупликация снимков и трендов
 ```
+
+## Статистический анализ фальсификаций
+
+Election forensics по поучастковым итогам (2 984 участка × 4 референдума) —
+штатный пайплайн [`analysis-tool`](../analysis-tool/); отчёт —
+[ОТЧЁТ_стат_анализ_фальсификаций.md](ОТЧЁТ_стат_анализ_фальсификаций.md),
+выход — `analysis/<референдум>/` и `analysis/cross/`. Полный цикл одной
+командой:
+
+```bash
+../analysis-tool/run_forensics_slovenia.sh
+# или по шагам:
+cd ../analysis-tool && uv sync
+uv run python ../sloveniya-referendum-2026/scripts/build_ef_csv.py     # адаптация + валидация
+uv run ef-analyze --data ../sloveniya-referendum-2026/data/ef/preiskava \
+  --out ../sloveniya-referendum-2026/analysis/preiskava \
+  --title "Словения, референдум ZPPre-B 11.10.2026 (участки)" \
+  --controls ../sloveniya-referendum-2026/data/ef/socialna_pomoc,../sloveniya-referendum-2026/data/ef/volilna_pravica,../sloveniya-referendum-2026/data/ef/rtv_prispevek
+uv run python ../sloveniya-referendum-2026/scripts/analyze_extra.py    # кросс-проверки
+```
+
+Контрольные выборы для метода Шпилькина — три остальных референдума (те же
+участки, то же распределение явки). Досрочные точки (номера ≥ 900, `upr` = 0)
+в turnout-пайплайн не входят: их проверяет `analyze_extra.py` (цифровые тесты).
 
 ## Разработка
 
@@ -87,4 +121,5 @@ tests/           pytest: извлечение показателей, дедуп
 uv run pytest        # тесты
 uv run ruff check .  # линтер
 uv lock --upgrade    # обновить зависимости
+PYTHONPATH=src uv run python scripts/build_volisca_csv.py  # сводный CSV по участкам + сверка
 ```

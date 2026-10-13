@@ -4,4 +4,5 @@ venv/
 .zip
 .tar.gz
 .zcode
+.env
 

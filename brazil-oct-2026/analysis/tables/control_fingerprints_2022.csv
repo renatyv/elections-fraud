@@ -1,0 +1,5 @@
+election,party,weight_anom,mean_main,mean_anom,separated,anom_voters
+2022-1Т,BOLSONARO,0.6501,(77.0; 28.5),(80.2; 48.3),True,109183412
+2022-1Т,LULA,0.6571,(77.6; 62.6),(79.9; 37.7),False,108416843
+2022-2Т,BOLSONARO,0.6493,(77.3; 31.7),(80.5; 54.9),True,108239465
+2022-2Т,LULA,0.653,(77.3; 63.9),(80.5; 40.5),False,108903771

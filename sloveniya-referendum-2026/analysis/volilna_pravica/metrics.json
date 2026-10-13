@@ -1,0 +1,128 @@
+{
+  "title": "Словения, референдум об избирательном праве 11.10.2026 (участки)",
+  "national": {
+    "n_units": 2984,
+    "registered": 1581694,
+    "voted": 843185,
+    "turnout_pct": 53.30898391218529,
+    "blank_pct": 0.0,
+    "null_pct": 0.4029957838434033,
+    "share:ZA": 56.930685436766545,
+    "share:PROTI": 42.66631877939005
+  },
+  "leader": "ZA",
+  "n_units": 2984,
+  "shpilkin": {
+    "party": "ZA",
+    "t_cut": 70.05649717514125,
+    "t_cut_source": "controls",
+    "mode": 55.25,
+    "sigma": 7.025890702375771,
+    "total_votes_party": 480031,
+    "tail_voters": 5969,
+    "tail_votes_party": 4438,
+    "tail_share_of_party": 0.9245236245159166,
+    "observed_share_pct": 56.930685436766545,
+    "honest_share_pct": 56.80648721476895
+  },
+  "fingerprint": {
+    "party": "ZA",
+    "weight_anom": 0.48296580026794983,
+    "mean_anom": [
+      55.606559967326774,
+      65.03572316419644
+    ],
+    "mean_main": [
+      51.01281887621257,
+      48.18494464949655
+    ],
+    "anom_cluster_voters": 736169,
+    "anom_cluster_votes_party": 276634,
+    "total_voters": 1581694,
+    "separated": true
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 2.245308310991957,
+    "null_pct": 2.256032171581769,
+    "z": -0.04483432694672287,
+    "z_mult5": -0.18045530771179719
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 3.6528150134048256,
+    "null_pct": 3.567191689008043,
+    "z": 0.24000013144728477,
+    "z_mult5": 0.7241269980989514
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "ZA",
+      "n_numbers": 2973,
+      "min_count": 10,
+      "chi2": 5.318185770964231,
+      "dof": 9,
+      "p_value": 0.8057361117616495,
+      "p_null_mc": 0.8802992518703242,
+      "max_dev": 0.7678512422925567
+    },
+    {
+      "test": "benford2",
+      "party": "PROTI",
+      "n_numbers": 2896,
+      "min_count": 10,
+      "chi2": 17.788495152363996,
+      "dof": 9,
+      "p_value": 0.037708188348772896,
+      "p_null_mc": 0.057356608478802994,
+      "max_dev": 1.4208239336999953
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "ZA",
+      "n_numbers": 1941,
+      "min_count": 100,
+      "chi2": 3.4667697063369394,
+      "dof": 9,
+      "p_value": 0.9428896372295266,
+      "p_null_mc": 0.9451371571072319,
+      "max_dev": 0.7161257083977329
+    },
+    {
+      "test": "last",
+      "party": "PROTI",
+      "n_numbers": 1429,
+      "min_count": 100,
+      "chi2": 13.568229531140659,
+      "dof": 9,
+      "p_value": 0.1385343457561347,
+      "p_null_mc": 0.14214463840399003,
+      "max_dev": 2.3862841147655702
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "ZA",
+      "pearson_w": 0.37895560746087986,
+      "spearman": 0.3342561142680296
+    },
+    {
+      "party": "PROTI",
+      "pearson_w": -0.37990378701010463,
+      "spearman": -0.334846859908555
+    }
+  ],
+  "neighbors_flagged": 22,
+  "ml_flagged": 30,
+  "selftest": {
+    "t_cut": 70.05649717514125,
+    "clean_tail_party": 4438,
+    "injected_added_ballots_party": 25295,
+    "injected_tail_party": 55628,
+    "signal_growth": 12.534474988733663,
+    "peaks_z_clean": -0.1339629329916681,
+    "peaks_z_rounded": 1.0113567611064926,
+    "n_rounded_units": 146
+  }
+}

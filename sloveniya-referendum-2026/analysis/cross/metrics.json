@@ -1,0 +1,1409 @@
+{
+  "title": "Словения 11.10.2026: кросс-проверки и второй вариант",
+  "proti_option": [
+    {
+      "referendum": "preiskava",
+      "shpilkin_t_cut": 70.05649717514125,
+      "tail_voters": 5970,
+      "tail_votes_PROTI": 1709,
+      "tail_share_of_PROTI_pct": 0.4127351370671896,
+      "honest_share_pct": 49.249713357538695,
+      "observed_share_pct": 49.10370589979247,
+      "peaks_share_PROTI_obs_pct": 3.8873994638069704,
+      "peaks_share_PROTI_null_pct": 3.572721179624665,
+      "peaks_share_PROTI_z": 0.9568719163006686,
+      "fingerprint_weight_anom": 0.41907475410792044,
+      "fingerprint_mean_main": "(51.5, 58.0)",
+      "fingerprint_mean_anom": "(55.6, 38.3)",
+      "fingerprint_separated": false
+    },
+    {
+      "referendum": "socialna_pomoc",
+      "shpilkin_t_cut": 70.05649717514125,
+      "tail_voters": 5970,
+      "tail_votes_PROTI": 1297,
+      "tail_share_of_PROTI_pct": 0.41107395844888517,
+      "honest_share_pct": 37.53030798888727,
+      "observed_share_pct": 37.41840684623485,
+      "peaks_share_PROTI_obs_pct": 3.920911528150134,
+      "peaks_share_PROTI_null_pct": 3.537701072386059,
+      "peaks_share_PROTI_z": 1.2024995188189018,
+      "fingerprint_weight_anom": 0.4794592271569869,
+      "fingerprint_mean_main": "(51.0, 45.9)",
+      "fingerprint_mean_anom": "(55.6, 29.3)",
+      "fingerprint_separated": false
+    },
+    {
+      "referendum": "volilna_pravica",
+      "shpilkin_t_cut": 70.05649717514125,
+      "tail_voters": 5969,
+      "tail_votes_PROTI": 1508,
+      "tail_share_of_PROTI_pct": 0.41917299502996475,
+      "honest_share_pct": 42.790391010205255,
+      "observed_share_pct": 42.66631877939005,
+      "peaks_share_PROTI_obs_pct": 3.954423592493298,
+      "peaks_share_PROTI_null_pct": 3.539544235924933,
+      "peaks_share_PROTI_z": 1.2073521503815807,
+      "fingerprint_weight_anom": 0.4731976531032741,
+      "fingerprint_mean_main": "(51.1, 51.2)",
+      "fingerprint_mean_anom": "(55.7, 34.4)",
+      "fingerprint_separated": false
+    },
+    {
+      "referendum": "rtv_prispevek",
+      "shpilkin_t_cut": 70.05649717514125,
+      "tail_voters": 5970,
+      "tail_votes_PROTI": 1812,
+      "tail_share_of_PROTI_pct": 0.44695272956893234,
+      "honest_share_pct": 48.20169231412312,
+      "observed_share_pct": 48.07532447511814,
+      "peaks_share_PROTI_obs_pct": 3.954423592493298,
+      "peaks_share_PROTI_null_pct": 3.5351876675603218,
+      "peaks_share_PROTI_z": 1.305542584462092,
+      "fingerprint_weight_anom": 0.4263976321349395,
+      "fingerprint_mean_main": "(51.6, 56.5)",
+      "fingerprint_mean_anom": "(55.5, 37.9)",
+      "fingerprint_separated": false
+    }
+  ],
+  "turnout_correlation": {
+    "preiskava": {
+      "preiskava": 1.0,
+      "socialna_pomoc": 0.9992,
+      "volilna_pravica": 0.9988,
+      "rtv_prispevek": 0.9992
+    },
+    "socialna_pomoc": {
+      "preiskava": 0.9992,
+      "socialna_pomoc": 1.0,
+      "volilna_pravica": 0.9996,
+      "rtv_prispevek": 1.0
+    },
+    "volilna_pravica": {
+      "preiskava": 0.9988,
+      "socialna_pomoc": 0.9996,
+      "volilna_pravica": 1.0,
+      "rtv_prispevek": 0.9996
+    },
+    "rtv_prispevek": {
+      "preiskava": 0.9992,
+      "socialna_pomoc": 1.0,
+      "volilna_pravica": 0.9996,
+      "rtv_prispevek": 1.0
+    }
+  },
+  "share_correlation": {
+    "preiskava": {
+      "preiskava": 1.0,
+      "socialna_pomoc": 0.9492,
+      "volilna_pravica": 0.9616,
+      "rtv_prispevek": 0.9592
+    },
+    "socialna_pomoc": {
+      "preiskava": 0.9492,
+      "socialna_pomoc": 1.0,
+      "volilna_pravica": 0.9512,
+      "rtv_prispevek": 0.9371
+    },
+    "volilna_pravica": {
+      "preiskava": 0.9616,
+      "socialna_pomoc": 0.9512,
+      "volilna_pravica": 1.0,
+      "rtv_prispevek": 0.9348
+    },
+    "rtv_prispevek": {
+      "preiskava": 0.9592,
+      "socialna_pomoc": 0.9371,
+      "volilna_pravica": 0.9348,
+      "rtv_prispevek": 1.0
+    }
+  },
+  "turnout_diff_between_referendums": {
+    "identical": 2774,
+    "d1_2": 198,
+    "d3_5": 6,
+    "gt5": 6,
+    "max": 90
+  },
+  "duplicate_vectors_within_station_voted_ge_50": [
+    {
+      "station": "1001_001",
+      "vector": "180|123|3",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "1001_020",
+      "vector": "45|104|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "1002_013",
+      "vector": "54|43|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "1002_018",
+      "vector": "33|26|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "1002_023",
+      "vector": "50|50|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "1002_029",
+      "vector": "34|17|0",
+      "referendums": "socialna_pomoc+volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "1005_013",
+      "vector": "212|70|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "1009_008",
+      "vector": "51|15|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "1010_002",
+      "vector": "87|32|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "1010_005",
+      "vector": "54|38|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "1011_055",
+      "vector": "84|7|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "2001_002",
+      "vector": "42|30|0",
+      "referendums": "socialna_pomoc+volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2001_008",
+      "vector": "40|36|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "2001_015",
+      "vector": "40|40|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2001_018",
+      "vector": "37|24|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2001_024",
+      "vector": "149|129|2",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2001_028",
+      "vector": "54|29|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2001_030",
+      "vector": "44|9|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "2001_032",
+      "vector": "123|13|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "2001_039",
+      "vector": "52|19|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2001_076",
+      "vector": "51|31|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2005_014",
+      "vector": "32|37|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2005_024",
+      "vector": "44|32|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "2005_033",
+      "vector": "35|87|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2006_007",
+      "vector": "15|44|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2006_029",
+      "vector": "48|45|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2006_051",
+      "vector": "44|33|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2006_061",
+      "vector": "40|38|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2007_005",
+      "vector": "128|142|2",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2007_007",
+      "vector": "71|57|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2007_016",
+      "vector": "33|30|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "2007_018",
+      "vector": "35|16|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2008_030",
+      "vector": "120|85|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2009_003",
+      "vector": "36|23|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "2009_007",
+      "vector": "61|46|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "2009_008",
+      "vector": "62|47|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "2009_025",
+      "vector": "39|39|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2009_027",
+      "vector": "46|7|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "2009_029",
+      "vector": "91|114|2",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "2009_031",
+      "vector": "57|20|2",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "2009_031",
+      "vector": "59|19|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2009_040",
+      "vector": "52|58|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2009_046",
+      "vector": "24|27|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2009_050",
+      "vector": "57|75|3",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "2009_053",
+      "vector": "40|29|2",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "2009_064",
+      "vector": "90|141|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "2010_008",
+      "vector": "81|127|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "3001_013",
+      "vector": "46|17|0",
+      "referendums": "preiskava+volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "3001_014",
+      "vector": "84|13|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "3002_026",
+      "vector": "89|66|1",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "3002_028",
+      "vector": "49|26|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "3006_011",
+      "vector": "109|15|1",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "3006_013",
+      "vector": "79|22|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "4001_008",
+      "vector": "80|63|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "4001_047",
+      "vector": "73|40|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "4002_001",
+      "vector": "172|43|1",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "4002_005",
+      "vector": "40|27|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "4002_024",
+      "vector": "115|30|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "4002_032",
+      "vector": "63|7|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "4002_036",
+      "vector": "54|12|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "4002_043",
+      "vector": "62|9|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "4002_045",
+      "vector": "58|12|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "4002_047",
+      "vector": "48|46|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "4003_015",
+      "vector": "130|27|1",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "4005_009",
+      "vector": "81|36|2",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "4007_004",
+      "vector": "150|317|4",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "4007_016",
+      "vector": "94|248|2",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "4009_015",
+      "vector": "89|215|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "5001_006",
+      "vector": "70|28|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5001_010",
+      "vector": "59|12|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "5001_011",
+      "vector": "97|55|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5001_025",
+      "vector": "56|39|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "5001_027",
+      "vector": "54|16|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5002_030",
+      "vector": "64|27|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "5005_022",
+      "vector": "60|10|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "5005_034",
+      "vector": "45|14|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "5006_009",
+      "vector": "96|19|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "5006_015",
+      "vector": "95|14|1",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "5006_018",
+      "vector": "67|37|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "5006_020",
+      "vector": "98|33|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "5008_011",
+      "vector": "139|43|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5009_015",
+      "vector": "51|32|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5009_017",
+      "vector": "73|23|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "5010_007",
+      "vector": "33|25|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5010_020",
+      "vector": "60|38|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "5011_018",
+      "vector": "77|74|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5011_021",
+      "vector": "112|59|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "5011_022",
+      "vector": "76|54|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6001_007",
+      "vector": "36|20|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6001_037",
+      "vector": "40|33|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "6001_044",
+      "vector": "66|132|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "6001_053",
+      "vector": "74|47|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6002_016",
+      "vector": "85|14|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6002_045",
+      "vector": "117|43|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6002_050",
+      "vector": "67|15|1",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6002_053",
+      "vector": "149|49|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6002_055",
+      "vector": "73|13|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "6002_058",
+      "vector": "65|10|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6003_030",
+      "vector": "284|262|2",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6004_002",
+      "vector": "97|18|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6004_021",
+      "vector": "73|12|2",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "6004_026",
+      "vector": "177|65|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6004_031",
+      "vector": "108|32|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6004_040",
+      "vector": "48|25|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6004_043",
+      "vector": "47|21|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6005_023",
+      "vector": "68|29|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6005_033",
+      "vector": "50|33|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6005_034",
+      "vector": "60|68|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6005_041",
+      "vector": "143|101|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6006_005",
+      "vector": "117|119|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6006_008",
+      "vector": "36|32|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6006_027",
+      "vector": "75|29|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6006_038",
+      "vector": "41|28|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6006_039",
+      "vector": "98|90|3",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6006_040",
+      "vector": "112|82|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6006_049",
+      "vector": "87|54|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6006_054",
+      "vector": "61|27|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "6007_002",
+      "vector": "99|22|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6007_006",
+      "vector": "65|52|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6007_009",
+      "vector": "48|47|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6007_010",
+      "vector": "66|5|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6007_018",
+      "vector": "137|15|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6007_021",
+      "vector": "63|40|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6007_028",
+      "vector": "56|22|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6007_039",
+      "vector": "209|88|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6008_010",
+      "vector": "54|24|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6008_011",
+      "vector": "49|22|1",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6008_013",
+      "vector": "77|12|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "6008_016",
+      "vector": "68|29|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6008_030",
+      "vector": "110|65|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6009_004",
+      "vector": "133|140|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6009_024",
+      "vector": "61|24|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6009_030",
+      "vector": "54|9|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6009_035",
+      "vector": "64|8|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "6010_006",
+      "vector": "69|81|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6010_017",
+      "vector": "25|25|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "6010_036",
+      "vector": "31|72|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "6011_025",
+      "vector": "29|41|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "6011_026",
+      "vector": "113|51|1",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "6011_033",
+      "vector": "113|89|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7001_002",
+      "vector": "128|54|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7001_016",
+      "vector": "122|57|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7001_022",
+      "vector": "217|59|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7001_032",
+      "vector": "29|23|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "7001_040",
+      "vector": "79|21|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "7001_045",
+      "vector": "60|35|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "7001_047",
+      "vector": "109|32|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7002_005",
+      "vector": "114|109|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7002_006",
+      "vector": "35|29|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "7002_012",
+      "vector": "189|174|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7002_024",
+      "vector": "69|19|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "7002_044",
+      "vector": "63|24|0",
+      "referendums": "preiskava+volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "7002_060",
+      "vector": "87|46|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7002_065",
+      "vector": "68|11|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "7002_066",
+      "vector": "48|5|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "7002_068",
+      "vector": "133|71|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7002_075",
+      "vector": "45|5|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "7002_076",
+      "vector": "51|11|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "7003_003",
+      "vector": "42|24|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7003_005",
+      "vector": "79|28|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "7003_006",
+      "vector": "82|5|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "7003_029",
+      "vector": "64|10|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7003_030",
+      "vector": "73|6|1",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "7003_031",
+      "vector": "95|8|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "7003_040",
+      "vector": "43|12|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7004_010",
+      "vector": "101|67|1",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "7004_022",
+      "vector": "68|7|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "7005_002",
+      "vector": "73|38|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "7005_022",
+      "vector": "43|16|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "7006_019",
+      "vector": "63|67|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "8001_007",
+      "vector": "163|77|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8001_034",
+      "vector": "126|60|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8002_003",
+      "vector": "59|28|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8002_007",
+      "vector": "96|30|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8002_008",
+      "vector": "62|38|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8002_011",
+      "vector": "53|31|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8002_012",
+      "vector": "62|17|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8002_014",
+      "vector": "115|40|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8002_028",
+      "vector": "56|21|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8002_033",
+      "vector": "57|22|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8002_043",
+      "vector": "78|33|1",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8002_047",
+      "vector": "85|17|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8003_006",
+      "vector": "116|67|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8003_008",
+      "vector": "108|65|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8004_019",
+      "vector": "32|27|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8004_021",
+      "vector": "68|70|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8004_032",
+      "vector": "25|34|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8004_048",
+      "vector": "79|45|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8004_054",
+      "vector": "51|18|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8004_055",
+      "vector": "69|30|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8004_057",
+      "vector": "47|57|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8004_061",
+      "vector": "47|22|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8004_079",
+      "vector": "28|25|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8004_085",
+      "vector": "37|15|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "8004_098",
+      "vector": "46|27|1",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8004_107",
+      "vector": "53|41|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8004_109",
+      "vector": "45|17|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8005_017",
+      "vector": "94|47|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8005_019",
+      "vector": "68|35|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8005_019",
+      "vector": "75|28|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "8005_025",
+      "vector": "28|66|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8006_026",
+      "vector": "96|55|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8007_005",
+      "vector": "146|61|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "8007_010",
+      "vector": "178|49|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8008_015",
+      "vector": "91|34|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8008_018",
+      "vector": "98|58|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8009_002",
+      "vector": "60|8|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8009_012",
+      "vector": "66|11|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8009_021",
+      "vector": "80|35|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8009_023",
+      "vector": "83|15|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8009_026",
+      "vector": "87|32|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8009_035",
+      "vector": "117|39|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8009_041",
+      "vector": "37|17|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "8009_046",
+      "vector": "70|27|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "8009_053",
+      "vector": "47|13|0",
+      "referendums": "preiskava+socialna_pomoc+volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8009_054",
+      "vector": "87|22|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8009_058",
+      "vector": "51|24|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8009_059",
+      "vector": "52|7|1",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8009_059",
+      "vector": "51|8|1",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    },
+    {
+      "station": "8011_005",
+      "vector": "46|6|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "8011_006",
+      "vector": "49|13|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8011_010",
+      "vector": "33|18|0",
+      "referendums": "preiskava+socialna_pomoc"
+    },
+    {
+      "station": "8011_020",
+      "vector": "30|22|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8011_023",
+      "vector": "78|31|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "8011_027",
+      "vector": "89|15|0",
+      "referendums": "socialna_pomoc+volilna_pravica"
+    },
+    {
+      "station": "8011_047",
+      "vector": "52|18|0",
+      "referendums": "preiskava+volilna_pravica"
+    },
+    {
+      "station": "8011_057",
+      "vector": "48|19|0",
+      "referendums": "preiskava+rtv_prispevek"
+    },
+    {
+      "station": "8011_064",
+      "vector": "49|29|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8011_078",
+      "vector": "74|20|0",
+      "referendums": "volilna_pravica+rtv_prispevek"
+    },
+    {
+      "station": "8011_087",
+      "vector": "46|8|0",
+      "referendums": "socialna_pomoc+rtv_prispevek"
+    }
+  ],
+  "cross_za_diff": {
+    "d0": 412,
+    "d1": 798,
+    "d2": 789,
+    "ratio_d0_d1": 0.5162907268170426,
+    "all_four_vectors_equal": 2
+  },
+  "duplicates_within_referendum": [
+    {
+      "referendum": "preiskava",
+      "duplicates_observed": 38,
+      "duplicates_null_mean": 36.9,
+      "duplicates_null_sd": 5.404627646748664
+    },
+    {
+      "referendum": "socialna_pomoc",
+      "duplicates_observed": 56,
+      "duplicates_null_mean": 52.5,
+      "duplicates_null_sd": 6.226556030423239
+    },
+    {
+      "referendum": "volilna_pravica",
+      "duplicates_observed": 57,
+      "duplicates_null_mean": 46.22,
+      "duplicates_null_sd": 6.847744154099217
+    },
+    {
+      "referendum": "rtv_prispevek",
+      "duplicates_observed": 60,
+      "duplicates_null_mean": 51.58,
+      "duplicates_null_sd": 6.328001264222377
+    }
+  ],
+  "early_last_digit": [
+    {
+      "test": "last",
+      "party": "ZA",
+      "n_numbers": 372,
+      "min_count": 100,
+      "chi2": 9.559139784946236,
+      "dof": 9,
+      "p_value": 0.38733851872723096,
+      "p_null_mc": 0.36658354114713215,
+      "max_dev": 3.172043010752687
+    },
+    {
+      "test": "last",
+      "party": "PROTI",
+      "n_numbers": 387,
+      "min_count": 100,
+      "chi2": 12.664082687338503,
+      "dof": 9,
+      "p_value": 0.1784044737882162,
+      "p_null_mc": 0.19201995012468828,
+      "max_dev": 2.9198966408268716
+    }
+  ],
+  "benford2_socialna_ZA_profile": [
+    {
+      "digit": 0,
+      "observed_pct": 10.25,
+      "benford_pct": 11.97,
+      "null_lo_pct": 11.08,
+      "null_hi_pct": 13.39
+    },
+    {
+      "digit": 1,
+      "observed_pct": 11.39,
+      "benford_pct": 11.39,
+      "null_lo_pct": 10.45,
+      "null_hi_pct": 13.02
+    },
+    {
+      "digit": 2,
+      "observed_pct": 10.82,
+      "benford_pct": 10.88,
+      "null_lo_pct": 9.88,
+      "null_hi_pct": 12.23
+    },
+    {
+      "digit": 3,
+      "observed_pct": 10.18,
+      "benford_pct": 10.43,
+      "null_lo_pct": 9.66,
+      "null_hi_pct": 11.57
+    },
+    {
+      "digit": 4,
+      "observed_pct": 12.06,
+      "benford_pct": 10.03,
+      "null_lo_pct": 9.1,
+      "null_hi_pct": 11.12
+    },
+    {
+      "digit": 5,
+      "observed_pct": 10.48,
+      "benford_pct": 9.67,
+      "null_lo_pct": 8.63,
+      "null_hi_pct": 10.85
+    },
+    {
+      "digit": 6,
+      "observed_pct": 9.91,
+      "benford_pct": 9.34,
+      "null_lo_pct": 8.35,
+      "null_hi_pct": 10.31
+    },
+    {
+      "digit": 7,
+      "observed_pct": 9.07,
+      "benford_pct": 9.04,
+      "null_lo_pct": 7.86,
+      "null_hi_pct": 9.89
+    },
+    {
+      "digit": 8,
+      "observed_pct": 7.76,
+      "benford_pct": 8.76,
+      "null_lo_pct": 7.54,
+      "null_hi_pct": 9.54
+    },
+    {
+      "digit": 9,
+      "observed_pct": 8.1,
+      "benford_pct": 8.5,
+      "null_lo_pct": 7.17,
+      "null_hi_pct": 9.2
+    }
+  ]
+}

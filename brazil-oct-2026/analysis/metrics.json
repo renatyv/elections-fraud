@@ -1,0 +1,364 @@
+{
+  "title": "Бразилия, президент 1-й тур 04.10.2026 (seções)",
+  "national": {
+    "n_units": 499206,
+    "registered": 158745007,
+    "voted": 125275835,
+    "turnout_pct": 78.9163938869586,
+    "blank_pct": 1.836585643192879,
+    "null_pct": 2.928739608879877,
+    "share:BOLSONARO": 44.7847767288879,
+    "share:CAIADO": 2.0795295437464056,
+    "share:CLARIANA": 0.03196386597622758,
+    "share:CURY": 2.752780693898388,
+    "share:EDMILSON": 0.018114427255663472,
+    "share:FERREIRA": 2.1359961400377014,
+    "share:GRASSI": 0.01347506484391024,
+    "share:HERTZ": 0.03440647591772188,
+    "share:LEONARDO": 0.004187559396431084,
+    "share:LULA": 43.008723909124214,
+    "share:RUI": 0.011992735869611247,
+    "share:SAMARA": 0.09811229755523082,
+    "share:ZEMA": 0.26061530541784056
+  },
+  "leader": "BOLSONARO",
+  "n_units": 499206,
+  "dropped_zero_voted": 42,
+  "checks_file": "data/secoes_presidente_2026_checks.json",
+  "shpilkin_leader": {
+    "party": "BOLSONARO",
+    "t_cut": 91.59663865546219,
+    "t_cut_source": "own_q995",
+    "mode": 80.75,
+    "sigma": 5.811617549329461,
+    "total_votes_party": 56104503,
+    "tail_voters": 779412,
+    "tail_votes_party": 272315,
+    "tail_share_of_party": 0.4853710227145226,
+    "observed_share_pct": 44.7847767288879,
+    "honest_share_pct": 44.84641940274862
+  },
+  "shpilkin_runner_up": {
+    "party": "LULA",
+    "t_cut": 91.59663865546219,
+    "t_cut_source": "own_q995",
+    "mode": 80.75,
+    "sigma": 5.811617549329461,
+    "total_votes_party": 53879538,
+    "tail_voters": 779412,
+    "tail_votes_party": 430824,
+    "tail_share_of_party": 0.7996059654409063,
+    "observed_share_pct": 43.008723909124214,
+    "honest_share_pct": 42.93192744983524
+  },
+  "fingerprint_leader": {
+    "party": "BOLSONARO",
+    "weight_anom": 0.6401200553096559,
+    "mean_anom": [
+      79.62102659949612,
+      51.779817632265065
+    ],
+    "mean_main": [
+      77.57335597088492,
+      32.470325155815864
+    ],
+    "anom_cluster_voters": 107875831,
+    "anom_cluster_votes_party": 45060013,
+    "total_voters": 158745007,
+    "separated": true
+  },
+  "fingerprint_runner_up": {
+    "party": "LULA",
+    "weight_anom": 0.6357884548893552,
+    "mean_anom": [
+      79.2580743553505,
+      34.22072580162909
+    ],
+    "mean_main": [
+      78.23129924774327,
+      58.08660899714149
+    ],
+    "anom_cluster_voters": 105544367,
+    "anom_cluster_votes_party": 28283214,
+    "total_voters": 158745007,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.7932476773115709,
+    "null_pct": 1.7851247781476989,
+    "z": 0.46883119509479904,
+    "z_mult5": 0.18285506664433396
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 2.34712723805403,
+    "null_pct": 2.3477011494252875,
+    "z": -0.027451448442598902,
+    "z_mult5": 1.2743669504970188
+  },
+  "digit_tests_eligible": {
+    "benford2": [
+      "BOLSONARO",
+      "LULA",
+      "CURY",
+      "FERREIRA",
+      "CAIADO"
+    ],
+    "last": [
+      "BOLSONARO",
+      "LULA"
+    ]
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "BOLSONARO",
+      "n_numbers": 496710,
+      "min_count": 10,
+      "chi2": 11562.075266745414,
+      "dof": 9,
+      "p_value": 0.0,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 2.6649422682402832
+    },
+    {
+      "test": "benford2",
+      "party": "LULA",
+      "n_numbers": 498891,
+      "min_count": 10,
+      "chi2": 5769.778622062278,
+      "dof": 9,
+      "p_value": 0.0,
+      "p_null_mc": 1.0,
+      "max_dev": 1.973795881351549
+    },
+    {
+      "test": "benford2",
+      "party": "CURY",
+      "n_numbers": 120928,
+      "min_count": 10,
+      "chi2": 56327.95928034743,
+      "dof": 9,
+      "p_value": 0.0,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 14.026879967514889
+    },
+    {
+      "test": "benford2",
+      "party": "FERREIRA",
+      "n_numbers": 71875,
+      "min_count": 10,
+      "chi2": 33968.93254616241,
+      "dof": 9,
+      "p_value": 0.0,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 15.144420966398881
+    },
+    {
+      "test": "benford2",
+      "party": "CAIADO",
+      "n_numbers": 51220,
+      "min_count": 10,
+      "chi2": 17836.960323054496,
+      "dof": 9,
+      "p_value": 0.0,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 14.69158114499759
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "BOLSONARO",
+      "n_numbers": 307492,
+      "min_count": 100,
+      "chi2": 412.1328554889233,
+      "dof": 9,
+      "p_value": 3.525914023020774e-83,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 0.6458054193279814
+    },
+    {
+      "test": "last",
+      "party": "LULA",
+      "n_numbers": 258120,
+      "min_count": 100,
+      "chi2": 541.2725089105843,
+      "dof": 9,
+      "p_value": 8.27002354738323e-111,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 0.761273826127383
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "BOLSONARO",
+      "pearson_w": -0.031644781821679575,
+      "spearman": -0.056469227950298115
+    },
+    {
+      "party": "LULA",
+      "pearson_w": 0.051576861294746056,
+      "spearman": 0.06947084284994379
+    },
+    {
+      "party": "CURY",
+      "pearson_w": 0.03884114766973697,
+      "spearman": 0.032425961245352804
+    },
+    {
+      "party": "FERREIRA",
+      "pearson_w": -0.04460683100797838,
+      "spearman": -0.05503561944977981
+    },
+    {
+      "party": "CAIADO",
+      "pearson_w": -0.04612685675041183,
+      "spearman": -0.09982791589928248
+    },
+    {
+      "party": "ZEMA",
+      "pearson_w": -0.11028067610946027,
+      "spearman": -0.07749968632774058
+    }
+  ],
+  "corr_uf_leader_range": [
+    -0.29900263415860767,
+    0.4923757046247648
+  ],
+  "neighbors_flagged": 4665,
+  "neighbors_flagged_pct": 0.9344839605293206,
+  "ml_flagged": 4993,
+  "selftest": {
+    "t_cut": 91.59663865546219,
+    "clean_tail_party": 272315,
+    "injected_added_ballots_party": 1982211,
+    "injected_tail_party": 6116988,
+    "signal_growth": 22.462912435965702,
+    "peaks_z_clean": 0.34902043549423056,
+    "peaks_z_rounded": 9.887981879702133,
+    "n_rounded_units": 24772
+  },
+  "urna_models": [
+    {
+      "urna_model": "UE 2013",
+      "sections": 11920,
+      "registered": 4126732,
+      "turnout_pct": 71.61744450572512,
+      "leader_pct": 42.93233540633268,
+      "lula_pct": 44.95895731967274,
+      "blank_pct": 1.8581202249396034,
+      "null_pct": 2.7170728076170882
+    },
+    {
+      "urna_model": "UE 2015",
+      "sections": 88064,
+      "registered": 28417205,
+      "turnout_pct": 78.53221314341083,
+      "leader_pct": 44.58412683618427,
+      "lula_pct": 43.117473672135525,
+      "blank_pct": 1.9031432122907281,
+      "null_pct": 2.893188317606667
+    },
+    {
+      "urna_model": "UE 2020",
+      "sections": 200466,
+      "registered": 63225860,
+      "turnout_pct": 79.04831345908146,
+      "leader_pct": 45.06916068068301,
+      "lula_pct": 42.83584361552346,
+      "blank_pct": 1.8208556333767223,
+      "null_pct": 2.954422275478393
+    },
+    {
+      "urna_model": "UE 2022",
+      "sections": 198756,
+      "registered": 62975210,
+      "turnout_pct": 79.43560489913412,
+      "leader_pct": 44.6996075281872,
+      "lula_pct": 43.01771169660675,
+      "blank_pct": 1.82133683895882,
+      "null_pct": 2.931445579356246
+    }
+  ],
+  "duplicate_protocols": {
+    "rows_in_dup_groups": 2,
+    "groups": 1,
+    "max_group": 2,
+    "note": "группы с одинаковым электоратом (включая размер секции)"
+  },
+  "supplement": {
+    "turnout_q001_q99": [
+      32.979344773025545,
+      95.21413632066036
+    ],
+    "sections_above_91.6": 3622,
+    "voters_above_91.6": 737895,
+    "sections_turnout_ge_90_share_ge_75": 380,
+    "voters_turnout_ge_90_share_ge_75": 78930,
+    "leader_votes_corner": 63611,
+    "sections_turnout_ge_90": 8299,
+    "lula_share_ge_75_turnout_ge_90": 1481,
+    "macroregions": [
+      {
+        "reg": "CW",
+        "sections": 38048,
+        "registered": 12001141,
+        "turnout_pct": 78.3,
+        "bolsonaro_pct": 54.63,
+        "lula_pct": 31.53
+      },
+      {
+        "reg": "N",
+        "sections": 43769,
+        "registered": 13101175,
+        "turnout_pct": 80.57,
+        "bolsonaro_pct": 47.46,
+        "lula_pct": 43.11
+      },
+      {
+        "reg": "NE",
+        "sections": 140828,
+        "registered": 43511237,
+        "turnout_pct": 81.61,
+        "bolsonaro_pct": 29.29,
+        "lula_pct": 60.53
+      },
+      {
+        "reg": "S",
+        "sections": 72015,
+        "registered": 22870853,
+        "turnout_pct": 79.54,
+        "bolsonaro_pct": 57.82,
+        "lula_pct": 30.1
+      },
+      {
+        "reg": "SE",
+        "sections": 203237,
+        "registered": 66344562,
+        "turnout_pct": 77.3,
+        "bolsonaro_pct": 48.55,
+        "lula_pct": 37.51
+      },
+      {
+        "reg": "ZZ",
+        "sections": 1309,
+        "registered": 916039,
+        "turnout_pct": 37.31,
+        "bolsonaro_pct": 42.1,
+        "lula_pct": 46.05
+      }
+    ],
+    "digit_spikes": [
+      {
+        "party": "BOLSONARO",
+        "spike0_pp": 0.119,
+        "spike5_pp": 0.005
+      },
+      {
+        "party": "LULA",
+        "spike0_pp": 0.052,
+        "spike5_pp": 0.111
+      }
+    ]
+  }
+}

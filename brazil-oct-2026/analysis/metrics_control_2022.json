@@ -1,0 +1,315 @@
+{
+  "title": "Контрольные выборы-2022 против BR-2026 (те же секции)",
+  "shpilkin": [
+    {
+      "election": "2026-1Т",
+      "party": "BOLSONARO",
+      "n": 499206,
+      "t_cut_control": 91.52,
+      "tail_voters_control": 779412,
+      "tail_votes_party_control": 272315,
+      "tail_share_party_control_pct": 0.485,
+      "honest_share_control": 44.85,
+      "observed_share": 44.78,
+      "t_cut_own_q995": 91.6,
+      "tail_voters_own": 779412,
+      "tail_voters_own_pct": 0.622,
+      "tail_share_party_own_pct": 0.485,
+      "mode": 80.75,
+      "sigma": 5.81
+    },
+    {
+      "election": "2026-1Т",
+      "party": "LULA",
+      "n": 499206,
+      "t_cut_control": 91.52,
+      "tail_voters_control": 779412,
+      "tail_votes_party_control": 430824,
+      "tail_share_party_control_pct": 0.8,
+      "honest_share_control": 42.93,
+      "observed_share": 43.01,
+      "t_cut_own_q995": 91.6,
+      "tail_voters_own": 779412,
+      "tail_voters_own_pct": 0.622,
+      "tail_share_party_own_pct": 0.8,
+      "mode": 80.75,
+      "sigma": 5.81
+    },
+    {
+      "election": "2022-1Т",
+      "party": "BOLSONARO",
+      "n": 472026,
+      "t_cut_control": null,
+      "tail_voters_control": null,
+      "tail_votes_party_control": null,
+      "tail_share_party_control_pct": null,
+      "honest_share_control": null,
+      "observed_share": 41.29,
+      "t_cut_own_q995": 91.33,
+      "tail_voters_own": 641335,
+      "tail_voters_own_pct": 0.519,
+      "tail_share_party_own_pct": 0.467,
+      "mode": 81.75,
+      "sigma": 5.97
+    },
+    {
+      "election": "2022-1Т",
+      "party": "LULA",
+      "n": 472026,
+      "t_cut_control": null,
+      "tail_voters_control": null,
+      "tail_votes_party_control": null,
+      "tail_share_party_control_pct": null,
+      "honest_share_control": null,
+      "observed_share": 46.3,
+      "t_cut_own_q995": 91.33,
+      "tail_voters_own": 641335,
+      "tail_voters_own_pct": 0.519,
+      "tail_share_party_own_pct": 0.581,
+      "mode": 81.75,
+      "sigma": 5.97
+    },
+    {
+      "election": "2022-2Т",
+      "party": "BOLSONARO",
+      "n": 472027,
+      "t_cut_control": null,
+      "tail_voters_control": null,
+      "tail_votes_party_control": null,
+      "tail_share_party_control_pct": null,
+      "honest_share_control": null,
+      "observed_share": 46.85,
+      "t_cut_own_q995": 91.52,
+      "tail_voters_own": 737671,
+      "tail_voters_own_pct": 0.594,
+      "tail_share_party_own_pct": 0.572,
+      "mode": 82.25,
+      "sigma": 6.03
+    },
+    {
+      "election": "2022-2Т",
+      "party": "LULA",
+      "n": 472027,
+      "t_cut_control": null,
+      "tail_voters_control": null,
+      "tail_votes_party_control": null,
+      "tail_share_party_control_pct": null,
+      "honest_share_control": null,
+      "observed_share": 48.57,
+      "t_cut_own_q995": 91.52,
+      "tail_voters_own": 737671,
+      "tail_voters_own_pct": 0.594,
+      "tail_share_party_own_pct": 0.619,
+      "mode": 82.25,
+      "sigma": 6.03
+    }
+  ],
+  "t_cut": {
+    "control_2022_max": 91.52,
+    "control_2022_t1": 91.33,
+    "control_2022_t2": 91.52,
+    "own_2026": 91.6
+  },
+  "match": {
+    "sections_2026": 499206,
+    "sections_2022_t1": 472026,
+    "matched": 461218,
+    "matched_pct_of_2026": 92.39,
+    "matched_voters_2026_pct": 93.32,
+    "matched_registered_2026_pct": 93.24
+  },
+  "match_by_region": [
+    {
+      "reg": "N",
+      "reg_name": "Север",
+      "sections_2026": 43769,
+      "matched": 37572,
+      "matched_pct": 85.84
+    },
+    {
+      "reg": "NE",
+      "reg_name": "Северо-Восток",
+      "sections_2026": 140828,
+      "matched": 129857,
+      "matched_pct": 92.21
+    },
+    {
+      "reg": "CW",
+      "reg_name": "Центр.-Запад",
+      "sections_2026": 38048,
+      "matched": 35266,
+      "matched_pct": 92.69
+    },
+    {
+      "reg": "SE",
+      "reg_name": "Юго-Восток",
+      "sections_2026": 203237,
+      "matched": 189431,
+      "matched_pct": 93.21
+    },
+    {
+      "reg": "S",
+      "reg_name": "Юг",
+      "sections_2026": 72015,
+      "matched": 68164,
+      "matched_pct": 94.65
+    },
+    {
+      "reg": "ZZ",
+      "reg_name": "Заграница",
+      "sections_2026": 1309,
+      "matched": 928,
+      "matched_pct": 70.89
+    }
+  ],
+  "jumps": {
+    "d_turnout": {
+      "median": -0.38,
+      "mad": 2.46,
+      "q01": -9.33,
+      "q99": 12.5,
+      "flagged_z4": 3346,
+      "flagged_pct": 0.725,
+      "up": 2631,
+      "down": 715
+    },
+    "d_share_bolsonaro": {
+      "median": 3.66,
+      "q01": -5.13,
+      "q99": 14.82
+    },
+    "d_share_lula": {
+      "median": -3.49,
+      "q01": -16.41,
+      "q99": 6.79
+    },
+    "r_turnout22_turnout26": 0.7683,
+    "r_dT_share_bolsonaro": 0.0147,
+    "r_dT_share_lula": -0.0074,
+    "flagged_share26_bolsonaro": 36.92,
+    "flagged_share26_lula": 53.27,
+    "all_share26_bolsonaro": 44.94,
+    "all_share26_lula": 42.86
+  },
+  "jumps_by_region": [
+    {
+      "reg": "N",
+      "reg_name": "Север",
+      "sections": 37572,
+      "d_turnout_median": 0.96,
+      "d_turnout_mad": 2.84,
+      "flagged_z4": 530,
+      "flagged_pct": 1.411,
+      "up": 486,
+      "down": 44
+    },
+    {
+      "reg": "NE",
+      "reg_name": "Северо-Восток",
+      "sections": 129857,
+      "d_turnout_median": 0.63,
+      "d_turnout_mad": 2.51,
+      "flagged_z4": 1475,
+      "flagged_pct": 1.136,
+      "up": 1404,
+      "down": 71
+    },
+    {
+      "reg": "CW",
+      "reg_name": "Центр.-Запад",
+      "sections": 35266,
+      "d_turnout_median": -0.28,
+      "d_turnout_mad": 2.41,
+      "flagged_z4": 142,
+      "flagged_pct": 0.403,
+      "up": 42,
+      "down": 100
+    },
+    {
+      "reg": "SE",
+      "reg_name": "Юго-Восток",
+      "sections": 189431,
+      "d_turnout_median": -0.99,
+      "d_turnout_mad": 2.39,
+      "flagged_z4": 888,
+      "flagged_pct": 0.469,
+      "up": 658,
+      "down": 230
+    },
+    {
+      "reg": "S",
+      "reg_name": "Юг",
+      "sections": 68164,
+      "d_turnout_median": -1.13,
+      "d_turnout_mad": 2.07,
+      "flagged_z4": 143,
+      "flagged_pct": 0.21,
+      "up": 20,
+      "down": 123
+    },
+    {
+      "reg": "ZZ",
+      "reg_name": "Заграница",
+      "sections": 928,
+      "d_turnout_median": -5.22,
+      "d_turnout_mad": 6.54,
+      "flagged_z4": 168,
+      "flagged_pct": 18.103,
+      "up": 21,
+      "down": 147
+    }
+  ],
+  "fingerprints_2022": [
+    {
+      "election": "2022-1Т",
+      "party": "BOLSONARO",
+      "weight_anom": 0.6501,
+      "mean_main": "(77.0; 28.5)",
+      "mean_anom": "(80.2; 48.3)",
+      "separated": true,
+      "anom_voters": 109183412
+    },
+    {
+      "election": "2022-1Т",
+      "party": "LULA",
+      "weight_anom": 0.6571,
+      "mean_main": "(77.6; 62.6)",
+      "mean_anom": "(79.9; 37.7)",
+      "separated": false,
+      "anom_voters": 108416843
+    },
+    {
+      "election": "2022-2Т",
+      "party": "BOLSONARO",
+      "weight_anom": 0.6493,
+      "mean_main": "(77.3; 31.7)",
+      "mean_anom": "(80.5; 54.9)",
+      "separated": true,
+      "anom_voters": 108239465
+    },
+    {
+      "election": "2022-2Т",
+      "party": "LULA",
+      "weight_anom": 0.653,
+      "mean_main": "(77.3; 63.9)",
+      "mean_anom": "(80.5; 40.5)",
+      "separated": false,
+      "anom_voters": 108903771
+    }
+  ],
+  "files": {
+    "data_2022": "data/secoes_presidente_2022.csv (построен build_sections_csv_2022.py)",
+    "tables": [
+      "control_shpilkin.csv",
+      "control_deciles.csv",
+      "control_jumps_by_region.csv",
+      "control_jumps_extreme.csv",
+      "control_fingerprints_2022.csv"
+    ],
+    "figures": [
+      "control_turnout.png",
+      "control_jumps.png",
+      "control_fingerprint_2022.png"
+    ]
+  }
+}

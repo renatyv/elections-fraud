@@ -1,0 +1,13 @@
+reg,reg_name,party,corner_sections,corner_voters,corner_votes_party,corner_below_tcut,corner_share_pct_of_party
+N,Север,BOLSONARO,39,6326,4625,27,0.092
+N,Север,LULA,366,77014,61585,226,1.353
+NE,Северо-Восток,BOLSONARO,3,607,474,1,0.005
+NE,Северо-Восток,LULA,1062,222899,168787,727,0.785
+CW,Центр.-Запад,BOLSONARO,14,2359,1735,0,0.034
+CW,Центр.-Запад,LULA,18,3669,2971,0,0.1
+SE,Юго-Восток,BOLSONARO,14,2124,1578,0,0.006
+SE,Юго-Восток,LULA,27,3872,3008,0,0.016
+S,Юг,BOLSONARO,310,74690,55199,147,0.525
+S,Юг,LULA,8,1407,1075,2,0.02
+ZZ,Заграница,BOLSONARO,0,0,0,0,0.0
+ZZ,Заграница,LULA,0,0,0,0,0.0

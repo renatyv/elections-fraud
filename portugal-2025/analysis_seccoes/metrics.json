@@ -1,0 +1,331 @@
+{
+  "title": "AR 2025, секции (6 конселью)",
+  "national": {
+    "n_units": 91,
+    "registered": 60711,
+    "voted": 38738,
+    "turnout_pct": 63.807217802375185,
+    "blank_pct": 1.365584180907636,
+    "null_pct": 0.9060870463111157,
+    "share:PPD/PSD.CDS-PP": 23.171046517631268,
+    "share:PS": 24.41013991429604,
+    "share:CH": 30.83793690949455,
+    "share:IL": 3.2732717228561103,
+    "share:L": 2.909288037585833,
+    "share:PCP-PEV": 8.330321647994218,
+    "share:B.E.": 1.6495430843099799,
+    "share:PAN": 1.0170891630956684,
+    "share:ADN": 1.1177655015746812,
+    "share:JPP": 0.01548866745830967,
+    "share:R.I.R.": 0.19360834322887088,
+    "share:VP": 0.1548866745830967,
+    "share:PCTP/MRPP": 0.36914657442304716,
+    "share:ND": 0.01032577830553978,
+    "share:E": 0.12907222881924726,
+    "share:PLS": 0.02581444576384945,
+    "share:PPM": 0.06711755898600857,
+    "share:NC": 0.04646600237492901
+  },
+  "leader": "CH",
+  "n_units": 91,
+  "shpilkin": {
+    "party": "CH",
+    "t_cut": 75.33632286995515,
+    "t_cut_source": "own_q995",
+    "mode": 64.75,
+    "sigma": 4.073735538890978,
+    "total_votes_party": 11946,
+    "tail_voters": 93,
+    "tail_votes_party": 44,
+    "tail_share_of_party": 0.3683241252302026,
+    "observed_share_pct": 30.83793690949455,
+    "honest_share_pct": 30.798292146461378
+  },
+  "fingerprint": {
+    "party": "CH",
+    "weight_anom": 0.39705172422477936,
+    "mean_anom": [
+      64.49209343557014,
+      37.774918072998936
+    ],
+    "mean_main": [
+      63.415834896073754,
+      26.263467294906956
+    ],
+    "anom_cluster_voters": 24334,
+    "anom_cluster_votes_party": 5976,
+    "total_voters": 60711,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 2.197802197802198,
+    "null_pct": 1.4230769230769231,
+    "z": 0.6680910852819871,
+    "z_mult5": 0.5636176963613856
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 1.098901098901099,
+    "null_pct": 2.357142857142857,
+    "z": -0.8277256360619293,
+    "z_mult5": -1.1196629205844366
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "CH",
+      "n_numbers": 90,
+      "min_count": 10,
+      "chi2": 8.373807287552628,
+      "dof": 9,
+      "p_value": 0.49695802244466747,
+      "p_null_mc": 0.5336658354114713,
+      "max_dev": 5.277656325911026
+    },
+    {
+      "test": "benford2",
+      "party": "PS",
+      "n_numbers": 89,
+      "min_count": 10,
+      "chi2": 6.978699027763874,
+      "dof": 9,
+      "p_value": 0.6393372476037439,
+      "p_null_mc": 0.683291770573566,
+      "max_dev": 4.57592134627577
+    },
+    {
+      "test": "benford2",
+      "party": "PPD/PSD.CDS-PP",
+      "n_numbers": 87,
+      "min_count": 10,
+      "chi2": 12.373144834366764,
+      "dof": 9,
+      "p_value": 0.19308107834594057,
+      "p_null_mc": 0.17955112219451372,
+      "max_dev": 6.424230442756262
+    },
+    {
+      "test": "benford2",
+      "party": "PCP-PEV",
+      "n_numbers": 82,
+      "min_count": 10,
+      "chi2": 7.401410462085992,
+      "dof": 9,
+      "p_value": 0.5954024593789338,
+      "p_null_mc": 0.7082294264339152,
+      "max_dev": 6.774419437730087
+    },
+    {
+      "test": "benford2",
+      "party": "IL",
+      "n_numbers": 46,
+      "min_count": 10,
+      "chi2": 6.997560910903964,
+      "dof": 9,
+      "p_value": 0.6373733645588262,
+      "p_null_mc": 0.6683291770573566,
+      "max_dev": 8.683067490753524
+    },
+    {
+      "test": "benford2",
+      "party": "L",
+      "n_numbers": 51,
+      "min_count": 10,
+      "chi2": 2.451868143240671,
+      "dof": 9,
+      "p_value": 0.9821500023644796,
+      "p_null_mc": 0.9875311720698254,
+      "max_dev": 4.6902912691181005
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "CH",
+      "n_numbers": 56,
+      "min_count": 100,
+      "chi2": 23.285714285714285,
+      "dof": 9,
+      "p_value": 0.005585551793101106,
+      "p_null_mc": 0.017456359102244388,
+      "max_dev": 13.214285714285715
+    },
+    {
+      "test": "last",
+      "party": "PS",
+      "n_numbers": 50,
+      "min_count": 100,
+      "chi2": 4.8,
+      "dof": 9,
+      "p_value": 0.8513825753567951,
+      "p_null_mc": 0.8603491271820449,
+      "max_dev": 6.0
+    },
+    {
+      "test": "last",
+      "party": "PPD/PSD.CDS-PP",
+      "n_numbers": 49,
+      "min_count": 100,
+      "chi2": 12.428571428571427,
+      "dof": 9,
+      "p_value": 0.1902122187824442,
+      "p_null_mc": 0.18204488778054864,
+      "max_dev": 12.448979591836734
+    },
+    {
+      "test": "last",
+      "party": "PCP-PEV",
+      "n_numbers": 0,
+      "p_value": null,
+      "note": "мало чисел >= 100 — тест не проводился"
+    },
+    {
+      "test": "last",
+      "party": "IL",
+      "n_numbers": 0,
+      "p_value": null,
+      "note": "мало чисел >= 100 — тест не проводился"
+    },
+    {
+      "test": "last",
+      "party": "L",
+      "n_numbers": 0,
+      "p_value": null,
+      "note": "мало чисел >= 100 — тест не проводился"
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "CH",
+      "pearson_w": 0.10440075202965321,
+      "spearman": 0.117751048150099
+    },
+    {
+      "party": "PS",
+      "pearson_w": -0.2422340741661605,
+      "spearman": -0.22829453969214603
+    },
+    {
+      "party": "PPD/PSD.CDS-PP",
+      "pearson_w": 0.3468088661695367,
+      "spearman": 0.22482351676619633
+    },
+    {
+      "party": "PCP-PEV",
+      "pearson_w": -0.1691205310010698,
+      "spearman": -0.23498262057289526
+    },
+    {
+      "party": "IL",
+      "pearson_w": 0.2906450195880228,
+      "spearman": 0.17917436457938368
+    },
+    {
+      "party": "L",
+      "pearson_w": 0.02909596545090413,
+      "spearman": -0.05829255381924679
+    }
+  ],
+  "neighbors_flagged": 4,
+  "integer_peaks_party_shares": [
+    {
+      "party": "CH",
+      "observed_pct": 1.098901098901099,
+      "null_pct": 2.357142857142857,
+      "z": -0.8277256360619293,
+      "z_mult5": -1.1196629205844366
+    },
+    {
+      "party": "PS",
+      "observed_pct": 1.098901098901099,
+      "null_pct": 2.1538461538461537,
+      "z": -0.7200995181166676,
+      "z_mult5": -0.08630987535388367
+    },
+    {
+      "party": "PPD/PSD.CDS-PP",
+      "observed_pct": 3.2967032967032965,
+      "null_pct": 3.0054945054945055,
+      "z": 0.18531015433789247,
+      "z_mult5": 0.04520089766694168
+    },
+    {
+      "party": "PCP-PEV",
+      "observed_pct": 1.098901098901099,
+      "null_pct": 1.6923076923076923,
+      "z": -0.4400392522412979,
+      "z_mult5": 0.4349628253670146
+    },
+    {
+      "party": "IL",
+      "observed_pct": 3.2967032967032965,
+      "null_pct": 8.598901098901099,
+      "z": -2.5074191862157558,
+      "z_mult5": -0.19
+    },
+    {
+      "party": "L",
+      "observed_pct": 4.395604395604396,
+      "null_pct": 8.192307692307692,
+      "z": -2.1259300824700107,
+      "z_mult5": -0.43
+    }
+  ],
+  "ml_flagged": 5,
+  "ml_candidates": [
+    "Uf Alcácer do Sal (SM Castelo e Santiago) e Santa Susana · S15",
+    "Vendas Novas · S15",
+    "Ferreira do Alentejo e Canhestros · S5",
+    "Uf Alcácer do Sal (SM Castelo e Santiago) e Santa Susana · S5",
+    "Ferreira do Alentejo e Canhestros · S7"
+  ],
+  "duplicate_protocol_rows": 0,
+  "within_freguesia": {
+    "n_groups": 5,
+    "n_units": 62,
+    "flagged": 3,
+    "flagged_names": [
+      "Ferreira do Alentejo e Canhestros · S5",
+      "Benavente · S9",
+      "Uf Alcácer do Sal (SM Castelo e Santiago) e Santa Susana · S15"
+    ]
+  },
+  "ballot_shares": {
+    "blank_median": 1.1904761904761905,
+    "blank_max": 3.215434083601286,
+    "blank_max_name": "Orada · S1",
+    "null_median": 0.8077544426494345,
+    "null_max": 5.555555555555555,
+    "null_max_name": "Uf Alcácer do Sal (SM Castelo e Santiago) e Santa Susana · S15"
+  },
+  "internal_consistency": {
+    "max_diff_ballots": 0.0,
+    "max_diff_electorate": 0.0,
+    "n_mismatch_rows": 0
+  },
+  "selftest": {
+    "t_cut": 75.33632286995515,
+    "clean_tail_party": 44,
+    "injected_added_ballots_party": 831,
+    "injected_tail_party": 1924,
+    "signal_growth": 43.72727272727273,
+    "peaks_z_clean": 1.2333720239475388,
+    "peaks_z_rounded": 1.1255151998452173,
+    "n_rounded_units": 8
+  },
+  "turnout_comparison": {
+    "section_turnout_min_median_max": [
+      51.80722891566265,
+      63.75266524520256,
+      76.85950413223141
+    ],
+    "freguesia_n": 22,
+    "freguesia_turnout_min_median_max": [
+      56.54545454545455,
+      63.67850180842237,
+      73.70600414078675
+    ],
+    "sections_outside_freguesia_range": 7,
+    "national_t_cut": 78.6424600948544,
+    "sections_above_national_cut": 0
+  }
+}

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovenia, 4 referendums — 11 Oct 2026: statistical fraud check</title>
+<meta name="description" content="Independent election-forensics analysis of the four Slovenian referendums of 11 October 2026: no statistical traces of manipulation found.">
+<meta property="og:title" content="Slovenia, 4 referendums — 11 Oct 2026: statistical fraud check">
+<meta property="og:description" content="Independent election-forensics analysis of the four Slovenian referendums of 11 October 2026: no statistical traces of manipulation found.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231e8e5a'/%3E%3Cpath d='M18 33l9 9 19-20' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#16324f; --muted:#5b6b7b; --line:#e3e8ee; --bg:#f4f7fa; --card:#ffffff;
+    --green:#1e8e5a; --green-soft:#e7f4ee; --red:#c0392b; --red-soft:#faecea;
+    --amber:#8a6116; --amber-soft:#fdf6e7; --blue:#3b82c4; --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+  main{max-width:960px;margin:0 auto;padding:0 18px 60px}
+  header.top{position:sticky;top:0;z-index:10;background:rgba(244,247,250,.92);backdrop-filter:blur(6px);
+             border-bottom:1px solid var(--line)}
+  header.top .bar{max-width:960px;margin:0 auto;padding:10px 18px;display:flex;justify-content:space-between;
+                  align-items:center;gap:12px;flex-wrap:wrap}
+  .brand{font-weight:700;font-size:14px;letter-spacing:.2px}
+  .brand .flag{display:inline-block;width:18px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-1px;
+               background:linear-gradient(#fff 33%,#005da4 33% 66%,#ed1c24 66%)}
+  .langs{display:flex;gap:6px;flex-wrap:wrap}
+  .langs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+                padding:4px 12px;font-size:13px;cursor:pointer}
+  .langs button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hero{background:linear-gradient(160deg,#16324f,#1d4468);color:#fff;border-radius:0 0 var(--radius) var(--radius);
+        padding:44px 24px 40px;margin:0 -18px}
+  .hero-inner{max-width:860px;margin:0 auto}
+  .kicker{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:#9fc3e2;font-weight:600}
+  h1{font-size:clamp(24px,4.6vw,38px);line-height:1.18;margin:10px 0 22px;font-weight:800}
+  .verdict{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);
+           padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+  .verdict .check{flex:none;width:44px;height:44px;border-radius:50%;background:var(--green);display:flex;
+                  align-items:center;justify-content:center;font-size:24px;color:#fff;margin-top:2px}
+  .verdict h2{margin:0 0 6px;font-size:clamp(18px,3vw,23px)}
+  .verdict p{margin:0;color:#dce8f2;font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;
+        padding:6px 14px;font-size:13.5px}
+  .chip b{font-size:15px}
+  section{margin-top:44px}
+  h3.sect{font-size:clamp(19px,3vw,25px);margin:0 0 6px;font-weight:800}
+  p.sect-sub{margin:0 0 18px;color:var(--muted);font-size:15px}
+  .cards2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .res-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;
+            border-left:5px solid var(--green)}
+  .res-card.rejected{border-left-color:var(--red)}
+  .res-card h4{margin:0 0 2px;font-size:16.5px}
+  .res-card .sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+  .bar-row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin:8px 0 3px}
+  .track{height:10px;border-radius:6px;background:#edf1f5;overflow:hidden;display:flex}
+  .track .za{background:var(--green)}
+  .track .proti{background:var(--red)}
+  .outcome{margin-top:11px;font-size:13.5px;font-weight:700;border-radius:8px;padding:6px 10px;display:inline-block}
+  .outcome.approved{background:var(--green-soft);color:var(--green)}
+  .outcome.rejected{background:var(--red-soft);color:var(--red)}
+  .args{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+  .arg{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+  .arg .num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;
+            align-items:center;justify-content:center;font-weight:800;font-size:15px;margin-bottom:10px}
+  .arg h4{margin:0 0 8px;font-size:16.5px}
+  .arg p{margin:0;font-size:14.5px;color:#2c4358}
+  figure{margin:0}
+  .fig{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .fig img{width:100%;height:auto;border-radius:8px;display:block}
+  .fig figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+  .figs{display:grid;gap:14px}
+  @media(min-width:760px){.figs .fig.half{display:grid;grid-template-columns:1.6fr 1fr;align-items:center}}
+  .m-list{display:grid;gap:10px}
+  .m{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+     display:flex;gap:14px;align-items:flex-start}
+  .m .badge{flex:none;margin-top:2px;background:var(--green-soft);color:var(--green);font-weight:800;font-size:12.5px;
+            border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .m h5{margin:0 0 3px;font-size:15px}
+  .m p{margin:0;font-size:14px;color:#2c4358}
+  .limits{background:var(--amber-soft);border:1px solid #ecd9ad;border-radius:var(--radius);padding:20px 22px}
+  .limits h3.sect{color:var(--amber)}
+  .limits ul{margin:10px 0 0;padding-left:20px}
+  .limits li{margin-bottom:9px;font-size:14.5px;color:#4a3d20}
+  .limits li:last-child{margin-bottom:0}
+  .data{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .data ul{margin:10px 0 0;padding-left:20px}
+  .data li{margin-bottom:9px;font-size:14.5px;color:#2c4358}
+  .data a{color:var(--blue)}
+  footer{margin-top:46px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}
+  footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <div class="brand"><span class="flag"></span><span data-i18n="brand">Slovenia · 4 referendums · 11.10.2026</span></div>
+    <nav class="langs" aria-label="Language">
+      <button data-lang="sl">Slovenščina</button>
+      <button data-lang="en" aria-pressed="true">English</button>
+      <button data-lang="hr">Hrvatski</button>
+      <button data-lang="it">Italiano</button>
+      <button data-lang="hu">Magyar</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ══ MINTO: ANSWER ══ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="kicker" data-i18n="kicker">Independent statistical audit</div>
+      <h1 data-i18n="h1">Slovenia voted on 4 questions. Do the numbers add up?</h1>
+      <div class="verdict">
+        <div class="check">✓</div>
+        <div>
+          <h2 data-i18n="verdict_title">Verdict: no statistical traces of manipulation</h2>
+          <p data-i18n="verdict_text">I ran standard election-forensics tests on the official precinct-level results of the four referendums of 11 October 2026. Every test is consistent with an honest count. (99.98% of ballots counted at the time of analysis; final check of abroad votes — 19 October 2026.)</p>
+        </div>
+      </div>
+      <div class="chips">
+        <div class="chip"><b data-i18n="n_precincts">2,984</b> <span data-i18n="chip_precincts">precincts analysed</span></div>
+        <div class="chip"><b>4</b> <span data-i18n="chip_ballots">ballots at every precinct</span></div>
+        <div class="chip"><b data-i18n="n_checked">843,000</b> <span data-i18n="chip_checked">ballots checked (91%)</span></div>
+        <div class="chip"><b>0</b> <span data-i18n="chip_arith">arithmetic discrepancies</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MINTO: SITUATION ══ -->
+  <section>
+    <h3 class="sect" data-i18n="sit_title">What was decided on 11 October 2026</h3>
+    <p class="sect-sub" data-i18n="sit_intro">Slovenia voted on four questions at once — one binding referendum on a law and three consultative ones. Every voter received all four ballots. National turnout: 54.6%.</p>
+    <div class="cards2">
+      <div class="res-card rejected">
+        <h4 data-i18n="r1_name">Parliamentary Investigations Act (ZPPre-B)</h4>
+        <div class="sub" data-i18n="r1_sub">binding referendum on the law</div>
+        <div class="bar-row"><span data-i18n="yes_label">YES</span> 48.74%</div>
+        <div class="track"><div class="za" style="width:48.74%"></div><div class="proti" style="width:51.26%"></div></div>
+        <div class="bar-row"><span data-i18n="no_label">NO</span> 51.26%</div>
+        <div class="outcome rejected" data-i18n="r1_out">Law rejected — NO 51.26% (quorum met)</div>
+      </div>
+      <div class="res-card">
+        <h4 data-i18n="r2_name">Social assistance</h4>
+        <div class="sub" data-i18n="r2_sub">consultative — work requirement for welfare</div>
+        <div class="bar-row"><span data-i18n="yes_label">YES</span> 60.54%</div>
+        <div class="track"><div class="za" style="width:60.54%"></div><div class="proti" style="width:39.46%"></div></div>
+        <div class="bar-row"><span data-i18n="no_label">NO</span> 39.46%</div>
+        <div class="outcome approved" data-i18n="r2_out">Approved — YES 60.54%</div>
+      </div>
+      <div class="res-card">
+        <h4 data-i18n="r3_name">Local voting rights</h4>
+        <div class="sub" data-i18n="r3_sub">consultative — local vote for EU citizens only</div>
+        <div class="bar-row"><span data-i18n="yes_label">YES</span> 55.30%</div>
+        <div class="track"><div class="za" style="width:55.30%"></div><div class="proti" style="width:44.70%"></div></div>
+        <div class="bar-row"><span data-i18n="no_label">NO</span> 44.70%</div>
+        <div class="outcome approved" data-i18n="r3_out">Approved — YES 55.30%</div>
+      </div>
+      <div class="res-card rejected">
+        <h4 data-i18n="r4_name">RTV Slovenia fee</h4>
+        <div class="sub" data-i18n="r4_sub">consultative — abolish the broadcaster fee</div>
+        <div class="bar-row"><span data-i18n="yes_label">YES</span> 49.97%</div>
+        <div class="track"><div class="za" style="width:49.97%"></div><div class="proti" style="width:50.03%"></div></div>
+        <div class="bar-row"><span data-i18n="no_label">NO</span> 50.03%</div>
+        <div class="outcome rejected" data-i18n="r4_out">Rejected — NO 50.03% (margin: 546 votes)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: KEY ARGUMENTS ══ -->
+  <section>
+    <h3 class="sect" data-i18n="why_title">Three reasons the numbers can be trusted</h3>
+    <div class="args">
+      <div class="arg">
+        <div class="num">1</div>
+        <h4 data-i18n="a1_t">The arithmetic is perfect</h4>
+        <p data-i18n="a1_b">All 12,332 precinct records add up exactly: YES + NO = valid votes, valid + invalid = ballots cast. And four separate counts ran at every precinct: in 93% of precincts the number of ballots is identical across all four; 99.6% differ by at most 2. Mass tampering cannot stay this consistent.</p>
+      </div>
+      <div class="arg">
+        <div class="num">2</div>
+        <h4 data-i18n="a2_t">No anomalies where fraud would show</h4>
+        <p data-i18n="a2_b">Precinct turnout forms one smooth bell curve that fades out by ~70%. Above 80% turnout there are only 10 tiny precincts — 0.1% of ballots. Stuffed ballot boxes leave the opposite signature: a visible mass of large precincts at 80–100% turnout. There is none. No spikes at round numbers, no digit patterns, no duplicated protocols.</p>
+      </div>
+      <div class="arg">
+        <div class="num">3</div>
+        <h4 data-i18n="a3_t">The pattern is geography, not manipulation</h4>
+        <p data-i18n="a3_b">The YES share rises smoothly with turnout (+4 points per 10 points) — the familiar city-versus-countryside split. Crucially, all four questions show the same gradient (correlation 0.94–0.96). If one count had been tampered with, it would break ranks with the other three. None does.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: SUPPORTING EVIDENCE ══ -->
+  <section>
+    <div class="figs">
+      <figure class="fig">
+        <img src="img/en/turnout.png" data-fig="turnout" alt="Turnout histogram: one smooth bell curve fading out by 70%" loading="lazy">
+        <figcaption data-i18n="fig1_cap">Turnout across 2,984 precincts (parliamentary-investigation referendum). The curve is one smooth bell — by 70% turnout it has faded to nearly zero.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="img/en/comet.png" data-fig="comet" alt="Turnout vs YES share: smooth gradient, no separate tail" loading="lazy">
+        <figcaption data-i18n="fig2_cap">Each dot is a precinct. YES share grows smoothly with turnout — the city/countryside gradient; there is no separate cloud at high turnout.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="img/en/cross.png" data-fig="cross" alt="YES share pairs across the four referendums, r = 0.94–0.96" loading="lazy">
+        <figcaption data-i18n="fig3_cap">All four referendums, same precincts. A YES-heavy precinct is YES-heavy on every question — one electorate, one consistent geography (r = 0.94–0.96).</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="sect" data-i18n="meth_title">How I checked</h3>
+    <p class="sect-sub" data-i18n="meth_intro">Eight families of tests used by election statisticians worldwide, run on the official precinct data with open-source code. Summary: all clean.</p>
+    <div class="m-list">
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
+        <p data-i18n="m1_b">Votes beyond the honest turnout decline: at most 1% of YES votes and 0.45% of NO votes — and removing them would shift any outcome by at most 0.15 points.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
+        <p data-i18n="m2_b">One continuous cloud with a smooth gradient — no separate “tail” of high-turnout, high-YES precincts that ballot-stuffing produces.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
+        <p data-i18n="m3_b">The distribution matches honest elections; the specific 2D cluster typical of fraud (80–100% turnout) is absent.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
+        <p data-i18n="m4_b">Protocol values show no preference for whole percentages of turnout or result (all statistics ≤ 1.3) — no sign of numbers typed in by hand.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m5_t">Digit tests (Benford, last digit)</h5>
+        <p data-i18n="m5_b">16 tests on vote counts: 13 fully clean, 3 borderline values with the opposite of the “fabricated numbers” profile — and not significant after multiple-testing correction.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m6_t">Outliers vs neighbours + machine learning</h5>
+        <p data-i18n="m6_b">A few dozen precincts flagged — all tiny (16–342 voters) with mixed directions; a normal statistical tail, not a pattern.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m7_t">Duplicate protocols</h5>
+        <p data-i18n="m7_b">Repeated result vectors occur at exactly the rate chance predicts (38–60 observed vs 37–53 expected). No copy-paste.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m8_t">Self-test: the toolkit actually detects fraud</h5>
+        <p data-i18n="m8_b">I injected synthetic ballot-stuffing into the data — the estimated anomalous zone grew 12-fold and every alarm fired. The “clean” verdict is a real measurement, not a blind spot.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: CAVEATS ══ -->
+  <section>
+    <div class="limits">
+      <h3 class="sect" data-i18n="lim_title">What this analysis cannot see</h3>
+      <p class="sect-sub" style="color:#7a6a3d" data-i18n="lim_intro">Honest limits of the method — statistics shows anomalies, not intentions.</p>
+      <ul>
+        <li data-i18n="l1">Protocols and witnesses are not in the dataset. Statistics can confirm the numbers are mutually consistent; it cannot rule out manipulation that happened before the numbers existed (e.g. pressure on voters that is spread evenly).</li>
+        <li data-i18n="l2">9% of ballots have no precinct breakdown (early voting, postal, abroad). They were checked by digit tests and totals only.</li>
+        <li data-i18n="l3">At the time of analysis 99.98% of ballots were counted (final check of abroad votes: 19 October 2026). Final numbers may move by dozens of votes — far too little to change any outcome.</li>
+        <li data-i18n="l4">Precincts average ~460 voters, so the round-number test is insensitive to falsifying a small share of protocols (verified by self-test). Digit tests need thousands of numbers to be powerful.</li>
+        <li data-i18n="l5">I am an independent researcher with no ties to the State Electoral Commission; all input files are official DVK publications and the analysis code is open source.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="data">
+      <h3 class="sect" data-i18n="data_title">Data &amp; reproducibility</h3>
+      <ul>
+        <li data-i18n="d1">Source: official machine-readable results of the State Electoral Commission (DVK) at <a href="https://volitve.dvk-rs.si" rel="noopener">volitve.dvk-rs.si</a> — precinct-level files for all four referendums, downloaded 13 October 2026 (server snapshot 12 October 2026, 99.98% counted).</li>
+        <li data-i18n="d2">Cross-check: my totals match the Wikipedia summary table for all four referendums to the exact vote.</li>
+        <li data-i18n="d3">Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco and other methods.</li>
+        <li data-i18n="d4">Full technical report (in Russian), precinct data files and analysis scripts are available in the project repository.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer><span data-i18n="footer">Independent analysis · <a href="http://renatyv.org" rel="noopener">renatyv.org</a> · Data: DVK (volitve.dvk-rs.si) · Page generated 13 October 2026</span></footer>
+</main>
+
+<script>
+const I18N = {
+en: {
+  title: "Slovenia, 4 referendums — 11 Oct 2026: statistical fraud check",
+  brand: "Slovenia · 4 referendums · 11.10.2026",
+  kicker: "Independent statistical audit",
+  h1: "Slovenia voted on 4 questions. Do the numbers add up?",
+  verdict_title: "Verdict: no statistical traces of manipulation",
+  verdict_text: "I ran standard election-forensics tests on the official precinct-level results of the four referendums of 11 October 2026. Every test is consistent with an honest count. (99.98% of ballots counted at the time of analysis; final check of abroad votes — 19 October 2026.)",
+  n_precincts: "2,984",
+  n_checked: "843,000",
+  chip_precincts: "precincts analysed",
+  chip_ballots: "ballots at every precinct",
+  chip_checked: "ballots checked (91%)",
+  chip_arith: "arithmetic discrepancies",
+  sit_title: "What was decided on 11 October 2026",
+  sit_intro: "Slovenia voted on four questions at once — one binding referendum on a law and three consultative ones. Every voter received all four ballots. National turnout: 54.6%.",
+  yes_label: "YES", no_label: "NO",
+  r1_name: "Parliamentary Investigations Act (ZPPre-B)",
+  r1_sub: "binding referendum on the law",
+  r1_out: "Law rejected — NO 51.26% (quorum met)",
+  r2_name: "Social assistance",
+  r2_sub: "consultative — work requirement for welfare",
+  r2_out: "Approved — YES 60.54%",
+  r3_name: "Local voting rights",
+  r3_sub: "consultative — local vote for EU citizens only",
+  r3_out: "Approved — YES 55.30%",
+  r4_name: "RTV Slovenia fee",
+  r4_sub: "consultative — abolish the broadcaster fee",
+  r4_out: "Rejected — NO 50.03% (margin: 546 votes)",
+  why_title: "Three reasons the numbers can be trusted",
+  a1_t: "The arithmetic is perfect",
+  a1_b: "All 12,332 precinct records add up exactly: YES + NO = valid votes, valid + invalid = ballots cast. And four separate counts ran at every precinct: in 93% of precincts the number of ballots is identical across all four; 99.6% differ by at most 2. Mass tampering cannot stay this consistent.",
+  a2_t: "No anomalies where fraud would show",
+  a2_b: "Precinct turnout forms one smooth bell curve that fades out by ~70%. Above 80% turnout there are only 10 tiny precincts — 0.1% of ballots. Stuffed ballot boxes leave the opposite signature: a visible mass of large precincts at 80–100% turnout. There is none. No spikes at round numbers, no digit patterns, no duplicated protocols.",
+  a3_t: "The pattern is geography, not manipulation",
+  a3_b: "The YES share rises smoothly with turnout (+4 points per 10 points) — the familiar city-versus-countryside split. Crucially, all four questions show the same gradient (correlation 0.94–0.96). If one count had been tampered with, it would break ranks with the other three. None does.",
+  fig1_cap: "Turnout across 2,984 precincts (parliamentary-investigation referendum). The curve is one smooth bell — by 70% turnout it has faded to nearly zero.",
+  fig1_alt: "Turnout histogram: one smooth bell curve fading out by 70%",
+  fig2_alt: "Turnout vs YES share: smooth gradient, no separate tail",
+  fig3_alt: "YES share pairs across the four referendums, r = 0.94–0.96",
+  fig2_cap: "Each dot is a precinct. YES share grows smoothly with turnout — the city/countryside gradient; there is no separate cloud at high turnout.",
+  fig3_cap: "All four referendums, same precincts. A YES-heavy precinct is YES-heavy on every question — one electorate, one consistent geography (r = 0.94–0.96).",
+  meth_title: "How I checked",
+  meth_intro: "Eight families of tests used by election statisticians worldwide, run on the official precinct data with open-source code. Summary: all clean.",
+  m1_t: "Anomalous-vote estimate (Shpilkin method)",
+  m1_b: "Votes beyond the honest turnout decline: at most 1% of YES votes and 0.45% of NO votes — and removing them would shift any outcome by at most 0.15 points.",
+  m2_t: "Turnout × result scatter (“comet tail”)",
+  m2_b: "One continuous cloud with a smooth gradient — no separate “tail” of high-turnout, high-YES precincts that ballot-stuffing produces.",
+  m3_t: "Election fingerprints (Klimek et al.)",
+  m3_b: "The distribution matches honest elections; the specific 2D cluster typical of fraud (80–100% turnout) is absent.",
+  m4_t: "Round-number peaks (Kobak et al.)",
+  m4_b: "Protocol values show no preference for whole percentages of turnout or result (all statistics ≤ 1.3) — no sign of numbers typed in by hand.",
+  m5_t: "Digit tests (Benford, last digit)",
+  m5_b: "16 tests on vote counts: 13 fully clean, 3 borderline values with the opposite of the “fabricated numbers” profile — and not significant after multiple-testing correction.",
+  m6_t: "Outliers vs neighbours + machine learning",
+  m6_b: "A few dozen precincts flagged — all tiny (16–342 voters) with mixed directions; a normal statistical tail, not a pattern.",
+  m7_t: "Duplicate protocols",
+  m7_b: "Repeated result vectors occur at exactly the rate chance predicts (38–60 observed vs 37–53 expected). No copy-paste.",
+  m8_t: "Self-test: the toolkit actually detects fraud",
+  m8_b: "I injected synthetic ballot-stuffing into the data — the estimated anomalous zone grew 12-fold and every alarm fired. The “clean” verdict is a real measurement, not a blind spot.",
+  lim_title: "What this analysis cannot see",
+  lim_intro: "Honest limits of the method — statistics shows anomalies, not intentions.",
+  l1: "Protocols and witnesses are not in the dataset. Statistics can confirm the numbers are mutually consistent; it cannot rule out manipulation that happened before the numbers existed (e.g. pressure on voters that is spread evenly).",
+  l2: "9% of ballots have no precinct breakdown (early voting, postal, abroad). They were checked by digit tests and totals only.",
+  l3: "At the time of analysis 99.98% of ballots were counted (final check of abroad votes: 19 October 2026). Final numbers may move by dozens of votes — far too little to change any outcome.",
+  l4: "Precincts average ~460 voters, so the round-number test is insensitive to falsifying a small share of protocols (verified by self-test). Digit tests need thousands of numbers to be powerful.",
+  l5: "I am an independent researcher with no ties to the State Electoral Commission; all input files are official DVK publications and the analysis code is open source.",
+  data_title: "Data & reproducibility",
+  d1: "Source: official machine-readable results of the State Electoral Commission (DVK) at <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — precinct-level files for all four referendums, downloaded 13 October 2026 (server snapshot 12 October 2026, 99.98% counted).",
+  d2: "Cross-check: my totals match the Wikipedia summary table for all four referendums to the exact vote.",
+  d3: "Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco and other methods.",
+  d4: "Full technical report (in Russian), precinct data files and analysis scripts are available in the project repository.",
+  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: DVK (volitve.dvk-rs.si) · Page generated 13 October 2026"
+},
+sl: {
+  title: "Slovenija, 4 referendumi — 11. 10. 2026: statistična preverba",
+  brand: "Slovenija · 4 referendumi · 11.10.2026",
+  kicker: "Neodvisna statistična preverba",
+  h1: "Slovenija je glasovala o 4 vprašanjih. Ali so številke zaupanja vredne?",
+  verdict_title: "Zaključek: statističnih sledi poneverbe ni",
+  verdict_text: "Na uradnih rezultatih po voliščih za štiri referendume 11. oktobra 2026 sem izvedel običajne statistične teste za odkrivanje poneverbe volitev. Vsi testi so skladni s poštenim števanjem. (Ob analizi preštetih 99,98 % glasovnic; dokončna preverba glasov iz tujine — 19. oktober 2026.)",
+  n_precincts: "2.984",
+  n_checked: "843.000",
+  chip_precincts: "volišč v analizi",
+  chip_ballots: "glasovnice na vsakem volišču",
+  chip_checked: "preverjenih glasovnic (91 %)",
+  chip_arith: "aritmetičnih napak",
+  sit_title: "O čem se je odločalo 11. oktobra 2026",
+  sit_intro: "Slovenija je hkrati glasovala o štirih vprašanjih — enem zakonodajnem referendumu in treh posvatovalnih. Vsak volilec je dobil vse štiri glasovnice. Udeležba po državi: 54,6 %.",
+  yes_label: "ZA", no_label: "PROTI",
+  r1_name: "Zakon o parlamentarni preiskavi (ZPPre-B)",
+  r1_sub: "zakonodajni referendum",
+  r1_out: "Zakon zavrnjen — PROTI 51,26 % (kvorum izpolnjen)",
+  r2_name: "Denarna socialna pomoč",
+  r2_sub: "posvatovalni — pomoč ob aktivnem delu splošne koristi",
+  r2_out: "Sprejet — ZA 60,54 %",
+  r3_name: "Volilna pravica na lokalnih volitvah",
+  r3_sub: "posvatovalni — le za državljane EU",
+  r3_out: "Sprejet — ZA 55,30 %",
+  r4_name: "Prispevek za RTV Slovenija",
+  r4_sub: "posvatovalni — ukinitev obveznega prispevka",
+  r4_out: "Zavrnjen — PROTI 50,03 % (razlika: 546 glasov)",
+  why_title: "Trije razlogi za zaupanje številkam",
+  a1_t: "Aritmetika je brez napak",
+  a1_b: "Vseh 12.332 zapisov po voliščih se sešteva natančno: ZA + PROTI = veljavni glasovi, veljavni + neveljavni = oddane glasovnice. Na vsakem volišču so šteli štirikrat: pri 93 % volišč je število oddanih glasovnic v vseh štirih glasovanjih enako, pri 99,6 % se razlikuje za največ 2. Takšno usklajenost množična poneverba ne obdrži.",
+  a2_t: "Ni anomalij, kjer bi poneverba pustila sledi",
+  a2_b: "Udeležba po voliščih tvori eno samo gladko zvonasto krivuljo, ki izzveni pri ~70 %. Nad 80-odstotno udeležbo je le 10 majhnih volišč — 0,1 % glasovnic. Vmetavanje glasovnic pušča nasprotni pečat: množico velikih volišč z udeležbo 80–100 %. Te ni. Ni pik pri okroglih številih, ni vzorcev v števkah, ni podvojenih zapisnikov.",
+  a3_t: "Vzorec je geografija, ne manipulacija",
+  a3_b: "Delež ZA gladko narašča z udeležbo (+4 točke na 10 točk udeležbe) — znana ločnica mesto–vas. Ključno: enak vzorec velja za vsa štiri vprašanja (korelacija 0,94–0,96). Če bi bilo katero števanje prilagojeno, bi izstopilo iz ostalih treh. Nobeno ne izstopa.",
+  fig1_cap: "Udeležba po 2.984 voliščih (zakonodajni referendum). Krivulja je en sam gladek zvon — pri 70-odstotni udeležbi skoraj izzveni.",
+  fig1_alt: "Histogram udeležbe: en sam gladek zvon, ki izzveni pri 70 %",
+  fig2_alt: "Udeležba in delež ZA: gladek gradient, brez ločenega repa",
+  fig3_alt: "Pari deležev ZA med štirimi referendumi, korelacije r = 0,94–0,96",
+  fig2_cap: "Vsaka pika je volišče. Delež ZA gladko narašča z udeležbo — gradient mesto/vas; ločenega oblaka pri visoki udeležbi ni.",
+  fig3_cap: "Vsi štirje referendumi, ista volišča. Volišče z visokim ZA je »za« pri vsakem vprašanju — en volilec, ena usklajena geografija (r = 0,94–0,96).",
+  meth_title: "Kako sem preverjal",
+  meth_intro: "Osem družin testov, ki jih volilni statistiki uporabljajo po svetu, na uradnih podatkih po voliščih, z odprto kodo. Povzetek: vse čisto.",
+  m1_t: "Ocena anomalnih glasov (Shpilkinova metoda)",
+  m1_b: "Glasovi nad mejo poštenega upada: največ 1 % glasov ZA in 0,45 % glasov PROTI — brez njih bi se vsak izid premaknil za največ 0,15 točke.",
+  m2_t: "Razsevni diagram udeležba × izid (»kometov rep«)",
+  m2_b: "En sam neprekinjen oblak z gladkim gradientom — brez ločenega »repa« volišč z visoko udeležbo in visokim ZA, značilnega za vmetavanje glasovnic.",
+  m3_t: "Volilni prstni odtisi (Klimek id.)",
+  m3_b: "Porazdelitev se ujema s poštenimi volitvami; značilen 2D grozd poneverbe (udeležba 80–100 %) ni prisoten.",
+  m4_t: "Piki pri okroglih številkah (Kobak id.)",
+  m4_b: "Vrednosti v zapisnikih ne kažejo nobene preference za cele odstotke (vse statistike ≤ 1,3) — ni znakov ročno vnašanih števil.",
+  m5_t: "Testi števk (Benford, zadnja števka)",
+  m5_b: "16 testov na štetjih: 13 popolnoma čistih, 3 mejne vrednosti z nasprotnim profilom od »izmišljenih števil« — po korekciji za večkratno testiranje niso značilne.",
+  m6_t: "Odstopanja od sosedov + strojno učenje",
+  m6_b: "Označeno je nekaj deset volišč — vsa majhna (16–342 volivcev), s povsem mešanimi smermi; to je običajen statistični rep, ne vzorec.",
+  m7_t: "Podvojeni zapisniki",
+  m7_b: "Ponovljeni vektorji rezultatov se pojavljajo natanko tako pogosto, kot napoveduje naključje (opazili 38–60, pričakovano 37–53). Ni kopiranja.",
+  m8_t: "Samopreizkus: orodja poneverbo res zaznajo",
+  m8_b: "V podatke sem vnesel sintetično vmetavanje glasovnic — ocenjena anomalna cona se je povečala 12-krat in sprožili so se vsi alarmi. »Čist« zaključek je prava meritev, ne slepa pika.",
+  lim_title: "Kaj ta analiza ne more videti",
+  lim_intro: "Iskrene meje metode — statistika pokaže anomalije, ne namere.",
+  l1: "Zapisnikov in prič v podatkih ni. Statistika lahko potrdi, da so številke medsebojno skladne; ne more pa izključiti manipulacije, ki se je zgodila pred številkami (npr. enakomerno razprtega pritiska na volivce).",
+  l2: "9 % glasovnic nima razčlenitve po voliščih (predčasno glasovanje, pošta, tujina). Preverjene so le s testi števk in s seštevki.",
+  l3: "Ob analizi je bilo preštetih 99,98 % glasovnic (dokončna preverba glasov iz tujine: 19. oktober 2026). Končne številke se lahko premaknejo za desetke glasov — premalo, da bi spremenile kateri koli izid.",
+  l4: "Povprečno volišče ima ~460 volivcev, zato test okroglih števil ne zazna prilagoditve majhnega deleža zapisnikov (potrjeno s samopreizkusom). Testi števk so zmogljivi šele pri tisočih številkah.",
+  l5: "Neodvisen raziskovalec sem, z Državno volilno komisijo nisem povezan; vse vhodne datoteke so uradne objave DVK, analitična koda pa je odprta.",
+  data_title: "Podatki in ponovljivost",
+  d1: "Vir: uradni, strojno berljivi rezultati Državne volilne komisije (DVK), <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — datoteke po voliščih za vse štiri referendume, prenešene 13. oktobra 2026 (posnetek strežnika 12. oktober 2026, preštetih 99,98 %).",
+  d2: "Medsebojna preverba: moje vsote za vse štiri referendume se z analitiko Wikipedije ujemajo do zadnjega glasu.",
+  d3: "Orodja: odprtokodni analizni nabor (Python, pandas / scikit-learn) s metodami Shpilkin, Klimek, Kobak, Beber–Scacco in drugimi.",
+  d4: "Polno tehnično poročilo (v ruščini), podatkovne datoteke po voliščih in skripti so v repozitoriju projekta.",
+  footer: "Neodvisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Podatki: DVK (volitve.dvk-rs.si) · Stran ustvarjena 13. oktobra 2026"
+},
+hr: {
+  title: "Slovenija, 4 referenduma — 11. 10. 2026.: statistička provjera",
+  brand: "Slovenija · 4 referenduma · 11.10.2026.",
+  kicker: "Neovisna statistička provjera",
+  h1: "Slovenija je glasovala o 4 pitanja. Jesu li brojevi vjerodostojni?",
+  verdict_title: "Zaključak: nema statističkih tragova manipulacije",
+  verdict_text: "Na službenim rezultatima po biračkim mjestima za četiri referenduma od 11. listopada 2026. proveo sam uobičajene statističke testove za otkrivanje izborne manipulacije. Svi su testovi u skladu s poštenim brojanjem. (U trenutku analize prebrojano 99,98 % listića; konačna provjera glasova iz inozemstva — 19. listopada 2026.)",
+  n_precincts: "2.984",
+  n_checked: "843.000",
+  chip_precincts: "biračka mjesta u analizi",
+  chip_ballots: "listića na svakom mjestu",
+  chip_checked: "provjerenih listića (91 %)",
+  chip_arith: "aritmetičkih pogrešaka",
+  sit_title: "O čemu se odlučivalo 11. listopada 2026.",
+  sit_intro: "Slovenija je glasovala o četiri pitanja istovremeno — jednom obvezujućem referendumu o zakonu i tri savjetodavna. Svaki birač dobio je sva četiri listića. Izlaznost u državi: 54,6 %.",
+  yes_label: "ZA", no_label: "PROTIV",
+  r1_name: "Zakon o parlamentarnoj istrazi (ZPPre-B)",
+  r1_sub: "obvezujući referendum o zakonu",
+  r1_out: "Zakon odbačen — PROTIV 51,26 % (kvorum ispunjen)",
+  r2_name: "Novčana socijalna pomoć",
+  r2_sub: "savjetodavni — pomoć uz društveno koristan rad",
+  r2_out: "Prihvaćen — ZA 60,54 %",
+  r3_name: "Biračko pravo na lokalnim izborima",
+  r3_sub: "savjetodavni — samo za građane EU",
+  r3_out: "Prihvaćen — ZA 55,30 %",
+  r4_name: "Prihod za RTV Slovenija",
+  r4_sub: "savjetodavni — ukidanje obveznog prihoda",
+  r4_out: "Odbačen — PROTIV 50,03 % (razlika: 546 glasova)",
+  why_title: "Tri razloga zašto se brojevima može vjerovati",
+  a1_t: "Aritmetika je savršena",
+  a1_b: "Svih 12.332 zapisa po biračkim mjestima točno se zbraja: ZA + PROTIV = važeći glasovi, važeći + nevažeći = odigrani listići. Na svakom mjestu brojalo se četiri puta: kod 93 % mjesta broj listića identičan je u sva četiri glasovanja, kod 99,6 % razlikuje se najviše 2. Masovna manipulacija takvu usklađenost ne može održati.",
+  a2_t: "Nema anomalija tamo gdje bi manipulacija ostavila trag",
+  a2_b: "Izlaznost po mjestima tvori jednu glatku zvonastu krivulju koja se gasi oko 70 %. Iznad 80 % izlaznosti tek 10 sićušnih mjesta — 0,1 % listića. Ubacivanje listića ostavlja suprotan trag: masu velikih mjesta s izlaznošću 80–100 %. Takve nema. Nema ni vrhunaca kod okruglih brojeva, ni obrazaca u znamenkama, ni udvostručenih zapisnika.",
+  a3_t: "Obrazac je geografija, ne manipulacija",
+  a3_b: "Udio ZA glatko raste s izlaznošću (+4 boda na 10 bodova izlaznosti) — poznana podjela grad–selo. Ključno: isti obrazac vrijedi za sva četiri pitanja (korelacija 0,94–0,96). Da je jedno brojanje bilo dirigirano, istaklo bi se iz ostala tri. Niti se jedno ne ističe.",
+  fig1_cap: "Izlaznost po 2.984 biračka mjesta (referendum o zakonu). Krivulja je jedno glatko zvono — kod 70 % izlaznosti gotovo se ugasi.",
+  fig1_alt: "Histogram izlaznosti: jedno glatko zvono koje se gasi kod 70 %",
+  fig2_alt: "Izlaznost i udio ZA: glatki gradijent, bez odvojenog repa",
+  fig3_alt: "Parovi udjela ZA između četiri referenduma, korelacije r = 0,94–0,96",
+  fig2_cap: "Svaka točka je biračko mjesto. Udio ZA glatko raste s izlaznošću — gradijent grad/selo; odvojenog oblaka pri visokoj izlaznosti nema.",
+  fig3_cap: "Sva četiri referenduma, ista mjesta. Mjesto s visokim ZA »za« je kod svakog pitanja — jedno biračko tijelo, jedna usklađena geografija (r = 0,94–0,96).",
+  meth_title: "Kako sam provjeravao",
+  meth_intro: "Osam obitelji testova koje izborni statističari diljem svijeta standardno primjenjuju, na službenim podacima po mjestima, s otvorenim kodom. Sažetak: sve čisto.",
+  m1_t: "Procjena anomalnih glasova (Shpilkinova metoda)",
+  m1_b: "Glasovi iznad poštenog pada: najviše 1 % glasova ZA i 0,45 % PROTIV — bez njih svaki ishod pomaknuo bi se najviše 0,15 boda.",
+  m2_t: "Dijagram izlaznost × ishod (»kometov rep«)",
+  m2_b: "Jedan neprekinjen oblak s glatkim gradijentom — nema odvojenog »repa« mjesta s visokom izlaznošću i visokim ZA, kakav ostavlja ubacivanje listića.",
+  m3_t: "Izborni otisci prstiju (Klimek i dr.)",
+  m3_b: "Raspodjela odgovara poštenim izborima; za manipulaciju tipičan 2D klaster (izlaznost 80–100 %) nije prisutan.",
+  m4_t: "Vrhunci kod okruglih brojeva (Kobak i dr.)",
+  m4_b: "Vrijednosti u zapisnicima ne pokazuju sklonost cijelim postocima (sve statistike ≤ 1,3) — nema znaka ručno upisivanih brojeva.",
+  m5_t: "Testovi znamenki (Benford, zadnja znamenka)",
+  m5_b: "16 testova na zbrojima: 13 sasvim čistih, 3 granične vrijednosti s profilom suprotnim od »izmišljenih brojeva« — nakon korekcije na višestruko testiranje nisu značajne.",
+  m6_t: "Odstupanja od susjeda + strojno učenje",
+  m6_b: "Označeno nekoliko desetaka mjesta — sva sitna (16–342 birača), u posve različitim smjerovima; to je običan statistički rep, ne obrazac.",
+  m7_t: "Udvostručeni zapisnici",
+  m7_b: "Ponovljeni vektori rezultata javljaju se točno onoliko često koliko predviđa slučajnost (zabilježeno 38–60, očekivano 37–53). Nema kopiranja.",
+  m8_t: "Samotest: alati doista hvataju manipulaciju",
+  m8_b: "U podatke sam ubacio sintetsko ubacivanje listića — procijenjena anomalna zona narasla je 12 puta i svi su alarmi zazvonili. »Čist« zaključak je stvarno mjerenje, a ne slijepa mrla.",
+  lim_title: "Što ova analiza ne može vidjeti",
+  lim_intro: "Poštene granice metode — statistika pokazuje anomalije, ne namjere.",
+  l1: "Zapisnika i svjedoka nema u podacima. Statistika može potvrditi da su brojevi međusobno skladni; ne može isključiti manipulaciju koja se dogodila prije brojeva (npr. ravnomjerno raspršen pritisak na birače).",
+  l2: "9 % listića nema raspodjelu po mjestima (predčasno glasovanje, pošta, inozemstvo). Provjereni su samo testovima znamenki i zbrojevima.",
+  l3: "U trenutku analize prebrojano je 99,98 % listića (konačna provjera glasova iz inozemstva: 19. listopada 2026.). Konačni brojevi mogu se pomaknuti za desetke glasova — premalo da bi što promijenili.",
+  l4: "Prosječno mjesto ima ~460 birača, pa test okruglih brojeva ne vidi falsificiranje malog udjela zapisnika (potvrđeno samotestom). Testovi znamenki snažni su tek kod tisuća brojeva.",
+  l5: "Neovisan sam istraživač i nemam veze s Državnom izbornom komisijom; sve ulazne datoteke službene su objave DVK, a analitički kod je otvoren.",
+  data_title: "Podaci i ponovljivost",
+  d1: "Izvor: službeni rezultati Državne izborne komisije (DVK) u strojno čitljivom obliku, <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — datoteke po biračkim mjestima za sva četiri referenduma, preuzete 13. listopada 2026. (snimka poslužitelja 12. listopada 2026., prebrojano 99,98 %).",
+  d2: "Usporedba: moji zbroji za sva četiri referenduma podudaraju se s Wikipedijom do zadnjeg glasa.",
+  d3: "Alati: otvoreni analitički sustav (Python, pandas / scikit-learn) s metodama Shpilkina, Klimeka, Kobaka, Beber–Scacco i drugima.",
+  d4: "Potpuno tehničko izvješće (na ruskom), podatkovne datoteke i skripte dostupni su u repozitoriju projekta.",
+  footer: "Neovisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Podaci: DVK (volitve.dvk-rs.si) · Stranica izrađena 13. listopada 2026."
+},
+it: {
+  title: "Slovenia, 4 referendum — 11 ott 2026: verifica statistica",
+  brand: "Slovenia · 4 referendum · 11.10.2026",
+  kicker: "Verifica statistica indipendente",
+  h1: "La Slovenia ha votato su 4 quesiti. I numeri reggono?",
+  verdict_title: "Verdetto: nessuna traccia statistica di manipolazione",
+  verdict_text: "Ho applicato i test statistici standard anti-frode elettorale ai risultati ufficiali sezione per sezione dei quattro referendum dell'11 ottobre 2026. Ogni test è coerente con uno spoglio onesto. (Al momento dell'analisi scrutinato il 99,98% delle schede; verifica finale dei voti dall'estero — 19 ottobre 2026.)",
+  n_precincts: "2.984",
+  n_checked: "843.000",
+  chip_precincts: "sezioni analizzate",
+  chip_ballots: "schede per ogni sezione",
+  chip_checked: "schede verificate (91%)",
+  chip_arith: "discrepanze aritmetiche",
+  sit_title: "Cosa si è deciso l'11 ottobre 2026",
+  sit_intro: "La Slovenia ha votato contemporaneamente su quattro quesiti — un referendum legislativo vincolante e tre consultivi. Ogni elettore ha ricevuto tutte e quattro le schede. Affluenza nazionale: 54,6%.",
+  yes_label: "SÌ", no_label: "CONTRO",
+  r1_name: "Legge sulle inchieste parlamentari (ZPPre-B)",
+  r1_sub: "referendum legislativo vincolante",
+  r1_out: "Legge respinta — CONTRO 51,26% (quorum raggiunto)",
+  r2_name: "Sussidio sociale",
+  r2_sub: "consultivo — sussidio legato al lavoro utile",
+  r2_out: "Approvato — SÌ 60,54%",
+  r3_name: "Diritto di voto locale",
+  r3_sub: "consultivo — voto comunale solo ai cittadini UE",
+  r3_out: "Approvato — SÌ 55,30%",
+  r4_name: "Canone RTV Slovenia",
+  r4_sub: "consultivo — abolizione del canone",
+  r4_out: "Respinto — CONTRO 50,03% (margine: 546 voti)",
+  why_title: "Tre motivi per cui i numeri sono credibili",
+  a1_t: "L'aritmetica è perfetta",
+  a1_b: "Tutti i 12.332 record di sezione tornano al centesimo: SÌ + NO = voti validi, validi + nulli = schede. Ogni sezione è stata scrutinata quattro volte: nel 93% delle sezioni il numero di schede è identico in tutti e quattro gli scrutini; nel 99,6% differisce al massimo di 2. Una manipolazione di massa non regge questa coerenza.",
+  a2_t: "Nessuna anomalia dove la frode lascerebbe segni",
+  a2_b: "L'affluenza delle sezioni forma un'unica campana regolare che si esaurisce intorno al 70%. Oltre l'80% di affluenza restano solo 10 sezioni minuscole — lo 0,1% delle schede. Le schede introdotte fraudolentemente lasciano la firma opposta: una massa visibile di sezioni grandi all'80–100% di affluenza. Qui non esiste. Né picchi sui numeri tondi, né pattern nelle cifre, né verbali duplicati.",
+  a3_t: "Il pattern è geografia, non manipolazione",
+  a3_b: "La quota di SÌ cresce regolarmente con l'affluenza (+4 punti per 10 punti) — la nota divisione città/campagna. Decisivo: lo stesso andamento vale per tutti e quattro i quesiti (correlazione 0,94–0,96). Se uno scrutinio fosse stato alterato, sarebbe uscito dal coro degli altri tre. Nessuno lo fa.",
+  fig1_cap: "Affluenza nelle 2.984 sezioni (referendum legislativo). La curva è un'unica campana regolare — al 70% di affluenza è ormai spenta.",
+  fig1_alt: "Istogramma dell'affluenza: un'unica campana che si esaurisce al 70%",
+  fig2_alt: "Affluenza e quota SÌ: gradiente regolare, nessuna coda separata",
+  fig3_alt: "Coppie di quote SÌ tra i quattro referendum, correlazioni r = 0,94–0,96",
+  fig2_cap: "Ogni punto è una sezione. La quota di SÌ cresce dolcemente con l'affluenza — il gradiente città/campagna; nessun blocco separato ad alta affluenza.",
+  fig3_cap: "Tutti e quattro i referendum, stesse sezioni. Una sezione favorevole lo è su ogni quesito — un solo elettorato, una geografia coerente (r = 0,94–0,96).",
+  meth_title: "Come ho verificato",
+  meth_intro: "Otto famiglie di test usate dai statistici elettorali di tutto il mondo, applicate ai dati ufficiali per sezione con codice aperto. In sintesi: tutto pulito.",
+  m1_t: "Stima dei voti anomali (metodo Shpilkin)",
+  m1_b: "Voti oltre il calo onesto: al massimo l'1% dei voti SÌ e lo 0,45% dei NO — senza di essi ogni esito si sposterebbe al più di 0,15 punti.",
+  m2_t: "Grafico affluenza × esito («coda della cometa»)",
+  m2_b: "Un solo blocco continuo con gradiente regolare — manca la «coda» di sezioni ad alta affluenza e alto SÌ tipica dell'introduzione fraudolenta di schede.",
+  m3_t: "Impronte elettorali (Klimek et al.)",
+  m3_b: "La distribuzione corrisponde a elezioni oneste; è assente il cluster bidimensionale tipico delle frodi (affluenza 80–100%).",
+  m4_t: "Picchi sui numeri tondi (Kobak et al.)",
+  m4_b: "I valori dei verbali non mostrano preferenza per percentuali intere (tutte le statistiche ≤ 1,3) — nessun segno di numeri digitati a mano.",
+  m5_t: "Test sulle cifre (Benford, ultima cifra)",
+  m5_b: "16 test sui conteggi: 13 completamente puliti, 3 valori al limite con profilo opposto alle «cifre inventate» — non significativi dopo la correzione per test multipli.",
+  m6_t: "Scostamenti dai vicini + machine learning",
+  m6_b: "Segnalate poche decine di sezioni — minuscole (16–342 elettori) e in direzioni miste; una normale coda statistica, non un pattern.",
+  m7_t: "Verbali duplicati",
+  m7_b: "I vettori di risultato ripetuti compaiono esattamente quanto previsto dal caso (osservati 38–60, attesi 37–53). Nessun copia-incolla.",
+  m8_t: "Auto-test: gli strumenti scoprono davvero le frodi",
+  m8_b: "Ho iniettato nei dati un'introduzione di schede sintetica — la zona anomala stimata è cresciuta di 12 volte e ogni allarme è scattato. Il verdetto «pulito» è una misura reale, non un punto cieco.",
+  lim_title: "Cosa questa analisi non può vedere",
+  lim_intro: "Limiti onesti del metodo — la statistica mostra anomalie, non intenzioni.",
+  l1: "Verbali e testimoni non sono nel dataset. La statistica conferma che i numeri sono coerenti tra loro; non può escludere manipolazioni avvenute prima dei numeri (es. pressioni uniformi sugli elettori).",
+  l2: "Il 9% delle schede non ha ripartizione per sezione (voto anticipato, per posta, dall'estero). Verificato solo con i test sulle cifre e sui totali.",
+  l3: "All'analisi era scrutinato il 99,98% delle schede (verifica finale dei voti dall'estero: 19 ottobre 2026). I totali finali possono muoversi di decine di voti — troppo poco per cambiare qualunque esito.",
+  l4: "La sezione media ha ~460 elettori: il test dei numeri tondi non coglierebbe l'alterazione di una piccola frazione di verbali (verificato con l'auto-test). I test sulle cifre sono potenti solo con migliaia di numeri.",
+  l5: "Sono un ricercatore indipendente, senza legami con la Commissione elettorale; tutti i file di input sono pubblicazioni ufficiali DVK e il codice è aperto.",
+  data_title: "Dati e riproducibilità",
+  d1: "Fonte: risultati ufficiali in formato leggibile dalle macchine della Commissione elettorale (DVK), <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — file per sezione di tutti e quattro i referendum, scaricati il 13 ottobre 2026 (istantanea del server 12 ottobre 2026, scrutinato il 99,98%).",
+  d2: "Controllo incrociato: i miei totali coincidono con la tabella di Wikipedia per tutti e quattro i referendum, al voto esatto.",
+  d3: "Strumenti: pipeline open-source (Python, pandas / scikit-learn) con i metodi di Shpilkin, Klimek, Kobak, Beber–Scacco e altri.",
+  d4: "Rapporto tecnico completo (in russo), dati per sezione e script sono disponibili nel repository del progetto.",
+  footer: "Analisi indipendente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Dati: DVK (volitve.dvk-rs.si) · Pagina del 13 ottobre 2026"
+},
+hu: {
+  title: "Szlovénia, 4 népszavazás — 2026. okt. 11.: statisztikai ellenőrzés",
+  brand: "Szlovénia · 4 népszavazás · 2026.10.11.",
+  kicker: "Független statisztikai ellenőrzés",
+  h1: "Szlovénia négy kérdésen szavazott. Állnak a számok?",
+  verdict_title: "Eredmény: nincs a manipulációra utaló statisztikai nyom",
+  verdict_text: "A 2026. október 11-i négy népszavazás hivatalos, szavazókörönkénti eredményein végeztem el a szokásos választási-csalás-statisztikai teszteket. Minden teszt korrekt számlálással egyezik. (Az elemzés idején a szavazólapok 99,98%-a meg volt számolva; a külföldi szavazatok végleges ellenőrzése — 2026. október 19.)",
+  n_precincts: "2 984",
+  n_checked: "843 000",
+  chip_precincts: "szavazókör az elemzésben",
+  chip_ballots: "szavazólap körönként",
+  chip_checked: "ellenőrzött szavazólap (91%)",
+  chip_arith: "számtani eltérés",
+  sit_title: "Miről döntöttek 2026. október 11-én?",
+  sit_intro: "Szlovénia egyszerre négy kérdésen szavazott — egy jogszabályi, kötelező erejű és három tanácsadó népszavazáson. Minden választó mind a négy szavazólapot megkapta. Országos részvétel: 54,6%.",
+  yes_label: "IGEN", no_label: "ELLEN",
+  r1_name: "Parlamenti vizsgálatokról szóló törvény (ZPPre-B)",
+  r1_sub: "kötelező erejű népszavazás",
+  r1_out: "A törvény elbukott — ELLEN 51,26% (a kvórum teljesült)",
+  r2_name: "Pénzbeli szociális segély",
+  r2_sub: "tanácsadó — segély közhasznú munkáért",
+  r2_out: "Elfogadva — IGEN 60,54%",
+  r3_name: "Választójog a helyi választásokon",
+  r3_sub: "tanácsadó — csak EU-állampolgároknak",
+  r3_out: "Elfogadva — IGEN 55,30%",
+  r4_name: "RTV Slovenija díj",
+  r4_sub: "tanácsadó — a kötelező díj megszüntetése",
+  r4_out: "Elutasítva — ELLEN 50,03% (különbség: 546 szavazat)",
+  why_title: "Három ok, amiért a számok hihetők",
+  a1_t: "A számtan hibátlan",
+  a1_b: "Mind a 12 332 körönkénti sor pontosan összeadódik: IGEN + NEM = érvényes szavazat, érvényes + érvénytelen = leadott szavazólap. Minden körön négy számolás futott: a körök 93%-ában a leadott lapok száma mind a négy szavazáson azonos, 99,6%-uknál legfeljebb 2-vel tér el. Tömeges manipuláció az összhangot nem tudja fenntartani.",
+  a2_t: "Nincs rendellenesség ott, ahol a csalás nyomot hagyna",
+  a2_b: "A körök részvétele egyetlen sima haranggörbét alkot, amely 70% körül elhal. 80% felett mindössze 10 pici kör van — a szavazólapok 0,1%-a. A lapok bekeverése ellenkező jelet hagy: jól látható tömeg nagy körökből 80–100%-os részvételnél. Ilyen nincs. Nincs csúcs a kerek számoknál, nincs mintázat a számjegyekben, és nincsenek megkettőzött jegyzőkönyvek.",
+  a3_t: "A minta földrajz, nem manipuláció",
+  a3_b: "Az IGEN-arány a részvétellel együtt simán nő (+10 részvételi pontonként +4 pont) — a jól ismert város–vidék megosztás. A lényeg: mind a négy kérdésnél ugyanez a minta látszik (0,94–0,96-os korreláció). Ha az egyik számolást irányították volna, kiszakadt volna a másik háromból. Egyik sem szakad ki.",
+  fig1_cap: "Részvétel a 2 984 szavazókörön (törvényi népszavazás). A görbe egyetlen sima harang — 70%-os részvételnél már majdnem elhal.",
+  fig1_alt: "A részvétel hisztogramja: egyetlen sima haranggörbe, amely 70% körül elhal",
+  fig2_alt: "Részvétel és IGEN-arány: sima gradiens, külön farok nélkül",
+  fig3_alt: "Az IGEN-arány pájai a négy népszavazás között, 0,94–0,96-os korrelációk",
+  fig2_cap: "Minden pont egy szavazókör. Az IGEN-arány a részvétellel simán nő — a város/vidék gradiens; külön felhő magas részvételnél nincs.",
+  fig3_cap: "Mind a négy népszavazás, ugyanazok a körök. Ahol magas az IGEN-arány, ott mind a négy kérdésben az — egy választópolgári közösség, egy következetes földrajz (r = 0,94–0,96).",
+  meth_title: "Hogyan ellenőriztem?",
+  meth_intro: "Nyolc tesztcsalád, amelyeket a választásstatisztikusok világszerte használnak — hivatalos, körönkénti adatokon, nyílt forráskóddal. Összegzés: minden tiszta.",
+  m1_t: "Rendellenes szavazatok becslése (Spilkin-módszer)",
+  m1_b: "A korrekt csökkenésen felüli szavazatok: legfeljebb az IGEN-szavazatok 1%-a és a NEM-é 0,45%-a — ezek nélkül bármely eredmény legfeljebb 0,15 pontot mozdulna.",
+  m2_t: "Részvétel × eredmény ábra („üstökös farok”)",
+  m2_b: "Egyetlen összefüggő felhő sima gradienssel — nincs külön „farok” a magas részvételű, magas IGEN-arányú körökből, amelyet a lapok bekeverése hagy.",
+  m3_t: "Választási ujjlenyomatok (Klimek et al.)",
+  m3_b: "Az eloszlás korrekt választásokhoz illeszkedik; a csalásra jellemző kétdimenziós klaszter (80–100%-os részvétel) hiányzik.",
+  m4_t: "Csúcsok kerek számoknál (Kobak et al.)",
+  m4_b: "A jegyzőkönyvek értékei nem preferálják az egész százalékokat (minden statisztika ≤ 1,3) — nincs kézzel begépelt számokra utaló jel.",
+  m5_t: "Számjegytesztek (Benford, utolsó számjegy)",
+  m5_b: "16 teszt a szavazatszámokon: 13 teljesen tiszta, 3 határérték a „kitalált számokéval” ellentétes profillal — többszörös tesztelési korrekció után nem szignifikánsak.",
+  m6_t: "Eltérések a szomszédokhoz képest + gépi tanulás",
+  m6_b: "Néhány tucat kör jelölve — mind apró (16–342 választó), vegyes irányban; ez a statisztika normális faroka, nem minta.",
+  m7_t: "Megkettőzött jegyzőkönyvek",
+  m7_b: "Az ismétlődő eredményvektorok pontosan olyan gyakran fordulnak elő, ahogy a véletlen megadja (észlelve 38–60, várva 37–53). Nincs másolás.",
+  m8_t: "Önteszt: az eszközök valóban észreveszik a csalást",
+  m8_b: "Szintetikus lapbekeverést injektáltam az adatokba — a becsült anomáliazóna 12-szeresére nőtt, és minden riasztás megszólalt. A „tiszta” verdikt valós mérés, nem vakfolt.",
+  lim_title: "Mit nem láthat ez az elemzés?",
+  lim_intro: "A módszer őszinte határai — a statisztika az anomáliákat mutatja, nem a szándékokat.",
+  l1: "Jegyzőkönyvek és tanúk nincsenek az adatokban. A statisztika azt igazolhatja, hogy a számok összhangban vannak; azt nem zárhatja ki, ami a számok születése előtt történt (pl. egyenletesen elosztott nyomásgyakorlás).",
+  l2: "A szavazólapok 9%-ának nincs körönkénti bontása (előre szavazás, postai, külföldi). Ezeket csak számjegytesztekkel és összesen-ellenőrzéssel néztük.",
+  l3: "Az elemzés idején a lapok 99,98%-a volt megszámolva (a külföldi szavazatok végleges ellenőrzése: 2026. október 19.). A végső számok néhány tíz szavazatot mozdulhatnak — túl keveset ahhoz, hogy bármit változtassanak.",
+  l4: "Egy átlagos kör ~460 választót foglal magában, így a kerekszám-teszt a jegyzőkönyvek kis hányadának hamisítására nem érzékeny (öntesztben igazolva). A számjegytesztek csak több ezer számnál erősek.",
+  l5: "Független kutató vagyok, az Országos Választási Bizottsággal nincs kapcsolatom; minden bemeneti fájl hivatalos DVK-publikáció, az elemző kód pedig nyílt.",
+  data_title: "Adatok és reprodukálhatóság",
+  d1: "Forrás: az Országos Választási Bizottság (DVK) hivatalos, géppel olvasható eredményei, <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — körönkénti fájlok mind a négy népszavazásról, letöltve 2026. október 13-án (kiszolgáló-pillanatfelvétel: 2026. október 12., megszámolva 99,98%).",
+  d2: "Kereszt-ellenőrzés: az összegeim mind a négy népszavazásban a Wikipédia táblázatával szavazatra egyeznek.",
+  d3: "Eszközök: nyílt forráskódú elemzőlánc (Python, pandas / scikit-learn) — Spilkin-, Klimek-, Kobak-, Beber–Scacco-módszerek és továbbiak.",
+  d4: "A teljes technikai jelentés (oroszul), a körönkénti adatfájlok és a szkriptek a projekt adattárában érhetők el.",
+  footer: "Független elemzés · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Adatok: DVK (volitve.dvk-rs.si) · Oldal készült: 2026. október 13."
+}
+};
+
+(function(){
+  const langs = ["sl","en","hr","it","hu"];
+  function pick(){
+    const saved = localStorage.getItem("lang");
+    if (saved && langs.includes(saved)) return saved;
+    for (const l of navigator.languages || [navigator.language]) {
+      const p = (l || "").slice(0,2).toLowerCase();
+      if (p === "sl") return "sl";
+      if (p === "hr" || p === "bs" || p === "sr") return "hr";
+      if (p === "it") return "it";
+      if (p === "hu") return "hu";
+    }
+    return "en";
+  }
+  function apply(lang){
+    const d = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const v = d[el.getAttribute("data-i18n")];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    document.querySelectorAll("img[data-fig]").forEach(img => {
+      img.src = "img/" + lang + "/" + img.dataset.fig + ".png";
+      const alt = d[img.dataset.fig.replace("turnout", "fig1").replace("comet", "fig2").replace("cross", "fig3") + "_alt"];
+      if (alt !== undefined) img.alt = alt;
+    });
+    document.querySelectorAll(".langs button").forEach(b =>
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    localStorage.setItem("lang", lang);
+  }
+  document.querySelectorAll(".langs button").forEach(b =>
+    b.addEventListener("click", () => apply(b.dataset.lang)));
+  apply(pick());
+})();
+</script>
+</body>
+</html>
