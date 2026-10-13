@@ -17,10 +17,15 @@
 Запуск: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/control_forensics.py
 Выход: brazil-oct-2026/analysis/{figures/control_*.png, tables/control_*.csv,
        metrics_control_2022.json}
+
+Флаги: --lang ru|en|pt|es — язык подписей графиков (по умолчанию ru);
+--fig-out DIR — записать фигуры (а также таблицы и metrics_control_2022.json)
+в DIR, не трогая brazil-oct-2026/analysis/.
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 import time
@@ -36,6 +41,7 @@ from election_forensics import plots  # noqa: E402  (стиль/rcParams)
 from election_forensics.correlations import weighted_pearson  # noqa: E402
 from election_forensics.data import ElectionData  # noqa: E402
 from election_forensics.fingerprints import fingerprint_mixture  # noqa: E402
+from election_forensics.i18n import label  # noqa: E402
 from election_forensics.shpilkin import shpilkin_estimate, suggest_t_cut, votes_by_turnout  # noqa: E402
 
 OUT = BR / "analysis"
@@ -44,6 +50,98 @@ TAB = OUT / "tables"
 
 LEADER = "votes:BOLSONARO"
 RUNNER_UP = "votes:LULA"
+
+# --- подписи кастомных графиков (ru|en|pt|es) --------------------------------
+TR: dict[str, dict[str, str]] = {
+    "ru": {
+        "t1": "2022, 1-й тур", "t2": "2022, 2-й тур", "t26": "2026, 1-й тур",
+        "cut_ctrl": "граница по контролю-2022: {t}%",
+        "cut_own": "собственный q99,5-2026: {t}%",
+        "share_voted_y": "Доля проголосовавших",
+        "tt_title": "Распределения явки: контроль-2022 против 2026 (точечные линии — "
+                    "собственные q99,5 туров 2022)",
+        "t22_x": "Явка 2022-1Т, %", "t26_x": "Явка 2026-1Т, %",
+        "same_sections": "Те же секции (n={n}); диагональ — без изменений",
+        "median_line": "медиана {v} п.п.",
+        "mad_line": "медиана ± 4·MAD ({v})",
+        "dturnout_x": "Δявка 2026−2022, п.п. (обрезано ±30)",
+        "sections_y": "Секций",
+        "jumps_ttl": "Скачки явки на тех же секциях",
+        "dB": "Δдоля Болсонару", "dL": "Δдоля Лулы",
+        "dshare_x": "Δдоля (доля от проголосовавших), п.п. (обрезано ±40)",
+        "shares_ttl": "Изменение долей кандидатов, 2022-1Т → 2026-1Т",
+        "fp22_title": "2022, 2-й тур — {p}: 2-я компонента {w} ({x}%; {y}%)",
+        "cand_share_y": "Доля кандидата, %",
+        "fp22_suptitle": "Контрольные выборы-2022 (2-й тур): «отпечатки» без кластера "
+                         "у правого верхнего угла",
+    },
+    "en": {
+        "t1": "2022, 1st round", "t2": "2022, 2nd round", "t26": "2026, 1st round",
+        "cut_ctrl": "boundary from the 2022 control: {t}%",
+        "cut_own": "2026's own q99.5: {t}%",
+        "share_voted_y": "Share of voters",
+        "tt_title": "Turnout distributions: 2022 control vs 2026 (dotted lines — "
+                    "the 2022 rounds' own q99.5)",
+        "t22_x": "Turnout 2022 R1, %", "t26_x": "Turnout 2026 R1, %",
+        "same_sections": "Same sections (n={n}); diagonal — no change",
+        "median_line": "median {v} p.p.",
+        "mad_line": "median ± 4·MAD ({v})",
+        "dturnout_x": "Δturnout 2026−2022, p.p. (clipped at ±30)",
+        "sections_y": "Sections",
+        "jumps_ttl": "Turnout jumps on the same sections",
+        "dB": "Δ Bolsonaro share", "dL": "Δ Lula share",
+        "dshare_x": "Δ share (of votes cast), p.p. (clipped at ±40)",
+        "shares_ttl": "Change in candidate shares, 2022 R1 → 2026 R1",
+        "fp22_title": "2022, 2nd round — {p}: 2nd component {w} ({x}%; {y}%)",
+        "cand_share_y": "Candidate share, %",
+        "fp22_suptitle": "2022 control election (2nd round): fingerprints without a cluster "
+                         "in the top-right corner",
+    },
+    "pt": {
+        "t1": "2022, 1.º turno", "t2": "2022, 2.º turno", "t26": "2026, 1.º turno",
+        "cut_ctrl": "fronteira pelo controlo de 2022: {t}%",
+        "cut_own": "q99,5 próprio de 2026: {t}%",
+        "share_voted_y": "Fração dos votantes",
+        "tt_title": "Distribuições de afluência: controlo de 2022 contra 2026 (linhas "
+                    "pontilhadas — q99,5 próprios dos turnos de 2022)",
+        "t22_x": "Afluência 2022 1.º turno, %", "t26_x": "Afluência 2026 1.º turno, %",
+        "same_sections": "As mesmas seções (n={n}); diagonal — sem mudança",
+        "median_line": "mediana {v} p.p.",
+        "mad_line": "mediana ± 4·MAD ({v})",
+        "dturnout_x": "Δafluência 2026−2022, p.p. (cortado a ±30)",
+        "sections_y": "Seções",
+        "jumps_ttl": "Saltos de afluência nas mesmas seções",
+        "dB": "Δquota de Bolsonaro", "dL": "Δquota de Lula",
+        "dshare_x": "Δquota (fração dos votos apurados), p.p. (cortado a ±40)",
+        "shares_ttl": "Mudança das quotas dos candidatos, 2022 1.º → 2026 1.º",
+        "fp22_title": "2022, 2.º turno — {p}: 2.ª componente {w} ({x}%; {y}%)",
+        "cand_share_y": "Quota do candidato, %",
+        "fp22_suptitle": "Eleições de controlo de 2022 (2.º turno): impressões digitais sem "
+                         "agrupamento no canto superior direito",
+    },
+    "es": {
+        "t1": "2022, 1.ª vuelta", "t2": "2022, 2.ª vuelta", "t26": "2026, 1.ª vuelta",
+        "cut_ctrl": "frontera por el control de 2022: {t}%",
+        "cut_own": "q99,5 propio de 2026: {t}%",
+        "share_voted_y": "Fracción de votantes",
+        "tt_title": "Distribuciones de participación: control de 2022 frente a 2026 (líneas "
+                    "punteadas — q99,5 propios de las vueltas de 2022)",
+        "t22_x": "Participación 2022 1.ª vuelta, %", "t26_x": "Participación 2026 1.ª vuelta, %",
+        "same_sections": "Las mismas secciones (n={n}); diagonal — sin cambios",
+        "median_line": "mediana {v} p.p.",
+        "mad_line": "mediana ± 4·MAD ({v})",
+        "dturnout_x": "Δparticipación 2026−2022, p.p. (recortado a ±30)",
+        "sections_y": "Secciones",
+        "jumps_ttl": "Saltos de participación en las mismas secciones",
+        "dB": "Δporcentaje de Bolsonaro", "dL": "Δporcentaje de Lula",
+        "dshare_x": "Δporcentaje (fracción de los votos emitidos), p.p. (recortado a ±40)",
+        "shares_ttl": "Cambio de los porcentajes de los candidatos, 2022 1.ª → 2026 1.ª",
+        "fp22_title": "2022, 2.ª vuelta — {p}: 2.ª componente {w} ({x}%; {y}%)",
+        "cand_share_y": "Porcentaje del candidato, %",
+        "fp22_suptitle": "Elecciones de control de 2022 (2.ª vuelta): huellas sin clúster "
+                         "en la esquina superior derecha",
+    },
+}
 
 MACRO = {
     "N": ["AC", "AP", "AM", "PA", "RO", "RR", "TO"],
@@ -74,34 +172,38 @@ def load(csv_name: str, turno: int | None = None) -> ElectionData:
 
 
 def plot_turnout_dists(datas: dict[str, ElectionData], t_cut_control: float,
-                        t_cut_own26: float, q22: dict[str, float]) -> None:
+                        t_cut_own26: float, q22: dict[str, float], lang: str,
+                        fig_dir: Path) -> None:
+    tr = TR[lang]
+    names = {"t1": tr["t1"], "t2": tr["t2"], "t26": tr["t26"]}
+    colors = {tr["t1"]: "#7f7f7f", tr["t2"]: "#9467bd", tr["t26"]: "#1f77b4"}
     fig, ax = plots.plt.subplots(figsize=(8.6, 3.8))
-    colors = {"2022, 1-й тур": "#7f7f7f", "2022, 2-й тур": "#9467bd",
-              "2026, 1-й тур": "#1f77b4"}
-    for label, d in datas.items():
+    for key in ("t1", "t2", "t26"):
+        lab = names[key]
+        d = datas[key]
         centers, h = votes_by_turnout(d, None, 0.5)
         ax.plot(centers, h / h.sum(), drawstyle="steps-mid", lw=1.3,
-                color=colors[label], label=label)
+                color=colors[lab], label=lab)
     ax.axvline(t_cut_control, color="#d62728", lw=1.6,
-               label=f"граница по контролю-2022: {t_cut_control:.1f}%")
+               label=tr["cut_ctrl"].format(t=f"{t_cut_control:.1f}"))
     ax.axvline(t_cut_own26, color="k", ls="--", lw=1.0,
-               label=f"собственный q99,5-2026: {t_cut_own26:.1f}%")
-    for label, q in q22.items():
-        ax.axvline(q, color=colors[label], ls=":", lw=0.9, alpha=0.8)
-    ax.set_xlabel("Явка, %")
-    ax.set_ylabel("Доля проголосовавших")
+               label=tr["cut_own"].format(t=f"{t_cut_own26:.1f}"))
+    for key, q in q22.items():
+        ax.axvline(q, color=colors[names[key]], ls=":", lw=0.9, alpha=0.8)
+    ax.set_xlabel(label(lang, "turnout_x"))
+    ax.set_ylabel(tr["share_voted_y"])
     ax.set_yscale("log")
     ax.set_ylim(1e-6, None)
     ax.set_xlim(10, 100)
     ax.legend(fontsize=7.5)
-    ax.set_title("Распределения явки: контроль-2022 против 2026 (точечные линии — "
-                 "собственные q99,5 туров 2022)", fontsize=9)
+    ax.set_title(tr["tt_title"], fontsize=9)
     fig.tight_layout()
-    fig.savefig(FIG / "control_turnout.png", bbox_inches="tight")
+    fig.savefig(fig_dir / "control_turnout.png", bbox_inches="tight")
     plots.plt.close(fig)
 
 
-def plot_jumps(m: pd.DataFrame, med: float, mad: float) -> None:
+def plot_jumps(m: pd.DataFrame, med: float, mad: float, lang: str, fig_dir: Path) -> None:
+    tr = TR[lang]
     fig, axes = plots.plt.subplots(1, 3, figsize=(11.2, 3.5))
 
     ax = axes[0]
@@ -110,41 +212,43 @@ def plot_jumps(m: pd.DataFrame, med: float, mad: float) -> None:
               weights=m.registered_voters_26[ok], cmap="viridis",
               cmin=1e-9, norm=plots.matplotlib.colors.LogNorm())
     ax.plot([10, 100], [10, 100], "w--", lw=0.8, alpha=0.8)
-    ax.set_xlabel("Явка 2022-1Т, %")
-    ax.set_ylabel("Явка 2026-1Т, %")
-    ax.set_title(f"Те же секции (n={len(m):,}); диагональ — без изменений", fontsize=9)
+    ax.set_xlabel(tr["t22_x"])
+    ax.set_ylabel(tr["t26_x"])
+    ax.set_title(tr["same_sections"].format(n=f"{len(m):,}"), fontsize=9)
     ax.grid(False)
 
     ax = axes[1]
     dT = m.d_turnout.clip(-30, 30)
     ax.hist(dT, bins=120, color="#1f77b4", alpha=0.8)
-    ax.axvline(med, color="k", lw=1.0, label=f"медиана {med:+.2f} п.п.")
+    ax.axvline(med, color="k", lw=1.0, label=tr["median_line"].format(v=f"{med:+.2f}"))
     for k in (-4, 4):
         x = med + k * 1.4826 * mad
         ax.axvline(x, color="#d62728", ls="--", lw=1.0,
-                   label=f"медиана ± 4·MAD ({x:+.1f})" if k > 0 else None)
-    ax.set_xlabel("Δявка 2026−2022, п.п. (обрезано ±30)")
-    ax.set_ylabel("Секций")
-    ax.set_title("Скачки явки на тех же секциях", fontsize=9)
+                   label=tr["mad_line"].format(v=f"{x:+.1f}") if k > 0 else None)
+    ax.set_xlabel(tr["dturnout_x"])
+    ax.set_ylabel(tr["sections_y"])
+    ax.set_title(tr["jumps_ttl"], fontsize=9)
     ax.legend(fontsize=7.5)
 
     ax = axes[2]
     bins = np.linspace(-40, 40, 130)
     ax.hist(m.d_share_bolsonaro.clip(-40, 40), bins=bins, color="#1f77b4",
-            alpha=0.65, label="Δдоля Болсонару")
+            alpha=0.65, label=tr["dB"])
     ax.hist(m.d_share_lula.clip(-40, 40), bins=bins, color="#d62728",
-            alpha=0.65, label="Δдоля Лулы")
-    ax.set_xlabel("Δдоля (доля от проголосовавших), п.п. (обрезано ±40)")
-    ax.set_ylabel("Секций")
-    ax.set_title("Изменение долей кандидатов, 2022-1Т → 2026-1Т", fontsize=9)
+            alpha=0.65, label=tr["dL"])
+    ax.set_xlabel(tr["dshare_x"])
+    ax.set_ylabel(tr["sections_y"])
+    ax.set_title(tr["shares_ttl"], fontsize=9)
     ax.legend(fontsize=7.5)
 
     fig.tight_layout()
-    fig.savefig(FIG / "control_jumps.png", bbox_inches="tight")
+    fig.savefig(fig_dir / "control_jumps.png", bbox_inches="tight")
     plots.plt.close(fig)
 
 
-def plot_fingerprint_2022(d: ElectionData, fps: dict[str, object]) -> None:
+def plot_fingerprint_2022(d: ElectionData, fps: dict[str, object],
+                          lang: str, fig_dir: Path) -> None:
+    tr = TR[lang]
     fig, axes = plots.plt.subplots(1, 2, figsize=(9.2, 3.8), sharex=True, sharey=True)
     for ax, party, color in ((axes[0], LEADER, "#1f77b4"), (axes[1], RUNNER_UP, "#d62728")):
         t = d.turnout.to_numpy()
@@ -155,23 +259,35 @@ def plot_fingerprint_2022(d: ElectionData, fps: dict[str, object]) -> None:
                   cmin=1e-9, norm=plots.matplotlib.colors.LogNorm())
         ax.plot(*fp.mean_main, "o", ms=9, mfc="none", mec="white", mew=1.6)
         ax.plot(*fp.mean_anom, "s", ms=9, mfc="none", mec="#ff7f0e", mew=1.6)
-        ax.set_title(f"2022, 2-й тур — {party.removeprefix('votes:')}: "
-                     f"2-я компонента {fp.weight_anom:.2f} ({fp.mean_anom[0]:.0f}%; "
-                     f"{fp.mean_anom[1]:.0f}%)", fontsize=8.5)
+        ax.set_title(tr["fp22_title"].format(
+            p=party.removeprefix("votes:"), w=f"{fp.weight_anom:.2f}",
+            x=f"{fp.mean_anom[0]:.0f}", y=f"{fp.mean_anom[1]:.0f}"), fontsize=8.5)
         ax.set_xlim(20, 100)
         ax.grid(False)
-        ax.set_xlabel("Явка, %")
-    axes[0].set_ylabel("Доля кандидата, %")
-    fig.suptitle("Контрольные выборы-2022 (2-й тур): «отпечатки» без кластера "
-                 "у правого верхнего угла", fontsize=9)
+        ax.set_xlabel(label(lang, "turnout_x"))
+    axes[0].set_ylabel(tr["cand_share_y"])
+    fig.suptitle(tr["fp22_suptitle"], fontsize=9)
     fig.tight_layout()
-    fig.savefig(FIG / "control_fingerprint_2022.png", bbox_inches="tight")
+    fig.savefig(fig_dir / "control_fingerprint_2022.png", bbox_inches="tight")
     plots.plt.close(fig)
 
 
 def main() -> None:
-    FIG.mkdir(parents=True, exist_ok=True)
-    TAB.mkdir(parents=True, exist_ok=True)
+    ap = argparse.ArgumentParser(description="Контроль-2022 против BR-2026 (те же секции)")
+    ap.add_argument("--lang", default="ru", choices=["ru", "en", "pt", "es"],
+                    help="язык подписей графиков (по умолчанию ru)")
+    ap.add_argument("--fig-out", type=Path, default=None,
+                    help="каталог для фигур/таблиц/metrics вместо brazil-oct-2026/analysis/")
+    args = ap.parse_args()
+    lang = args.lang
+    if args.fig_out is not None:
+        fig_dir = args.fig_out
+        tab_dir = fig_dir / "tables"
+        metrics_path = fig_dir / "metrics_control_2022.json"
+    else:
+        fig_dir, tab_dir, metrics_path = FIG, TAB, OUT / "metrics_control_2022.json"
+    fig_dir.mkdir(parents=True, exist_ok=True)
+    tab_dir.mkdir(parents=True, exist_ok=True)
 
     d26 = load("secoes_presidente_2026.csv")
     d22_1 = load("secoes_presidente_2022.csv", turno=1)
@@ -215,16 +331,15 @@ def main() -> None:
             f"{res_c.tail_share_of_party:.2f}% (граница {res_c.t_cut:.2f}); "
             f"по собственному q99,5 {res_o.tail_share_of_party:.2f}%")
     shp_tab = pd.DataFrame(rows)
-    shp_tab.to_csv(TAB / "control_shpilkin.csv", index=False)
+    shp_tab.to_csv(tab_dir / "control_shpilkin.csv", index=False)
     metrics["shpilkin"] = rows
     metrics["t_cut"] = {"control_2022_max": round(t_cut, 2),
                         "control_2022_t1": round(t_cut_1, 2),
                         "control_2022_t2": round(t_cut_2, 2),
                         "own_2026": round(t_own26, 2)}
 
-    plot_turnout_dists({"2022, 1-й тур": d22_1, "2022, 2-й тур": d22_2,
-                        "2026, 1-й тур": d26}, t_cut, t_own26,
-                       {"2022, 1-й тур": t_cut_1, "2022, 2-й тур": t_cut_2})
+    plot_turnout_dists({"t1": d22_1, "t2": d22_2, "t26": d26}, t_cut, t_own26,
+                       {"t1": t_cut_1, "t2": t_cut_2}, lang, fig_dir)
 
     # --- 2. матч секций 2022-1Т ↔ 2026-1Т --------------------------------
     cols = ["key", "uf", "name", "registered_voters", "voted", LEADER, RUNNER_UP]
@@ -292,7 +407,7 @@ def main() -> None:
         "share22_bolsonaro": 100.0 * g[LEADER + "_y"].sum() / g.voted_22.sum(),
         "share22_lula": 100.0 * g[RUNNER_UP + "_y"].sum() / g.voted_22.sum(),
     }), include_groups=False).reset_index()
-    dec.to_csv(TAB / "control_deciles.csv", index=False)
+    dec.to_csv(tab_dir / "control_deciles.csv", index=False)
 
     jumps = {
         "d_turnout": {"median": round(med, 2), "mad": round(mad, 2),
@@ -332,15 +447,15 @@ def main() -> None:
             "flagged_pct": round(100.0 * g.z_jump.abs().gt(4).sum() / len(g), 3),
             "up": int(g.z_jump.gt(4).sum()), "down": int(g.z_jump.lt(-4).sum()),
         })
-    pd.DataFrame(jrows).to_csv(TAB / "control_jumps_by_region.csv", index=False)
+    pd.DataFrame(jrows).to_csv(tab_dir / "control_jumps_by_region.csv", index=False)
     metrics["jumps_by_region"] = jrows
 
     ext = flagged.assign(absz=flagged.z_jump.abs()).nlargest(200, "absz")
     ext[["key", "uf", "name_26", "registered_voters_26", "turnout_22", "turnout_26",
          "d_turnout", "z_jump", "d_share_bolsonaro", "d_share_lula"]].to_csv(
-        TAB / "control_jumps_extreme.csv", index=False)
+        tab_dir / "control_jumps_extreme.csv", index=False)
 
-    plot_jumps(m, med, mad)
+    plot_jumps(m, med, mad, lang, fig_dir)
 
     # --- 4. отпечатки на контроле-2022 ------------------------------------
     fp_rows = []
@@ -358,9 +473,9 @@ def main() -> None:
                 "separated": fp.separated,
                 "anom_voters": fp.anom_cluster_voters,
             })
-    pd.DataFrame(fp_rows).to_csv(TAB / "control_fingerprints_2022.csv", index=False)
+    pd.DataFrame(fp_rows).to_csv(tab_dir / "control_fingerprints_2022.csv", index=False)
     metrics["fingerprints_2022"] = fp_rows
-    plot_fingerprint_2022(d22_2, fps2)
+    plot_fingerprint_2022(d22_2, fps2, lang, fig_dir)
     log("отпечатки-2022: " + "; ".join(
         f"{r['election']} {r['party']}: w={r['weight_anom']} @ {r['mean_anom']}" for r in fp_rows))
 
@@ -372,9 +487,9 @@ def main() -> None:
         "figures": ["control_turnout.png", "control_jumps.png",
                     "control_fingerprint_2022.png"],
     }
-    with open(OUT / "metrics_control_2022.json", "w", encoding="utf-8") as f:
+    with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2, default=float)
-    log(f"готово: {OUT/'metrics_control_2022.json'}")
+    log(f"готово: {metrics_path}")
 
 
 if __name__ == "__main__":
