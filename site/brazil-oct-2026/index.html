@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brazil, presidential 1st round — 4 Oct 2026: statistical fraud check</title>
+<meta name="description" content="Independent election-forensics analysis of the 1st round of the Brazilian presidential election of 4 October 2026 (499,206 sections, TSE data): no statistical traces of manipulation found.">
+<meta property="og:title" content="Brazil, presidential 1st round — 4 Oct 2026: statistical fraud check">
+<meta property="og:description" content="Independent election-forensics analysis of the 1st round of the Brazilian presidential election of 4 October 2026 (499,206 sections, TSE data): no statistical traces of manipulation found.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231e8e5a'/%3E%3Cpath d='M18 33l9 9 19-20' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#16324f; --muted:#5b6b7b; --line:#e3e8ee; --bg:#f4f7fa; --card:#ffffff;
+    --green:#1e8e5a; --green-soft:#e7f4ee; --red:#c0392b; --red-soft:#faecea;
+    --amber:#8a6116; --amber-soft:#fdf6e7; --blue:#3b82c4; --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+  main{max-width:960px;margin:0 auto;padding:0 18px 60px}
+  header.top{position:sticky;top:0;z-index:10;background:rgba(244,247,250,.92);backdrop-filter:blur(6px);
+             border-bottom:1px solid var(--line)}
+  header.top .bar{max-width:960px;margin:0 auto;padding:10px 18px;display:flex;justify-content:space-between;
+                  align-items:center;gap:12px;flex-wrap:wrap}
+  .brand{font-weight:700;font-size:14px;letter-spacing:.2px}
+  .brand .flag{display:inline-block;width:18px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-1px;
+               background:linear-gradient(#009739 20%,#fedd00 20% 80%,#009739 80%)}
+  .langs{display:flex;gap:6px;flex-wrap:wrap}
+  .langs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+                padding:4px 12px;font-size:13px;cursor:pointer}
+  .langs button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hero{background:linear-gradient(160deg,#16324f,#1d4468);color:#fff;border-radius:0 0 var(--radius) var(--radius);
+        padding:44px 24px 40px;margin:0 -18px}
+  .hero-inner{max-width:860px;margin:0 auto}
+  .kicker{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:#9fc3e2;font-weight:600}
+  h1{font-size:clamp(24px,4.6vw,38px);line-height:1.18;margin:10px 0 22px;font-weight:800}
+  .verdict{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);
+           padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+  .verdict .check{flex:none;width:44px;height:44px;border-radius:50%;background:var(--green);display:flex;
+                  align-items:center;justify-content:center;font-size:24px;color:#fff;margin-top:2px}
+  .verdict h2{margin:0 0 6px;font-size:clamp(18px,3vw,23px)}
+  .verdict p{margin:0;color:#dce8f2;font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;
+        padding:6px 14px;font-size:13.5px}
+  .chip b{font-size:15px}
+  section{margin-top:44px}
+  h3.sect{font-size:clamp(19px,3vw,25px);margin:0 0 6px;font-weight:800}
+  p.sect-sub{margin:0 0 18px;color:var(--muted);font-size:15px}
+  .cards2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .res-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;
+            border-left:5px solid var(--blue)}
+  .res-card h4{margin:0 0 2px;font-size:16.5px}
+  .res-card .sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+  .bar-row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin:8px 0 3px}
+  .track{height:10px;border-radius:6px;background:#edf1f5;overflow:hidden}
+  .track .bolsonaro{background:var(--blue)}
+  .track .lula{background:var(--red)}
+  .plain-rows{margin:10px 0 0;padding:0;list-style:none;font-size:14px;color:#2c4358}
+  .plain-rows li{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px dashed var(--line)}
+  .plain-rows li:last-child{border-bottom:0}
+  .outcome{margin-top:12px;font-size:13.5px;font-weight:700;border-radius:8px;padding:6px 10px;display:inline-block;
+           background:#eef2f6;color:#3d5266}
+  .outcome.hot{background:var(--red-soft);color:var(--red)}
+  .args{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+  .arg{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+  .arg .num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;
+            align-items:center;justify-content:center;font-weight:800;font-size:15px;margin-bottom:10px}
+  .arg h4{margin:0 0 8px;font-size:16.5px}
+  .arg p{margin:0;font-size:14.5px;color:#2c4358}
+  figure{margin:0}
+  .fig{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .fig img{width:100%;height:auto;border-radius:8px;display:block}
+  .fig figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+  .figs{display:grid;gap:14px}
+  .m-list{display:grid;gap:10px}
+  .m{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+     display:flex;gap:14px;align-items:flex-start}
+  .m .badge{flex:none;margin-top:2px;background:var(--green-soft);color:var(--green);font-weight:800;font-size:12.5px;
+            border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .m .badge.warn{background:var(--amber-soft);color:var(--amber)}
+  .m h5{margin:0 0 3px;font-size:15px}
+  .m p{margin:0;font-size:14px;color:#2c4358}
+  .limits{background:var(--amber-soft);border:1px solid #ecd9ad;border-radius:var(--radius);padding:20px 22px}
+  .limits h3.sect{color:var(--amber)}
+  .limits ul{margin:10px 0 0;padding-left:20px}
+  .limits li{margin-bottom:9px;font-size:14.5px;color:#4a3d20}
+  .limits li:last-child{margin-bottom:0}
+  .data{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .data ul{margin:10px 0 0;padding-left:20px}
+  .data li{margin-bottom:9px;font-size:14.5px;color:#2c4358}
+  .data a{color:var(--blue)}
+  footer{margin-top:46px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}
+  footer a{color:var(--blue)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <div class="brand"><span class="flag"></span><span data-i18n="brand">Brazil · presidential · 04.10.2026</span></div>
+    <nav class="langs" aria-label="Language">
+      <button data-lang="pt">Português</button>
+      <button data-lang="en" aria-pressed="true">English</button>
+      <button data-lang="es">Español</button>
+      <button data-lang="ru">Русский</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ══ MINTO: ANSWER ══ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="kicker" data-i18n="kicker">Independent statistical audit</div>
+      <h1 data-i18n="h1">Brazil voted on 4 October. Do the numbers add up?</h1>
+      <div class="verdict">
+        <div class="check">✓</div>
+        <div>
+          <h2 data-i18n="verdict_title">Verdict: no statistical traces of manipulation</h2>
+          <p data-i18n="verdict_text">I ran standard election-forensics tests on the official section-level results of the 1st round of the presidential election of 4 October 2026, using the 2022 elections on the very same sections as a control. No test shows the signature of ballot-stuffing or result-painting. (Final TSE results; the runoff of 25 October 2026 is not covered.)</p>
+        </div>
+      </div>
+      <div class="chips">
+        <div class="chip"><b data-i18n="n_sections">499,206</b> <span data-i18n="chip_sections">sections analysed</span></div>
+        <div class="chip"><b data-i18n="n_ballots">125.3M</b> <span data-i18n="chip_ballots">ballots checked (100%)</span></div>
+        <div class="chip"><b>0</b> <span data-i18n="chip_arith">arithmetic discrepancies</span></div>
+        <div class="chip"><b data-i18n="n_shift">±0.07 pp</b> <span data-i18n="chip_shift">max shift any anomaly could cause</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MINTO: SITUATION ══ -->
+  <section>
+    <h3 class="sect" data-i18n="sit_title">What happened on 4 October 2026</h3>
+    <p class="sect-sub" data-i18n="sit_intro">Brazil elected its president. Voting is compulsory and ballots are cast on electronic machines (urnas eletrônicas); the electoral authority TSE publishes final results per section — 499,248 of them, each covering a few hundred voters. Nobody crossed 50%, so the two leaders meet again in a runoff.</p>
+    <div class="cards2">
+      <div class="res-card">
+        <h4 data-i18n="cardA_t">Result of the 1st round</h4>
+        <div class="sub" data-i18n="cardA_sub">% of valid votes, nationwide</div>
+        <div class="bar-row"><span data-i18n="cardA_b1">Bolsonaro (PL)</span> 47.03%</div>
+        <div class="track"><div class="bolsonaro" style="width:47.03%"></div></div>
+        <div class="bar-row"><span data-i18n="cardA_b2">Lula (PT)</span> 45.16%</div>
+        <div class="track"><div class="lula" style="width:45.16%"></div></div>
+        <div class="outcome hot" data-i18n="cardA_out">Margin 1.87 pp — no majority in the 1st round</div>
+      </div>
+      <div class="res-card">
+        <h4 data-i18n="cardB_t">Second round — 25 October 2026</h4>
+        <div class="sub" data-i18n="cardB_sub">head-to-head: Bolsonaro × Lula</div>
+        <div class="bar-row"><span data-i18n="cardA_b1">Bolsonaro (PL)</span> 47.03%</div>
+        <div class="track"><div class="bolsonaro" style="width:47.03%"></div></div>
+        <div class="bar-row"><span data-i18n="cardA_b2">Lula (PT)</span> 45.16%</div>
+        <div class="track"><div class="lula" style="width:45.16%"></div></div>
+        <div class="outcome" data-i18n="cardB_out">Runoff in three weeks — this analysis covers the 1st round</div>
+      </div>
+      <div class="res-card">
+        <h4 data-i18n="cardC_t">Rest of the field</h4>
+        <div class="sub" data-i18n="cardC_sub">% of valid votes</div>
+        <ul class="plain-rows">
+          <li><span>Cury</span><b>2.89%</b></li>
+          <li><span>Ferreira</span><b>2.24%</b></li>
+          <li><span>Caiado</span><b>2.18%</b></li>
+        </ul>
+        <div class="outcome" data-i18n="cardC_out">nine more candidates below 0.3% each</div>
+      </div>
+      <div class="res-card">
+        <h4 data-i18n="cardD_t">Turnout: 78.92%</h4>
+        <div class="sub" data-i18n="cardD_sub">voting is mandatory (fines for abstention)</div>
+        <ul class="plain-rows">
+          <li><span data-i18n="cardD_r1">ballots cast</span><b>125.3M</b></li>
+          <li><span data-i18n="cardD_r2">registered voters</span><b>158.7M</b></li>
+          <li><span data-i18n="cardD_r3">blank + null votes</span><b>4.8%</b></li>
+        </ul>
+        <div class="outcome" data-i18n="cardD_out">abstention 21.1% (33.5M voters)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: KEY ARGUMENTS ══ -->
+  <section>
+    <h3 class="sect" data-i18n="why_title">Three reasons the numbers can be trusted</h3>
+    <div class="args">
+      <div class="arg">
+        <div class="num">1</div>
+        <h4 data-i18n="a1_t">The arithmetic is perfect</h4>
+        <p data-i18n="a1_b">All 499,248 section records pass every self-consistency check with zero discrepancies: candidate votes + blank + null = ballots cast in each section, no section reports more votes than voters, and the national total matches the official result to the exact vote. Half a million machine-made records, perfectly consistent.</p>
+      </div>
+      <div class="arg">
+        <div class="num">2</div>
+        <h4 data-i18n="a2_t">No anomalies where fraud would show</h4>
+        <p data-i18n="a2_b">Section turnout is one smooth bell centred at ~81%. Above the 91.6% honest-decline boundary there is only 0.62% of ballots, and the tails of the two rivals are balanced (Bolsonaro 0.49%, Lula 0.80%). Deleting the whole tail would move each candidate by at most 0.07 points. No comet tail, no round-number peaks (|z| ≤ 1.3), no digit patterns, one duplicate pair in half a million sections.</p>
+      </div>
+      <div class="arg">
+        <div class="num">3</div>
+        <h4 data-i18n="a3_t">It behaves exactly like the honest 2022 election</h4>
+        <p data-i18n="a3_b">The 2022 presidential rounds on the same 461,218 sections serve as a control: the honest-decline boundary derived from them (91.5%) coincides with 2026's own (91.6%), and 2026's tails sit at 2022's own level (0.47–0.62%). Turnout jumps between 2022 and 2026 do not correlate with result swings (r ≈ 0.01), and the two-cluster “fingerprint” existed identically in honest 2022 — it is the Northeast/South geography, not fraud.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: SUPPORTING EVIDENCE ══ -->
+  <section>
+    <div class="figs">
+      <figure class="fig">
+        <img src="img/en/turnout.png" data-fig="turnout" alt="Turnout histogram: one smooth bell near 80%, boundary at 91.6%" loading="lazy">
+        <figcaption data-i18n="fig1_cap">Turnout across 499,206 sections. One smooth bell near 80% — and no mass at 90–100% turnout, where stuffed ballot boxes would show up. Only 0.62% of ballots lie above the boundary; tails of both candidates are at the level of honest 2022.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="img/en/comet.png" data-fig="comet" alt="Turnout vs share for Bolsonaro and Lula: horizontal clouds" loading="lazy">
+        <figcaption data-i18n="fig2_cap">Each dot is a section. Both clouds are horizontal — nationally, turnout correlates with the result at r = −0.03 (Bolsonaro) and +0.05 (Lula). Ballot-stuffing produces a rising “comet tail” for the beneficiary (r ≈ +0.5…+0.9); there is none.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="img/en/control.png" data-fig="control" alt="Turnout distributions of 2022 and 2026: indistinguishable shapes" loading="lazy">
+        <figcaption data-i18n="fig3_cap">Turnout distributions of the two 2022 rounds and 2026 are practically indistinguishable: same bell, same faded right tail. Dashed lines mark the honest-decline boundaries: 91.5% derived from the 2022 control and 91.6% — 2026's own.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="img/en/selftest.png" data-fig="selftest" alt="Self-test: injected fraud makes every statistic jump" loading="lazy">
+        <figcaption data-i18n="fig4_cap">Self-test: after injecting 2 million synthetic ballots, the estimated anomalous zone grew 22-fold (left); after “painting” turnout to whole percentages in 5% of sections, the round-number statistic jumped from z = 0.35 to z = 9.9 (right). The clean verdict is a real measurement, not a blind spot.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="sect" data-i18n="meth_title">How I checked</h3>
+    <p class="sect-sub" data-i18n="meth_intro">Eleven families of tests used by election statisticians worldwide, run on the official section data with open-source code. Summary: all clean — and the toolkit demonstrably detects injected fraud.</p>
+    <div class="m-list">
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
+        <p data-i18n="m1_b">Votes beyond the honest turnout decline: 0.62% of ballots — at most 0.49% of Bolsonaro's and 0.80% of Lula's votes, and the tail is not tilted toward the leader (Lula's share at high turnout is slightly above his national one). Re-run separately for all five macro-regions plus abroad: no regional tail exceeds 0.85% of a candidate's votes.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
+        <p data-i18n="m2_b">One horizontal cloud: national correlation −0.03 for the leader, +0.05 for the runner-up. The +0.5…+0.9 gradient that ballot-stuffing produces is absent.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
+        <p data-i18n="m3_b">The statistical mixture splits into two clusters — but both at normal 78–80% turnout: the Northeast vs the South electorate split, mirrored for the two candidates. The fraud signature (a compact cluster at 90–100% turnout and 80–100% share) is absent in all 12 candidate × region runs.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
+        <p data-i18n="m4_b">The share of sections with whole-percent turnout matches the size-adjusted random null (z = +0.5); for the leader's share z = −0.03. For comparison, in documented falsification cases z reaches dozens.</p>
+      </div></div>
+      <div class="m"><span class="badge warn">≠</span><div>
+        <h5 data-i18n="m5_t">Benford's second digit</h5>
+        <p data-i18n="m5_b">Formally “significant” — but the observed profiles are smooth monotone curves with no spikes on any digit, fully explained by minor candidates' tiny counters (mean under 10 votes per section). Fabricated numbers leave selective spikes; there are none. The test's null simply does not fit this data structure.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m6_t">Last digit (Beber–Scacco)</h5>
+        <p data-i18n="m6_b">Perfectly uniform over the full set of counts. After the standard ≥100 filter a mild 0.65-point gradient appears — a truncation artifact. The excess of “round” digits 0 and 5 is at most 0.12 points (~370 extra numbers out of 307,000).</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m7_t">2D correlations by state (Kobak et al.)</h5>
+        <p data-i18n="m7_b">National r ≈ 0; by state from −0.30 to +0.49, exactly mirrored between the two candidates — mobilisation geography, symmetric, without the “one beneficiary wins at high turnout” signature.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m8_t">Outliers vs neighbours, machine learning, duplicates</h5>
+        <p data-i18n="m8_b">0.93% of sections flagged against their own municipality — the normal baseline for heavy-tailed distributions, tiny sections, no clustering; Isolation Forest's 1% is by construction. Exactly 1 duplicate result pair in 499,000 sections.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m9_t">Voting-machine generations (urna models)</h5>
+        <p data-i18n="m9_b">The recurring “old machines flip votes” claim: results across UE 2013–2022 machine generations differ by at most 1.8 points; the oldest machines lean to Lula, not to the leader, and are scattered across states rather than concentrated.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m10_t">Control: the same sections in 2022</h5>
+        <p data-i18n="m10_b">Boundary 91.5% (2022) ≈ 91.6% (2026); tails at the level of honest 2022; turnout jumps between the elections do not correlate with share swings (r ≈ 0.01, the leader's swing uniform across all ten jump deciles); the two-cluster fingerprint reproduces unchanged from 2022.</p>
+      </div></div>
+      <div class="m"><span class="badge">✓</span><div>
+        <h5 data-i18n="m11_t">Self-test: the toolkit actually detects fraud</h5>
+        <p data-i18n="m11_b">Injecting 2 million synthetic ballots grows the estimated anomalous zone 22-fold; painting turnout to whole percentages in 5% of sections pushes z to 9.9. On these data the methods are sensitive enough to see fraud of this scale — the clean verdict is not a blind spot.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: CAVEATS ══ -->
+  <section>
+    <div class="limits">
+      <h3 class="sect" data-i18n="lim_title">What this analysis cannot see</h3>
+      <p class="sect-sub" style="color:#7a6a3d" data-i18n="lim_intro">Honest limits of the method — statistics shows anomalies, not intentions.</p>
+      <ul>
+        <li data-i18n="l1">Counting is electronic: for “protocol” tests (round numbers, digits) the null is a machine, not a person with a calculator. A tampering path at the level of result transmission would leave other traces (ballot-unit ↔ tally reconciliations) that are not part of the open dataset.</li>
+        <li data-i18n="l2">Regional heterogeneity is huge (Lula 60.5% in the Northeast vs 30.1% in the South). The key tests were therefore re-run stratified by macro-region and by state, and outliers were measured against neighbours within the same municipality; residual state-level heterogeneity remains but carries no fraud signature.</li>
+        <li data-i18n="l3">Only the 1st round is analysed. The runoff (Bolsonaro × Lula, 25 October 2026) will be added once TSE publishes its final section-level results.</li>
+        <li data-i18n="l4">The 2022 match covers 92.4% of 2026 sections (93.3% of voters); new or renumbered sections are covered by the national and stratified tests only. Abroad, sections are renumbered between elections, so the jump test is not interpreted there.</li>
+        <li data-i18n="l5">Section-level forensics cannot see manipulation above the section level (e.g. rewriting during aggregation); such checks require ballot-unit ↔ totalizer files that are not published in the open dataset.</li>
+        <li data-i18n="l6">I am an independent researcher with no ties to the electoral authority or any campaign; all inputs are official TSE publications and the analysis code is open source.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="data">
+      <h3 class="sect" data-i18n="data_title">Data &amp; reproducibility</h3>
+      <ul>
+        <li data-i18n="d1">Source: official section-level (seção) results from the <a href="https://dadosabertos.tse.jus.br" rel="noopener">TSE open-data portal</a> (resultados-2026), final 1st-round files generated 5–6 October 2026: 499,248 sections including abroad voting — about 23 GB of CSV.</li>
+        <li data-i18n="d2">Self-consistency: zero discrepancies in all checks (nominal votes vs detail files, blank/null cross-checks, no duplicated section keys, no turnout above electorate); the national total matches the official result to the exact vote. Control dataset: TSE resultados-2022, both rounds, matched to the same sections (92.4% coverage).</li>
+        <li data-i18n="d3">Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco, neighbour-outlier and Isolation-Forest methods, urna-model stratification, the 2022 control and synthetic self-tests.</li>
+        <li data-i18n="d4">Full technical report (in Russian), the section dataset, scripts and all 18 figures / 21 tables are available in the project repository.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer><span data-i18n="footer">Independent analysis · <a href="http://renatyv.org" rel="noopener">renatyv.org</a> · Data: TSE (dadosabertos.tse.jus.br) · Page generated 13 October 2026</span></footer>
+</main>
+
+<script>
+const I18N = {
+en: {
+  title: "Brazil, presidential 1st round — 4 Oct 2026: statistical fraud check",
+  brand: "Brazil · presidential · 04.10.2026",
+  kicker: "Independent statistical audit",
+  h1: "Brazil voted on 4 October. Do the numbers add up?",
+  verdict_title: "Verdict: no statistical traces of manipulation",
+  verdict_text: "I ran standard election-forensics tests on the official section-level results of the 1st round of the presidential election of 4 October 2026, using the 2022 elections on the very same sections as a control. No test shows the signature of ballot-stuffing or result-painting. (Final TSE results; the runoff of 25 October 2026 is not covered.)",
+  n_sections: "499,206",
+  chip_sections: "sections analysed",
+  n_ballots: "125.3M",
+  chip_ballots: "ballots checked (100%)",
+  chip_arith: "arithmetic discrepancies",
+  n_shift: "±0.07 pp",
+  chip_shift: "max shift any anomaly could cause",
+  sit_title: "What happened on 4 October 2026",
+  sit_intro: "Brazil elected its president. Voting is compulsory and ballots are cast on electronic machines (urnas eletrônicas); the electoral authority TSE publishes final results per section — 499,248 of them, each covering a few hundred voters. Nobody crossed 50%, so the two leaders meet again in a runoff.",
+  cardA_t: "Result of the 1st round",
+  cardA_sub: "% of valid votes, nationwide",
+  cardA_b1: "Bolsonaro (PL)", cardA_b2: "Lula (PT)",
+  cardA_out: "Margin 1.87 pp — no majority in the 1st round",
+  cardB_t: "Second round — 25 October 2026",
+  cardB_sub: "head-to-head: Bolsonaro × Lula",
+  cardB_out: "Runoff in three weeks — this analysis covers the 1st round",
+  cardC_t: "Rest of the field",
+  cardC_sub: "% of valid votes",
+  cardC_out: "nine more candidates below 0.3% each",
+  cardD_t: "Turnout: 78.92%",
+  cardD_sub: "voting is mandatory (fines for abstention)",
+  cardD_r1: "ballots cast", cardD_r2: "registered voters", cardD_r3: "blank + null votes",
+  cardD_out: "abstention 21.1% (33.5M voters)",
+  why_title: "Three reasons the numbers can be trusted",
+  a1_t: "The arithmetic is perfect",
+  a1_b: "All 499,248 section records pass every self-consistency check with zero discrepancies: candidate votes + blank + null = ballots cast in each section, no section reports more votes than voters, and the national total matches the official result to the exact vote. Half a million machine-made records, perfectly consistent.",
+  a2_t: "No anomalies where fraud would show",
+  a2_b: "Section turnout is one smooth bell centred at ~81%. Above the 91.6% honest-decline boundary there is only 0.62% of ballots, and the tails of the two rivals are balanced (Bolsonaro 0.49%, Lula 0.80%). Deleting the whole tail would move each candidate by at most 0.07 points. No comet tail, no round-number peaks (|z| ≤ 1.3), no digit patterns, one duplicate pair in half a million sections.",
+  a3_t: "It behaves exactly like the honest 2022 election",
+  a3_b: "The 2022 presidential rounds on the same 461,218 sections serve as a control: the honest-decline boundary derived from them (91.5%) coincides with 2026's own (91.6%), and 2026's tails sit at 2022's own level (0.47–0.62%). Turnout jumps between 2022 and 2026 do not correlate with result swings (r ≈ 0.01), and the two-cluster “fingerprint” existed identically in honest 2022 — it is the Northeast/South geography, not fraud.",
+  fig1_cap: "Turnout across 499,206 sections. One smooth bell near 80% — and no mass at 90–100% turnout, where stuffed ballot boxes would show up. Only 0.62% of ballots lie above the boundary; tails of both candidates are at the level of honest 2022.",
+  fig1_alt: "Turnout histogram: one smooth bell near 80%, boundary at 91.6%",
+  fig2_cap: "Each dot is a section. Both clouds are horizontal — nationally, turnout correlates with the result at r = −0.03 (Bolsonaro) and +0.05 (Lula). Ballot-stuffing produces a rising “comet tail” for the beneficiary (r ≈ +0.5…+0.9); there is none.",
+  fig2_alt: "Turnout vs share for Bolsonaro and Lula: horizontal clouds",
+  fig3_cap: "Turnout distributions of the two 2022 rounds and 2026 are practically indistinguishable: same bell, same faded right tail. Dashed lines mark the honest-decline boundaries: 91.5% derived from the 2022 control and 91.6% — 2026's own.",
+  fig3_alt: "Turnout distributions of 2022 and 2026: indistinguishable shapes",
+  fig4_cap: "Self-test: after injecting 2 million synthetic ballots, the estimated anomalous zone grew 22-fold (left); after “painting” turnout to whole percentages in 5% of sections, the round-number statistic jumped from z = 0.35 to z = 9.9 (right). The clean verdict is a real measurement, not a blind spot.",
+  fig4_alt: "Self-test: injected fraud makes every statistic jump",
+  meth_title: "How I checked",
+  meth_intro: "Eleven families of tests used by election statisticians worldwide, run on the official section data with open-source code. Summary: all clean — and the toolkit demonstrably detects injected fraud.",
+  m1_t: "Anomalous-vote estimate (Shpilkin method)",
+  m1_b: "Votes beyond the honest turnout decline: 0.62% of ballots — at most 0.49% of Bolsonaro's and 0.80% of Lula's votes, and the tail is not tilted toward the leader (Lula's share at high turnout is slightly above his national one). Re-run separately for all five macro-regions plus abroad: no regional tail exceeds 0.85% of a candidate's votes.",
+  m2_t: "Turnout × result scatter (“comet tail”)",
+  m2_b: "One horizontal cloud: national correlation −0.03 for the leader, +0.05 for the runner-up. The +0.5…+0.9 gradient that ballot-stuffing produces is absent.",
+  m3_t: "Election fingerprints (Klimek et al.)",
+  m3_b: "The statistical mixture splits into two clusters — but both at normal 78–80% turnout: the Northeast vs the South electorate split, mirrored for the two candidates. The fraud signature (a compact cluster at 90–100% turnout and 80–100% share) is absent in all 12 candidate × region runs.",
+  m4_t: "Round-number peaks (Kobak et al.)",
+  m4_b: "The share of sections with whole-percent turnout matches the size-adjusted random null (z = +0.5); for the leader's share z = −0.03. For comparison, in documented falsification cases z reaches dozens.",
+  m5_t: "Benford's second digit",
+  m5_b: "Formally “significant” — but the observed profiles are smooth monotone curves with no spikes on any digit, fully explained by minor candidates' tiny counters (mean under 10 votes per section). Fabricated numbers leave selective spikes; there are none. The test's null simply does not fit this data structure.",
+  m6_t: "Last digit (Beber–Scacco)",
+  m6_b: "Perfectly uniform over the full set of counts. After the standard ≥100 filter a mild 0.65-point gradient appears — a truncation artifact. The excess of “round” digits 0 and 5 is at most 0.12 points (~370 extra numbers out of 307,000).",
+  m7_t: "2D correlations by state (Kobak et al.)",
+  m7_b: "National r ≈ 0; by state from −0.30 to +0.49, exactly mirrored between the two candidates — mobilisation geography, symmetric, without the “one beneficiary wins at high turnout” signature.",
+  m8_t: "Outliers vs neighbours, machine learning, duplicates",
+  m8_b: "0.93% of sections flagged against their own municipality — the normal baseline for heavy-tailed distributions, tiny sections, no clustering; Isolation Forest's 1% is by construction. Exactly 1 duplicate result pair in 499,000 sections.",
+  m9_t: "Voting-machine generations (urna models)",
+  m9_b: "The recurring “old machines flip votes” claim: results across UE 2013–2022 machine generations differ by at most 1.8 points; the oldest machines lean to Lula, not to the leader, and are scattered across states rather than concentrated.",
+  m10_t: "Control: the same sections in 2022",
+  m10_b: "Boundary 91.5% (2022) ≈ 91.6% (2026); tails at the level of honest 2022; turnout jumps between the elections do not correlate with share swings (r ≈ 0.01, the leader's swing uniform across all ten jump deciles); the two-cluster fingerprint reproduces unchanged from 2022.",
+  m11_t: "Self-test: the toolkit actually detects fraud",
+  m11_b: "Injecting 2 million synthetic ballots grows the estimated anomalous zone 22-fold; painting turnout to whole percentages in 5% of sections pushes z to 9.9. On these data the methods are sensitive enough to see fraud of this scale — the clean verdict is not a blind spot.",
+  lim_title: "What this analysis cannot see",
+  lim_intro: "Honest limits of the method — statistics shows anomalies, not intentions.",
+  l1: "Counting is electronic: for “protocol” tests (round numbers, digits) the null is a machine, not a person with a calculator. A tampering path at the level of result transmission would leave other traces (ballot-unit ↔ tally reconciliations) that are not part of the open dataset.",
+  l2: "Regional heterogeneity is huge (Lula 60.5% in the Northeast vs 30.1% in the South). The key tests were therefore re-run stratified by macro-region and by state, and outliers were measured against neighbours within the same municipality; residual state-level heterogeneity remains but carries no fraud signature.",
+  l3: "Only the 1st round is analysed. The runoff (Bolsonaro × Lula, 25 October 2026) will be added once TSE publishes its final section-level results.",
+  l4: "The 2022 match covers 92.4% of 2026 sections (93.3% of voters); new or renumbered sections are covered by the national and stratified tests only. Abroad, sections are renumbered between elections, so the jump test is not interpreted there.",
+  l5: "Section-level forensics cannot see manipulation above the section level (e.g. rewriting during aggregation); such checks require ballot-unit ↔ totalizer files that are not published in the open dataset.",
+  l6: "I am an independent researcher with no ties to the electoral authority or any campaign; all inputs are official TSE publications and the analysis code is open source.",
+  data_title: "Data & reproducibility",
+  d1: "Source: official section-level (seção) results from the <a href=\"https://dadosabertos.tse.jus.br\" rel=\"noopener\">TSE open-data portal</a> (resultados-2026), final 1st-round files generated 5–6 October 2026: 499,248 sections including abroad voting — about 23 GB of CSV.",
+  d2: "Self-consistency: zero discrepancies in all checks (nominal votes vs detail files, blank/null cross-checks, no duplicated section keys, no turnout above electorate); the national total matches the official result to the exact vote. Control dataset: TSE resultados-2022, both rounds, matched to the same sections (92.4% coverage).",
+  d3: "Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco, neighbour-outlier and Isolation-Forest methods, urna-model stratification, the 2022 control and synthetic self-tests.",
+  d4: "Full technical report (in Russian), the section dataset, scripts and all 18 figures / 21 tables are available in the project repository.",
+  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: TSE (dadosabertos.tse.jus.br) · Page generated 13 October 2026"
+},
+pt: {
+  title: "Brasil, presidencial 1º turno — 4 out 2026: verificação estatística",
+  brand: "Brasil · presidencial · 04.10.2026",
+  kicker: "Auditoria estatística independente",
+  h1: "O Brasil votou em 4 de outubro. Os números batem?",
+  verdict_title: "Veredito: sem vestígios estatísticos de manipulação",
+  verdict_text: "Apliquei os testes estatísticos padrão de forense eleitoral aos resultados oficiais por seção do 1º turno da eleição presidencial de 4 de outubro de 2026, usando as eleições de 2022 nas mesmas seções como controle. Nenhum teste mostra a assinatura de enchimento de urnas ou de ajuste de resultados. (Resultados finais do TSE; o 2º turno de 25 de outubro de 2026 não está coberto.)",
+  n_sections: "499.206",
+  chip_sections: "seções analisadas",
+  n_ballots: "125,3 mi",
+  chip_ballots: "votos verificados (100%)",
+  chip_arith: "divergências aritméticas",
+  n_shift: "±0,07 p.p.",
+  chip_shift: "máximo efeito que qualquer anomalia causaria",
+  sit_title: "O que aconteceu em 4 de outubro de 2026",
+  sit_intro: "O Brasil elegeu seu presidente. O voto é obrigatório e é dado em urnas eletrônicas; a autoridade eleitoral, o TSE, publica os resultados finais por seção — 499.248 no total, cada uma com algumas centenas de eleitores. Ninguém passou de 50%, então os dois líderes se enfrentam de novo no 2º turno.",
+  cardA_t: "Resultado do 1º turno",
+  cardA_sub: "% dos votos válidos, no país",
+  cardA_b1: "Bolsonaro (PL)", cardA_b2: "Lula (PT)",
+  cardA_out: "Diferença de 1,87 p.p. — sem maioria no 1º turno",
+  cardB_t: "2º turno — 25 de outubro de 2026",
+  cardB_sub: "corpo a corpo: Bolsonaro × Lula",
+  cardB_out: "Decisão em três semanas — esta análise cobre o 1º turno",
+  cardC_t: "Demais candidatos",
+  cardC_sub: "% dos votos válidos",
+  cardC_out: "mais nove candidatos abaixo de 0,3% cada",
+  cardD_t: "Comparecimento: 78,92%",
+  cardD_sub: "o voto é obrigatório (multa por abstenção)",
+  cardD_r1: "votos apurados", cardD_r2: "eleitores aptos", cardD_r3: "brancos + nulos",
+  cardD_out: "abstenção de 21,1% (33,5 mi de eleitores)",
+  why_title: "Três motivos para confiar nos números",
+  a1_t: "A aritmética é perfeita",
+  a1_b: "Todos os 499.248 registros de seção passam por todas as verificações de autoconsistência sem nenhuma divergência: votos nos candidatos + brancos + nulos = votos apurados em cada seção, nenhuma seção registra mais votos que eleitores, e o total nacional bate com o resultado oficial voto a voto. Meio milhão de registros feitos por máquina, perfeitamente consistentes.",
+  a2_t: "Nenhuma anomalia onde a fraude apareceria",
+  a2_b: "O comparecimento por seção forma um único sino suave centrado em ~81%. Acima do limite de declínio honesto de 91,6% há apenas 0,62% dos votos, e as caudas dos dois rivais são equilibradas (Bolsonaro 0,49%, Lula 0,80%). Apagar a cauda inteira mudaria cada candidato em no máximo 0,07 ponto. Sem cauda de cometa, sem picos em números redondos (|z| ≤ 1,3), sem padrões de dígitos, um único par duplicado em meio milhão de seções.",
+  a3_t: "Comporta-se exatamente como a eleição honesta de 2022",
+  a3_b: "Os turnos presidenciais de 2022 nas mesmas 461.218 seções servem de controle: o limite de declínio honesto deles (91,5%) coincide com o próprio de 2026 (91,6%), e as caudas de 2026 estão no nível das próprias caudas de 2022 (0,47–0,62%). Os saltos de comparecimento entre 2022 e 2026 não se correlacionam com as oscilações de resultado (r ≈ 0,01), e a “impressão digital” de dois clusters já existia de forma idêntica na honesta eleição de 2022 — é a geografia Nordeste/Sul, não fraude.",
+  fig1_cap: "Comparecimento nas 499.206 seções. Um único sino suave perto de 80% — e nenhuma massa nos 90–100%, onde urnas infladas apareceriam. Apenas 0,62% dos votos ficam acima do limite; as caudas dos dois candidatos estão no nível das honestas eleições de 2022.",
+  fig1_alt: "Histograma do comparecimento: um sino suave perto de 80%, limite em 91,6%",
+  fig2_cap: "Cada ponto é uma seção. As duas nuvens são horizontais — no país, o comparecimento correlaciona-se com o resultado a r = −0,03 (Bolsonaro) e +0,05 (Lula). A fraude produz uma “cauda de cometa” crescente para o beneficiário (r ≈ +0,5…+0,9); aqui não há nenhuma.",
+  fig2_alt: "Comparecimento × percentual de Bolsonaro e Lula: nuvens horizontais",
+  fig3_cap: "As distribuições de comparecimento dos dois turnos de 2022 e de 2026 são praticamente indistinguíveis: mesmo sino, mesma cauda direita apagada. As linhas marcam os limites de declínio honesto: 91,5% obtido do controle de 2022 e 91,6% — o próprio de 2026.",
+  fig3_alt: "Distribuições de comparecimento de 2022 e 2026: formas indistinguíveis",
+  fig4_cap: "Auto-teste: após injetar 2 milhões de votos sintéticos, a zona anômala estimada cresceu 22 vezes (à esquerda); após “ajustar” o comparecimento a percentuais inteiros em 5% das seções, a estatística de números redondos saltou de z = 0,35 para z = 9,9 (à direita). O veredito limpo é uma medição real, não um ponto cego.",
+  fig4_alt: "Auto-teste: a fraude injetada faz toda estatística saltar",
+  meth_title: "Como verifiquei",
+  meth_intro: "Onze famílias de testes usadas por estatísticos eleitorais no mundo inteiro, aplicadas aos dados oficiais por seção com código aberto. Resumo: tudo limpo — e o ferramental demonstradamente detecta fraude injetada.",
+  m1_t: "Estimativa de votos anômalos (método de Shpilkin)",
+  m1_b: "Votos além do declínio honesto do comparecimento: 0,62% dos apurados — no máximo 0,49% dos votos de Bolsonaro e 0,80% dos de Lula, e a cauda não é inclinada a favor do líder (o percentual de Lula no comparecimento alto fica levemente acima do nacional). Reexecutado separadamente para as cinco macrorregiões mais o exterior: nenhuma cauda regional passa de 0,85% dos votos de um candidato.",
+  m2_t: "Dispersão comparecimento × resultado (“cauda de cometa”)",
+  m2_b: "Uma única nuvem horizontal: correlação nacional de −0,03 para o líder e +0,05 para o vice. O gradiente de +0,5…+0,9 que o enchimento de urnas produz está ausente.",
+  m3_t: "Impressões digitais eleitorais (Klimek et al.)",
+  m3_b: "A mistura estatística se divide em dois clusters — mas ambos com comparecimento normal de 78–80%: a divisão eleitoral Nordeste × Sul, espelhada para os dois candidatos. A assinatura de fraude (um cluster compacto em 90–100% de comparecimento e 80–100% de percentual) está ausente em todas as 12 combinações candidato × região.",
+  m4_t: "Picos em números redondos (Kobak et al.)",
+  m4_b: "A parcela de seções com comparecimento em percentual inteiro coincide com o nulo aleatório ajustado pelo tamanho (z = +0,5); no percentual do líder, z = −0,03. Para comparar, em casos documentados de fraude z chega às dezenas.",
+  m5_t: "Segundo dígito de Benford",
+  m5_b: "Formalmente “significativo” — mas os perfis observados são curvas monótonas suaves, sem picos em dígito algum, explicados de ponta a ponta pelas urnas pequenas dos candidatos minoritários (média abaixo de 10 votos por seção). Números fabricados deixam picos seletivos; aqui não há nenhum. O nulo do teste simplesmente não serve a esta estrutura de dados.",
+  m6_t: "Último dígito (Beber–Scacco)",
+  m6_b: "Perfeitamente uniforme no conjunto completo de contagens. Após o filtro padrão de ≥100 surge um leve gradiente de 0,65 ponto — artefato de truncamento. O excesso dos dígitos “redondos” 0 e 5 é de no máximo 0,12 ponto (~370 números a mais em 307 mil).",
+  m7_t: "Correlações 2D por estado (Kobak et al.)",
+  m7_b: "No país, r ≈ 0; por estado, de −0,30 a +0,49, exatamente espelhado entre os dois candidatos — geografia de mobilização, simétrica, sem a assinatura de “um único beneficiário vence no comparecimento alto”.",
+  m8_t: "Discrepâncias com vizinhos, aprendizado de máquina, duplicatas",
+  m8_b: "0,93% das seções marcadas contra o próprio município — o nível de base normal para distribuições de cauda pesada, seções minúsculas, sem agrupamento; os 1% da Isolation Forest são por construção. Exatamente 1 par de resultados duplicado em 499 mil seções.",
+  m9_t: "Gerações de urnas eletrônicas (modelos de urna)",
+  m9_b: "A tese recorrente das “urnas velhas que trocam votos”: os resultados entre as gerações UE 2013–2022 diferem em no máximo 1,8 ponto; as urnas mais velhas pendem para Lula, não para o líder, e estão espalhadas pelos estados em vez de concentradas.",
+  m10_t: "Controle: as mesmas seções em 2022",
+  m10_b: "Limite de 91,5% (2022) ≈ 91,6% (2026); caudas no nível das honestas eleições de 2022; os saltos de comparecimento entre as eleições não se correlacionam com as oscilações de percentual (r ≈ 0,01, com o balanço do líder uniforme em todos os dez decis de salto); a impressão digital de dois clusters se reproduz intacta desde 2022.",
+  m11_t: "Auto-teste: o ferramental detecta fraude de verdade",
+  m11_b: "Injetar 2 milhões de votos sintéticos faz a zona anômala estimada crescer 22 vezes; ajustar o comparecimento a percentuais inteiros em 5% das seções leva z a 9,9. Nesses dados, os métodos são sensíveis o bastante para enxergar fraude dessa escala — o veredito limpo não é um ponto cego.",
+  lim_title: "O que esta análise não pode ver",
+  lim_intro: "Limites honestos do método — a estatística mostra anomalias, não intenções.",
+  l1: "A apuração é eletrônica: para os testes de “protocolo” (números redondos, dígitos) o nulo é uma máquina, não uma pessoa com calculadora. Um caminho de fraude na transmissão dos resultados deixaria outros vestígios (conferências boletim de urna ↔ totalização) que não fazem parte do dataset aberto.",
+  l2: "A heterogeneidade regional é enorme (Lula 60,5% no Nordeste contra 30,1% no Sul). Por isso os testes-chave foram reexecutados estratificados por macrorregião e por estado, e as discrepâncias foram medidas contra vizinhos do mesmo município; resta heterogeneidade no nível de estado, mas sem assinatura de fraude.",
+  l3: "Apenas o 1º turno foi analisado. O 2º turno (Bolsonaro × Lula, 25 de outubro de 2026) será acrescentado quando o TSE publicar seus resultados finais por seção.",
+  l4: "O pareamento com 2022 cobre 92,4% das seções de 2026 (93,3% dos votos); seções novas ou renumeradas são cobertas apenas pelos testes nacional e estratificado. No exterior as seções são renumeradas entre eleições, e o teste de saltos não é interpretado lá.",
+  l5: "A forense no nível de seção não enxerga manipulação acima da seção (por exemplo, reescrita na agregação); essas verificações exigem os arquivos de boletim de urna ↔ totalização, que não são publicados no dataset aberto.",
+  l6: "Sou um pesquisador independente, sem vínculos com a autoridade eleitoral ou com qualquer campanha; todas as entradas são publicações oficiais do TSE e o código da análise é aberto.",
+  data_title: "Dados e reprodutibilidade",
+  d1: "Fonte: resultados oficiais por seção do <a href=\"https://dadosabertos.tse.jus.br\" rel=\"noopener\">portal de dados abertos do TSE</a> (resultados-2026), arquivos finais do 1º turno gerados em 5–6 de outubro de 2026: 499.248 seções incluindo o voto no exterior — cerca de 23 GB de CSV.",
+  d2: "Autoconsistência: zero divergências em todas as verificações (votos nominais contra arquivos de detalhe, cruzamentos de brancos/nulos, nenhuma chave de seção duplicada, nenhum comparecimento acima do eleitorado); o total nacional bate com o resultado oficial voto a voto. Dataset de controle: TSE resultados-2022, ambos os turnos, pareado às mesmas seções (92,4% de cobertura).",
+  d3: "Ferramental: pipeline aberto de forense eleitoral (Python, pandas / scikit-learn) com os métodos de Shpilkin, Klimek, Kobak, Beber–Scacco, discrepâncias com vizinhos e Isolation Forest, estratificação por modelo de urna, o controle de 2022 e auto-testes sintéticos.",
+  d4: "O relatório técnico completo (em russo), o dataset por seção, os scripts e todas as 18 figuras / 21 tabelas estão no repositório do projeto.",
+  footer: "Análise independente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Dados: TSE (dadosabertos.tse.jus.br) · Página gerada em 13 de outubro de 2026"
+},
+es: {
+  title: "Brasil, presidencial 1.ª vuelta — 4 oct 2026: verificación estadística",
+  brand: "Brasil · presidencial · 04.10.2026",
+  kicker: "Auditoría estadística independiente",
+  h1: "Brasil votó el 4 de octubre. ¿Cuadran los números?",
+  verdict_title: "Veredicto: sin rastros estadísticos de manipulación",
+  verdict_text: "Apliqué las pruebas estadísticas estándar de forense electoral a los resultados oficiales por sección de la 1.ª vuelta de la elección presidencial del 4 de octubre de 2026, usando las elecciones de 2022 en las mismas secciones como control. Ninguna prueba muestra la firma del relleno de urnas ni del maquillaje de resultados. (Resultados finales del TSE; la 2.ª vuelta del 25 de octubre de 2026 no está cubierta.)",
+  n_sections: "499 206",
+  chip_sections: "secciones analizadas",
+  n_ballots: "125,3 M",
+  chip_ballots: "votos verificados (100%)",
+  chip_arith: "discrepancias aritméticas",
+  n_shift: "±0,07 p.p.",
+  chip_shift: "máximo efecto que cualquier anomalía causaría",
+  sit_title: "Qué pasó el 4 de octubre de 2026",
+  sit_intro: "Brasil eligió a su presidente. El voto es obligatorio y se emite en urnas electrónicas; la autoridad electoral, el TSE, publica los resultados finales por sección — 499 248 en total, cada una con unos cientos de electores. Nadie superó el 50%, así que los dos líderes se enfrentan de nuevo en una segunda vuelta.",
+  cardA_t: "Resultado de la 1.ª vuelta",
+  cardA_sub: "% de votos válidos, a nivel nacional",
+  cardA_b1: "Bolsonaro (PL)", cardA_b2: "Lula (PT)",
+  cardA_out: "Diferencia de 1,87 p.p. — sin mayoría en la 1.ª vuelta",
+  cardB_t: "2.ª vuelta — 25 de octubre de 2026",
+  cardB_sub: "cara a cara: Bolsonaro × Lula",
+  cardB_out: "Decisión en tres semanas — este análisis cubre la 1.ª vuelta",
+  cardC_t: "Resto de candidatos",
+  cardC_sub: "% de votos válidos",
+  cardC_out: "nueve candidatos más por debajo del 0,3% cada uno",
+  cardD_t: "Participación: 78,92%",
+  cardD_sub: "el voto es obligatorio (multa por abstenerse)",
+  cardD_r1: "votos emitidos", cardD_r2: "electores inscritos", cardD_r3: "blancos + nulos",
+  cardD_out: "abstención del 21,1% (33,5 millones)",
+  why_title: "Tres razones para confiar en los números",
+  a1_t: "La aritmética es perfecta",
+  a1_b: "Los 499 248 registros de sección pasan todas las pruebas de autoconsistencia sin una sola discrepancia: votos a candidatos + blancos + nulos = votos emitidos en cada sección, ninguna sección reporta más votos que electores, y el total nacional coincide con el resultado oficial voto a voto. Medio millón de registros hechos por máquina, perfectamente consistentes.",
+  a2_t: "Ninguna anomalía donde la fraude aparecería",
+  a2_b: "La participación por sección forma una sola campana suave centrada en ~81%. Por encima del límite de descenso honesto de 91,6% queda solo el 0,62% de los votos, y las colas de los dos rivales están equilibradas (Bolsonaro 0,49%, Lula 0,80%). Borrar la cola entera movería a cada candidato como máximo 0,07 puntos. Sin cola de cometa, sin picos en números redondos (|z| ≤ 1,3), sin patrones de dígitos, un solo par duplicado en medio millón de secciones.",
+  a3_t: "Se comporta exactamente como la elección honesta de 2022",
+  a3_b: "Las vueltas presidenciales de 2022 en las mismas 461 218 secciones sirven de control: el límite de descenso honesto derivado de ellas (91,5%) coincide con el propio de 2026 (91,6%), y las colas de 2026 están al nivel de las propias colas de 2022 (0,47–0,62%). Los saltos de participación entre 2022 y 2026 no se correlacionan con los cambios de resultado (r ≈ 0,01), y la «huella digital» de dos clústeres ya existía de forma idéntica en la honesta elección de 2022 — es la geografía Noreste/Sur, no fraude.",
+  fig1_cap: "Participación en las 499 206 secciones. Una sola campana suave cerca del 80% — y ninguna masa en el 90–100%, donde aparecerían urnas infladas. Solo el 0,62% de los votos queda por encima del límite; las colas de ambos candidatos están al nivel de las honestas elecciones de 2022.",
+  fig1_alt: "Histograma de participación: una campana suave cerca del 80%, límite en 91,6%",
+  fig2_cap: "Cada punto es una sección. Ambas nubes son horizontales — a nivel nacional, la participación se correlaciona con el resultado a r = −0,03 (Bolsonaro) y +0,05 (Lula). El fraude produce una «cola de cometa» creciente para el beneficiario (r ≈ +0,5…+0,9); aquí no existe.",
+  fig2_alt: "Participación × porcentaje de Bolsonaro y Lula: nubes horizontales",
+  fig3_cap: "Las distribuciones de participación de las dos vueltas de 2022 y de 2026 son prácticamente indistinguibles: misma campana, misma cola derecha apagada. Las líneas marcan los límites de descenso honesto: 91,5% derivado del control de 2022 y 91,6% — el propio de 2026.",
+  fig3_alt: "Distribuciones de participación de 2022 y 2026: formas indistinguibles",
+  fig4_cap: "Autotest: tras inyectar 2 millones de votos sintéticos, la zona anómala estimada creció 22 veces (izquierda); tras «ajustar» la participación a porcentajes enteros en el 5% de las secciones, la estadística de números redondos saltó de z = 0,35 a z = 9,9 (derecha). El veredicto limpio es una medición real, no un punto ciego.",
+  fig4_alt: "Autotest: el fraude inyectado hace saltar toda estadística",
+  meth_title: "Cómo lo verifiqué",
+  meth_intro: "Once familias de pruebas usadas por estadísticos electorales en todo el mundo, aplicadas a los datos oficiales por sección con código abierto. Resumen: todo limpio — y el instrumental detecta demostrablemente el fraude inyectado.",
+  m1_t: "Estimación de votos anómalos (método de Shpilkin)",
+  m1_b: "Votos más allá del descenso honesto de la participación: 0,62% de los emitidos — como máximo el 0,49% de los votos de Bolsonaro y el 0,80% de los de Lula, y la cola no está inclinada hacia el líder (el porcentaje de Lula con participación alta queda ligeramente por encima del nacional). Reejecutado por separado para las cinco macrorregiones más el exterior: ninguna cola regional supera el 0,85% de los votos de un candidato.",
+  m2_t: "Dispersión participación × resultado («cola de cometa»)",
+  m2_b: "Una única nube horizontal: correlación nacional de −0,03 para el líder y +0,05 para el rival. El gradiente de +0,5…+0,9 que produce el relleno de urnas está ausente.",
+  m3_t: "Huellas dactilares electorales (Klimek et al.)",
+  m3_b: "La mezcla estadística se divide en dos clústeres — pero ambos con participación normal de 78–80%: la división electoral Noreste × Sur, espejada para los dos candidatos. La firma de fraude (un clúster compacto en 90–100% de participación y 80–100% de porcentaje) está ausente en las 12 combinaciones candidato × región.",
+  m4_t: "Picos en números redondos (Kobak et al.)",
+  m4_b: "La proporción de secciones con participación en porcentaje entero coincide con el nulo aleatorio ajustado por tamaño (z = +0,5); en el porcentaje del líder, z = −0,03. Para comparar, en casos documentados de fraude z llega a las decenas.",
+  m5_t: "Segundo dígito de Benford",
+  m5_b: "Formalmente «significativo» — pero los perfiles observados son curvas monótonas suaves, sin picos en dígito alguno, explicados de principio a fin por las urnas pequeñas de los candidatos minoritarios (media inferior a 10 votos por sección). Los números fabricados dejan picos selectivos; aquí no hay ninguno. El nulo del test simplemente no sirve para esta estructura de datos.",
+  m6_t: "Último dígito (Beber–Scacco)",
+  m6_b: "Perfectamente uniforme en el conjunto completo de recuentos. Tras el filtro estándar de ≥100 aparece un leve gradiente de 0,65 puntos — artefacto de truncamiento. El exceso de los dígitos «redondos» 0 y 5 es de como máximo 0,12 puntos (~370 números de más sobre 307 000).",
+  m7_t: "Correlaciones 2D por estado (Kobak et al.)",
+  m7_b: "A nivel nacional, r ≈ 0; por estado, de −0,30 a +0,49, exactamente espejado entre los dos candidatos — geografía de movilización, simétrica, sin la firma de «un único beneficiario gana con participación alta».",
+  m8_t: "Discrepancias con vecinos, aprendizaje automático, duplicados",
+  m8_b: "El 0,93% de las secciones marcadas contra su propio municipio — el nivel de base normal para distribuciones de cola pesada, secciones diminutas, sin agrupamiento; el 1% de la Isolation Forest es por construcción. Exactamente 1 par de resultados duplicado en 499 000 secciones.",
+  m9_t: "Generaciones de urnas electrónicas (modelos de urna)",
+  m9_b: "La tesis recurrente de las «urnas viejas que cambian votos»: los resultados entre las generaciones UE 2013–2022 difieren a lo sumo 1,8 puntos; las urnas más viejas se inclinan hacia Lula, no hacia el líder, y están repartidas por los estados en lugar de concentradas.",
+  m10_t: "Control: las mismas secciones en 2022",
+  m10_b: "Límite de 91,5% (2022) ≈ 91,6% (2026); colas al nivel de las honestas elecciones de 2022; los saltos de participación entre elecciones no se correlacionan con los cambios de porcentaje (r ≈ 0,01, con el balance del líder uniforme en los diez deciles de salto); la huella de dos clústeres se reproduce intacta desde 2022.",
+  m11_t: "Autotest: el instrumental sí detecta el fraude",
+  m11_b: "Inyectar 2 millones de votos sintéticos hace crecer 22 veces la zona anómala estimada; ajustar la participación a porcentajes enteros en el 5% de las secciones lleva z a 9,9. Con estos datos, los métodos son lo bastante sensibles para ver un fraude de esa escala — el veredicto limpio no es un punto ciego.",
+  lim_title: "Lo que este análisis no puede ver",
+  lim_intro: "Límites honestos del método — la estadística muestra anomalías, no intenciones.",
+  l1: "El escrutinio es electrónico: para las pruebas de «acta» (números redondos, dígitos) el nulo es una máquina, no una persona con calculadora. Una vía de fraude en la transmisión de resultados dejaría otros rastros (conciliaciones boleta urna ↔ totalización) que no forman parte del dataset abierto.",
+  l2: "La heterogeneidad regional es enorme (Lula 60,5% en el Noreste frente a 30,1% en el Sur). Por eso las pruebas clave se reejecutaron estratificadas por macrorregión y por estado, y las discrepancias se midieron contra vecinos del mismo municipio; queda heterogeneidad a nivel de estado, pero sin firma de fraude.",
+  l3: "Solo se analizó la 1.ª vuelta. La 2.ª vuelta (Bolsonaro × Lula, 25 de octubre de 2026) se añadirá cuando el TSE publique sus resultados finales por sección.",
+  l4: "El emparejamiento con 2022 cubre el 92,4% de las secciones de 2026 (93,3% de los votos); las secciones nuevas o renumeradas quedan cubiertas solo por las pruebas nacional y estratificada. En el exterior las secciones se renumeran entre elecciones, y el test de saltos no se interpreta allí.",
+  l5: "La forense a nivel de sección no ve la manipulación por encima de la sección (p. ej., reescritura en la agregación); esas verificaciones requieren los archivos de boleta urna ↔ totalización, que no se publican en el dataset abierto.",
+  l6: "Soy un investigador independiente, sin vínculos con la autoridad electoral ni con ninguna campaña; todas las entradas son publicaciones oficiales del TSE y el código del análisis es abierto.",
+  data_title: "Datos y reproducibilidad",
+  d1: "Fuente: resultados oficiales por sección del <a href=\"https://dadosabertos.tse.jus.br\" rel=\"noopener\">portal de datos abiertos del TSE</a> (resultados-2026), archivos finales de la 1.ª vuelta generados el 5–6 de octubre de 2026: 499 248 secciones incluido el voto en el exterior — unos 23 GB de CSV.",
+  d2: "Autoconsistencia: cero discrepancias en todas las verificaciones (votos nominales contra archivos de detalle, cruces de blancos/nulos, ninguna clave de sección duplicada, ninguna participación superior al electorado); el total nacional coincide con el resultado oficial voto a voto. Dataset de control: TSE resultados-2022, ambas vueltas, emparejado a las mismas secciones (92,4% de cobertura).",
+  d3: "Instrumental: pipeline abierto de forense electoral (Python, pandas / scikit-learn) con los métodos de Shpilkin, Klimek, Kobak, Beber–Scacco, discrepancias con vecinos e Isolation Forest, estratificación por modelo de urna, el control de 2022 y autotests sintéticos.",
+  d4: "El informe técnico completo (en ruso), el dataset por sección, los scripts y todas las 18 figuras / 21 tablas están en el repositorio del proyecto.",
+  footer: "Análisis independiente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Datos: TSE (dadosabertos.tse.jus.br) · Página generada el 13 de octubre de 2026"
+},
+ru: {
+  title: "Бразилия, президент 1-й тур — 04.10.2026: статистическая проверка",
+  brand: "Бразилия · президент · 04.10.2026",
+  kicker: "Независимый статистический аудит",
+  h1: "Бразилия проголосовала 4 октября. Сходятся ли числа?",
+  verdict_title: "Вывод: систематических статистических следов фальсификаций нет",
+  verdict_text: "Я прогнал стандартные статистические тесты election forensics по официальным итогам 1-го тура президентских выборов 04.10.2026 на уровне секций, использовав выборы-2022 на тех же секциях как контроль. Ни один тест не показывает сигнатуру вброса или рисования результатов. (Финальные данные TSE; 2-й тур 25.10.2026 не покрыт.)",
+  n_sections: "499 206",
+  chip_sections: "секций в анализе",
+  n_ballots: "125,3 млн",
+  chip_ballots: "проверенных голосов (100%)",
+  chip_arith: "арифметических расхождений",
+  n_shift: "±0,07 п.п.",
+  chip_shift: "максимум, что могла бы дать любая аномалия",
+  sit_title: "Что произошло 4 октября 2026 года",
+  sit_intro: "Бразилия избирала президента. Голосование обязательно и проходит на электронных урнах (urnas eletrônicas); избирательный орган TSE публикует финальные итоги по секциям — всего их 499 248, каждая на несколько сотен избирателей. Никто не набрал 50%, и двух лидеров ждёт второй тур.",
+  cardA_t: "Итог 1-го тура",
+  cardA_sub: "% действительных голосов по стране",
+  cardA_b1: "Болсонару (PL)", cardA_b2: "Лула (PT)",
+  cardA_out: "Разрыв 1,87 п.п. — нет большинства в 1-м туре",
+  cardB_t: "2-й тур — 25 октября 2026",
+  cardB_sub: "очной ставкой: Болсонару × Лула",
+  cardB_out: "Развязка через три недели — анализ охватывает 1-й тур",
+  cardC_t: "Остальные кандидаты",
+  cardC_sub: "% действительных голосов",
+  cardC_out: "ещё девять кандидатов ниже 0,3% каждый",
+  cardD_t: "Явка: 78,92%",
+  cardD_sub: "голосование обязательно (штраф за неявку)",
+  cardD_r1: "проголосовало", cardD_r2: "зарегистрировано", cardD_r3: "белые + нулевые",
+  cardD_out: "неявка 21,1% (33,5 млн избирателей)",
+  why_title: "Три причины доверять числам",
+  a1_t: "Арифметика безупречна",
+  a1_b: "Все 499 248 секционных записей проходят все проверки самосогласованности без единого расхождения: голоса за кандидатов + белые + нулевые = проголосовавшие в каждой секции, ни в одной секции голосов не больше, чем избирателей, а общенациональный итог совпадает с официальным до единого голоса. Полмиллиона машинных записей — идеальная согласованность.",
+  a2_t: "Аномалий нет там, где их оставила бы фальсификация",
+  a2_b: "Явка по секциям — один гладкий колокол с центром у ~81%. Выше границы честного спада 91,6% — лишь 0,62% голосов, и хвосты двух соперников сбалансированы (Болсонару 0,49%, Лула 0,80%). Удаление всего хвоста сдвинуло бы каждого кандидата максимум на 0,07 пункта. Ни хвоста кометы, ни пиков на круглых числах (|z| ≤ 1,3), ни цифровых узоров, одна дублирующаяся пара на полмиллиона секций.",
+  a3_t: "Числа ведут себя в точности как на честных выборах-2022",
+  a3_b: "Президентские туры-2022 на тех же 461 218 секциях служат контролем: выведенная из них граница честного спада (91,5%) совпадает с собственной границей-2026 (91,6%), а хвосты-2026 лежат на уровне собственных хвостов-2022 (0,47–0,62%). Скачки явки между 2022 и 2026 не коррелируют со сдвигами результата (r ≈ 0,01), а двухкластерный «отпечаток» в точности существовал уже на честных выборах-2022 — это география Северо-Востока и Юга, а не фальсификации.",
+  fig1_cap: "Явка по 499 206 секциям. Один гладкий колокол у 80% — и никакой массы при явке 90–100%, где проступил бы вброс. Над границей — лишь 0,62% голосов; хвосты обоих кандидатов — на уровне честных выборов-2022.",
+  fig1_alt: "Гистограмма явки: один гладкий колокол у 80%, граница 91,6%",
+  fig2_cap: "Каждая точка — секция. Облака горизонтальны: общенациональная корреляция явки с результатом r = −0,03 (Болсонару) и +0,05 (Лула). Вброс даёт бенефициару растущий «хвост кометы» (r ≈ +0,5…+0,9) — здесь его нет.",
+  fig2_alt: "Явка и доля Болсонару и Лулы: горизонтальные облака",
+  fig3_cap: "Распределения явки обоих туров-2022 и 2026 практически неразличимы: тот же колокол, тот же затухающий правый хвост. Линии — границы честного спада: 91,5% по контролю-2022 и 91,6% — собственная граница-2026.",
+  fig3_alt: "Распределения явки 2022 и 2026: неразличимые формы",
+  fig4_cap: "Самотест: после инъекции 2 млн синтетических голосов оценка аномальной зоны выросла в 22 раза (слева); после «подгонки» явки под целые проценты в 5% секций статистика круглых чисел подскочила с z = 0,35 до z = 9,9 (справа). «Чистый» вердикт — реальное измерение, а не слепое пятно.",
+  fig4_alt: "Самотест: инъекция фальши заставляет сработать все статистики",
+  meth_title: "Как я проверял",
+  meth_intro: "Одиннадцать семейств тестов, которыми пользуются избирательные статистики по всему миру, на официальных секционных данных с открытым кодом. Итог: всё чисто — и инструментарий доказуемо ловит инъекцию фальши.",
+  m1_t: "Оценка аномальных голосов (метод Шпилькина)",
+  m1_b: "Голоса сверх честного спада явки: 0,62% проголосовавших — не более 0,49% голосов Болсонару и 0,80% Лулы, причём хвост не наклонён в пользу лидера (доля Лулы при высокой явке даже чуть выше его общенациональной). Отдельный прогон по каждой из пяти макрорегионов и загранице: ни один региональный хвост не превышает 0,85% голосов кандидата.",
+  m2_t: "Рассеяние явка × результат («хвост кометы»)",
+  m2_b: "Одно горизонтальное облако: общенациональная корреляция −0,03 у лидера и +0,05 у соперника. Градиента +0,5…+0,9, который оставляет вброс, нет.",
+  m3_t: "Электоральные отпечатки (Klimek et al.)",
+  m3_b: "Смесь делится на два кластера — но оба при обычной явке 78–80%: раскол электората Северо-Восток × Юг, зеркальный у двух кандидатов. Сигнатура фальсификаций (компактный кластер при явке 90–100% и доле 80–100%) отсутствует во всех 12 прогонах кандидат × регион.",
+  m4_t: "Пики на круглых числах (Kobak et al.)",
+  m4_b: "Доля секций с целым процентом явки совпадает со случайным нулем с поправкой на размер (z = +0,5); по доле лидера z = −0,03. Для сравнения: в документированных случаях фальсификаций z достигает десятков.",
+  m5_t: "Вторая цифра Бенфорда",
+  m5_b: "Формально «значима» — но наблюдаемые профили — гладкие монотонные кривые без шипов на каких-либо цифрах, целиком объясняемые мелкими счётчиками кандидатов-аутсайдеров (в среднем меньше 10 голосов на секцию). Рукодельные числа оставляют выборочные шипы; здесь их нет. Нуль теста просто не соответствует этой структуре данных.",
+  m6_t: "Последняя цифра (Beber–Scacco)",
+  m6_b: "Идеально равномерна на полном множестве счётчиков. После штатного фильтра ≥100 появляется мягкий градиент 0,65 пункта — артефакт усечения. Избыток «круглых» цифр 0 и 5 — не более 0,12 пункта (~370 лишних чисел на 307 тысяч).",
+  m7_t: "2D-корреляции по штатам (Kobak et al.)",
+  m7_b: "Общенационально r ≈ 0; по штатам от −0,30 до +0,49, зеркально у двух кандидатов — мобилизационная география, симметричная, без сигнатуры «выигрывает один бенефициар при высокой явке».",
+  m8_t: "Выбросы против соседей, машинное обучение, дубликаты",
+  m8_b: "0,93% секций помечено против собственного муниципалитета — нормальный базовый уровень для тяжёлых распределений, крошечные секции, без кластеризации; 1% Isolation Forest — по построению. Ровно одна пара дублирующихся итогов на 499 тысяч секций.",
+  m9_t: "Поколения урн (модели urna)",
+  m9_b: "Регулярная тема «старые урны переворачивают голоса»: результаты между поколениями машин UE 2013–2022 различаются максимум на 1,8 пункта; самые старые урны смещены к Луле, а не к лидеру, и разбросаны по штатам, а не сконцентрированы.",
+  m10_t: "Контроль: те же секции в 2022 году",
+  m10_b: "Граница 91,5% (2022) ≈ 91,6% (2026); хвосты на уровне честных выборов-2022; скачки явки между выборами не коррелируют со сдвигами долей (r ≈ 0,01, свинг лидера одинаков во всех десяти децилях скачка); двухкластерный отпечаток воспроизводится с 2022 без изменений.",
+  m11_t: "Самотест: инструментарий действительно ловит фальсификации",
+  m11_b: "Инъекция 2 млн синтетических голосов увеличивает оценку аномальной зоны в 22 раза; подгонка явки под целые проценты в 5% секций поднимает z до 9,9. На этих данных методы чувствительны ровно настолько, чтобы увидеть фальсификацию такого масштаба — «чистый» вердикт не слепое пятно.",
+  lim_title: "Чего этот анализ увидеть не может",
+  lim_intro: "Честные границы метода — статистика показывает аномалии, а не намерения.",
+  l1: "Подсчёт электронный: для «протокольных» тестов (круглые числа, цифры) нуль — машина, а не человек с калькулятором. Путь взлома на уровне передачи итогов оставлял бы другие следы (сверки урна ↔ тотализатор), которых в открытом датасете нет.",
+  l2: "Региональная неоднородность огромна (Лула 60,5% на Северо-Востоке против 30,1% на Юге). Поэтому ключевые тесты перегнаны со стратификацией по макрорегионам и штатам, а выбросы мерились против соседей внутри своего муниципалитета; остаточная неоднородность уровня штата остаётся, но сигнатуры фальсификаций не несёт.",
+  l3: "Проанализирован только 1-й тур. 2-й тур (Болсонару × Лула, 25.10.2026) будет добавлен, когда TSE опубликует финальные секционные итоги.",
+  l4: "Матч с 2022 покрывает 92,4% секций-2026 (93,3% голосов); новые или перенумерованные секции покрыты только общенациональными и стратифицированными тестами. За границей секции между выборами перенумеровываются — тест скачков там не интерпретируется.",
+  l5: "Форензика уровня секции не видит манипуляций выше секции (например, переписывание при агрегации); такие проверки требуют файлов урна ↔ тотализатор, которые в открытом датасете не публикуются.",
+  l6: "Я независимый исследователь без связей с избирательным органом и кампаниями; все входные данные — официальные публикации TSE, код анализа открыт.",
+  data_title: "Данные и воспроизводимость",
+  d1: "Источник: официальные секционные итоги <a href=\"https://dadosabertos.tse.jus.br\" rel=\"noopener\">портала открытых данных TSE</a> (resultados-2026), финальные файлы 1-го тура от 5–6 октября 2026: 499 248 секций с учётом заграницы — около 23 ГБ CSV.",
+  d2: "Самосогласованность: ноль расхождений во всех проверках (номинальные голоса против файлов detalhe, кросс-проверки белых/нулевых, нет дубликатов ключей секций, нет явки выше электората); общий итог совпадает с официальным до единого голоса. Контрольный датасет: TSE resultados-2022, оба тура, сматчен на те же секции (покрытие 92,4%).",
+  d3: "Инструментарий: открытый пайплайн election forensics (Python, pandas / scikit-learn): Шпилькин, Klimek, Kobak, Beber–Scacco, выбросы против соседей и Isolation Forest, стратификация по моделям урн, контроль-2022 и синтетические самотесты.",
+  d4: "Полный технический отчёт (на русском), секционный датасет, скрипты и все 18 графиков / 21 таблица — в репозитории проекта.",
+  footer: "Независимый анализ · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Данные: TSE (dadosabertos.tse.jus.br) · Страница создана 13 октября 2026"
+}
+};
+
+(function(){
+  const langs = ["pt","en","es","ru"];
+  function pick(){
+    const saved = localStorage.getItem("lang");
+    if (saved && langs.includes(saved)) return saved;
+    for (const l of navigator.languages || [navigator.language]) {
+      const p = (l || "").slice(0,2).toLowerCase();
+      if (p === "pt" || p === "br") return "pt";
+      if (p === "es") return "es";
+      if (p === "ru") return "ru";
+    }
+    return "en";
+  }
+  function apply(lang){
+    const d = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const v = d[el.getAttribute("data-i18n")];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    document.querySelectorAll("img[data-fig]").forEach(img => {
+      img.src = "img/" + lang + "/" + img.dataset.fig + ".png";
+      const alt = d[img.dataset.fig.replace("turnout","fig1").replace("comet","fig2")
+                       .replace("control","fig3").replace("selftest","fig4") + "_alt"];
+      if (alt !== undefined) img.alt = alt;
+    });
+    document.querySelectorAll(".langs button").forEach(b =>
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    localStorage.setItem("lang", lang);
+  }
+  document.querySelectorAll(".langs button").forEach(b =>
+    b.addEventListener("click", () => apply(b.dataset.lang)));
+  apply(pick());
+})();
+</script>
+</body>
+</html>

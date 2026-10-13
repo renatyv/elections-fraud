@@ -40,7 +40,17 @@ site/                        — публичный сайт для Vercel (ст
                               по странам; словенский раздел
                               site/sloveniya-referendum-2026/ — пирамида Минто,
                               5 языков (SL/EN/HR/IT/HU), подмена картинок
-                              img/<lang>/ по языку → site/sloveniya-referendum-2026/README.md
+                              img/<lang>/ по языку → site/sloveniya-referendum-2026/README.md;
+                              бразильский раздел site/brazil-oct-2026/ — пирамида
+                              Минто, 4 языка (PT/EN/ES/RU), подмена картинок
+                              img/<lang>/ (строит
+                              brazil-oct-2026/scripts/build_site_figures.py) →
+                              site/brazil-oct-2026/README.md; португальский
+                              раздел site/portugal-2025/ — пирамида Минто,
+                              2 языка (PT/EN), подмена картинок img/<lang>/
+                              (строит portugal-2025/scripts/build_site_figures.py
+                              из data/legislativas2025_mai/results_all.csv) →
+                              site/portugal-2025/README.md
 analysis-tool/               — election forensics (pandas/sklearn, uv): Шпилькин,
                               отпечатки Klimek, целочисленные пики Kobak, Бенфорд/
                               последняя цифра, выбросы против соседей, Isolation
