@@ -26,6 +26,10 @@
   .brand{font-weight:700;font-size:14px;letter-spacing:.2px}
   .brand .flag{display:inline-block;width:18px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-1px;
                background:linear-gradient(#009739 20%,#fedd00 20% 80%,#009739 80%)}
+  .bar .right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  a.home{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+         padding:4px 12px;font-size:13px;text-decoration:none}
+  a.home:hover{border-color:var(--ink)}
   .langs{display:flex;gap:6px;flex-wrap:wrap}
   .langs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
                 padding:4px 12px;font-size:13px;cursor:pointer}
@@ -109,12 +113,15 @@
 <header class="top">
   <div class="bar">
     <div class="brand"><span class="flag"></span><span data-i18n="brand">Brazil · presidential · 04.10.2026</span></div>
-    <nav class="langs" aria-label="Language">
-      <button data-lang="pt">Português</button>
-      <button data-lang="en" aria-pressed="true">English</button>
-      <button data-lang="es">Español</button>
-      <button data-lang="ru">Русский</button>
-    </nav>
+    <div class="right">
+      <a class="home" href="../" data-i18n="home">← All analyses</a>
+      <nav class="langs" aria-label="Language">
+        <button data-lang="pt">Português</button>
+        <button data-lang="en" aria-pressed="true">English</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="ru">Русский</button>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -449,6 +456,7 @@ const I18N = {
 en: {
   title: "Brazil, presidential 1st round — 4 Oct 2026: statistical fraud check",
   brand: "Brazil · presidential · 04.10.2026",
+  home: "← All analyses",
   kicker: "Independent statistical audit",
   h1: "Brazil voted on 4 October. Do the numbers add up?",
   verdict_title: "Verdict: no statistical traces of manipulation",
@@ -578,6 +586,7 @@ en: {
 pt: {
   title: "Brasil, presidencial 1º turno — 4 out 2026: verificação estatística",
   brand: "Brasil · presidencial · 04.10.2026",
+  home: "← Todas as análises",
   kicker: "Auditoria estatística independente",
   h1: "O Brasil votou em 4 de outubro. Os números batem?",
   verdict_title: "Veredito: sem vestígios estatísticos de manipulação",
@@ -707,6 +716,7 @@ pt: {
 es: {
   title: "Brasil, presidencial 1.ª vuelta — 4 oct 2026: verificación estadística",
   brand: "Brasil · presidencial · 04.10.2026",
+  home: "← Todos los análisis",
   kicker: "Auditoría estadística independiente",
   h1: "Brasil votó el 4 de octubre. ¿Cuadran los números?",
   verdict_title: "Veredicto: sin rastros estadísticos de manipulación",
@@ -836,6 +846,7 @@ es: {
 ru: {
   title: "Бразилия, президент 1-й тур — 04.10.2026: статистическая проверка",
   brand: "Бразилия · президент · 04.10.2026",
+  home: "← Все анализы",
   kicker: "Независимый статистический аудит",
   h1: "Бразилия проголосовала 4 октября. Сходятся ли числа?",
   verdict_title: "Вывод: систематических статистических следов фальсификаций нет",

@@ -26,6 +26,10 @@
   .brand{font-weight:700;font-size:14px;letter-spacing:.2px}
   .brand .flag{display:inline-block;width:18px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-1px;
                background:linear-gradient(#fff 33%,#005da4 33% 66%,#ed1c24 66%)}
+  .bar .right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  a.home{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+         padding:4px 12px;font-size:13px;text-decoration:none}
+  a.home:hover{border-color:var(--ink)}
   .langs{display:flex;gap:6px;flex-wrap:wrap}
   .langs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
                 padding:4px 12px;font-size:13px;cursor:pointer}
@@ -109,13 +113,16 @@
 <header class="top">
   <div class="bar">
     <div class="brand"><span class="flag"></span><span data-i18n="brand">Slovenia · 4 referendums · 11.10.2026</span></div>
-    <nav class="langs" aria-label="Language">
-      <button data-lang="sl">Slovenščina</button>
-      <button data-lang="en" aria-pressed="true">English</button>
-      <button data-lang="hr">Hrvatski</button>
-      <button data-lang="it">Italiano</button>
-      <button data-lang="hu">Magyar</button>
-    </nav>
+    <div class="right">
+      <a class="home" href="../" data-i18n="home">← All analyses</a>
+      <nav class="langs" aria-label="Language">
+        <button data-lang="sl">Slovenščina</button>
+        <button data-lang="en" aria-pressed="true">English</button>
+        <button data-lang="hr">Hrvatski</button>
+        <button data-lang="it">Italiano</button>
+        <button data-lang="hu">Magyar</button>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -481,6 +488,7 @@ const I18N = {
 en: {
   title: "Slovenia, 4 referendums — 11 Oct 2026: statistical fraud check",
   brand: "Slovenia · 4 referendums · 11.10.2026",
+  home: "← All analyses",
   kicker: "Independent statistical audit",
   h1: "Slovenia voted on 4 questions. Do the numbers add up?",
   verdict_title: "Verdict: no statistical traces of manipulation",
@@ -612,6 +620,7 @@ en: {
 sl: {
   title: "Slovenija, 4 referendumi — 11. 10. 2026: statistična preverba",
   brand: "Slovenija · 4 referendumi · 11.10.2026",
+  home: "← Vse analize",
   kicker: "Neodvisna statistična preverba",
   h1: "Slovenija je glasovala o 4 vprašanjih. Ali so številke zaupanja vredne?",
   verdict_title: "Zaključek: statističnih sledi poneverbe ni",
@@ -743,6 +752,7 @@ sl: {
 hr: {
   title: "Slovenija, 4 referenduma — 11. 10. 2026.: statistička provjera",
   brand: "Slovenija · 4 referenduma · 11.10.2026.",
+  home: "← Sve analize",
   kicker: "Neovisna statistička provjera",
   h1: "Slovenija je glasovala o 4 pitanja. Jesu li brojevi vjerodostojni?",
   verdict_title: "Zaključak: nema statističkih tragova manipulacije",
@@ -874,6 +884,7 @@ hr: {
 it: {
   title: "Slovenia, 4 referendum — 11 ott 2026: verifica statistica",
   brand: "Slovenia · 4 referendum · 11.10.2026",
+  home: "← Tutte le analisi",
   kicker: "Verifica statistica indipendente",
   h1: "La Slovenia ha votato su 4 quesiti. I numeri reggono?",
   verdict_title: "Verdetto: nessuna traccia statistica di manipolazione",
@@ -1005,6 +1016,7 @@ it: {
 hu: {
   title: "Szlovénia, 4 népszavazás — 2026. okt. 11.: statisztikai ellenőrzés",
   brand: "Szlovénia · 4 népszavazás · 2026.10.11.",
+  home: "← Összes elemzés",
   kicker: "Független statisztikai ellenőrzés",
   h1: "Szlovénia négy kérdésen szavazott. Állnak a számok?",
   verdict_title: "Eredmény: nincs a manipulációra utaló statisztikai nyom",

@@ -26,6 +26,10 @@
   .brand{font-weight:700;font-size:14px;letter-spacing:.2px}
   .brand .flag{display:inline-block;width:20px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-1px;
                background:linear-gradient(90deg,#046a38 40%,#da291c 40%)}
+  .bar .right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  a.home{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+         padding:4px 12px;font-size:13px;text-decoration:none}
+  a.home:hover{border-color:var(--ink)}
   .langs{display:flex;gap:6px;flex-wrap:wrap}
   .langs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
                 padding:4px 12px;font-size:13px;cursor:pointer}
@@ -106,10 +110,13 @@
 <header class="top">
   <div class="bar">
     <div class="brand"><span class="flag"></span><span data-i18n="brand">Portugal · Legislative elections · 18.05.2025</span></div>
-    <nav class="langs" aria-label="Language">
-      <button data-lang="pt">Português</button>
-      <button data-lang="en" aria-pressed="true">English</button>
-    </nav>
+    <div class="right">
+      <a class="home" href="../" data-i18n="home">← All analyses</a>
+      <nav class="langs" aria-label="Language">
+        <button data-lang="pt">Português</button>
+        <button data-lang="en" aria-pressed="true">English</button>
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -424,6 +431,7 @@ const I18N = {
 en: {
   title: "Portugal, legislative elections — 18 May 2025: statistical fraud check",
   brand: "Portugal · Legislative elections · 18.05.2025",
+  home: "← All analyses",
   kicker: "Independent statistical audit",
   h1: "Portugal voted on 18 May 2025. Do the numbers add up?",
   verdict_title: "Verdict: no statistical traces of manipulation",
@@ -528,6 +536,7 @@ en: {
 pt: {
   title: "Portugal, legislativas 2025 — 18.05.2025: verificação estatística",
   brand: "Portugal · Legislativas · 18.05.2025",
+  home: "← Todas as análises",
   kicker: "Auditoria estatística independente",
   h1: "Portugal votou a 18 de maio de 2025. Os números são fiáveis?",
   verdict_title: "Veredicto: sem vestígios estatísticos de manipulação",
