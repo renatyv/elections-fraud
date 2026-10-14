@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-LaunchAgent для macOS: запуск скрейпера каждые 15 минут.
-Установка:
-  cp "<этот файл>" ~/Library/LaunchAgents/com.user.serbia-rik-scraper.plist
+macOS LaunchAgent: runs the scraper every 15 minutes.
+Install:
+  cp "<this file>" ~/Library/LaunchAgents/com.user.serbia-rik-scraper.plist
   launchctl load ~/Library/LaunchAgents/com.user.serbia-rik-scraper.plist
-Остановка:
+Stop:
   launchctl unload ~/Library/LaunchAgents/com.user.serbia-rik-scraper.plist
 -->
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"

@@ -1,8 +1,8 @@
-"""Загрузка результатов выборов из сводных CSV портала MAI (Португалия).
+"""Loading election results from MAI portal summary CSVs (Portugal).
 
-Формат: key, level, name, path, parent_key, registered_voters, voted,
+Format: key, level, name, path, parent_key, registered_voters, voted,
 turnout_pct, blank_votes, null_votes, votes:<PARTY>..., mandates.
-Нижний уровень данных — freguesia (приход, level 3).
+The lowest data level is freguesia (parish, level 3).
 """
 
 from __future__ import annotations
@@ -14,14 +14,14 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-# Минимальный размер территории для «цифровых» тестов: в крошечных приходах
-# равномерность последних цифр и целые проценты возникают естественно.
+# Minimum unit size for the digit-based tests: in tiny parishes, last-digit
+# uniformity and integer percentages arise naturally.
 MIN_UNITS_FOR_DIGIT_TESTS = 100
 
 
 @dataclass
 class ElectionData:
-    """Результаты выборов по территориям одного уровня (обычно freguesias)."""
+    """Election results across territories of one level (usually freguesias)."""
 
     name: str
     df: pd.DataFrame
@@ -29,7 +29,7 @@ class ElectionData:
 
     @property
     def leader_party(self) -> str:
-        """Партия-лидер по сумме голосов (аналог «партии власти»)."""
+        """Leading party by total votes (the "party of power" analogue)."""
         totals = {c: int(self.df[c].sum()) for c in self.party_cols}
         return max(totals, key=totals.get)
 
@@ -47,16 +47,16 @@ class ElectionData:
 
     @property
     def turnout(self) -> pd.Series:
-        """Явка, % (пересчитанная из голосов, без доверия turnout_pct CSV)."""
+        """Turnout, % (recomputed from votes, without trusting turnout_pct from the CSV)."""
         return 100.0 * self.df["voted"] / self.df["registered_voters"]
 
     def share(self, party: str) -> pd.Series:
-        """Доля голосов за партию от числа проголосовавших, %."""
+        """Party vote share of ballots cast, %."""
         return 100.0 * self.df[party] / self.df["voted"]
 
 
 def load_mai_csv(csv_path: str | Path, election_name: str = "") -> ElectionData:
-    """Загрузить сводный CSV MAI (results_freguesias.csv или results_all.csv c level=3)."""
+    """Load a MAI summary CSV (results_freguesias.csv or results_all.csv with level=3)."""
     csv_path = Path(csv_path)
     df = pd.read_csv(csv_path, encoding="utf-8-sig")
     if "level" in df.columns and (df["level"] != 3).any():
@@ -72,7 +72,7 @@ def load_mai_csv(csv_path: str | Path, election_name: str = "") -> ElectionData:
 
 
 def load_territory_tree(mai_dir: str | Path) -> dict:
-    """Дерево территорий territory-tree.json: key -> (parent, level, name)."""
+    """Territory tree territory-tree.json: key -> (parent, level, name)."""
     tree_file = Path(mai_dir) / "territory-tree.json"
     with open(tree_file, encoding="utf-8") as f:
         raw = json.load(f)
@@ -96,25 +96,26 @@ def load_territory_tree(mai_dir: str | Path) -> dict:
 
 
 def subset_for_digit_tests(data: ElectionData, min_units: int = MIN_UNITS_FOR_DIGIT_TESTS) -> ElectionData:
-    """Подмножество достаточно крупных территорий для цифровых тестов."""
+    """Subset of sufficiently large territories for the digit-based tests."""
     mask = data.df["registered_voters"] >= min_units
     return ElectionData(name=data.name, df=data.df[mask].copy(), party_cols=data.party_cols)
 
 
 def major_parties(data: ElectionData, top: int = 6, min_total: int = 50_000) -> list[str]:
-    """Крупнейшие партии: для графиков и таблиц."""
+    """Largest parties: for plots and tables."""
     totals = {c: int(data.df[c].sum()) for c in data.party_cols if data.df[c].sum() >= min_total}
     ranked = sorted(totals, key=totals.get, reverse=True)
     return ranked[:top]
 
 
 def merge_parties(data: ElectionData, spec: str) -> ElectionData:
-    """Объединить колонки коалиций: 'votes:A<-votes:B,votes:C'.
+    """Merge coalition columns: 'votes:A<-votes:B,votes:C'.
 
-    В Португалии одна коалиция может идти разными колонками в разных
-    округах (AR-2025: AD = PPD/PSD.CDS-PP на материке и PPD/PSD.CDS-PP.PPM
-    на Азорах) — без объединения «лидер» обнувается на части территорий.
-    Голоса источников прибавляются к целевой колонке, источники исключаются.
+    In Portugal a single coalition may run under different columns in
+    different districts (AR-2025: AD = PPD/PSD.CDS-PP on the mainland and
+    PPD/PSD.CDS-PP.PPM in the Azores) — without merging, the "leader" is
+    zeroed on part of the territories. Source votes are added to the target
+    column and the sources are dropped.
     """
     target, _, rest = spec.partition("<-")
     target = target.strip()
@@ -129,7 +130,7 @@ def merge_parties(data: ElectionData, spec: str) -> ElectionData:
 
 
 def national_totals(data: ElectionData) -> dict:
-    """Сводные национальные показатели (сумма по территориям)."""
+    """National summary metrics (sum over territories)."""
     valid = data.df[["blank_votes", "null_votes"]].sum().sum() * 0  # placeholder type
     total_votes = data.df["voted"].sum()
     out = {
@@ -148,7 +149,7 @@ def national_totals(data: ElectionData) -> dict:
 
 
 def rounder(x: np.ndarray | pd.Series, decimals: int = 0) -> np.ndarray:
-    """Округление как в официальных протоколах (half-up, а не банковское)."""
+    """Rounding as in official protocols (half-up, not banker's)."""
     arr = np.asarray(x, dtype=float)
     factor = 10**decimals
     return np.floor(arr * factor + 0.5) / factor

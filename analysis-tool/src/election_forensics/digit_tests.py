@@ -1,19 +1,18 @@
-"""Цифровые тесты: вторая цифра (закон Бенфорда) и последняя цифра (Beber-Scacco).
+"""Digit-based tests: second digit (Benford's law) and last digit (Beber-Scacco).
 
-- Бенфорд: в «естественных» счётных числах вторые цифры 0–9 распределены
-  по закону Бенфорда; рукодельные числа отклоняются (Mebane 2006;
-  Deckert et al. 2011). Метод спорный — трактовать вместе с нулём.
-- Последняя цифра: в честных подсчётах последние цифры больших чисел
-  равномерны (Beber, Scacco, Political Analysis 2012). Тест применяется
-  только к счётчикам >= 100 (не меньше трёх цифр): у маленьких чисел
-  «последняя цифра» — само число, и равномерности нет по естественным
-  причинам.
+- Benford: in "natural" counted numbers the second digits 0-9 follow Benford's
+  law; hand-crafted numbers deviate (Mebane 2006; Deckert et al. 2011). The
+  method is contentious — interpret it together with the null.
+- Last digit: in honest tallies the last digits of large numbers are uniform
+  (Beber, Scacco, Political Analysis 2012). The test applies only to counts
+  >= 100 (at least three digits): for small numbers the "last digit" is the
+  number itself, and uniformity fails for natural reasons.
 
-Нулевая модель обоих тестов — «гладкие счётчики»: количества голосов
-симулируются из логнормального распределения, подгоненного к наблюдаемым
-счётчикам. Цифры честных счётчиков не должны зависеть от того, какой
-именно приход какой счётчик получил, поэтому обмен структурой между
-приходами не должен менять распределение цифр.
+The null model of both tests is "smooth counts": vote counts are simulated
+from a lognormal distribution fitted to the observed counts. The digits of
+honest counts must not depend on which particular parish got which count, so
+swapping the structure between parishes must not change the digit
+distribution.
 """
 
 from __future__ import annotations
@@ -25,7 +24,7 @@ from scipy import stats
 
 from .data import ElectionData
 
-# P(вторая цифра = d) = Σ_{d1=1..9} log10(1 + 1/(10·d1 + d))
+# P(second digit = d) = Σ_{d1=1..9} log10(1 + 1/(10·d1 + d))
 BENFORD_2ND = np.array(
     [sum(np.log10(1 + 1.0 / (10 * d1 + d)) for d1 in range(1, 10)) for d in range(10)]
 )
@@ -41,9 +40,9 @@ class DigitTestResult:
     min_count: int
     chi2: float
     dof: int
-    p_value: float  # против теоретического распределения цифр
-    p_null_mc: float  # эмпирический p-value по гладкому (логнормальному) нулю
-    max_dev: float  # максимальное отклонение частоты от ожидаемой, п.п.
+    p_value: float  # against the theoretical digit distribution
+    p_null_mc: float  # empirical p-value against the smooth (lognormal) null
+    max_dev: float  # maximum deviation of a frequency from expectation, p.p.
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -86,10 +85,10 @@ def digit_test(
     n_sim: int = 400,
     seed: int = 42,
 ) -> DigitTestResult:
-    """Цифровой тест для голосов за партию по всем территориям.
+    """Digit-based test for party votes across all territories.
 
-    test='benford2': вторая цифра чисел >= 10 против закона Бенфорда;
-    test='last': последняя цифра чисел >= 100 против равномерного.
+    test='benford2': second digit of numbers >= 10 against Benford's law;
+    test='last': last digit of numbers >= 100 against uniform.
     """
     rng = np.random.default_rng(seed)
     min_count = MIN_COUNT[test]
@@ -120,7 +119,7 @@ def digit_test(
 
 
 def digit_freqs(counts: np.ndarray, test: str) -> np.ndarray:
-    """Наблюдаемые частоты цифр (для графика)."""
+    """Observed digit frequencies (for the plot)."""
     d = _digits(counts[counts >= MIN_COUNT[test]], test)
     return np.bincount(d, minlength=10) / len(d)
 
@@ -128,7 +127,7 @@ def digit_freqs(counts: np.ndarray, test: str) -> np.ndarray:
 def digit_null_band(
     counts: np.ndarray, test: str, n_sim: int = 300, seed: int = 42
 ) -> np.ndarray:
-    """95%-интервал частот цифр по гладкому логнормальному нулю."""
+    """95% interval of digit frequencies under the smooth lognormal null."""
     rng = np.random.default_rng(seed)
     min_count = MIN_COUNT[test]
     counts = counts[counts >= min_count]

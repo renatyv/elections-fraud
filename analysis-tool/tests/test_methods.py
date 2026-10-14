@@ -1,4 +1,4 @@
-"""Быстрые проверки ключевых компонент (uv run pytest)."""
+"""Quick checks of the key components (uv run pytest)."""
 
 import numpy as np
 import pandas as pd
@@ -53,7 +53,7 @@ def test_leader_party():
 def test_shpilkin_clean_synthetic_zero_tail():
     d = _synthetic_data(seed=1)
     res = shpilkin_estimate(d, "votes:X", controls=[d])
-    assert res.tail_share_of_party < 1.0  # чистые данные — хвост пренебрежим
+    assert res.tail_share_of_party < 1.0  # clean data — the tail is negligible
 
 
 def test_integer_peaks_clean_synthetic():

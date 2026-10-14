@@ -1,7 +1,7 @@
 [project]
 name = "india2024"
 version = "0.1.0"
-description = "Скачивание и разбор данных выборов Лок Сабха-2024 (Индия) для election forensics"
+description = "Download and parse Lok Sabha 2024 (India) election data for election forensics"
 requires-python = ">=3.11"
 dependencies = [
     "pandas>=2.2",

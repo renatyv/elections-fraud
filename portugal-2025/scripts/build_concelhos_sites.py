@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Список всех 308 конселью Португалии с официальными сайтами.
+"""All 308 Portuguese concelhos with their official websites.
 
-Основа — data/legislativas2025_mai/results_concelhos.csv (ключ, DICO-код,
-округ, число избирателей AR-2025). Сайты:
-  1) Wikidata: P856 у экземпляров Q13217644 «municipality of Portugal»
-     (кэш: data/concelhos_sites_wikidata.json, обновляется --refresh-wd);
-  2) проверка живости HTTP GET (следуем редиректам, фиксируем финальный URL);
-  3) для отсутствующих/мертвых — перебор шаблонов cm-<slug>.pt
-     (слаг без пробелов/дефисов и с ними — как у cm-alcacerdosal.pt).
+Based on data/legislativas2025_mai/results_concelhos.csv (key, DICO code,
+district, AR-2025 electorate). Websites:
+  1) Wikidata: P856 on instances of Q13217644 "municipality of Portugal"
+     (cache: data/concelhos_sites_wikidata.json, refreshed with --refresh-wd);
+  2) liveness check via HTTP GET (follows redirects, records the final URL);
+  3) for missing/dead ones — try the cm-<slug>.pt patterns
+     (slug without spaces/hyphens and with them — as in cm-alcacerdosal.pt).
 
-Результат: data/concelhos_sites.csv, сортировка по убыванию избирателей.
+Result: data/concelhos_sites.csv, sorted by descending electorate.
 
   python3 build_concelhos_sites.py [--no-verify] [--refresh-wd] [--top N]
 """
@@ -40,7 +40,7 @@ UA = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
 SKIP_HOSTS = ('facebook.com', 'twitter.com', 'x.com', 'instagram.com',
               'youtube.com', 'linkedin.com', 'wikipedia.org')
 
-# Известные исключения из шаблона cm-<полное-название>.pt
+# Known exceptions to the cm-<full-name>.pt pattern
 PATTERN_OVERRIDES = {
     'vila nova de gaia': ['cm-gaia.pt'],
     'sao pedro do sul': ['cm-spsul.pt'],
@@ -60,7 +60,7 @@ def deaccent(s):
 
 
 def norm_name(s):
-    """Нормализация для сопоставления с Wikidata: без акцентов/регистра/знаков."""
+    """Normalization for Wikidata matching: no accents/case/punctuation."""
     return re.sub(r'[^a-z0-9]', '', deaccent(s).lower())
 
 
@@ -88,14 +88,14 @@ def fetch_wikidata():
         if any(h in host for h in SKIP_HOSTS):
             continue
         sites.setdefault(norm_name(name), []).append(site)
-    # в списке может быть несколько P856: предпочитаем https и домен .pt
+    # several P856 may be listed: prefer https and a .pt domain
     for k, v in sites.items():
         v.sort(key=lambda s: (not s.startswith('https'), '.pt' not in s, s))
     return sites
 
 
 def http_check(url, timeout=15):
-    """GET с редиректами; -> (final_url, status) или (None, 'ошибка')."""
+    """GET with redirects; -> (final_url, status) or (None, 'error')."""
     req = urllib.request.Request(url, headers={'User-Agent': UA,
                                                'Accept': 'text/html,*/*'})
     try:
@@ -105,7 +105,7 @@ def http_check(url, timeout=15):
         with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
             return r.geturl(), r.status
     except urllib.error.HTTPError as e:
-        # 403/405 у некоторых CMS — сайт жив, бот-фильтр; считаем живым
+        # 403/405 from some CMS — the site is alive behind a bot filter; count as alive
         if e.code in (403, 405, 429, 503):
             return url, e.code
         return None, f'HTTP {e.code}'
@@ -116,10 +116,10 @@ def http_check(url, timeout=15):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--no-verify', action='store_true',
-                    help='не проверять сайты по HTTP (только Wikidata)')
+                    help='skip HTTP verification of sites (Wikidata only)')
     ap.add_argument('--refresh-wd', action='store_true')
     ap.add_argument('--top', type=int, default=0,
-                    help='обработать только N крупнейших (0 = все)')
+                    help='process only the N largest (0 = all)')
     args = ap.parse_args()
 
     with open(CSV_IN, encoding='utf-8-sig') as f:
@@ -127,17 +127,17 @@ def main():
     rows.sort(key=lambda r: int(r['registered_voters']), reverse=True)
     if args.top:
         rows = rows[:args.top]
-    print(f'конселью из CSV: {len(rows)}')
+    print(f'concelhos from CSV: {len(rows)}')
 
     if args.refresh_wd or not os.path.exists(WD_CACHE):
-        print('запрос Wikidata (P856)...')
+        print('querying Wikidata (P856)...')
         sites = fetch_wikidata()
         with open(WD_CACHE, 'w', encoding='utf-8') as f:
             json.dump(sites, f, ensure_ascii=False, indent=1)
     else:
         with open(WD_CACHE, encoding='utf-8') as f:
             sites = json.load(f)
-    print(f'сайтов из Wikidata: {len(sites)} муниципалитетов')
+    print(f'sites from Wikidata: {len(sites)} municipalities')
 
     out, no_site = [], []
     for i, r in enumerate(rows, 1):
@@ -156,8 +156,8 @@ def main():
             if site:
                 final, status = http_check(site)
                 if not final:
-                    print(f'  [{i}/{len(rows)}] {name}: {site} недоступен '
-                          f'({status}), пробую шаблоны')
+                    print(f'  [{i}/{len(rows)}] {name}: {site} unreachable '
+                          f'({status}), trying patterns')
                     site, source = '', 'none'
             if not site:
                 cands = PATTERN_OVERRIDES.get(name.lower(), []) + slug_variants(name)
@@ -186,11 +186,11 @@ def main():
         w = csv.DictWriter(f, fieldnames=list(out[0].keys()))
         w.writeheader()
         w.writerows(out)
-    print(f'\nготово: {CSV_OUT}')
+    print(f'\ndone: {CSV_OUT}')
     ok = sum(1 for r in out if r['website'])
-    print(f'с сайтами: {ok}/{len(out)}')
+    print(f'with websites: {ok}/{len(out)}')
     if no_site:
-        print('без сайта:', ', '.join(no_site))
+        print('without a website:', ', '.join(no_site))
 
 
 if __name__ == '__main__':

@@ -1,8 +1,8 @@
 {
-  "title": "Контрольные выборы-2022 против BR-2026 (те же секции)",
+  "title": "2022 control elections vs BR-2026 (the same sections)",
   "shpilkin": [
     {
-      "election": "2026-1Т",
+      "election": "2026-R1",
       "party": "BOLSONARO",
       "n": 499206,
       "t_cut_control": 91.52,
@@ -19,7 +19,7 @@
       "sigma": 5.81
     },
     {
-      "election": "2026-1Т",
+      "election": "2026-R1",
       "party": "LULA",
       "n": 499206,
       "t_cut_control": 91.52,
@@ -36,7 +36,7 @@
       "sigma": 5.81
     },
     {
-      "election": "2022-1Т",
+      "election": "2022-R1",
       "party": "BOLSONARO",
       "n": 472026,
       "t_cut_control": null,
@@ -53,7 +53,7 @@
       "sigma": 5.97
     },
     {
-      "election": "2022-1Т",
+      "election": "2022-R1",
       "party": "LULA",
       "n": 472026,
       "t_cut_control": null,
@@ -70,7 +70,7 @@
       "sigma": 5.97
     },
     {
-      "election": "2022-2Т",
+      "election": "2022-R2",
       "party": "BOLSONARO",
       "n": 472027,
       "t_cut_control": null,
@@ -87,7 +87,7 @@
       "sigma": 6.03
     },
     {
-      "election": "2022-2Т",
+      "election": "2022-R2",
       "party": "LULA",
       "n": 472027,
       "t_cut_control": null,
@@ -121,42 +121,42 @@
   "match_by_region": [
     {
       "reg": "N",
-      "reg_name": "Север",
+      "reg_name": "North",
       "sections_2026": 43769,
       "matched": 37572,
       "matched_pct": 85.84
     },
     {
       "reg": "NE",
-      "reg_name": "Северо-Восток",
+      "reg_name": "Northeast",
       "sections_2026": 140828,
       "matched": 129857,
       "matched_pct": 92.21
     },
     {
       "reg": "CW",
-      "reg_name": "Центр.-Запад",
+      "reg_name": "Centre-West",
       "sections_2026": 38048,
       "matched": 35266,
       "matched_pct": 92.69
     },
     {
       "reg": "SE",
-      "reg_name": "Юго-Восток",
+      "reg_name": "Southeast",
       "sections_2026": 203237,
       "matched": 189431,
       "matched_pct": 93.21
     },
     {
       "reg": "S",
-      "reg_name": "Юг",
+      "reg_name": "South",
       "sections_2026": 72015,
       "matched": 68164,
       "matched_pct": 94.65
     },
     {
       "reg": "ZZ",
-      "reg_name": "Заграница",
+      "reg_name": "Abroad",
       "sections_2026": 1309,
       "matched": 928,
       "matched_pct": 70.89
@@ -194,7 +194,7 @@
   "jumps_by_region": [
     {
       "reg": "N",
-      "reg_name": "Север",
+      "reg_name": "North",
       "sections": 37572,
       "d_turnout_median": 0.96,
       "d_turnout_mad": 2.84,
@@ -205,7 +205,7 @@
     },
     {
       "reg": "NE",
-      "reg_name": "Северо-Восток",
+      "reg_name": "Northeast",
       "sections": 129857,
       "d_turnout_median": 0.63,
       "d_turnout_mad": 2.51,
@@ -216,7 +216,7 @@
     },
     {
       "reg": "CW",
-      "reg_name": "Центр.-Запад",
+      "reg_name": "Centre-West",
       "sections": 35266,
       "d_turnout_median": -0.28,
       "d_turnout_mad": 2.41,
@@ -227,7 +227,7 @@
     },
     {
       "reg": "SE",
-      "reg_name": "Юго-Восток",
+      "reg_name": "Southeast",
       "sections": 189431,
       "d_turnout_median": -0.99,
       "d_turnout_mad": 2.39,
@@ -238,7 +238,7 @@
     },
     {
       "reg": "S",
-      "reg_name": "Юг",
+      "reg_name": "South",
       "sections": 68164,
       "d_turnout_median": -1.13,
       "d_turnout_mad": 2.07,
@@ -249,7 +249,7 @@
     },
     {
       "reg": "ZZ",
-      "reg_name": "Заграница",
+      "reg_name": "Abroad",
       "sections": 928,
       "d_turnout_median": -5.22,
       "d_turnout_mad": 6.54,
@@ -261,7 +261,7 @@
   ],
   "fingerprints_2022": [
     {
-      "election": "2022-1Т",
+      "election": "2022-R1",
       "party": "BOLSONARO",
       "weight_anom": 0.6501,
       "mean_main": "(77.0; 28.5)",
@@ -270,7 +270,7 @@
       "anom_voters": 109183412
     },
     {
-      "election": "2022-1Т",
+      "election": "2022-R1",
       "party": "LULA",
       "weight_anom": 0.6571,
       "mean_main": "(77.6; 62.6)",
@@ -279,7 +279,7 @@
       "anom_voters": 108416843
     },
     {
-      "election": "2022-2Т",
+      "election": "2022-R2",
       "party": "BOLSONARO",
       "weight_anom": 0.6493,
       "mean_main": "(77.3; 31.7)",
@@ -288,7 +288,7 @@
       "anom_voters": 108239465
     },
     {
-      "election": "2022-2Т",
+      "election": "2022-R2",
       "party": "LULA",
       "weight_anom": 0.653,
       "mean_main": "(77.3; 63.9)",
@@ -298,7 +298,7 @@
     }
   ],
   "files": {
-    "data_2022": "data/secoes_presidente_2022.csv (построен build_sections_csv_2022.py)",
+    "data_2022": "data/secoes_presidente_2022.csv (built by build_sections_csv_2022.py)",
     "tables": [
       "control_shpilkin.csv",
       "control_deciles.csv",

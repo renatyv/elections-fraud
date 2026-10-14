@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Дополнительный нуль для цифровых тестов: биномиальная модель секций.
+"""Extra null for the digit tests: a binomial model of sections.
 
-Логнормальный нуль digit_tests не учитывает структуру данных (счётчики
-минорных кандидатов сосредоточены в узком диапазоне 10–30, где вторая цифра
-не может быть равномерной по construction). Здесь нуль строится как в
-integer_peaks: для каждой секции голоса кандидата симулируются
-Binomial(явка_секции, доля_кандидата_в_секции) — сохраняет размеры и
-структуру секций, честно воспроизводя шум пересчёта.
+The lognormal null of digit_tests ignores the data structure (the counters of
+minor candidates are concentrated in the narrow 10–30 range, where the second digit
+cannot be uniform by construction). Here the null is built as in
+integer_peaks: for each section the candidate's votes are simulated as
+Binomial(section_turnout, candidate_share_in_section) — it preserves section sizes and
+structure, honestly reproducing the counting noise.
 
-Выход: analysis/tables/digit_binomial_null.csv + digit_profiles.csv.
+Output: analysis/tables/digit_binomial_null.csv + digit_profiles.csv.
 """
 
 from __future__ import annotations
@@ -79,7 +79,7 @@ def main() -> None:
             })
             print(f"{p.removeprefix('votes:')[:12]:12s} {test:8s} chi2={chi2_obs:9.1f} "
                   f"null med={np.median(sim):9.1f} p95={np.percentile(sim, 95):9.1f} p={pval:.3f}")
-        # профиль последних цифр (>=100) для отчёта
+        # last-digit profile (>=100) for the report
         ok = c >= 100
         if ok.sum() >= 1000:
             obs = np.bincount(digits_last(c[ok]), minlength=10) / ok.sum()

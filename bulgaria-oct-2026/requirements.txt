@@ -1,6 +1,6 @@
 requests>=2.28
 beautifulsoup4>=4.11
 lxml>=4.9
-# фолбэки на случай жёсткого Cloudflare в ночь выборов:
+# fallbacks in case of a hard Cloudflare on election night:
 curl_cffi>=0.6
 cloudscraper>=1.2.71

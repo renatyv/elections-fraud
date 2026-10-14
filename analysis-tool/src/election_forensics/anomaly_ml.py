@@ -1,8 +1,8 @@
-"""Поиск аномальных участков методами ML (по мотивам Zhang, Alvarez, Levin, 2019).
+"""Finding anomalous units with ML methods (after Zhang, Alvarez, Levin, 2019).
 
-Isolation Forest на признаках территории: явка, доля лидера, доля
-бюллетеней (бланковых/недействительных), лог-размер. Аномалия — не
-доказательство фальсификации, а кандидат для ручной проверки.
+Isolation Forest on territory features: turnout, leader share, ballot share
+(blank/invalid), log size. An anomaly is not proof of fraud but a candidate
+for manual inspection.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ def isolation_forest_anomalies(
     contamination: float = 0.01,
     seed: int = 42,
 ) -> pd.DataFrame:
-    """Рейтинг территорий по аномальности (меньше score — аномальнее)."""
+    """Ranking of territories by anomalousness (lower score — more anomalous)."""
     df = pd.DataFrame(
         {
             "key": data.df["key"],
@@ -42,7 +42,7 @@ def isolation_forest_anomalies(
     iso = IsolationForest(contamination=contamination, random_state=seed, n_estimators=400)
     labels = iso.fit_predict(X_scaled)
     df["anomaly_score"] = np.nan
-    df.loc[ok, "anomaly_score"] = -iso.score_samples(X_scaled)  # больше — аномальнее
+    df.loc[ok, "anomaly_score"] = -iso.score_samples(X_scaled)  # higher — more anomalous
     df["is_anomaly"] = False
     df.loc[ok, "is_anomaly"] = labels == -1
     return df.sort_values("anomaly_score", ascending=False)

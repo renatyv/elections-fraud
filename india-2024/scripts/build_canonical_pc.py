@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
-"""Сборка канонической таблицы итогов Лок Сабха-2024 (543 PC, по кандидатам).
+"""Build the canonical table of Lok Sabha 2024 results (543 PCs, per candidate).
 
-Источники (локальные, без сети):
-  1. data/wayback/pages_en/*.htm — EN-страницы ConstituencywiseSXXYY.htm из Wayback
-  2. data/wayback/pages_hi/*.htm — hi-зеркало (524 PC; числа те же, имена партий хинди)
-  3. data/kaggle/GE_2024_Results.csv — выгрузка Kaggle (сверка + EN-имена PC/штатов)
-  4. data/results_pc/in-rolls_2024_constituencywise_detailed_result.csv — официальная
-     детальная выгрузка ECI (электорат по PC)
+Sources (local, offline):
+  1. data/wayback/pages_en/*.htm — EN ConstituencywiseSXXYY.htm pages from Wayback
+  2. data/wayback/pages_hi/*.htm — hi mirror (524 PCs; same numbers, Hindi party names)
+  3. data/kaggle/GE_2024_Results.csv — Kaggle export (cross-check + EN PC/state names)
+  4. data/results_pc/in-rolls_2024_constituencywise_detailed_result.csv — official
+     ECI detailed export (electors per PC)
 
-Логика: ключ (state_code S01..S36, pc_no). Для каждого PC берём EN-таблицу, если
-она есть, иначе hi. Имя штата — по EN-страницам; EN-имя PC для hi-строк — из
-Kaggle по совпадению суммы голосов. Затем сверка с Kaggle: суммы по PC и имена
-победителей. Электорат присоединяется из in-rolls по нормализованному имени PC.
+Logic: key (state_code S01..S36, pc_no). For each PC we take the EN table if
+available, otherwise the hi one. State name comes from the EN pages; the EN PC
+name for hi rows comes from Kaggle by matching the vote total. Then a
+cross-check against Kaggle: PC totals and winner names. Electors are joined
+from in-rolls by normalized PC name.
 
-Выход:
-  data/results_pc/canonical_pc_results.csv  — каноническая таблица
-  data/results_pc/validation_canonical.txt  — отчёт сверок
+Output:
+  data/results_pc/canonical_pc_results.csv  — canonical table
+  data/results_pc/validation_canonical.txt  — cross-check report
 """
 from __future__ import annotations
 
@@ -39,7 +40,7 @@ COL_MAP = {
     "postal votes": "postal_votes",
     "total votes": "total_votes",
     "% of votes": "pct_votes",
-    # hi-зеркало портала ECI
+    # hi mirror of the ECI portal
     "अभ्यर्थी": "candidate",
     "दल का नाम": "party",
     "ई.वी.एम. मत": "evm_votes",
@@ -49,7 +50,7 @@ COL_MAP = {
 }
 PC_FILE_RE = re.compile(r"ConstituencywiseS(\d{2})(\d+)\.htm$", re.I)
 
-# штат: code -> EN-имя (фолбэк для штатов без EN-страниц)
+# state: code -> EN name (fallback for states without EN pages)
 STATE_EN = {
     "01": "Andhra Pradesh", "02": "Arunachal Pradesh", "03": "Assam", "04": "Bihar",
     "05": "Chhattisgarh", "06": "Goa", "07": "Gujarat", "08": "Haryana",
@@ -70,7 +71,7 @@ def norm_name(s: str) -> str:
 
 
 def norm_key(s: str) -> str:
-    """Нормализация имени PC: без пунктуации и хвостовых ST/SC."""
+    """Normalize a PC name: strip punctuation and trailing ST/SC."""
     k = norm_name(s)
     return re.sub(r"(st|sc)$", "", k)
 
@@ -93,7 +94,7 @@ def collect(lang_dir: Path) -> dict[tuple[str, int], dict]:
 
 
 def _to_num(s: pd.Series, int_out: bool = True) -> pd.Series:
-    if isinstance(s, pd.DataFrame):  # дубли меток колонок
+    if isinstance(s, pd.DataFrame):  # duplicate column labels
         s = s.iloc[:, 0]
     s = pd.to_numeric(s.astype(str).str.replace(",", "", regex=False), errors="coerce")
     return s.fillna(0).astype("int64") if int_out else s
@@ -107,7 +108,7 @@ def norm_table(df: pd.DataFrame) -> pd.DataFrame:
     df = df.loc[:, ~pd.Index(df.columns).duplicated()]
     keep = [c for c in dict.fromkeys(COL_MAP.values()) if c in df.columns]
     df = df[keep]
-    if "candidate" in df.columns:  # выбросить итоговую строку "Total"/"कुल" (S.N. пустой)
+    if "candidate" in df.columns:  # drop the "Total"/"कुल" summary row (empty S.N.)
         df = df[~df["candidate"].astype(str).str.strip().str.lower().isin(["total", "कुल"])]
     for c in ("evm_votes", "postal_votes", "total_votes"):
         if c in df.columns:
@@ -124,7 +125,7 @@ def norm_col(c) -> str:
 def main() -> None:
     en = collect(DATA / "wayback" / "pages_en")
     hi = collect(DATA / "wayback" / "pages_hi")
-    print(f"EN страниц разобрано: {len(en)}, HI: {len(hi)}")
+    print(f"EN pages parsed: {len(en)}, HI: {len(hi)}")
 
     kg = pd.read_csv(DATA / "kaggle" / "GE_2024_Results.csv", dtype=str)
     kg.columns = [c.strip() for c in kg.columns]
@@ -149,7 +150,7 @@ def main() -> None:
         t = norm_table(p["table"])
         total = int(t["total_votes"].sum()) if "total_votes" in t else -1
 
-        # EN-имена: прямые по имени из EN-страницы, иначе через Kaggle по сумме
+        # EN names: directly from the EN page name, otherwise via Kaggle by total
         state = STATE_EN.get(sc, "")
         pc_name = p["pc_name"] if lang == "en" else ""
         if not pc_name or not state:
@@ -169,11 +170,11 @@ def main() -> None:
 
     can = pd.concat(merged, ignore_index=True)
     n_pc = can.groupby(["state_code", "pc_no"]).ngroups
-    print(f"канон: {can.shape}, PC: {n_pc} (EN: {src_count['en']}, HI: {src_count['hi']})")
+    print(f"canonical: {can.shape}, PCs: {n_pc} (EN: {src_count['en']}, HI: {src_count['hi']})")
     if missing_names:
-        print("PC без EN-имени:", missing_names)
+        print("PCs without EN name:", missing_names)
 
-    # --- сверка с Kaggle ---------------------------------------------------
+    # --- cross-check against Kaggle ---------------------------------------
     can["_s"] = can["state"].map(norm_key)
     can["_c"] = can["pc_name"].map(norm_key)
     lines: list[str] = []
@@ -196,18 +197,18 @@ def main() -> None:
             lines.append(f"DIFF S{sc}PC{pc} {g['state'].iloc[0]} / {g['pc_name'].iloc[0]}: "
                          f"wayback={total} kaggle={int(sel['kg_total'].iloc[0])} Δ={d}")
     summary = [
-        "СВЕРКА канонической таблицы (Wayback EN+HI) с Kaggle GE_2024_Results.csv",
-        f"PC в каноне: {n_pc} (EN: {src_count['en']}, HI: {src_count['hi']});"
-        f" строк-кандидатов: {len(can)}",
-        f"сверено сумм: {n_ok + n_diff}, совпало (±2): {n_ok}, расхождений: {n_diff},"
-        f" не сопоставлено: {n_unmatched}",
+        "CROSS-CHECK of the canonical table (Wayback EN+HI) against Kaggle GE_2024_Results.csv",
+        f"PCs in canonical table: {n_pc} (EN: {src_count['en']}, HI: {src_count['hi']});"
+        f" candidate rows: {len(can)}",
+        f"totals compared: {n_ok + n_diff}, matched (±2): {n_ok}, mismatches: {n_diff},"
+        f" unmatched: {n_unmatched}",
         "",
     ]
     report = "\n".join(summary + lines)
     (OUT / "validation_canonical.txt").write_text(report)
     print("\n".join(summary))
 
-    # --- электорат из in-rolls ---------------------------------------------
+    # --- electors from in-rolls --------------------------------------------
     try:
         ir = pd.read_csv(DATA / "results_pc" / "in-rolls_2024_constituencywise_detailed_result.csv")
         ir.columns = [c.split("\n")[0].strip() for c in ir.columns]
@@ -218,10 +219,10 @@ def main() -> None:
         can["_k"] = list(zip(can["_s"], can["_c"]))
         can["electors"] = can["_k"].map(ir_g)
         n_el = can["electors"].notna().sum()
-        print(f"электорат присоединён к {n_el}/{len(can)} строкам")
+        print(f"electors joined for {n_el}/{len(can)} rows")
         can.drop(columns=["_s", "_c", "_k"], inplace=True)
     except Exception as e:
-        print(f"электорат: пропущено ({e})")
+        print(f"electors: skipped ({e})")
 
     can.to_csv(OUT / "canonical_pc_results.csv", index=False)
     print(f"-> {OUT / 'canonical_pc_results.csv'}")

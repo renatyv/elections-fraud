@@ -1,16 +1,16 @@
-// Загрузчик данных портала MAI из контекста реального браузера.
-// CDN портала (Akamai) блокирует curl/urllib по TLS-отпечатку при интенсивной
-// загрузке, но пропускает запросы fetch() из открытой страницы портала.
+// Downloader of MAI portal data from the context of a real browser.
+// The portal's CDN (Akamai) blocks curl/urllib by TLS fingerprint under heavy
+// downloading, but lets through fetch() requests from an open portal page.
 //
-// Использование (ZCode / любой Chrome + открытая страница
+// Usage (ZCode / any Chrome + an open page
 // https://www.eleicoes.mai.gov.pt/<slug>/):
-//   1) запустить приёмник: python3 scripts/local_receiver.py <каталог_выгрузки> 8765
-//   2) открыть в браузере https://www.eleicoes.mai.gov.pt/legislativas2025/
-//   3) в консоли страницы (DevTools) выполнить код ниже, подставив массив KEYS
-//      (ключи территорий из territory-tree.json / territory-children)
+//   1) start the receiver: python3 scripts/local_receiver.py <download_dir> 8765
+//   2) open https://www.eleicoes.mai.gov.pt/legislativas2025/ in the browser
+//   3) in the page console (DevTools) run the code below, filling in the KEYS array
+//      (territory keys from territory-tree.json / territory-children)
 //
-// Темп ~1.5 req/s, авто-пауза 120с при «Access Denied», результаты улетают
-// на localhost:8765 (файлы пропускаются, если уже есть).
+// Rate ~1.5 req/s, automatic 120 s pause on "Access Denied"; the results are sent
+// to localhost:8765 (files are skipped if they already exist).
 
 const KEYS = ["GLOBAL-990000", "LOCAL-500000" /* , ... */];
 const SUFFIX = "AR";            // AR | PE | PR | CM | AM | AF
@@ -46,4 +46,4 @@ const b64 = (s) => { const u = new TextEncoder().encode(s); let b = ""; for (con
   }
   stat.finished = true;
 })();
-// прогресс: console.log(window.__dlStat)
+// progress: console.log(window.__dlStat)

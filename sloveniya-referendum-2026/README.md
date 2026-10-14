@@ -1,125 +1,125 @@
-# Словения — референдумы 11.10.2026: мониторинг и анализ
+# Slovenia — referendums of 11.10.2026: monitoring and analysis
 
-Python-проект (uv) для регулярного скачивания официальных данных четырёх
-общенациональных референдумов Словении 11 октября 2026 года с портала
-Государственной избирательной комиссии (DVK): `https://volitve.dvk-rs.si`,
-и последующего анализа трендов (pandas, matplotlib).
+A Python project (uv) for regularly downloading the official data of the four
+nationwide referendums of Slovenia of 11 October 2026 from the portal of the
+State Electoral Commission (DVK): `https://volitve.dvk-rs.si`,
+and analysing the trends (pandas, matplotlib).
 
-Контекст и разбор источников — в [report.md](report.md); официальное описание
-форматов данных DVK — в [docs/Referendumi_2026_-_datoteke_s_podatki.docx](docs/Referendumi_2026_-_datoteke_s_podatki.docx).
+Context and a walkthrough of the sources — in [report.md](report.md); the official
+description of the DVK data formats — in [docs/Referendumi_2026_-_datoteke_s_podatki.docx](docs/Referendumi_2026_-_datoteke_s_podatki.docx).
 
-## Быстрый старт
+## Quick start
 
-Нужен [uv](https://docs.astral.sh/uv/). Зависимости ставятся одной командой:
+You need [uv](https://docs.astral.sh/uv/). Dependencies install with one command:
 
 ```bash
 uv sync
 ```
 
-Команды (консольный скрипт `sloref`):
+Commands (the `sloref` console script):
 
 ```bash
-uv run sloref fetch                 # один опрос: 4 референдума × 5 файлов
-uv run sloref fetch --loop          # цикл каждые 15 минут
-uv run sloref fetch --loop --interval 300 --volisca   # свой интервал + участки
-uv run sloref summary               # сводная таблица текущих цифр (pandas)
-uv run sloref plot                  # PNG-графики трендов → data/plots/
+uv run sloref fetch                 # one poll: 4 referendums × 5 files
+uv run sloref fetch --loop          # a loop every 15 minutes
+uv run sloref fetch --loop --interval 300 --volisca   # own interval + precincts
+uv run sloref summary               # summary table of the current figures (pandas)
+uv run sloref plot                  # PNG trend plots → data/plots/
 ```
 
-Фоновый сбор на день голосования:
+Background collection on election day:
 
 ```bash
 nohup uv run sloref fetch --loop > /dev/null 2>&1 &
 ```
 
-или cron (`crontab -e`):
+or cron (`crontab -e`):
 
 ```
 */15 * * * * cd "/Users/renatyuldashev/Documents/elections analysis/sloveniya-referendum-2026" && uv run sloref fetch
 ```
 
-## Что скачивается
+## What is downloaded
 
-Для каждого референдума (slug: `referendum-preiskava`,
+For each referendum (slug: `referendum-preiskava`,
 `referendum-socialna-pomoc`, `referendum-volilna-pravica-tujcev`,
-`referendum-rtv-prispevek`) — файлы `udelezba.json/csv` (явка),
-`rezultati.json/csv` (итоги ЗА/ПРОТИ), `izvoz.xlsx`; опционально `--volisca` —
-итоги по каждому участку (`volisca_01_01.json … volisca_08_11.json`, 88 файлов
-на референдум).
+`referendum-rtv-prispevek`) — the `udelezba.json/csv` (turnout),
+`rezultati.json/csv` (ZA/PROTI results), `izvoz.xlsx` files; optionally
+`--volisca` — results per precinct (`volisca_01_01.json … volisca_08_11.json`,
+88 files per referendum).
 
-Нюансы формата: проценты в JSON — доли (0.4825); доля посчитанных бюллетеней =
-`rezultati.glas / udelezba.slovenija.gl`; метки времени — словенское локальное
-время в Zulu-форме; CSV — разделитель `;` и десятичная запятая; до публикации
-данных файлы содержат только поле `datum` — это нормально.
+Format nuances: percentages in JSON are fractions (0.4825); the share of counted
+ballots = `rezultati.glas / udelezba.slovenija.gl`; timestamps are Slovenian local
+time in Zulu form; CSV — `;` separator and decimal comma; before publication the
+files contain only the `datum` field — that is normal.
 
-## Куда сохраняются данные
+## Where the data is stored
 
-| Путь | Содержимое |
+| Path | Contents |
 |---|---|
-| `data/latest/<референдум>/` | последние версии файлов (перезаписываются) |
-| `data/raw/<дата>/<время>/<референдум>/` | снимки **только изменившихся** файлов |
-| `data/timeseries.csv` | хронология общенациональных цифр (строка — при изменении цифр) |
-| `data/derived/volisca_all.csv` | сводный датасет по всем участкам: 3 083 участка × 4 референдума, 12 332 строки (`scripts/build_volisca_csv.py`) |
-| `data/derived/nacionalni_pregled.csv` | агрегаты DVK: страна / 8 единиц / 88 округов на каждый референдум |
-| `data/ef/<референдум>/` | участки в формате analysis-tool (`results_freguesias.csv`) + журнал валидации |
-| `data/wikipedia/` | данные Википедии: викитекст статьи, таблица итогов + поголосовая сверка с DVK, восстановленная динамика ночи подсчёта |
-| `data/plots/` | PNG-графики трендов (`sloref plot`) |
-| `analysis/` | election forensics: figures/tables/metrics.json по каждому референдуму + `analysis/cross/` |
-| `data/scrape.log` | журнал опросов |
+| `data/latest/<referendum>/` | latest versions of the files (overwritten) |
+| `data/raw/<date>/<time>/<referendum>/` | snapshots of **only changed** files |
+| `data/timeseries.csv` | timeline of the nationwide figures (a row — when the figures change) |
+| `data/derived/volisca_all.csv` | combined per-precinct dataset: 3,083 precincts × 4 referendums, 12,332 rows (`scripts/build_volisca_csv.py`) |
+| `data/derived/nacionalni_pregled.csv` | DVK aggregates: country / 8 units / 88 districts per referendum |
+| `data/ef/<referendum>/` | precincts in the analysis-tool format (`results_freguesias.csv`) + validation log |
+| `data/wikipedia/` | Wikipedia data: article wikitext, results table + per-vote cross-check with DVK, reconstructed counting-night dynamics |
+| `data/plots/` | PNG trend plots (`sloref plot`) |
+| `analysis/` | election forensics: figures/tables/metrics.json per referendum + `analysis/cross/` |
+| `data/scrape.log` | poll log |
 
-Ключи референдумов: `preiskava` (законодательный о ZPPre-B), `socialna_pomoc`,
-`volilna_pravica`, `rtv_prispevek`. Каталог данных можно переопределить
-переменной `SLOREF_DATA_DIR`.
+Referendum keys: `preiskava` (legislative, on ZPPre-B), `socialna_pomoc`,
+`volilna_pravica`, `rtv_prispevek`. The data directory can be overridden
+with the `SLOREF_DATA_DIR` variable.
 
-## Структура проекта
+## Project structure
 
 ```
 src/sloref/
-  config.py      референдумы, файлы, URL, пути
-  httpclient.py  клиент httpx2: повторы, 404 = «ещё нет данных», IPv4-only
-  models.py      Aggregates — общенациональные показатели из JSON
-  storage.py     Store: latest/raw-снимки, timeseries.csv, журнал
+  config.py      referendums, files, URLs, paths
+  httpclient.py  httpx2 client: retries, 404 = "no data yet", IPv4-only
+  models.py      Aggregates — nationwide figures from the JSON
+  storage.py     Store: latest/raw snapshots, timeseries.csv, log
   scraper.py     poll_once / run_loop
-  analysis.py    pandas: загрузка трендов, сводная таблица
-  plotting.py    matplotlib: PNG-графики трендов
-  cli.py         argparse-CLI (fetch / summary / plot)
+  analysis.py    pandas: loading trends, summary table
+  plotting.py    matplotlib: PNG trend plots
+  cli.py         argparse CLI (fetch / summary / plot)
 scripts/
-  build_ef_csv.py     адаптация участков к формату analysis-tool (results_freguesias.csv)
-                      + валидация (data/ef/ВАЛИДАЦИЯ.txt)
-  analyze_extra.py    кросс-референдумные проверки, второй вариант (ПРОТИ),
-                      досрочные точки, дубликаты протоколов
-tests/           pytest: извлечение показателей, дедупликация снимков и трендов
+  build_ef_csv.py     adapting precincts to the analysis-tool format (results_freguesias.csv)
+                      + validation (data/ef/VALIDATION.txt)
+  analyze_extra.py    cross-referendum checks, the second option (PROTI),
+                      early-voting points, duplicate protocols
+tests/           pytest: extracting figures, snapshot and trend deduplication
 ```
 
-## Статистический анализ фальсификаций
+## Statistical analysis of election fraud
 
-Election forensics по поучастковым итогам (2 984 участка × 4 референдума) —
-штатный пайплайн [`analysis-tool`](../analysis-tool/); отчёт —
-[ОТЧЁТ_стат_анализ_фальсификаций.md](ОТЧЁТ_стат_анализ_фальсификаций.md),
-выход — `analysis/<референдум>/` и `analysis/cross/`. Полный цикл одной
-командой:
+Election forensics on the per-precinct results (2,984 precincts × 4 referendums) —
+the standard [`analysis-tool`](../analysis-tool/) pipeline; report —
+[statistical_fraud_analysis.md](statistical_fraud_analysis.md),
+output — `analysis/<referendum>/` and `analysis/cross/`. The full cycle in one
+command:
 
 ```bash
 ../analysis-tool/run_forensics_slovenia.sh
-# или по шагам:
+# or step by step:
 cd ../analysis-tool && uv sync
-uv run python ../sloveniya-referendum-2026/scripts/build_ef_csv.py     # адаптация + валидация
+uv run python ../sloveniya-referendum-2026/scripts/build_ef_csv.py     # adaptation + validation
 uv run ef-analyze --data ../sloveniya-referendum-2026/data/ef/preiskava \
   --out ../sloveniya-referendum-2026/analysis/preiskava \
-  --title "Словения, референдум ZPPre-B 11.10.2026 (участки)" \
+  --title "Slovenia, ZPPre-B referendum 11.10.2026 (precincts)" \
   --controls ../sloveniya-referendum-2026/data/ef/socialna_pomoc,../sloveniya-referendum-2026/data/ef/volilna_pravica,../sloveniya-referendum-2026/data/ef/rtv_prispevek
-uv run python ../sloveniya-referendum-2026/scripts/analyze_extra.py    # кросс-проверки
+uv run python ../sloveniya-referendum-2026/scripts/analyze_extra.py    # cross-checks
 ```
 
-Контрольные выборы для метода Шпилькина — три остальных референдума (те же
-участки, то же распределение явки). Досрочные точки (номера ≥ 900, `upr` = 0)
-в turnout-пайплайн не входят: их проверяет `analyze_extra.py` (цифровые тесты).
+The control elections for the Shpilkin method — the other three referendums (same
+precincts, same turnout distribution). Early-voting points (numbers ≥ 900, `upr` = 0)
+are not part of the turnout pipeline: `analyze_extra.py` checks them (digit tests).
 
-## Разработка
+## Development
 
 ```bash
-uv run pytest        # тесты
-uv run ruff check .  # линтер
-uv lock --upgrade    # обновить зависимости
-PYTHONPATH=src uv run python scripts/build_volisca_csv.py  # сводный CSV по участкам + сверка
+uv run pytest        # tests
+uv run ruff check .  # linter
+uv lock --upgrade    # upgrade dependencies
+PYTHONPATH=src uv run python scripts/build_volisca_csv.py  # combined per-precinct CSV + cross-check
 ```

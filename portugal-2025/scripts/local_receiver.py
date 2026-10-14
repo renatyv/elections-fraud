@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Локальный приёмник файлов от браузерного загрузчика (CORS: *).
+"""Local receiver for files uploaded by the browser-based downloader (CORS: *).
 
 POST /put  body: {"files": [{"name": "territory-results/KEY-AR.json",
                              "b64": "..."}]}
-Все файлы пишутся в указанный каталог. Запуск: python3 receiver.py DIR PORT
+All files are written into the given directory. Run: python3 receiver.py DIR PORT
 """
 import base64
 import json

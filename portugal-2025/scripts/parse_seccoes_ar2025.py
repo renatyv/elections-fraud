@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Парсинг секционных PDF AR-2025 в единый CSV + сверка с MAI (freguesias).
+"""Parse AR-2025 section-level PDFs into a single CSV + cross-check against MAI (freguesias).
 
-Источники — подтверждённые публикаторы секций (см. data/seccoes/КАТАЛОГ_публикаторов.md):
+Sources are the confirmed section publishers (see data/seccoes/PUBLISHER_CATALOG.md):
   1405 Benavente, 1501 Alcácer do Sal, 0703 Borba, 0712 Vendas Novas,
-  0208 Ferreira do Alentejo (скан с текстовым слоем), 0906 Gouveia (секции=фрегезии).
-Выход: data/seccoes/ar2025_seccoes.csv; сверка печатается в stdout и
+  0208 Ferreira do Alentejo (scan with a text layer), 0906 Gouveia (sections=parishes).
+Output: data/seccoes/ar2025_seccoes.csv; the cross-check is printed to stdout and
 data/seccoes/ar2025_seccoes_validation.txt.
 
-Запуск: python3 scripts/parse_seccoes_ar2025.py
+Run: python3 scripts/parse_seccoes_ar2025.py
 """
 import csv
 import os
@@ -21,7 +21,7 @@ MAI_CSV = os.path.join(BASE, 'data', 'legislativas2025_mai', 'results_all.csv')
 OUT_CSV = os.path.join(SECCOES, 'ar2025_seccoes.csv')
 OUT_VAL = os.path.join(SECCOES, 'ar2025_seccoes_validation.txt')
 
-# порядок партий как в results_all.csv MAI
+# party order as in the MAI results_all.csv
 PARTIES = ['PPD/PSD.CDS-PP', 'PS', 'CH', 'IL', 'L', 'PCP-PEV', 'B.E.', 'PAN',
            'ADN', 'PPD/PSD.CDS-PP.PPM', 'JPP', 'R.I.R.', 'VP', 'PCTP/MRPP',
            'ND', 'E', 'PLS', 'PPM', 'NC', 'MPT', 'PTP']

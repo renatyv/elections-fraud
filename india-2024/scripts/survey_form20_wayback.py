@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Разведка Form 20 (поучастковые итоги) в Wayback Machine по доменам CEO штатов.
+"""Scout Form 20 (booth-level results) in the Wayback Machine across state CEO domains.
 
-Form 20 — финальные поучастковые (booth-level) результаты по каждому
-ассембли-сегменту: электорат, голоса по каждому кандидату на каждой
-избирательной участка. Публикуются сайтами CEO (Chief Electoral Officer)
-штатов как PDF/Excel. Живые сайты .gov.in недоступны из нашей сети,
-поэтому ищем снимки в web.archive.org.
+Form 20 holds the final booth-level results for each assembly segment:
+electors and votes of every candidate at every polling station. State CEO
+(Chief Electoral Officer) websites publish them as PDF/Excel. The live
+.gov.in sites are unreachable from our network, so we look for snapshots
+on web.archive.org.
 
-Скрипт опрашивает CDX-индекс по каждому домену, фильтрует URL с 'form20'
-и 2024/2025-ми timestamps, считает покрытие. Результат — таблица.
+The script queries the CDX index for each domain, filters URLs containing
+'form20' with 2024/2025 timestamps, and measures coverage. The result is a table.
 
-Запуск:  uv run python survey_form20_wayback.py
-Выход:   ../data/form20/form20_wayback_survey.csv
+Run:     uv run python survey_form20_wayback.py
+Output:  ../data/form20/form20_wayback_survey.csv
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ import requests
 HERE = Path(__file__).resolve().parent
 OUT = HERE.parent / "data" / "form20" / "form20_wayback_survey.csv"
 
-# домены CEO штатов (старые .nic.in и новые .gov.in) + названия штатов
+# state CEO domains (old .nic.in and new .gov.in) + state names
 DOMAINS = [
     ("Andhra Pradesh", "ceoandhra.nic.in"),
     ("Andhra Pradesh (new)", "ceoandhra.eci.gov.in"),
@@ -63,7 +63,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit
 
 
 def cdx_count(domain: str) -> tuple[int, int, list[str]]:
-    """(всего form20-URL, из них со снапшотами 2024+, примеры URL)."""
+    """(total form20 URLs, of them with 2024+ snapshots, example URLs)."""
     url = (
         "http://web.archive.org/cdx/search/cdx"
         f"?url={domain}*&output=text&fl=timestamp,original,statuscode"

@@ -1,11 +1,11 @@
-"""Хранение: последние версии, снимки изменений, тренды, журнал.
+"""Storage: latest versions, change snapshots, trends, log.
 
-Раскладка внутри каталога данных:
-  latest/<референдум>/<файл>             — последняя версия (перезаписывается)
-  raw/<дата>/<время>/<референдум>/<файл> — снимок только изменившихся файлов
-  latest/<референдум>/_state.json        — сигнатура последних цифр (для трендов)
-  timeseries.csv                         — хронология общенациональных цифр
-  scrape.log                             — журнал
+Layout inside the data directory:
+  latest/<referendum>/<file>             — latest version (overwritten)
+  raw/<date>/<time>/<referendum>/<file>  — snapshot of changed files only
+  latest/<referendum>/_state.json        — signature of the latest figures (for trends)
+  timeseries.csv                         — timeline of nationwide figures
+  scrape.log                             — log
 """
 
 import csv
@@ -43,7 +43,7 @@ class Store:
         for d in (self.latest, self.raw, self.root):
             d.mkdir(parents=True, exist_ok=True)
 
-    # --- журнал -----------------------------------------------------------
+    # --- log ---------------------------------------------------------------
 
     def log(self, msg: str) -> None:
         line = f"[{dt.datetime.now().isoformat(timespec='seconds')}] {msg}"
@@ -54,12 +54,12 @@ class Store:
         except OSError:
             pass
 
-    # --- файлы ------------------------------------------------------------
+    # --- files --------------------------------------------------------------
 
     def save_file(self, ref_key: str, fname: str, data: bytes,
                   poll_stamp: str) -> bool:
-        """Сохраняет файл: снимок в raw/ только если содержимое изменилось,
-        latest/ обновляется всегда. Возвращает True, если файл изменился."""
+        """Saves the file: a raw/ snapshot only if the content changed,
+        latest/ is updated always. Returns True if the file changed."""
         latest_path = self.latest / ref_key / fname
         changed = (not latest_path.exists()) or \
                   sha256(latest_path.read_bytes()) != sha256(data)
@@ -77,7 +77,7 @@ class Store:
         path = self.latest / ref_key / fname
         return path.read_bytes() if path.exists() else None
 
-    # --- тренды -----------------------------------------------------------
+    # --- trends -------------------------------------------------------------
 
     def aggregates(self, ref_key: str) -> Aggregates:
         from sloref.models import extract_aggregates
@@ -88,8 +88,8 @@ class Store:
         )
 
     def append_timeseries(self, agg: Aggregates, poll_time_utc: str) -> bool:
-        """Дописывает строку в timeseries.csv, если цифры изменились
-        с прошлого раза. Возвращает True, если строка добавлена."""
+        """Appends a row to timeseries.csv if the figures changed since
+        the last time. Returns True if a row was added."""
         state_path = self.latest / agg.referendum / "_state.json"
         signature = agg.signature()
 

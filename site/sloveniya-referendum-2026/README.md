@@ -2,7 +2,7 @@
 
 Раздел сайта репозитория (`<репо>/site/sloveniya-referendum-2026/`): статическая
 одностраничка по отчёту
-[ОТЧЁТ_стат_анализ_фальсификаций.md](../../sloveniya-referendum-2026/ОТЧЁТ_стат_анализ_фальсификаций.md).
+[statistical_fraud_analysis.md](../../sloveniya-referendum-2026/statistical_fraud_analysis.md).
 Без сборки и зависимостей: `index.html` + `img/<lang>/*.png` (комплект графиков
 на каждый язык строит `scripts/build_site_figures.py` словенского проекта из
 `data/derived/volisca_all.csv`; подписи внутри картинок переведены).

@@ -1,4 +1,4 @@
-"""Тесты извлечения показателей из JSON DVK."""
+"""Tests of extracting figures from the DVK JSON."""
 
 from pathlib import Path
 
@@ -25,12 +25,12 @@ def test_full_extraction():
     assert agg.invalid == 10843
     assert agg.za == 325406 and agg.za_pct == 0.3993
     assert agg.proti == 489589 and agg.proti_pct == 0.6007
-    # доля посчитанных бюллетеней = посчитано / голосовавших
+    # share of counted ballots = counted / voters
     assert agg.counted_pct == 825838 / 825965
 
 
 def test_empty_files_contain_only_datum():
-    """До публикации данных в файле есть только поле «datum»."""
+    """Before publication the file contains only the «datum» field."""
     agg = extract_aggregates("rtv_prispevek",
                              load("rezultati_empty.json"),
                              load("rezultati_empty.json"))

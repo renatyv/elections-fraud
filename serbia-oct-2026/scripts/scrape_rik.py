@@ -1,22 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-Скрейпер промежуточных результатов выборов в Народную скупщину Сербии (25.10.2026).
+Scraper of interim results of the National Assembly election in Serbia (25 Oct 2026).
 
-Опрашивает JSON-API РИК (тот же, что питает официальный портал результатов),
-сохраняет исходные ответы (raw JSON) и наращивает CSV-таймлайн.
+Polls the RIK JSON API (the same one that powers the official results portal),
+stores raw responses (raw JSON) and appends to a CSV timeline.
 
-Запуск:
-  один проход:      python3 scripts/scrape_rik.py
-  цикл 15 минут:    python3 scripts/scrape_rik.py --loop --interval 900
-  другой тур:       python3 scripts/scrape_rik.py --round 341140          # выборы-2023
-  детально:         python3 scripts/scrape_rik.py --levels national,regions,municipalities
+Usage:
+  single pass:       python3 scripts/scrape_rik.py
+  15-minute loop:    python3 scripts/scrape_rik.py --loop --interval 900
+  another round:     python3 scripts/scrape_rik.py --round 341140          # 2023 election
+  detailed:          python3 scripts/scrape_rik.py --levels national,regions,municipalities
 
-Только стандартная библиотека. Каталоги создаются автоматически:
-  data/raw/<round>/<ГГГГММДД_ЧЧММСС>/...      — исходные JSON
-  data/timeline/<round>/snapshots_national.csv — сводный таймлайн (страна)
-  data/timeline/<round>/results_long.csv       — длинный формат по всем уровням
-  data/state.json                               — метки обновлений РИК (дедупликация)
-  data/poll.log                                 — журнал каждого опроса
+Standard library only. Directories are created automatically:
+  data/raw/<round>/<YYYYMMDD_HHMMSS>/...        — raw JSON
+  data/timeline/<round>/snapshots_national.csv  — national summary timeline
+  data/timeline/<round>/results_long.csv        — long format across all levels
+  data/state.json                               — RIK update stamps (deduplication)
+  data/poll.log                                 — log of every poll
 """
 
 import argparse
@@ -34,7 +34,7 @@ DEFAULT_YEAR = 2026
 LEVEL_CHOICES = ("national", "regions", "municipalities")
 
 
-# ---------- инфраструктура ----------
+# ---------- infrastructure ----------
 
 def now_iso() -> str:
     return dt.datetime.now().replace(microsecond=0).isoformat()
@@ -64,17 +64,17 @@ def save_state(data_dir: str, state: dict) -> None:
 
 
 def resolve_round(year: int) -> tuple:
-    """Находит тур выборов по году; возвращает (round_id, название)."""
+    """Finds the election round by year; returns (round_id, name)."""
     rounds = rik_api.get_elections()
     for rid, name in rounds.items():
         if str(year) in name:
             return int(rid), name
-    # fallback: наибольший id (самая свежая кампания)
+    # fallback: the largest id (the most recent campaign)
     rid = max(int(k) for k in rounds)
     return rid, rounds[str(rid)]
 
 
-# ---------- запись снапшотов и таймлайна ----------
+# ---------- snapshot and timeline writing ----------
 
 def append_csv(path: str, fieldnames: list, row: dict) -> None:
     new = not os.path.exists(path)
@@ -99,7 +99,7 @@ LONG_FIELDS = [
 
 
 def save_normalized(data_dir: str, round_id: int, norm: dict, raw_responses: dict) -> str:
-    """Пишет raw JSON + строки в таймлайны. Возвращает путь снапшота."""
+    """Writes raw JSON + rows into the timelines. Returns the snapshot path."""
     stamp = norm["snapshot_ts"].replace("-", "").replace(":", "").replace("T", "_")
     snap_dir = os.path.join(data_dir, "raw", str(round_id), stamp)
     os.makedirs(snap_dir, exist_ok=True)
@@ -143,13 +143,13 @@ def save_normalized(data_dir: str, round_id: int, norm: dict, raw_responses: dic
     return snap_dir
 
 
-# ---------- один проход ----------
+# ---------- a single pass ----------
 
 def fetch_level(round_id: int, level: str, regions_filter: str) -> list:
     """
-    Возвращает [(norm, raw_results)] для затребованных уровней.
-    Уровень national даёт одну запись, regions — по записи на регион,
-    municipalities — по записи на муниципалитет (в регионах из regions_filter).
+    Returns [(norm, raw_results)] for the requested levels.
+    The national level yields one record, regions — one per region,
+    municipalities — one per municipality (in the regions from regions_filter).
     """
     snapshot_ts = now_iso()
     out = []
@@ -168,7 +168,7 @@ def fetch_level(round_id: int, level: str, regions_filter: str) -> list:
                 rik_api.ELECTION_TYPE_PARLIAMENTARY, round_id, int(rid), 0, 0)
             out.append((rik_api.normalize_results(
                 raw, "region", str(rid), rname, round_id, snapshot_ts), raw))
-            time.sleep(0.5)  # вежливая пауза между запросами
+            time.sleep(0.5)  # polite pause between requests
 
     elif level == "municipalities":
         regions = rik_api.get_regions(
@@ -193,7 +193,7 @@ def run_once(args, state: dict) -> None:
     round_id, round_name = args.round, ""
     if round_id is None:
         round_id, round_name = resolve_round(args.year)
-        log(data_dir, f"Тур определён автоматически: {round_id} ({round_name})")
+        log(data_dir, f"Round auto-detected: {round_id} ({round_name})")
 
     levels = [l.strip() for l in args.levels.split(",") if l.strip() in LEVEL_CHOICES]
     regions_filter = set(args.regions.split(",")) if args.regions else set()
@@ -203,15 +203,15 @@ def run_once(args, state: dict) -> None:
     for level in levels:
         try:
             fetched = fetch_level(round_id, level, regions_filter)
-        except Exception as e:  # noqa: BLE001 — журнал и продолжение важнее падения
-            log(data_dir, f"ОШИБКА уровень {level}: {e!r}")
+        except Exception as e:  # noqa: BLE001 — logging and continuing matter more than crashing
+            log(data_dir, f"ERROR level {level}: {e!r}")
             continue
 
         for norm, raw in fetched:
             key = f"{round_id}:{norm['level_type']}:{norm['level_id']}"
-            # снапшот пишем только когда РИК обновил данные (datetime изменился)
+            # write a snapshot only when RIK has refreshed the data (datetime changed)
             if norm["rik_datetime"] is None:
-                log(data_dir, f"{key}: данных ещё нет (datetime='-')")
+                log(data_dir, f"{key}: no data yet (datetime='-')")
                 continue
             any_data = True
             if state["rik_datetimes"].get(key) == norm["rik_datetime"]:
@@ -220,36 +220,36 @@ def run_once(args, state: dict) -> None:
             changed_keys.append(key)
             fname = f"{norm['level_type']}_{norm['level_id'].replace('/', '_')}.json"
             snap_dir = save_normalized(data_dir, round_id, norm, {fname: raw})
-            summary = (f"{key}: обновлено до {norm['rik_datetime']} | "
-                       f"обработано {norm['processed_stations']}/{norm['total_stations']} "
-                       f"участков ({norm['processed_pct']}%) | явка {norm['turnout_pct']}% | "
-                       f"списков {len(norm['lists'])}")
-            log(data_dir, summary + f" | снапшот: {os.path.relpath(snap_dir, data_dir)}")
+            summary = (f"{key}: updated to {norm['rik_datetime']} | "
+                       f"{norm['processed_stations']}/{norm['total_stations']} "
+                       f"stations processed ({norm['processed_pct']}%) | turnout "
+                       f"{norm['turnout_pct']}% | lists: {len(norm['lists'])}")
+            log(data_dir, summary + f" | snapshot: {os.path.relpath(snap_dir, data_dir)}")
 
     if any_data:
         save_state(data_dir, state)
     if not any_data:
-        log(data_dir, "РИК ещё не опубликовал результаты по этому туру.")
+        log(data_dir, "RIK has not published results for this round yet.")
     if changed_keys:
-        log(data_dir, f"Проход завершён, обновлённых уровней: {len(changed_keys)}.")
+        log(data_dir, f"Pass finished, levels updated: {len(changed_keys)}.")
     else:
-        log(data_dir, "Проход завершён, изменений нет.")
+        log(data_dir, "Pass finished, no changes.")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     ap.add_argument("--round", type=int, default=None,
-                    help="id тура РИК (по умолчанию автоопределение по --year)")
+                    help="RIK round id (default: auto-detected from --year)")
     ap.add_argument("--year", type=int, default=DEFAULT_YEAR,
-                    help=f"год кампании для автоопределения тура (по умолчанию {DEFAULT_YEAR})")
+                    help=f"campaign year for round auto-detection (default {DEFAULT_YEAR})")
     ap.add_argument("--levels", default="national,regions",
-                    help="уровни через запятую: national,regions,municipalities")
+                    help="comma-separated levels: national,regions,municipalities")
     ap.add_argument("--regions", default="",
-                    help="ограничить муниципалитеты регионами, напр. '1,2'")
-    ap.add_argument("--data-dir", default=None, help="каталог данных (по умолчанию ../data)")
-    ap.add_argument("--loop", action="store_true", help="работать циклически")
+                    help="restrict municipalities to regions, e.g. '1,2'")
+    ap.add_argument("--data-dir", default=None, help="data directory (default ../data)")
+    ap.add_argument("--loop", action="store_true", help="run in a loop")
     ap.add_argument("--interval", type=int, default=900,
-                    help="интервал цикла в секундах (по умолчанию 900 = 15 минут)")
+                    help="loop interval in seconds (default 900 = 15 minutes)")
     args = ap.parse_args()
 
     here = os.path.dirname(os.path.abspath(__file__))
@@ -257,7 +257,7 @@ def main() -> None:
         args.data_dir = os.path.normpath(os.path.join(here, "..", "data"))
     os.makedirs(args.data_dir, exist_ok=True)
 
-    log(args.data_dir, f"Старт: levels={args.levels}, interval={args.interval}s, data={args.data_dir}")
+    log(args.data_dir, f"Start: levels={args.levels}, interval={args.interval}s, data={args.data_dir}")
     while True:
         state = load_state(args.data_dir)
         try:
@@ -265,10 +265,10 @@ def main() -> None:
         except KeyboardInterrupt:
             raise
         except Exception as e:  # noqa: BLE001
-            log(args.data_dir, f"НЕОЖИДАННАЯ ОШИБКА прохода: {e!r}")
+            log(args.data_dir, f"UNEXPECTED PASS ERROR: {e!r}")
         if not args.loop:
             break
-        # выравнивание на сетку интервала от момента старта
+        # sleep aligned to the interval grid measured from the start time
         time.sleep(args.interval)
 
 

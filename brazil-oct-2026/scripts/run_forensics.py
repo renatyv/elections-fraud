@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Election forensics: Бразилия, президент, 1-й тур 04.10.2026 (уровень seção).
+"""Election forensics: Brazil, president, 1st round 04.10.2026 (seção level).
 
-Прогоняет все применимые методы из analysis-tool по methods review
-(методы_выявления_фальсификаций_выборов.md):
-Шпилькин, отпечатки Klimek, целочисленные пики Kobak, 2D-корреляции,
-Бенфорд/последняя цифра, выбросы против соседей, Isolation Forest,
-самотест + бразильские проверки (модели урн, дубликаты протоколов).
+Runs all applicable methods from analysis-tool per the methods review
+(fraud_detection_methods.md):
+Shpilkin, Klimek fingerprints, Kobak integer peaks, 2D correlations,
+Benford/last digit, outliers vs neighbors, Isolation Forest,
+self-test + Brazilian checks (ballot-machine models, duplicate protocols).
 
-Запуск: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/run_forensics.py
-Выход: brazil-oct-2026/analysis/{figures,tables,metrics.json}
+Run: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/run_forensics.py
+Output: brazil-oct-2026/analysis/{figures,tables,metrics.json}
 
-Флаги: --lang ru|en|pt|es — язык подписей графиков (по умолчанию ru);
---fig-out DIR — записать фигуры (а также таблицы и metrics.json) в DIR,
-не трогая brazil-oct-2026/analysis/.
+Flags: --lang ru|en|pt|es — figure label language (default en);
+--fig-out DIR — write the figures (plus tables and metrics.json) into DIR
+without touching brazil-oct-2026/analysis/.
 """
 
 from __future__ import annotations
@@ -63,7 +63,7 @@ def log(msg: str) -> None:
 
 
 def _digits_fast(counts: np.ndarray, test: str) -> np.ndarray:
-    """Векторный эквивалент digit_tests._digits (числа < 10 отфильтрованы MIN_COUNT)."""
+    """Vectorized equivalent of digit_tests._digits (numbers < 10 filtered out by MIN_COUNT)."""
     counts = np.asarray(counts, dtype=np.int64)
     if test == "last":
         return counts % 10
@@ -72,7 +72,7 @@ def _digits_fast(counts: np.ndarray, test: str) -> np.ndarray:
 
 
 def robust_z_outliers_fast(data: ElectionData, party: str, threshold: float = 4.0) -> pd.DataFrame:
-    """Тот же тест, что neighbors.robust_z_outliers, но векторно (499k строк)."""
+    """Same test as neighbors.robust_z_outliers, but vectorized (499k rows)."""
     df = data.df[["key", "name", "path", "parent_key", "registered_voters", "voted"]].copy()
     df["turnout"] = data.turnout.to_numpy()
     df["share"] = data.share(party).to_numpy()
@@ -90,7 +90,7 @@ def robust_z_outliers_fast(data: ElectionData, party: str, threshold: float = 4.
 
 
 def uf_correlations(data: ElectionData, parties: list[str]) -> pd.DataFrame:
-    """Корреляции явка × доля по штатам (замена district_correlations для Бразилии)."""
+    """Turnout × share correlations by state (replacement for district_correlations for Brazil)."""
     df = data.df.copy()
     df["turnout"] = data.turnout.to_numpy()
     rows = []
@@ -107,11 +107,11 @@ def uf_correlations(data: ElectionData, parties: list[str]) -> pd.DataFrame:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Election forensics: Бразилия-2026 (seções)")
-    ap.add_argument("--lang", default="ru", choices=["ru", "en", "pt", "es"],
-                    help="язык подписей графиков (по умолчанию ru)")
+    ap = argparse.ArgumentParser(description="Election forensics: Brazil-2026 (seções)")
+    ap.add_argument("--lang", default="en", choices=["ru", "en", "pt", "es"],
+                    help="figure label language (default en)")
     ap.add_argument("--fig-out", type=Path, default=None,
-                    help="каталог для фигур/таблиц/metrics вместо brazil-oct-2026/analysis/")
+                    help="directory for figures/tables/metrics instead of brazil-oct-2026/analysis/")
     args = ap.parse_args()
     lang = args.lang
     if args.fig_out is not None:
@@ -122,7 +122,7 @@ def main() -> None:
         fig_dir, tab_dir, metrics_path = FIG, TAB, OUT / "metrics.json"
     fig_dir.mkdir(parents=True, exist_ok=True)
     tab_dir.mkdir(parents=True, exist_ok=True)
-    dt._digits = _digits_fast  # 499k×N чисел: python-цикл по строкам слишком медленный
+    dt._digits = _digits_fast  # 499k×N numbers: a per-row python loop is too slow
 
     df = pd.read_csv(BR / "data" / "secoes_presidente_2026.csv")
     dropped = int((df["voted"] == 0).sum())
@@ -141,9 +141,9 @@ def main() -> None:
         "dropped_zero_voted": dropped,
         "checks_file": "data/secoes_presidente_2026_checks.json",
     }
-    log(f"данные: {data.n} секций (выброшено voted=0: {dropped}), лидер {leader}")
+    log(f"data: {data.n} sections (dropped voted=0: {dropped}), leader {leader}")
 
-    # --- 1. метод Шпилькина: лидер + оппонент ------------------------------
+    # --- 1. Shpilkin method: leader + runner-up -----------------------------
     shp_l = shpilkin_estimate(data, leader)
     shp_r = shpilkin_estimate(data, runner_up)
     metrics["shpilkin_leader"] = shp_l.to_dict()
@@ -151,15 +151,15 @@ def main() -> None:
     plots.plot_shpilkin(data, runner_up, shp_r, fig_dir, lang=lang)
     (fig_dir / "shpilkin_core.png").replace(fig_dir / "shpilkin_lula.png")
     plots.plot_shpilkin(data, leader, shp_l, fig_dir, lang=lang)
-    log(f"Шпилькин: граница {shp_l.t_cut:.1f}%; хвост лидера {shp_l.tail_votes_party:,} "
-        f"({shp_l.tail_share_of_party:.2f}%), Лулы {shp_r.tail_votes_party:,} "
+    log(f"Shpilkin: boundary {shp_l.t_cut:.1f}%; leader tail {shp_l.tail_votes_party:,} "
+        f"({shp_l.tail_share_of_party:.2f}%), Lula {shp_r.tail_votes_party:,} "
         f"({shp_r.tail_share_of_party:.2f}%)")
 
-    # --- 2. хвост кометы ----------------------------------------------------
+    # --- 2. comet tail -------------------------------------------------------
     plots.plot_comet(data, top[:3], fig_dir, lang=lang)
-    log("комета: ok")
+    log("comet: ok")
 
-    # --- 3. отпечатки пальцев (Klimek) --------------------------------------
+    # --- 3. fingerprints (Klimek) --------------------------------------------
     fp_l = fingerprint_mixture(data, leader)
     fp_r = fingerprint_mixture(data, runner_up)
     metrics["fingerprint_leader"] = fp_l.to_dict()
@@ -168,10 +168,10 @@ def main() -> None:
     (fig_dir / "fingerprint_2d.png").replace(fig_dir / "fingerprint_bolsonaro.png")
     plots.plot_fingerprint(data, runner_up, fp_r, fig_dir, lang=lang)
     (fig_dir / "fingerprint_2d.png").replace(fig_dir / "fingerprint_lula.png")
-    log(f"отпечатки: вес 2-й компоненты лидер {fp_l.weight_anom:.4f} "
-        f"(разделение: {fp_l.separated}), Лула {fp_r.weight_anom:.4f} ({fp_r.separated})")
+    log(f"fingerprints: 2nd component weight leader {fp_l.weight_anom:.4f} "
+        f"(separated: {fp_l.separated}), Lula {fp_r.weight_anom:.4f} ({fp_r.separated})")
 
-    # --- 4. целочисленные пики (Kobak) --------------------------------------
+    # --- 4. integer peaks (Kobak) --------------------------------------------
     peaks_t = integer_peaks(data, "turnout")
     peaks_l = integer_peaks(data, f"share:{leader}")
     metrics["integer_peaks_turnout"] = {
@@ -181,12 +181,12 @@ def main() -> None:
         "observed_pct": peaks_l.observed_integer_pct, "null_pct": peaks_l.null_mean_pct,
         "z": peaks_l.z_score, "z_mult5": peaks_l.z_mult5}
     plots.plot_integer_peaks(data, peaks_t, fig_dir, lang=lang)
-    log(f"целые проценты явки: {peaks_t.observed_integer_pct:.2f}% против "
-        f"{peaks_t.null_mean_pct:.2f}% (z={peaks_t.z_score:.1f}); доля лидера z={peaks_l.z_score:.1f}")
+    log(f"integer turnout percents: {peaks_t.observed_integer_pct:.2f}% vs "
+        f"{peaks_t.null_mean_pct:.2f}% (z={peaks_t.z_score:.1f}); leader share z={peaks_l.z_score:.1f}")
 
-    # --- 5. цифровые тесты: Бенфорд-2 + последняя цифра ----------------------
-    # тест имеет смысл только при достаточном числе счётчиков нужного размера:
-    # у минорных кандидатов в среднем <10 голосов на секцию
+    # --- 5. digit tests: Benford-2 + last digit -------------------------------
+    # the test only makes sense with enough counters of the right size:
+    # minor candidates average <10 votes per section
     benford_parties = [p for p in top if int((data.df[p] >= 10).sum()) >= 1000]
     last_parties = [p for p in top if int((data.df[p] >= 100).sum()) >= 1000]
     metrics["digit_tests_eligible"] = {
@@ -210,12 +210,12 @@ def main() -> None:
     plots.plot_digit_test(digit_freqs(pooled, "last"), np.full(10, 0.1),
                           digit_null_band(pooled, "last"), "last",
                           pool_label, fig_dir, lang=lang)
-    log(f"цифровые тесты: Бенфорд {len(benford_rows)} кандидатов, посл. цифра "
-        f"{len(last_rows)}; макс. отклонение Бенфорд "
-        f"{max(r['max_dev'] for r in benford_rows):.2f} п.п., посл. цифра "
-        f"{max(r['max_dev'] for r in last_rows):.2f} п.п.")
+    log(f"digit tests: Benford {len(benford_rows)} candidates, last digit "
+        f"{len(last_rows)}; max Benford deviation "
+        f"{max(r['max_dev'] for r in benford_rows):.2f} pp, last digit "
+        f"{max(r['max_dev'] for r in last_rows):.2f} pp")
 
-    # --- 6. 2D-корреляции: национально + по штатам ---------------------------
+    # --- 6. 2D correlations: national + by states -----------------------------
     corr_nat = turnout_result_correlations(data, top)
     corr_nat.to_csv(tab_dir / "corr_national.csv", index=False)
     corr_uf = uf_correlations(data, top[:4])
@@ -224,36 +224,36 @@ def main() -> None:
     metrics["correlations_national"] = corr_nat.to_dict(orient="records")
     metrics["corr_uf_leader_range"] = [float(corr_uf[leader.removeprefix("votes:")].min()),
                                        float(corr_uf[leader.removeprefix("votes:")].max())]
-    log(f"корреляции: нац. лидер {corr_nat.loc[0, 'pearson_w']:.3f}, "
-        f"по штатам от {metrics['corr_uf_leader_range'][0]:.2f} до {metrics['corr_uf_leader_range'][1]:.2f}")
+    log(f"correlations: national leader {corr_nat.loc[0, 'pearson_w']:.3f}, "
+        f"by state from {metrics['corr_uf_leader_range'][0]:.2f} to {metrics['corr_uf_leader_range'][1]:.2f}")
 
-    # --- 7. выбросы против соседей (внутри муниципалитета) -------------------
+    # --- 7. outliers vs neighbors (within municipality) -----------------------
     neigh = robust_z_outliers_fast(data, leader)
     flagged = neigh[neigh["flag"]]
     flagged.to_csv(tab_dir / "neighbors_flagged.csv", index=False)
     plots.plot_neighbors(neigh, fig_dir, lang=lang)
     metrics["neighbors_flagged"] = int(neigh["flag"].sum())
     metrics["neighbors_flagged_pct"] = 100.0 * float(neigh["flag"].sum()) / len(neigh)
-    log(f"соседи: выбросов |z|>4 — {metrics['neighbors_flagged']} "
-        f"({metrics['neighbors_flagged_pct']:.3f}% секций)")
+    log(f"neighbors: |z|>4 outliers — {metrics['neighbors_flagged']} "
+        f"({metrics['neighbors_flagged_pct']:.3f}% of sections)")
 
-    # --- 8. Isolation Forest --------------------------------------------------
+    # --- 8. Isolation Forest ---------------------------------------------------
     anom = isolation_forest_anomalies(data, leader)
     anom.nlargest(2000, "anomaly_score").to_csv(tab_dir / "ml_anomalies_top2000.csv", index=False)
     plots.plot_ml_anomalies(anom, fig_dir, lang=lang)
     metrics["ml_flagged"] = int(anom["is_anomaly"].sum())
-    log(f"ML: аномальных секций — {metrics['ml_flagged']} (contamination=1%)")
+    log(f"ML: anomalous sections — {metrics['ml_flagged']} (contamination=1%)")
 
-    # --- 9. самотест -----------------------------------------------------------
+    # --- 9. self-test -----------------------------------------------------------
     report = run_selftest(data, leader)
     injected, _ = inject_additive_fraud(data, leader)
     plots.plot_selftest(data, injected, leader, report, fig_dir, lang=lang)
     metrics["selftest"] = report.to_dict()
-    log(f"самотест: сигнал ×{report.signal_growth:,.0f}; пики z {report.peaks_z_clean:.1f} → "
+    log(f"self-test: signal ×{report.signal_growth:,.0f}; peaks z {report.peaks_z_clean:.1f} → "
         f"{report.peaks_z_rounded:.1f}")
 
-    # --- 10. бразильские проверки ------------------------------------------------
-    # модели урн: явка/доли не должны зависеть от поколения машины
+    # --- 10. Brazilian checks ----------------------------------------------
+    # ballot-machine models: turnout/shares must not depend on machine generation
     d = data.df.copy()
     d["turnout"] = data.turnout.to_numpy()
     d["share_lider"] = data.share(leader).to_numpy()
@@ -271,7 +271,7 @@ def main() -> None:
     urna.to_csv(tab_dir / "urna_models.csv")
     metrics["urna_models"] = urna.reset_index().to_dict(orient="records")
 
-    # дубликаты «протоколов»: одинаковый вектор (размер, явка, все голоса)
+    # duplicate "protocols": identical vector (size, turnout, all votes)
     vec_cols = ["registered_voters", "voted", "blank_votes", "null_votes"] + party_cols
     dups = d.duplicated(subset=vec_cols, keep=False)
     dup_groups = d[dups].groupby(vec_cols, dropna=False).size()
@@ -279,15 +279,15 @@ def main() -> None:
         "rows_in_dup_groups": int(dups.sum()),
         "groups": int((dup_groups > 1).sum()),
         "max_group": int(dup_groups.max()) if len(dup_groups) else 0,
-        "note": "группы с одинаковым электоратом (включая размер секции)",
+        "note": "groups with an identical electorate (including section size)",
     }
-    log(f"урны: {len(urna)} моделей; дубликаты протоколов: "
-        f"{metrics['duplicate_protocols']['rows_in_dup_groups']} строк в "
-        f"{metrics['duplicate_protocols']['groups']} группах")
+    log(f"machines: {len(urna)} models; duplicate protocols: "
+        f"{metrics['duplicate_protocols']['rows_in_dup_groups']} rows in "
+        f"{metrics['duplicate_protocols']['groups']} groups")
 
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2, default=float)
-    log(f"готово: {metrics_path.parent}")
+    log(f"done: {metrics_path.parent}")
 
 
 if __name__ == "__main__":

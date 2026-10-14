@@ -1,23 +1,25 @@
 #!/usr/bin/env python3
-"""Скачивание результатов выборов с НОВОЙ версии портала MAI/SGMAI (2025+).
+"""Download election results from the NEW version of the MAI/SGMAI portal (2025+).
 
-Новая версия портала (выборы с конца 2025: autarquicas2025, presidenciais2026_*)
-кладёт статику иначе и использует числовые id территорий и «органов»:
+The new portal version (elections since late 2025: autarquicas2025,
+presidenciais2026_*) serves static files differently and uses numeric ids for
+territories and "organs":
 
   <election>/app-settings.json                                        -> electionId
-  <election>/assets/static/election/data-electionId=<E>.json          -> корни дерева
+  <election>/assets/static/election/data-electionId=<E>.json          -> tree roots
   <election>/assets/static/territory/children-electionId=<E>-territoryId=<ID>.json
   <election>/assets/static/result/territory-electionId=<E>-territoryId=<ID>-organId=<O>.json
 
-organId — тип гонки (список для конкретных выборов — в election/data-electionId
-под ключом organs): PR=3 (президент); autarquicas2025: CM=4, AM=5, AF=6.
-Внутри result-файла структура прежняя (currentResults/previousResults/resultsParty)
-под ключом data.
+organId is the race type (the list for a given election is in
+election/data-electionId under the organs key): PR=3 (presidential);
+autarquicas2025: CM=4, AM=5, AF=6.
+Inside the result file the structure is the same as before
+(currentResults/previousResults/resultsParty) under the data key.
 
-Использование:
+Usage:
   python3 fetch_mai_results_v2.py <slug> [--organs 3] [--out DIR]
 
-Примеры:
+Examples:
   python3 fetch_mai_results_v2.py presidenciais2026_1S --organs 3
   python3 fetch_mai_results_v2.py autarquicas2025 --organs 4
 """
@@ -34,7 +36,7 @@ BLOCKED = {"flag": False}
 
 
 def fetch(url, tries=3):
-    """Как в v1: curl + пауза, на Access Denied — пауза 90с и повтор."""
+    """As in v1: curl + pause; on Access Denied — 90s pause and retry."""
     for i in range(tries):
         while BLOCKED["flag"]:
             time.sleep(15)
@@ -47,7 +49,7 @@ def fetch(url, tries=3):
             out = r.stdout or b""
             if b"Access Denied" in out[:200] or b"<HTML>" in out[:32]:
                 BLOCKED["flag"] = True
-                print(f"  [blocked] {url} — пауза 90с", file=sys.stderr)
+                print(f"  [blocked] {url} — pausing 90s", file=sys.stderr)
                 time.sleep(90)
                 BLOCKED["flag"] = False
                 continue
@@ -77,15 +79,15 @@ def crawl(election, organs, out, leaf_level=None):
 
     settings = get_json(f"{origin}/app-settings.json")
     if not settings or "electionId" not in settings:
-        print(f"Не удалось получить electionId для {election} "
-              f"(слуг не существует или это старый формат портала — используйте fetch_mai_results.py)",
+        print(f"Failed to get electionId for {election} "
+              f"(the slug does not exist or this is the old portal format — use fetch_mai_results.py)",
               file=sys.stderr)
         sys.exit(2)
     election_id = settings["electionId"]
     base = f"{origin}/assets/static"
     print(f"election: {election}, electionId={election_id}, organs={organs}", file=sys.stderr)
 
-    # служебные файлы без территории
+    # service files without a territory
     for rel in [f"election/data-electionId={election_id}.json",
                 f"psconfiguration/configurations-electionId={election_id}.json",
                 f"result/available-electionId={election_id}.json",
@@ -99,11 +101,11 @@ def crawl(election, organs, out, leaf_level=None):
             with open(p, "wb") as f:
                 f.write(data)
 
-    # корни дерева — из election/data
+    # tree roots — from election/data
     el_data = get_json(f"{base}/election/data-electionId={election_id}.json")
     roots = [t["id"] for t in (el_data or {}).get("data", {}).get("mainTerritories", [])]
     if not roots:
-        print("Нет mainTerritories в election/data", file=sys.stderr)
+        print("No mainTerritories in election/data", file=sys.stderr)
         sys.exit(2)
     print(f"roots: {roots}", file=sys.stderr)
 
@@ -131,7 +133,7 @@ def crawl(election, organs, out, leaf_level=None):
         children_cache[tid] = lst
         return lst
 
-    # BFS по дереву территорий (leaf_level: уровни >= N — листья без проверки)
+    # BFS over the territory tree (leaf_level: levels >= N are leaves, not probed)
     tree = {}
     frontier = {t: (None, 0) for t in roots}
     while frontier:
@@ -156,7 +158,7 @@ def crawl(election, organs, out, leaf_level=None):
         frontier = nxt
         print(f"  level done: {len(tree)} territories", file=sys.stderr)
 
-    # имена/типы — из children-файлов родителя
+    # names/types — from the parent's children files
     for tid, info in tree.items():
         parent = info["parent"]
         if parent is not None and children_cache.get(parent):
@@ -197,11 +199,11 @@ def crawl(election, organs, out, leaf_level=None):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("election", help="slug выборов, напр. presidenciais2026_1S")
-    ap.add_argument("--organs", default="3", help="organId через запятую: PR=3; муниципальные CM=1,AM=2,AF=4 (проверяйте по конфигурации)")
-    ap.add_argument("--out", default=None, help="каталог выгрузки (по умолчанию ../data/<election>_mai)")
+    ap.add_argument("election", help="election slug, e.g. presidenciais2026_1S")
+    ap.add_argument("--organs", default="3", help="comma-separated organId: PR=3; municipal CM=1,AM=2,AF=4 (check against the configuration)")
+    ap.add_argument("--out", default=None, help="download directory (default ../data/<election>_mai)")
     ap.add_argument("--leaf-level", type=int, default=None,
-                    help="уровни >= N считать листьями без проверки детей (3 = фрегезии)")
+                    help="treat levels >= N as leaves without probing children (3 = parishes)")
     args = ap.parse_args()
     out = args.out or os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", f"{args.election}_mai")
     crawl(args.election, [int(s.strip()) for s in args.organs.split(",")], os.path.normpath(out), args.leaf_level)

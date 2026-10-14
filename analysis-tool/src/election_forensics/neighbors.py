@@ -1,10 +1,11 @@
-"""Сравнение «похожих» территорий и соседей (Myagkov, Ordeshook, Shakin, 2009).
+"""Comparison of "similar" territories and neighbours (Myagkov, Ordeshook, Shakin, 2009).
 
-Два теста:
-1. Выброс относительно своего муниципалитета (concelho): робастный z-скор
-   явки и доли лидера против медианы соседей-приходов того же concelho.
-2. Скачок относительно прошлых выборов на той же территории: изменение
-   явки и доли партии между двумя выборами (results_all_previous.csv).
+Two tests:
+1. Outlier relative to one's own municipality (concelho): robust z-scores of
+   turnout and the leader's share against the median of neighbouring parishes
+   of the same concelho.
+2. Jump relative to the previous election in the same territory: change in
+   turnout and party share between two elections (results_all_previous.csv).
 """
 
 from __future__ import annotations
@@ -16,7 +17,7 @@ from .data import ElectionData
 
 
 def robust_z_outliers(data: ElectionData, party: str, threshold: float = 4.0) -> pd.DataFrame:
-    """Робастные выбросы явки и доли партии относительно своего concelho."""
+    """Robust outliers of turnout and party share relative to one's own concelho."""
     df = data.df[["key", "name", "path", "parent_key", "registered_voters", "voted"]].copy()
     df["turnout"] = data.turnout.to_numpy()
     df["share"] = data.share(party).to_numpy()
@@ -48,7 +49,7 @@ def swing_vs_previous(
     turnout_jump: float = 15.0,
     share_jump: float = 15.0,
 ) -> pd.DataFrame:
-    """Изменение явки и доли партии между двумя выборами по тем же территориям."""
+    """Change in turnout and party share between two elections over the same territories."""
     cur = current.df.set_index("key")
     prev = previous.df.set_index("key")
     keys = cur.index.intersection(prev.index)

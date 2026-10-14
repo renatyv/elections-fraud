@@ -1,8 +1,8 @@
-"""Графики трендов на matplotlib (безопасный headless-бэкенд Agg)."""
+"""Trend plots on matplotlib (safe headless Agg backend)."""
 
 import matplotlib
 
-matplotlib.use("Agg")  # до импорта pyplot: среда без дисплея
+matplotlib.use("Agg")  # before importing pyplot: display-less environment
 
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
@@ -11,20 +11,20 @@ from sloref.analysis import load_timeseries  # noqa: E402
 from sloref.config import REFERENDUMS  # noqa: E402
 
 SERIES = [
-    ("turnout_pct", "явка, %", "#4C72B0"),
-    ("counted_pct", "посчитано, %", "#55A868"),
-    ("za_pct", "ЗА, %", "#C44E52"),
-    ("proti_pct", "ПРОТИ, %", "#8172B3"),
+    ("turnout_pct", "turnout, %", "#4C72B0"),
+    ("counted_pct", "counted, %", "#55A868"),
+    ("za_pct", "ZA, %", "#C44E52"),
+    ("proti_pct", "PROTI, %", "#8172B3"),
 ]
 
 TITLES = {key: title for key, _slug, title in REFERENDUMS}
 
 
 def plot_trends(out_dir, data_root=None) -> list:
-    """Строит по PNG на референдум из точек timeseries.csv.
+    """Builds one PNG per referendum from the timeseries.csv points.
 
-    Возвращает список созданных файлов. Один наблюдённый момент — точечный
-    график, несколько — линии.
+    Returns the list of created files. A single observed moment — a point
+    plot, several — lines.
     """
     from pathlib import Path
     out_dir = Path(out_dir)
@@ -50,7 +50,7 @@ def plot_trends(out_dir, data_root=None) -> list:
             lines.append((x, y, style, label, color))
             drawn += 1
         if not drawn:
-            continue  # цифр ещё нет — пустой график не строим
+            continue  # no figures yet — skip the empty plot
         fig, ax = plt.subplots(figsize=(10, 5))
         for x, y, style, label, color in lines:
             ax.plot(x, y, style, label=label, color=color, markersize=3)

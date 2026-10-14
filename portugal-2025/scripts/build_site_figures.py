@@ -1,9 +1,9 @@
-# Фигуры для публичной страницы сайта репозитория — по комплекту на каждый
-# язык (pt, en), данные — data/legislativas2025_mai/results_all.csv (freguesias,
-# level=3). Запуск из каталога проекта:
+# Figures for the public page of the repository site — one set per language
+# (pt, en), data from data/legislativas2025_mai/results_all.csv (freguesias,
+# level=3). Run from the project directory:
 #   uv run python scripts/build_site_figures.py
-# Выход: <репо>/site/portugal-2025/img/<lang>/{turnout,comet,selftest}.png
-# Числа в подписях сверены с analysis/metrics.json (shpilkin, selftest).
+# Output: <repo>/site/portugal-2025/img/<lang>/{turnout,comet,selftest}.png
+# Label numbers cross-checked against analysis/metrics.json (shpilkin, selftest).
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pandas", "matplotlib"]
@@ -26,8 +26,9 @@ DARK = "#16324f"
 RED = "#c0392b"
 GREEN = "#1e8e5a"
 GREY = "#8a97a5"
-# Граница честного спада — q99.5 контрольных выборов (см. ОТЧЁТ_стат_анализ, раздел 1
-# и analysis/metrics.json → shpilkin.t_cut).
+# Honest-decline boundary — q99.5 of the control elections (see
+# REPORT_statistical_fraud_analysis.md, section 1 and
+# analysis/metrics.json → shpilkin.t_cut).
 CUT = 78.6424600948544
 
 plt.rcParams.update(
@@ -89,16 +90,16 @@ T = {
 }
 
 df = pd.read_csv(ROOT / "data" / "legislativas2025_mai" / "results_all.csv", encoding="utf-8-sig")
-df = df[df["level"] == 3].copy()  # freguesias (континент + Мадейра + Азорские о-ва)
+df = df[df["level"] == 3].copy()  # freguesias (mainland + Madeira + Azores)
 party_cols = [c for c in df.columns if c.startswith("votes:")]
 df["valid"] = df[party_cols].sum(axis=1)
-# Коалиция AD: на материке PPD/PSD.CDS-PP, на Азорах добавляется PPM (cf. AGENTS.md).
+# AD coalition: PPD/PSD.CDS-PP on the mainland, plus PPM in the Azores (cf. AGENTS.md).
 df["ad"] = df["votes:PPD/PSD.CDS-PP"].fillna(0) + df["votes:PPD/PSD.CDS-PP.PPM"].fillna(0)
 df["turnout"] = 100.0 * df["voted"] / df["registered_voters"]
 df["ad_share"] = 100.0 * df["ad"] / df["voted"]
 
-# Контрольные суммы против analysis/metrics.json. Хвост Шпилькина считается
-# по корзинам 0,5 п.п. (bin centers > t_cut) — как в analysis-tool.
+# Checksums against analysis/metrics.json. The Shpilkin tail is computed
+# over 0.5 p.p. bins (bin centers > t_cut) — as in analysis-tool.
 edges = np.arange(0.0, 100.0 + 0.5, 0.5)
 centers = 0.5 * (edges[:-1] + edges[1:])
 h_voted, _ = np.histogram(df["turnout"], bins=edges, weights=df["voted"])
@@ -183,8 +184,8 @@ def fig_comet(lang: str, tr: dict) -> None:
 
 
 def fig_selftest(lang: str, tr: dict) -> None:
-    # Числа — analysis/metrics.json → selftest (инъекция: +10% приходов,
-    # явка +5–35 п.п., 60–95% добавленных бюллетеней за AD).
+    # Numbers from analysis/metrics.json → selftest (injection: +10% of
+    # parishes, turnout +5–35 p.p., 60–95% of the added ballots for AD).
     clean, added, injected = 14_589, 131_629, 255_496
     fig, ax = plt.subplots(figsize=(9.6, 4.0), dpi=150)
     ax.bar([0], [clean], width=0.55, color=GREEN, zorder=3)

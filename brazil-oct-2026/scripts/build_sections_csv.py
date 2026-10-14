@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Сборка секционного датасета президента BR-2026 в формат ElectionData.
+"""Build the BR-2026 president section dataset in the ElectionData format.
 
-Читает выгрузку TSE (data/votacao_secao/):
-  - detalhe_votacao_secao_2026_BRASIL.csv — электорат/явка по секциям
-    (фильтр: CD_ELEICAO=6257 федеральные, CD_CARGO=1 президент, NR_TURNO=1);
-  - votacao_secao_2026_BR.csv — голоса по (секция × votável), пивот в колонки
-    votes:<NR>-<ИМЯ>; VOTO BRANCO (95) -> blank_votes, VOTO NULO (96) -> null_votes.
+Reads the TSE export (data/votacao_secao/):
+  - detalhe_votacao_secao_2026_BRASIL.csv — electorate/turnout per section
+    (filter: CD_ELEICAO=6257 federal, CD_CARGO=1 president, NR_TURNO=1);
+  - votacao_secao_2026_BR.csv — votes per (section × votável), pivoted into
+    votes:<NR>-<NAME> columns; VOTO BRANCO (95) -> blank_votes, VOTO NULO (96) -> null_votes.
 
-Выход: data/secoes_presidente_2026.csv (UTF-8, MAI-подобные колонки
+Output: data/secoes_presidente_2026.csv (UTF-8, MAI-like columns
 key/level/name/path/parent_key/registered_voters/voted/blank_votes/null_votes/
-votes:* + бразильские поля uf/urna_model/origem_voto/instalada) и
-data/secoes_presidente_2026_checks.json — проверки самосогласованности.
+votes:* + Brazilian fields uf/urna_model/origem_voto/instalada) and
+data/secoes_presidente_2026_checks.json — self-consistency checks.
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ import pandas as pd
 BR = Path(__file__).resolve().parents[1]
 DATA = BR / "data" / "votacao_secao"
 
-# короткие имена кандидатов для колонок votes:
+# short candidate names for the votes: columns
 SHORT = {
     "13": "LULA", "22": "BOLSONARO", "70": "CURY", "14": "FERREIRA",
     "55": "CAIADO", "30": "ZEMA", "80": "SAMARA", "16": "HERTZ",
@@ -74,9 +74,9 @@ def read_votacao() -> pd.DataFrame:
 def main() -> None:
     det = read_detalhe()
     vot = read_votacao()
-    print(f"detalhe: {len(det)} секций; votacao: {len(vot)} строк")
+    print(f"detalhe: {len(det)} sections; votacao: {len(vot)} rows")
 
-    # пивот голосов: секция × votável
+    # pivot of votes: section × votável
     vot["votavel"] = vot.NR_VOTAVEL.map(
         lambda n: {"95": "BRANCO", "96": "NULO"}.get(n) or SHORT.get(n, f"X{n}")
     )
@@ -93,7 +93,7 @@ def main() -> None:
     vote_cols = [c for c in votes.columns if c not in ("BRANCO", "NULO")]
     df[vote_cols] = df[vote_cols].fillna(0).astype("int64")
 
-    # --- проверки самосогласованности -----------------------------------
+    # --- self-consistency checks -----------------------------------------
     dup = df.duplicated(subset=KEY_COLS, keep=False).sum()
     checks["duplicate_section_keys"] = int(dup)
     nominal = df[vote_cols].sum(axis=1)
@@ -111,7 +111,7 @@ def main() -> None:
     checks["aptos_zero"] = int((df.QT_APTOS == 0).sum())
     checks["comparecimento_zero"] = int((df.QT_COMPARECIMENTO == 0).sum())
 
-    # --- финальный датасет -------------------------------------------------
+    # --- final dataset ------------------------------------------------------
     key = df.SG_UF + "-" + df.CD_MUNICIPIO + "-z" + df.NR_ZONA + "-s" + df.NR_SECAO
     out = pd.DataFrame({
         "key": key,

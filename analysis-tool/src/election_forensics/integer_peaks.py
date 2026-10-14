@@ -1,14 +1,14 @@
-"""Целочисленные пики явки и результата (Kobak, Shpilkin, Pshenichnikov, 2016).
+"""Integer peaks of turnout and result (Kobak, Shpilkin, Pshenichnikov, 2016).
 
-Идея: если протоколы «рисуют» люди, значения явки/результата тяготеют
-к круглым числам — ровно 60 %, 70 %, 75 %, 80 %. В честных данных частота
-целых процентов соответствует естественной вероятности попадания
-дискретной величины в узкое окно округления.
+The idea: if protocols are "drawn" by people, turnout/result values gravitate
+towards round numbers — exactly 60%, 70%, 75%, 80%. In honest data the
+frequency of integer percentages matches the natural probability of a
+discrete quantity falling into a narrow rounding window.
 
-Нулевая модель — Монте-Карло: для каждой территории голосование
-моделируется биномиальным распределением с наблюдаемой явкой,
-после чего пересчитываются округлённые проценты. Это учитывает
-размер территорий (в мелких приходах целые проценты вероятнее).
+The null model is Monte Carlo: for each territory, voting is modelled with a
+binomial distribution at the observed turnout, after which the rounded
+percentages are recomputed. This accounts for territory size (in small
+parishes integer percentages are more likely).
 """
 
 from __future__ import annotations
@@ -35,7 +35,7 @@ class IntegerPeaksResult:
 
 
 def _integer_stats(values_pct: np.ndarray) -> tuple[int, int]:
-    """Число территорий с целым процентом и с процентом, кратным 5."""
+    """Number of territories with an integer percentage and with a multiple-of-5 percentage."""
     rounded = rounder(values_pct, decimals=2)
     is_int = np.abs(rounded - np.round(rounded)) < 1e-9
     is_m5 = is_int & (np.mod(np.round(rounded), 5) == 0) & (np.round(rounded) > 0)
@@ -52,9 +52,9 @@ def integer_peaks(
     n_sim: int = 200,
     seed: int = 42,
 ) -> IntegerPeaksResult:
-    """Тест целочисленных пиков с биномиальной Монте-Карло-моделью.
+    """Integer-peaks test with a binomial Monte Carlo null model.
 
-    metric: 'turnout' или 'share:<партия>'.
+    metric: 'turnout' or 'share:<party>'.
     """
     rng = np.random.default_rng(seed)
     N = data.registered.to_numpy()
@@ -64,7 +64,7 @@ def integer_peaks(
     obs_int, obs_m5 = _integer_stats(
         _share_values(data, metric.removeprefix("share:")) if metric.startswith("share:") else 100.0 * V / N
     )
-    # точки с нулевым знаменателем исключены загрузчиком данных
+    # points with a zero denominator are excluded by the data loader
 
     null_int = np.empty(n_sim)
     null_m5 = np.empty(n_sim)
@@ -95,7 +95,7 @@ def integer_peaks(
 
 
 def turnout_histogram_counts(data: ElectionData, bin_width: float = 0.1) -> tuple[np.ndarray, np.ndarray]:
-    """Гистограмма явки по числу территорий (для визуализации пиков)."""
+    """Turnout histogram by number of territories (for visualising the peaks)."""
     t = data.turnout.to_numpy()
     edges = np.arange(0.0, 100.0 + bin_width, bin_width)
     h, _ = np.histogram(t, bins=edges)

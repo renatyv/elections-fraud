@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Сбор побоотлевых итогов GE-2024 Уттар-Прадеш (Form 20, PDF со сканов).
+"""Collect booth-level results for GE-2024 Uttar Pradesh (Form 20, scanned PDFs).
 
-Цепочка: индекс ceouttarpradesh.nic.in/Form20_2024.aspx (архив Wayback) ->
-страницы районов (40/68 сохранены в Wayback) -> PDF на cdn.s3waas.gov.in,
-который доступен НАПРЯМУЮ (geo-бана нет, в отличие от *.nic.in).
+Chain: ceouttarpradesh.nic.in/Form20_2024.aspx index (Wayback archive) ->
+district pages (40/68 preserved in Wayback) -> PDFs on cdn.s3waas.gov.in,
+which is reachable DIRECTLY (no geo-block, unlike *.nic.in).
 
-Скрипт:
-  1. берёт сохранённые страницы районов из Wayback (id_, последний снапшот);
-  2. находит ссылки-якоря "NN-ACNAME" на PDF (uploads/2024/0X/...pdf);
-  3. докапливает страницы "part-2/part-3", если на них есть ссылки;
-  4. качает PDF напрямую с cdn.s3waas.gov.in (тайп-аут, рэтраи);
-  5. складывает в data/form20/up/<district>/<ac_label>.pdf + manifest.csv.
+The script:
+  1. takes the archived district pages from Wayback (id_, latest snapshot);
+  2. finds "NN-ACNAME" anchor links to PDFs (uploads/2024/0X/...pdf);
+  3. picks up "part-2/part-3" pages when they are linked;
+  4. downloads PDFs directly from cdn.s3waas.gov.in (timeouts, retries);
+  5. stores them in data/form20/up/<district>/<ac_label>.pdf + manifest.csv.
 
-Запуск:  cd india-2024 && uv run python scripts/download_up_form20.py
-Выход:   data/form20/up/*.pdf, data/form20/up_manifest.csv
+Run:     cd india-2024 && uv run python scripts/download_up_form20.py
+Output:  data/form20/up/*.pdf, data/form20/up_manifest.csv
 """
 from __future__ import annotations
 
@@ -37,7 +37,7 @@ WB = "https://web.archive.org/web/{ts}id_/{url}"
 DELAY_WB = 3.0   # Wayback
 DELAY_CDN = 0.7  # s3waas CDN
 
-# якорь вида "01-BEHAT" / "43 Siwalkhas (सिवालखास)" -> PDF; метка с вложенными тегами
+# anchor like "01-BEHAT" / "43 Siwalkhas (सिवालखास)" -> PDF; label with nested tags
 AC_LINK_RE = re.compile(
     r"<a[^>]+href=[\"']([^\"']+\.pdf)[\"'][^>]*>(.*?)</a>",
     re.I | re.S,
@@ -49,7 +49,7 @@ NAME_RE = re.compile(r"^[A-Za-z\u0900-\u097F][A-Za-z\u0900-\u097F .()]{1,39}$")
 STOP_WORDS = re.compile(r"gazette|holiday|guide|tender|budget|calendar|list of", re.I)
 TAG_RE = re.compile(r"<[^>]+>")
 
-# страницы-продолжения/альтернативные страницы Form 20, найденные в кэше part-1
+# continuation/alternative Form 20 pages found in the part-1 cache
 EXTRA_PAGES: dict[str, str] = {
     "Jaunpur": "https://jaunpur.nic.in/lok-sabha-general-election-2024-praroop-20part-2",
     "Mau": "https://mau.nic.in/en/format-20-lok-sabha-general-election-2024/",
@@ -59,7 +59,7 @@ EXTRA_PAGES: dict[str, str] = {
     "Rae Bareli": "https://raebareli.nic.in/lok-sabha-general-election-2024-praroop-20-part-1/",
     "Hapur": "https://hapur.nic.in/lok-sabha-general-election-2024-format-20-part-1/",
 }
-# страницы-продолжения того же района: part-2/3, слаги с "-2"/"prarup" на том же хосте
+# continuation pages of the same district: part-2/3, slugs with "-2"/"prarup" on the same host
 PART_RE = re.compile(
     r"href=[\"'](https?://[^\"']*\.nic\.in/[^\"']*(?:part-[2-9]|prarup[^\"']*-[2-9]|format-20[^\"']*))/?[\"']",
     re.I,
@@ -80,7 +80,7 @@ def fetch(url: str, delay: float, tries: int = 3) -> bytes | None:
 
 
 def get_snap(url: str) -> str | None:
-    """Ближайший снапшот со статусом 200 через availability API."""
+    """Closest snapshot with status 200 via the availability API."""
     api = "http://archive.org/wayback/available?url=" + urllib.parse.quote(url, safe="")
     try:
         r = requests.get(api, headers=UA, timeout=30).json()
@@ -98,7 +98,7 @@ def main() -> None:
     pages_dir.mkdir(exist_ok=True)
     districts = json.load(open(DISTRICTS_JSON))
     have = [d for d in districts if d["captures"]]
-    print(f"районов с архивными страницами: {len(have)}/{len(districts)}")
+    print(f"districts with archived pages: {len(have)}/{len(districts)}")
 
     jobs: list[tuple[str, str, str]] = []  # district, ts, page_url
     for d in have:
@@ -109,9 +109,9 @@ def main() -> None:
             jobs.append((district, ts, page_url))
             print(f"extra: {district} -> {ts}")
         else:
-            print(f"extra: {district} — снапшота нет")
+            print(f"extra: {district} — no snapshot")
         time.sleep(1.0)
-    print(f"страниц к обработке: {len(jobs)}")
+    print(f"pages to process: {len(jobs)}")
 
     rows: list[dict] = []
     seen_pdfs: set[str] = set()
@@ -137,7 +137,7 @@ def main() -> None:
             if NUM_START_RE.match(label) or FORM20_RE.search(label):
                 pass
             elif low.startswith(VIEW_WORDS) and "form" not in low:
-                # метки "View"/"Download File": имя АС из окружающей строки таблицы
+                # "View"/"Download File" labels: AC name from the surrounding table row
                 tr0 = html.rfind("<tr", 0, m.start())
                 tr1 = html.find("</tr>", m.start())
                 if tr0 != -1 and tr1 != -1:
@@ -147,7 +147,7 @@ def main() -> None:
                 else:
                     label = "view"
             elif NAME_RE.match(label) and "/uploads/2024/09/" in href and not STOP_WORDS.search(label):
-                pass  # голое имя АС, напр. "Bangermau" (Unnao); 09 = месяц выкладки Form 20
+                pass  # bare AC name, e.g. "Bangermau" (Unnao); 09 = Form 20 upload month
             else:
                 continue
             href = urllib.parse.urljoin(snap["url"], href)
@@ -158,7 +158,7 @@ def main() -> None:
             seen_pdfs.add(href)
             rows.append({"district": district, "ac_label": label, "pdf_url": href})
             n_found += 1
-        # страницы-продолжения (part-2 и т.п.) — для будущего расширения
+        # continuation pages (part-2 etc.) — for future expansion
         extra = [u for u in PART_RE.findall(html) if not u.rstrip("/").endswith(("-1", "part-1"))]
         if extra:
             print(f"[{i}/{len(jobs)}] {district}: {n_found} PDF, part-pages: {extra[:3]}", flush=True)
@@ -167,9 +167,9 @@ def main() -> None:
 
     man = pd.DataFrame(rows)
     man.to_csv(FORM20 / "up_manifest_raw.csv", index=False)
-    print(f"всего PDF-ссылок: {len(man)} (уникальных)")
+    print(f"total PDF links: {len(man)} (unique)")
 
-    # скачивание напрямую с CDN
+    # direct download from the CDN
     ok = fail = 0
     for i, r in man.iterrows():
         safe_ac = re.sub(r"[^A-Za-z0-9()-]+", "_", r["ac_label"])[:60]
@@ -181,14 +181,14 @@ def main() -> None:
         if raw and raw[:5] == b"%PDF-":
             dest.write_bytes(raw)
             ok += 1
-            print(f"PDF [{i+1}/{len(man)}] OK {dest.name} ({len(raw)//1024} КБ)", flush=True)
+            print(f"PDF [{i+1}/{len(man)}] OK {dest.name} ({len(raw)//1024} KB)", flush=True)
         else:
             fail += 1
             print(f"PDF [{i+1}/{len(man)}] FAIL {r['ac_label']}", flush=True)
         time.sleep(DELAY_CDN)
 
     man.to_csv(FORM20 / "up_manifest.csv", index=False)
-    print(f"готово: ok={ok}, fail={fail}; manifest -> up_manifest.csv")
+    print(f"done: ok={ok}, fail={fail}; manifest -> up_manifest.csv")
 
 
 if __name__ == "__main__":

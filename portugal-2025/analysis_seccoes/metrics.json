@@ -1,5 +1,5 @@
 {
-  "title": "AR 2025, секции (6 конселью)",
+  "title": "AR 2025, sections (6 concelhos)",
   "national": {
     "n_units": 91,
     "registered": 60711,
@@ -176,21 +176,21 @@
       "party": "PCP-PEV",
       "n_numbers": 0,
       "p_value": null,
-      "note": "мало чисел >= 100 — тест не проводился"
+      "note": "too few numbers >= 100 — test skipped"
     },
     {
       "test": "last",
       "party": "IL",
       "n_numbers": 0,
       "p_value": null,
-      "note": "мало чисел >= 100 — тест не проводился"
+      "note": "too few numbers >= 100 — test skipped"
     },
     {
       "test": "last",
       "party": "L",
       "n_numbers": 0,
       "p_value": null,
-      "note": "мало чисел >= 100 — тест не проводился"
+      "note": "too few numbers >= 100 — test skipped"
     }
   ],
   "correlations_national": [

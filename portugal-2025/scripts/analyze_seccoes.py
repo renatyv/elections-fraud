@@ -1,24 +1,26 @@
-"""Election forensics на уровне секций AR-2025 (91 участок шести конселью).
+"""Section-level election forensics for AR-2025 (91 sections in six concelhos).
 
-Данные — data/seccoes/ar2025_seccoes.csv (scripts/parse_seccoes_ar2025.py):
+Data — data/seccoes/ar2025_seccoes.csv (scripts/parse_seccoes_ar2025.py):
 Benavente 27, Alcácer do Sal 21, Vendas Novas 16, Ferreira do Alentejo 14,
-Borba 8, Sousel 5 — 60 711 избирателей (0,66% электората), по всем 22 приходам
-сходятся с MAI до единого голоса (ar2025_seccoes_validation.txt).
+Borba 8, Sousel 5 — 60,711 registered voters (0.66% of the electorate); across
+all 22 freguesias the sums match MAI down to a single vote
+(ar2025_seccoes_validation.txt).
 
-Методы — analysis-tool (election_forensics); запуск из каталога analysis-tool:
+Methods — analysis-tool (election_forensics); run from the analysis-tool directory:
 
     cd analysis-tool && uv sync
     uv run python ../portugal-2025/scripts/analyze_seccoes.py
 
-Выход: portugal-2025/analysis_seccoes/{figures/*.png, tables/*.csv, metrics.json}.
+Output: portugal-2025/analysis_seccoes/{figures/*.png, tables/*.csv, metrics.json}.
 
-Отличия от основного прогона по приходам (ef-analyze): нет секционных данных
-контрольных выборов (граница Шпилькина — q99.5 своих данных), нет прошлого
-уровня секций (тест скачков неприменим), окружные корреляции пропущены (группы
-конселью 5–27 секций < 30), contamination ML поднят до 5% (рейтинг кандидатов,
-не сигнал). Дополнительные проверки секционного уровня: целые проценты по долям
-всех топ-6 партий, дубликаты протокольных векторов (copy-paste), выбросы внутри
-своей фрегезии, экстремумы бланковых/недействительных, арифметика строк.
+Differences from the main freguesia-level run (ef-analyze): no section-level
+control-election data (the Shpilkin boundary — q99.5 of its own data), no previous
+section level (the jump test is not applicable), district correlations skipped
+(concelho groups of 5–27 sections < 30), ML contamination raised to 5% (a rating
+of candidates, not a signal). Additional section-level checks: integer percentages
+across the shares of all top-6 parties, duplicate protocol vectors (copy-paste),
+outliers within their own freguesia, extremes of blank/invalid shares, row
+arithmetic.
 """
 
 from __future__ import annotations
@@ -48,10 +50,10 @@ FREG_CSV = BASE / "data" / "legislativas2025_mai" / "results_freguesias.csv"
 
 
 def load_sections() -> ElectionData:
-    """Секции AR-2025 в формате ElectionData (аналог results_freguesias.csv).
+    """AR-2025 sections in the ElectionData format (analog of results_freguesias.csv).
 
-    Единица анализа — секция; parent_key = конселью (группа для теста соседей),
-    path = «AR2025 секции > конселью > фрегезия · сек. N» ([-2] = конселью).
+    Unit of analysis — section; parent_key = concelho (group for the neighbors test),
+    path = "AR2025 sections > concelho > freguesia · sec. N" ([-2] = concelho).
     """
     raw = pd.read_csv(CSV, encoding="utf-8-sig")
     raw = raw[raw["nivel"] == "secao"].copy()
@@ -61,7 +63,7 @@ def load_sections() -> ElectionData:
             "key": raw["mai_key"] + "-S" + raw["secao"].map("{:02d}".format),
             "level": 3,
             "name": raw["freguesia"] + " · S" + raw["secao"].astype(str),
-            "path": "AR2025 секции > " + raw["concelho"] + " > "
+            "path": "AR2025 sections > " + raw["concelho"] + " > "
                     + raw["freguesia"] + " · S" + raw["secao"].astype(str),
             "parent_key": raw["dico"].astype(str),
             "registered_voters": raw["eleitores"].astype(int),
@@ -74,12 +76,12 @@ def load_sections() -> ElectionData:
     for c in raw.columns:
         if c.startswith("votes:"):
             df[c] = pd.to_numeric(raw[c], errors="coerce").fillna(0).astype(int)
-    return ElectionData(name="AR 2025, секции (6 конселью)", df=df,
+    return ElectionData(name="AR 2025, sections (6 concelhos)", df=df,
                         party_cols=[c for c in df.columns if c.startswith("votes:")],)
 
 
 def freguesia_comparison(data: ElectionData) -> dict:
-    """Явка тех же 22 приходов на уровне MAI — против разброса секций внутри них."""
+    """Turnout of the same 22 freguesias at the MAI level — vs the spread of sections within them."""
     out: dict = {}
     t = data.turnout.to_numpy()
     out["section_turnout_min_median_max"] = [float(t.min()), float(np.median(t)), float(t.max())]
@@ -109,24 +111,24 @@ def main() -> None:
     top = major_parties(data, top=6, min_total=800)
     metrics: dict = {"title": data.name, "national": national_totals(data),
                      "leader": leader.removeprefix("votes:"), "n_units": data.n}
-    print(f"[1/8] данные: {data.n} секций, лидер {leader}")
+    print(f"[1/8] data: {data.n} sections, leader {leader}")
 
-    # --- Шпилькин: распределение явки секций (без контролов — q99.5 своих) ---
+    # --- Shpilkin: turnout distribution of sections (no controls — q99.5 of own data) ---
     shp = shpilkin_estimate(data, leader)
     metrics["shpilkin"] = shp.to_dict()
     plots.plot_shpilkin(data, leader, shp, fig_dir)
-    print(f"[2/8] Шпилькин: граница {shp.t_cut:.1f}% ({shp.t_cut_source}); мода {shp.mode:.1f}%, "
-          f"σ {shp.sigma:.1f} п.п.; аномальных голосов лидера {shp.tail_votes_party}")
+    print(f"[2/8] Shpilkin: boundary {shp.t_cut:.1f}% ({shp.t_cut_source}); mode {shp.mode:.1f}%, "
+          f"σ {shp.sigma:.1f} pp; anomalous leader votes {shp.tail_votes_party}")
 
-    # --- хвост кометы + отпечатки ---
+    # --- comet tail + fingerprints ---
     plots.plot_comet(data, top[:3], fig_dir)
     fp = fingerprint_mixture(data, leader)
     metrics["fingerprint"] = fp.to_dict()
     plots.plot_fingerprint(data, leader, fp, fig_dir)
-    print(f"[3/8] отпечатки: вес 2-й компоненты {fp.weight_anom:.3f}, "
-          f"разделение {'есть' if fp.separated else 'нет'}")
+    print(f"[3/8] fingerprints: weight of the 2nd component {fp.weight_anom:.3f}, "
+          f"separation {'yes' if fp.separated else 'no'}")
 
-    # --- целочисленные пики (низкая мощность при n=91 — см. самотест) ---
+    # --- integer peaks (low power at n=91 — see the self-test) ---
     peaks_t = integer_peaks(data, "turnout")
     peaks_l = integer_peaks(data, f"share:{leader}")
     metrics["integer_peaks_turnout"] = {
@@ -136,12 +138,12 @@ def main() -> None:
         "observed_pct": peaks_l.observed_integer_pct, "null_pct": peaks_l.null_mean_pct,
         "z": peaks_l.z_score, "z_mult5": peaks_l.z_mult5}
     plots.plot_integer_peaks(data, peaks_t, fig_dir)
-    print(f"[4/8] целые проценты явки: {peaks_t.observed_integer_pct:.2f}% против "
+    print(f"[4/8] integer turnout percentages: {peaks_t.observed_integer_pct:.2f}% vs "
           f"{peaks_t.null_mean_pct:.2f}% (z={peaks_t.z_score:.1f})")
 
-    # --- цифровые тесты: только партии с достаточным числом пригодных чисел ---
-    # (последняя цифра — счётчики >=100: у мелких партий таких секций нет;
-    # порог 30 чисел — минимум, при котором chi2 с df=9 ещё осмыслен)
+    # --- digit tests: only parties with enough usable numbers ---
+    # (last digit — counters >=100: small parties have no such sections;
+    # the threshold of 30 numbers is the minimum at which chi2 with df=9 is still meaningful)
     from election_forensics.digit_tests import MIN_COUNT
     benford_rows, last_rows, pooled_b, pooled_l = [], [], [], []
     for p in top:
@@ -153,22 +155,22 @@ def main() -> None:
             else:
                 rows.append({"test": test, "party": p.removeprefix("votes:"),
                              "n_numbers": n_ok, "p_value": None,
-                             "note": f"мало чисел >= {MIN_COUNT[test]} — тест не проводился"})
+                             "note": f"too few numbers >= {MIN_COUNT[test]} — test skipped"})
     metrics["benford2"] = benford_rows
     metrics["last_digit"] = last_rows
     counts_b = np.concatenate(pooled_b)
     plots.plot_digit_test(digit_freqs(counts_b, "benford2"), BENFORD_2ND,
                           digit_null_band(counts_b, "benford2"), "benford2",
-                          "топ-6 партий, пул", fig_dir)
+                          "top-6 parties, pooled", fig_dir)
     counts_l = np.concatenate(pooled_l)
     plots.plot_digit_test(digit_freqs(counts_l, "last"), np.full(10, 0.1),
                           digit_null_band(counts_l, "last"), "last",
-                          "топ-6 партий, пул", fig_dir)
+                          "top-6 parties, pooled", fig_dir)
     pd.DataFrame(benford_rows).to_csv(tab_dir / "benford2.csv", index=False)
     pd.DataFrame(last_rows).to_csv(tab_dir / "last_digit.csv", index=False)
-    print(f"[5/8] цифровые тесты: {len(benford_rows)} партий, см. tables/")
+    print(f"[5/8] digit tests: {len(benford_rows)} parties, see tables/")
 
-    # --- корреляции и соседи: секция против медианы своего конселью ---
+    # --- correlations and neighbors: section vs the median of its concelho ---
     corr_nat = turnout_result_correlations(data, top)
     corr_nat.to_csv(tab_dir / "corr_national.csv", index=False)
     metrics["correlations_national"] = corr_nat.to_dict(orient="records")
@@ -176,12 +178,12 @@ def main() -> None:
     neigh.to_csv(tab_dir / "neighbors_z.csv", index=False)
     plots.plot_neighbors(neigh, fig_dir)
     metrics["neighbors_flagged"] = int(neigh["flag"].sum())
-    print(f"[6/8] соседи (по конселью): выбросов |z|>4 — {int(neigh['flag'].sum())}; "
-          f"корреляция явка×лидер (взвеш. Пирсон): "
+    print(f"[6/8] neighbors (by concelho): |z|>4 outliers — {int(neigh['flag'].sum())}; "
+          f"turnout×leader correlation (weighted Pearson): "
           f"{corr_nat.loc[corr_nat.party == leader.removeprefix('votes:'), 'pearson_w'].iloc[0]:.3f}")
 
-    # --- дополнительные проверки секционного уровня ------------------------
-    # целые проценты по долям ВСЕХ топ-6 партий (в основном прогоне — только лидер)
+    # --- additional section-level checks ------------------------------------
+    # integer percentages across the shares of ALL top-6 parties (main run — leader only)
     peaks_parties = [
         {"party": p.removeprefix("votes:"), "observed_pct": (r := integer_peaks(data, f"share:{p}")).observed_integer_pct,
          "null_pct": r.null_mean_pct, "z": r.z_score, "z_mult5": r.z_mult5}
@@ -189,20 +191,21 @@ def main() -> None:
     ]
     metrics["integer_peaks_party_shares"] = peaks_parties
 
-    # ML: contamination 5% — рейтинг кандидатов на ручную проверку, не сигнал
+    # ML: contamination 5% — a rating of candidates for manual review, not a signal
     anom = isolation_forest_anomalies(data, leader, contamination=0.05)
     anom.to_csv(tab_dir / "ml_anomalies.csv", index=False)
     plots.plot_ml_anomalies(anom, fig_dir)
     metrics["ml_flagged"] = int(anom["is_anomaly"].sum())
     metrics["ml_candidates"] = anom.loc[anom["is_anomaly"], "name"].tolist()
 
-    # дубликаты протокольных векторов: полный copy-paste строки голосов
+    # duplicate protocol vectors: a full copy-paste of a votes row
     vote_cols = [c for c in data.df.columns if c.startswith("votes:")] + ["blank_votes", "null_votes"]
     vec = data.df[vote_cols].astype(str).agg("|".join, axis=1)
     metrics["duplicate_protocol_rows"] = int(vec.duplicated().sum())
 
-    # выбросы внутри своей фрегезии (группы >= 4 секций; внутри фрегезии секции
-    # максимально сопоставимы — один приход, одна местная администрация)
+    # outliers within their own freguesia (groups >= 4 sections; within a
+    # freguesia the sections are maximally comparable — one parish, one local
+    # administration)
     def _rz(g: pd.DataFrame, col: str) -> pd.Series:
         med = g[col].median()
         mad = (g[col] - med).abs().median()
@@ -230,7 +233,7 @@ def main() -> None:
         "flagged_names": fr_z.loc[fr_z["flag"], "name"].tolist(),
     }
 
-    # бланковые/недействительные: медианы и экстремумы секций
+    # blank/invalid: medians and extremes of sections
     blank_pct = 100.0 * data.df["blank_votes"] / data.df["voted"]
     null_pct = 100.0 * data.df["null_votes"] / data.df["voted"]
     metrics["ballot_shares"] = {
@@ -240,7 +243,7 @@ def main() -> None:
         "null_max_name": str(data.df.loc[null_pct.idxmax(), "name"]),
     }
 
-    # арифметика строк исходного CSV: суммы должны сходиться до единого бюллетеня
+    # arithmetic of the source CSV rows: sums must match down to a single ballot
     raw = pd.read_csv(CSV, encoding="utf-8-sig")
     raw = raw[raw["nivel"] == "secao"]
     raw_votes = raw[[c for c in raw.columns if c.startswith("votes:")]].fillna(0)
@@ -250,25 +253,25 @@ def main() -> None:
         "max_diff_ballots": float(d_votes.max()), "max_diff_electorate": float(d_elec.max()),
         "n_mismatch_rows": int((d_votes > 0).sum() + (d_elec > 0).sum()),
     }
-    print(f"[7/8] доп. проверки: пики долей топ-6 z∈[{min(p['z'] for p in peaks_parties):+.1f}; "
-          f"{max(p['z'] for p in peaks_parties):+.1f}]; дубликатов {metrics['duplicate_protocol_rows']}; "
-          f"ML-кандидатов {metrics['ml_flagged']}; внутрифрегезионных выбросов "
-          f"{metrics['within_freguesia']['flagged']}; арифметика: расхождений "
+    print(f"[7/8] extra checks: top-6 share peaks z∈[{min(p['z'] for p in peaks_parties):+.1f}; "
+          f"{max(p['z'] for p in peaks_parties):+.1f}]; duplicates {metrics['duplicate_protocol_rows']}; "
+          f"ML candidates {metrics['ml_flagged']}; within-freguesia outliers "
+          f"{metrics['within_freguesia']['flagged']}; arithmetic: mismatches "
           f"{metrics['internal_consistency']['n_mismatch_rows']}")
 
-    # --- самотест: видны ли инъекции при n=91 ---
+    # --- self-test: are injections visible at n=91 ---
     report = run_selftest(data, leader)
     injected, _ = inject_additive_fraud(data, leader)
     plots.plot_selftest(data, injected, leader, report, fig_dir)
     metrics["selftest"] = report.to_dict()
-    print(f"[8/8] самотест: сигнал ×{report.signal_growth:,.0f} "
-          f"({report.clean_tail_party} → {report.injected_tail_party} голосов); "
-          f"целые пики z {report.peaks_z_clean:.1f} → {report.peaks_z_rounded:.1f}")
+    print(f"[8/8] self-test: signal ×{report.signal_growth:,.0f} "
+          f"({report.clean_tail_party} → {report.injected_tail_party} votes); "
+          f"integer peaks z {report.peaks_z_clean:.1f} → {report.peaks_z_rounded:.1f}")
 
     metrics["turnout_comparison"] = freguesia_comparison(data)
     with open(OUT / "metrics.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2, default=float)
-    print(f"готово: {OUT}")
+    print(f"done: {OUT}")
 
 
 if __name__ == "__main__":

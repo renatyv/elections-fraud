@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
-"""Стратифицированный прогон: Шпилькин и отпечатки Klimek по макрорегионам.
+"""Stratified run: Shpilkin and Klimek fingerprints by macro-regions.
 
-Проверяет устойчивость выводов разделов 2-3 ОТЧЁТа к региональной
-неоднородности (Северо-Восток Лулы против Болсонару-Юга; §13.2): граница
-честного ядра и смеси 2D-гауссиан считаются ВНУТРИ каждого макрорегиона,
-распределение региона служит контролем самого себя (до добавления
-контрольных выборов-2022; сейчас контроль — scripts/control_forensics.py,
-раздел 12 ОТЧЁТа). Дополнительно — разбор «угла» (явка ≥90% И доля ≥75%)
-относительно региональной границы: насколько высокоявочные секции СВ
-нормальны для своего региона.
+Checks the robustness of the conclusions of sections 2-3 of the REPORT against
+regional heterogeneity (Lula's Northeast vs Bolsonaro's South; §13.2): the honest-core
+boundary and the 2D-Gaussian mixtures are computed WITHIN each macro-region,
+the region's distribution serves as its own control (before the 2022 control
+elections were added; the control is now scripts/control_forensics.py,
+section 12 of the REPORT). Additionally — a breakdown of the "corner"
+(turnout ≥90% AND share ≥75%) against the regional boundary: how normal the
+high-turnout NE sections are for their region.
 
-Запуск: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/stratified_forensics.py
-Выход: brazil-oct-2026/analysis/{figures/shpilkin_regions.png, fingerprint_*_regions.png,
+Run: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/stratified_forensics.py
+Output: brazil-oct-2026/analysis/{figures/shpilkin_regions.png, fingerprint_*_regions.png,
        tables/{shpilkin_by_region,fingerprints_by_region,corners_by_region}.csv,
        metrics_stratified.json}
 
-Флаги: --lang ru|en|pt|es — язык подписей графиков (по умолчанию ru);
---fig-out DIR — записать фигуры (а также таблицы и metrics_stratified.json)
-в DIR, не трогая brazil-oct-2026/analysis/.
+Flags: --lang ru|en|pt|es — figure label language (default en);
+--fig-out DIR — write the figures (plus tables and metrics_stratified.json)
+into DIR without touching brazil-oct-2026/analysis/.
 """
 
 from __future__ import annotations
@@ -34,7 +34,7 @@ import pandas as pd
 BR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "analysis-tool" / "src"))
 
-from election_forensics import plots  # noqa: E402  (стиль/rcParams)
+from election_forensics import plots  # noqa: E402  (style/rcParams)
 from election_forensics.data import ElectionData  # noqa: E402
 from election_forensics.fingerprints import fingerprint_mixture  # noqa: E402
 from election_forensics.i18n import label  # noqa: E402
@@ -55,11 +55,12 @@ MACRO = {
     "S": ["PR", "RS", "SC"],
     "ZZ": ["ZZ"],
 }
-REG_NAMES = {"N": "Север", "NE": "Северо-Восток", "CW": "Центр.-Запад",
-             "SE": "Юго-Восток", "S": "Юг", "ZZ": "Заграница"}
-# имена макрорегионов на графиках (metrics/журнал — всегда русские REG_NAMES)
+REG_NAMES = {"N": "North", "NE": "Northeast", "CW": "Centre-West",
+             "SE": "Southeast", "S": "South", "ZZ": "Abroad"}
+# macro-region names on the figures (metrics/log always use REG_NAMES); --lang ru keeps Russian
 REG_NAMES_I18N: dict[str, dict[str, str]] = {
-    "ru": REG_NAMES,
+    "ru": {"N": "Север", "NE": "Северо-Восток", "CW": "Центр.-Запад",
+           "SE": "Юго-Восток", "S": "Юг", "ZZ": "Заграница"},
     "en": {"N": "North", "NE": "Northeast", "CW": "Centre-West",
            "SE": "Southeast", "S": "South", "ZZ": "Abroad"},
     "pt": {"N": "Norte", "NE": "Nordeste", "CW": "Centro-Oeste",
@@ -73,7 +74,7 @@ CAND_NAMES: dict[str, dict[str, str]] = {
     "pt": {"BOLSONARO": "Bolsonaro", "LULA": "Lula"},
     "es": {"BOLSONARO": "Bolsonaro", "LULA": "Lula"},
 }
-# --- подписи кастомных графиков (ru|en|pt|es) --------------------------------
+# --- custom figure labels (ru|en|pt|es) ---------------------------------------
 TR: dict[str, dict[str, str]] = {
     "ru": {
         "reg_cut": "{reg}: граница {t}%",
@@ -128,8 +129,8 @@ TR: dict[str, dict[str, str]] = {
 }
 
 REG_ORDER = ["N", "NE", "CW", "SE", "S", "ZZ"]
-# ZZ (1 309 секций): квантиль и смесь на таком n неустойчивы — считается
-# для полноты, в выводах отчёта оговаривается отдельно
+# ZZ (1,309 sections): the quantile and mixture are unstable at this n — computed
+# for completeness, with a separate caveat in the report's conclusions
 REG_STABLE = ["N", "NE", "CW", "SE", "S"]
 REG_COLORS = {"N": "#8c564b", "NE": "#d62728", "CW": "#e6960c",
               "SE": "#1f77b4", "S": "#2ca02c", "ZZ": "#7f7f7f"}
@@ -140,8 +141,8 @@ def log(msg: str) -> None:
 
 
 def corner_stats(data: ElectionData, party: str, t_cut: float) -> dict:
-    """«Угол» (явка ≥90% И доля партии ≥75%) и его положение относительно
-    региональной границы честного спада."""
+    """The "corner" (turnout ≥90% AND party share ≥75%) and its position relative
+    to the region's honest-decline boundary."""
     t = data.turnout.to_numpy()
     s = data.share(party).to_numpy()
     m = (t >= 90) & (s >= 75)
@@ -163,7 +164,7 @@ def plot_shpilkin_regions(rows: list[dict], datas: dict[str, ElectionData],
     for reg in REG_ORDER:
         d = datas[reg]
         centers, h = votes_by_turnout(d, None, 0.5)
-        dens = h / h.sum()  # доля проголосовавших региона — формы сравнимы
+        dens = h / h.sum()  # share of the region's voters — shapes are comparable
         r = next(x for x in rows if x["reg"] == reg)
         ax.plot(centers, dens, drawstyle="steps-mid", lw=1.2, color=REG_COLORS[reg],
                 label=tr["reg_cut"].format(reg=reg_names[reg], t=f"{r['t_cut']:.1f}"))
@@ -183,9 +184,9 @@ def plot_shpilkin_regions(rows: list[dict], datas: dict[str, ElectionData],
     ax.bar(x - w / 2, vals_l, w, color="#1f77b4", label=CAND_NAMES[lang]["BOLSONARO"])
     ax.bar(x + w / 2, vals_r, w, color="#d62728", label=CAND_NAMES[lang]["LULA"])
     for xi, v in zip(x - w / 2, vals_l):
-        ax.text(xi, v + 0.015, f"{v:.2f}".replace(".", ","), ha="center", fontsize=6.5, color="#1f77b4")
+        ax.text(xi, v + 0.015, f"{v:.2f}", ha="center", fontsize=6.5, color="#1f77b4")
     for xi, v in zip(x + w / 2, vals_r):
-        ax.text(xi, v + 0.015, f"{v:.2f}".replace(".", ","), ha="center", fontsize=6.5, color="#d62728")
+        ax.text(xi, v + 0.015, f"{v:.2f}", ha="center", fontsize=6.5, color="#d62728")
     ax.set_ylim(0, max(vals_l + vals_r) * 1.3)
     ax.axhline(0.62, color="k", lw=0.8, ls=":", label=tr["nat_ref"])
     ax.set_xticks(x, REG_ORDER, fontsize=8)
@@ -229,11 +230,11 @@ def plot_fingerprint_regions(datas: dict[str, ElectionData], fps: dict[tuple[str
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Стратификация Бразилия-2026 по макрорегионам")
-    ap.add_argument("--lang", default="ru", choices=["ru", "en", "pt", "es"],
-                    help="язык подписей графиков (по умолчанию ru)")
+    ap = argparse.ArgumentParser(description="Brazil-2026 stratification by macro-regions")
+    ap.add_argument("--lang", default="en", choices=["ru", "en", "pt", "es"],
+                    help="figure label language (default en)")
     ap.add_argument("--fig-out", type=Path, default=None,
-                    help="каталог для фигур/таблиц/metrics вместо brazil-oct-2026/analysis/")
+                    help="directory for figures/tables/metrics instead of brazil-oct-2026/analysis/")
     args = ap.parse_args()
     lang = args.lang
     if args.fig_out is not None:
@@ -250,7 +251,7 @@ def main() -> None:
     party_cols = [c for c in df.columns if c.startswith("votes:")]
     uf2macro = {uf: m for m, ufs in MACRO.items() for uf in ufs}
     df["reg"] = df["uf"].map(uf2macro)
-    assert df["reg"].notna().all(), "UF без маппинга на макрорегион"
+    assert df["reg"].notna().all(), "UF without a macro-region mapping"
 
     datas: dict[str, ElectionData] = {}
     rows: list[dict] = []
@@ -303,9 +304,9 @@ def main() -> None:
                 "corner_share_pct_of_party": round(
                     100 * corner["corner_votes_party"] / d.df[party].sum(), 3),
             })
-        log(f"{REG_NAMES[reg]}: граница {shp_l.t_cut:.1f}%; хвост Болсонару "
-            f"{shp_l.tail_share_of_party:.2f}% его голосов, Лулы {shp_r.tail_share_of_party:.2f}%; "
-            f"2-я компонента {fp_rows[-2]['weight_anom']}/{fp_rows[-1]['weight_anom']}")
+        log(f"{REG_NAMES[reg]}: boundary {shp_l.t_cut:.1f}%; Bolsonaro tail "
+            f"{shp_l.tail_share_of_party:.2f}% of his votes, Lula {shp_r.tail_share_of_party:.2f}%; "
+            f"2nd component {fp_rows[-2]['weight_anom']}/{fp_rows[-1]['weight_anom']}")
 
     shp_tab = pd.DataFrame(rows)
     fp_tab = pd.DataFrame(fp_rows)
@@ -318,11 +319,11 @@ def main() -> None:
     plot_fingerprint_regions(datas, fps, LEADER, "fingerprint_bolsonaro_regions.png", lang, fig_dir)
     plot_fingerprint_regions(datas, fps, RUNNER_UP, "fingerprint_lula_regions.png", lang, fig_dir)
 
-    # сверка: сумма региональных хвостов против национального прогона (§2)
+    # cross-check: sum of regional tails against the national run (§2)
     national = {"t_cut": 91.6, "tail_voters": 779_412, "leader_tail": 272_315,
                 "runner_tail": 430_824}
     metrics = {
-        "title": "Бразилия 1-й тур 2026: стратификация по макрорегионам (Шпилькин, отпечатки)",
+        "title": "Brazil 1st round 2026: stratification by macro-regions (Shpilkin, fingerprints)",
         "regions": REG_ORDER, "stable_regions": REG_STABLE,
         "shpilkin_by_region": rows,
         "fingerprints_by_region": fp_rows,
@@ -333,16 +334,16 @@ def main() -> None:
             "runner": int(shp_tab["runner_tail_votes"].sum()),
         },
         "national_run_for_reference": national,
-        "note": "граница каждого региона — собственный q99.5 (контрольных выборов нет); "
-                "ZZ: n=1309, квантиль/смесь неустойчивы, только справочно",
+        "note": "each region's boundary is its own q99.5 (no control election); "
+                "ZZ: n=1309, quantile/mixture unstable, reference only",
     }
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2, default=float)
 
-    log(f"сумма региональных хвостов: {metrics['sum_of_regional_tails']['leader']:,} "
-        f"(Болсонару) / {metrics['sum_of_regional_tails']['runner']:,} (Лула) "
-        f"против национального прогона {national['leader_tail']:,}/{national['runner_tail']:,}")
-    log(f"готово: {OUT}")
+    log(f"sum of regional tails: {metrics['sum_of_regional_tails']['leader']:,} "
+        f"(Bolsonaro) / {metrics['sum_of_regional_tails']['runner']:,} (Lula) "
+        f"against the national run {national['leader_tail']:,}/{national['runner_tail']:,}")
+    log(f"done: {OUT}")
 
 
 if __name__ == "__main__":

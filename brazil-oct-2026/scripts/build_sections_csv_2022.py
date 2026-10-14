@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Сборка секционного датасета президента BR-2022 (оба тура) в формат ElectionData.
+"""Build the BR-2022 president section dataset (both rounds) in the ElectionData format.
 
-Контрольные данные для анализа 2026: те же территории/секции, выгрузка TSE
-data/votacao_secao_2022/ (датасет resultados-2022; 1-й тур 02.10.2022,
-2-й тур 30.10.2022):
-  - detalhe_votacao_secao_2022_BRASIL.csv — электорат/явка по секциям
-    (фильтр: CD_CARGO=1 президент; CD_ELEICAO=544 → 1-й тур, 545 → 2-й);
-  - votacao_secao_2022_BR.csv — голоса по (секция × votável), пивот в колонки
-    votes:<NR>-<ИМЯ>; VOTO BRANCO (95) -> blank_votes, VOTO NULO (96) -> null_votes.
-    Строки с нулевыми голосами TSE опускает → после пивота недостающие = 0
-    (проверяется против QT_VOTOS_NOMINAIS detalhe).
+Control data for the 2026 analysis: the same territories/sections, TSE export
+data/votacao_secao_2022/ (dataset resultados-2022; 1st round 02.10.2022,
+2nd round 30.10.2022):
+  - detalhe_votacao_secao_2022_BRASIL.csv — electorate/turnout per section
+    (filter: CD_CARGO=1 president; CD_ELEICAO=544 → 1st round, 545 → 2nd);
+  - votacao_secao_2022_BR.csv — votes per (section × votável), pivoted into
+    votes:<NR>-<NAME> columns; VOTO BRANCO (95) -> blank_votes, VOTO NULO (96) -> null_votes.
+    TSE omits rows with zero votes → after the pivot missing = 0
+    (checked against QT_VOTOS_NOMINAIS of detalhe).
 
-Выход: data/secoes_presidente_2022.csv (колонка turno: 1|2; прочий формат как у
-secoes_presidente_2026.csv) и data/secoes_presidente_2022_checks.json.
+Output: data/secoes_presidente_2022.csv (column turno: 1|2; the rest of the format as in
+secoes_presidente_2026.csv) and data/secoes_presidente_2022_checks.json.
 """
 
 from __future__ import annotations
@@ -27,13 +27,13 @@ import pandas as pd
 BR = Path(__file__).resolve().parents[1]
 DATA = BR / "data" / "votacao_secao_2022"
 
-# короткие имена кандидатов для колонок votes: (номера бюллетеня 2022)
+# short candidate names for the votes: columns (2022 ballot numbers)
 SHORT = {
     "13": "LULA", "22": "BOLSONARO", "15": "TEBET", "12": "CIRO",
     "44": "SORAYA", "30": "DAVILA", "14": "KELMON", "80": "PERICLES",
     "21": "MANZANO", "16": "VERA", "27": "EYMAEL",
 }
-CD_ELEICAO_TURNO = {"544": "1", "545": "2"}  # ELEIÇÃO GERAL FEDERAL 2022, туры 1/2
+CD_ELEICAO_TURNO = {"544": "1", "545": "2"}  # ELEIÇÃO GERAL FEDERAL 2022, rounds 1/2
 
 KEY_COLS = ["SG_UF", "CD_MUNICIPIO", "NR_ZONA", "NR_SECAO"]
 
@@ -51,7 +51,7 @@ def read_detalhe() -> pd.DataFrame:
         encoding="latin-1", sep=";", quoting=1, dtype=str, usecols=usecols,
     )
     df = df[(df.CD_CARGO == "1") & (df.CD_ELEICAO.isin(CD_ELEICAO_TURNO))]
-    assert (df.CD_ELEICAO.map(CD_ELEICAO_TURNO) == df.NR_TURNO).all(), "CD_ELEICAO/NR_TURNO расходятся"
+    assert (df.CD_ELEICAO.map(CD_ELEICAO_TURNO) == df.NR_TURNO).all(), "CD_ELEICAO/NR_TURNO disagree"
     for c in df.columns:
         if c.startswith("QT_"):
             df[c] = pd.to_numeric(df[c]).astype("int64")
@@ -139,14 +139,14 @@ def build_turn(det: pd.DataFrame, vot: pd.DataFrame, turno: str, checks: dict) -
 def main() -> None:
     det = read_detalhe()
     vot = read_votacao()
-    print(f"detalhe: {len(det)} строк президента; votacao: {len(vot)} строк")
+    print(f"detalhe: {len(det)} president rows; votacao: {len(vot)} rows")
 
     checks: dict = {}
     out1 = build_turn(det, vot, "1", checks)
     out2 = build_turn(det, vot, "2", checks)
     out = pd.concat([out1, out2], ignore_index=True)
 
-    # единый набор колонок голосов по обоим турам (у 2-го тура минорные = 0)
+    # single set of vote columns across both rounds (round 2 minors = 0)
     vote_cols = sorted({c for c in out1.columns if c.startswith("votes:")}
                        | {c for c in out2.columns if c.startswith("votes:")})
     for col in vote_cols:

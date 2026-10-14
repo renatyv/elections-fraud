@@ -1,152 +1,152 @@
-# Словения: четыре общенациональных референдума — 11 октября 2026
+# Slovenia: four nationwide referendums — 11 October 2026
 
-**TL;DR.** В воскресенье 11.10.2026 в Словении одновременно проходят **четыре референдума**: один законодательный (о вступлении в силу поправок в закон о парламентских расследованиях) и три консультативных (социальная помощь, избирательные права иностранцев на местных выборах, отмена взноса на RTV Slovenija). Голосование на участках — 7:00–19:00, предварительные результаты — **после ~20:00** на портале `volitve.dvk-rs.si`. DVK публикует машиночитаемые данные (JSON/CSV/XLSX) по 8 файлам на референдум + 88 файлов по участкам — проект на uv (`uv run sloref fetch --loop`) скачивает их каждые 15 минут и складывает в `data/`; база трендов уже собрана.
+**TL;DR.** On Sunday 11.10.2026 Slovenia holds **four referendums simultaneously**: one legislative (on bringing into force amendments to the parliamentary investigation act) and three advisory ones (social assistance, voting rights of foreigners in local elections, abolishing the RTV Slovenija fee). Voting at precincts — 7:00–19:00, preliminary results — **after ~20:00** on the `volitve.dvk-rs.si` portal. DVK publishes machine-readable data (JSON/CSV/XLSX), 8 files per referendum + 88 per-precinct files — a uv project (`uv run sloref fetch --loop`) downloads them every 15 minutes and stores them in `data/`; the trend base is already collected.
 
 ---
 
-## 1. Что выносится на голосование
+## 1. What is on the ballot
 
-Государственное собрание (Državni zbor) 23 июля 2026 издало указ о законодательном референдуме по ZPPre-B, а 28 августа 2026 — три указа о консультативных референдумах. Все четыре проходят в один день, каждый со своим бюллетенем; избиратель обводит «ZA» (за) или «PROTI» (против).
+The National Assembly (Državni zbor) issued on 23 July 2026 the decree on the legislative referendum on ZPPre-B, and on 28 August 2026 three decrees on advisory referendums. All four take place on the same day, each with its own ballot; the voter circles «ZA» (yes) or «PROTI» (no).
 
-1. **Законодательный референдум о Законе о изменениях и дополнениях Закона о парламентском расследовании (ZPPre-B)** — «Согласны ли вы, чтобы вступил в силу закон о изменениях и дополнениях Закона о парламентском расследовании (ZPPre-B), принятый Государственным собранием 26 мая 2026?»
-2. **Консультативный: социальная помощь** — «Согласны ли вы, чтобы право на денежную социальную помощь для трудоспособных лиц без объективных препятствий к работе обусловливалось их активным выполнением общественно-полезного труда?»
-3. **Консультативный: избирательное право на местных выборах** — «Согласны ли вы, чтобы голосовать на местных выборах в РС имели право граждане Словении или других стран ЕС, но не граждане третьих стран?»
-4. **Консультативный: RTV Slovenija** — «Согласны ли вы, чтобы отменялась обязательная уплата взноса на программы Radiotelevizija Slovenija?»
+1. **Legislative referendum on the Act Amending and Supplementing the Parliamentary Investigation Act (ZPPre-B)** — «Do you consent that the act amending and supplementing the Parliamentary Investigation Act (ZPPre-B), adopted by the National Assembly on 26 May 2026, enters into force?»
+2. **Advisory: social assistance** — «Do you consent that the right to monetary social assistance for able-bodied persons without objective obstacles to work is made conditional on their active performance of socially useful work?»
+3. **Advisory: voting rights in local elections** — «Do you consent that only citizens of Slovenia or other EU countries — and not citizens of third countries — have the right to vote in local elections in the Republic of Slovenia?»
+4. **Advisory: RTV Slovenija** — «Do you consent that the mandatory payment of the Radiotelevizija Slovenija contribution is abolished?»
 
-Консультативные референдумы не имеют кворума и их результат юридически не обязателен. Для законодательного референдума действует правило ст. 90 Конституции: закон **отклоняется**, если «против» проголосовало большинство действительных голосов **и** «против» высказалось не менее 1/5 всех избирателей (иначе закон вступает в силу).
+Advisory referendums have no quorum and their outcome is not legally binding. For the legislative referendum the rule of Art. 90 of the Constitution applies: the act is **rejected** if a majority of valid votes votes «no» **and** at least 1/5 of all voters votes «no» (otherwise the act enters into force).
 
-## 2. Как проходит голосование
+## 2. How the voting works
 
-- **День и время:** воскресенье 11.10.2026, участки открыты **7:00–19:00**.
-- **Кто голосует:** граждане Словении с активным избирательным правом; голосуют по месту постоянного проживания, по предъявлении удостоверения личности.
-- **За рубежом:** 30 участков в диппредставительствах (Клагенфурт, Кливленд, Мюнхен, Торонто, Триест, посольства и др.) плюс голосование по почте; заявки на особые формы голосования принимались до 25.09.2026 через портал eUprava.
-- **Досрочное голосование** проходило на специальных участках; для инвалидов доступны доступные участки и участки типа OMNIA.
-- **Инфолиния:** 080 28 18 (бесплатно, 28.09–11.10, в день голосования 7:00–19:00).
-- **Территориальная структура подсчёта:** 8 избирательных единиц (volilna enota), в каждой до 11 округов (okraj), внутри — избирательные участки (volišče); отдельно считаются голоса из-за рубежа, по почте и на спецучастках, поэтому суммы по округам могут не сходиться с национальным итогом (это официально предупреждает DVK).
+- **Day and hours:** Sunday 11.10.2026, precincts open **7:00–19:00**.
+- **Who votes:** citizens of Slovenia with active voting rights; voting at the place of permanent residence, upon presenting an identity document.
+- **Abroad:** 30 precincts in diplomatic missions (Klagenfurt, Cleveland, Munich, Toronto, Trieste, embassies, etc.) plus voting by post; applications for special forms of voting were accepted until 25.09.2026 through the eUprava portal.
+- **Early voting** took place at special precincts; accessible precincts and OMNIA-type precincts are available for people with disabilities.
+- **Info line:** 080 28 18 (free of charge, 28.09–11.10, on election day 7:00–19:00).
+- **Territorial structure of the count:** 8 electoral units (volilna enota), each with up to 11 districts (okraj), and inside them — precincts (volišče); votes from abroad, by post and at special precincts are counted separately, so district sums may not add up to the national result (DVK officially warns about this).
 
-## 3. Расписание публикаций данных 11 октября (по официальной документации DVK)
+## 3. Data publication schedule for 11 October (per the official DVK documentation)
 
-| Время | Что публикуется |
+| Time | What is published |
 |---|---|
-| ~11:00 и ~16:00 | явка — **только** по законодательному референдуму |
-| 19:00 | явка по всем четырём референдумам |
-| после ~20:00 | предварительные результаты, далее периодическое обновление до финала (флаг `is_final` в файлах по участкам) |
+| ~11:00 and ~16:00 | turnout — **only** for the legislative referendum |
+| 19:00 | turnout for all four referendums |
+| after ~20:00 | preliminary results, then periodic updates until the final (the `is_final` flag in the per-precinct files) |
 
-До появления данных файлы `udelezba.json`/`rezultati.json` содержат только поле `datum` — так и должно быть.
+Before the data appears, the `udelezba.json`/`rezultati.json` files contain only the `datum` field — that is how it should be.
 
-## 4. Где следить онлайн
+## 4. Where to follow online
 
-- **Портал результатов (официальный, с графиками):** [volitve.dvk-rs.si/referendum-preiskava](https://volitve.dvk-rs.si/referendum-preiskava), […/referendum-socialna-pomoc](https://volitve.dvk-rs.si/referendum-socialna-pomoc), […/referendum-volilna-pravica-tujcev](https://volitve.dvk-rs.si/referendum-volilna-pravica-tujcev), […/referendum-rtv-prispevek](https://volitve.dvk-rs.si/referendum-rtv-prispevek)
-- **Государственная избирательная комиссия (DVK):** [dvk-rs.si](https://www.dvk-rs.si/) — акты, новости, страницы референдумов (раздел «Volitve in referendumi → Referendumi»).
-- **volitve.gov.si** — традиционный портал подробных результатов (архивы выборов по подпапкам `/dz2014/`, `/ep2014/` и т.п.). На 10.10.2026 отдаёт заглушку «содержимое недоступно» — вероятно, обновляется перед голосованием; стоит проверить в день выборов.
-- **Открытые данные:** [data.gov.si](https://data.gov.si/) — 188 наборов по запросу «volitve» (списки участков, выборы президента, ЕП и др.).
-- СМИ для оперативной картинки: RTV Slovenija (rtvslo.si), STA (sta.si), 24ur.com — считают те же файлы DVK.
+- **Results portal (official, with charts):** [volitve.dvk-rs.si/referendum-preiskava](https://volitve.dvk-rs.si/referendum-preiskava), […/referendum-socialna-pomoc](https://volitve.dvk-rs.si/referendum-socialna-pomoc), […/referendum-volilna-pravica-tujcev](https://volitve.dvk-rs.si/referendum-volilna-pravica-tujcev), […/referendum-rtv-prispevek](https://volitve.dvk-rs.si/referendum-rtv-prispevek)
+- **State Electoral Commission (DVK):** [dvk-rs.si](https://www.dvk-rs.si/) — acts, news, referendum pages (the «Volitve in referendumi → Referendumi» section).
+- **volitve.gov.si** — the traditional portal of detailed results (election archives in subfolders `/dz2014/`, `/ep2014/`, etc.). As of 10.10.2026 it serves a «content unavailable» placeholder — probably being updated before the vote; worth checking on election day.
+- **Open data:** [data.gov.si](https://data.gov.si/) — 188 datasets for the query «volitve» (precinct lists, presidential, EP elections, etc.).
+- Media for a real-time picture: RTV Slovenija (rtvslo.si), STA (sta.si), 24ur.com — they read the same DVK files.
 
-## 5. Машиночитаемые данные (то, что скрейпим)
+## 5. Machine-readable data (what we scrape)
 
-Для каждого из 4 референдумов (slug: `referendum-preiskava`, `referendum-socialna-pomoc`, `referendum-volilna-pravica-tujcev`, `referendum-rtv-prispevek`) по адресу `https://volitve.dvk-rs.si/<slug>/data/<файл>`:
+For each of the 4 referendums (slug: `referendum-preiskava`, `referendum-socialna-pomoc`, `referendum-volilna-pravica-tujcev`, `referendum-rtv-prispevek`) at `https://volitve.dvk-rs.si/<slug>/data/<file>`:
 
-| Файл | Содержимое |
+| File | Contents |
 |---|---|
-| `udelezba.json` / `udelezba.csv` | явка: избиратели, голосовавшие, % — по стране, 8 единицам, 88 округам, спецучасткам OMNIA |
-| `rezultati.json` / `rezultati.csv` | итоги: ЗА/ПРОТИ (голоса и доли), бюллетени/действительные/недействительные, по той же иерархии |
-| `izvoz.xlsx` | сводный Excel (листы «Podatki» и «Podatki po voliščih») |
-| `volisca_01_01.json … volisca_08_11.json` | итоги **по каждому участку** (88 файлов на референдум), статус в объекте `nastavitve` (`has_udelezba`, `has_rezultat`, `is_final`) |
+| `udelezba.json` / `udelezba.csv` | turnout: registered, voted, % — by country, 8 units, 88 districts, OMNIA special precincts |
+| `rezultati.json` / `rezultati.csv` | results: ZA/PROTI (votes and shares), ballots/valid/invalid, over the same hierarchy |
+| `izvoz.xlsx` | summary Excel (sheets «Podatki» and «Podatki po voliščih») |
+| `volisca_01_01.json … volisca_08_11.json` | results **per precinct** (88 files per referendum), status in the `nastavitve` object (`has_udelezba`, `has_rezultat`, `is_final`) |
 
-Нюансы формата: проценты — доли (0.4825); доля посчитанных бюллетеней = `rezultati.glas / udelezba.slovenija.gl`; временные метки — словенское локальное время в Zulu-форме (`2026-10-11T19:00:00Z` = 19:00 CET); CSV — разделитель `;`, десятичная запятая, первая строка — `dd;mm;yyyy;hh;nn`. Официальное описание полей: [docs/Referendumi_2026_-_datoteke_s_podatki.docx](docs/Referendumi_2026_-_datoteke_s_podatki.docx) (копия инструкции DVK для СМИ от 14.09.2026).
+Format nuances: percentages are fractions (0.4825); the share of counted ballots = `rezultati.glas / udelezba.slovenija.gl`; timestamps are Slovenian local time in Zulu form (`2026-10-11T19:00:00Z` = 19:00 CET); CSV — `;` separator, decimal comma, first line — `dd;mm;yyyy;hh;nn`. Official field description: [docs/Referendumi_2026_-_datoteke_s_podatki.docx](docs/Referendumi_2026_-_datoteke_s_podatki.docx) (a copy of the DVK instruction for media of 14.09.2026).
 
-## 6. Данные прошлых выборов Словении
+## 6. Data of past Slovenian elections
 
-- **Архив референдумов DVK:** [dvk-rs.si → Referendumi](https://www.dvk-rs.si/volitve-in-referendumi/referendumi/) и «Arhiv referendumov». На странице каждого прошедшего голосования лежат те же `rezultati.json/csv`:
-  - законодательные 2025: ZPPKŽ, ZDPID;
-  - консультативные 09.06.2024: эвтаназия, преференциальное голосование, конопля;
-  - референдумы 2022: о правительстве, о долгосрочном уходе, о RTV;
-  - ZV-1G 2021 (закон о водах), повторное голосование по ZIUGDT 2018.
-- **Архивы volitve.gov.si** — подробные результаты парламентских (2000–2022), президентских, евровыборов и местных выборов по подпапкам; сайт сейчас в статусе «недоступен», старые версии доступны через Wayback Machine (web.archive.org).
-- **data.gov.si** — открытые данные: списки участков, результаты выборов президента/ЕП, исторические серии (ADP).
-- Пример структуры файла прошлых лет: `data/latest` на старте содержал шаблон DVK с итогами референдума RTV 2022 (`slovenija` → ЗА 13,25 % / ПРОТИ 86,75 %).
+- **DVK referendum archive:** [dvk-rs.si → Referendumi](https://www.dvk-rs.si/volitve-in-referendumi/referendumi/) and «Arhiv referendumov». The page of each past vote has the same `rezultati.json/csv`:
+  - legislative 2025: ZPPKŽ, ZDPID;
+  - advisory 09.06.2024: euthanasia, preferential voting, cannabis;
+  - referendums 2022: on the government, on long-term care, on RTV;
+  - ZV-1G 2021 (water act), the repeated vote on ZIUGDT 2018.
+- **volitve.gov.si archives** — detailed results of parliamentary (2000–2022), presidential, EP and local elections in subfolders; the site is currently «unavailable», old versions accessible via the Wayback Machine (web.archive.org).
+- **data.gov.si** — open data: precinct lists, presidential/EP election results, historical series (ADP).
+- An example of the file structure of past years: `data/latest` at the start contained a DVK template with the results of the 2022 RTV referendum (`slovenija` → ZA 13.25% / PROTI 86.75%).
 
-## 7. Проект сбора данных (uv)
+## 7. The data collection project (uv)
 
-Стандартный uv-проект: пакет `src/sloref`, HTTP-клиент — **httpx2** (next-gen преемник httpx, тот же автор), для анализа сразу подключены **pandas** и **matplotlib**, тесты — pytest, линтер — ruff.
+A standard uv project: the `src/sloref` package, HTTP client — **httpx2** (the next-gen successor of httpx, same author), **pandas** and **matplotlib** connected for analysis right away, tests — pytest, linter — ruff.
 
 ```bash
-uv sync                              # установка зависимостей (.venv, uv.lock)
-uv run sloref fetch                  # один опрос: 4 референдума × 5 файлов
-uv run sloref fetch --loop           # бесконечный цикл, интервал 900 с (15 минут)
-uv run sloref fetch --loop --volisca --interval 300   # + участки, свой интервал
-uv run sloref summary                # сводная таблица текущих цифр (pandas)
-uv run sloref plot                   # PNG-графики трендов → data/plots/
+uv sync                              # install dependencies (.venv, uv.lock)
+uv run sloref fetch                  # one poll: 4 referendums × 5 files
+uv run sloref fetch --loop           # endless loop, interval 900 s (15 minutes)
+uv run sloref fetch --loop --volisca --interval 300   # + precincts, own interval
+uv run sloref summary                # summary table of the current figures (pandas)
+uv run sloref plot                   # PNG trend plots → data/plots/
 ```
 
-Модули: `config.py` (референдумы/URL/пути), `httpclient.py` (httpx2: повторы, 404 = «данных ещё нет», IPv4-only), `models.py` (общенациональные показатели из JSON), `storage.py` (latest/raw-снимки, timeseries.csv, журнал), `scraper.py` (опрос/цикл), `analysis.py` (pandas), `plotting.py` (matplotlib), `cli.py`. Тесты — `uv run pytest`, линтер — `uv run ruff check .`.
+Modules: `config.py` (referendums/URLs/paths), `httpclient.py` (httpx2: retries, 404 = «no data yet», IPv4-only), `models.py` (nationwide figures from the JSON), `storage.py` (latest/raw snapshots, timeseries.csv, log), `scraper.py` (poll/loop), `analysis.py` (pandas), `plotting.py` (matplotlib), `cli.py`. Tests — `uv run pytest`, linter — `uv run ruff check .`.
 
-Что сохраняется в `data/`:
+What is stored in `data/`:
 
-- `latest/<референдум>/` — последние версии файлов;
-- `raw/<дата>/<время>/<референдум>/` — снимки **только изменившихся** файлов (по SHA-256), так что история обновлений сохраняется без дубликатов;
-- `timeseries.csv` — точки тренда: строка дописывается, когда меняются общенациональные цифры (метка `source_datum` сервера, явка, посчитано %, ЗА/ПРОТИ с долями);
-- `plots/<референдум>.png` — графики трендов (`sloref plot`);
-- `scrape.log` — журнал.
+- `latest/<referendum>/` — latest versions of the files;
+- `raw/<date>/<time>/<referendum>/` — snapshots of **only changed** files (by SHA-256), so the update history is kept without duplicates;
+- `timeseries.csv` — trend points: a row is appended when the nationwide figures change (the server's `source_datum` stamp, turnout, counted %, ZA/PROTI with shares);
+- `plots/<referendum>.png` — trend plots (`sloref plot`);
+- `scrape.log` — the log.
 
-Первый опрос выполнен 10.10.2026: все 20 файлов доступны, сервер отдаёт структуру с нулевыми значениями (ожидание данных дня голосования).
+The first poll was run on 10.10.2026: all 20 files available, the server returns a zeroed-out structure (waiting for the election-day data).
 
-**Чтобы данные собирались автоматически:** оставить запущенным `uv run sloref fetch --loop` (или через `nohup … &`, cron/launchd — примеры в [README.md](README.md)). Если нужно, чтобы ZCode сам запускал сбор каждые 15 минут — это настраивается отдельной автоматизацией.
+**To have the data collected automatically:** keep `uv run sloref fetch --loop` running (or via `nohup … &`, cron/launchd — examples in [README.md](README.md)). If ZCode itself should run the collection every 15 minutes — that is configured as a separate automation.
 
 ---
 
-## 8. Итоги референдумов и финальные данные (добавлено 13.10.2026)
+## 8. Referendum results and the final data (added 13.10.2026)
 
-Во время дня голосования цикл сбора не работал (локальные данные — только
-пустые структуры за 10.10), поэтому 13.10.2026 выполнен полный опрос
-`uv run sloref fetch --volisca`: **все 93 файла × 4 референдума без ошибок**,
-включая 88 файлов по участкам на каждый референдум. Метка сервера —
-2026-10-12T18:00:00Z, посчитано 99,98 %, `is_final=false` (проверка голосов
-из-за рубежа — 19.10, после неё DVK объявит итоги окончательными).
+During election day the collection loop was not running (local data — only the
+empty structures of 10.10), so on 13.10.2026 a full poll `uv run sloref fetch
+--volisca` was run: **all 93 files × 4 referendums without errors**, including
+88 per-precinct files per referendum. The server stamp —
+2026-10-12T18:00:00Z, 99.98% counted, `is_final=false` (the review of votes
+cast abroad — 19.10, after which DVK will declare the results final).
 
-### Итоговые цифры (DVK, сверены с [Википедией](https://en.wikipedia.org/wiki/2026_Slovenian_referendum) до голоса)
+### Final figures (DVK, cross-checked with [Wikipedia](https://en.wikipedia.org/wiki/2026_Slovenian_referendum) to the vote)
 
-| Референдум | ЗА | ПРОТИ | Недейств. | Итог |
+| Referendum | ZA | PROTI | Invalid | Outcome |
 |---|---|---|---|---|
-| preiskava (ZPPre-B, законодательный) | 449 297 (48,74 %) | **472 444 (51,26 %)** | 5 191 | закон **отклонён**, кворум 1/5 выполнен (472 444 ≫ 339 473) |
-| socialna_pomoc | **559 082 (60,54 %)** | 364 377 (39,46 %) | 3 408 | одобрен |
-| volilna_pravica | **510 484 (55,30 %)** | 412 708 (44,70 %) | 3 667 | одобрен |
-| rtv_prispevek | 461 753 (49,97 %) | **462 299 (50,03 %)** | 2 913 | отклонён, разрыв **546 голосов** |
+| preiskava (ZPPre-B, legislative) | 449,297 (48.74%) | **472,444 (51.26%)** | 5,191 | act **rejected**, the 1/5 quorum met (472,444 ≫ 339,473) |
+| socialna_pomoc | **559,082 (60.54%)** | 364,377 (39.46%) | 3,408 | approved |
+| volilna_pravica | **510,484 (55.30%)** | 412,708 (44.70%) | 3,667 | approved |
+| rtv_prispevek | 461,753 (49.97%) | **462,299 (50.03%)** | 2,913 | rejected, a margin of **546 votes** |
 
-Явка — 54,62 % (927 066–927 151 голосовавший на бюллетень из 1 697 366
-зарегистрированных); промежуточные точки: 14,2 % к 11:00, 35,53 %
-(603 057) к 16:00.
+Turnout — 54.62% (927,066–927,151 voters per ballot out of 1,697,366
+registered); intermediate points: 14.2% by 11:00, 35.53%
+(603,057) by 16:00.
 
-### Данные по участкам
+### Per-precinct data
 
-- `data/latest/<референдум>/volisca_01_01.json … volisca_08_11.json` — итоги
-  **3 083 обычных участков** (8 единиц × 11 округов), на каждом: явка
-  (зарегистрировано/голосовало/%), бюллетени/действительные/недействительные,
-  ЗА/ПРОТИ с долями, доля посчитанного 1.0.
-- `data/derived/volisca_all.csv` — всё в одном CSV (12 332 строки),
-  собирается скриптом `scripts/build_volisca_csv.py`; он же сверяет
-  арифметику: на **всех** участках `ЗА+ПРОТИ = действительные`,
-  `действит.+недействит. = всего` — сходится до голоса.
-- Разложение национального итога: участки 918 566–918 594 + спецголосования
-  на уровне округов ~1 224 (почта, диппредставительства, мобильные комиссии)
-  + участки OMNIA ~7 142–7 190, чьи итоги DVK включает только в
-  национальную сумму (поэтому суммы по округам не обязаны сходиться — это
-  официально, «Pozor!» в документации DVK).
+- `data/latest/<referendum>/volisca_01_01.json … volisca_08_11.json` — results
+  of the **3,083 regular precincts** (8 units × 11 districts), each with turnout
+  (registered/voted/%), ballots/valid/invalid,
+  ZA/PROTI with shares, counted share 1.0.
+- `data/derived/volisca_all.csv` — everything in one CSV (12,332 rows),
+  assembled by the `scripts/build_volisca_csv.py` script; it also verifies
+  the arithmetic: at **all** precincts `ZA+PROTI = valid`,
+  `valid+invalid = total` — agrees to the vote.
+- Decomposition of the national result: precincts 918,566–918,594 + special
+  voting at the district level ~1,224 (post, diplomatic missions, mobile
+  commissions) + OMNIA precincts ~7,142–7,190, whose results DVK includes only
+  in the national sum (that is why district sums need not agree — this is
+  official, the «Pozor!» note in the DVK documentation).
 
-### Динамика дня голосования и ночи подсчёта
+### Dynamics of election day and the counting night
 
-Тайм-серия скрейпера на день голосования не велась, веб-архивы файлов DVK
-не сохранили; восстановление по СМИ (RTV SLO, STA, 24ur, Dnevnik, Svet24,
-Siol) — [data/wikipedia/ДИНАМИКА_ночи_подсчёта.md](data/wikipedia/ДИНАМИКА_ночи_подсчёта.md).
-Коротко: после первой пятой части бюллетеней «ЗА» лидировало по всем
-четырём вопросам (preiskava до ~53 % «ЗА»), затем оба спорных вопроса
-перевернулись по мере подсчёта сельских округов; RTV-взнос был «ЗА отмену»
-ещё при ~99 % посчитанных (50,13–50,15 %) и финально упал с разрывом 546
-голосов. Бюллетени по почте из Словении (подсчёт 12.10) итогов не изменили.
+The scraper's time series was not running on election day, and the web archives
+of the DVK files preserved nothing; reconstruction from the media (RTV SLO, STA, 24ur, Dnevnik, Svet24,
+Siol) — [data/wikipedia/counting_night_dynamics.md](data/wikipedia/counting_night_dynamics.md).
+In short: after the first fifth of the ballots «ZA» led on all
+four questions (preiskava up to ~53% «ZA»), then both contested questions
+flipped as the rural districts were counted; the RTV fee was «for abolition»
+with ~99% counted (50.13–50.15%) and finally fell with a margin of 546
+votes. Ballots by post from Slovenia (counted 12.10) did not change the results.
 
-### Википедия
+### Wikipedia
 
-- `data/wikipedia/2026_Slovenian_referendum.wikitext` — исходный викитекст;
-- `data/wikipedia/ИТОГИ_Википедия_и_сверка_DVK.md` — таблица статьи и
-  поголосовая сверка с DVK: **полное совпадение** по всем четырём
-  референдумам (ЗА, ПРОТИ, недействительные, всего).
+- `data/wikipedia/2026_Slovenian_referendum.wikitext` — the source wikitext;
+- `data/wikipedia/results_wikipedia_and_dvk_crosscheck.md` — the article's table and
+  the per-vote cross-check with DVK: **an exact match** on all four
+  referendums (ZA, PROTI, invalid, total).

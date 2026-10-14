@@ -1,33 +1,33 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Скрейпер промежуточных результатов выборов в Болгарии
-(президентские выборы 25.10.2026, возможен II тур 08.11.2026).
+Scraper of interim results of Bulgarian elections
+(presidential election 25 Oct 2026, possible round II on 08 Nov 2026).
 
-Источник: официальный портал ЦИК https://results.cik.bg/
-Механика портала: страницы результатов — статический HTML, который
-перегенерируется по мере обработки протоколов СИК; у каждой страницы есть
-хэш VERSION ('?v=...'), меняющийся при каждом обновлении данных.
+Source: the official CEC portal https://results.cik.bg/
+Portal mechanics: results pages are static HTML that is regenerated
+as section commission protocols are processed; each page carries a
+VERSION hash ('?v=...') that changes on every data update.
 
-Скрипт:
-  1. Автоматически находит портал выборов в индексе https://results.cik.bg/
-     (ищет блок «президент … 2026»); можно задать вручную через --base.
-  2. Опрашивает страницы tur1/tur2 (rezultati + aktivnost) и индексы
-     machine/data.js, protokoli/data.js (счётчик обработанных машинных
-     протоколов — обновляется чаще HTML).
-  3. Сохраняет сырые снапшоты в data/raw/<метка_времени>/ и дополняет
-     CSV-таймлайны в data/ (results/turnout/stats/machine).
+The script:
+  1. Automatically finds the election portal in the https://results.cik.bg/
+     index (looks for the "президент … 2026" block); can be set manually via --base.
+  2. Polls the tur1/tur2 pages (rezultati + aktivnost) and the machine/data.js,
+     protokoli/data.js indexes (count of processed machine protocols —
+     updated more often than the HTML).
+  3. Saves raw snapshots to data/raw/<timestamp>/ and appends
+     CSV timelines to data/ (results/turnout/stats/machine).
 
-Запуск:
-  разовый:   ./scrape_cik.py --once
-  цикл 15мин: ./scrape_cik.py --loop              (по умолчанию interval=900 c)
-  цикл с иным интервалом: ./scrape_cik.py --loop --interval 300
-  вручную указать портал (напр. для теста на выборах 2021):
+Usage:
+  one-shot:        ./scrape_cik.py --once
+  15-min loop:     ./scrape_cik.py --loop              (default interval=900 s)
+  custom interval: ./scrape_cik.py --loop --interval 300
+  set the portal manually (e.g., to test on the 2021 election):
   ./scrape_cik.py --once --base https://results.cik.bg/pvrns2021/
 
-Cloudflare: сайты ЦИК периодически отдают managed challenge. Применяется
-каскад: requests -> curl_cffi (impersonate chrome) -> cloudscraper,
-с повторами. Файлы *.js (data.js) отдаются обычно без challenge.
+Cloudflare: the CEC sites periodically serve a managed challenge. A cascade is
+used: requests -> curl_cffi (impersonate chrome) -> cloudscraper, with retries.
+*.js files (data.js) are usually served without a challenge.
 """
 
 import argparse
@@ -53,7 +53,7 @@ CHALLENGE_MARKERS = ("Just a moment", "cf-chl", "challenge-platform",
 # ---------------------------------------------------------------- fetcher --
 
 class Fetcher:
-    """Каскадный HTTP-клиент: requests -> curl_cffi -> cloudscraper."""
+    """Cascading HTTP client: requests -> curl_cffi -> cloudscraper."""
 
     def __init__(self, timeout=30, retries=3):
         self.timeout = timeout
@@ -61,11 +61,11 @@ class Fetcher:
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": USER_AGENT,
                                      "Accept-Language": "bg,en;q=0.9,ru;q=0.8"})
-        self._curl_cffi = None      # ленивые импорты опциональных бэкендов
+        self._curl_cffi = None      # lazy imports of the optional backends
         self._cloudscraper = None
-        self._backend = "requests"  # последний успешный бэкенд
+        self._backend = "requests"  # last successful backend
 
-    # -- отдельные бэкенды ---------------------------------------------
+    # -- individual backends ---------------------------------------------
     def _get_requests(self, url):
         r = self.session.get(url, timeout=self.timeout)
         return r.status_code, r.content
@@ -92,11 +92,11 @@ class Fetcher:
             return any(m.encode() in head for m in CHALLENGE_MARKERS)
         return False
 
-    # -- публичный метод -------------------------------------------------
+    # -- public method ----------------------------------------------------
     def get(self, url):
-        """Возвращает (status, bytes). Бросает RuntimeError после всех ретраев."""
+        """Returns (status, bytes). Raises RuntimeError after all retries."""
         backends = [self._get_requests]
-        # опциональные бэкенды подключаются, если пакет установлен
+        # optional backends are added when the package is installed
         try:
             import curl_cffi  # noqa: F401
             backends.append(self._get_curl_cffi)
@@ -108,7 +108,7 @@ class Fetcher:
         except ImportError:
             pass
 
-        # начинаем с последнего успешного бэкенда
+        # start with the last successful backend
         order = ([self._backend] +
                  [b for b in ("requests", "curl_cffi", "cloudscraper") if b != self._backend])
         by_name = {"requests": self._get_requests,
@@ -123,7 +123,7 @@ class Fetcher:
                     continue
                 try:
                     status, body = fn(url)
-                except Exception as e:            # сетевая ошибка — следующий бэкенд
+                except Exception as e:            # network error — next backend
                     last_err = f"{name}: {e}"
                     continue
                 if status == 200 and not self._looks_like_challenge(body):
@@ -132,27 +132,27 @@ class Fetcher:
                 last_err = f"{name}: HTTP {status}" + (
                     " (cloudflare challenge)" if self._looks_like_challenge(body) else "")
                 if status == 404:
-                    return status, body           # 404 — это валидный ответ
-            time.sleep(2 * (attempt + 1))          # пауза перед повторной попыткой
-        raise RuntimeError(f"не удалось получить {url}: {last_err}")
+                    return status, body           # 404 is a valid response
+            time.sleep(2 * (attempt + 1))          # pause before the next attempt
+        raise RuntimeError(f"failed to fetch {url}: {last_err}")
 
 
 # --------------------------------------------------------------- discovery --
 
 def discover_portal(fetcher, log):
-    """Ищет в индексе results.cik.bg блок президентских выборов 2026.
+    """Looks for the 2026 presidential election block in the results.cik.bg index.
 
-    Возвращает базовый URL портала (напр. https://results.cik.bg/pvr202610/)
-    или None, если портал ещё не опубликован.
+    Returns the portal base URL (e.g. https://results.cik.bg/pvr202610/)
+    or None if the portal has not been published yet.
     """
     status, body = fetcher.get(RESULTS_INDEX)
     if status != 200:
-        log(f"индекс {RESULTS_INDEX}: HTTP {status}")
+        log(f"index {RESULTS_INDEX}: HTTP {status}")
         return None
     soup = BeautifulSoup(body, "lxml")
 
-    # блок выбора = заголовок h2 («25 октомври 2026 Избори за президент…»)
-    # + ссылки до следующего заголовка
+    # election block = an h2 heading ("25 октомври 2026 Избори за президент…")
+    # + the links up to the next heading
     for h in soup.find_all(["h2", "h3"]):
         text = h.get_text(" ", strip=True).lower()
         if "президент" in text and "2026" in text:
@@ -166,7 +166,7 @@ def discover_portal(fetcher, log):
                     links.append(el["href"])
                 elif el.name in ("p", "div") and links and el.name == "p":
                     break
-            # ссылка «Резултати от гласуването» -> базовый URL портала
+            # the "Резултати от гласуването" link -> portal base URL
             for href in links:
                 if "rezultati" in href:
                     base = href.split("rezultati")[0]
@@ -185,7 +185,7 @@ VERSION_RE = re.compile(r"VERSION\s*=\s*'(\?v=[0-9a-f]+)'")
 
 
 def _num(text):
-    """"1 322 385" (с \xa0) -> 1322385; "49.42%" -> 49.42."""
+    """'1 322 385' (with \xa0) -> 1322385; '49.42%' -> 49.42."""
     text = text.replace("\xa0", "").replace(" ", "").strip()
     m = re.search(r"-?\d+(?:[.,]\d+)?", text)
     if not m:
@@ -209,10 +209,10 @@ def _header_cells_row(tr):
 
 
 def parse_results_page(html):
-    """Парсит страницу rezultati/index.html.
+    """Parses the rezultati/index.html page.
 
-    Возвращает dict: version, asof, processed_pct, candidates[], parties[],
-    stats{} (метрики протокола: избиратели, гласували, действителни…).
+    Returns a dict: version, asof, processed_pct, candidates[], parties[],
+    stats{} (protocol metrics: voters, voted, valid…).
     """
     soup = BeautifulSoup(html, "lxml")
     out = {"version": None, "asof": None, "processed_pct": None,
@@ -238,7 +238,7 @@ def parse_results_page(html):
             if len(cells) < 4:
                 continue
             no = _num(cells[0].get_text())
-            # имя в <strong>, выдвинувшая организация после <br/>
+            # name in <strong>, nominating organization after <br/>
             strong = cells[1].find("strong")
             name = strong.get_text(" ", strip=True) if strong else cells[1].get_text(" ", strip=True)
             nominator = ""
@@ -252,7 +252,7 @@ def parse_results_page(html):
                    "pct": float(pct) if pct not in (None, "") else None}
             (out["candidates"] if is_presidential else out["parties"]).append(row)
 
-    # таблицы метрик протокола: «ПРИ СЪСТАВЯНЕ НА ПРОТОКОЛА…»
+    # protocol metric tables ("ПРИ СЪСТАВЯНЕ НА ПРОТОКОЛА…")
     for table in soup.find_all("table"):
         if "table-results" in (table.get("class") or []):
             continue
@@ -272,10 +272,11 @@ def parse_results_page(html):
 
 
 def parse_aktivnost_page(html):
-    """Явка по часам: таблица Час / Избиратели / Гласували / Процент.
+    """Turnout by hour: a table of Час / Избиратели / Гласували / Процент
+    (hour / voters / voted / percent).
 
-    Заголовки могут быть как в первой строке таблицы (pe202604),
-    так и во второй — под строкой с названием выборов (pvrns2021).
+    The headers may sit in the first table row (pe202604)
+    or in the second one — below the election-title row (pvrns2021).
     """
     soup = BeautifulSoup(html, "lxml")
     rows = []
@@ -295,7 +296,7 @@ def parse_aktivnost_page(html):
 
 
 def count_machine_protocols(data_js_text):
-    """Считает число секций с машинными протоколами из machine/data.js."""
+    """Counts the number of sections with machine protocols from machine/data.js."""
     m = re.search(r"HAS_MACHINE\s*=\s*(\{.*?\})\s*;", data_js_text, re.S)
     if not m:
         return None
@@ -303,7 +304,7 @@ def count_machine_protocols(data_js_text):
         obj = json.loads(m.group(1))
         return sum(len(v) for v in obj.values())
     except (json.JSONDecodeError, AttributeError, TypeError):
-        # HAS_MACHINE бывает массивом
+        # HAS_MACHINE can also be a list
         try:
             obj = json.loads(m.group(1))
             return len(obj) if isinstance(obj, list) else None
@@ -350,12 +351,12 @@ class Storage:
 # ------------------------------------------------------------------ scraping --
 
 def candidate_urls(base, page):
-    """Возможные URL страницы page ('rezultati/index.html', 'aktivnost/index.html',
-    'machine/data.js') для тура round с учётом обоих известных макетов портала."""
+    """Possible URLs of `page` ('rezultati/index.html', 'aktivnost/index.html',
+    'machine/data.js') for a round, covering both known portal layouts."""
     flat = [f"{base}{page}"]
     for rnd in ("tur1", "tur2"):
         flat.append(f"{base}{rnd}/{page}")
-    # dedupe с сохранением порядка
+    # dedupe preserving order
     return list(dict.fromkeys(flat))
 
 
@@ -370,14 +371,14 @@ def fetch_first(fetcher, urls, log, optional=True):
             return url, body
         log(f"  - {url}: HTTP {status}")
     if not optional:
-        raise RuntimeError(f"ни один из URL не доступен: {urls}")
+        raise RuntimeError(f"none of the URLs are reachable: {urls}")
     return None, None
 
 
 def scrape_cycle(fetcher, storage, args, log):
     ts = datetime.now()
     ts_label = ts.strftime("%Y-%m-%d_%H%M%S")
-    log(f"=== цикл {ts_label} ===")
+    log(f"=== cycle {ts_label} ===")
 
     base = args.base
     if base:
@@ -387,25 +388,25 @@ def scrape_cycle(fetcher, storage, args, log):
         if not base or args.redetect:
             found = discover_portal(fetcher, log)
             if found:
-                log(f"портал выборов найден: {found}")
+                log(f"election portal found: {found}")
                 storage.state["portal_base"] = found
                 storage.state["portal_found_at"] = ts_label
                 base = found
             elif base:
-                log(f"портал 2026 в индексе ещё нет, использую последний: {base}")
+                log(f"the 2026 portal is not in the index yet, using the last known one: {base}")
             else:
-                log("портал президентских выборов 2026 ещё не опубликован "
-                    "в индексе results.cik.bg; повторю проверку в следующем цикле")
+                log("the 2026 presidential election portal has not been published yet "
+                    "in the results.cik.bg index; will check again in the next cycle")
                 return
 
     results_rows, turnout_rows, stats_rows, machine_rows = [], [], [], []
     rounds = args.rounds.split(",") if args.rounds else ["tur1", "tur2"]
     summary_lines = []
-    seen_urls = set()          # чтобы не качать один файл дважды за цикл
-                                              # (плоские порталы без tur1/tur2)
+    seen_urls = set()          # avoid downloading the same file twice per cycle
+                                              # (flat portals without tur1/tur2)
 
     for rnd in rounds:
-        # --- результаты ------------------------------------------------
+        # --- results ------------------------------------------------
         rurls = ([f"{base}{rnd}/rezultati/index.html"] +
                  ([f"{base}rezultati/index.html"] if rnd == "tur1" else []))
         rurls = [u for u in rurls if u not in seen_urls]
@@ -417,9 +418,9 @@ def scrape_cycle(fetcher, storage, args, log):
             storage.save_raw(ts_label, f"{rnd}_rezultati.html", rbody)
             changed = storage.state.get(f"version_{rurl}") != version
             storage.state[f"version_{rurl}"] = version
-            tag = "" if changed else " (без изменений)"
-            log(f"  {rnd} результаты: {parsed['asof'] or 'финал'}, "
-                f"обработено {parsed['processed_pct'] if parsed['processed_pct'] is not None else '?'}%"
+            tag = "" if changed else " (unchanged)"
+            log(f"  {rnd} results: {parsed['asof'] or 'final'}, "
+                f"processed {parsed['processed_pct'] if parsed['processed_pct'] is not None else '?'}%"
                 f"{tag}")
             if parsed["candidates"]:
                 top = sorted(parsed["candidates"], key=lambda c: -(c["pct"] or 0))[:5]
@@ -447,9 +448,9 @@ def scrape_cycle(fetcher, storage, args, log):
                 stats_rows.append({"fetch_ts": ts_label, "round": rnd,
                                    "label": label, "value": val})
         else:
-            log(f"  {rnd}: страница результатов недоступна")
+            log(f"  {rnd}: results page unavailable")
 
-        # --- явка --------------------------------------------------------
+        # --- turnout ------------------------------------------------------
         aurls = ([f"{base}{rnd}/aktivnost/index.html"] +
                  ([f"{base}aktivnost/index.html"] if rnd == "tur1" else []))
         aurls = [u for u in aurls if u not in seen_urls]
@@ -460,13 +461,13 @@ def scrape_cycle(fetcher, storage, args, log):
             storage.save_raw(ts_label, f"{rnd}_aktivnost.html", abody)
             if rows:
                 last = rows[-1]
-                log(f"  {rnd} явка: {last['hour']} -> {last['pct']}%")
+                log(f"  {rnd} turnout: {last['hour']} -> {last['pct']}%")
             for r in rows:
                 turnout_rows.append({"fetch_ts": ts_label, "round": rnd,
                                      "hour": r["hour"], "voters": r["voters"] or "",
                                      "voted": r["voted"] or "", "pct": r["pct"] or ""})
 
-        # --- машинные протоколы (обновляются чаще HTML) -------------------
+        # --- machine protocols (updated more often than the HTML) ---------
         murls = [u for u in (f"{base}{rnd}/machine/data.js", f"{base}machine/data.js")
                  if u not in seen_urls]
         murl, mbody = fetch_first(fetcher, murls, log)
@@ -477,7 +478,7 @@ def scrape_cycle(fetcher, storage, args, log):
             if n is not None:
                 prev = storage.state.get("machine_sections")
                 storage.state["machine_sections"] = n
-                log(f"  {rnd} машинных протоколов по секциям: {n}"
+                log(f"  {rnd} machine protocols by section: {n}"
                     + (f" (+{n - prev})" if isinstance(prev, int) and n >= prev else ""))
                 machine_rows.append({"fetch_ts": ts_label, "round": rnd,
                                      "sections": n})
@@ -497,29 +498,29 @@ def scrape_cycle(fetcher, storage, args, log):
     storage.save_state()
 
     if summary_lines:
-        log("текущий топ (первые 5):")
+        log("current top (first 5):")
         for line in summary_lines[:10]:
             log(line)
 
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Скрейпер промежуточных результатов выборов ЦИК Болгарии")
-    ap.add_argument("--base", help="базовый URL портала выборов "
-                    "(по умолчанию — автоопределение из индекса results.cik.bg)")
+        description="Scraper of interim results of Bulgarian CEC elections")
+    ap.add_argument("--base", help="base URL of the election portal "
+                    "(default: auto-detected from the results.cik.bg index)")
     ap.add_argument("--rounds", default="tur1,tur2",
-                    help="туры через запятую (по умолчанию tur1,tur2)")
-    ap.add_argument("--loop", action="store_true", help="режим цикла")
+                    help="rounds, comma-separated (default tur1,tur2)")
+    ap.add_argument("--loop", action="store_true", help="loop mode")
     ap.add_argument("--interval", type=int, default=900,
-                    help="интервал опроса в секундах (по умолчанию 900 = 15 мин)")
-    ap.add_argument("--once", action="store_true", help="один цикл и выход")
+                    help="polling interval in seconds (default 900 = 15 min)")
+    ap.add_argument("--once", action="store_true", help="run one cycle and exit")
     ap.add_argument("--redetect", action="store_true",
-                    help="заново выполнить автоопределение портала")
-    ap.add_argument("--data-dir", default="data", help="каталог данных (по умолчанию data/)")
-    ap.add_argument("--timeout", type=int, default=30, help="HTTP-таймаут, с")
+                    help="re-run portal auto-detection")
+    ap.add_argument("--data-dir", default="data", help="data directory (default data/)")
+    ap.add_argument("--timeout", type=int, default=30, help="HTTP timeout, s")
     args = ap.parse_args()
     if not (args.loop or args.once):
-        args.loop = True  # по умолчанию — цикл
+        args.loop = True  # loop by default
 
     log_path = Path("scrape.log")
 
@@ -531,23 +532,23 @@ def main():
 
     fetcher = Fetcher(timeout=args.timeout)
     storage = Storage(args.data_dir)
-    log(f"старт: loop={args.loop} interval={args.interval}s data={args.data_dir}")
+    log(f"start: loop={args.loop} interval={args.interval}s data={args.data_dir}")
 
     while True:
         try:
             scrape_cycle(fetcher, storage, args, log)
         except KeyboardInterrupt:
-            log("остановлено пользователем")
+            log("stopped by user")
             sys.exit(0)
         except Exception as e:
-            log(f"! ошибка цикла: {e} (продолжаю)")
+            log(f"! cycle error: {e} (continuing)")
         if not args.loop:
             break
-        log(f"сон {args.interval} c …")
+        log(f"sleeping {args.interval} s …")
         try:
             time.sleep(args.interval)
         except KeyboardInterrupt:
-            log("остановлено пользователем")
+            log("stopped by user")
             sys.exit(0)
 
 

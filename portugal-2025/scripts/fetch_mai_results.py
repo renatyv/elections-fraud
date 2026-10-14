@@ -1,28 +1,28 @@
 #!/usr/bin/env python3
-"""Скачивание официальных результатов выборов с портала MAI/SGMAI
-(www.eleicoes.mai.gov.pt) — переиспользуемый скрипт.
+"""Download official election results from the MAI/SGMAI portal
+(www.eleicoes.mai.gov.pt) — reusable script.
 
-Портал — Angular SPA, которая в режиме static-files читает JSON:
+The portal is an Angular SPA which, in static-files mode, serves JSON:
   <election>/assets/static/territory-children/territory-children-<KEY>.json
   <election>/assets/static/territory-results/territory-results-<KEY>-<SUF>.json
 
-Скрипт обходит всё дерево территорий (GLOBAL -> округа -> муниципалитеты ->
-приходы; для заграничных округов — консульства) и скачивает результаты для
-каждого ключа. Существующие файлы пропускаются (можно перезапускать).
+The script walks the whole territory tree (GLOBAL -> districts -> municipalities
+-> parishes; for overseas districts — consulates) and downloads the results for
+every key. Existing files are skipped (safe to re-run).
 
-Использование:
-  python3 fetch_mai_results.py <slug-выборов> [--suffix AR] [--out DIR] [--roots K1,K2]
+Usage:
+  python3 fetch_mai_results.py <election-slug> [--suffix AR] [--out DIR] [--roots K1,K2]
 
-Примеры slug (см. https://www.eleicoes.mai.gov.pt/):
+Example slugs (see https://www.eleicoes.mai.gov.pt/):
   legislativas2025 legislativas2024 legislativas2022
   europeias2024 autarquicas2025 presidenciais2026_1S regionais2024 ...
 
-Суффикс файла результатов (тип выборов):
-  AR — парламентские (Assembleia da República)
-  PE — европейские, PR — президентские
-  CM/AM/AF — местные (камара/мун. собрание/приход. собрание; можно через запятую)
-Корневые ключи территорий: GLOBAL-990000 (итог), LOCAL-500000 (страна),
-FOREIGN-600000/800000/900000 (заграница/Европа/вне Европы).
+Result-file suffix (election type):
+  AR — parliamentary (Assembleia da República)
+  PE — European, PR — presidential
+  CM/AM/AF — local (câmara / municipal assembly / parish assembly; comma-separated list)
+Root territory keys: GLOBAL-990000 (overall), LOCAL-500000 (country),
+FOREIGN-600000/800000/900000 (abroad/Europe/outside Europe).
 """
 import argparse
 import json
@@ -32,7 +32,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 DEFAULT_ROOTS = "GLOBAL-990000,LOCAL-500000,FOREIGN-600000,FOREIGN-800000,FOREIGN-900000"
-# пауза между запросами одного потока: CDN блокирует при интенсивном опросе
+# pause between requests of one thread: the CDN blocks under heavy polling
 REQ_DELAY = 0.4
 STATIC_FILES = [
     "configurations.json",
@@ -49,12 +49,12 @@ BLOCKED = {"flag": False}
 
 
 def fetch(url, tries=3):
-    """Скачивание через curl: надёжнее ведёт себя с CDN (Akamai), который
-    начинает подвешивать соединения при частых запросах.
-    При блокировке (Access Denied) — пауза и повтор."""
+    """Download via curl: it behaves more reliably with the CDN (Akamai), which
+    starts hanging connections under frequent requests.
+    On a block (Access Denied) — pause and retry."""
     import subprocess
     for i in range(tries):
-        # если другой поток заметил блокировку — ждём снятия
+        # if another thread noticed a block — wait until it clears
         while BLOCKED["flag"]:
             time.sleep(15)
         try:
@@ -66,7 +66,7 @@ def fetch(url, tries=3):
             out = r.stdout or b""
             if b"Access Denied" in out[:200] or b"<HTML>" in out[:32]:
                 BLOCKED["flag"] = True
-                print(f"  [blocked] {url} — пауза 90с", file=sys.stderr)
+                print(f"  [blocked] {url} — pausing 90s", file=sys.stderr)
                 time.sleep(90)
                 BLOCKED["flag"] = False
                 continue
@@ -112,26 +112,26 @@ def crawl(election, suffixes, out, roots, leaf_level=None):
             lst = json.load(open(p, encoding="utf-8"))
         except Exception:
             lst = None
-        # иногда сервер отдаёт JSON-ошибку ("Não existem dados disponíveis") — считаем листом
+        # sometimes the server returns a JSON error ("Não existem dados disponíveis") — treat as a leaf
         if not isinstance(lst, list) or any(not isinstance(c, dict) for c in lst):
             lst = None
         children_cache[key] = lst
         return lst
 
-    # BFS по дереву территорий — по уровням, параллельно.
-    # leaf_level: уровни >= N не проверять на детей (фрегезии/консульства —
-    # заведомо листья, ниже уровня официальных данных нет) — экономит тысячи
-    # пустых 404-запросов.
+    # BFS over the territory tree — level by level, in parallel.
+    # leaf_level: levels >= N are not probed for children (parishes/consulates
+    # are known leaves, no official data exists below that level) — saves
+    # thousands of empty 404 requests.
     tree = {}
     frontier = {k: (None, 0) for k in roots}
     while frontier:
         nxt = {}
-        # 1) докачать children-файлы уровня параллельно
+        # 1) fetch the level's children files in parallel
         fetch_keys = [k for k, (_, lvl) in frontier.items()
                       if leaf_level is None or lvl < leaf_level]
         with ThreadPoolExecutor(max_workers=4) as ex:
             list(ex.map(get_children, fetch_keys))
-        # 2) раскрыть узлы уровня
+        # 2) expand the level's nodes
         for key, (parent, level) in frontier.items():
             if key in tree:
                 continue
@@ -189,12 +189,12 @@ def crawl(election, suffixes, out, roots, leaf_level=None):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("election", help="slug выборов на портале, напр. legislativas2025")
-    ap.add_argument("--suffix", default="AR", help="суффикс типа выборов (AR/PE/PR/CM/AM/AF), можно через запятую")
-    ap.add_argument("--out", default=None, help="каталог выгрузки (по умолчанию ../data/<election>_mai)")
-    ap.add_argument("--roots", default=DEFAULT_ROOTS, help="корневые ключи через запятую")
+    ap.add_argument("election", help="election slug on the portal, e.g. legislativas2025")
+    ap.add_argument("--suffix", default="AR", help="election-type suffix (AR/PE/PR/CM/AM/AF), comma-separated list ok")
+    ap.add_argument("--out", default=None, help="download directory (default ../data/<election>_mai)")
+    ap.add_argument("--roots", default=DEFAULT_ROOTS, help="comma-separated root keys")
     ap.add_argument("--leaf-level", type=int, default=None,
-                    help="уровни >= N считать листьями без проверки детей (3 = фрегезии)")
+                    help="treat levels >= N as leaves without probing children (3 = parishes)")
     args = ap.parse_args()
     out = args.out or os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", f"{args.election}_mai")
     crawl(args.election, [s.strip() for s in args.suffix.split(",")], os.path.normpath(out),

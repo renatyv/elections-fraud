@@ -1,13 +1,14 @@
-"""Election forensics: статистические методы обнаружения фальсификаций на выборах.
+"""Election forensics: statistical methods for detecting election fraud.
 
-Методы (по обзору «Метод Шпилькина и другие статистические методы»):
-- shpilkin: метод Шпилькина (гистограмма явки, «честное ядро», оценка аномальных голосов)
-- fingerprints: электоральные отпечатки пальцев (Klimek et al., PNAS 2012)
-- integer_peaks: целочисленные пики явки/результата (Kobak et al., 2016)
-- correlations: 2D-корреляционный анализ явка-результат (Kobak et al., 2012)
-- digit_tests: закон Бенфорда (вторая цифра) и тест последней цифры (Beber-Scacco)
-- neighbors: сравнение участков с соседями/окружением (Myagkov-Ordeshook-Shakin)
-- anomaly_ml: поиск аномальных участков алгоритмами ML (Zhang et al., 2019)
+Methods (following the survey "The Shpilkin method and other statistical
+methods for detecting election fraud"):
+- shpilkin: the Shpilkin method (turnout histogram, "honest core", estimate of anomalous votes)
+- fingerprints: electoral fingerprints (Klimek et al., PNAS 2012)
+- integer_peaks: integer peaks of turnout/result (Kobak et al., 2016)
+- correlations: 2D turnout-result correlation analysis (Kobak et al., 2012)
+- digit_tests: Benford's law (second digit) and the last-digit test (Beber-Scacco)
+- neighbors: comparison of units against neighbours/surroundings (Myagkov-Ordeshook-Shakin)
+- anomaly_ml: finding anomalous units with ML algorithms (Zhang et al., 2019)
 """
 
 __version__ = "0.1.0"

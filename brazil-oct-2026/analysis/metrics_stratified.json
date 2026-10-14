@@ -1,5 +1,5 @@
 {
-  "title": "Бразилия 1-й тур 2026: стратификация по макрорегионам (Шпилькин, отпечатки)",
+  "title": "Brazil 1st round 2026: stratification by macro-regions (Shpilkin, fingerprints)",
   "regions": [
     "N",
     "NE",
@@ -18,7 +18,7 @@
   "shpilkin_by_region": [
     {
       "reg": "N",
-      "reg_name": "Север",
+      "reg_name": "North",
       "sections": 43769,
       "registered": 13101175,
       "voted": 10554993,
@@ -38,7 +38,7 @@
     },
     {
       "reg": "NE",
-      "reg_name": "Северо-Восток",
+      "reg_name": "Northeast",
       "sections": 140828,
       "registered": 43511237,
       "voted": 35508871,
@@ -58,7 +58,7 @@
     },
     {
       "reg": "CW",
-      "reg_name": "Центр.-Запад",
+      "reg_name": "Centre-West",
       "sections": 38048,
       "registered": 12001141,
       "voted": 9396336,
@@ -78,7 +78,7 @@
     },
     {
       "reg": "SE",
-      "reg_name": "Юго-Восток",
+      "reg_name": "Southeast",
       "sections": 203237,
       "registered": 66344562,
       "voted": 51281350,
@@ -98,7 +98,7 @@
     },
     {
       "reg": "S",
-      "reg_name": "Юг",
+      "reg_name": "South",
       "sections": 72015,
       "registered": 22870853,
       "voted": 18192519,
@@ -118,7 +118,7 @@
     },
     {
       "reg": "ZZ",
-      "reg_name": "Заграница",
+      "reg_name": "Abroad",
       "sections": 1309,
       "registered": 916039,
       "voted": 341766,
@@ -140,7 +140,7 @@
   "fingerprints_by_region": [
     {
       "reg": "N",
-      "reg_name": "Север",
+      "reg_name": "North",
       "party": "BOLSONARO",
       "weight_anom": 0.5974,
       "mean_anom": "(81.4; 55.0)",
@@ -151,7 +151,7 @@
     },
     {
       "reg": "N",
-      "reg_name": "Север",
+      "reg_name": "North",
       "party": "LULA",
       "weight_anom": 0.6753,
       "mean_anom": "(81.3; 35.3)",
@@ -162,7 +162,7 @@
     },
     {
       "reg": "NE",
-      "reg_name": "Северо-Восток",
+      "reg_name": "Northeast",
       "party": "BOLSONARO",
       "weight_anom": 0.4958,
       "mean_anom": "(83.1; 36.8)",
@@ -173,7 +173,7 @@
     },
     {
       "reg": "NE",
-      "reg_name": "Северо-Восток",
+      "reg_name": "Northeast",
       "party": "LULA",
       "weight_anom": 0.5206,
       "mean_anom": "(83.1; 52.8)",
@@ -184,7 +184,7 @@
     },
     {
       "reg": "CW",
-      "reg_name": "Центр.-Запад",
+      "reg_name": "Centre-West",
       "party": "BOLSONARO",
       "weight_anom": 0.7007,
       "mean_anom": "(78.5; 50.7)",
@@ -195,7 +195,7 @@
     },
     {
       "reg": "CW",
-      "reg_name": "Центр.-Запад",
+      "reg_name": "Centre-West",
       "party": "LULA",
       "weight_anom": 0.6811,
       "mean_anom": "(79.5; 30.1)",
@@ -206,7 +206,7 @@
     },
     {
       "reg": "SE",
-      "reg_name": "Юго-Восток",
+      "reg_name": "Southeast",
       "party": "BOLSONARO",
       "weight_anom": 0.5253,
       "mean_anom": "(78.2; 55.0)",
@@ -217,7 +217,7 @@
     },
     {
       "reg": "SE",
-      "reg_name": "Юго-Восток",
+      "reg_name": "Southeast",
       "party": "LULA",
       "weight_anom": 0.5986,
       "mean_anom": "(78.5; 33.3)",
@@ -228,7 +228,7 @@
     },
     {
       "reg": "S",
-      "reg_name": "Юг",
+      "reg_name": "South",
       "party": "BOLSONARO",
       "weight_anom": 0.597,
       "mean_anom": "(81.2; 63.2)",
@@ -239,7 +239,7 @@
     },
     {
       "reg": "S",
-      "reg_name": "Юг",
+      "reg_name": "South",
       "party": "LULA",
       "weight_anom": 0.6419,
       "mean_anom": "(81.0; 25.1)",
@@ -250,7 +250,7 @@
     },
     {
       "reg": "ZZ",
-      "reg_name": "Заграница",
+      "reg_name": "Abroad",
       "party": "BOLSONARO",
       "weight_anom": 0.7276,
       "mean_anom": "(38.1; 33.7)",
@@ -261,7 +261,7 @@
     },
     {
       "reg": "ZZ",
-      "reg_name": "Заграница",
+      "reg_name": "Abroad",
       "party": "LULA",
       "weight_anom": 0.7421,
       "mean_anom": "(37.9; 54.2)",
@@ -274,7 +274,7 @@
   "corners_by_region": [
     {
       "reg": "N",
-      "reg_name": "Север",
+      "reg_name": "North",
       "party": "BOLSONARO",
       "corner_sections": 39,
       "corner_voters": 6326,
@@ -284,7 +284,7 @@
     },
     {
       "reg": "N",
-      "reg_name": "Север",
+      "reg_name": "North",
       "party": "LULA",
       "corner_sections": 366,
       "corner_voters": 77014,
@@ -294,7 +294,7 @@
     },
     {
       "reg": "NE",
-      "reg_name": "Северо-Восток",
+      "reg_name": "Northeast",
       "party": "BOLSONARO",
       "corner_sections": 3,
       "corner_voters": 607,
@@ -304,7 +304,7 @@
     },
     {
       "reg": "NE",
-      "reg_name": "Северо-Восток",
+      "reg_name": "Northeast",
       "party": "LULA",
       "corner_sections": 1062,
       "corner_voters": 222899,
@@ -314,7 +314,7 @@
     },
     {
       "reg": "CW",
-      "reg_name": "Центр.-Запад",
+      "reg_name": "Centre-West",
       "party": "BOLSONARO",
       "corner_sections": 14,
       "corner_voters": 2359,
@@ -324,7 +324,7 @@
     },
     {
       "reg": "CW",
-      "reg_name": "Центр.-Запад",
+      "reg_name": "Centre-West",
       "party": "LULA",
       "corner_sections": 18,
       "corner_voters": 3669,
@@ -334,7 +334,7 @@
     },
     {
       "reg": "SE",
-      "reg_name": "Юго-Восток",
+      "reg_name": "Southeast",
       "party": "BOLSONARO",
       "corner_sections": 14,
       "corner_voters": 2124,
@@ -344,7 +344,7 @@
     },
     {
       "reg": "SE",
-      "reg_name": "Юго-Восток",
+      "reg_name": "Southeast",
       "party": "LULA",
       "corner_sections": 27,
       "corner_voters": 3872,
@@ -354,7 +354,7 @@
     },
     {
       "reg": "S",
-      "reg_name": "Юг",
+      "reg_name": "South",
       "party": "BOLSONARO",
       "corner_sections": 310,
       "corner_voters": 74690,
@@ -364,7 +364,7 @@
     },
     {
       "reg": "S",
-      "reg_name": "Юг",
+      "reg_name": "South",
       "party": "LULA",
       "corner_sections": 8,
       "corner_voters": 1407,
@@ -374,7 +374,7 @@
     },
     {
       "reg": "ZZ",
-      "reg_name": "Заграница",
+      "reg_name": "Abroad",
       "party": "BOLSONARO",
       "corner_sections": 0,
       "corner_voters": 0,
@@ -384,7 +384,7 @@
     },
     {
       "reg": "ZZ",
-      "reg_name": "Заграница",
+      "reg_name": "Abroad",
       "party": "LULA",
       "corner_sections": 0,
       "corner_voters": 0,
@@ -404,5 +404,5 @@
     "leader_tail": 272315,
     "runner_tail": 430824
   },
-  "note": "граница каждого региона — собственный q99.5 (контрольных выборов нет); ZZ: n=1309, квантиль/смесь неустойчивы, только справочно"
+  "note": "each region's boundary is its own q99.5 (no control election); ZZ: n=1309, quantile/mixture unstable, reference only"
 }

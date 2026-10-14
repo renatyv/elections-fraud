@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Полуавтоматический обход разделов выборов на сайтах камар муниципалитетов.
+"""Semi-automatic crawling of election pages on municipal chamber websites.
 
-Пайплайн на каждый сайт (из data/concelhos_sites.csv):
-  1) robots.txt -> строки Sitemap; наряду с этим типовые пути
+Pipeline per site (from data/concelhos_sites.csv):
+  1) robots.txt -> Sitemap lines; along with that, typical paths
      /sitemap.xml /sitemap_index.xml /wp-sitemap.xml /sitemap-index.xml;
-  2) рекурсивный разбор sitemap-индексов (лимиты на сайт);
-  3) фильтрация URL по ключевым словам выборов, рейтинг;
-  4) загрузка топ-кандидатов. Особый случай (типовые WordPress-камары):
-     URL вида /?listas_ficheiros=<слаг-документа> редиректят СРАЗУ на файл —
-     сверяем content-type; PDF-слаги с признаками карты результатов = цель;
-  5) HTML-страницы: извлечение ссылок на PDF;
-  6) --download: докачка «тира A» (карты результатов выборов) в
-     data/seccoes/<DICO>_<slug>/, реестр data/seccoes/catalog.csv;
-     отчёт по каждому сайту: data/seccoes/crawl/<DICO>_<slug>.json.
+  2) recursive parsing of sitemap indexes (limits per site);
+  3) URL filtering by election keywords, scoring;
+  4) fetching the top candidates. Special case (typical WordPress chambers):
+     URLs like /?listas_ficheiros=<document-slug> redirect STRAIGHT to the file —
+     check the content-type; PDF slugs with result-map signs = the target;
+  5) HTML pages: extracting links to PDFs;
+  6) --download: downloading "tier A" (election result maps) into
+     data/seccoes/<DICO>_<slug>/, registry data/seccoes/catalog.csv;
+     report per site: data/seccoes/crawl/<DICO>_<slug>.json.
 
   python3 crawl_election_pages.py --names "Lisboa,Porto" [--download]
   python3 crawl_election_pages.py --top 6 [--download]
@@ -50,7 +50,7 @@ KW_STRONG = ['eleic', 'eleitor', 'votac', 'resultad', 'legislativ',
              'autarqu', 'presidenci', 'europei', 'referend', 'escrutin']
 KW_WEAK = ['vot', 'sec', 'urna', 'mapa', '2025', '2024', '2026']
 
-# тир A — карты результатов (качаем), тир B — прочие документы выборов (только в реестр)
+# tier A — result maps (downloaded), tier B — other election documents (registry only)
 ELECTION_TYPE = ['legislativ', 'autarqu', 'presidenci', 'europei', 'referend',
                  'eleic', 'eleitor']
 RESULT_SIG = ['resultad', 'mapa', 'apurament', 'escrutin']
@@ -68,7 +68,7 @@ def norm_url(u):
 
 
 def fetch(url, timeout=25, as_bytes=False):
-    """GET с редиректами; -> (final_url, content_type, bytes|str)."""
+    """GET with redirects; -> (final_url, content_type, bytes|str)."""
     req = urllib.request.Request(url, headers={
         'User-Agent': UA,
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -92,14 +92,14 @@ def score_url(url):
 
 
 def pdf_tier(url):
-    """A = карта результатов выборов; B = прочий документ выборов; '' = мимо."""
+    """A = election result map; B = other election document; '' = no match."""
     u = norm_url(url)
     is_election = any(kw in u for kw in ELECTION_TYPE)
     has_result = any(kw in u for kw in RESULT_SIG)
     if not (is_election or has_result):
         return ''
-    # эдитали/бюллетени/досрочное голосование/места голосования/составы mesa —
-    # организация выборов, не результаты; только в реестр
+    # editals/ballots/early voting/voting places/mesa membership —
+    # election organization, not results; registry only
     if any(k in u for k in ('edital', 'boletim', 'locais-e-horarios',
                             'voto-antecipado', 'votoantecipado',
                             'recenseament', 'locais-de-voto',
@@ -164,7 +164,7 @@ def extract_pdfs(html, base_url):
 
 
 def save_pdf(url):
-    """Скачивает PDF в data/seccoes/<dico>_<slug>/; -> (path, status)."""
+    """Downloads a PDF into data/seccoes/<dico>_<slug>/; -> (path, status)."""
     try:
         final, ct, data = fetch(url, as_bytes=True)
     except Exception as e:
@@ -193,7 +193,7 @@ def append_catalog(rows):
         w.writerows(rows)
 
 
-DEST_DIR = ''  # выставляется в process() — каталог текущего конселью
+DEST_DIR = ''  # set in process() — directory of the current concelho
 
 
 def process(row, download=False, max_pages=20):
@@ -201,15 +201,15 @@ def process(row, download=False, max_pages=20):
     name, site, dico = row['name'], row['website'], row['dico']
     slug = re.sub(r'[^a-z0-9]+', '', deaccent(name).lower())
     DEST_DIR = os.path.join(SECCOES_DIR, f'{dico}_{slug}')
-    print(f'\n=== {name} ({dico}, {row["registered_voters"]} изб.) — {site}')
+    print(f'\n=== {name} ({dico}, {row["registered_voters"]} reg.) — {site}')
 
     urls, maps = load_sitemaps(site)
-    print(f'  sitemap-файлов: {len(maps)}, URL: {len(urls)}')
+    print(f'  sitemap files: {len(maps)}, URL: {len(urls)}')
     report = {'name': name, 'dico': dico, 'site': site, 'sitemaps': len(maps),
               'sitemap_urls': len(urls), 'tierA': [], 'tierB': [], 'notes': []}
     if not urls:
-        report['notes'].append('sitemap не найден — нужен ручной обход/поиск')
-        print('  ! sitemap не найден')
+        report['notes'].append('sitemap not found — manual crawl/search needed')
+        print('  ! sitemap not found')
         save_report(report)
         return {'name': name, 'maps': 0, 'urls': 0, 'A': 0, 'B': 0, 'dl': 0}
 
@@ -217,14 +217,14 @@ def process(row, download=False, max_pages=20):
     cands = [u for s, u in scored if s >= 4][:max_pages]
     report['candidates_sample'] = [{'score': score_url(u), 'url': u}
                                    for u in cands[:30]]
-    print(f'  кандидатов: {sum(1 for s, _ in scored if s >= 4)}, берем {len(cands)}')
+    print(f'  candidates: {sum(1 for s, _ in scored if s >= 4)}, taking {len(cands)}')
 
-    # 1) прямые документы: PDF-урлы из sitemap + listas_ficheiros-редиректы
+    # 1) direct documents: PDF urls from the sitemap + listas_ficheiros redirects
     pdf_docs = {}  # final_url -> origin
     for u in urls:
         if norm_url(u).endswith('.pdf'):
             pdf_docs[u] = 'sitemap'
-    # 2) обход страниц-кандидатов
+    # 2) crawling the candidate pages
     for u in cands:
         try:
             final, ct, body = fetch(u)
@@ -238,7 +238,7 @@ def process(row, download=False, max_pages=20):
                 pdf_docs.setdefault(p, f'page<-{u}')
         time.sleep(0.3)
 
-    # внешний хост (напр., sg.mai.gov.pt) — не качаем, только в реестр
+    # external host (e.g., sg.mai.gov.pt) — not downloaded, registry only
     site_host = urllib.parse.urlparse(site).netloc.lower().removeprefix('www.')
 
     tierA = sorted({u: t for u in pdf_docs if (t := pdf_tier(u)) == 'A'
@@ -250,7 +250,7 @@ def process(row, download=False, max_pages=20):
     report['tierA'] = [{'url': u, 'origin': o} for u, o in tierA]
     report['tierA_external'] = tierA_ext
     report['tierB'] = [{'url': u, 'origin': o} for u, o in tierB]
-    print(f'  документов выборов: тир A {len(tierA)}, тир B {len(tierB)}')
+    print(f'  election documents: tier A {len(tierA)}, tier B {len(tierB)}')
     for u, o in tierA[:15]:
         print(f'    [A] {u}   ({o})')
 
@@ -296,9 +296,9 @@ def save_report(report):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--names', help='через запятую (как в CSV)')
-    ap.add_argument('--dicos', help='DICO-коды через запятую, напр. 1106')
-    ap.add_argument('--top', type=int, help='N крупнейших по избирателям')
+    ap.add_argument('--names', help='comma-separated (as in the CSV)')
+    ap.add_argument('--dicos', help='comma-separated DICO codes, e.g. 1106')
+    ap.add_argument('--top', type=int, help='N largest by registered voters')
     ap.add_argument('--download', action='store_true')
     args = ap.parse_args()
 
@@ -313,13 +313,13 @@ def main():
     elif args.top:
         rows = rows[:args.top]
     if not rows:
-        sys.exit('ничего не выбрано (проверьте --names/--dicos/--top)')
+        sys.exit('nothing selected (check --names/--dicos/--top)')
 
     stats = [process(r, args.download) for r in rows]
-    print('\n===== сводка =====')
+    print('\n===== summary =====')
     for s in stats:
         print(f'  {s["name"]}: sitemap {s["maps"]}, URL {s["urls"]}, '
-              f'тир A {s["A"]}, тир B {s["B"]}, скачано {s["dl"]}')
+              f'tier A {s["A"]}, tier B {s["B"]}, downloaded {s["dl"]}')
 
 
 if __name__ == '__main__':

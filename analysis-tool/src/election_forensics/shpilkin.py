@@ -1,20 +1,20 @@
-"""Метод Шпилькина: распределение явки, «честное ядро», оценка аномальных голосов.
+"""The Shpilkin method: turnout distribution, "honest core", estimate of anomalous votes.
 
-Идея (раздел 2 обзорного документа):
-1. Гистограмма числа голосов за партию в зависимости от явки (взвешивание
-   по числу проголосовавших, а не по числу участков).
-2. «Честное ядро» — гладкая модель основной части распределения;
-   допущение: манипуляции только добавляют явку и голоса.
-3. Аномальная составляющая — масса распределения правее границы
-   естественного («честного») спада; интеграл даёт оценку числа
-   аномальных голосов за партию и позволяет пересчитать итог.
+The idea (section 2 of the survey document):
+1. Histogram of party votes as a function of turnout (weighted by the number
+   of voters, not by the number of units).
+2. The "honest core" — a smooth model of the main body of the distribution;
+   assumption: manipulations only add turnout and votes.
+3. The anomalous component is the mass of the distribution to the right of the
+   boundary of natural ("honest") decline; integrating it yields an estimate of
+   the number of anomalous votes for the party and allows recomputing the result.
 
-Граница аномальной явки. Для неоднородных данных (Португалия: широкое
-смесь городских/сельских приходов) параметрическое одиночное ядро
-неустойчиво, поэтому граница задаётся внешним ориентиром — верхним
-перцентилем взвешенного распределения явки КОНТРОЛЬНЫХ выборов тех же
-территорий (логика «контрольных стран/выборов» из раздела 4 обзора).
-Без контролов берётся q99.5 самих данных.
+Anomalous-turnout boundary. For heterogeneous data (Portugal: a broad mix of
+urban/rural parishes) a single parametric kernel is unstable, so the boundary
+is set by an external reference — the upper percentile of the weighted turnout
+distribution of CONTROL elections over the same territories (the "control
+countries/elections" logic from section 4 of the survey). Without controls,
+the q99.5 of the data themselves is used.
 """
 
 from __future__ import annotations
@@ -36,11 +36,11 @@ class ShpilkinResult:
     mode: float
     sigma: float
     total_votes_party: int
-    tail_voters: int  # проголосовавших на явке выше границы
-    tail_votes_party: int  # голосов за партию на явке выше границы
-    tail_share_of_party: float  # то же в % от голосов партии
+    tail_voters: int  # voters at turnout above the boundary
+    tail_votes_party: int  # party votes at turnout above the boundary
+    tail_share_of_party: float  # the same as % of the party's votes
     observed_share_pct: float
-    honest_share_pct: float  # итог партии без аномальной зоны
+    honest_share_pct: float  # the party's result without the anomalous zone
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -51,10 +51,10 @@ def votes_by_turnout(
     weight_col: str | None = None,
     bin_width: float = 0.5,
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Гистограмма: сумма weight_col по корзинам явки.
+    """Histogram: sum of weight_col over turnout bins.
 
-    weight_col=None → число проголосовавших (распределение явки,
-    взвешенное по электорату), иначе — голоса за партию.
+    weight_col=None → number of voters (the turnout distribution weighted by
+    the electorate), otherwise — votes for the party.
     """
     turnout = data.turnout.to_numpy()
     w = data.df[weight_col].to_numpy() if weight_col else data.df["voted"].to_numpy()
@@ -65,7 +65,7 @@ def votes_by_turnout(
 
 
 def suggest_t_cut(controls: list[ElectionData], q: float = 99.5) -> float:
-    """Граница аномальной явки: максимальный q-перцентиль контрольных выборов."""
+    """Anomalous-turnout boundary: the maximum q-percentile across control elections."""
     qs = []
     for c in controls:
         t = c.turnout.to_numpy()
@@ -75,7 +75,7 @@ def suggest_t_cut(controls: list[ElectionData], q: float = 99.5) -> float:
 
 
 def smooth_mode_sigma(centers: np.ndarray, h: np.ndarray, smooth_bins: float = 2.0) -> tuple[float, float]:
-    """Мода и σ гладкой аппроксимации распределения (для справки и графика)."""
+    """Mode and σ of the smooth approximation of the distribution (for reference and plots)."""
     hs = gaussian_filter1d(h.astype(float), smooth_bins)
     i_mode = int(np.argmax(hs))
     mode = float(centers[i_mode])
@@ -92,7 +92,7 @@ def shpilkin_estimate(
     bin_width: float = 0.5,
     q: float = 99.5,
 ) -> ShpilkinResult:
-    """Оценка аномальных голосов за партию: масса правее границы честного спада."""
+    """Estimate of anomalous votes for the party: the mass to the right of the honest-decline boundary."""
     centers, h_voted = votes_by_turnout(data, None, bin_width)
     _, h_party = votes_by_turnout(data, party, bin_width)
     if controls:
@@ -130,7 +130,7 @@ def shpilkin_estimate(
 
 
 def comet_scatter_data(data: ElectionData, party: str) -> pd.DataFrame:
-    """Данные для скаттерплота «явка × результат» (хвост кометы)."""
+    """Data for the "turnout × result" scatter plot (the comet tail)."""
     return pd.DataFrame(
         {
             "turnout": data.turnout,

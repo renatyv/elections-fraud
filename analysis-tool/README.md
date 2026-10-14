@@ -1,38 +1,42 @@
 # analysis-tool: election forensics
 
-Статистические методы обнаружения фальсификаций на выборах — реализация
-методов из обзора «Метод Шпилькина и другие статистические методы обнаружения
-фальсификаций на выборах» (корень репозитория).
+Statistical methods for detecting election fraud — an implementation of the
+methods from the survey "The Shpilkin method and other statistical methods
+for detecting election fraud" (repository root).
 
-## Методы
+## Methods
 
-| Модуль | Метод | Источник |
+| Module | Method | Source |
 |---|---|---|
-| `shpilkin` | гистограмма явки, «честное ядро», оценка аномальных голосов | Шпилькин |
-| `fingerprints` | электоральные отпечатки пальцев, смесь 2D-гауссиан | Klimek et al., PNAS 2012 |
-| `integer_peaks` | целочисленные пики явки/результата (МК-ноль) | Kobak et al., AOAS 2016 |
-| `correlations` | 2D-корреляции явка × результат по партиям и округам | Kobak et al., arXiv:1205.0741 |
-| `digit_tests` | вторая цифра (Бенфорд) и последняя цифра | Mebane 2006; Beber–Scacco 2012 |
-| `neighbors` | выбросы против соседей + скачки к прошлым выборам | Myagkov–Ordeshook–Shakin 2009 |
-| `anomaly_ml` | Isolation Forest, рейтинг аномальных территорий | Zhang et al., PLOS ONE 2019 |
-| `selftest` | синтетическая валидация: «вброс» и «круглые явки» | — |
+| `shpilkin` | turnout histogram, "honest core", estimate of anomalous votes | Shpilkin |
+| `fingerprints` | electoral fingerprints, 2D Gaussian mixture | Klimek et al., PNAS 2012 |
+| `integer_peaks` | integer peaks of turnout/result (MC null) | Kobak et al., AOAS 2016 |
+| `correlations` | 2D turnout × result correlations by party and district | Kobak et al., arXiv:1205.0741 |
+| `digit_tests` | second digit (Benford) and last digit | Mebane 2006; Beber–Scacco 2012 |
+| `neighbors` | outliers vs neighbours + jumps vs the previous election | Myagkov–Ordeshook–Shakin 2009 |
+| `anomaly_ml` | Isolation Forest, ranking of anomalous territories | Zhang et al., PLOS ONE 2019 |
+| `selftest` | synthetic validation: "stuffing" and "rounded turnouts" | — |
 
-## Запуск
+## Run
 
 ```bash
 uv sync
 uv run ef-analyze --data ../portugal-2025/data/legislativas2025_mai \
                   --out ../portugal-2025/analysis \
-                  --title "Португалия AR 2025 (freguesias)" \
+                  --title "Portugal AR 2025 (freguesias)" \
                   --controls ../portugal-2025/data/legislativas2022_mai,../portugal-2025/data/legislativas2024_mai
 ```
 
-Выход: `analysis/figures/*.png`, `analysis/tables/*.csv`, `analysis/metrics.json`.
+Output: `analysis/figures/*.png`, `analysis/tables/*.csv`, `analysis/metrics.json`.
 
-Вход — выгрузка портала MAI (`results_freguesias.csv` + `results_all_previous.csv`);
-уровень анализа — приходы (freguesias), нижний доступный официальный уровень.
+The input is a MAI portal export (`results_freguesias.csv` +
+`results_all_previous.csv`); the analysis level is parishes (freguesias),
+the lowest available official level.
 
-## Тесты
+Plot labels default to English; other languages are set with
+`--lang <code>` (`ru|en|pt|es|sl|hr|it|hu`).
+
+## Tests
 
 ```bash
 uv run pytest

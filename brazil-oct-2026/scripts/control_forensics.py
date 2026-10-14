@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
-"""Контрольный прогон: выборы-2022 как контроль для BR-2026 (те же секции).
+"""Control run: the 2022 election as a control for BR-2026 (the same sections).
 
-Закрывает главное ограничение ОТЧЁТа (§«Ограничения», п. 1): граница честного
-спада Шпилькина теперь берётся из КОНТРОЛЬНЫХ выборов 2022 (оба тура, те же
-территории), а не из собственного q99,5; плюс выполняется №8-б обзора —
-«скачки к прошлым выборам» (изменение явки и долей на тех же секциях 2022→2026):
+Closes the main limitation of the REPORT ("Limitations", item 1): the honest-decline
+boundary of Shpilkin is now taken from the CONTROL 2022 election (both rounds, the same
+territories) instead of the own q99.5; plus it runs the review's №8-b —
+"jumps vs the past election" (the change in turnout and shares on the same
+sections 2022→2026):
 
-1. Граница q99,5 (взвешенно по электорату) контрольных 2022-1Т/2Т → пересчёт
-   хвостов BR-2026 по ней; собственные хвосты 2022 как базовый уровень шума.
-2. Распределения явки 2022-1Т/2Т и 2026-1Т на одном поле с границами.
-3. Матч секций по ключу (UF-município-zona-seção) 2022↔2026; Δявка, Δдоли
-   Болсонару/Лулы; робастные выбросы |z|>4; децили Δявки против долей-2026
-   (сигнатура вброса: прирост явки смещён в пользу одного кандидата).
-4. Отпечатки Klimek на контрольных 2022 (обa тура) — где лежат компоненты.
+1. The q99.5 boundary (weighted by electorate) of the 2022-R1/R2 control → recount
+   of the BR-2026 tails against it; the 2022 own tails as the baseline noise level.
+2. The turnout distributions of 2022-R1/R2 and 2026-R1 on one plot with boundaries.
+3. Matching sections by key (UF-município-zona-seção) 2022↔2026; Δturnout, Δshares
+   of Bolsonaro/Lula; robust outliers |z|>4; deciles of Δturnout against the 2026 shares
+   (stuffing signature: the turnout gain is skewed in favor of one candidate).
+4. Klimek fingerprints on the 2022 control (both rounds) — where the components lie.
 
-Запуск: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/control_forensics.py
-Выход: brazil-oct-2026/analysis/{figures/control_*.png, tables/control_*.csv,
+Run: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/control_forensics.py
+Output: brazil-oct-2026/analysis/{figures/control_*.png, tables/control_*.csv,
        metrics_control_2022.json}
 
-Флаги: --lang ru|en|pt|es — язык подписей графиков (по умолчанию ru);
---fig-out DIR — записать фигуры (а также таблицы и metrics_control_2022.json)
-в DIR, не трогая brazil-oct-2026/analysis/.
+Flags: --lang ru|en|pt|es — figure label language (default en);
+--fig-out DIR — write the figures (plus tables and metrics_control_2022.json)
+into DIR without touching brazil-oct-2026/analysis/.
 """
 
 from __future__ import annotations
@@ -37,7 +38,7 @@ import pandas as pd
 BR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "analysis-tool" / "src"))
 
-from election_forensics import plots  # noqa: E402  (стиль/rcParams)
+from election_forensics import plots  # noqa: E402  (style/rcParams)
 from election_forensics.correlations import weighted_pearson  # noqa: E402
 from election_forensics.data import ElectionData  # noqa: E402
 from election_forensics.fingerprints import fingerprint_mixture  # noqa: E402
@@ -51,7 +52,7 @@ TAB = OUT / "tables"
 LEADER = "votes:BOLSONARO"
 RUNNER_UP = "votes:LULA"
 
-# --- подписи кастомных графиков (ru|en|pt|es) --------------------------------
+# --- custom figure labels (ru|en|pt|es) ---------------------------------------
 TR: dict[str, dict[str, str]] = {
     "ru": {
         "t1": "2022, 1-й тур", "t2": "2022, 2-й тур", "t26": "2026, 1-й тур",
@@ -151,8 +152,8 @@ MACRO = {
     "S": ["PR", "RS", "SC"],
     "ZZ": ["ZZ"],
 }
-REG_NAMES = {"N": "Север", "NE": "Северо-Восток", "CW": "Центр.-Запад",
-             "SE": "Юго-Восток", "S": "Юг", "ZZ": "Заграница"}
+REG_NAMES = {"N": "North", "NE": "Northeast", "CW": "Centre-West",
+             "SE": "Southeast", "S": "South", "ZZ": "Abroad"}
 REG_ORDER = ["N", "NE", "CW", "SE", "S", "ZZ"]
 REG_COLORS = {"N": "#8c564b", "NE": "#d62728", "CW": "#e6960c",
               "SE": "#1f77b4", "S": "#2ca02c", "ZZ": "#7f7f7f"}
@@ -273,11 +274,11 @@ def plot_fingerprint_2022(d: ElectionData, fps: dict[str, object],
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Контроль-2022 против BR-2026 (те же секции)")
-    ap.add_argument("--lang", default="ru", choices=["ru", "en", "pt", "es"],
-                    help="язык подписей графиков (по умолчанию ru)")
+    ap = argparse.ArgumentParser(description="2022 control vs BR-2026 (the same sections)")
+    ap.add_argument("--lang", default="en", choices=["ru", "en", "pt", "es"],
+                    help="figure label language (default en)")
     ap.add_argument("--fig-out", type=Path, default=None,
-                    help="каталог для фигур/таблиц/metrics вместо brazil-oct-2026/analysis/")
+                    help="directory for figures/tables/metrics instead of brazil-oct-2026/analysis/")
     args = ap.parse_args()
     lang = args.lang
     if args.fig_out is not None:
@@ -292,26 +293,26 @@ def main() -> None:
     d26 = load("secoes_presidente_2026.csv")
     d22_1 = load("secoes_presidente_2022.csv", turno=1)
     d22_2 = load("secoes_presidente_2022.csv", turno=2)
-    log(f"2026: {d26.n} секций; 2022-1Т: {d22_1.n}; 2022-2Т: {d22_2.n}")
+    log(f"2026: {d26.n} sections; 2022-R1: {d22_1.n}; 2022-R2: {d22_2.n}")
 
-    metrics: dict = {"title": "Контрольные выборы-2022 против BR-2026 (те же секции)"}
+    metrics: dict = {"title": "2022 control elections vs BR-2026 (the same sections)"}
 
-    # --- 1. граница Шпилькина из контроля --------------------------------
+    # --- 1. the Shpilkin boundary from the control --------------------------------
     t_cut_1 = suggest_t_cut([d22_1], 99.5)
     t_cut_2 = suggest_t_cut([d22_2], 99.5)
     t_cut = suggest_t_cut([d22_1, d22_2], 99.5)
     t_own26 = float(np.percentile(np.repeat(d26.turnout.to_numpy(),
                                             np.round(d26.registered.to_numpy()).astype(int)), 99.5))
-    log(f"границы q99,5: 2022-1Т {t_cut_1:.2f}%, 2022-2Т {t_cut_2:.2f}%, "
-        f"макс (контроль) {t_cut:.2f}%; собственная 2026 {t_own26:.2f}%")
+    log(f"q99.5 boundaries: 2022-R1 {t_cut_1:.2f}%, 2022-R2 {t_cut_2:.2f}%, "
+        f"max (control) {t_cut:.2f}%; 2026's own {t_own26:.2f}%")
 
     rows = []
-    for label, d, party in (("2026-1Т", d26, LEADER), ("2026-1Т", d26, RUNNER_UP),
-                            ("2022-1Т", d22_1, LEADER), ("2022-1Т", d22_1, RUNNER_UP),
-                            ("2022-2Т", d22_2, LEADER), ("2022-2Т", d22_2, RUNNER_UP)):
-        ctrl = [d22_1, d22_2] if label == "2026-1Т" else None
+    for label, d, party in (("2026-R1", d26, LEADER), ("2026-R1", d26, RUNNER_UP),
+                            ("2022-R1", d22_1, LEADER), ("2022-R1", d22_1, RUNNER_UP),
+                            ("2022-R2", d22_2, LEADER), ("2022-R2", d22_2, RUNNER_UP)):
+        ctrl = [d22_1, d22_2] if label == "2026-R1" else None
         res_c = shpilkin_estimate(d, party, controls=ctrl)
-        res_o = shpilkin_estimate(d, party)  # собственный q99,5
+        res_o = shpilkin_estimate(d, party)  # own q99.5
         rows.append({
             "election": label, "party": party.removeprefix("votes:"),
             "n": d.n,
@@ -327,9 +328,9 @@ def main() -> None:
             "tail_share_party_own_pct": round(res_o.tail_share_of_party, 3),
             "mode": round(res_o.mode, 2), "sigma": round(res_o.sigma, 2),
         })
-        log(f"{label} {party.removeprefix('votes:')}: хвост по контролю "
-            f"{res_c.tail_share_of_party:.2f}% (граница {res_c.t_cut:.2f}); "
-            f"по собственному q99,5 {res_o.tail_share_of_party:.2f}%")
+        log(f"{label} {party.removeprefix('votes:')}: tail by the control "
+            f"{res_c.tail_share_of_party:.2f}% (boundary {res_c.t_cut:.2f}); "
+            f"by own q99.5 {res_o.tail_share_of_party:.2f}%")
     shp_tab = pd.DataFrame(rows)
     shp_tab.to_csv(tab_dir / "control_shpilkin.csv", index=False)
     metrics["shpilkin"] = rows
@@ -341,7 +342,7 @@ def main() -> None:
     plot_turnout_dists({"t1": d22_1, "t2": d22_2, "t26": d26}, t_cut, t_own26,
                        {"t1": t_cut_1, "t2": t_cut_2}, lang, fig_dir)
 
-    # --- 2. матч секций 2022-1Т ↔ 2026-1Т --------------------------------
+    # --- 2. matching 2022-R1 ↔ 2026-R1 sections --------------------------------
     cols = ["key", "uf", "name", "registered_voters", "voted", LEADER, RUNNER_UP]
     a = d26.df[cols].rename(columns={"registered_voters": "registered_voters_26",
                                     "voted": "voted_26", "name": "name_26"})
@@ -370,11 +371,11 @@ def main() -> None:
         })
     metrics["match"] = match
     metrics["match_by_region"] = by_region
-    log(f"матч: {match['matched']:,} из {d26.n:,} секций-2026 "
-        f"({match['matched_pct_of_2026']}%), покрывает "
-        f"{match['matched_voters_2026_pct']}% проголосовавших-2026")
+    log(f"match: {match['matched']:,} of {d26.n:,} 2026 sections "
+        f"({match['matched_pct_of_2026']}%), covers "
+        f"{match['matched_voters_2026_pct']}% of 2026 voters")
 
-    # --- 3. скачки явки/долей на тех же секциях ---------------------------
+    # --- 3. turnout/share jumps on the same sections ---------------------------
     m["turnout_22"] = 100.0 * m.voted_22 / m.registered_voters_22
     m["turnout_26"] = 100.0 * m.voted_26 / m.registered_voters_26
     m["d_turnout"] = m.turnout_26 - m.turnout_22
@@ -396,8 +397,8 @@ def main() -> None:
     r_dT_share_l = weighted_pearson(m.d_turnout.to_numpy(), m.d_share_lula.to_numpy(),
                                     m.registered_voters_26.to_numpy(dtype=float))
 
-    # децили прироста явки против средних долей-2026 (сигнатура вброса:
-    # верхние децили смещены в пользу бенефициара)
+    # deciles of the turnout gain against the mean 2026 shares (stuffing signature:
+    # the top deciles are skewed in favor of the beneficiary)
     m["dT_decile"] = pd.qcut(m.d_turnout, 10, labels=False, duplicates="drop") + 1
     dec = m.groupby("dT_decile").apply(lambda g: pd.Series({
         "d_turnout_median": g.d_turnout.median(),
@@ -430,9 +431,9 @@ def main() -> None:
         "all_share26_lula": round(100.0 * m[RUNNER_UP + "_x"].sum() / m.voted_26.sum(), 2),
     }
     metrics["jumps"] = jumps
-    log(f"Δявка: медиана {med:+.2f} п.п., MAD {mad:.2f}; |z|>4 — {len(flagged)} "
-        f"({jumps['d_turnout']['flagged_pct']}%): вверх {up} / вниз {down}; "
-        f"r(Δявка, Δдоля Болсонару)={r_dT_share_b:+.3f}, Лулы={r_dT_share_l:+.3f}")
+    log(f"Δturnout: median {med:+.2f} pp, MAD {mad:.2f}; |z|>4 — {len(flagged)} "
+        f"({jumps['d_turnout']['flagged_pct']}%): up {up} / down {down}; "
+        f"r(Δturnout, Δ Bolsonaro share)={r_dT_share_b:+.3f}, Lula={r_dT_share_l:+.3f}")
 
     jrows = []
     for rg in REG_ORDER:
@@ -457,13 +458,13 @@ def main() -> None:
 
     plot_jumps(m, med, mad, lang, fig_dir)
 
-    # --- 4. отпечатки на контроле-2022 ------------------------------------
+    # --- 4. fingerprints on the 2022 control ------------------------------------
     fp_rows = []
     fps2: dict[str, object] = {}
-    for label, d in (("2022-1Т", d22_1), ("2022-2Т", d22_2)):
+    for label, d in (("2022-R1", d22_1), ("2022-R2", d22_2)):
         for party in (LEADER, RUNNER_UP):
             fp = fingerprint_mixture(d, party)
-            if label == "2022-2Т":
+            if label == "2022-R2":
                 fps2[party] = fp
             fp_rows.append({
                 "election": label, "party": party.removeprefix("votes:"),
@@ -476,11 +477,11 @@ def main() -> None:
     pd.DataFrame(fp_rows).to_csv(tab_dir / "control_fingerprints_2022.csv", index=False)
     metrics["fingerprints_2022"] = fp_rows
     plot_fingerprint_2022(d22_2, fps2, lang, fig_dir)
-    log("отпечатки-2022: " + "; ".join(
+    log("2022 fingerprints: " + "; ".join(
         f"{r['election']} {r['party']}: w={r['weight_anom']} @ {r['mean_anom']}" for r in fp_rows))
 
     metrics["files"] = {
-        "data_2022": "data/secoes_presidente_2022.csv (построен build_sections_csv_2022.py)",
+        "data_2022": "data/secoes_presidente_2022.csv (built by build_sections_csv_2022.py)",
         "tables": ["control_shpilkin.csv", "control_deciles.csv",
                    "control_jumps_by_region.csv", "control_jumps_extreme.csv",
                    "control_fingerprints_2022.csv"],
@@ -489,7 +490,7 @@ def main() -> None:
     }
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2, default=float)
-    log(f"готово: {metrics_path}")
+    log(f"done: {metrics_path}")
 
 
 if __name__ == "__main__":

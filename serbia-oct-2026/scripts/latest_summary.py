@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Сводка по собранным данным: текущее положение списков, динамика между
-последними двумя снапшотами, прогресс обработки участков.
+Summary of the collected data: current standings of the lists, dynamics between
+the last two snapshots, polling-station processing progress.
 
-  python3 scripts/latest_summary.py                 # последний тур в data/
-  python3 scripts/latest_summary.py --round 341140  # конкретный тур
-  python3 scripts/latest_summary.py --html          # ещё и data/latest_summary.md
+  python3 scripts/latest_summary.py                 # latest round in data/
+  python3 scripts/latest_summary.py --round 341140  # a specific round
+  python3 scripts/latest_summary.py --html          # also writes data/latest_summary.md
 """
 
 import argparse
@@ -27,7 +27,7 @@ def latest_round(data_dir):
         (os.path.basename(p) for p in glob.glob(os.path.join(data_dir, "timeline", "*"))),
         key=int, reverse=True)
     if not rounds:
-        raise SystemExit("Нет данных. Сначала запустите scrape_rik.py.")
+        raise SystemExit("No data. Run scrape_rik.py first.")
     return rounds[0]
 
 
@@ -35,7 +35,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data-dir", default=DEFAULT_DATA)
     ap.add_argument("--round", default=None)
-    ap.add_argument("--html", action="store_true", help="также записать data/latest_summary.md")
+    ap.add_argument("--html", action="store_true", help="also write data/latest_summary.md")
     args = ap.parse_args()
 
     round_id = args.round or latest_round(args.data_dir)
@@ -43,39 +43,39 @@ def main():
     nat_path = os.path.join(tl, "snapshots_national.csv")
     long_path = os.path.join(tl, "results_long.csv")
     if not os.path.exists(long_path):
-        raise SystemExit(f"Нет таймлайна для тура {round_id}: {long_path}")
+        raise SystemExit(f"No timeline for round {round_id}: {long_path}")
 
     lines = []
     add = lines.append
-    add(f"# Сводка по туру РИК {round_id}\n")
+    add(f"# Summary for RIK round {round_id}\n")
 
     if os.path.exists(nat_path):
         snaps = read_csv(nat_path)
         if snaps:
             last = snaps[-1]
             first = snaps[0]
-            add(f"* Снапшотов: {len(snaps)} "
+            add(f"* Snapshots: {len(snaps)} "
                 f"({first['snapshot_ts']} … {last['snapshot_ts']})")
-            add(f"* Данные РИК на: {last['rik_datetime']}")
-            add(f"* Явка: {last['turnout_voters']} из {last['registered_voters']} "
+            add(f"* RIK data as of: {last['rik_datetime']}")
+            add(f"* Turnout: {last['turnout_voters']} of {last['registered_voters']} "
                 f"({last['turnout_pct']}%)")
-            add(f"* Обработано участков: {last['processed_stations']} из "
+            add(f"* Stations processed: {last['processed_stations']} of "
                 f"{last['total_stations']} ({last['processed_pct']}%)")
-            add(f"* Бюллетени: действительных {last['valid_ballots']}, "
-                f"недействительных {last['invalid_ballots']}\n")
+            add(f"* Ballots: {last['valid_ballots']} valid, "
+                f"{last['invalid_ballots']} invalid\n")
 
     rows = read_csv(long_path)
     national_rows = [r for r in rows if r["level_type"] == "national"]
     snaps_ts = sorted({r["snapshot_ts"] for r in national_rows})
     if not snaps_ts:
-        raise SystemExit("В таймлайне нет записей национального уровня.")
+        raise SystemExit("No national-level records in the timeline.")
 
     latest = {r["list_name"]: r for r in national_rows if r["snapshot_ts"] == snaps_ts[-1]}
     prev = ({r["list_name"]: r for r in national_rows if r["snapshot_ts"] == snaps_ts[-2]}
             if len(snaps_ts) >= 2 else {})
 
-    add("| # | Список | Голоса | % | Δ голосов с прошлого снапшота |")
-    add("|---|--------|--------|---|-------------------------------|")
+    add("| # | List | Votes | % | Δ votes since previous snapshot |")
+    add("|---|------|-------|---|--------------------------------|")
     for name in sorted(latest, key=lambda n: int(latest[n]["list_no"] or 0)):
         r = latest[name]
         d = ""
@@ -92,7 +92,7 @@ def main():
         out = os.path.join(args.data_dir, "latest_summary.md")
         with open(out, "w", encoding="utf-8") as f:
             f.write(text + "\n")
-        print(f"\nЗаписано: {out}")
+        print(f"\nWritten: {out}")
 
 
 if __name__ == "__main__":

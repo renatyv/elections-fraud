@@ -1,9 +1,9 @@
-# Фигуры для публичной страницы сайта репозитория — по комплекту на каждый
-# язык (pt, en, es, ru), данные — data/secoes_presidente_2026.csv +
-# контроль-2022 data/secoes_presidente_2022.csv. Запуск из корня репозитория:
+# Figures for the public site pages of the repository — one set per language
+# (pt, en, es, ru); data — data/secoes_presidente_2026.csv +
+# the 2022 control data/secoes_presidente_2022.csv. Run from the repo root:
 #   cd analysis-tool && uv run python ../brazil-oct-2026/scripts/build_site_figures.py
-# Выход: <репо>/site/brazil-oct-2026/img/<lang>/{turnout,comet,control,selftest}.png
-# Числа для самотеста — из analysis/metrics.json прогона 12.10.2026.
+# Output: <repo>/site/brazil-oct-2026/img/<lang>/{turnout,comet,control,selftest}.png
+# Self-test numbers — from analysis/metrics.json of the 12.10.2026 run.
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pandas", "matplotlib"]
@@ -25,8 +25,8 @@ DARK = "#16324f"
 RED = "#c0392b"
 GREY = "#8a97a5"
 PURPLE = "#9b59b6"
-CUT = 91.6  # граница честного спада (own q99.5), см. отчёт, раздел 2
-CUT_CONTROL = 91.5  # граница из контроля-2022 (q99.5, максимум двух туров), §12.1
+CUT = 91.6  # honest-decline boundary (own q99.5), see the report, section 2
+CUT_CONTROL = 91.5  # boundary from the 2022 control (q99.5, max of the two rounds), §12.1
 
 plt.rcParams.update(
     {
@@ -186,7 +186,7 @@ T = {
 },
 }
 
-# числа самотеста (analysis/metrics.json, прогон 12.10.2026)
+# self-test numbers (analysis/metrics.json, run of 12.10.2026)
 SELFTEST_CLEAN = 272_315
 SELFTEST_INJECTED = 6_116_988
 Z_CLEAN = 0.35

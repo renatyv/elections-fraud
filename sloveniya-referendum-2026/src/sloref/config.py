@@ -1,7 +1,7 @@
-"""Конфигурация: референдумы, файлы данных, пути.
+"""Configuration: referendums, data files, paths.
 
-Официальное описание форматов — DVK, «Referendumi 2026 - datoteke s podatki»
-(копия в docs/ проекта).
+Official format description — DVK, «Referendumi 2026 - datoteke s podatki»
+(copy in the project's docs/).
 """
 
 import os
@@ -9,16 +9,16 @@ from pathlib import Path
 
 BASE_URL = "https://volitve.dvk-rs.si"
 
-# (ключ, slug на сервере, название)
+# (key, slug on the server, title)
 REFERENDUMS: list[tuple[str, str, str]] = [
     ("preiskava", "referendum-preiskava",
-     "Законодательный референдум о ZPPre-B (закон о парламентских расследованиях)"),
+     "Legislative referendum on ZPPre-B (parliamentary investigation act)"),
     ("socialna_pomoc", "referendum-socialna-pomoc",
-     "Консультативный: социальная помощь и общественно-полезный труд"),
+     "Advisory: social assistance and community work"),
     ("volilna_pravica", "referendum-volilna-pravica-tujcev",
-     "Консультативный: избирательные права на местных выборах"),
+     "Advisory: voting rights in local elections"),
     ("rtv_prispevek", "referendum-rtv-prispevek",
-     "Консультативный: отмена обязательного взноса на RTV Slovenija"),
+     "Advisory: abolishing the mandatory RTV Slovenija contribution"),
 ]
 
 BASE_FILES: list[str] = [
@@ -27,7 +27,7 @@ BASE_FILES: list[str] = [
     "izvoz.xlsx",
 ]
 
-# volisca_ЕО_ОК.json: 8 избирательных единиц (volilna enota) × 11 округов (okraj)
+# volisca_EE_OO.json: 8 electoral units (volilna enota) × 11 districts (okraj)
 N_UNITS = 8
 N_DISTRICTS = 11
 
@@ -53,6 +53,6 @@ def data_dir() -> Path:
     return project_root() / "data"
 
 
-# Имена файлов состояния и журнала внутри data/
+# State and log file names inside data/
 TIMESERIES_NAME = "timeseries.csv"
 LOG_NAME = "scrape.log"

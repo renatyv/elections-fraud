@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Сборка сводных CSV из выгрузки портала MAI (см. fetch_mai_results.py).
+"""Build summary CSVs from the MAI portal download (see fetch_mai_results.py).
 
-Читает data/<election>_mai/territory-tree.json + territory-results/*.json
-и строит:
-  results_all.csv        — все уровни (страна, округа, муниципалитеты, приходы, заграница)
-  results_freguesias.csv — только приходы (freguesias)
-  results_concelhos.csv  — только муниципалитеты (concelhos)
-  results_circulos.csv   — только избирательные округа (círculos)
+Reads data/<election>_mai/territory-tree.json + territory-results/*.json
+and builds:
+  results_all.csv        — all levels (country, districts, municipalities,
+                           parishes, abroad)
+  results_freguesias.csv — parishes (freguesias) only
+  results_concelhos.csv  — municipalities (concelhos) only
+  results_circulos.csv   — electoral constituencies (círculos) only
 
-Формат — «широкий»: базовые поля + по колонке на партию (голоса).
-В JSON портала также лежат previousResults (прошлые выборы) —
-складываются в results_all_previous.csv.
+The format is "wide": base fields plus one column per party (votes).
+The portal JSON also carries previousResults (the previous election) —
+written to results_all_previous.csv.
 """
 import argparse
 import csv
@@ -20,13 +21,14 @@ import os
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("data_dir", help="каталог выгрузки, напр. data/legislativas2025_mai")
+    ap.add_argument("data_dir", help="download directory, e.g. data/legislativas2025_mai")
     ap.add_argument("--results-subdir", default="territory-results")
     args = ap.parse_args()
 
     tree = json.load(open(os.path.join(args.data_dir, "territory-tree.json"), encoding="utf-8"))
-    # новая версия портала (v2) использует числовые id территорий; после JSON-круга
-    # ключи — строки, а parent внутри — int. Нормализуем всё к строкам.
+    # the new portal version (v2) uses numeric territory ids; after a JSON
+    # round-trip the keys are strings while the inner parent is an int.
+    # Normalize everything to strings.
     tree = {str(k): {**v, "parent": (str(v["parent"]) if v.get("parent") is not None else None)}
             for k, v in tree.items()}
     res_dir = os.path.join(args.data_dir, args.results_subdir)
@@ -46,7 +48,7 @@ def main():
     party_totals = {}
     for k, info in tree.items():
         p = os.path.join(res_dir, f"{k}-AR.json") if False else None
-        # суффикс может отличаться; ищем любой файл <KEY>-*.json
+        # the suffix may differ; look for any <KEY>-*.json file
         d = os.path.join(res_dir, k + "-AR.json")
         if not os.path.exists(d):
             cands = [f for f in os.listdir(res_dir) if f.startswith(k + "-") and f.endswith(".json")]
@@ -57,7 +59,7 @@ def main():
             data = json.load(open(d, encoding="utf-8"))
         except Exception:
             continue
-        # новая версия портала (2025+) оборачивает результат в {"data": {...}}
+        # the new portal version (2025+) wraps the result in {"data": {...}}
         if isinstance(data.get("data"), dict):
             data = data["data"]
         cur = data.get("currentResults")
@@ -111,7 +113,7 @@ def main():
     write_csv("results_all.csv", rows)
     write_csv("results_all_previous.csv", prev_rows)
 
-    # уровни: 0 — корни (страна/global), 1 — округа, 2 — муниципалитеты, 3+ — приходы/консульства
+    # levels: 0 — roots (country/global), 1 — districts, 2 — municipalities, 3+ — parishes/consulates
     write_csv("results_circulos.csv", [r for r in rows if r["level"] == 1])
     write_csv("results_concelhos.csv", [r for r in rows if r["level"] == 2])
     write_csv("results_freguesias.csv", [r for r in rows if (r["level"] or 0) >= 3])

@@ -1,8 +1,8 @@
-# Фигуры для публичной страницы сайта репозитория — по комплекту на каждый
-# язык (en, sl, hr, it, hu), данные — data/derived/volisca_all.csv. Запуск из
-# каталога проекта:
+# Figures for the public site page of this repository — one set per language
+# (en, sl, hr, it, hu), data — data/derived/volisca_all.csv. Run from the
+# project directory:
 #   uv run python scripts/build_site_figures.py
-# Выход: <репо>/site/sloveniya-referendum-2026/img/<lang>/{turnout,comet,cross}.png
+# Output: <repo>/site/sloveniya-referendum-2026/img/<lang>/{turnout,comet,cross}.png
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pandas", "matplotlib"]
@@ -23,7 +23,7 @@ BLUE = "#3b82c4"
 DARK = "#16324f"
 RED = "#c0392b"
 GREY = "#8a97a5"
-CUT = 70.0  # граница честного спада (q99.5 контролов), см. отчёт, раздел 1
+CUT = 70.0  # honest-decline boundary (q99.5 of the controls), see the report, section 1
 
 plt.rcParams.update(
     {
@@ -154,7 +154,7 @@ T = {
 }
 
 df = pd.read_csv(ROOT / "data" / "derived" / "volisca_all.csv")
-df = df[df["upr"] > 0]  # обычные участки, без досрочных точек
+df = df[df["upr"] > 0]  # regular precincts, no early-voting points
 
 
 def fig_turnout(lang: str, tr: dict) -> None:
@@ -259,7 +259,7 @@ for lang, tr in T.items():
     fig_cross(lang, tr)
     print(f"{lang}: turnout, comet, cross -> site/sloveniya-referendum-2026/img/{lang}/")
 
-# прежние английские картинки в корне img/ больше не нужны
+# the old English images at the img/ root are no longer needed
 for stale in ["turnout.png", "comet.png", "cross.png"]:
     p = OUT / stale
     if p.exists():

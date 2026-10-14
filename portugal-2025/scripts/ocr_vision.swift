@@ -1,7 +1,7 @@
-// OCR PDF-сканов через Apple Vision (macOS встроенный).
-// Использование: ocr_vision <file.pdf> [scale]
-// Печает текст с примерным сохранением раскладки (колоночные позиции),
-// страницы разделены строкой === PAGE n ===.
+// OCR of PDF scans via Apple Vision (built into macOS).
+// Usage: ocr_vision <file.pdf> [scale]
+// Prints text with the layout approximately preserved (column positions);
+// pages are separated by a === PAGE n === line.
 import Foundation
 import PDFKit
 import AppKit
@@ -9,7 +9,7 @@ import Vision
 
 struct Tok {
     let text: String
-    let x: CGFloat   // нормализованный левый край (0..1)
+    let x: CGFloat   // normalized left edge (0..1)
     let yMid: CGFloat
     let h: CGFloat
 }
@@ -48,7 +48,7 @@ func ocrPage(_ page: PDFPage, scale: CGFloat) throws -> [Tok] {
     return out
 }
 
-// группировка токенов в строки по y
+// grouping tokens into lines by y
 func renderLines(_ toks: [Tok], widthChars: Int) -> String {
     guard !toks.isEmpty else { return "" }
     let sorted = toks.sorted { $0.yMid > $1.yMid }
@@ -118,13 +118,13 @@ if path.lowercased().hasSuffix(".pdf") {
         all.append(renderLines(toks, widthChars: 150))
     }
 } else {
-    // растровый файл (PNG/JPG): отдаём как есть Vision
+    // raster file (PNG/JPG): hand it to Vision as is
     guard let ns = NSImage(contentsOfFile: path),
           let cg = ns.cgImage(forProposedRect: nil, context: nil, hints: nil) else {
         FileHandle.standardError.write("cannot open image \(path)\n".data(using: .utf8)!)
         exit(1)
     }
-    let flipped = cg // Vision boundingBox: y снизу; CGImage через VNImageRequestHandler(cgImage:) тоже снизу — ок
+    let flipped = cg // Vision boundingBox: y from the bottom; a CGImage via VNImageRequestHandler(cgImage:) is bottom-up too — fine
     all.append("=== PAGE 1 ===")
     all.append(renderLines(toksFromCG(flipped), widthChars: 150))
 }

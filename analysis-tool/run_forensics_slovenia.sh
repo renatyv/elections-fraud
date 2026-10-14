@@ -1,30 +1,30 @@
 #!/bin/zsh
-# Полный цикл election forensics по четырём референдумам Словении 11.10.2026:
-# адаптация данных → штатный пайплайн analysis-tool (4 референдума, остальные
-# три как контроля) → кросс-проверки. Запуск:
+# Full election forensics cycle over the four Slovenia referendums of 11.10.2026:
+# data adaptation → the standard analysis-tool pipeline (4 referendums, the
+# other three as controls) → cross-checks. Run:
 #
-#     ../analysis-tool/run_forensics_slovenia.sh   # или любой cwd
+#     ../analysis-tool/run_forensics_slovenia.sh   # or any cwd
 #
-# Выход: sloveniya-referendum-2026/analysis/<референдум>/ и analysis/cross/.
+# Output: sloveniya-referendum-2026/analysis/<referendum>/ and analysis/cross/.
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"          # analysis-tool/
+ROOT="$(cd "$(dirname "$0")" && pwd)"             # analysis-tool/
 SLO="$ROOT/../sloveniya-referendum-2026"
 EF="$SLO/data/ef"
 
 cd "$ROOT"
 uv sync
 
-echo "== 1/3 адаптация данных в формат analysis-tool =="
+echo "== 1/3 adapting data to the analysis-tool format =="
 uv run python "$SLO/scripts/build_ef_csv.py"
 
-echo "== 2/3 ef-analyze по каждому референдуму (контроль — остальные три) =="
+echo "== 2/3 ef-analyze for each referendum (controls — the other three) =="
 declare -a REFS=(preiskava socialna_pomoc volilna_pravica rtv_prispevek)
 declare -A TITLE=(
-  [preiskava]="Словения, референдум ZPPre-B 11.10.2026 (участки)"
-  [socialna_pomoc]="Словения, референдум о соцпомощи 11.10.2026 (участки)"
-  [volilna_pravica]="Словения, референдум об избирательном праве 11.10.2026 (участки)"
-  [rtv_prispevek]="Словения, референдум о взносе RTV 11.10.2026 (участки)"
+  [preiskava]="Slovenia, ZPPre-B referendum 11.10.2026 (precincts)"
+  [socialna_pomoc]="Slovenia, social welfare referendum 11.10.2026 (precincts)"
+  [volilna_pravica]="Slovenia, voting rights referendum 11.10.2026 (precincts)"
+  [rtv_prispevek]="Slovenia, RTV contribution referendum 11.10.2026 (precincts)"
 )
 for ref in $REFS; do
   controls=""
@@ -39,7 +39,7 @@ for ref in $REFS; do
     --controls "${controls%,}"
 done
 
-echo "== 3/3 кросс-референдумные проверки, второй вариант, досрочные точки =="
+echo "== 3/3 cross-referendum checks, second variant, early-voting points =="
 uv run python "$SLO/scripts/analyze_extra.py"
 
-echo "готово: $SLO/analysis/"
+echo "done: $SLO/analysis/"

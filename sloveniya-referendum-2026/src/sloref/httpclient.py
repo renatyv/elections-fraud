@@ -1,4 +1,4 @@
-"""HTTP-клиент на httpx2 с повторами и принудительным IPv4."""
+"""HTTP client on httpx2 with retries and forced IPv4."""
 
 import socket
 import time
@@ -11,13 +11,13 @@ USER_AGENT = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 HTTP_TIMEOUT = 30.0
 RETRIES = 3
-RETRY_DELAY = 5.0  # сек, растёт с номером попытки
-TRANSPORT_RETRIES = 2  # повтор httpx2 на уровне соединения
+RETRY_DELAY = 5.0  # s, grows with the attempt number
+TRANSPORT_RETRIES = 2  # httpx2 retry at the connection level
 
 
 def force_ipv4() -> None:
-    """Сайты *.gov.si / dvk-rs.si сбрасывают часть IPv6 TLS-рукопожатий извне
-    EU/СНГ сетей; резолвим адреса только в IPv4."""
+    """The *.gov.si / dvk-rs.si sites drop some IPv6 TLS handshakes from
+    outside EU/CIS networks; resolve addresses to IPv4 only."""
     orig = socket.getaddrinfo
 
     def ipv4_only(*args, **kwargs):
@@ -28,7 +28,7 @@ def force_ipv4() -> None:
 
 
 class FetchError(RuntimeError):
-    """Не удалось скачать файл после всех повторов."""
+    """Failed to download the file after all retries."""
 
 
 def build_client() -> httpx2.Client:
@@ -42,10 +42,10 @@ def build_client() -> httpx2.Client:
 
 
 def fetch(client: httpx2.Client, path: str) -> bytes | None:
-    """GET <BASE_URL>/<path> с повторами.
+    """GET <BASE_URL>/<path> with retries.
 
-    Возвращает содержимое, None при 404 (файл ещё не опубликован),
-    FetchError — при прочих сетевых/HTTP ошибках.
+    Returns the content, None on 404 (file not published yet),
+    FetchError on any other network/HTTP error.
     """
     last_exc: Exception | None = None
     for attempt in range(1, RETRIES + 1):

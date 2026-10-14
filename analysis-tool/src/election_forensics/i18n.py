@@ -1,9 +1,9 @@
-"""Мультиязычные подписи для графиков.
+"""Multilingual plot labels.
 
-Подписи графиков по умолчанию русские (lang="ru"); сайт репозитория строит
-комплекты фигур на языки страниц через ef-analyze --lang <код> или передавая
-lang= в функции plots. Плейсхолдеры {…} заполняются str.format с уже
-отформатированными значениями.
+Plot labels are English by default (lang="en"); the repository site builds
+figure sets in the page languages via ef-analyze --lang <code> or by passing
+lang= to the plots functions. The {…} placeholders are filled with str.format
+using already formatted values.
 """
 
 from __future__ import annotations
@@ -525,7 +525,7 @@ LABELS: dict[str, dict[str, str]] = {
 
 
 def label(lang: str, key: str, **fmt) -> str:
-    """Подпись по ключу; отсутствующий язык → русский, отсутствующий ключ → ключ."""
-    d = LABELS.get(lang, LABELS["ru"])
-    tmpl = d.get(key) or LABELS["ru"].get(key) or key
+    """Label by key; missing language → English, missing key → the key itself."""
+    d = LABELS.get(lang, LABELS["en"])
+    tmpl = d.get(key) or LABELS["en"].get(key) or key
     return tmpl.format(**fmt) if fmt else tmpl

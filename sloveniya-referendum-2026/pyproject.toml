@@ -1,7 +1,7 @@
 [project]
 name = "slovenia-referendum-2026"
 version = "0.1.0"
-description = "Мониторинг и анализ данных четырёх референдумов Словении 11 октября 2026 года (источник: DVK, volitve.dvk-rs.si)"
+description = "Monitoring and analysis of the data of the four Slovenian referendums of 11 October 2026 (source: DVK, volitve.dvk-rs.si)"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

@@ -1,6 +1,6 @@
 #!/bin/bash
-# Альтернатива режиму --loop: запуск скрейпера по cron каждые 15 минут.
-# Установка: crontab -e  и добавить строку
+# Alternative to the --loop mode: run the scraper via cron every 15 minutes.
+# Setup: crontab -e  and add the line
 #   */15 * * * * /Users/renatyuldashev/Documents/elections\ analysis/bulgaria-oct-2026/run_every_15min.sh
 set -u
 cd "$(dirname "$0")"

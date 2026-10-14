@@ -1,8 +1,8 @@
-"""Извлечение общенациональных показателей из JSON-файлов DVK.
+"""Extracting nationwide figures from the DVK JSON files.
 
-Структура файлов описана в docs/Referendumi_2026_-_datoteke_s_podatki.docx:
-проценты — доли (0.4825), метки времени — словенское локальное время
-в Zulu-форме; пока данных нет, в файлах есть только поле «datum».
+The file structure is described in docs/Referendumi_2026_-_datoteke_s_podatki.docx:
+percentages are fractions (0.4825), timestamps are Slovenian local time
+in Zulu form; while no data is published the files contain only the «datum» field.
 """
 
 import json
@@ -11,21 +11,21 @@ from dataclasses import asdict, dataclass
 
 @dataclass
 class Aggregates:
-    """Общенациональные показатели одного референдума."""
+    """Nationwide figures of a single referendum."""
 
     referendum: str
-    source_datum: str | None = None      # метка обновления на сервере
-    turnout_case: str | None = None      # срез явки: 11:00 / 16:00 / 19:00
-    electorate: int | None = None        # избирателей
-    voters: int | None = None            # голосовало
-    turnout_pct: float | None = None     # явка, доля
-    counted_pct: float | None = None     # доля посчитанных бюллетеней
-    ballots: int | None = None           # посчитано бюллетеней
-    valid: int | None = None             # действительных
-    invalid: int | None = None           # недействительных
-    za: int | None = None                # голосов ЗА
+    source_datum: str | None = None      # update stamp on the server
+    turnout_case: str | None = None      # turnout snapshot: 11:00 / 16:00 / 19:00
+    electorate: int | None = None        # registered voters
+    voters: int | None = None            # voted
+    turnout_pct: float | None = None     # turnout, fraction
+    counted_pct: float | None = None     # fraction of counted ballots
+    ballots: int | None = None           # ballots counted
+    valid: int | None = None             # valid
+    invalid: int | None = None           # invalid
+    za: int | None = None                # ZA (yes) votes
     za_pct: float | None = None
-    proti: int | None = None             # голосов ПРОТИ
+    proti: int | None = None             # PROTI (no) votes
     proti_pct: float | None = None
 
     def signature(self) -> str:
@@ -33,7 +33,7 @@ class Aggregates:
 
 
 def _option(options_list: list | None, st_value: int) -> tuple[int | None, float | None]:
-    """Из массива опций (st: 1=ЗА, 0=ПРОТИ) достаёт (голоса, доля)."""
+    """From the options array (st: 1=ZA, 0=PROTI) extracts (votes, share)."""
     for opt in options_list or []:
         if opt.get("st") == st_value:
             return opt.get("gl"), opt.get("prc")

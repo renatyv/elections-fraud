@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Сводный CSV по участкам всех четырёх референдумов + сверка сумм.
+"""Summary CSV of the precincts of all four referendums + sum cross-checks.
 
-Читает data/latest/<референдум>/volisca_*.json (88 файлов на референдум,
-итоги по каждому участку) и rezultati.json/udelezba.json (агрегаты),
-строит data/derived/volisca_all.csv (строка = участок × референдум) и
-data/derived/nacionalni_pregled.csv (страна / единицы / округа), сверяет
-суммы по участкам с агрегатами DVK (округа, единицы, страна).
+Reads data/latest/<referendum>/volisca_*.json (88 files per referendum,
+per-precinct results) and rezultati.json/udelezba.json (aggregates), builds
+data/derived/volisca_all.csv (a row = precinct × referendum) and
+data/derived/nacionalni_pregled.csv (country / units / districts), and
+cross-checks the precinct sums against the DVK aggregates (districts, units,
+country).
 
-DVK предупреждает: суммы по единицам могут не сходиться с национальным
-итогом (голоса за рубежом, по почте и на спецучастках OMNIA считаются
-отдельно) — расхождения фиксируем, а не исправляем.
+DVK warns: sums by unit may disagree with the national result (votes cast
+abroad, by post and at special OMNIA precincts are counted separately) —
+we record the discrepancies rather than fix them.
 """
 
 import csv
@@ -24,10 +25,10 @@ OUT_DIR = data_dir() / "derived"
 VOLISCA_HEADER = [
     "referendum", "enota_st", "enota_naz", "okraj_rpeid", "okraj_naz",
     "volisce_st", "volisce_rpeid", "volisce_naz",
-    "upr", "gl", "udelezba_prc",          # явка: избирателей, голосовавших, доля
-    "glas", "velj", "nev",                # бюллетени, действительные, недействительные
-    "za", "za_prc", "proti", "proti_prc", # голоса ЗА/ПРОТИ и доли
-    "prestetih_glasov",                   # доля посчитанных бюллетеней (1.0 = все)
+    "upr", "gl", "udelezba_prc",          # turnout: registered, voted, fraction
+    "glas", "velj", "nev",                # ballots, valid, invalid
+    "za", "za_prc", "proti", "proti_prc", # ZA/PROTI votes and shares
+    "prestetih_glasov",                   # fraction of counted ballots (1.0 = all)
     "datum", "timestamp", "is_final",
 ]
 
@@ -91,8 +92,8 @@ def nacionalni_rows(key: str, latest: Path):
         return (d.get(1, {}).get("gl"), d.get(1, {}).get("prc"),
                 d.get(0, {}).get("gl"), d.get(0, {}).get("prc"))
 
-    # уровень: slovenija (итог по стране; udelezba.glas != rezultati.glas:
-    # в явке учитываются все голосовавшие, включая бюллетени без ответа?)
+    # level: slovenija (national result; udelezba.glas != rezultati.glas:
+    # turnout counts everyone who voted, including ballots without an answer?)
     s_rez = rez.get("slovenija") or []
     za, za_prc, proti, proti_prc = rez_pairs(s_rez)
     su = udel.get("slovenija") or {}
@@ -127,34 +128,34 @@ def nacionalni_rows(key: str, latest: Path):
 
 
 def check_sums(key: str, latest: Path, rows: list[dict]):
-    """Сверка участков с агрегатами DVK и арифметика внутри участков.
+    """Cross-checks the precincts against the DVK aggregates; precinct arithmetic.
 
-    1. Арифметика участка: velj = za + proti, glas = velj + nev — должна
-       сходиться до голоса (настоящая проверка целостности).
-    2. Суммы по участкам vs агрегаты DVK — НЕ обязаны сходиться: голоса
-       по почте, в диппредставительствах и прочих спецтипах DVK считает
-       только на уровне единицы и/или страны (официальная документация,
-       «Pozor!»). Расхождение квантифицируем, ошибкой не считаем.
+    1. Precinct arithmetic: velj = za + proti, glas = velj + nev — must agree
+       to the ballot (the real integrity check).
+    2. Precinct sums vs DVK aggregates — need NOT agree: postal votes,
+       embassies and other special vote types are counted by DVK only at the
+       unit and/or country level (official documentation, «Pozor!»). We
+       quantify the discrepancy, not treat it as an error.
     """
     rez = load_json(latest / "rezultati.json")
     problems = []
-    # 1) арифметика внутри участков
+    # 1) arithmetic inside precincts
     bad_arith = 0
     for r in rows:
         if None in (r["za"], r["proti"], r["velj"], r["glas"], r["nev"]):
-            problems.append(f"{key}: участок без данных {r['okraj_rpeid']}/{r['volisce_st']}")
+            problems.append(f"{key}: precinct without data {r['okraj_rpeid']}/{r['volisce_st']}")
             continue
         if r["za"] + r["proti"] != r["velj"] or r["velj"] + r["nev"] != r["glas"]:
             bad_arith += 1
             if bad_arith <= 5:
                 problems.append(
-                    f"{key}: арифметика участка {r['enota_st']}/{r['okraj_rpeid']}/"
+                    f"{key}: precinct arithmetic {r['enota_st']}/{r['okraj_rpeid']}/"
                     f"{r['volisce_st']} {r['volisce_naz']}: za+proti={r['za'] + r['proti']} "
                     f"velj={r['velj']}, velj+nev={r['velj'] + r['nev']} glas={r['glas']}")
     if bad_arith:
-        problems.append(f"{key}: всего участков с несовходящейся арифметикой: {bad_arith}")
+        problems.append(f"{key}: total precincts with mismatched arithmetic: {bad_arith}")
 
-    # 2) квантификация спецголосований (не участковых) на уровне округа
+    # 2) quantifying non-precinct special voting at the district level
     by_okraj: dict[tuple, dict[str, int]] = {}
     for r in rows:
         k = (r["enota_st"], r["okraj_rpeid"])
@@ -178,9 +179,9 @@ def check_sums(key: str, latest: Path, rows: list[dict]):
             spec_za += (okr.get(1, {}).get("gl") or 0) - acc["za"]
             spec_proti += (okr.get(0, {}).get("gl") or 0) - acc["proti"]
     if missing_okraji:
-        problems.append(f"{key}: округов без участков: {missing_okraji}")
-    print(f"  {key}: спецголосования сверх участков — бюллетеней {spec_glas:+d}, "
-          f"действительных {spec_velj:+d}, ЗА {spec_za:+d}, ПРОТИ {spec_proti:+d}")
+        problems.append(f"{key}: districts without precincts: {missing_okraji}")
+    print(f"  {key}: special voting beyond precincts — ballots {spec_glas:+d}, "
+          f"valid {spec_velj:+d}, ZA {spec_za:+d}, PROTI {spec_proti:+d}")
 
     slo = {r["st"]: r for r in rez.get("slovenija") or []}
     tot = {"za": sum(r["za"] or 0 for r in rows),
@@ -189,8 +190,8 @@ def check_sums(key: str, latest: Path, rows: list[dict]):
     for fld, val in (("za", slo.get(1, {}).get("gl")), ("proti", slo.get(0, {}).get("gl")),
                      ("glas", rez.get("glas"))):
         diff = tot[fld] - (val or 0)
-        print(f"  {key}: участки {fld}={tot[fld]} vs DVK slovenija={val} "
-              f"(разница {diff:+d})")
+        print(f"  {key}: precincts {fld}={tot[fld]} vs DVK slovenija={val} "
+              f"(difference {diff:+d})")
     return problems
 
 
@@ -205,7 +206,7 @@ def main() -> int:
         rows = volisca_rows(key, slug, latest)
         all_volisca += rows
         all_nac += nacionalni_rows(key, latest)
-        print(f"{key}: участков {len(rows)}")
+        print(f"{key}: precincts {len(rows)}")
         problems += check_sums(key, latest, rows)
 
     with open(OUT_DIR / "volisca_all.csv", "w", newline="", encoding="utf-8") as f:
@@ -217,15 +218,15 @@ def main() -> int:
         w.writeheader()
         w.writerows(all_nac)
 
-    print(f"\nwritten: {OUT_DIR/'volisca_all.csv'} ({len(all_volisca)} строк)")
-    print(f"written: {OUT_DIR/'nacionalni_pregled.csv'} ({len(all_nac)} строк)")
+    print(f"\nwritten: {OUT_DIR/'volisca_all.csv'} ({len(all_volisca)} rows)")
+    print(f"written: {OUT_DIR/'nacionalni_pregled.csv'} ({len(all_nac)} rows)")
     if problems:
-        print(f"\nПРОБЛЕМЫ ({len(problems)}):")
+        print(f"\nPROBLEMS ({len(problems)}):")
         for p in problems:
             print(" ", p)
         return 1
-    print("\nАрифметика всех участков сходится; расхождения с агрегатами — "
-          "только спецголосования (см. выше).")
+    print("\nArithmetic agrees for all precincts; discrepancies vs aggregates are "
+          "special voting only (see above).")
     return 0
 
 

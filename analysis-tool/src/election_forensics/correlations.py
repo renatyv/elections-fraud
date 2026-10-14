@@ -1,9 +1,9 @@
-"""2D-корреляционный анализ «явка ↔ результат» (Kobak et al., arXiv:1205.0741).
+"""2D correlation analysis of "turnout ↔ result" (Kobak et al., arXiv:1205.0741).
 
-Совместный анализ корреляций явки с результатами всех крупных партий,
-взвешенно по числу избирателей: национально и по округам (círculos).
-Признак перелива голосов: у «партии власти» корреляция положительная
-и растёт с аномальной явкой, у оппонентов — отрицательная.
+Joint analysis of turnout correlations with the results of all major parties,
+weighted by the number of voters: nationally and by district (círculos).
+A sign of vote transfer: for the "party of power" the correlation is positive
+and grows with anomalous turnout, for opponents it is negative.
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ def weighted_pearson(x: np.ndarray, y: np.ndarray, w: np.ndarray) -> float:
 
 
 def turnout_result_correlations(data: ElectionData, parties: list[str]) -> pd.DataFrame:
-    """Национальные корреляции явка × доля партии (Пирсон и Спирмен)."""
+    """National turnout × party-share correlations (Pearson and Spearman)."""
     t = data.turnout.to_numpy()
     w = data.registered.to_numpy(dtype=float)
     rows = []
@@ -44,14 +44,14 @@ def turnout_result_correlations(data: ElectionData, parties: list[str]) -> pd.Da
 
 
 def district_key(key: str) -> str:
-    """Ключ округа (círculo) из ключа freguesia: LOCAL-0XYZAB -> LOCAL-0X0000."""
+    """District (círculo) key from a freguesia key: LOCAL-0XYZAB -> LOCAL-0X0000."""
     if key.startswith("LOCAL-") and len(key) == 12:
         return f"LOCAL-{key[6:8]}0000"
     return ""
 
 
 def district_correlations(data: ElectionData, parties: list[str]) -> pd.DataFrame:
-    """Корреляции явка × доля партии по округам (взвешенный Пирсон)."""
+    """Turnout × party-share correlations by district (weighted Pearson)."""
     df = data.df.copy()
     df["turnout"] = data.turnout.to_numpy()
     df["district_key"] = df["key"].map(district_key)
@@ -73,8 +73,8 @@ def district_correlations(data: ElectionData, parties: list[str]) -> pd.DataFram
             row[p.removeprefix("votes:")] = weighted_pearson(g["turnout"].to_numpy(), s, w)
         out.append(row)
     res = pd.DataFrame(out)
-    # Азорские острова представлены несколькими округами с одинаковым именем —
-    # различаем их кодом территории
+    # The Azores are represented by several districts with the same name —
+    # we distinguish them by the territory code
     dup = res["district"].duplicated(keep=False)
     res.loc[dup, "district"] = res.loc[dup, "district"] + " (" + res.loc[dup, "district_key"].str[6:8] + ")"
     return res.sort_values("district").reset_index(drop=True)

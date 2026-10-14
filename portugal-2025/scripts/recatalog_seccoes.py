@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Пересборка data/seccoes/catalog.csv по актуальным правилам тиров.
+"""Rebuild data/seccoes/catalog.csv under the current tier rules.
 
-После смены правил pdf_tier() часть скачанных файлов оказывается тиром B
-(организация выборов, не результаты): их удаляем, реестр переписываем.
-Запуск: python3 scripts/recatalog_seccoes.py
+After a change to the pdf_tier() rules some downloaded files turn out to be
+tier B (election logistics, not results): they are deleted and the catalog
+is rewritten. Run: python3 scripts/recatalog_seccoes.py
 """
 import csv
 import os
@@ -15,7 +15,7 @@ from crawl_election_pages import pdf_tier, norm_url, SECCOES_DIR, CATALOG_CSV
 
 def main():
     if not os.path.exists(CATALOG_CSV):
-        sys.exit('нет catalog.csv')
+        sys.exit('catalog.csv not found')
     rows = list(csv.DictReader(open(CATALOG_CSV, encoding='utf-8')))
     kept, removed = [], []
     for r in rows:
@@ -29,7 +29,7 @@ def main():
                    'assembleias-e-seccoes-de-voto', 'mapadasassembleias',
                    'horarios.funcionamento', 'resultado-eleitoral-para')
         u = norm_url(r['pdf_url'])
-        # вручную выверенные мимо: старые выборы/листовки/места голосования
+        # manually vetted exclusions: old elections/leaflets/voting locations
         manual_junk = ('1105_cascais/resultados-concelho-de-cascais-parlamento',
                        '1105_cascais/op2014')
         if tier != 'A' or any(k in u for k in junk_kw) or any(m in u for m in manual_junk):
@@ -40,7 +40,7 @@ def main():
         r['tier'] = tier
         kept.append(r)
 
-    # подчистить пустые каталоги конселью
+    # clean up empty concelho directories
     for d in os.listdir(SECCOES_DIR):
         p = os.path.join(SECCOES_DIR, d)
         if os.path.isdir(p) and not os.listdir(p) and d != 'crawl':
@@ -52,7 +52,7 @@ def main():
                                           'status', 'fetched_at'])
         w.writeheader()
         w.writerows(kept)
-    print(f'оставлено {len(kept)}, удалено файлов {len(removed)}')
+    print(f'kept {len(kept)}, removed {len(removed)} files')
     for p in removed:
         print('  rm', os.path.basename(p))
 

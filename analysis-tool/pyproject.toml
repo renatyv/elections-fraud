@@ -1,7 +1,7 @@
 [project]
 name = "election-forensics"
 version = "0.1.0"
-description = "Статистические методы обнаружения фальсификаций на выборах (метод Шпилькина и др.)"
+description = "Statistical methods for detecting election fraud (the Shpilkin method and others)"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

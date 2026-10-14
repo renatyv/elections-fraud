@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Клиент JSON-API Республики избирательной комиссии Сербии (РИК).
+Client for the JSON API of the Serbian Republican Electoral Commission (RIK).
 
-Эндпоинты найдены реверс-инжинирингом официального портала результатов
+Endpoints found by reverse-engineering the official results portal
 https://www.rik.parlament.gov.rs/542645/rezultati/ (js/minified.*.js).
-Только стандартная библиотека Python.
+Python standard library only.
 """
 
 import json
@@ -21,12 +21,12 @@ USER_AGENT = (
     "(elections-research; scrape every 15 min)"
 )
 
-ELECTION_TYPE_PARLIAMENTARY = 2  # 2 = Парламентарни, 3 = Локални, 7 = Покрајински
+ELECTION_TYPE_PARLIAMENTARY = 2  # 2 = Parliamentary, 3 = Local, 7 = Provincial
 
 
 def _post(path: str, data: dict, timeout: float = 30.0,
           retries: int = 3, backoff: float = 2.0) -> bytes:
-    """POST c X-Requested-With (как это делает фронтенд портала РИК)."""
+    """POST with X-Requested-With (as the RIK portal frontend does)."""
     body = urllib.parse.urlencode(data).encode("utf-8")
     last_err = None
     for attempt in range(1, retries + 1):
@@ -53,13 +53,13 @@ def _post(path: str, data: dict, timeout: float = 30.0,
 
 
 def get_elections(election_type: int = ELECTION_TYPE_PARLIAMENTARY) -> dict:
-    """Список кампаний: {id тура (str): название}. Напр. {'680072': 'Парламентарни 2026'}."""
+    """List of campaigns: {round id (str): name}. E.g. {'680072': 'Парламентарни 2026'}."""
     payload = json.loads(_post("/get-elections/", {"election_type": election_type}))
     return payload.get("rounds", {})
 
 
 def get_regions(election_type: int, election_round: int) -> dict:
-    """Регионы тура: {'regions': {id: название}, 'data_id': {id: код NUTS2 или None}}."""
+    """Regions of a round: {'regions': {id: name}, 'data_id': {id: NUTS2 code or None}}."""
     payload = json.loads(_post("/get-regions/", {
         "election_type": election_type,
         "election_round": election_round,
@@ -69,7 +69,7 @@ def get_regions(election_type: int, election_round: int) -> dict:
 
 def get_municipalities(election_type: int, election_round: int, election_region: int) -> list:
     """
-    Муниципалитеты региона. Эндпоинт возвращает HTML <option data-id=".." value="..">Название</option>.
+    Municipalities of a region. The endpoint returns HTML <option data-id=".." value="..">Name</option>.
     -> [{'value': '1', 'unit_id': '70092', 'name': 'Градска општина Барајево'}, ...]
     """
     html = _post("/get-municipalities/", {
@@ -82,14 +82,14 @@ def get_municipalities(election_type: int, election_round: int, election_region:
         r'<option[^>]*data-id="([^"]*)"[^>]*value="([^"]*)"[^>]*>(.*?)</option>', html, re.S
     ):
         name = re.sub(r"\s+", " ", m.group(3)).strip()
-        if m.group(2) != "0":  # value="0" — техническая опция «весь регион»
+        if m.group(2) != "0":  # value="0" is the technical "whole region" option
             out.append({"value": m.group(2), "unit_id": m.group(1), "name": name})
     return out
 
 
 def get_election_stations(election_type: int, election_round: int,
                           election_region: int, election_municipality: int) -> list:
-    """Участки муниципалитета: [{'id': '159091', 'name': '1 - МК "АРНАЈЕВО"'}, ...]."""
+    """Polling stations of a municipality: [{'id': '159091', 'name': '1 - МК "АРНАЈЕВО"'}, ...]."""
     payload = json.loads(_post("/get-election-stations/", {
         "election_type": election_type,
         "election_round": election_round,
@@ -103,17 +103,17 @@ def get_election_stations(election_type: int, election_round: int,
 def get_results(election_type: int, election_round: int, region: int = 0,
                 municipality: int = 0, election_station: int = 0) -> dict:
     """
-    Результаты для уровня: страна (0/0/0), регион (region), муниципалитет
-    (region+municipality) или участок (region+municipality+election_station).
+    Results for a level: country (0/0/0), region (region), municipality
+    (region+municipality) or station (region+municipality+election_station).
 
-    Ответ:
-      stat_sum_numbers: total_voters, available (проголосовало), number_of_stations,
-        processed_stations, datetime (момент данных РИК, '-' пока данных нет),
+    Response:
+      stat_sum_numbers: total_voters, available (votes cast), number_of_stations,
+        processed_stations, datetime (RIK data timestamp, '-' while there is no data),
         election_title
       table_data: [{'count_number', 'list_name', 'won_number', 'won_percent', 'list_image'}, ...]
-      processed_config / sum_config: конфиги диаграмм (явка; действительные/
-        недействительные бюллетени — числа лежат в data.datasets[0].data)
-      minute_from_election_station: HTML со ссылками на PDF-протоколы участка (RG-2)
+      processed_config / sum_config: chart configs (turnout; valid/
+        invalid ballots — the numbers are in data.datasets[0].data)
+      minute_from_election_station: HTML with links to the station's PDF protocols (RG-2)
     """
     return json.loads(_post("/get_results/", {
         "should_update_pies": 1,
@@ -125,7 +125,7 @@ def get_results(election_type: int, election_round: int, region: int = 0,
     }))
 
 
-# ---------- разбор значений ----------
+# ---------- value parsing ----------
 
 def parse_int(value) -> int:
     """'3.820.746' -> 3820746; '0'/'-'/None -> 0."""
@@ -145,7 +145,7 @@ def parse_float(value) -> float:
 
 
 def parse_rik_datetime(value: str):
-    """'09.01.2024 20:21:00' -> '2024-01-09T20:21:00' (локальное время РИК, CET/CEST)."""
+    """'09.01.2024 20:21:00' -> '2024-01-09T20:21:00' (RIK local time, CET/CEST)."""
     if not value or value.strip() == "-":
         return None
     m = re.match(r"(\d{2})\.(\d{2})\.(\d{4}) (\d{2}):(\d{2}):(\d{2})", value.strip())
@@ -156,7 +156,7 @@ def parse_rik_datetime(value: str):
 
 
 def ballots_from_sum_config(results: dict) -> tuple:
-    """(действительные, недействительные) из конфига круговой диаграммы."""
+    """(valid, invalid) ballots from the pie-chart config."""
     try:
         data = results["sum_config"]["data"]["datasets"][0]["data"]
         return parse_int(data[0]), parse_int(data[1])
@@ -167,7 +167,7 @@ def ballots_from_sum_config(results: dict) -> tuple:
 def normalize_results(results: dict, level_type: str, level_id: str,
                       level_name: str, election_round: int,
                       snapshot_ts: str) -> dict:
-    """Приводит ответ get_results к плоской структуре для CSV/JSON-снапшотов."""
+    """Flattens the get_results response into a flat structure for CSV/JSON snapshots."""
     ssn = results.get("stat_sum_numbers", {})
     valid, invalid = ballots_from_sum_config(results)
     registered = parse_int(ssn.get("total_voters"))

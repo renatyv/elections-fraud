@@ -1,5 +1,5 @@
 {
-  "title": "Бразилия, президент 1-й тур 04.10.2026 (seções)",
+  "title": "Brazil, presidential 1st round 04.10.2026 (seções)",
   "national": {
     "n_units": 499206,
     "registered": 158745007,
@@ -284,81 +284,6 @@
     "rows_in_dup_groups": 2,
     "groups": 1,
     "max_group": 2,
-    "note": "группы с одинаковым электоратом (включая размер секции)"
-  },
-  "supplement": {
-    "turnout_q001_q99": [
-      32.979344773025545,
-      95.21413632066036
-    ],
-    "sections_above_91.6": 3622,
-    "voters_above_91.6": 737895,
-    "sections_turnout_ge_90_share_ge_75": 380,
-    "voters_turnout_ge_90_share_ge_75": 78930,
-    "leader_votes_corner": 63611,
-    "sections_turnout_ge_90": 8299,
-    "lula_share_ge_75_turnout_ge_90": 1481,
-    "macroregions": [
-      {
-        "reg": "CW",
-        "sections": 38048,
-        "registered": 12001141,
-        "turnout_pct": 78.3,
-        "bolsonaro_pct": 54.63,
-        "lula_pct": 31.53
-      },
-      {
-        "reg": "N",
-        "sections": 43769,
-        "registered": 13101175,
-        "turnout_pct": 80.57,
-        "bolsonaro_pct": 47.46,
-        "lula_pct": 43.11
-      },
-      {
-        "reg": "NE",
-        "sections": 140828,
-        "registered": 43511237,
-        "turnout_pct": 81.61,
-        "bolsonaro_pct": 29.29,
-        "lula_pct": 60.53
-      },
-      {
-        "reg": "S",
-        "sections": 72015,
-        "registered": 22870853,
-        "turnout_pct": 79.54,
-        "bolsonaro_pct": 57.82,
-        "lula_pct": 30.1
-      },
-      {
-        "reg": "SE",
-        "sections": 203237,
-        "registered": 66344562,
-        "turnout_pct": 77.3,
-        "bolsonaro_pct": 48.55,
-        "lula_pct": 37.51
-      },
-      {
-        "reg": "ZZ",
-        "sections": 1309,
-        "registered": 916039,
-        "turnout_pct": 37.31,
-        "bolsonaro_pct": 42.1,
-        "lula_pct": 46.05
-      }
-    ],
-    "digit_spikes": [
-      {
-        "party": "BOLSONARO",
-        "spike0_pp": 0.119,
-        "spike5_pp": 0.005
-      },
-      {
-        "party": "LULA",
-        "spike0_pp": 0.052,
-        "spike5_pp": 0.111
-      }
-    ]
+    "note": "groups with an identical electorate (including section size)"
   }
 }

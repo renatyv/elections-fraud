@@ -1,7 +1,7 @@
-"""Графики для всех методов. Единый стиль, backend Agg, кириллица DejaVu.
+"""Plots for all methods. Unified style, Agg backend, DejaVu fonts.
 
-Подписи мультиязычные: каждый plot_* принимает lang ("ru" по умолчанию);
-тексты — в election_forensics.i18n.LABELS.
+Labels are multilingual: every plot_* takes lang ("en" by default);
+the texts live in election_forensics.i18n.LABELS.
 """
 
 from __future__ import annotations
@@ -44,8 +44,8 @@ def _save(fig, out_dir: Path, name: str) -> Path:
     return path
 
 
-def plot_shpilkin(data: ElectionData, leader: str, res, out_dir: Path, lang: str = "ru") -> Path:
-    """Распределение явки с границей честного спада; голоса лидера по явке с хвостом."""
+def plot_shpilkin(data: ElectionData, leader: str, res, out_dir: Path, lang: str = "en") -> Path:
+    """Turnout distribution with the honest-decline boundary; leader votes by turnout with the tail."""
     from scipy.ndimage import gaussian_filter1d
 
     from .shpilkin import votes_by_turnout
@@ -82,8 +82,8 @@ def plot_shpilkin(data: ElectionData, leader: str, res, out_dir: Path, lang: str
     return _save(fig, out_dir, "shpilkin_core.png")
 
 
-def plot_comet(data: ElectionData, parties: list[str], out_dir: Path, lang: str = "ru") -> Path:
-    """Скаттерплоты «явка × результат» для лидера и оппонентов."""
+def plot_comet(data: ElectionData, parties: list[str], out_dir: Path, lang: str = "en") -> Path:
+    """"Turnout × result" scatter plots for the leader and opponents."""
     n = min(len(parties), 3)
     fig, axes = plt.subplots(1, n, figsize=(3.2 * n, 3.2), sharey=True, squeeze=False)
     t = data.turnout.to_numpy()
@@ -98,8 +98,8 @@ def plot_comet(data: ElectionData, parties: list[str], out_dir: Path, lang: str 
     return _save(fig, out_dir, "comet_scatter.png")
 
 
-def plot_fingerprint(data: ElectionData, leader: str, fp, out_dir: Path, lang: str = "ru") -> Path:
-    """2D-плотность (явка × доля лидера), взвешенная по избирателям + компоненты смеси."""
+def plot_fingerprint(data: ElectionData, leader: str, fp, out_dir: Path, lang: str = "en") -> Path:
+    """2D density (turnout × leader share), weighted by voters + mixture components."""
     t = data.turnout.to_numpy()
     s = data.share(leader).to_numpy()
     w = data.registered.to_numpy(dtype=float)
@@ -122,8 +122,8 @@ def plot_fingerprint(data: ElectionData, leader: str, fp, out_dir: Path, lang: s
 
 def plot_integer_peaks(data: ElectionData, peaks, out_dir: Path,
                        controls: list[tuple[str, int, float, float]] | None = None,
-                       lang: str = "ru") -> Path:
-    """Классический рисунок Кобака: гистограмма явки с пиками на целых процентах."""
+                       lang: str = "en") -> Path:
+    """The classic Kobak figure: turnout histogram with peaks at integer percentages."""
     t = data.turnout.to_numpy()
     t100 = np.round(t, 2)
     fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.4), gridspec_kw={"width_ratios": [2.2, 1]})
@@ -153,7 +153,7 @@ def plot_integer_peaks(data: ElectionData, peaks, out_dir: Path,
 
 
 def plot_digit_test(freqs_obs: np.ndarray, expected: np.ndarray, null_band: np.ndarray,
-                    test: str, label_text: str, out_dir: Path, lang: str = "ru") -> Path:
+                    test: str, label_text: str, out_dir: Path, lang: str = "en") -> Path:
     fig, ax = plt.subplots(figsize=(4.8, 3.2))
     x = np.arange(10)
     ax.bar(x - 0.18, freqs_obs * 100, width=0.36, color=C_MAIN, label=label(lang, "obs"))
@@ -170,7 +170,7 @@ def plot_digit_test(freqs_obs: np.ndarray, expected: np.ndarray, null_band: np.n
 
 
 def plot_correlations(corr_nat: pd.DataFrame, corr_dist: pd.DataFrame, leader: str,
-                      out_dir: Path, lang: str = "ru") -> Path:
+                      out_dir: Path, lang: str = "en") -> Path:
     fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.8))
     ax = axes[0]
     labels = corr_nat["party"].tolist()
@@ -194,14 +194,14 @@ def plot_correlations(corr_nat: pd.DataFrame, corr_dist: pd.DataFrame, leader: s
     return _save(fig, out_dir, "correlations.png")
 
 
-def plot_neighbors(neigh: pd.DataFrame, out_dir: Path, lang: str = "ru") -> Path:
+def plot_neighbors(neigh: pd.DataFrame, out_dir: Path, lang: str = "en") -> Path:
     fig, ax = plt.subplots(figsize=(4.8, 3.8))
     ok = neigh["z_turnout"].notna()
     ax.scatter(neigh.loc[ok, "z_turnout"], neigh.loc[ok, "z_share"], s=8, alpha=0.35, color=C_MAIN)
     flagged = neigh[neigh["flag"]]
     ax.scatter(flagged["z_turnout"], flagged["z_share"], s=26, color=C_ACC,
                label=label(lang, "neigh_flag", n=len(flagged)))
-    # подписи вразбежку, чтобы не накладывались
+    # stagger the labels so they do not overlap
     for i, (_, r) in enumerate(flagged.reindex(flagged["z_share"].abs().sort_values(ascending=False).index).head(6).iterrows()):
         dy = 6 if i % 2 == 0 else -11
         ax.annotate(str(r["name"])[:20], (r["z_turnout"], r["z_share"]), fontsize=6,
@@ -215,7 +215,7 @@ def plot_neighbors(neigh: pd.DataFrame, out_dir: Path, lang: str = "ru") -> Path
     return _save(fig, out_dir, "neighbors_outliers.png")
 
 
-def plot_swing(swing: pd.DataFrame, out_dir: Path, lang: str = "ru") -> Path:
+def plot_swing(swing: pd.DataFrame, out_dir: Path, lang: str = "en") -> Path:
     fig, ax = plt.subplots(figsize=(4.8, 3.8))
     ax.scatter(swing["d_turnout"], swing["d_share"], s=8, alpha=0.3, color=C_MAIN)
     fl = swing[swing["flag"]]
@@ -229,7 +229,7 @@ def plot_swing(swing: pd.DataFrame, out_dir: Path, lang: str = "ru") -> Path:
     return _save(fig, out_dir, "swing_previous.png")
 
 
-def plot_ml_anomalies(anom: pd.DataFrame, out_dir: Path, lang: str = "ru") -> Path:
+def plot_ml_anomalies(anom: pd.DataFrame, out_dir: Path, lang: str = "en") -> Path:
     fig, axes = plt.subplots(1, 2, figsize=(9, 3.4))
     ax = axes[0]
     ok = anom["anomaly_score"].notna()
@@ -254,7 +254,7 @@ def plot_ml_anomalies(anom: pd.DataFrame, out_dir: Path, lang: str = "ru") -> Pa
 
 
 def plot_selftest(data: ElectionData, injected: ElectionData, leader: str, report,
-                  out_dir: Path, lang: str = "ru") -> Path:
+                  out_dir: Path, lang: str = "en") -> Path:
     from .shpilkin import votes_by_turnout
 
     centers, h_clean = votes_by_turnout(data, None, 0.5)
@@ -284,8 +284,8 @@ def plot_selftest(data: ElectionData, injected: ElectionData, leader: str, repor
     return _save(fig, out_dir, "selftest.png")
 
 
-def plot_controls(elections: list[tuple[str, np.ndarray]], out_dir: Path, lang: str = "ru") -> Path:
-    """Наложение распределений явки нескольких выборов (контроль)."""
+def plot_controls(elections: list[tuple[str, np.ndarray]], out_dir: Path, lang: str = "en") -> Path:
+    """Overlay of turnout distributions of several elections (control)."""
     fig, ax = plt.subplots(figsize=(5.2, 3.4))
     for name, t in elections:
         ax.hist(t, bins=np.arange(0, 100.001, 0.5), histtype="step", lw=1.4, label=name, density=False)

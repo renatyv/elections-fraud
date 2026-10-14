@@ -1,27 +1,27 @@
-"""Дополнение к штатному прогону ef-analyze: то, чего в CLI нет.
+"""Complement to the standard ef-analyze run: what the CLI lacks.
 
-Пайплайн (ef-analyze) проверяет лидера регулярных участков; на них во всех
-четырёх референдумах впереди «ЗА», тогда как по стране «ПРОТИ» победил на
-preiskava и rtv_prispevek. Здесь добавляется:
+The pipeline (ef-analyze) checks the leader of the regular precincts; in all
+four referendums «ZA» leads there, whereas nationwide «PROTI» won on
+preiskava and rtv_prispevek. This script adds:
 
-1. Шпилькин, целые пики и отпечатки для ВТОРОГО варианта (ПРОТИ) — включая
-   национальных победителей preiskava/rtv_prispevek;
-2. кросс-референдумные проверки одновременности (одни участки, один электорат):
-   корреляции явки и доли ЗА между референдумами, дубликаты векторов
-   (ЗА, ПРОТИ, недействит.) между бюллетенями одного участка, расхождения
-   явки между референдумами;
-3. цифровые тесты (последняя цифра) точек досрочного голосования (номера
-   участков >= 900, upr = 0) — пул всех четырёх референдумов;
-4. профиль отклонения второй цифры (для интерпретации пограничных p).
+1. Shpilkin, integer peaks and fingerprints for the SECOND option (PROTI) —
+   including the national winners preiskava/rtv_prispevek;
+2. cross-referendum simultaneity checks (same precincts, one electorate):
+   turnout and ZA-share correlations between referendums, duplicate vectors
+   (ZA, PROTI, invalid) between the ballots of one precinct, turnout
+   discrepancies between referendums;
+3. digit tests (last digit) of early-voting points (precinct numbers >= 900,
+   upr = 0) — the pool of all four referendums;
+4. the deviation profile of the second digit (to interpret borderline p).
 
-Данные — адаптированные data/ef/<референдум>/results_freguesias.csv
-(scripts/build_ef_csv.py) + data/derived/volisca_all.csv (явка gl, досрочные).
+Data — the adapted data/ef/<referendum>/results_freguesias.csv
+(scripts/build_ef_csv.py) + data/derived/volisca_all.csv (turnout gl, early).
 
-Запуск (из каталога analysis-tool):
+Run (from the analysis-tool directory):
 
     uv run python ../sloveniya-referendum-2026/scripts/analyze_extra.py
 
-Выход: sloveniya-referendum-2026/analysis/cross/{figures/, tables/, metrics.json}.
+Output: sloveniya-referendum-2026/analysis/cross/{figures/, tables/, metrics.json}.
 """
 
 from __future__ import annotations
@@ -60,7 +60,7 @@ REF_TITLE = {
     "rtv_prispevek": "rtv_prispevek",
 }
 PARTIES = ["votes:ZA", "votes:PROTI"]
-OPT_NAME = {"votes:ZA": "ЗА", "votes:PROTI": "ПРОТИ"}
+OPT_NAME = {"votes:ZA": "ZA", "votes:PROTI": "PROTI"}
 
 
 def main() -> None:
@@ -71,9 +71,9 @@ def main() -> None:
 
     data = {r: load_mai_csv(EF / r / "results_freguesias.csv", REF_TITLE[r])
             for r in REFS}
-    metrics: dict = {"title": "Словения 11.10.2026: кросс-проверки и второй вариант"}
+    metrics: dict = {"title": "Slovenia 11.10.2026: cross-checks and the second option"}
 
-    # --- 1. второй вариант (ПРОТИ): Шпилькин, целые пики, отпечатки ---------
+    # --- 1. second option (PROTI): Shpilkin, integer peaks, fingerprints ----
     rows = []
     for r in REFS:
         d = data[r]
@@ -95,13 +95,13 @@ def main() -> None:
             "fingerprint_mean_anom": str(tuple(round(x, 1) for x in fp.mean_anom)),
             "fingerprint_separated": fp.separated,
         })
-        print(f"[1/3] {r}: ПРОТИ — хвост {shp.tail_votes_party} "
-              f"({shp.tail_share_of_party:.2f}% голосов ПРОТИ), "
-              f"пики доли z={pk.z_score:+.1f}, отпечатки w={fp.weight_anom:.3f}")
+        print(f"[1/3] {r}: PROTI — tail {shp.tail_votes_party} "
+              f"({shp.tail_share_of_party:.2f}% of PROTI votes), "
+              f"share peaks z={pk.z_score:+.1f}, fingerprints w={fp.weight_anom:.3f}")
     pd.DataFrame(rows).to_csv(tab_dir / "proti_option_tests.csv", index=False)
     metrics["proti_option"] = rows
 
-    # --- 2. кросс-референдумные проверки ------------------------------------
+    # --- 2. cross-referendum checks -----------------------------------------
     raw = pd.read_csv(SRC)
     raw["station"] = (raw["okraj_rpeid"].astype(str) + "_"
                       + raw["volisce_rpeid"].astype(str).str.zfill(3))
@@ -128,13 +128,13 @@ def main() -> None:
     corr_s.to_csv(tab_dir / "cross_share_correlation.csv")
     metrics["turnout_correlation"] = corr_t.round(4).to_dict()
     metrics["share_correlation"] = corr_s.round(4).to_dict()
-    print(f"[2/3] корреляции явки между референдумами: "
+    print(f"[2/3] turnout correlations between referendums: "
           f"{corr_t.values[np.triu_indices(4, 1)].min():+.4f}…"
-          f"{corr_t.values[np.triu_indices(4, 1)].max():+.4f}; доли ЗА: "
+          f"{corr_t.values[np.triu_indices(4, 1)].max():+.4f}; ZA shares: "
           f"{corr_s.values[np.triu_indices(4, 1)].min():+.3f}…"
           f"{corr_s.values[np.triu_indices(4, 1)].max():+.3f}")
 
-    # скаттерплоты доли ЗА между парами референдумов
+    # scatterplots of the ZA share between pairs of referendums
     fig, axes = plt.subplots(1, 3, figsize=(10.5, 3.5), sharey=True)
     pairs = [("preiskava", "rtv_prispevek"), ("preiskava", "socialna_pomoc"),
              ("volilna_pravica", "socialna_pomoc")]
@@ -142,15 +142,15 @@ def main() -> None:
     for ax, (a, b) in zip(axes, pairs, strict=False):
         ax.scatter(100 * s_piv[a], 100 * s_piv[b], s=sizes.reindex(s_piv.index).to_numpy(),
                    alpha=0.25, color="#1f77b4", edgecolors="none")
-        ax.set_xlabel(f"ЗА, % — {a}")
-        ax.set_title(f"r(взвеш.) = {corr_s.loc[a, b]:+.2f}", fontsize=9)
-    axes[0].set_ylabel("Доля ЗА по участкам, %")
-    fig.suptitle("Доля ЗА: пары одновременных референдумов (одни участки)", y=1.04, fontsize=10)
+        ax.set_xlabel(f"ZA, % — {a}")
+        ax.set_title(f"r(weighted) = {corr_s.loc[a, b]:+.2f}", fontsize=9)
+    axes[0].set_ylabel("ZA share by precinct, %")
+    fig.suptitle("ZA share: pairs of simultaneous referendums (same precincts)", y=1.04, fontsize=10)
     fig.tight_layout()
     fig.savefig(fig_dir / "cross_shares.png", bbox_inches="tight", dpi=150)
     plt.close(fig)
 
-    # расхождения явки между референдумами (один избиратель — 4 бюллетеня)
+    # turnout discrepancies between referendums (one voter — 4 ballots)
     dmax = piv_gl.max(axis=1) - piv_gl.min(axis=1)
     metrics["turnout_diff_between_referendums"] = {
         "identical": int((dmax == 0).sum()), "d1_2": int(((dmax >= 1) & (dmax <= 2)).sum()),
@@ -163,16 +163,16 @@ def main() -> None:
     for v, c in zip(vals, cnts, strict=False):
         if c and (v <= 5 or v > 8):
             ax.text(v, c, str(c), ha="center", va="bottom", fontsize=7)
-    ax.set_xlabel("Макс. расхождение явки участка"
-                  " между 4 референдумами, бюллетеней")
-    ax.set_ylabel("Число участков")
+    ax.set_xlabel("Max turnout gap of a precinct"
+                  " across the 4 referendums, ballots")
+    ax.set_ylabel("Number of precincts")
     ax.set_yscale("log")
-    ax.set_title("Сходимость явки: один избиратель — четыре бюллетеня", fontsize=9)
+    ax.set_title("Turnout agreement: one voter — four ballots", fontsize=9)
     fig.tight_layout()
     fig.savefig(fig_dir / "turnout_diff_hist.png", bbox_inches="tight", dpi=150)
     plt.close(fig)
 
-    # дубликаты векторов между бюллетенями одного участка
+    # duplicate vectors between the ballots of one precinct
     v = reg.pivot_table(index="station", columns="referendum",
                         values=["za", "proti", "nev"], aggfunc="first")
     velj = reg.pivot_table(index="station", columns="referendum", values="velj", aggfunc="first")
@@ -189,11 +189,11 @@ def main() -> None:
                 dup_big.append({"station": st, "vector": vec, "referendums": "+".join(rs)})
     metrics["duplicate_vectors_within_station_voted_ge_50"] = dup_big
     pd.DataFrame(dup_big).to_csv(tab_dir / "duplicate_vectors_within_station.csv", index=False)
-    print(f"      дубликатов векторов между бюллетенями участка (действ.>=50): {len(dup_big)}")
+    print(f"      duplicate vectors between a precinct's ballots (valid>=50): {len(dup_big)}")
 
-    # контроль копирования: распределение |ΔZA| между парами референдумов.
-    # При естественном совпадении (одни избиратели, коррелированные позиции)
-    # Δ=0 не выбивается из соседних значений; при copy-paste Δ=0 доминировало бы.
+    # copy-paste control: distribution of |ΔZA| between pairs of referendums.
+    # With natural coincidence (same voters, correlated positions) Δ=0 does not
+    # stand out among neighboring values; with copy-paste Δ=0 would dominate.
     import itertools
     za_ok = za = reg.pivot_table(index="station", columns="referendum",
                                  values="za", aggfunc="first")
@@ -216,11 +216,11 @@ def main() -> None:
         "ratio_d0_d1": float(diffs[0] / max(diffs[1], 1)),
         "all_four_vectors_equal": quad,
     }
-    print(f"      |ΔZA|=0: {int(diffs[0])} против Δ=1: {int(diffs[1])} "
-          f"(отношение {diffs[0] / max(diffs[1], 1):.2f}); все 4 вектора равны: {quad}")
+    print(f"      |ΔZA|=0: {int(diffs[0])} vs Δ=1: {int(diffs[1])} "
+          f"(ratio {diffs[0] / max(diffs[1], 1):.2f}); all 4 vectors equal: {quad}")
 
-    # дубликаты векторов внутри одного референдума против бутстрап-нуля:
-    # станции похожего размера с близкими раскладами коллидируют естественно
+    # duplicate vectors within one referendum against a bootstrap null:
+    # stations of similar size with similar tallies collide naturally
     rng = np.random.default_rng(42)
     dup_rows = []
     for r in REFS:
@@ -239,15 +239,15 @@ def main() -> None:
         dup_rows.append({"referendum": r, "duplicates_observed": int(obs),
                          "duplicates_null_mean": float(np.mean(sims)),
                          "duplicates_null_sd": float(np.std(sims))})
-        print(f"      {r}: дубликаты векторов {obs} против нуля "
+        print(f"      {r}: duplicate vectors {obs} vs null "
               f"{np.mean(sims):.1f} ± {np.std(sims):.1f}")
     metrics["duplicates_within_referendum"] = dup_rows
     pd.DataFrame(dup_rows).to_csv(tab_dir / "duplicates_within_referendum.csv", index=False)
 
-    # --- 3. досрочные точки: последняя цифра (пул 4 референдумов) -----------
+    # --- 3. early-voting points: last digit (pool of 4 referendums) ----------
     early = raw[raw["volisce_rpeid"] >= 900]
     ed = ElectionData(
-        name="Досрочные точки, пул 4 референдумов",
+        name="Early-voting points, pool of 4 referendums",
         df=pd.DataFrame({
             "key": early["station"] + "@" + early["referendum"],
             "registered_voters": 1, "voted": early["glas"],
@@ -262,13 +262,13 @@ def main() -> None:
         counts = ed.df[p].to_numpy()
         plots.plot_digit_test(digit_freqs(counts, "last"), np.full(10, 0.1),
                               digit_null_band(counts, "last"), "last",
-                              f"досрочные точки, {OPT_NAME[p]}", fig_dir)
+                              f"early-voting points, {OPT_NAME[p]}", fig_dir)
     metrics["early_last_digit"] = early_rows
     pd.DataFrame(early_rows).to_csv(tab_dir / "early_last_digit.csv", index=False)
-    print(f"[3/3] досрочные точки (пул): последняя цифра p_МК "
-          f"ЗА {early_rows[0]['p_null_mc']:.3f}, ПРОТИ {early_rows[1]['p_null_mc']:.3f}")
+    print(f"[3/3] early-voting points (pool): last digit MC p "
+          f"ZA {early_rows[0]['p_null_mc']:.3f}, PROTI {early_rows[1]['p_null_mc']:.3f}")
 
-    # --- профиль второй цифры socialna_pomoc/ЗА (пограничный Бенфорд) -------
+    # --- second-digit profile of socialna_pomoc/ZA (borderline Benford) ------
     counts = data["socialna_pomoc"].df["votes:ZA"].to_numpy()
     counts = counts[counts >= 10]
     d2 = np.array([int(str(int(x))[1]) for x in counts])
@@ -285,7 +285,7 @@ def main() -> None:
 
     with open(OUT / "metrics.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2, default=float)
-    print(f"готово: {OUT}")
+    print(f"done: {OUT}")
 
 
 if __name__ == "__main__":

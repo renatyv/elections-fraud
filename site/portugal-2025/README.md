@@ -1,7 +1,7 @@
 # Portugal legislative elections 18.05.2025 — statistical fraud check
 
 Раздел сайта репозитория (`<репо>/site/portugal-2025/`): статическая одностраничка
-по отчёту [ОТЧЁТ_стат_анализ_фальсификаций.md](../../portugal-2025/ОТЧЁТ_стат_анализ_фальсификаций.md).
+по отчёту [REPORT_statistical_fraud_analysis.md](../../portugal-2025/REPORT_statistical_fraud_analysis.md).
 Без сборки и зависимостей: `index.html` + `img/<lang>/*.png` (комплект графиков на
 каждый язык строит `scripts/build_site_figures.py` португальского проекта из
 `data/legislativas2025_mai/results_all.csv` — freguesias, level=3; подписи внутри

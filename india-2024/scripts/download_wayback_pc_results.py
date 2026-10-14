@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Скачивание финальных результатов Лок Сабха-2024 (PC-уровень, по кандидатам)
-из Wayback Machine: страницы results.eci.gov.in/PcResultGenJune2024/ConstituencywiseSXXYY.htm.
+"""Download the final Lok Sabha 2024 results (PC level, per candidate)
+from the Wayback Machine: results.eci.gov.in/PcResultGenJune2024/ConstituencywiseSXXYY.htm pages.
 
-Живой портал ECI удалён; в web.archive.org полные итоги каждого из 543 PC
-(кандидат / партия / EVM / почтовые / всего / %). Скрипт берёт ПОСЛЕДНИЙ
-снапшот со статусом 200 для каждой страницы из локального CDX-дампа,
-сохраняет сырые HTML и собирает сводный CSV.
+The live ECI portal is gone; web.archive.org has the full results of each of
+the 543 PCs (candidate / party / EVM / postal / total / %). The script takes
+the LATEST snapshot with status 200 for each page from a local CDX dump,
+saves the raw HTML and builds a summary CSV.
 
-Запуск:  uv run --project ../../analysis-tool python download_wayback_pc_results.py
-Выход:   data/wayback/pages_en/*.htm (сырые страницы)
-         data/results_pc/eci2024_pc_results.csv (сводная таблица)
+Run:     uv run --project ../../analysis-tool python download_wayback_pc_results.py
+Output:  data/wayback/pages_en/*.htm (raw pages)
+         data/results_pc/eci2024_pc_results.csv (summary table)
          data/results_pc/coverage_report.txt
 """
 from __future__ import annotations
@@ -33,7 +33,7 @@ CDX = DATA / "wayback" / "cdx_PcResultGenJune2024.tsv"
 
 BASE = "https://web.archive.org/web/{ts}id_/{url}"
 UA = {"User-Agent": "election-forensics-research/1.0 (academic; contact: local)"}
-DELAY = 3.5  # сек между запросами к Wayback (он душит частые запросы)
+DELAY = 3.5  # seconds between Wayback requests (it throttles frequent requests)
 
 PC_RE = re.compile(r"/ConstituencywiseS(\d{2})(\d+)\.htm$")
 PC_HEADER_RE = re.compile(
@@ -45,7 +45,7 @@ PC_HEADER_HI_RE = re.compile(
 
 
 def load_cdx(lang: str = "en") -> dict[str, tuple[str, str]]:
-    """URL -> (latest_ts, statuscode) по страницам с кодом 200."""
+    """URL -> (latest_ts, statuscode) for pages with status 200."""
     best: dict[str, tuple[str, str]] = {}
     for line in CDX.read_text().splitlines():
         parts = line.split(" ")
@@ -89,7 +89,7 @@ def parse_html(raw: bytes, url: str) -> dict | None:
         return None
     if not tables:
         return None
-    # таблица результатов — та, где есть столбец "EVM Votes" (EN) или "ईवीएम मत" (hi)
+    # the results table is the one with an "EVM Votes" (EN) or "ईवीएम मत" (hi) column
     df = None
     for t in tables:
         cols = [re.sub(r"[\s.।]", "", str(c).lower()) for c in t.columns]
@@ -104,12 +104,12 @@ def parse_html(raw: bytes, url: str) -> dict | None:
     pc_no, pc_name, state = ("", "", "")
     if m:
         pc_no = int(m.group(1))
-        # сегмент заголовка до начала таблицы (маркеры "S.N."/"क्रम"/комментарий)
+        # header segment up to the start of the table (markers "S.N."/"क्रम"/comment)
         seg = text[m.end(): m.end() + 160]
         seg = re.split(r"S\.?\s?N\.?|क्रम|&nbsp;|-->", seg)[0]
         parens = re.findall(r"\(([^()]+)\)", seg)
         if parens:
-            state = parens[-1].strip()  # штат — последняя скобка (имя может содержать "(ST)")
+            state = parens[-1].strip()  # state is the last parenthetical (name may contain "(ST)")
             pc_name = seg[: seg.find("(")].strip().rstrip("-– ").strip()
         else:
             pc_name = seg.strip()
@@ -123,7 +123,7 @@ def main() -> None:
     raw_dir.mkdir(parents=True, exist_ok=True)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     pages = load_cdx(lang)
-    print(f"страниц в CDX со статусом 200 ({lang}): {len(pages)}", flush=True)
+    print(f"pages in CDX with status 200 ({lang}): {len(pages)}", flush=True)
 
     rows: list[pd.DataFrame] = []
     meta: list[dict] = []
@@ -162,11 +162,11 @@ def main() -> None:
         all_df = pd.concat(rows, ignore_index=True)
         out_csv = OUT_DIR / ("eci2024_pc_results_hi.csv" if lang == "hi" else "eci2024_pc_results.csv")
         all_df.to_csv(out_csv, index=False)
-        print(f"итог: {all_df.shape} -> {out_csv.name}")
+        print(f"result: {all_df.shape} -> {out_csv.name}")
     with open(OUT_DIR / f"coverage_report_{lang}.txt", "w") as f:
         f.write(f"pages expected: {len(pages)}\nfailures: {len(failures)}\n")
         f.write("\n".join(failures))
-    print(f"failures: {len(failures)} (см. coverage_report_{lang}.txt)")
+    print(f"failures: {len(failures)} (see coverage_report_{lang}.txt)")
 
 
 if __name__ == "__main__":

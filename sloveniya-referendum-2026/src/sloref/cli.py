@@ -35,8 +35,8 @@ def cmd_plot(args: argparse.Namespace) -> int:
     out = args.out or (data_dir() / "plots")
     created = plot_trends(out, data_root=data_dir())
     if not created:
-        print("В timeseries.csv пока нет точек для графиков "
-              "(они появляются при изменении официальных цифр).")
+        print("No points for plots in timeseries.csv yet "
+              "(they appear when the official figures change).")
     for path in created:
         print(path)
     return 0
@@ -45,32 +45,32 @@ def cmd_plot(args: argparse.Namespace) -> int:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="sloref",
-        description="Мониторинг данных референдумов Словении 11.10.2026 "
-                    "(источник: DVK, volitve.dvk-rs.si)")
+        description="Monitoring of the 11 Oct 2026 Slovenian referendum data "
+                    "(source: DVK, volitve.dvk-rs.si)")
     parser.add_argument("--version", action="version",
                         version=f"sloref {__version__}")
 
     sub = parser.add_subparsers(dest="command")
 
     p_fetch = sub.add_parser(
-        "fetch", help="скачать данные (один опрос или цикл)")
+        "fetch", help="download the data (a single poll or a loop)")
     p_fetch.add_argument("--loop", action="store_true",
-                         help="работать циклом")
+                         help="run in a loop")
     p_fetch.add_argument("--interval", type=int, default=900,
-                         help="интервал цикла в секундах (по умолчанию 900 = 15 минут)")
+                         help="loop interval in seconds (default 900 = 15 minutes)")
     p_fetch.add_argument("--volisca", action="store_true",
-                         help="дополнительно итоги по всем участкам "
-                              "(88 файлов × 4 референдума)")
+                         help="additionally fetch per-precinct results "
+                              "(88 files × 4 referendums)")
     p_fetch.set_defaults(func=cmd_fetch)
 
     p_summary = sub.add_parser(
-        "summary", help="сводная таблица текущих цифр по всем референдумам")
+        "summary", help="summary table of the current figures for all referendums")
     p_summary.set_defaults(func=cmd_summary)
 
     p_plot = sub.add_parser(
-        "plot", help="PNG-графики трендов из timeseries.csv")
+        "plot", help="PNG trend plots from timeseries.csv")
     p_plot.add_argument("--out", default=None,
-                        help="каталог для PNG (по умолчанию data/plots)")
+                        help="directory for PNGs (default data/plots)")
     p_plot.set_defaults(func=cmd_plot)
 
     return parser

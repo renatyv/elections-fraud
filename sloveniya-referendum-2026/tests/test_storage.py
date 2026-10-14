@@ -1,4 +1,4 @@
-"""Тесты хранилища: снимки только изменений и дедупликация трендов."""
+"""Storage tests: change-only snapshots and trend deduplication."""
 
 from sloref.models import Aggregates
 from sloref.storage import TIMESERIES_COLUMNS, Store
@@ -11,12 +11,12 @@ def make_store(tmp_path):
 def test_save_file_snapshots_only_changes(tmp_path):
     store = make_store(tmp_path)
     assert store.save_file("ref", "rezultati.json", b"v1", "2026-10-11_2000") is True
-    # то же содержимое — снимок не создаётся, latest обновляется
+    # same content — no snapshot, latest is updated
     assert store.save_file("ref", "rezultati.json", b"v1", "2026-10-11_2015") is False
-    # новое содержимое — новый снимок
+    # new content — a new snapshot
     assert store.save_file("ref", "rezultati.json", b"v2", "2026-10-11_2030") is True
 
-    # по снимку на каждое изменение: v1 (2000) и v2 (2030)
+    # one snapshot per change: v1 (2000) and v2 (2030)
     snapshots = sorted(p.name for p in (store.raw).glob("*/*/*/*"))
     assert snapshots == ["rezultati.json", "rezultati.json"]
     snap_dirs = sorted(p.name for p in (store.raw / "2026-10-11").iterdir())
@@ -31,9 +31,9 @@ def test_timeseries_dedup_and_append(tmp_path):
     agg1 = Aggregates(referendum="ref", source_datum="d1", za=100, za_pct=0.4,
                       proti=150, proti_pct=0.6)
     assert store.append_timeseries(agg1, poll) is True
-    # без изменений строка не добавляется
+    # unchanged — no row added
     assert store.append_timeseries(agg1, poll) is False
-    # изменившиеся цифры добавляют строку
+    # changed figures add a row
     agg2 = Aggregates(referendum="ref", source_datum="d2", za=110, za_pct=0.42,
                       proti=152, proti_pct=0.58)
     assert store.append_timeseries(agg2, poll) is True
@@ -45,7 +45,7 @@ def test_timeseries_dedup_and_append(tmp_path):
 
 
 def test_state_survives_reopen(tmp_path):
-    """Сигнатура хранится на диске: новый Store не дублирует точку тренда."""
+    """The signature is stored on disk: a new Store does not duplicate a trend point."""
     store = make_store(tmp_path)
     agg = Aggregates(referendum="ref", source_datum="d1", za=1)
     assert store.append_timeseries(agg, "t1") is True
