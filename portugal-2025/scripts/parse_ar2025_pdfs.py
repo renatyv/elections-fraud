@@ -1,21 +1,22 @@
 #!/usr/bin/env python3
-"""Парсинг всех AR-2025 (18.05.2025) PDF из data/seccoes/ в CSV по папкам + сверка с MAI.
+"""Parse all AR-2025 (18.05.2025) PDFs from data/seccoes/ into per-folder CSVs + cross-check against MAI.
 
-Переиспользует парсеры parse_seccoes_ar2025.py (Benavente, Alcácer, Borba,
-Vendas Novas, Ferreira do Alentejo, Sousel, Gouveia) и добавляет новые:
-  0902 Almeida (Quadro-de-Resultados-2.pdf: фрегезии + 2 секции Vilar Formoso)
-  1301 Amarante (Resultados-Totais-18_05_2025.pdf: фрегезии)
-  1608 Valença (ESCRUTINIO...18.05.2025.pdf: фрегезии)
-  1824 Vouzela (202505_Consulte-aqui-os-resultados.pdf — скан: Apple Vision OCR
-       + tesseract, слияние по колоночным кластерам с арифметическим контролем)
-  0202 Almodôvar (EL25_MapaDef_*.pdf — скан-эдиталы: состав участков и места
-       голосования; результатов по секциям камара не публикует)
+Reuses the parse_seccoes_ar2025.py parsers (Benavente, Alcácer, Borba,
+Vendas Novas, Ferreira do Alentejo, Sousel, Gouveia) and adds new ones:
+  0902 Almeida (Quadro-de-Resultados-2.pdf: parishes + 2 Vilar Formoso sections)
+  1301 Amarante (Resultados-Totais-18_05_2025.pdf: parishes)
+  1608 Valença (ESCRUTINIO...18.05.2025.pdf: parishes)
+  1824 Vouzela (202505_Consulte-aqui-os-resultados.pdf — scan: Apple Vision OCR
+       + tesseract, merged by column clusters with arithmetic checks)
+  0202 Almodôvar (EL25_MapaDef_*.pdf — scanned editais: polling-station
+       composition and voting locations; the camara does not publish
+       per-section results)
 
-Выход: <папка>/ar2025_*.csv в каждой папке; лог сверки —
-data/seccoes/ar2025_pdfs_validation.txt. Схема CSV как у ar2025_seccoes.csv
-(+ колонки pdf_nome для фрегезийных файлов).
+Output: <folder>/ar2025_*.csv in each folder; cross-check log —
+data/seccoes/ar2025_pdfs_validation.txt. CSV schema same as ar2025_seccoes.csv
+(+ pdf_nome columns for the freguesia-level files).
 
-Запуск: python3 scripts/parse_ar2025_pdfs.py [--no-ocr]
+Run: python3 scripts/parse_ar2025_pdfs.py [--no-ocr]
 """
 import csv
 import os
@@ -50,7 +51,7 @@ def write_csv(path, rows, extra=()):
         w = csv.DictWriter(f, fieldnames=fields, extrasaction='ignore')
         w.writeheader()
         w.writerows(rows)
-    log(f'  -> {os.path.relpath(path, SECCOES)}: {len(rows)} строк')
+    log(f'  -> {os.path.relpath(path, SECCOES)}: {len(rows)} rows')
 
 
 def png_width(p):
@@ -69,7 +70,7 @@ MF = {'eleitores': 'registered_voters', 'votantes': 'voted',
 
 
 def match_and_check(rows, dico, label):
-    """Сопоставление строк с MAI-фрегезиями по (eleitores, votantes) + сверка."""
+    """Match rows to MAI freguesias by (eleitores, votantes) + cross-check."""
     mai = mai_level3(dico)
     used = set()
     for r in rows:
@@ -79,8 +80,8 @@ def match_and_check(rows, dico, label):
                 and int(m['voted']) == r['votantes']]
         if len(hits) != 1:
             log(f'  ✗ {label}: {r.get("pdf_nome", "?")!r} '
-                f'({r["eleitores"]} изб., {r["votantes"]} голос.): '
-                f'пар MAI = {len(hits)}')
+                f'({r["eleitores"]} voters, {r["votantes"]} voted): '
+                f'MAI matches = {len(hits)}')
             continue
         k = hits[0]
         used.add(k)
@@ -90,11 +91,11 @@ def match_and_check(rows, dico, label):
                  + tuple('votes:' + p for p in base.PARTIES)
                  if int(r.get(f, 0) or 0) != int(mai[k][MF.get(f, f)] or 0)]
         (log(f'  ✗ {mai[k]["name"]}: ' + '; '.join(diffs)) if diffs
-         else log(f'  ✓ {mai[k]["name"]}: {r["eleitores"]} изб., '
-                  f'{r["votantes"]} голос.'))
+         else log(f'  ✓ {mai[k]["name"]}: {r["eleitores"]} voters, '
+                  f'{r["votantes"]} voted'))
     if len(used) != len(mai):
         miss = [m['name'] for k, m in mai.items() if k not in used]
-        log(f'  ✗ {label}: без пары остались MAI-фрегезии: {miss}')
+        log(f'  ✗ {label}: unmatched MAI freguesias left: {miss}')
 
 
 def frow(dico, concelho, nome, nums, votes, nivel='freguesia', secao='',
@@ -109,7 +110,7 @@ def row_ok(nums, votes):
 
 
 def merge_thousands(tokens):
-    """['2','310'] -> ['2310'] (разделитель тысяч пробелом)."""
+    """['2','310'] -> ['2310'] (thousands separator is a space)."""
     out = []
     i = 0
     while i < len(tokens):
@@ -122,7 +123,7 @@ def merge_thousands(tokens):
     return out
 
 
-# ------------------------------------------------------- новые парсеры --
+# ------------------------------------------------------- new parsers --
 
 ALMEIDA_UNION_SIZES = [3, 3, 4, 2, 4, 2, 2]
 ALMEIDA_COLS = ['B.E.', 'PPM', 'IL', 'PS', 'NC', 'VP', 'R.I.R.', 'E', 'CH',
@@ -130,13 +131,13 @@ ALMEIDA_COLS = ['B.E.', 'PPM', 'IL', 'PS', 'NC', 'VP', 'R.I.R.', 'E', 'CH',
 
 
 def parse_almeida():
-    """Фрегезии + 2 секции Vilar Formoso. Юнионы идут по баннерам
-    'UNIÃO DE FREGUESIAS DE:' с известным числом компонентов; одиночные
-    фрегезии — после последнего юниоса; VILAR/FORMOSO несут 'Secção nº'."""
+    """Parishes + 2 Vilar Formoso sections. Unions follow the
+    'UNIÃO DE FREGUESIAS DE:' banners with a known number of components;
+    standalone parishes come after the last union; VILAR/FORMOSO carry 'Secção nº'."""
     txt = base.pdf2txt('0902_almeida/Quadro-de-Resultados-2.pdf')
     raw_rows = []          # (name, nivel, secao, nums[18])
-    ui = -1                # индекс текущего юниоса
-    left = 0               # сколько компонентов ещё взять
+    ui = -1                # index of the current union
+    left = 0               # how many components still to take
     for line in open(txt, encoding='utf-8'):
         s = line.strip()
         if not s:
@@ -187,7 +188,7 @@ def parse_almeida():
         else:
             rows.append(frow('0902', 'Almeida', nm, nd, votes))
 
-    # юнионы -> агрегаты (одна строка на юниос)
+    # unions -> aggregates (one row per union)
     agg, rest = [], list(unions)
     for size in ALMEIDA_UNION_SIZES:
         part, rest = rest[:size], rest[size:]
@@ -199,15 +200,15 @@ def parse_almeida():
         agg.append(frow('0902', 'Almeida', name, nd, votes))
     assert not rest
 
-    # контроль: Total-строка PDF против суммы секций Vilar Formoso
+    # check: the PDF Total row against the sum of the Vilar Formoso sections
     sv = [sum(int(x[f]) for x in secs) for f in
           ('eleitores', 'votantes', 'brancos', 'nulos')] + \
          [sum(int(x['votes:' + p]) for x in secs) for p in ALMEIDA_COLS]
-    log(f'  Almeida: юниосов {len(agg)}, одиночных {len(rows)}, '
-        f'секций Vilar Formoso {len(secs)}; Total PDF {total_row[:4]} vs '
-        f'сумма секций {sv[:4]} — '
+    log(f'  Almeida: {len(agg)} unions, {len(rows)} standalone, '
+        f'{len(secs)} Vilar Formoso sections; PDF Total {total_row[:4]} vs '
+        f'sum of sections {sv[:4]} — '
         + ('✓' if sv[:4] == total_row[:4] and
-           sv[4:] == total_row[4:] else '✗ РАСХОЖДЕНИЕ'))
+           sv[4:] == total_row[4:] else '✗ MISMATCH'))
     return agg + rows, secs
 
 
@@ -217,8 +218,8 @@ AMARANTE_COLS = ['PPD/PSD.CDS-PP', 'PLS', 'NC', 'VP', 'PS', 'E', 'CH',
 
 
 def parse_amarante():
-    """Числовые строки: 23 числа + 1 процент; имена могут переноситься —
-    каноническое имя приходит из MAI, pdf_nome только на той же строке."""
+    """Numeric rows: 23 numbers + 1 percentage; names may wrap across lines —
+    the canonical name comes from MAI, pdf_nome holds only the same-line text."""
     txt = base.pdf2txt('1301_amarante/Resultados-Totais-18_05_2025.pdf')
     rows = []
     for line in open(txt, encoding='utf-8'):
@@ -284,9 +285,10 @@ def ensure_ocr_tool():
 
 
 def num_candidates(tok):
-    """Варианты оцифровки OCR-токена (tesseract/Vision путают 5/S, 0/O...)."""
+    """Digit variants for an OCR token (tesseract/Vision confuse 5/S, 0/O...)."""
     subs = {'S': '5', 's': '5', 'O': '0', 'o': '0', 'Q': '0', 'D': '0',
-            'I': '1', 'l': '1', 'i': '1', '|': '1', '!': '1', 'З': '3',
+            'I': '1', 'l': '1', 'i': '1', '|': '1', '!': '1',
+            '\u0417': '3',  # Cyrillic Ze, looks like 3 in OCR output
             'g': '8', 'B': '8', 'Z': '2', 'A': '4', 'b': '6', 'G': '6',
             'T': '7', ')': '', '(': '', '.': '', ',': '', "'": '', '"': '',
             '§': '5', '€': '6'}
@@ -378,7 +380,7 @@ def parse_vouzela(do_ocr=True):
     vis_by_row = by_anchor(vis_rows)
     tess_by_row = by_anchor(tess_lines)
 
-    # колоночные центры: кластеризация x всех числовых токенов обоих движков
+    # column centers: cluster the x of all numeric tokens from both engines
     xs = sorted(x for toks in vis_by_row + tess_by_row if toks
                 for x, t in toks if num_candidates(t))
     clusters = []
@@ -390,7 +392,7 @@ def parse_vouzela(do_ocr=True):
     centers = [sum(c) / len(c) for c in clusters]
     tail = centers[-18:]
     assert len(centers) >= 18, centers
-    log(f'  Vouzela OCR: колонок {len(centers)}, хвост: '
+    log(f'  Vouzela OCR: {len(centers)} columns, tail: '
         + ' '.join(f'{c:.0f}' for c in tail))
 
     def nearest(x):
@@ -431,7 +433,7 @@ def parse_vouzela(do_ocr=True):
 
         ins, vot = pick(0)[0], pick(1)[0]
         if ins is None or vot is None:
-            notes.append(f'⚠ {name}: потерян якорь Insc/Vot')
+            notes.append(f'⚠ {name}: lost Insc/Vot anchor')
             continue
         ins, vot = int(ins), int(vot)
         br, br_c = pick(3)
@@ -457,14 +459,14 @@ def parse_vouzela(do_ocr=True):
                             votes[p] = mv
                             fixed += 1
                 if sum(votes.values()) == need:
-                    notes.append(f'{name}: сумма сведена по MAI '
-                                 f'({fixed} ячеек)')
+                    notes.append(f'{name}: sum reconciled from MAI '
+                                 f'({fixed} cells)')
             if sum(votes.values()) != need:
-                notes.append(f'⚠ {name}: сумма {sum(votes.values())} != '
-                             f'{need} (Vot−бр−нул)')
+                notes.append(f'⚠ {name}: sum {sum(votes.values())} != '
+                             f'{need} (Vot−blank−null)')
         bad = [p for p in VOUZELA_PCOLS if conf[p] in ('disagree', 'none')]
         if bad:
-            notes.append(f'{name}: неоднозначные ячейки (взято '
+            notes.append(f'{name}: ambiguous cells (took '
                          + ', '.join(f'{p}={votes[p]}' for p in bad) + ')')
         nd = {'eleitores': ins, 'votantes': vot, 'brancos': br, 'nulos': nu,
               'abst': ins - vot}
@@ -480,7 +482,7 @@ def parse_vouzela(do_ocr=True):
         okc = (s == list(totals_pdf[:4])
                and all(sp[p] == totals_pdf[4].get(p, -1)
                        for p in VOUZELA_PCOLS))
-        log(f'  контроль TOTAIS PDF vs сумма 9 фрегезий: '
+        log(f'  PDF TOTAIS check vs sum of 9 parishes: '
             f'{"✓" if okc else "✗"} {totals_pdf[:4]} vs {s}')
     for n in notes:
         log('    ' + n)
@@ -522,7 +524,7 @@ def parse_almodovar(do_ocr=True):
                         continue
                     r = subprocess.run([OCR_BIN, p], capture_output=True,
                                        text=True, check=True)
-                    f.write(f'=== {fn} стр.{i} ===\n{r.stdout}\n')
+                    f.write(f'=== {fn} page {i} ===\n{r.stdout}\n')
     rows = []
     for fn, (key, freg) in ALM_FILES.items():
         txt = open(os.path.join(ocrdir, fn.replace('.pdf', '.txt')),
@@ -556,17 +558,17 @@ def write_almodovar(path, rows):
                                           'local'])
         w.writeheader()
         w.writerows(rows)
-    log(f'  -> {os.path.relpath(path, SECCOES)}: {len(rows)} строк')
+    log(f'  -> {os.path.relpath(path, SECCOES)}: {len(rows)} rows')
 
 
 # ------------------------------------------------------------------ main --
 
 def main():
     do_ocr = '--no-ocr' not in sys.argv
-    log('=== AR-2025: парсинг PDF по папкам + сверка с MAI ===')
+    log('=== AR-2025: parsing PDFs per folder + cross-check against MAI ===')
     log()
 
-    log('--- Секционные данные (парсеры parse_seccoes_ar2025) ---')
+    log('--- Section data (parse_seccoes_ar2025 parsers) ---')
     jobs = [
         ('1405_benavente', base.parse_benavente),
         ('1501_alcacerdosal', base.parse_alcacer),
@@ -585,7 +587,7 @@ def main():
                            'ar2025_seccoes.csv'), ferr)
 
     log()
-    log('--- Сверка секций с MAI (агрегаты фрегезий) ---')
+    log('--- Section cross-check against MAI (freguesia aggregates) ---')
     from collections import defaultdict
     agg = defaultdict(lambda: defaultdict(int))
     for r in allsec:
@@ -605,7 +607,7 @@ def main():
          else log(f'  ✓ {key} {m["name"]}'))
 
     log()
-    log('--- Gouveia (фрегезии = секции, независимая транскрипция) ---')
+    log('--- Gouveia (parishes = sections, independent transcription) ---')
     gouv = base.parse_gouveia()
     gmai = mai_level3('0906')
     used = set()
@@ -625,13 +627,13 @@ def main():
             (log(f'  ✗ {gmai[k]["name"]}: ' + '; '.join(diffs)) if diffs
              else log(f'  ✓ {gmai[k]["name"]}'))
         else:
-            log(f'  ✗ Gouveia: нет уникальной пары MAI для {hint!r}')
-    log(f'  MAI фрегезий: {len(gmai)}, сопоставлено: {len(used)}')
+            log(f'  ✗ Gouveia: no unique MAI match for {hint!r}')
+    log(f'  MAI freguesias: {len(gmai)}, matched: {len(used)}')
     write_csv(os.path.join(SECCOES, '0906_gouveia', 'ar2025_freguesias.csv'),
               gouv, extra=('pdf_nome',))
 
     log()
-    log('--- Almeida (фрегезии + секции Vilar Formoso) ---')
+    log('--- Almeida (parishes + Vilar Formoso sections) ---')
     alm_rows, alm_secs = parse_almeida()
     match_and_check(alm_rows, '0902', 'Almeida')
     write_csv(os.path.join(SECCOES, '0902_almeida',
@@ -639,21 +641,21 @@ def main():
               alm_rows + alm_secs, extra=('pdf_nome',))
 
     log()
-    log('--- Amarante (фрегезии) ---')
+    log('--- Amarante (parishes) ---')
     am_rows = parse_amarante()
     match_and_check(am_rows, '1301', 'Amarante')
     write_csv(os.path.join(SECCOES, '1301_amarante', 'ar2025_freguesias.csv'),
               am_rows, extra=('pdf_nome',))
 
     log()
-    log('--- Valença (фрегезии) ---')
+    log('--- Valença (parishes) ---')
     val_rows = parse_valenca()
     match_and_check(val_rows, '1601' if False else '1608', 'Valença')
     write_csv(os.path.join(SECCOES, '1608_valenca', 'ar2025_freguesias.csv'),
               val_rows, extra=('pdf_nome',))
 
     log()
-    log('--- Vouzela (скан: Apple Vision + tesseract OCR) ---')
+    log('--- Vouzela (scan: Apple Vision + tesseract OCR) ---')
     vou_rows = parse_vouzela(do_ocr)
     match_and_check(vou_rows, '1824', 'Vouzela')
     write_csv(os.path.join(SECCOES, '1824_vouzela',
@@ -661,7 +663,7 @@ def main():
               extra=('pdf_nome', 'ocr'))
 
     log()
-    log('--- Almodôvar (EL25: эдиталы участков, результатов нет) ---')
+    log('--- Almodôvar (EL25: polling-station editais, no results) ---')
     alm25 = parse_almodovar(do_ocr)
     write_almodovar(os.path.join(SECCOES, '0202_almodovar',
                                  'ar2025_locais_voto.csv'), alm25)
@@ -671,7 +673,7 @@ def main():
 
     out = os.path.join(SECCOES, 'ar2025_pdfs_validation.txt')
     open(out, 'w', encoding='utf-8').write('\n'.join(LOG) + '\n')
-    print(f'\nлог сверки -> {out}')
+    print(f'\ncross-check log -> {out}')
 
 
 if __name__ == '__main__':

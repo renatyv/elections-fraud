@@ -13,4 +13,7 @@ portugal-2025/data/
 sloveniya-referendum-2026/data/
 .venv/
 india-2024/data/
+# Run logs of scrapers/forensics — recreated on every run
+*.log
+portugal-2025/logs_*.txt
 

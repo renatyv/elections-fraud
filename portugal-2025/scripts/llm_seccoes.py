@@ -4,23 +4,23 @@
 # dependencies = ["httpx>=0.27", "rich>=13", "python-dotenv>=1.0"]
 # ///
 """
-LLM-парсинг секционных PDF (AR-2025) через OpenRouter (chat completions).
+LLM parsing of section-level PDFs (AR-2025) via OpenRouter (chat completions).
 
-Каждый PDF отправляется отдельным запросом (модель по умолчанию
-openai/gpt-6-luna): промпт + PDF как data-URL file part. Модель возвращает
-строгий CSV со строками по участкам (или фрегезиям). Результат каждого PDF
-сохраняется РЯДОМ С ИСХОДНИКОМ — <имя_pdf>.csv; сводный llm_seccoes.csv,
-report.txt и costs.json — в каталоге --out.
+Each PDF is sent as a separate request (default model openai/gpt-6-luna):
+prompt + PDF as a data-URL file part. The model returns strict CSV with rows
+per precinct section (or freguesia). Each PDF's result is saved NEXT TO THE
+SOURCE — <pdf_name>.csv; the merged llm_seccoes.csv, report.txt and costs.json
+go to the --out directory.
 
-С --check после основного прохода каждый PDF прогоняется второй моделью
-(--check-model, по умолчанию google/gemini-3.8-flash) с тем же промптом;
-транскрипции сравниваются клеточно, расхождения попадают в отчёт
-(<имя_pdf>.check.csv рядом с PDF).
+With --check, after the main pass every PDF is run through a second model
+(--check-model, default google/gemini-3.8-flash) with the same prompt; the
+transcriptions are compared cell by cell and discrepancies go to the report
+(<pdf_name>.check.csv next to the PDF).
 
-Повторный запуск пропускает PDF, рядом с которым уже лежит CSV
-(резюм); --force перезапускает всё.
+A re-run skips PDFs that already have a CSV next to them (resume); --force
+re-runs everything.
 
-Пример:
+Example:
     uv run portugal-2025/scripts/llm_seccoes.py portugal-2025/data/seccoes/*/*.pdf
 """
 
@@ -52,7 +52,7 @@ DEFAULT_CHECK_MODEL = "google/gemini-3.8-flash"
 MAX_TOKENS = 16384
 CHECK_MAX_TOKENS = 40000
 
-# Канонический порядок списков AR-2025 как в выгрузке MAI (results_freguesias.csv)
+# Canonical AR-2025 list order, same as the MAI export (results_freguesias.csv)
 MAI_PARTY_ORDER = [
     "PPD/PSD.CDS-PP", "PS", "CH", "IL", "L", "PCP-PEV", "B.E.", "PAN", "ADN",
     "PPD/PSD.CDS-PP.PPM", "JPP", "R.I.R.", "VP", "PCTP/MRPP", "ND", "E",
@@ -66,7 +66,7 @@ console = Console()
 # ---------------------------------------------------------------- env / paths
 
 def find_dotenv() -> Path | None:
-    """Ищем .env вверх от CWD и от каталога скрипта (ключ из корня репо)."""
+    """Look for .env upwards from the CWD and from the script directory (key in the repo root)."""
     script_dir = Path(__file__).resolve().parent
     for start in (Path.cwd(), script_dir):
         for d in [start, *start.parents]:
@@ -84,14 +84,14 @@ def get_api_key() -> str:
         val = os.environ.get(var, "").strip()
         if val:
             return val
-    console.print("[red]Нет API-ключа: задайте OPENROUTER_KEY в .env[/red]")
+    console.print("[red]No API key: set OPENROUTER_KEY in .env[/red]")
     sys.exit(2)
 
 # ---------------------------------------------------------------- MAI hints
 
 def load_mai_parties(mai_csv: Path) -> dict[str, list[str]]:
-    """dico (4 цифры) -> списки, реально участвовавшие в муниципалитете
-    (ненулевые голоса хотя бы в одной фрегезии), каноническое написание MAI."""
+    """dico (4 digits) -> the lists that actually ran in the municipality
+    (non-zero votes in at least one freguesia), canonical MAI spelling."""
     hints: dict[str, list[str]] = {}
     try:
         with open(mai_csv, newline="", encoding="utf-8-sig") as f:
@@ -146,6 +146,8 @@ OUTPUT FORMAT — strict rules:
      nivel=freguesia, leave `secao` empty.
    NEVER output both a freguesia total row and its per-section rows — if
    section detail exists for a freguesia, emit only the section rows.
+4. If you write any notes at all (e.g. about an unreadable page), they MUST
+   be in English.
 
 COLUMNS:
 - freguesia: from a freguesia column, or from sub-header/section-title rows
@@ -208,7 +210,7 @@ class OpenRouter:
         )
 
     def chat(self, body: dict) -> httpx.Response:
-        """POST /chat/completions с повтором при 429/5xx."""
+        """POST /chat/completions with retries on 429/5xx."""
         delay = 2.0
         resp = None
         for attempt in range(8):
@@ -257,10 +259,10 @@ def content_to_text(content: Any) -> str:
 
 
 def clean_csv(text: str) -> str:
-    """Убираем ```-заборы и мусор до/после CSV."""
+    """Strip ``` fences and junk before/after the CSV."""
     text = re.sub(r"^```[a-zA-Z]*\s*|\s*```$", "", text.strip())
     lines = [ln for ln in text.splitlines() if ln.strip()]
-    for i, ln in enumerate(lines):  # от первой строки-заголовка до конца
+    for i, ln in enumerate(lines):  # from the first header line to the end
         if ln.lstrip("#, ").startswith("nivel"):
             return "\n".join(lines[i:])
     return "\n".join(lines)
@@ -269,12 +271,12 @@ def clean_csv(text: str) -> str:
 def parse_result_csv(text: str) -> tuple[list[str], list[list[str]]]:
     rows = [r for r in csv.reader(io.StringIO(clean_csv(text))) if r]
     if not rows or not rows[0] or not rows[0][0].startswith("nivel"):
-        raise ValueError("нет строки заголовка nivel,...")
+        raise ValueError("no nivel,... header row found")
     return rows[0], rows[1:]
 
 
 def check_sums(header: list[str], rows: list[list[str]]) -> int:
-    """votantes == brancos + nulos + Σvotes (там, где все поля заполнены)."""
+    """votantes == brancos + nulos + Σvotes (wherever all fields are filled)."""
     hmap = {n: i for i, n in enumerate(header)}
     votes_idx = [i for n, i in hmap.items() if n.startswith("votes:")]
     bad = 0
@@ -291,9 +293,9 @@ def check_sums(header: list[str], rows: list[list[str]]) -> int:
 
 
 def apply_mesa_fix(header: list[str], rows: list[list[str]]) -> list[str]:
-    """nivel=secao с пустым номером месы → mesa 1, если у фрегезии в файле
-    ровно одна такая строка (одно-месная фрегезия; иначе оставляем и ждём
-    ручного разбора). Возвращает список примечаний."""
+    """nivel=secao with an empty mesa number -> mesa 1, if the freguesia has
+    exactly one such row in the file (a single-mesa freguesia; otherwise leave
+    as is and wait for manual review). Returns a list of notes."""
     hmap = {n: i for i, n in enumerate(header)}
     i_sec, i_fre = hmap["secao"], hmap.get("freguesia", 0)
     empty = [r for r in rows
@@ -305,16 +307,16 @@ def apply_mesa_fix(header: list[str], rows: list[list[str]]) -> list[str]:
                     if x and x[0] == "secao" and len(x) > i_fre and x[i_fre].strip() == fre]
         if len(same_fre) == 1:
             r[i_sec] = "1"
-            notes.append(f"mesa=1 проставлена для единственной секции фрегезии {fre!r}")
+            notes.append(f"mesa=1 filled in for the only section of freguesia {fre!r}")
         else:
-            notes.append(f"ВНИМАНИЕ: {len(same_fre)} секций фрегезии {fre!r} без номера месы")
+            notes.append(f"WARNING: {len(same_fre)} sections of freguesia {fre!r} without a mesa number")
     return notes
 
 
 def compare_csv(primary: Path, check: Path) -> tuple[bool, list[str]]:
-    """Клеточное сравнение основной и проверочной транскрипций.
-    Пары строк: (freguesia_norm, secao), остатки дожимаются совпадением
-    числовых кортежей (разная транскрипция имён — не расхождение данных)."""
+    """Cell-by-cell comparison of the primary and check transcriptions.
+    Row pairs are matched by (freguesia_norm, secao); leftovers are matched
+    by numeric tuples (different name transcription is not a data mismatch)."""
     def load(p: Path):
         with open(p, newline="", encoding="utf-8") as f:
             rd = csv.reader(f)
@@ -328,7 +330,7 @@ def compare_csv(primary: Path, check: Path) -> tuple[bool, list[str]]:
     cmap = {n: i for i, n in enumerate(ch)}
     missing = [n for n in ph if n not in cmap]
     if missing:
-        issues.append(f"нет колонок в check: {','.join(missing)}")
+        issues.append(f"columns missing in check: {','.join(missing)}")
     common = [n for n in ph if n in cmap]
     numeric = [n for n in common if n not in ("nivel", "freguesia", "local")]
 
@@ -341,7 +343,7 @@ def compare_csv(primary: Path, check: Path) -> tuple[bool, list[str]]:
         return tuple((r[m[n]] if m[n] < len(r) else "").strip() for n in numeric)
 
     if len(pr) != len(cr):
-        issues.append(f"число строк: {len(pr)} vs {len(cr)}")
+        issues.append(f"row count: {len(pr)} vs {len(cr)}")
     text_cols = {"nivel", "freguesia", "local"}
     cidx: dict[tuple, list[list[str]]] = {}
     for r in cr:
@@ -369,9 +371,9 @@ def compare_csv(primary: Path, check: Path) -> tuple[bool, list[str]]:
         elif d_txt:
             name_diffs += 1
     if name_diffs:
-        issues.append(f"различается транскрипция имён в {name_diffs} строках "
-                      "(данные/числа совпадают)")
-    # остатки: та же строка данных под другим написанием имени?
+        issues.append(f"name transcription differs in {name_diffs} rows "
+                      "(data/numbers match)")
+    # leftovers: the same data row under a different name spelling?
     cnums = {}
     for lst in cidx.values():
         for r in lst:
@@ -383,7 +385,7 @@ def compare_csv(primary: Path, check: Path) -> tuple[bool, list[str]]:
         else:
             diffs += 1
             if len(issues) < 12:
-                issues.append(f"нет пары: {rkey(prow, pmap)} {t[:4]}")
+                issues.append(f"unmatched row: {rkey(prow, pmap)} {t[:4]}")
     ok = diffs == 0 and len(pr) == len(cr)
     return ok, issues
 
@@ -407,36 +409,36 @@ def write_merged(all_rows: list[dict], out_dir: Path) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("pdfs", nargs="*", help="PDF-файлы (глобы раскрывает shell)")
+    ap.add_argument("pdfs", nargs="*", help="PDF files (globs expanded by the shell)")
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--out", default="portugal-2025/data/seccoes/llm",
-                    help="каталог сводных артефактов (llm_seccoes.csv, "
-                         "report.txt, costs.json); per-file CSV — рядом с PDF")
+                    help="directory for the summary artifacts (llm_seccoes.csv, "
+                         "report.txt, costs.json); per-file CSVs go next to the PDFs")
     ap.add_argument("--mai-csv", default="portugal-2025/data/legislativas2025_mai/"
                                          "results_freguesias.csv",
-                    help="CSV MAI для подсказок по спискам на бюллетене")
+                    help="MAI CSV used for ballot-list hints")
     ap.add_argument("--force", action="store_true",
-                    help="перезапросить даже готовые файлы (включая check)")
+                    help="re-request even finished files (including check)")
     ap.add_argument("--check", action="store_true",
-                    help="проверочный проход второй моделью + клеточное сравнение")
+                    help="verification pass with a second model + cell-by-cell comparison")
     ap.add_argument("--check-model", default=DEFAULT_CHECK_MODEL,
-                    help="модель проверочного прохода")
+                    help="model for the verification pass")
     ap.add_argument("--sleep", type=float, default=1.0,
-                    help="пауза между запросами, сек")
+                    help="pause between requests, seconds")
     args = ap.parse_args()
 
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     pdfs = sorted({Path(p) for p in args.pdfs if Path(p).suffix.lower() == ".pdf"})
     if not pdfs:
-        ap.error("не заданы PDF (позиционные аргументы)")
+        ap.error("no PDFs given (positional arguments)")
     missing = [p for p in pdfs if not p.exists()]
     if missing:
-        ap.error("нет файлов: " + ", ".join(map(str, missing)))
+        ap.error("missing files: " + ", ".join(map(str, missing)))
 
     mai_hints = load_mai_parties(Path(args.mai_csv)) if Path(args.mai_csv).exists() else {}
 
-    # резюм: пропускаем PDF, рядом с которым уже лежит распарсенный CSV
+    # resume: skip PDFs that already have a parsed CSV next to them
     todo = []
     skipped = []
     for pdf in pdfs:
@@ -447,8 +449,8 @@ def main() -> None:
     costs = json.loads(costs_path.read_text()) if costs_path.exists() else {}
     total_new_cost = 0.0
 
-    # проверочный проход: PDF с готовой основной транскрипцией; без check-CSV —
-    # запрос к модели, с готовым check-CSV — бесплатное пересравнение
+    # check pass: PDFs with a finished primary transcription; without a check
+    # CSV — a request to the model, with a finished check CSV — a free re-comparison
     check_pairs: list[tuple[Path, Path, Path]] = []
     check_cached: list[tuple[Path, Path, Path]] = []
     if args.check:
@@ -460,10 +462,10 @@ def main() -> None:
             (check_pairs if args.force or not chk.exists()
              else check_cached).append((pdf, prim, chk))
 
-    console.print(f"{len(pdfs)} PDF: {len(todo)} к отправке, {len(skipped)} готово "
-                  f"(пропуск); check: {len(check_pairs)} запросов + "
-                  f"{len(check_cached)} из кэша. "
-                  f"Модель {args.model}, out: {out_dir}")
+    console.print(f"{len(pdfs)} PDFs: {len(todo)} to send, {len(skipped)} done "
+                  f"(skipped); check: {len(check_pairs)} requests + "
+                  f"{len(check_cached)} from cache. "
+                  f"Model {args.model}, out: {out_dir}")
 
     api = OpenRouter(get_api_key())
     report: list[str] = []
@@ -513,10 +515,10 @@ def main() -> None:
                 n_sec = sum(1 for r in rows if r and r[0] == "secao")
                 n_fre = sum(1 for r in rows if r and r[0] == "freguesia")
                 bad = check_sums(header, rows)
-                note = f"sum-check fail: {bad} строк" if bad else "sum-check OK"
-                report.append(f"OK {pdf}: строк {len(rows)} (secao={n_sec}, "
+                note = f"sum-check fail: {bad} rows" if bad else "sum-check OK"
+                report.append(f"OK {pdf}: {len(rows)} rows (secao={n_sec}, "
                               f"freguesia={n_fre}), {note}")
-                progress.print(f"[green]✓[/green] {pdf.parent.name}: {len(rows)} строк, "
+                progress.print(f"[green]✓[/green] {pdf.parent.name}: {len(rows)} rows, "
                                f"{note}, ${cost:.4f}, "
                                f"{time.monotonic() - t0:.0f}s")
             except Exception as e:  # noqa: BLE001
@@ -528,26 +530,26 @@ def main() -> None:
             if i < len(todo) - 1:
                 time.sleep(args.sleep)
 
-        # --- проверочный проход второй моделью ---
+        # --- verification pass with the second model ---
         if check_pairs or check_cached:
             progress.reset(task, total=len(todo) + len(check_pairs) + len(check_cached),
                            completed=len(todo))
-        for pdf, prim, chk in check_cached:  # пересравнение без запроса
+        for pdf, prim, chk in check_cached:  # re-comparison without a request
             label = f"{pdf.parent.name}/{pdf.stem}"
             try:
                 ok, issues = compare_csv(prim, chk)
                 if ok:
-                    report.append(f"CHECK {label}: OK (кэш)"
+                    report.append(f"CHECK {label}: OK (cache)"
                                   + ("; " + "; ".join(issues) if issues else ""))
-                    progress.print(f"[green]✓[/green] check {pdf.parent.name}: совпадает (кэш)")
+                    progress.print(f"[green]✓[/green] check {pdf.parent.name}: matches (cache)")
                 else:
-                    report.append(f"CHECK {label}: РАСХОЖДЕНИЯ (кэш): "
+                    report.append(f"CHECK {label}: MISMATCHES (cache): "
                                   + " | ".join(issues[:10]))
                     progress.print(f"[red]✗ check {pdf.parent.name}: "
-                                   + "; ".join(issues[:3]) + " (кэш)")
+                                   + "; ".join(issues[:3]) + " (cache)")
             except Exception as e:  # noqa: BLE001
-                report.append(f"CHECK-FAIL {label} (кэш): {e!r}")
-                progress.print(f"[red]✗ check {pdf.parent.name}: {e!r} (кэш)[/red]")
+                report.append(f"CHECK-FAIL {label} (cache): {e!r}")
+                progress.print(f"[red]✗ check {pdf.parent.name}: {e!r} (cache)[/red]")
             progress.advance(task)
         for i, (pdf, prim, chk) in enumerate(check_pairs):
             label = f"{pdf.parent.name}/{pdf.stem}"
@@ -583,16 +585,16 @@ def main() -> None:
                                   "completion_tokens": usage.get("completion_tokens"),
                                   "seconds": round(time.monotonic() - t0, 1)}
                     if finish == "length" and attempt == 0:
-                        progress.print(f"[yellow]… check {pdf.parent.name}: ответ обрезан "
-                                       "по max_tokens, повторяю[/yellow]")
+                        progress.print(f"[yellow]… check {pdf.parent.name}: response cut off "
+                                       "at max_tokens, retrying[/yellow]")
                         continue
                     break
                 if resp is None:
                     progress.advance(task)
                     continue
                 if finish == "length":
-                    report.append(f"CHECK-FAIL {label}: ответ обрезан по max_tokens "
-                                  "(finish_reason=length) даже после повтора")
+                    report.append(f"CHECK-FAIL {label}: response cut off at max_tokens "
+                                  "(finish_reason=length) even after a retry")
                     progress.print(f"[red]✗ check {pdf.parent.name}: TRUNCATED[/red]")
                     progress.advance(task)
                     continue
@@ -608,9 +610,9 @@ def main() -> None:
                     report.append(f"CHECK {label}: OK ({args.check_model})"
                                   + ("; " + "; ".join(issues) if issues else ""))
                     progress.print(f"[green]✓[/green] check {pdf.parent.name}: "
-                                   f"совпадает, ${cost:.4f}")
+                                   f"matches, ${cost:.4f}")
                 else:
-                    report.append(f"CHECK {label}: РАСХОЖДЕНИЯ ({args.check_model}): "
+                    report.append(f"CHECK {label}: MISMATCHES ({args.check_model}): "
                                   + " | ".join(issues[:10]))
                     progress.print(f"[red]✗ check {pdf.parent.name}: "
                                    + "; ".join(issues[:3]) + f", ${cost:.4f}")
@@ -623,21 +625,21 @@ def main() -> None:
             if i < len(check_pairs) - 1:
                 time.sleep(args.sleep)
 
-    # сводный CSV — инкрементально: грузим прошлый, блоки текущих файлов
-    # заменяем, остальные источники сохраняем (частичный запуск не режет датасет)
+    # merged CSV — incremental: load the previous one, replace the blocks of
+    # the current files, keep the other sources (a partial run does not cut the dataset)
     merged_path = out_dir / "llm_seccoes.csv"
     by_src: dict[str, list[dict]] = {}
     if merged_path.exists():
         with open(merged_path, newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):
                 by_src.setdefault(r.get("source_pdf", ""), []).append(r)
-    # собираем результаты рядом с исходниками: CSV в каталогах переданных PDF
-    # (наш формат узнаём по заголовку nivel,...)
+    # collect the results next to the sources: CSVs in the directories of the
+    # submitted PDFs (recognized by the nivel,... header)
     src_dirs = sorted({p.parent for p in pdfs})
     for src_dir in src_dirs:
         for per_file in sorted(src_dir.glob("*.csv")):
             if per_file.name.endswith(".check.csv"):
-                continue  # проверочные транскрипции в сводный не входят
+                continue  # check transcriptions do not go into the merged CSV
             with open(per_file, newline="", encoding="utf-8") as f:
                 rd = csv.reader(f)
                 header = next(rd, None)
@@ -648,7 +650,7 @@ def main() -> None:
             label = f"{per_file.parent.name}/{per_file.stem}"
             for note in notes:
                 report.append(f"NOTE {label}: {note}")
-            if notes:  # фиксируем и в per-file CSV
+            if notes:  # record them in the per-file CSV as well
                 with open(per_file, "w", newline="", encoding="utf-8") as fw:
                     w = csv.writer(fw)
                     w.writerow(header)
@@ -656,8 +658,8 @@ def main() -> None:
             n_sec = sum(1 for r in rows if r and r[0] == "secao")
             n_fre = sum(1 for r in rows if r and r[0] == "freguesia")
             bad = check_sums(header, rows)
-            note = f"sum-check fail: {bad} строк" if bad else "sum-check OK"
-            report.append(f"OK {label}: строк {len(rows)} "
+            note = f"sum-check fail: {bad} rows" if bad else "sum-check OK"
+            report.append(f"OK {label}: {len(rows)} rows "
                           f"(secao={n_sec}, freguesia={n_fre}), {note}")
             hmap = {n: j for j, n in enumerate(header)}
             block = []
@@ -669,15 +671,15 @@ def main() -> None:
             by_src[label] = block
     all_rows = [r for label in sorted(by_src) for r in by_src[label]]
     write_merged(all_rows, out_dir)
-    report.append(f"MERGED: {len(by_src)} источников, {len(all_rows)} строк в "
+    report.append(f"MERGED: {len(by_src)} sources, {len(all_rows)} rows in "
                   f"llm_seccoes.csv")
     (out_dir / "report.txt").write_text("\n".join(report) + "\n")
 
-    # таблица стоимостей
-    tbl = Table(title="Стоимость запросов")
-    tbl.add_column("файл"); tbl.add_column("строк", justify="right")
+    # cost table
+    tbl = Table(title="Request costs")
+    tbl.add_column("file"); tbl.add_column("rows", justify="right")
     tbl.add_column("in tok", justify="right"); tbl.add_column("out tok", justify="right")
-    tbl.add_column("сек", justify="right"); tbl.add_column("$", justify="right")
+    tbl.add_column("sec", justify="right"); tbl.add_column("$", justify="right")
     grand = 0.0
     for cid, c in sorted(costs.items()):
         grand += c.get("cost", 0.0)
@@ -692,10 +694,10 @@ def main() -> None:
                     nrows,
                     str(c.get("prompt_tokens", "")), str(c.get("completion_tokens", "")),
                     str(c.get("seconds", "")), f"{c.get('cost', 0):.4f}")
-    tbl.add_row("[bold]итого[/bold]", "", "", "", "", f"[bold]{grand:.4f}[/bold]")
+    tbl.add_row("[bold]total[/bold]", "", "", "", "", f"[bold]{grand:.4f}[/bold]")
     console.print(tbl)
-    console.print(f"\nИтоговый CSV: [bold]{out_dir / 'llm_seccoes.csv'}[/bold] "
-                  f"({len(all_rows)} строк), отчёт: {out_dir / 'report.txt'}")
+    console.print(f"\nFinal CSV: [bold]{out_dir / 'llm_seccoes.csv'}[/bold] "
+                  f"({len(all_rows)} rows), report: {out_dir / 'report.txt'}")
 
 
 if __name__ == "__main__":

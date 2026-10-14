@@ -43,7 +43,7 @@ def to_int(t):
     return int(t.replace('O', '0').replace('o', '0').replace(' ', ''))
 
 def merge_thousands(tokens):
-    """'2 964' -> '2964' (итеративно слева направо)."""
+    """'2 964' -> '2964' (iteratively, left to right)."""
     out = []
     i = 0
     while i < len(tokens):
@@ -57,8 +57,9 @@ def merge_thousands(tokens):
 
 
 def split_cols(line, drop_pct=True):
-    """Колонки = 2+ пробелов (pdftotext -layout). Внутри ячейки числа могут
-    идти через один пробел; 'N NNN' (до 2 цифр + ровно 3) — разделитель тысяч."""
+    """Columns = 2+ spaces (pdftotext -layout). Inside a cell the numbers may
+    be single-space separated; 'N NNN' (up to 2 digits + exactly 3) is a
+    thousands separator."""
     s = re.sub(r'\d+,\d+', ' ', line) if drop_pct else line
     cols = []
     for c in re.split(r'\s{2,}', s.strip()):
@@ -78,7 +79,7 @@ def split_cols(line, drop_pct=True):
                 i += 1
             cols.extend(str(int(p)) for p in merged)
         elif any(ch.isdigit() for ch in c):
-            # смешанная ячейка вида 'Orada 550': числа и текст по частям
+            # mixed cell such as 'Orada 550': numbers and text split into parts
             for part in re.findall(r'\d+|[A-Za-zÀ-ÿ./-]+[^\d]*', c):
                 part = part.strip()
                 if part.isdigit():
@@ -99,7 +100,7 @@ def row(dico, concelho, mai_key, freg, nivel, secao, local, nums, votes):
 
 
 def parse_benavente():
-    """Два блока: (CH,PPM,ADN,E,AD,PAN) и (BE,RIR,VP,PS,L,PCP,IL,+abst)."""
+    """Two blocks: (CH,PPM,ADN,E,AD,PAN) and (BE,RIR,VP,PS,L,PCP,IL,+abst)."""
     txt = pdf2txt('1405_benavente/Legislativas2025-resultados.pdf')
     fregs = [('LOCAL-140501', 'Benavente', 9),
              ('LOCAL-140502', 'Samora Correia', 14),
@@ -120,7 +121,7 @@ def parse_benavente():
                        'PAN', 'PCP-PEV'):
             continue
         while toks and toks[0].isalpha() and len(toks) > 1:
-            toks = toks[1:]  # FC/PA/FA и вертикальные имена фрегезий
+            toks = toks[1:]  # FC/PA/FA and vertical freguesia names
         if not toks or not toks[0].isdigit():
             continue
         if not toks[0].isdigit():
@@ -134,10 +135,10 @@ def parse_benavente():
         prev_sec = sec
         key, fname, _ = fregs[fi] if fi < len(fregs) else (None, None, None)
         if key is None:
-            raise ValueError(f'benavente: лишняя секция {sec}')
+            raise ValueError(f'benavente: unexpected section {sec}')
         d = data.setdefault((fi, sec), {'local': '', 'b1': {}, 'b2': {}})
         if block == 'b1':
-            # sec eleit voted blank null + 6 партий
+            # sec eleit voted blank null + 6 parties
             assert len(nums) == 11, (sec, nums)
             d.update(secao=sec, eleitores=int(nums[1]), votantes=int(nums[2]),
                      brancos=int(nums[3]), nulos=int(nums[4]))
@@ -189,7 +190,7 @@ def parse_alcacer():
         local = ' '.join(toks[1:i])
         inscr = int(toks[i])
         rest = [t for t in toks[i + 1:] if not is_pct(t)]
-        # 18 партий + total + brc + nulos + urna + abst
+        # 18 parties + total + brc + nulos + urna + abst
         assert len(rest) == 23, (sec, rest)
         votes = dict(zip(cols, map(int, rest[:18])))
         nums = {'eleitores': inscr, 'votantes': int(rest[21]),
@@ -223,7 +224,7 @@ def parse_borba():
             sec, rest = 1, nums
         else:
             continue
-        # eleit voted abst blank null apurados + 14 партий
+        # eleit voted abst blank null apurados + 14 parties
         assert len(rest) == 20, rest
         votes = dict(zip(cols, map(int, rest[6:])))
         nums_d = {'eleitores': int(rest[0]), 'votantes': int(rest[1]),
@@ -244,7 +245,7 @@ def parse_vendasnovas():
     cols = ['NC', 'PAN', 'IL', 'PS', 'B.E.', 'L', 'VP', 'E', 'PCP-PEV', 'CH',
             'PPM', 'ADN', 'R.I.R.', 'PPD/PSD.CDS-PP']
     rows = []
-    freg_banner = 0  # 0: секции 1-15; 1: итог фрег. VN; 2: строка Landeira
+    freg_banner = 0  # 0: sections 1-15; 1: VN freguesia total; 2: Landeira row
     for line in open(txt, encoding='utf-8'):
         s = line.strip()
         if not s:
@@ -257,7 +258,7 @@ def parse_vendasnovas():
         if s.upper().startswith('CONCELHO'):
             continue
         while toks and not toks[0].isdigit():
-            toks = toks[1:]  # название места (Piçarras, Bombel, …)
+            toks = toks[1:]  # place name (Piçarras, Bombel, …)
         if freg_banner == 0 and len(toks) == 20:
             sec = int(toks[0])
             votes = dict(zip(cols, map(int, toks[1:15])))
@@ -282,9 +283,10 @@ def parse_vendasnovas():
 
 
 def parse_ferreira():
-    """Скан с текстовым слоем ('resultadoscorrigidos'); порядок колонок установлен
-    сверкой итогов с MAI: mesa, inscr, voted, abst, brancos, nulos, RIR, B.E.,
-    PCP-PEV, L, PS, IL, PPM, AD, VP, E, CH, PAN, PCTP/MRPP, ND, ADN."""
+    """Scan with a text layer ('resultadoscorrigidos'); the column order was
+    established by cross-checking the totals against MAI: mesa, inscr, voted,
+    abst, brancos, nulos, RIR, B.E., PCP-PEV, L, PS, IL, PPM, AD, VP, E, CH,
+    PAN, PCTP/MRPP, ND, ADN."""
     txt = pdf2txt('0208_ferreiradoalentejo/resultadoscorrigidos.pdf')
     cols = ['R.I.R.', 'B.E.', 'PCP-PEV', 'L', 'PS', 'IL', 'PPM',
             'PPD/PSD.CDS-PP', 'VP', 'E', 'CH', 'PAN', 'PCTP/MRPP', 'ND', 'ADN']
@@ -298,7 +300,7 @@ def parse_ferreira():
         if 'RESULTADOSGERAIS' in line:
             cells = split_cols(re.sub(r'\d+,\d+%', ' ', line))
             nums = [int(c) for c in cells if c.isdigit()]
-            # [кол-во меса, inscr, voted, abst, 17 значений]
+            # [number of mesas, inscr, voted, abst, 17 values]
             totals_concelho = nums[1:]
             continue
         if 'TOTAL' in line or '%' in line or 'Percentagem' in line \
@@ -308,8 +310,8 @@ def parse_ferreira():
         nums = [int(c) for c in cells if c.isdigit()]
         if len(nums) < 21:
             continue
-        # имена мест с цифрами ('5 VARGARIDA', 'OLI-1AS') дают фантомные
-        # числа слева — берём 21 значение справа
+        # place names containing digits ('5 VARGARIDA', 'OLI-1AS') produce
+        # phantom numbers on the left — take the 21 rightmost values
         nums = nums[-21:]
         mesa, inscr, voted, abst = nums[0], nums[1], nums[2], nums[3]
         blank, null = nums[4], nums[5]
@@ -317,7 +319,7 @@ def parse_ferreira():
         if sum(votes.values()) + blank + null != voted:
             continue
         if inscr != voted + abst and str(voted + abst).startswith(str(inscr)):
-            inscr = voted + abst  # побитая цифра электората (меса-6: '15'→156)
+            inscr = voted + abst  # mangled electorate digit (mesa 6: '15'->156)
         if seen_in_g >= groups[g][2]:
             g += 1
             seen_in_g = 0
@@ -332,8 +334,8 @@ def parse_ferreira():
 
 
 def parse_gouveia():
-    """Секции = фрегезии (уровень как у MAI), но это независимая транскрипция
-    муниципалитета — контроль MAI. Колонки: BE PPM IL PS NC VP RIR E CH ADN L AD PCP PAN."""
+    """Sections = parishes (same level as MAI), but this is an independent
+    transcription of the municipality — MAI is the control. Columns: BE PPM IL PS NC VP RIR E CH ADN L AD PCP PAN."""
     txt = pdf2txt('0906_gouveia/Legislativas-AR-2025-Apuramento-Parcial-Seccoes.pdf')
     cols = ['B.E.', 'PPM', 'IL', 'PS', 'NC', 'VP', 'R.I.R.', 'E', 'CH', 'ADN',
             'L', 'PPD/PSD.CDS-PP', 'PCP-PEV', 'PAN']
@@ -363,9 +365,9 @@ def parse_gouveia():
 
 
 def parse_sousel():
-    """Скан без текстового слоя (таблица — изображение от SIC). Транскрипция
-    vision-моделью: data/seccoes/1215_sousel/ar2025_sousel_ocr.csv; каждая
-    строка проверена против MAI (см. вывод валидации)."""
+    """Scan without a text layer (the table is an image from SIC). Transcribed
+    by a vision model: data/seccoes/1215_sousel/ar2025_sousel_ocr.csv; every
+    row was verified against MAI (see the validation output)."""
     path = os.path.join(SECCOES, '1215_sousel', 'ar2025_sousel_ocr.csv')
     rows = []
     for r in csv.DictReader(open(path, encoding='utf-8')):
@@ -400,9 +402,9 @@ def main():
     gouv = parse_gouveia()
     mai = mai_rows()
 
-    # сверка секций с MAI по фрегезиям
+    # cross-check of section sums against MAI at freguesia level
     log = []
-    log.append('=== Сверка сумм секций с MAI (results_all.csv AR-2025) ===')
+    log.append('=== Cross-check of section sums against MAI (results_all.csv AR-2025) ===')
     bad = 0
     from collections import defaultdict
     agg = defaultdict(lambda: defaultdict(int))
@@ -431,10 +433,10 @@ def main():
             bad += 1
             log.append(f'✗ {key} {nm}: ' + '; '.join(diffs))
         else:
-            log.append(f'✓ {key} {nm}: {a["eleitores"]} изб., {a["votantes"]} голос.')
-    # Gouveia: построчно
+            log.append(f'✓ {key} {nm}: {a["eleitores"]} voters, {a["votantes"]} voted.')
+    # Gouveia: row by row
     log.append('')
-    log.append('=== Gouveia (независимая транскрипция камарой, уровень фрегезий) ===')
+    log.append('=== Gouveia (independent transcription by the camara, freguesia level) ===')
     gmai = {k: v for k, v in mai.items() if k.startswith('LOCAL-0906') and v['level'] == '3'}
     matched = set()
     for g in gouv:
@@ -445,8 +447,8 @@ def main():
                 hit = (k, m)
                 break
         if not hit:
-            log.append(f'✗ не найдена пара MAI для {g["name_hint"]!r} '
-                       f'({g["eleitores"]} изб.)')
+            log.append(f'✗ no MAI match found for {g["name_hint"]!r} '
+                       f'({g["eleitores"]} voters)')
             bad += 1
             continue
         k, m = hit
@@ -463,20 +465,20 @@ def main():
             bad += 1
             log.append(f'✗ {m["name"]}: ' + '; '.join(diffs))
         else:
-            log.append(f'✓ {m["name"]}: {g["eleitores"]} изб.')
+            log.append(f'✓ {m["name"]}: {g["eleitores"]} voters')
     if len(matched) != len(gmai):
         bad += 1
-        log.append(f'✗ MAI фрегезий {len(gmai)}, сопоставлено {len(matched)}')
+        log.append(f'✗ MAI parishes: {len(gmai)}, matched {len(matched)}')
 
-    # Ferreira: сверка итоговой строки «RESULTADOSGERAIS»
+    # Ferreira: cross-check of the "RESULTADOSGERAIS" total row
     log.append('')
-    log.append('=== Ferreira do Alentejo: строка RESULTADOSGERAIS vs MAI ===')
+    log.append('=== Ferreira do Alentejo: RESULTADOSGERAIS row vs MAI ===')
     m = mai['LOCAL-020800']
     ferr_cols = ['R.I.R.', 'B.E.', 'PCP-PEV', 'L', 'PS', 'IL', 'PPM',
                  'PPD/PSD.CDS-PP', 'VP', 'E', 'CH', 'PAN', 'PCTP/MRPP',
                  'ND', 'ADN']
     ferr_map = dict(zip(['brancos', 'nulos'] + ferr_cols, ferr_tot[3:]))
-    log.append(f"итог PDF: inscr={ferr_tot[0]} voted={ferr_tot[1]} "
+    log.append(f"PDF total: inscr={ferr_tot[0]} voted={ferr_tot[1]} "
                f"abst={ferr_tot[2]}; MAI: {m['registered_voters']}/{m['voted']}")
     ferr_diffs = []
     for f, mv in [('brancos', m['blank_votes']), ('nulos', m['null_votes'])] + \
@@ -485,24 +487,24 @@ def main():
         gv = ferr_map.get(f, 0)
         if gv != mv:
             ferr_diffs.append(f'  ✗ {f}: pdf={gv} mai={mv}')
-    log.extend(ferr_diffs or ['  ✓ все партии и бракос/нул совпадают'])
+    log.extend(ferr_diffs or ['  ✓ all parties and blank/null votes match'])
 
-    # итоговое покрытие
+    # overall coverage
     secs = [r for r in rows if r['nivel'] == 'secao']
     nat = int(mai['LOCAL-500000']['registered_voters'])
     log.append('')
-    log.append('=== Покрытие ===')
+    log.append('=== Coverage ===')
     el = sum(r['eleitores'] for r in secs)
     ncon = len(set(r['dico'] for r in secs))
-    log.append(f"секционных строк: {len(secs)} в {ncon} конселью; электорат "
-               f"{el} из {nat} нац. ({100 * el / nat:.2f}%)")
+    log.append(f"section rows: {len(secs)} in {ncon} concelhos; electorate "
+               f"{el} of {nat} national ({100 * el / nat:.2f}%)")
     turn = [r['votantes'] / r['eleitores'] for r in secs if r['eleitores']]
-    log.append(f"явка по секциям: {min(turn) * 100:.1f}%–{max(turn) * 100:.1f}% "
-               f"(медиана {sorted(turn)[len(turn) // 2] * 100:.1f}%)")
+    log.append(f"turnout across sections: {min(turn) * 100:.1f}%–{max(turn) * 100:.1f}% "
+               f"(median {sorted(turn)[len(turn) // 2] * 100:.1f}%)")
     for d in sorted(set(r['dico'] for r in secs)):
         sub = [r for r in secs if r['dico'] == d]
-        log.append(f"  {d} {sub[0]['concelho']}: {len(sub)} секций, "
-                   f"{sum(r['eleitores'] for r in sub)} изб.")
+        log.append(f"  {d} {sub[0]['concelho']}: {len(sub)} sections, "
+                   f"{sum(r['eleitores'] for r in sub)} voters")
 
     for g in gouv:
         g.pop('name_hint', None)
@@ -513,8 +515,8 @@ def main():
     val = '\n'.join(log)
     open(OUT_VAL, 'w', encoding='utf-8').write(val + '\n')
     print(val)
-    print(f'\nзаписано {len(rows) + len(gouv)} строк -> {OUT_CSV}')
-    print('расхождений с MAI (групп):', bad)
+    print(f'\nwrote {len(rows) + len(gouv)} rows -> {OUT_CSV}')
+    print('mismatches vs MAI (groups):', bad)
 
 
 if __name__ == '__main__':
