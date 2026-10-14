@@ -1,0 +1,13 @@
+[project]
+name = "india2024"
+version = "0.1.0"
+description = "Скачивание и разбор данных выборов Лок Сабха-2024 (Индия) для election forensics"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "lxml>=5.2",
+    "requests>=2.32",
+]
+
+[tool.uv]
+package = false
