@@ -1,0 +1,57 @@
+{
+  "title": "Slovenia 11.10.2026: voting paradoxes testable on referendum data",
+  "n_referendums": 4,
+  "district_level_reversals": [
+    "rtv_prispevek"
+  ],
+  "unit_level_reversals": [
+    "preiskava",
+    "rtv_prispevek"
+  ],
+  "za_won_election_day_all": true,
+  "gerrymander": {
+    "preiskava": {
+      "loser": "ZA",
+      "wins": 45,
+      "ok": true
+    },
+    "socialna_pomoc": {
+      "loser": "PROTI",
+      "wins": 17,
+      "ok": false
+    },
+    "volilna_pravica": {
+      "loser": "PROTI",
+      "wins": 32,
+      "ok": false
+    },
+    "rtv_prispevek": {
+      "loser": "ZA",
+      "wins": 45,
+      "ok": true
+    }
+  },
+  "quorum": {
+    "preiskava": {
+      "margin_quorum": 132971,
+      "margin_majority": 23147,
+      "flip_votes": 23148
+    },
+    "socialna_pomoc": {
+      "margin_quorum": 24904,
+      "margin_majority": 194705,
+      "flip_votes": 194706
+    },
+    "volilna_pravica": {
+      "margin_quorum": 73235,
+      "margin_majority": 97776,
+      "flip_votes": 97777
+    },
+    "rtv_prispevek": {
+      "margin_quorum": 122825,
+      "margin_majority": 546,
+      "flip_votes": 547
+    }
+  },
+  "min_majority_margin_votes": 546
+}

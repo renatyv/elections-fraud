@@ -3,6 +3,8 @@
 # project directory:
 #   uv run python scripts/build_site_figures.py
 # Output: <repo>/site/sloveniya-referendum-2026/img/<lang>/{turnout,comet,cross}.png
+#         and the paradox figures (territory, decomposition, quorum) for
+#         paradoxes.html — analysis: scripts/analyze_paradoxes.py
 # /// script
 # requires-python = ">=3.11"
 # dependencies = ["pandas", "matplotlib"]
@@ -22,6 +24,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 BLUE = "#3b82c4"
 DARK = "#16324f"
 RED = "#c0392b"
+GREEN = "#1e8e5a"
 GREY = "#8a97a5"
 CUT = 70.0  # honest-decline boundary (q99.5 of the controls), see the report, section 1
 
@@ -252,12 +255,245 @@ def fig_cross(lang: str, tr: dict) -> None:
     plt.close(fig)
 
 
+# ── paradox figures (paradoxes.html): data, translations, functions ──────────
+
+REFS = ["preiskava", "socialna_pomoc", "volilna_pravica", "rtv_prispevek"]
+
+nat = pd.read_csv(ROOT / "data" / "derived" / "nacionalni_pregled.csv")
+
+PX: dict[str, dict] = {}
+for ref in REFS:
+    d = df[df["referendum"] == ref]
+    reg = d[d["upr"] > 0]
+    early = d[d["volisce_st"] >= 900]
+    nrow = nat[(nat.referendum == ref) & (nat.nivo == "slovenija")].iloc[0]
+    okr = nat[(nat.referendum == ref) & (nat.nivo == "okraj")]
+    reg_net = reg["za"].sum() - reg["proti"].sum()
+    early_net = early["za"].sum() - early["proti"].sum()
+    PX[ref] = {
+        "winner": "za" if nrow.za > nrow.proti else "proti",
+        "dist_za": int((okr.za > okr.proti).sum()),
+        "dist_n": len(okr),
+        "reversed": (okr.za > okr.proti).sum() > (okr.proti > okr.za).sum(),
+        "precinct_net": int(reg_net),
+        "early_net": int(early_net),
+        "special_net": int((nrow.za - nrow.proti) - reg_net - early_net),
+        "national_net": int(nrow.za - nrow.proti),
+        "proti": int(nrow.proti),
+        "quorum": float(nrow.upr / 5),
+        "half": float(nrow.velj / 2),
+        "margin_quorum": int(nrow.proti - nrow.upr / 5),
+        "margin_majority": int(abs(nrow.za - nrow.proti)),
+    }
+
+
+def fmt_num(v: int, lang: str) -> str:
+    s = f"{v:,}"
+    if lang == "en":
+        return s
+    if lang == "hu":
+        return s.replace(",", " ")
+    return s.replace(",", ".")
+
+
+PXT = {
+"en": {
+    "yes": "YES", "no": "NO",
+    "ter_title": "Same votes, another rule: winner by majority of the 88 districts",
+    "ter_xlabel": "Districts won by YES, % of 88",
+    "ter_majority": "majority: 45+ districts",
+    "ter_reversal": "← reversal",
+    "ter_natl": "nationally:",
+    "dec_title": "Who decided it: on election day YES won all four questions",
+    "dec_ylabel": "Net margin, YES − NO",
+    "dec_l1": "election-day precincts", "dec_l2": "early voting", "dec_l3": "postal / abroad",
+    "dec_natl": "national result",
+    "quo_title": "Rejection needs BOTH thresholds — NO cleared them only where it won",
+    "quo_ylabel": "Votes",
+    "quo_l1": "NO votes", "quo_l2": "Art. 90 quorum (1/5 of electorate)",
+    "quo_l3": "half of valid votes (majority threshold)",
+    "w_quorum": "quorum", "w_majority": "majority",
+    "w_rejected": "rejected", "w_approved": "approved",
+},
+"sl": {
+    "yes": "ZA", "no": "PROTI",
+    "ter_title": "Enaki glasovi, drugo pravilo: zmagovalec po večini 88 okrajev",
+    "ter_xlabel": "Okraji, kjer je zmagal ZA, % od 88",
+    "ter_majority": "večina: 45+ okrajev",
+    "ter_reversal": "← obrat",
+    "ter_natl": "državno:",
+    "dec_title": "Kdo je odločal: na dan glasovanja je ZA zmagal pri vseh štirih vprašanjih",
+    "dec_ylabel": "Neto razlika, ZA − PROTI",
+    "dec_l1": "volišča na dan glasovanja", "dec_l2": "predčasno glasovanje",
+    "dec_l3": "pošta / tujina",
+    "dec_natl": "državni izid",
+    "quo_title": "Zavrnitev zahteva OBE meji — PROTI ju je presegel le tam, kjer je zmagal",
+    "quo_ylabel": "Glasovi",
+    "quo_l1": "glasovi PROTI", "quo_l2": "kvorum po 90. členu (1/5 volivcev)",
+    "quo_l3": "polovica veljavnih glasov (meja večine)",
+    "w_quorum": "kvorum", "w_majority": "večina",
+    "w_rejected": "zavrnjen", "w_approved": "sprejet",
+},
+"hr": {
+    "yes": "ZA", "no": "PROTIV",
+    "ter_title": "Isti glasovi, drugo pravilo: pobjednik po većini 88 kotara",
+    "ter_xlabel": "Kotari gdje je pobijedio ZA, % od 88",
+    "ter_majority": "većina: 45+ kotara",
+    "ter_reversal": "← obrat",
+    "ter_natl": "državno:",
+    "dec_title": "Tko je odlučivao: na dan glasovanja ZA je pobijedio na sva četiri pitanja",
+    "dec_ylabel": "Neto razlika, ZA − PROTIV",
+    "dec_l1": "birališta na dan glasovanja", "dec_l2": "rano glasovanje",
+    "dec_l3": "pošta / inozemstvo",
+    "dec_natl": "državni ishod",
+    "quo_title": "Odbačaj zahtijeva OBA praga — PROTIV ih je prešao samo gdje je pobijedio",
+    "quo_ylabel": "Glasovi",
+    "quo_l1": "glasovi PROTIV", "quo_l2": "kvorum po čl. 90 (1/5 birača)",
+    "quo_l3": "polovica važećih glasova (prag većine)",
+    "w_quorum": "kvorum", "w_majority": "većina",
+    "w_rejected": "odbačen", "w_approved": "prihvaćen",
+},
+"it": {
+    "yes": "SÌ", "no": "CONTRO",
+    "ter_title": "Stessi voti, altra regola: il vincitore per maggioranza degli 88 collegi",
+    "ter_xlabel": "Collegi vinti dal SÌ, % su 88",
+    "ter_majority": "maggioranza: 45+ collegi",
+    "ter_reversal": "← inversione",
+    "ter_natl": "nazionalmente:",
+    "dec_title": "Chi ha deciso: il giorno del voto il SÌ ha vinto su tutti e quattro i quesiti",
+    "dec_ylabel": "Scarto netto, SÌ − CONTRO",
+    "dec_l1": "sezioni del giorno del voto", "dec_l2": "voto anticipato",
+    "dec_l3": "posta / estero",
+    "dec_natl": "esito nazionale",
+    "quo_title": ("Il rigetto richiede ENTRAMBE le soglie — "
+                  "il CONTRO le ha superate solo dove ha vinto"),
+    "quo_ylabel": "Voti",
+    "quo_l1": "voti CONTRO", "quo_l2": "quorum dell'art. 90 (1/5 degli elettori)",
+    "quo_l3": "metà dei voti validi (soglia di maggioranza)",
+    "w_quorum": "quorum", "w_majority": "maggioranza",
+    "w_rejected": "respinto", "w_approved": "approvato",
+},
+"hu": {
+    "yes": "IGEN", "no": "ELLEN",
+    "ter_title": "Ugyanazok a szavazatok, más szabály: győztes a 88 körzet többsége szerint",
+    "ter_xlabel": "Az IGEN által nyert körzetek, % a 88-ból",
+    "ter_majority": "többség: 45+ körzet",
+    "ter_reversal": "← megfordulás",
+    "ter_natl": "országosan:",
+    "dec_title": "Ki döntött: a szavazás napján az IGEN nyert mind a négy kérdésen",
+    "dec_ylabel": "Nettókülönbség, IGEN − ELLEN",
+    "dec_l1": "szavazókörök a szavazás napján", "dec_l2": "előre szavazás",
+    "dec_l3": "postai / külföldi",
+    "dec_natl": "országos eredmény",
+    "quo_title": "Az elutasításhoz MINDKÉT küszöb kell — az ELLEN csak ott lépte túl, ahol nyert",
+    "quo_ylabel": "Szavazatok",
+    "quo_l1": "ELLEN-szavazatok", "quo_l2": "a 90. cikk szerinti kvórum (a választók 1/5-e)",
+    "quo_l3": "az érvényes szavazatok fele (többségi küszöb)",
+    "w_quorum": "kvórum", "w_majority": "többség",
+    "w_rejected": "elutasítva", "w_approved": "elfogadva",
+},
+}
+
+
+def fig_px_territory(lang: str, tr: dict, t: dict) -> None:
+    fig, ax = plt.subplots(figsize=(9.6, 4.4), dpi=150)
+    y = list(range(len(REFS)))
+    za = [100 * PX[r]["dist_za"] / PX[r]["dist_n"] for r in REFS]
+    colors = [GREEN if PX[r]["winner"] == "za" else RED for r in REFS]
+    labels = [f"{tr['names'][r]}\n{t['ter_natl']} {PX[r]['winner'].upper()}" for r in REFS]
+    ax.barh(y, za, color=colors, alpha=0.85, height=0.62, zorder=3)
+    ax.axvline(50, color=DARK, linestyle="--", linewidth=1.6, zorder=4)
+    ax.text(50.7, -0.6, t["ter_majority"], color=DARK, fontsize=10)
+    for i, r in enumerate(REFS):
+        ax.text(za[i] - 2, i,
+                f"{t['yes']} {PX[r]['dist_za']} : {PX[r]['dist_n'] - PX[r]['dist_za']} {t['no']}"
+                + (f"  {t['ter_reversal']}" if PX[r]["reversed"] else ""),
+                va="center", ha="right", fontsize=10.5, color="white",
+                fontweight="bold", zorder=5)
+    ax.set_yticks(y, labels, fontsize=10)
+    ax.invert_yaxis()
+    ax.set_xlim(0, 100)
+    ax.set_xlabel(t["ter_xlabel"])
+    ax.set_title(t["ter_title"])
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    fig.savefig(OUT / lang / "territory.png")
+    plt.close(fig)
+
+
+def fig_px_decomposition(lang: str, tr: dict, t: dict) -> None:
+    fig, ax = plt.subplots(figsize=(9.6, 4.6), dpi=150)
+    x = list(range(len(REFS)))
+    width = 0.27
+    series = [("precinct_net", t["dec_l1"], BLUE),
+              ("early_net", t["dec_l2"], "#8a6116"),
+              ("special_net", t["dec_l3"], GREY)]
+    for k, (key, label, color) in enumerate(series):
+        vals = [PX[r][key] for r in REFS]
+        ax.bar([i + (k - 1) * width for i in x], vals, width=width, label=label,
+               color=color, alpha=0.85, zorder=3)
+    top = max(max(PX[r]["precinct_net"], PX[r]["early_net"], PX[r]["special_net"])
+              for r in REFS)
+    for i, r in enumerate(REFS):
+        ax.text(i, top + 16000,
+                f"{PX[r]['winner'].upper()} +{fmt_num(abs(PX[r]['national_net']), lang)}",
+                ha="center", fontsize=10, color=DARK, fontweight="bold")
+    ax.axhline(0, color=DARK, linewidth=1.2)
+    ax.set_xticks(x, [tr["names"][r] for r in REFS], fontsize=10)
+    ax.set_yticks(list(range(-40000, 240001, 40000)))
+    ax.yaxis.set_major_formatter(lambda v, _: f"{v / 1000:+.0f}k" if v else "0")
+    ax.set_ylim(-48000, top + 38000)
+    ax.set_ylabel(t["dec_ylabel"])
+    ax.set_title(t["dec_title"])
+    ax.legend(fontsize=10, framealpha=0.9, loc="upper center", ncol=3,
+              bbox_to_anchor=(0.5, -0.16))
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.savefig(OUT / lang / "decomposition.png", bbox_inches="tight")
+    plt.close(fig)
+
+
+def fig_px_quorum(lang: str, tr: dict, t: dict) -> None:
+    fig, ax = plt.subplots(figsize=(9.6, 4.6), dpi=150)
+    x = list(range(len(REFS)))
+    protis = [PX[r]["proti"] for r in REFS]
+    quorums = [PX[r]["quorum"] for r in REFS]
+    halves = [PX[r]["half"] for r in REFS]
+    ax.bar(x, protis, color=RED, alpha=0.8, width=0.55, zorder=3, label=t["quo_l1"])
+    ax.scatter(x, quorums, marker="_", s=1400, color=DARK, linewidths=2.6,
+               zorder=4, label=t["quo_l2"])
+    ax.scatter(x, halves, marker="_", s=1400, color=GREY, linewidths=2.6,
+               zorder=4, label=t["quo_l3"])
+    for i, r in enumerate(REFS):
+        rej = PX[r]["winner"] == "proti"
+        maj = (f"+{fmt_num(PX[r]['margin_majority'], lang)}" if rej
+               else f"−{fmt_num(PX[r]['margin_majority'], lang)}")
+        ax.text(i, max(protis[i], halves[i]) + 14000,
+                f"{t['w_quorum']} +{fmt_num(PX[r]['margin_quorum'], lang)}\n"
+                f"{t['w_majority']} {maj}\n"
+                f"{t['w_rejected'] if rej else t['w_approved']}",
+                ha="center", fontsize=9, color=DARK, linespacing=1.35)
+    ax.set_xticks(x, [tr["names"][r] for r in REFS], fontsize=10)
+    ax.set_ylim(0, max(protis) * 1.42)
+    ax.yaxis.set_major_formatter(lambda v, _: f"{v / 1000:.0f}k")
+    ax.set_ylabel(t["quo_ylabel"])
+    ax.set_title(t["quo_title"])
+    ax.legend(fontsize=9.5, framealpha=0.9, loc="upper center", ncol=3,
+              bbox_to_anchor=(0.5, -0.18))
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.savefig(OUT / lang / "quorum.png", bbox_inches="tight")
+    plt.close(fig)
+
+
 for lang, tr in T.items():
     (OUT / lang).mkdir(parents=True, exist_ok=True)
     fig_turnout(lang, tr)
     fig_comet(lang, tr)
     fig_cross(lang, tr)
-    print(f"{lang}: turnout, comet, cross -> site/sloveniya-referendum-2026/img/{lang}/")
+    fig_px_territory(lang, tr, PXT[lang])
+    fig_px_decomposition(lang, tr, PXT[lang])
+    fig_px_quorum(lang, tr, PXT[lang])
+    print(f"{lang}: turnout, comet, cross, territory, decomposition, quorum "
+          f"-> site/sloveniya-referendum-2026/img/{lang}/")
 
 # the old English images at the img/ root are no longer needed
 for stale in ["turnout.png", "comet.png", "cross.png"]:

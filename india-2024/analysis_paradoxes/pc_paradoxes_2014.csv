@@ -1,0 +1,544 @@
+year,state,pc,n_candidates,valid_votes,nota_votes,winner_party,winner_votes,winner_share,runner_party,runner_votes,margin,majority,n_spoilers,spoiler1_party,spoiler1_votes,spoiler1_over,losers_combined_over
+2014,Andaman & Nicobar Islands,Andaman & Nicobar Islands,15,188764,1564,Bharatiya Janata Party,90969,0.4819,Indian National Congress,83157,7812,False,0,,0,0,6826
+2014,Andhra Pradesh,Adilabad,8,1028755,17084,Telangana Rashtra Samithi,430847,0.4188,Indian National Congress,259557,171290,False,1,Telugu Desam,184198,12908,167061
+2014,Andhra Pradesh,Amalapuram,14,1114786,6141,Telugu Desam,594547,0.5333,Yuvajana Sramika Rythu Congress Party,473971,120576,True,0,,0,0,-74308
+2014,Andhra Pradesh,Anakapalli,8,1139468,8604,Telugu Desam,568463,0.4989,Yuvajana Sramika Rythu Congress Party,520531,47932,False,0,,0,0,2542
+2014,Andhra Pradesh,Anantapur,13,1196256,8798,Telugu Desam,606509,0.507,Yuvajana Sramika Rythu Congress Party,545240,61269,True,0,,0,0,-16762
+2014,Andhra Pradesh,Aruku,11,893082,16532,Yuvajana Sramika Rythu Congress Party,413191,0.4627,Telugu Desam,321793,91398,False,0,,0,0,66700
+2014,Andhra Pradesh,Bapatla,14,1178488,6146,Telugu Desam,578145,0.4906,Yuvajana Sramika Rythu Congress Party,545391,32754,False,0,,0,0,22198
+2014,Andhra Pradesh,Bhongir,13,1201022,10921,Telangana Rashtra Samithi,448245,0.3732,Indian National Congress,417751,30494,False,3,Bharatiya Janata Party,183217,152723,304532
+2014,Andhra Pradesh,CHELVELLA,15,1305844,10018,Telangana Rashtra Samithi,435077,0.3332,Indian National Congress,362054,73023,False,1,Telugu Desam,353203,280180,435690
+2014,Andhra Pradesh,Chittoor,7,1191919,6996,Telugu Desam,594862,0.4991,Yuvajana Sramika Rythu Congress Party,550724,44138,False,0,,0,0,2195
+2014,Andhra Pradesh,Eluru,15,1194152,7544,Telugu Desam,623471,0.5221,Yuvajana Sramika Rythu Congress Party,521545,101926,True,0,,0,0,-52790
+2014,Andhra Pradesh,Guntur,12,1237330,7596,Telugu Desam,618417,0.4998,Yuvajana Sramika Rythu Congress Party,549306,69111,False,0,,0,0,496
+2014,Andhra Pradesh,Hindupur,12,1169068,8189,Telugu Desam,604291,0.5169,Yuvajana Sramika Rythu Congress Party,506966,97325,True,0,,0,0,-39514
+2014,Andhra Pradesh,Hyderabad,16,966408,5013,All India Majlis-E-Ittehadul Muslimeen,513868,0.5317,Bharatiya Janata Party,311414,202454,True,0,,0,0,-61328
+2014,Andhra Pradesh,Kadapa,14,1194604,6058,Yuvajana Sramika Rythu Congress Party,671983,0.5625,Telugu Desam,481660,190323,True,0,,0,0,-149362
+2014,Andhra Pradesh,Kakinada,22,1095641,4358,Telugu Desam,514402,0.4695,Yuvajana Sramika Rythu Congress Party,510971,3431,False,7,Indian National Congress,19754,16323,66837
+2014,Andhra Pradesh,Karimnagar,17,1119944,5747,Telangana Rashtra Samithi,505783,0.4516,Indian National Congress,300706,205077,False,1,Bharatiya Janata Party,214828,9751,108378
+2014,Andhra Pradesh,Khammam,27,1177914,4983,Yuvajana Sramika Rythu Congress Party,421957,0.3582,Telugu Desam,409983,11974,False,2,Communist Party of India,187653,175679,334000
+2014,Andhra Pradesh,Kurnool,12,1056347,9385,Yuvajana Sramika Rythu Congress Party,472782,0.4476,Telugu Desam,428651,44131,False,1,Indian National Congress,116603,72472,110783
+2014,Andhra Pradesh,Machilipatnam,11,1132894,8171,Telugu Desam,587280,0.5184,Yuvajana Sramika Rythu Congress Party,506223,81057,True,0,,0,0,-41666
+2014,Andhra Pradesh,Mahabubabad,17,1117665,6705,Telangana Rashtra Samithi,320569,0.2868,Indian National Congress,285577,34992,False,3,Telugu Desam,215904,180912,476527
+2014,Andhra Pradesh,Mahbubnagar,9,1005763,9037,Telangana Rashtra Samithi,334228,0.3323,Indian National Congress,331638,2590,False,7,Bharatiya Janata Party,272791,270201,337307
+2014,Andhra Pradesh,Malkajgiri,30,1611681,8716,Telugu Desam,523336,0.3247,Telangana Rashtra Samithi,494965,28371,False,3,Indian National Congress,233711,205340,565009
+2014,Andhra Pradesh,Medak,13,1180315,10781,Telangana Rashtra Samithi,657492,0.557,Indian National Congress,260463,397029,True,0,,0,0,-134669
+2014,Andhra Pradesh,Nagarkurnool,6,1096580,12388,Indian National Congress,420075,0.3831,Telangana Rashtra Samithi,403399,16676,False,3,Telugu Desam,183352,166676,256430
+2014,Andhra Pradesh,Nalgonda,9,1180094,9305,Indian National Congress,472093,0.4,Telugu Desam,278937,193156,False,1,Telangana Rashtra Samithi,260677,67521,235908
+2014,Andhra Pradesh,Nandyal,14,1197841,7115,Yuvajana Sramika Rythu Congress Party,622411,0.5196,Telugu Desam,516645,105766,True,0,,0,0,-46981
+2014,Andhra Pradesh,Narasaraopet,11,1276073,5985,Telugu Desam,632464,0.4956,Yuvajana Sramika Rythu Congress Party,597184,35280,False,0,,0,0,11145
+2014,Andhra Pradesh,Narsapuram,14,1080947,8004,Bharatiya Janata Party,540306,0.4998,Yuvajana Sramika Rythu Congress Party,454955,85351,False,0,,0,0,335
+2014,Andhra Pradesh,Nellore,14,1182099,5549,Yuvajana Sramika Rythu Congress Party,576396,0.4876,Telugu Desam,562918,13478,False,1,Indian National Congress,22870,9392,29307
+2014,Andhra Pradesh,Nizamabad,16,1026658,7266,Telangana Rashtra Samithi,439307,0.4279,Indian National Congress,272123,167184,False,1,Bharatiya Janata Party,225333,58149,148044
+2014,Andhra Pradesh,Ongole,15,1202444,5781,Yuvajana Sramika Rythu Congress Party,589960,0.4906,Telugu Desam,574302,15658,False,0,,0,0,22524
+2014,Andhra Pradesh,Peddapalle,17,1016823,5361,Telangana Rashtra Samithi,565496,0.5561,Indian National Congress,274338,291158,True,0,,0,0,-114169
+2014,Andhra Pradesh,Rajahmundry,14,1146925,7456,Telugu Desam,630573,0.5498,Yuvajana Sramika Rythu Congress Party,463139,167434,True,0,,0,0,-114221
+2014,Andhra Pradesh,Rajampet,9,1151201,7116,Yuvajana Sramika Rythu Congress Party,601752,0.5227,Bharatiya Janata Party,426990,174762,True,0,,0,0,-52303
+2014,Andhra Pradesh,Secundrabad,30,997197,6572,Bharatiya Janata Party,438271,0.4395,Indian National Congress,183536,254735,False,0,,0,0,120655
+2014,Andhra Pradesh,Srikakulam,10,1045313,6133,Telugu Desam,556163,0.5321,Yuvajana Sramika Rythu Congress Party,428591,127572,True,0,,0,0,-67013
+2014,Andhra Pradesh,Tirupati,14,1204374,8690,Yuvajana Sramika Rythu Congress Party,580376,0.4819,Bharatiya Janata Party,542951,37425,False,0,,0,0,43622
+2014,Andhra Pradesh,Vijayawada,22,1189785,5290,Telugu Desam,592696,0.4982,Yuvajana Sramika Rythu Congress Party,517834,74862,False,0,,0,0,4393
+2014,Andhra Pradesh,Visakhapatnam,22,1156229,7329,Bharatiya Janata Party,566832,0.4902,Yuvajana Sramika Rythu Congress Party,476344,90488,False,0,,0,0,22565
+2014,Andhra Pradesh,Vizianagaram,9,1113788,6528,Telugu Desam,536549,0.4817,Yuvajana Sramika Rythu Congress Party,429638,106911,False,1,Indian National Congress,122487,15576,40690
+2014,Andhra Pradesh,Warangal,12,1160597,14034,Telangana Rashtra Samithi,661639,0.5701,Indian National Congress,269065,392574,True,0,,0,0,-162681
+2014,Andhra Pradesh,Zahirabad,10,1083616,11190,Telangana Rashtra Samithi,508661,0.4694,Indian National Congress,364030,144631,False,1,Telugu Desam,157497,12866,66294
+2014,Arunachal Pradesh,ARUNACHAL EAST,3,256786,4505,Indian National Congress,118455,0.4613,Bharatiya Janata Party,105977,12478,False,1,People's Party of Arunachal,32354,19876,19876
+2014,Arunachal Pradesh,ARUNACHAL WEST,8,333849,1816,Bharatiya Janata Party,169367,0.5073,Indian National Congress,127629,41738,True,0,,0,0,-4885
+2014,Assam,Autonomous District,5,531533,11747,Indian National Congress,213152,0.401,Bharatiya Janata Party,189057,24095,False,1,Independent,108299,84204,105229
+2014,Assam,Barpeta,15,1201078,4785,All India United Democratic Front,394702,0.3286,Bharatiya Janata Party,352361,42341,False,2,Indian National Congress,277802,235461,411674
+2014,Assam,Dhubri,15,1363813,5811,All India United Democratic Front,592569,0.4345,Indian National Congress,362839,229730,False,1,Bharatiya Janata Party,298985,69255,178675
+2014,Assam,Dibrugarh,6,874159,16809,Bharatiya Janata Party,494364,0.5655,Indian National Congress,309017,185347,True,0,,0,0,-114569
+2014,Assam,Gauhati,18,1505009,6720,Bharatiya Janata Party,764985,0.5083,Indian National Congress,449201,315784,True,0,,0,0,-24961
+2014,Assam,Jorhat,10,916688,14648,Bharatiya Janata Party,456420,0.4979,Indian National Congress,354000,102420,False,0,,0,0,3848
+2014,Assam,Kaliabor,13,1154087,12403,Indian National Congress,443315,0.3841,Bharatiya Janata Party,349441,93874,False,1,All India United Democratic Front,231295,137421,267457
+2014,Assam,Karimganj,15,882654,4266,All India United Democratic Front,362866,0.4111,Bharatiya Janata Party,260772,102094,False,1,Indian National Congress,226562,124468,156922
+2014,Assam,Kokrajhar,6,1205686,18183,Independent,634428,0.5262,Independent,278649,355779,True,0,,0,0,-63170
+2014,Assam,Lakhimpur,13,1100771,11204,Bharatiya Janata Party,612543,0.5565,Indian National Congress,320405,292138,True,0,,0,0,-124315
+2014,Assam,Mangaldoi,12,1222515,10722,Bharatiya Janata Party,486357,0.3978,Indian National Congress,463473,22884,False,3,Bodoland Peoples Front,86347,63463,249801
+2014,Assam,Nowgong,8,1221292,8782,Bharatiya Janata Party,494146,0.4046,Indian National Congress,350587,143559,False,1,All India United Democratic Front,314012,170453,233000
+2014,Assam,Silchar,17,795520,4310,Indian National Congress,336451,0.4229,Bharatiya Janata Party,301210,35241,False,1,All India United Democratic Front,85530,50289,122618
+2014,Assam,Tezpur,9,964021,16667,Bharatiya Janata Party,446511,0.4632,Indian National Congress,360491,86020,False,0,,0,0,70999
+2014,Bihar,Araria,13,959203,16608,Rashtriya Janata Dal,407978,0.4253,Bharatiya Janata Party,261474,146504,False,1,Janata Dal  (United),221769,75265,143247
+2014,Bihar,Arrah,12,878510,14703,Bharatiya Janata Party,391074,0.4452,Rashtriya Janata Dal,255204,135870,False,0,,0,0,96362
+2014,Bihar,Aurangabad,13,768820,17454,Bharatiya Janata Party,307941,0.4005,Indian National Congress,241594,66347,False,1,Janata Dal  (United),136137,69790,152938
+2014,Bihar,Banka,17,889600,9753,Rashtriya Janata Dal,285150,0.3205,Bharatiya Janata Party,275006,10144,False,6,Communist Party of India,220708,210564,319300
+2014,Bihar,Begusarai,12,1051233,26622,Bharatiya Janata Party,428227,0.4074,Rashtriya Janata Dal,369892,58335,False,1,Communist Party of India,192639,134304,194779
+2014,Bihar,Bhagalpur,18,962141,11875,Rashtriya Janata Dal,367623,0.3821,Bharatiya Janata Party,358138,9485,False,4,Janata Dal  (United),132256,122771,226895
+2014,Bihar,Buxar,16,879025,9179,Bharatiya Janata Party,319012,0.3629,Rashtriya Janata Dal,186674,132338,False,1,Bahujan Samaj Party,184788,52450,241001
+2014,Bihar,Darbhanga,15,807239,21103,Bharatiya Janata Party,314949,0.3902,Rashtriya Janata Dal,279906,35043,False,1,Janata Dal  (United),104494,69451,177341
+2014,Bihar,Gaya (SC),13,790348,19030,Bharatiya Janata Party,326230,0.4128,Rashtriya Janata Dal,210726,115504,False,1,Janata Dal  (United),131828,16324,137888
+2014,Bihar,Gopalganj (SC),14,885742,17841,Bharatiya Janata Party,478773,0.5405,Indian National Congress,191837,286936,True,0,,0,0,-71804
+2014,Bihar,Hajipur (SC),15,889659,15094,Lok Jan Shakti Party,455652,0.5122,Indian National Congress,230152,225500,True,0,,0,0,-21645
+2014,Bihar,Jahanabad,15,801164,10352,Rashtriya Lok Samta Party,322647,0.4027,Rashtriya Janata Dal,280307,42340,False,1,Janata Dal  (United),100851,58511,155870
+2014,Bihar,Jamui (SC),11,756122,19517,Lok Jan Shakti Party,285354,0.3774,Rashtriya Janata Dal,199407,85947,False,1,Janata Dal  (United),198599,112652,185414
+2014,Bihar,Jhanjharpur,19,933206,8043,Bharatiya Janata Party,335481,0.3595,Rashtriya Janata Dal,280073,55408,False,1,Janata Dal  (United),183591,128183,262244
+2014,Bihar,Karakat,15,779742,10185,Rashtriya Lok Samta Party,338892,0.4346,Rashtriya Janata Dal,233651,105241,False,0,,0,0,101958
+2014,Bihar,Katihar,21,974543,3287,Nationalist Congress Party,431292,0.4426,Bharatiya Janata Party,316552,114740,False,0,,0,0,111959
+2014,Bihar,Khagaria,13,872363,23868,Lok Jan Shakti Party,313806,0.3597,Rashtriya Janata Dal,237803,76003,False,1,Janata Dal  (United),220316,144313,244751
+2014,Bihar,Kishanganj,10,911284,17206,Indian National Congress,493461,0.5415,Bharatiya Janata Party,298849,194612,True,0,,0,0,-75638
+2014,Bihar,Madhepura,12,1012875,21924,Rashtriya Janata Dal,368937,0.3642,Janata Dal  (United),312728,56209,False,1,Bharatiya Janata Party,252534,196325,275001
+2014,Bihar,Madhubani,11,841516,18937,Bharatiya Janata Party,358040,0.4255,Rashtriya Janata Dal,337505,20535,False,2,Janata Dal  (United),56392,35857,125436
+2014,Bihar,Maharajganj,10,823250,23404,Bharatiya Janata Party,320753,0.3896,Rashtriya Janata Dal,282338,38415,False,1,Janata Dal  (United),149483,111068,181744
+2014,Bihar,Munger,13,898930,15420,Lok Jan Shakti Party,352911,0.3926,Janata Dal  (United),243827,109084,False,1,Rashtriya Janata Dal,182971,73887,193108
+2014,Bihar,Muzaffarpur,29,939197,9690,Bharatiya Janata Party,469295,0.4997,Indian National Congress,246873,222422,False,0,,0,0,607
+2014,Bihar,Nalanda,22,916309,5452,Janata Dal  (United),321982,0.3514,Lok Jan Shakti Party,312355,9627,False,6,Indian National Congress,127270,117643,272345
+2014,Bihar,Nawada,17,876952,7489,Bharatiya Janata Party,390248,0.445,Rashtriya Janata Dal,250091,140157,False,1,Janata Dal  (United),168217,28060,96456
+2014,Bihar,Paschim Champaran,12,835996,18804,Bharatiya Janata Party,371232,0.4441,Janata Dal  (United),260978,110254,False,1,Rashtriya Janata Dal,121800,11546,93532
+2014,Bihar,Pataliputra,20,973971,4678,Bharatiya Janata Party,383262,0.3935,Rashtriya Janata Dal,342940,40322,False,2,Janata Dal  (United),97228,56906,207447
+2014,Bihar,Patna Sahib,19,874535,7727,Bharatiya Janata Party,485905,0.5556,Indian National Congress,220100,265805,True,0,,0,0,-97275
+2014,Bihar,Purnia,17,1005750,11982,Janata Dal  (United),418826,0.4164,Bharatiya Janata Party,302157,116669,False,1,Indian National Congress,124344,7675,168098
+2014,Bihar,Purvi Champaran,15,809410,13261,Bharatiya Janata Party,400452,0.4947,Rashtriya Janata Dal,208289,192163,False,0,,0,0,8506
+2014,Bihar,Samastipur (SC),12,833988,29211,Lok Jan Shakti Party,270401,0.3242,Indian National Congress,263529,6872,False,9,Janata Dal  (United),200124,193252,293186
+2014,Bihar,Saran,11,844091,19163,Bharatiya Janata Party,355120,0.4207,Rashtriya Janata Dal,314172,40948,False,1,Janata Dal  (United),107008,66060,133851
+2014,Bihar,Sasaram (SC),11,833409,13379,Bharatiya Janata Party,366087,0.4393,Indian National Congress,302760,63327,False,1,Janata Dal  (United),93310,29983,101235
+2014,Bihar,Sheohar,15,831224,11670,Bharatiya Janata Party,372506,0.4481,Rashtriya Janata Dal,236267,136239,False,0,,0,0,86212
+2014,Bihar,Sitamarhi,19,894639,5949,Rashtriya Lok Samta Party,411265,0.4597,Rashtriya Janata Dal,263300,147965,False,0,,0,0,72109
+2014,Bihar,Siwan,13,862612,21409,Bharatiya Janata Party,372670,0.432,Rashtriya Janata Dal,258823,113847,False,0,,0,0,117272
+2014,Bihar,Supaul,12,948532,21996,Indian National Congress,332927,0.351,Janata Dal  (United),273255,59672,False,1,Bharatiya Janata Party,249693,190021,282678
+2014,Bihar,Ujiarpur,19,852749,6171,Bharatiya Janata Party,317352,0.3722,Rashtriya Janata Dal,256883,60469,False,1,Janata Dal  (United),119669,59200,218045
+2014,Bihar,Vaishali,22,919877,6060,Lok Jan Shakti Party,305450,0.3321,Rashtriya Janata Dal,206183,99267,False,2,Janata Dal  (United),145182,45915,308977
+2014,Bihar,Valmiki Nagar,14,884599,15515,Bharatiya Janata Party,364011,0.4115,Indian National Congress,246218,117793,False,0,,0,0,156577
+2014,Chandigarh,CHANDIGARH,17,450349,3106,Bharatiya Janata Party,191362,0.4249,Indian National Congress,121720,69642,False,1,Aam Aadmi Party,108679,39037,67625
+2014,Chhattisgarh,BASTAR,8,731141,38772,Bharatiya Janata Party,385829,0.5277,Indian National Congress,261470,124359,True,0,,0,0,-40517
+2014,Chhattisgarh,BILASPUR,26,1082891,7566,Bharatiya Janata Party,561387,0.5184,Indian National Congress,384951,176436,True,0,,0,0,-39883
+2014,Chhattisgarh,DURG,26,1246435,11907,Indian National Congress,570687,0.4579,Bharatiya Janata Party,553839,16848,False,1,Aam Aadmi Party,17454,606,105061
+2014,Chhattisgarh,JANJGIR-CHAMPA,15,1054909,18438,Bharatiya Janata Party,518909,0.4919,Indian National Congress,343948,174961,False,0,,0,0,17091
+2014,Chhattisgarh,KANKER,10,985026,31917,Bharatiya Janata Party,465215,0.4723,Indian National Congress,430057,35158,False,0,,0,0,54596
+2014,Chhattisgarh,KORBA,24,1044150,8570,Bharatiya Janata Party,439002,0.4204,Indian National Congress,434737,4265,False,9,Gondvana Gantantra Party,52753,48488,166146
+2014,Chhattisgarh,MAHASAMUND,27,1121254,9955,Bharatiya Janata Party,503514,0.4491,Indian National Congress,502297,1217,False,22,Independent,20255,19038,114226
+2014,Chhattisgarh,RAIGARH,12,1217706,28480,Bharatiya Janata Party,662478,0.544,Indian National Congress,445728,216750,True,0,,0,0,-107250
+2014,Chhattisgarh,RAIPUR,36,1245049,5796,Bharatiya Janata Party,654922,0.526,Indian National Congress,483276,171646,True,0,,0,0,-64795
+2014,Chhattisgarh,RAJNANDGAON,13,1145912,32384,Bharatiya Janata Party,643473,0.5615,Indian National Congress,407562,235911,True,0,,0,0,-141034
+2014,Chhattisgarh,SARGUJA,14,1156217,31104,Bharatiya Janata Party,585336,0.5063,Indian National Congress,438100,147236,True,0,,0,0,-14455
+2014,Dadra & Nagar Haveli,Dadar & Nagar Haveli,11,162324,2962,Bharatiya Janata Party,80790,0.4977,Indian National Congress,74576,6214,False,0,,0,0,744
+2014,Daman & Diu,Daman & diu,4,85917,1316,Bharatiya Janata Party,46960,0.5466,Indian National Congress,37738,9222,True,0,,0,0,-8003
+2014,Goa,North Goa,7,400861,5770,Bharatiya Janata Party,237903,0.5935,Indian National Congress,132304,105599,True,0,,0,0,-74945
+2014,Goa,South Goa,12,406036,4333,Bharatiya Janata Party,198776,0.4896,Indian National Congress,166446,32330,False,0,,0,0,8484
+2014,Gujarat,Ahmedabad East,14,971167,14358,Bharatiya Janata Party,633582,0.6524,Indian National Congress,306949,326633,True,0,,0,0,-295997
+2014,Gujarat,Ahmedabad West,11,948038,16571,Bharatiya Janata Party,617104,0.6509,Indian National Congress,296793,320311,True,0,,0,0,-286170
+2014,Gujarat,Amreli,14,789673,19143,Bharatiya Janata Party,436715,0.553,Indian National Congress,280483,156232,True,0,,0,0,-83757
+2014,Gujarat,Anand,15,954022,16872,Bharatiya Janata Party,490829,0.5145,Indian National Congress,427403,63426,True,0,,0,0,-27636
+2014,Gujarat,Banaskantha,14,869237,17397,Bharatiya Janata Party,507856,0.5843,Indian National Congress,305522,202334,True,0,,0,0,-146475
+2014,Gujarat,Bardoli,10,1186188,19991,Bharatiya Janata Party,622769,0.525,Indian National Congress,498885,123884,True,0,,0,0,-59350
+2014,Gujarat,Bharuch,14,1036596,23615,Bharatiya Janata Party,548902,0.5295,Indian National Congress,395629,153273,True,0,,0,0,-61208
+2014,Gujarat,Bhavnagar,16,907812,9590,Bharatiya Janata Party,549529,0.6053,Indian National Congress,254041,295488,True,0,,0,0,-191246
+2014,Gujarat,Chhota Udaipur,4,1071727,28815,Bharatiya Janata Party,607916,0.5672,Indian National Congress,428187,179729,True,0,,0,0,-144105
+2014,Gujarat,Dahod,10,868076,32305,Bharatiya Janata Party,511111,0.5888,Indian National Congress,280757,230354,True,0,,0,0,-154146
+2014,Gujarat,Gandhinagar,18,1122718,12777,Bharatiya Janata Party,773539,0.689,Indian National Congress,290418,483121,True,0,,0,0,-424360
+2014,Gujarat,Jamnagar,25,846055,6588,Bharatiya Janata Party,484412,0.5726,Indian National Congress,309123,175289,True,0,,0,0,-122769
+2014,Gujarat,Junagadh,8,924356,17022,Bharatiya Janata Party,513179,0.5552,Indian National Congress,377347,135832,True,0,,0,0,-102002
+2014,Gujarat,Kachchh,5,929361,16879,Bharatiya Janata Party,562855,0.6056,Indian National Congress,308373,254482,True,0,,0,0,-196349
+2014,Gujarat,Kheda,15,935573,20333,Bharatiya Janata Party,568235,0.6074,Indian National Congress,335334,232901,True,0,,0,0,-200897
+2014,Gujarat,Mahesana,14,992643,11615,Bharatiya Janata Party,580250,0.5846,Indian National Congress,371359,208891,True,0,,0,0,-167857
+2014,Gujarat,Navsari,19,1151425,9322,Bharatiya Janata Party,820831,0.7129,Indian National Congress,262715,558116,True,0,,0,0,-490237
+2014,Gujarat,Panchmahal,12,907480,25981,Bharatiya Janata Party,508274,0.5601,Indian National Congress,337678,170596,True,0,,0,0,-109068
+2014,Gujarat,Patan,14,943738,12061,Bharatiya Janata Party,518538,0.5495,Indian National Congress,379819,138719,True,0,,0,0,-93338
+2014,Gujarat,Porbandar,14,792990,16443,Bharatiya Janata Party,508437,0.6412,Nationalist Congress Party,240466,267971,True,0,,0,0,-223884
+2014,Gujarat,Rajkot,15,1038820,18249,Bharatiya Janata Party,621524,0.5983,Indian National Congress,375096,246428,True,0,,0,0,-204228
+2014,Gujarat,Sabarkantha,10,1071668,22334,Bharatiya Janata Party,552205,0.5153,Indian National Congress,467750,84455,True,0,,0,0,-32742
+2014,Gujarat,Surat,8,936986,10936,Bharatiya Janata Party,718412,0.7667,Indian National Congress,185222,533190,True,0,,0,0,-499838
+2014,Gujarat,Surendranagar,17,933653,11024,Bharatiya Janata Party,529003,0.5666,Indian National Congress,326096,202907,True,0,,0,0,-124353
+2014,Gujarat,Vadodara,8,1143524,18053,Bharatiya Janata Party,845464,0.7393,Indian National Congress,275336,570128,True,0,,0,0,-547404
+2014,Gujarat,Valsad,10,1095597,26606,Bharatiya Janata Party,617772,0.5639,Indian National Congress,409768,208004,True,0,,0,0,-139947
+2014,Haryana,Ambala,14,1211179,7816,Bharatiya Janata Party,612121,0.5054,Indian National Congress,272047,340074,True,0,,0,0,-13063
+2014,Haryana,Bhiwani-Mahendragarh,26,1028437,1994,Bharatiya Janata Party,404542,0.3934,Indian National Lok Dal,275148,129394,False,1,Indian National Congress,268115,138721,219353
+2014,Haryana,Faridabad,27,1127392,3334,Bharatiya Janata Party,652516,0.5788,Indian National Congress,185643,466873,True,0,,0,0,-177640
+2014,Haryana,Gurgaon,22,1317962,2657,Bharatiya Janata Party,644780,0.4892,Indian National Lok Dal,370058,274722,False,0,,0,0,28402
+2014,Haryana,Hisar,41,1154269,1645,Indian National Lok Dal,494478,0.4284,Haryana Janhit Congress (BL),462631,31847,False,1,Indian National Congress,102509,70662,165313
+2014,Haryana,Karnal,23,1190571,2929,Bharatiya Janata Party,594817,0.4996,Indian National Congress,234670,360147,False,0,,0,0,937
+2014,Haryana,Kurukshetra,22,1133410,2482,Bharatiya Janata Party,418112,0.3689,Indian National Lok Dal,288376,129736,False,1,Indian National Congress,287722,157986,297186
+2014,Haryana,Rohtak,14,1039399,4932,Indian National Congress,490063,0.4715,Bharatiya Janata Party,319436,170627,False,0,,0,0,59273
+2014,Haryana,Sirsa,18,1275072,4033,Indian National Lok Dal,506370,0.3971,Indian National Congress,390634,115736,False,1,Haryana Janhit Congress (BL),241067,125331,262332
+2014,Haryana,Sonipat,23,983234,2403,Bharatiya Janata Party,347203,0.3531,Indian National Congress,269789,77414,False,1,Indian National Lok Dal,264404,186990,288828
+2014,Himachal Pradesh,Hamirpur,10,828732,6473,Bharatiya Janata Party,448035,0.5406,Indian National Congress,349632,98403,True,0,,0,0,-67338
+2014,Himachal Pradesh,Kangra,12,790741,8704,Bharatiya Janata Party,456163,0.5769,Indian National Congress,286091,170072,True,0,,0,0,-121585
+2014,Himachal Pradesh,Mandi,9,719903,6191,Bharatiya Janata Party,362824,0.504,Indian National Congress,322968,39856,True,0,,0,0,-5745
+2014,Himachal Pradesh,Shimla,7,729969,7788,Bharatiya Janata Party,385973,0.5288,Indian National Congress,301786,84187,True,0,,0,0,-41977
+2014,Jammu & Kashmir,Anantnag,12,369343,5936,Jammu & Kashmir Peoples Democratic Party,200429,0.5427,Jammu & Kashmir National Conference,135012,65417,True,0,,0,0,-31515
+2014,Jammu & Kashmir,Baramulla,15,461424,4568,Jammu & Kashmir Peoples Democratic Party,175277,0.3799,Jammu & Kashmir National Conference,146058,29219,False,1,Jammu & Kashmir People Conference,71154,41935,110870
+2014,Jammu & Kashmir,Jammu,19,1249211,4382,Bharatiya Janata Party,619995,0.4963,Indian National Congress,362715,257280,False,0,,0,0,9221
+2014,Jammu & Kashmir,Ladakh,4,116822,1207,Bharatiya Janata Party,31111,0.2663,Independent,31075,36,False,2,Independent,28234,28198,54600
+2014,Jammu & Kashmir,Srinagar,14,307233,4979,Jammu & Kashmir Peoples Democratic Party,157923,0.514,Jammu & Kashmir National Conference,115643,42280,True,0,,0,0,-8613
+2014,Jammu & Kashmir,Udhampur,13,1031280,10478,Bharatiya Janata Party,487369,0.4726,Indian National Congress,426393,60976,False,0,,0,0,56542
+2014,Jharkhand,Chatra,20,707180,5791,Bharatiya Janata Party,295862,0.4184,Indian National Congress,117836,178026,False,0,,0,0,115456
+2014,Jharkhand,Dhanbad,31,1136227,7675,Bharatiya Janata Party,543491,0.4783,Indian National Congress,250537,292954,False,0,,0,0,49245
+2014,Jharkhand,Dumka,14,884735,18325,Jharkhand Mukti Morcha,335815,0.3796,Bharatiya Janata Party,296785,39030,False,1,Jharkhand Vikas Morcha (Prajatantrik),158122,119092,213105
+2014,Jharkhand,Giridih,17,965118,4879,Bharatiya Janata Party,391913,0.4061,Jharkhand Mukti Morcha,351600,40313,False,2,Jharkhand Vikas Morcha (Prajatantrik),57380,17067,181292
+2014,Jharkhand,Godda,16,1037032,12410,Bharatiya Janata Party,380500,0.3669,Indian National Congress,319818,60682,False,1,Jharkhand Vikas Morcha (Prajatantrik),193506,132824,276032
+2014,Jharkhand,Hazaribagh,20,960325,6827,Bharatiya Janata Party,406931,0.4237,Indian National Congress,247803,159128,False,0,,0,0,146463
+2014,Jharkhand,Jamshedpur,15,1033511,15629,Bharatiya Janata Party,464153,0.4491,Jharkhand Vikas Morcha (Prajatantrik),364277,99876,False,1,Jharkhand Mukti Morcha,138109,38233,105205
+2014,Jharkhand,Khunti,14,713139,23816,Bharatiya Janata Party,269185,0.3775,Jharkhand Party,176937,92248,False,1,Indian National Congress,147017,54769,174769
+2014,Jharkhand,Kodarma,20,1018194,6712,Bharatiya Janata Party,365410,0.3589,Communist Party of India  (Marxist-Leninist)  (Liberation),266756,98654,False,1,Jharkhand Vikas Morcha (Prajatantrik),160638,61984,287374
+2014,Jharkhand,Lohardaga,9,634696,16764,Bharatiya Janata Party,226666,0.3571,Indian National Congress,220177,6489,False,4,All India Trinamool Congress,118355,111866,181364
+2014,Jharkhand,Palamau,13,959036,18287,Bharatiya Janata Party,476513,0.4969,Rashtriya Janata Dal,212571,263942,False,0,,0,0,6010
+2014,Jharkhand,Rajmahal,11,931688,19875,Jharkhand Mukti Morcha,379507,0.4073,Bharatiya Janata Party,338170,41337,False,2,Jharkhand Vikas Morcha (Prajatantrik),97374,56037,172674
+2014,Jharkhand,Ranchi,28,1042883,6900,Bharatiya Janata Party,448729,0.4303,Indian National Congress,249426,199303,False,0,,0,0,145425
+2014,Jharkhand,Singhbhum,12,768249,27037,Bharatiya Janata Party,303131,0.3946,Jai Bharat Samanta Party,215607,87524,False,1,Indian National Congress,111796,24272,161987
+2014,Karnataka,Bagalkot,13,1068546,10764,Bharatiya Janata Party,571548,0.5349,Indian National Congress,454988,116560,True,0,,0,0,-74550
+2014,Karnataka,Bangalore North,14,1344722,11996,Bharatiya Janata Party,718326,0.5342,Indian National Congress,488562,229764,True,0,,0,0,-91930
+2014,Karnataka,Bangalore Rural,15,1445373,9871,Indian National Congress,652723,0.4516,Bharatiya Janata Party,421243,231480,False,1,Janata Dal  (Secular),317870,86390,139927
+2014,Karnataka,Bangalore South,23,1106312,7414,Bharatiya Janata Party,633816,0.5729,Indian National Congress,405241,228575,True,0,,0,0,-161320
+2014,Karnataka,Bangalore central,26,1066140,8449,Bharatiya Janata Party,557130,0.5226,Indian National Congress,419630,137500,True,0,,0,0,-48120
+2014,Karnataka,Belgaum,15,1067047,11500,Bharatiya Janata Party,554417,0.5196,Indian National Congress,478557,75860,True,0,,0,0,-41787
+2014,Karnataka,Bellary,12,1034452,11320,Bharatiya Janata Party,534406,0.5166,Indian National Congress,449262,85144,True,0,,0,0,-34360
+2014,Karnataka,Bidar,24,956567,2817,Bharatiya Janata Party,459290,0.4801,Indian National Congress,367068,92222,False,0,,0,0,37987
+2014,Karnataka,Bijapur,14,958470,8287,Bharatiya Janata Party,471757,0.4922,Indian National Congress,401938,69819,False,0,,0,0,14956
+2014,Karnataka,Chamarajanagar,14,1120332,12697,Indian National Congress,567782,0.5068,Bharatiya Janata Party,426600,141182,True,0,,0,0,-15232
+2014,Karnataka,Chikkballapur,19,1255592,7682,Indian National Congress,424800,0.3383,Bharatiya Janata Party,415280,9520,False,2,Janata Dal  (Secular),346339,336819,405992
+2014,Karnataka,Chikkodi,12,1060814,10289,Indian National Congress,474373,0.4472,Bharatiya Janata Party,471370,3003,False,6,Nationalist Congress Party,42738,39735,112068
+2014,Karnataka,Chitradurga,14,1087604,8895,Indian National Congress,467511,0.4299,Bharatiya Janata Party,366220,101291,False,1,Janata Dal  (Secular),202108,100817,152582
+2014,Karnataka,Dakshina Kannada,14,1200365,7109,Bharatiya Janata Party,642739,0.5355,Indian National Congress,499030,143709,True,0,,0,0,-85113
+2014,Karnataka,Davanagere,18,1110332,4536,Bharatiya Janata Party,518894,0.4673,Indian National Congress,501287,17607,False,1,Janata Dal  (Secular),46911,29304,72544
+2014,Karnataka,Dharwad,17,1028289,12937,Bharatiya Janata Party,545395,0.5304,Indian National Congress,431738,113657,True,0,,0,0,-62501
+2014,Karnataka,Gulbarga,8,987750,9888,Indian National Congress,507193,0.5135,Bharatiya Janata Party,432460,74733,True,0,,0,0,-26636
+2014,Karnataka,Hassan,14,1139838,7334,Janata Dal  (Secular),509841,0.4473,Indian National Congress,409379,100462,False,1,Bharatiya Janata Party,165688,65226,120156
+2014,Karnataka,Haveri,19,1112162,3806,Bharatiya Janata Party,566790,0.5096,Indian National Congress,479219,87571,True,0,,0,0,-21418
+2014,Karnataka,Kolar,22,1122225,5098,Indian National Congress,418926,0.3733,Janata Dal  (Secular),371076,47850,False,1,Bharatiya Janata Party,267322,219472,284373
+2014,Karnataka,Koppal,16,993561,12947,Bharatiya Janata Party,486383,0.4895,Indian National Congress,453969,32414,False,0,,0,0,20795
+2014,Karnataka,Mandya,16,1186617,6021,Janata Dal  (Secular),524370,0.4419,Indian National Congress,518852,5518,False,3,Bharatiya Janata Party,86993,81475,137877
+2014,Karnataka,Mysore,15,1150670,8924,Bharatiya Janata Party,503908,0.4379,Indian National Congress,472300,31608,False,1,Janata Dal  (Secular),138587,106979,142854
+2014,Karnataka,Raichur,11,955713,13176,Indian National Congress,443659,0.4642,Bharatiya Janata Party,442160,1499,False,9,Janata Dal  (Secular),21706,20207,68395
+2014,Karnataka,Shimoga,13,1121931,7077,Bharatiya Janata Party,606216,0.5403,Indian National Congress,242911,363305,True,0,,0,0,-90501
+2014,Karnataka,Tumkur,16,1088550,12934,Indian National Congress,429868,0.3949,Bharatiya Janata Party,355827,74041,False,1,Janata Dal  (Secular),258683,184642,228814
+2014,Karnataka,Udupi Chikmagalur,11,1026280,7828,Bharatiya Janata Party,581168,0.5663,Indian National Congress,399525,181643,True,0,,0,0,-136056
+2014,Karnataka,Uttara Kannada,9,984761,16277,Bharatiya Janata Party,546939,0.5554,Indian National Congress,406239,140700,True,0,,0,0,-109117
+2014,Kerala,Alappuzha,13,986126,11338,Indian National Congress,462525,0.469,Communist Party of India  (Marxist),443118,19407,False,1,Revolutionary Socialist Party of Kerala  (Bolshevik) RSP.B,43051,23644,61076
+2014,Kerala,Alathur,12,905811,21417,Communist Party of India  (Marxist),411808,0.4546,Indian National Congress,374496,37312,False,1,Bharatiya Janata Party,87803,50491,82195
+2014,Kerala,Attingal,16,852426,6924,Communist Party of India  (Marxist),392478,0.4604,Indian National Congress,323100,69378,False,1,Bharatiya Janata Party,90528,21150,67470
+2014,Kerala,Chalakudy,15,873481,10552,Independent,358440,0.4104,Indian National Congress,344556,13884,False,3,Bharatiya Janata Party,92848,78964,156601
+2014,Kerala,Ernakulam,16,841099,9735,Indian National Congress,353841,0.4207,Independent,266794,87047,False,1,Bharatiya Janata Party,99003,11956,133417
+2014,Kerala,Idukki,16,807428,12338,Independent,382019,0.4731,Indian National Congress,331477,50542,False,0,,0,0,43390
+2014,Kerala,Kannur,11,940091,7026,Communist Party of India  (Marxist),427622,0.4549,Indian National Congress,421056,6566,False,2,Bharatiya Janata Party,51636,45070,84847
+2014,Kerala,Kasaragod,14,968112,6103,Communist Party of India  (Marxist),384964,0.3976,Indian National Congress,378043,6921,False,2,Bharatiya Janata Party,172826,165905,198184
+2014,Kerala,Kollam,11,871180,7876,Revolutionary Socialist Party,408528,0.4689,Communist Party of India  (Marxist),370879,37649,False,1,Bharatiya Janata Party,58671,21022,54124
+2014,Kerala,Kottayam,11,817612,14024,Kerala Congress  (M),424194,0.5188,Janata Dal  (Secular),303595,120599,True,0,,0,0,-30776
+2014,Kerala,Kozhikode,13,936628,6381,Indian National Congress,397615,0.4245,Communist Party of India  (Marxist),380732,16883,False,1,Bharatiya Janata Party,115760,98877,141398
+2014,Kerala,Malappuram,10,831638,21829,Indian Union Muslim League,437723,0.5263,Communist Party of India  (Marxist),242984,194739,True,0,,0,0,-43808
+2014,Kerala,Mavelikkara,9,879601,9459,Indian National Congress,402432,0.4575,Communist Party of India,369695,32737,False,1,Bharatiya Janata Party,79743,47006,74737
+2014,Kerala,Palakkad,15,899031,11291,Communist Party of India  (Marxist),412897,0.4593,Socialist Janata (Democratic),307597,105300,False,1,Bharatiya Janata Party,136541,31241,73237
+2014,Kerala,Pathanamthitta,16,852914,16538,Indian National Congress,358842,0.4207,Independent,302651,56191,False,1,Bharatiya Janata Party,138954,82763,135230
+2014,Kerala,Ponnani,11,864098,7494,Indian Union Muslim League,378503,0.438,Independent,353093,25410,False,2,Bharatiya Janata Party,75212,49802,107092
+2014,Kerala,Thiruvananthapuram,20,870095,3344,Indian National Congress,297806,0.3423,Bharatiya Janata Party,282336,15470,False,1,Communist Party of India,248941,233471,274483
+2014,Kerala,Thrissur,14,910455,10050,Communist Party of India,389209,0.4275,Indian National Congress,350982,38227,False,2,Bharatiya Janata Party,102681,64454,132037
+2014,Kerala,Vadakara,11,953235,6107,Indian National Congress,416479,0.4369,Communist Party of India  (Marxist),413173,3306,False,5,Bharatiya Janata Party,76313,73007,120277
+2014,Kerala,Wayanad,15,904271,10735,Indian National Congress,377035,0.4169,Communist Party of India,356165,20870,False,2,Bharatiya Janata Party,80752,59882,150201
+2014,Lakshadweep,Lakshadweep,6,43116,123,Nationalist Congress Party,21665,0.5025,Indian National Congress,20130,1535,True,0,,0,0,-214
+2014,Madhya Pradesh,BALAGHAT,16,1106442,6922,Bharatiya Janata Party,480594,0.4344,Indian National Congress,384553,96041,False,1,Samajwadi Party,99392,3351,145254
+2014,Madhya Pradesh,BETUL,8,1020993,26726,Bharatiya Janata Party,643651,0.6304,Indian National Congress,315037,328614,True,0,,0,0,-266309
+2014,Madhya Pradesh,BHIND,9,723512,5572,Bharatiya Janata Party,404474,0.559,Indian National Congress,244513,159961,True,0,,0,0,-85436
+2014,Madhya Pradesh,BHOPAL,28,1125001,5181,Bharatiya Janata Party,714178,0.6348,Indian National Congress,343482,370696,True,0,,0,0,-303355
+2014,Madhya Pradesh,CHHINDWARA,13,1081999,25499,Indian National Congress,559755,0.5173,Bharatiya Janata Party,443218,116537,True,0,,0,0,-37511
+2014,Madhya Pradesh,DAMOH,10,899480,12600,Bharatiya Janata Party,513079,0.5704,Indian National Congress,299780,213299,True,0,,0,0,-126678
+2014,Madhya Pradesh,DEWAS,11,1133715,10253,Bharatiya Janata Party,665646,0.5871,Indian National Congress,405333,260313,True,0,,0,0,-197577
+2014,Madhya Pradesh,DHAR,7,1061379,15437,Bharatiya Janata Party,558387,0.5261,Indian National Congress,454059,104328,True,0,,0,0,-55395
+2014,Madhya Pradesh,GUNA,11,964148,12481,Indian National Congress,517036,0.5363,Bharatiya Janata Party,396244,120792,True,0,,0,0,-69924
+2014,Madhya Pradesh,GWALIOR,21,986693,4219,Bharatiya Janata Party,442796,0.4488,Indian National Congress,413097,29699,False,1,Bahujan Samaj Party,68196,38497,101101
+2014,Madhya Pradesh,HOSHANGABAD,8,1012434,18741,Bharatiya Janata Party,669128,0.6609,Indian National Congress,279168,389960,True,0,,0,0,-325822
+2014,Madhya Pradesh,INDORE,22,1310873,5944,Bharatiya Janata Party,854972,0.6522,Indian National Congress,388071,466901,True,0,,0,0,-399071
+2014,Madhya Pradesh,JABALPUR,15,994296,7888,Bharatiya Janata Party,564609,0.5678,Indian National Congress,355970,208639,True,0,,0,0,-134922
+2014,Madhya Pradesh,KHAJURAHO,17,866599,7878,Bharatiya Janata Party,474966,0.5481,Indian National Congress,227476,247490,True,0,,0,0,-83333
+2014,Madhya Pradesh,KHANDWA,14,1240178,17149,Bharatiya Janata Party,717357,0.5784,Indian National Congress,457643,259714,True,0,,0,0,-194536
+2014,Madhya Pradesh,KHARGONE,8,1130384,22141,Bharatiya Janata Party,649354,0.5745,Indian National Congress,391475,257879,True,0,,0,0,-168324
+2014,Madhya Pradesh,MANDLA,10,1190212,28306,Bharatiya Janata Party,585720,0.4921,Indian National Congress,475251,110469,False,0,,0,0,18772
+2014,Madhya Pradesh,MANDSOUR,14,1152781,8568,Bharatiya Janata Party,698335,0.6058,Indian National Congress,394686,303649,True,0,,0,0,-243889
+2014,Madhya Pradesh,MORENA,17,849487,4792,Bharatiya Janata Party,375567,0.4421,Bahujan Samaj Party,242586,132981,False,1,Indian National Congress,184253,51272,98353
+2014,Madhya Pradesh,RAJGARH,6,1000432,10292,Bharatiya Janata Party,596727,0.5965,Indian National Congress,367990,228737,True,0,,0,0,-193022
+2014,Madhya Pradesh,RATLAM,10,1052317,30364,Bharatiya Janata Party,545970,0.5188,Indian National Congress,437523,108447,True,0,,0,0,-39623
+2014,Madhya Pradesh,REWA,14,819344,10658,Bharatiya Janata Party,383320,0.4678,Indian National Congress,214594,168726,False,1,Bahujan Samaj Party,175567,6841,52704
+2014,Madhya Pradesh,SAGAR,10,882425,9504,Bharatiya Janata Party,482580,0.5469,Indian National Congress,361843,120737,True,0,,0,0,-82735
+2014,Madhya Pradesh,SATNA,14,900408,13036,Bharatiya Janata Party,375288,0.4168,Indian National Congress,366600,8688,False,1,Bahujan Samaj Party,124602,115914,149832
+2014,Madhya Pradesh,SHAHDOL,14,947142,21376,Bharatiya Janata Party,525419,0.5547,Indian National Congress,284118,241301,True,0,,0,0,-103696
+2014,Madhya Pradesh,SIDHI,14,972046,17350,Bharatiya Janata Party,475678,0.4894,Indian National Congress,367632,108046,False,0,,0,0,20690
+2014,Madhya Pradesh,TIKAMGARH,13,756266,10055,Bharatiya Janata Party,422979,0.5593,Indian National Congress,214248,208731,True,0,,0,0,-89692
+2014,Madhya Pradesh,UJJAIN,12,1004118,12287,Bharatiya Janata Party,641101,0.6385,Indian National Congress,331438,309663,True,0,,0,0,-278084
+2014,Madhya Pradesh,VIDISHA,12,1062855,10618,Bharatiya Janata Party,714348,0.6721,Indian National Congress,303650,410698,True,0,,0,0,-365841
+2014,Maharashtra,Ahmadnagar,13,1054845,7473,Bharatiya Janata Party,605185,0.5737,Nationalist Congress Party,396063,209122,True,0,,0,0,-155525
+2014,Maharashtra,Akola,7,972285,6206,Bharatiya Janata Party,456472,0.4695,Indian National Congress,253356,203116,False,1,Bharipa Bahujan Mahasangh,238776,35660,59341
+2014,Maharashtra,Amravati,19,999922,4139,Shivsena,467212,0.4672,Nationalist Congress Party,329280,137932,False,0,,0,0,65498
+2014,Maharashtra,Aurangabad,27,976561,6372,Shivsena,520902,0.5334,Indian National Congress,358902,162000,True,0,,0,0,-65243
+2014,Maharashtra,Baramati,9,1052340,14216,Nationalist Congress Party,521562,0.4956,Rashtriya Samaj Paksha,451843,69719,False,0,,0,0,9216
+2014,Maharashtra,Beed,39,1229879,2323,Bharatiya Janata Party,635995,0.5171,Nationalist Congress Party,499541,136454,True,0,,0,0,-42111
+2014,Maharashtra,Bhandara - gondiya,26,1193164,4032,Bharatiya Janata Party,606129,0.508,Nationalist Congress Party,456875,149254,True,0,,0,0,-19094
+2014,Maharashtra,Bhiwandi,13,866294,9311,Bharatiya Janata Party,411070,0.4745,Indian National Congress,301620,109450,False,0,,0,0,44154
+2014,Maharashtra,Buldhana,17,968080,10546,Shivsena,509145,0.5259,Nationalist Congress Party,349566,159579,True,0,,0,0,-50210
+2014,Maharashtra,Chandrapur,18,1101486,8257,Bharatiya Janata Party,508049,0.4612,Indian National Congress,271780,236269,False,0,,0,0,85388
+2014,Maharashtra,Dhule,19,980580,2503,Bharatiya Janata Party,529450,0.5399,Indian National Congress,398727,130723,True,0,,0,0,-78320
+2014,Maharashtra,Dindori,10,959285,10897,Bharatiya Janata Party,542784,0.5658,Nationalist Congress Party,295165,247619,True,0,,0,0,-126283
+2014,Maharashtra,Gadchiroli-Chimur,11,1002641,24488,Bharatiya Janata Party,535982,0.5346,Indian National Congress,299112,236870,True,0,,0,0,-69323
+2014,Maharashtra,Hatkanangle,13,1178812,10059,Swabhimani Paksha,640428,0.5433,Indian National Congress,462618,177810,True,0,,0,0,-102044
+2014,Maharashtra,Hingoli,23,1048057,3107,Indian National Congress,467397,0.446,Shivsena,465765,1632,False,18,Bahujan Samaj Party,25145,23513,113263
+2014,Maharashtra,Jalgaon,20,987064,3268,Bharatiya Janata Party,647773,0.6563,Nationalist Congress Party,264248,383525,True,0,,0,0,-308482
+2014,Maharashtra,Jalna,22,1062131,4128,Bharatiya Janata Party,591428,0.5568,Indian National Congress,384630,206798,True,0,,0,0,-120725
+2014,Maharashtra,Kalyan,18,815011,9185,Shivsena,440892,0.541,Nationalist Congress Party,190143,250749,True,0,,0,0,-66773
+2014,Maharashtra,Kolhapur,15,1253274,7015,Nationalist Congress Party,607665,0.4849,Shivsena,574406,33259,False,0,,0,0,37944
+2014,Maharashtra,Latur,18,1043160,13996,Bharatiya Janata Party,616509,0.591,Indian National Congress,363114,253395,True,0,,0,0,-189858
+2014,Maharashtra,Madha,24,1075410,4209,Nationalist Congress Party,489989,0.4556,Swabhimani Paksha,464645,25344,False,0,,0,0,95432
+2014,Maharashtra,Maval,19,1163149,11186,Shivsena,512226,0.4404,Peasants And Workers Party of India,354829,157397,False,1,Nationalist Congress Party,182293,24896,138697
+2014,Maharashtra,Mumbai   South,20,771142,9573,Shivsena,374780,0.486,Indian National Congress,246632,128148,False,0,,0,0,21582
+2014,Maharashtra,Mumbai North,21,937804,8758,Bharatiya Janata Party,664004,0.708,Indian National Congress,217422,446582,True,0,,0,0,-390204
+2014,Maharashtra,Mumbai North East,19,854647,7114,Bharatiya Janata Party,525285,0.6146,Nationalist Congress Party,208163,317122,True,0,,0,0,-195923
+2014,Maharashtra,Mumbai North West,14,884508,11009,Shivsena,464820,0.5255,Indian National Congress,281792,183028,True,0,,0,0,-45132
+2014,Maharashtra,Mumbai North central,21,838355,6937,Bharatiya Janata Party,478535,0.5708,Indian National Congress,291764,186771,True,0,,0,0,-118715
+2014,Maharashtra,Mumbai South central,21,759480,9580,Shivsena,381275,0.502,Indian National Congress,242933,138342,True,0,,0,0,-3070
+2014,Maharashtra,Nagpur,33,1081598,3460,Bharatiya Janata Party,587767,0.5434,Indian National Congress,302939,284828,True,0,,0,0,-93936
+2014,Maharashtra,Nanded,23,1010195,3155,Indian National Congress,493075,0.4881,Bharatiya Janata Party,411620,81455,False,0,,0,0,24045
+2014,Maharashtra,Nandurbar,9,1095498,21178,Bharatiya Janata Party,579486,0.529,Indian National Congress,472581,106905,True,0,,0,0,-63474
+2014,Maharashtra,Nashik,15,928489,8916,Shivsena,494735,0.5328,Nationalist Congress Party,307399,187336,True,0,,0,0,-60981
+2014,Maharashtra,Osmanabad,27,1113538,4613,Shivsena,607699,0.5457,Nationalist Congress Party,373374,234325,True,0,,0,0,-101860
+2014,Maharashtra,Palghar,10,970821,21797,Bharatiya Janata Party,533201,0.5492,Bahujan Vikas Aaghadi,293681,239520,True,0,,0,0,-95581
+2014,Maharashtra,Parbhani,17,1144731,17502,Shivsena,578455,0.5053,Nationalist Congress Party,451300,127155,True,0,,0,0,-12179
+2014,Maharashtra,Pune,29,986836,6438,Bharatiya Janata Party,569825,0.5774,Indian National Congress,254056,315769,True,0,,0,0,-152814
+2014,Maharashtra,Raigad,10,967404,20362,Shivsena,396178,0.4095,Nationalist Congress Party,394068,2110,False,8,Peasants And Workers Party of India,129730,127620,175048
+2014,Maharashtra,Ramtek,23,1045500,4816,Shivsena,519892,0.4973,Indian National Congress,344101,175791,False,0,,0,0,5716
+2014,Maharashtra,Ratnagiri - sindhudurg,10,883863,12393,Shivsena,493088,0.5579,Indian National Congress,343037,150051,True,0,,0,0,-102313
+2014,Maharashtra,Raver,23,1005001,4212,Bharatiya Janata Party,605452,0.6024,Nationalist Congress Party,287384,318068,True,0,,0,0,-205903
+2014,Maharashtra,Sangli,17,1040549,6110,Bharatiya Janata Party,611563,0.5877,Indian National Congress,372271,239292,True,0,,0,0,-182577
+2014,Maharashtra,Satara,18,966092,10589,Nationalist Congress Party,522531,0.5409,Independent,155937,366594,True,0,,0,0,-78970
+2014,Maharashtra,Shirdi,14,922766,9879,Shivsena,532936,0.5775,Indian National Congress,333014,199922,True,0,,0,0,-143106
+2014,Maharashtra,Shirur,14,1077511,11995,Shivsena,643415,0.5971,Nationalist Congress Party,341601,301814,True,0,,0,0,-209319
+2014,Maharashtra,Solapur,16,937423,13778,Bharatiya Janata Party,517879,0.5524,Indian National Congress,368205,149674,True,0,,0,0,-98335
+2014,Maharashtra,Thane,26,1041015,13174,Shivsena,595364,0.5719,Nationalist Congress Party,314065,281299,True,0,,0,0,-149713
+2014,Maharashtra,Wardha,21,1010102,3343,Bharatiya Janata Party,537518,0.5321,Indian National Congress,321735,215783,True,0,,0,0,-64934
+2014,Maharashtra,Yavatmal-Washim,26,1027366,5583,Shivsena,477905,0.4652,Indian National Congress,384089,93816,False,0,,0,0,71556
+2014,Manipur,Inner manipur,8,635573,5298,Indian National Congress,292102,0.4596,Communist Party of India,197428,94674,False,0,,0,0,51369
+2014,Manipur,Outer manipur,10,769560,2206,Indian National Congress,296770,0.3856,Naga Peoples Front,281133,15637,False,3,Bharatiya Janata Party,75828,60191,176020
+2014,Meghalaya,Shillong,8,609027,10960,Indian National Congress,209340,0.3437,Independent,168961,40379,False,2,United Democratic Party,106817,66438,190347
+2014,Meghalaya,Tura,2,438886,19185,National Peoples Party,239301,0.5452,Indian National Congress,199585,39716,True,0,,0,0,-39716
+2014,Mizoram,MIZORAM,3,426706,6495,Indian National Congress,210485,0.4933,Independent,204331,6154,False,1,Aam Aadmi Party,11890,5736,5736
+2014,NCT OF Delhi,CHANDNI CHOWK,25,977329,4534,Bharatiya Janata Party,437938,0.4481,Aam Aadmi Party,301618,136320,False,1,Indian National Congress,176206,39886,101453
+2014,NCT OF Delhi,EAST DELHI,23,1191361,4975,Bharatiya Janata Party,572202,0.4803,Aam Aadmi Party,381739,190463,False,1,Indian National Congress,203240,12777,46957
+2014,NCT OF Delhi,NEW DELHI,29,964223,5589,Bharatiya Janata Party,453350,0.4702,Aam Aadmi Party,290642,162708,False,1,Indian National Congress,182893,20185,57523
+2014,NCT OF Delhi,NORTH EAST DELHI,23,1313514,3824,Bharatiya Janata Party,596125,0.4538,Aam Aadmi Party,452041,144084,False,1,Indian National Congress,214792,70708,121264
+2014,NCT OF Delhi,NORTH WEST DELHI,14,1347210,8826,Bharatiya Janata Party,629860,0.4675,Aam Aadmi Party,523058,106802,False,1,Indian National Congress,157468,50666,87490
+2014,NCT OF Delhi,SOUTH DELHI,19,1098400,4010,Bharatiya Janata Party,497980,0.4534,Aam Aadmi Party,390980,107000,False,1,Indian National Congress,125213,18213,102440
+2014,NCT OF Delhi,WEST DELHI,17,1340039,7932,Bharatiya Janata Party,651395,0.4861,Aam Aadmi Party,382809,268586,False,0,,0,0,37249
+2014,Nagaland,Nagaland,3,1036214,2696,Naga Peoples Front,713372,0.6884,Indian National Congress,313147,400225,True,0,,0,0,-390530
+2014,Odisha,Aska,9,880899,15382,Biju Janata Dal,541473,0.6147,Indian National Congress,229476,311997,True,0,,0,0,-202047
+2014,Odisha,Balasore,10,1041734,7716,Biju Janata Dal,433768,0.4164,Bharatiya Janata Party,291943,141825,False,1,Indian National Congress,277517,135692,174198
+2014,Odisha,Bargarh,8,1108801,14500,Biju Janata Dal,383230,0.3456,Bharatiya Janata Party,372052,11178,False,4,Indian National Congress,274610,263432,342341
+2014,Odisha,Berhampur,11,892656,12706,Biju Janata Dal,398107,0.446,Indian National Congress,270387,127720,False,1,Bharatiya Janata Party,158811,31091,96442
+2014,Odisha,Bhadrak,8,1074589,6750,Biju Janata Dal,502338,0.4675,Indian National Congress,322979,179359,False,1,Bharatiya Janata Party,216617,37258,69913
+2014,Odisha,Bhubaneswar,11,883682,8140,Biju Janata Dal,439252,0.4971,Bharatiya Janata Party,249775,189477,False,0,,0,0,5178
+2014,Odisha,Bolangir,8,1149362,21043,Biju Janata Dal,453519,0.3946,Bharatiya Janata Party,349220,104299,False,1,Indian National Congress,277616,173317,242324
+2014,Odisha,Cuttack,10,969715,8889,Biju Janata Dal,526085,0.5425,Indian National Congress,219323,306762,True,0,,0,0,-82455
+2014,Odisha,Dhenkanal,12,1028896,13205,Biju Janata Dal,453277,0.4405,Bharatiya Janata Party,315937,137340,False,1,Indian National Congress,213794,76454,122342
+2014,Odisha,Jagatsinghpur,7,1124308,7624,Biju Janata Dal,624492,0.5554,Indian National Congress,348098,276394,True,0,,0,0,-124676
+2014,Odisha,Jajpur,9,971780,8655,Biju Janata Dal,541349,0.5571,Indian National Congress,221078,320271,True,0,,0,0,-110918
+2014,Odisha,Kalahandi,15,1096656,20880,Biju Janata Dal,370871,0.3382,Bharatiya Janata Party,314524,56347,False,1,Indian National Congress,307967,251620,354914
+2014,Odisha,Kandhamal,8,825256,14159,Biju Janata Dal,421458,0.5107,Indian National Congress,240441,181017,True,0,,0,0,-17660
+2014,Odisha,Kendrapara,7,1133389,7610,Biju Janata Dal,601574,0.5308,Indian National Congress,392466,209108,True,0,,0,0,-69759
+2014,Odisha,Keonjhar,8,1057804,26065,Biju Janata Dal,434471,0.4107,Bharatiya Janata Party,277154,157317,False,1,Indian National Congress,190531,33214,188862
+2014,Odisha,Koraput,9,956212,33232,Biju Janata Dal,395109,0.4132,Indian National Congress,375781,19328,False,2,Bharatiya Janata Party,89788,70460,165994
+2014,Odisha,Mayurbhanj,9,1029882,23517,Biju Janata Dal,393779,0.3824,Bharatiya Janata Party,270913,122866,False,2,Jharkhand Mukti Morcha,172984,50118,242324
+2014,Odisha,Nabarangpur,7,977764,44408,Biju Janata Dal,373887,0.3824,Indian National Congress,371845,2042,False,5,Bharatiya Janata Party,138430,136388,229990
+2014,Odisha,Puri,7,1030239,9150,Biju Janata Dal,523161,0.5078,Indian National Congress,259800,263361,True,0,,0,0,-16083
+2014,Odisha,Sambalpur,11,970995,13314,Biju Janata Dal,358618,0.3693,Bharatiya Janata Party,328042,30576,False,1,Indian National Congress,242131,211555,253759
+2014,Odisha,Sundargarh,12,994876,15835,Bharatiya Janata Party,340508,0.3423,Biju Janata Dal,321679,18829,False,1,Indian National Congress,269335,250506,313860
+2014,Puducherry,Puducherry,30,717749,22268,All India N.R. Congress,255826,0.3564,Indian National Congress,194972,60854,False,1,All India Anna Dravida Munnetra Kazhagam,132657,71803,206097
+2014,Punjab,Amritsar,23,1004663,2533,Indian National Congress,482876,0.4806,Bharatiya Janata Party,380106,102770,False,0,,0,0,38911
+2014,Punjab,Anandpur Sahib,18,1080626,5937,Shiromani Akali Dal,347394,0.3215,Indian National Congress,323697,23697,False,2,Aam Aadmi Party,306008,282311,385838
+2014,Punjab,Bathinda,29,1172066,4701,Shiromani Akali Dal,514727,0.4392,Indian National Congress,495332,19395,False,1,Aam Aadmi Party,87901,68506,142612
+2014,Punjab,Faridkot,19,1028291,3816,Aam Aadmi Party,450751,0.4383,Shiromani Akali Dal,278235,172516,False,1,Indian National Congress,251222,78706,126789
+2014,Punjab,Fatehgarh Sahib,15,1026949,4005,Aam Aadmi Party,367293,0.3577,Indian National Congress,313149,54144,False,1,Shiromani Akali Dal,312815,258671,292363
+2014,Punjab,Firozpur,15,1097727,7685,Shiromani Akali Dal,487932,0.4445,Indian National Congress,456512,31420,False,1,Aam Aadmi Party,113412,81992,121863
+2014,Punjab,Gurdaspur,13,1038074,4625,Bharatiya Janata Party,482255,0.4646,Indian National Congress,346190,136065,False,1,Aam Aadmi Party,173376,37311,73564
+2014,Punjab,Hoshiarpur,17,955321,5976,Bharatiya Janata Party,346643,0.3629,Indian National Congress,333061,13582,False,2,Aam Aadmi Party,213388,199806,262035
+2014,Punjab,Jalandhar,24,1035326,5436,Indian National Congress,380479,0.3675,Shiromani Akali Dal,309498,70981,False,1,Aam Aadmi Party,254121,183140,274368
+2014,Punjab,Khadoor Sahib,17,1034894,5624,Shiromani Akali Dal,467332,0.4516,Indian National Congress,366763,100569,False,1,Aam Aadmi Party,144521,43952,100230
+2014,Punjab,Ludhiana,22,1097237,3220,Indian National Congress,300459,0.2738,Aam Aadmi Party,280750,19709,False,2,Shiromani Akali Dal,256590,236881,496319
+2014,Punjab,Patiala,20,1117925,3008,Aam Aadmi Party,365671,0.3271,Indian National Congress,344729,20942,False,1,Shiromani Akali Dal,340109,319167,386583
+2014,Punjab,Sangrur,21,1097279,2188,Aam Aadmi Party,533237,0.486,Shiromani Akali Dal,321516,211721,False,0,,0,0,30805
+2014,Rajasthan,Ajmer,12,1143768,12546,Bharatiya Janata Party,637874,0.5577,Indian National Congress,465891,171983,True,0,,0,0,-131980
+2014,Rajasthan,Alwar,19,1059793,2512,Bharatiya Janata Party,642278,0.606,Indian National Congress,358383,283895,True,0,,0,0,-224763
+2014,Rajasthan,BHARATPUR,12,956497,5935,Bharatiya Janata Party,579825,0.6062,Indian National Congress,334357,245468,True,0,,0,0,-203153
+2014,Rajasthan,Banswara,6,1136784,34404,Bharatiya Janata Party,577433,0.508,Indian National Congress,485517,91916,True,0,,0,0,-18082
+2014,Rajasthan,Barmer,11,1203230,15889,Bharatiya Janata Party,488747,0.4062,Independent,401286,87461,False,1,Indian National Congress,220881,133420,225736
+2014,Rajasthan,Bhilwara,11,1084392,19698,Bharatiya Janata Party,630317,0.5813,Indian National Congress,384053,246264,True,0,,0,0,-176242
+2014,Rajasthan,Bikaner,8,916259,13492,Bharatiya Janata Party,584932,0.6384,Indian National Congress,276853,308079,True,0,,0,0,-253605
+2014,Rajasthan,Chittorgarh,14,1152595,20034,Bharatiya Janata Party,703236,0.6101,Indian National Congress,386379,316857,True,0,,0,0,-253877
+2014,Rajasthan,Churu,12,1119811,11293,Bharatiya Janata Party,595756,0.532,Bahujan Samaj Party,301017,294739,True,0,,0,0,-71701
+2014,Rajasthan,Dausa,14,922082,8410,Bharatiya Janata Party,315059,0.3417,National Peoples Party,269655,45404,False,2,Indian National Congress,181272,135868,291964
+2014,Rajasthan,Ganganagar,17,1249888,6918,Bharatiya Janata Party,658130,0.5266,Indian National Congress,366389,291741,True,0,,0,0,-66372
+2014,Rajasthan,JHALAWAR-BARAN,6,1127300,19064,Bharatiya Janata Party,676102,0.5998,Indian National Congress,394556,281546,True,0,,0,0,-224904
+2014,Rajasthan,Jaipur,16,1288461,8345,Bharatiya Janata Party,863358,0.6701,Indian National Congress,324013,539345,True,0,,0,0,-438255
+2014,Rajasthan,Jaipur Rural,12,1002158,11533,Bharatiya Janata Party,632930,0.6316,Indian National Congress,300034,332896,True,0,,0,0,-263702
+2014,Rajasthan,Jalore,16,1076089,11183,Bharatiya Janata Party,580508,0.5395,Indian National Congress,199363,381145,True,0,,0,0,-84927
+2014,Rajasthan,Jhunjhunu,12,998427,8038,Bharatiya Janata Party,488182,0.489,Indian National Congress,254347,233835,False,0,,0,0,22063
+2014,Rajasthan,Jodhpur,13,1063513,15085,Bharatiya Janata Party,713515,0.6709,Indian National Congress,303464,410051,True,0,,0,0,-363517
+2014,Rajasthan,KARAULI-DHOLPUR,14,840007,5934,Bharatiya Janata Party,402407,0.4791,Indian National Congress,375191,27216,False,0,,0,0,35193
+2014,Rajasthan,Kota,12,1142200,12760,Bharatiya Janata Party,644822,0.5645,Indian National Congress,444040,200782,True,0,,0,0,-147444
+2014,Rajasthan,Nagaur,13,991834,12185,Bharatiya Janata Party,414791,0.4182,Indian National Congress,339573,75218,False,1,Independent,159980,84762,162252
+2014,Rajasthan,Pali,13,1077884,17703,Bharatiya Janata Party,711772,0.6603,Indian National Congress,312733,399039,True,0,,0,0,-345660
+2014,Rajasthan,Rajsamand,12,964937,17182,Bharatiya Janata Party,644794,0.6682,Indian National Congress,249089,395705,True,0,,0,0,-324651
+2014,Rajasthan,Sikar,15,1058340,7410,Bharatiya Janata Party,499428,0.4719,Indian National Congress,260232,239196,False,0,,0,0,59484
+2014,Rajasthan,TONK-SAWAI MADHOPUR,22,1039376,3664,Bharatiya Janata Party,548179,0.5274,Indian National Congress,412868,135311,True,0,,0,0,-56982
+2014,Rajasthan,Udaipur,8,1166517,26685,Bharatiya Janata Party,660373,0.5661,Indian National Congress,423611,236762,True,0,,0,0,-154229
+2014,Sikkim,Sikkim,6,304635,4332,Sikkim Democratic Front,163698,0.5374,Sikkim Krantikari Morcha,121956,41742,True,0,,0,0,-22761
+2014,Tamil Nadu,Arakkonam,27,1078682,10370,All India Anna Dravida Munnetra Kazhagam,493534,0.4575,Dravida Munnetra Kazhagam,252768,240766,False,0,,0,0,91614
+2014,Tamil Nadu,Arani,19,1086742,9304,All India Anna Dravida Munnetra Kazhagam,502721,0.4626,Dravida Munnetra Kazhagam,258877,243844,False,1,Pattali Makkal Katchi,253332,9488,81300
+2014,Tamil Nadu,Chennai North,40,892642,17472,All India Anna Dravida Munnetra Kazhagam,406704,0.4556,Dravida Munnetra Kazhagam,307000,99704,False,0,,0,0,79234
+2014,Tamil Nadu,Chennai South,42,1060761,20402,All India Anna Dravida Munnetra Kazhagam,438404,0.4133,Dravida Munnetra Kazhagam,301779,136625,False,1,Bharatiya Janata Party,256786,120161,183953
+2014,Tamil Nadu,Chennai central,20,792935,21959,All India Anna Dravida Munnetra Kazhagam,333296,0.4203,Dravida Munnetra Kazhagam,287455,45841,False,1,Desiya Murpokku Dravida Kazhagam,114798,68957,126343
+2014,Tamil Nadu,Chidambaram,15,1076285,12138,All India Anna Dravida Munnetra Kazhagam,429536,0.3991,Viduthalai Chiruthaigal Katchi,301041,128495,False,1,Pattali Makkal Katchi,279016,150521,217213
+2014,Tamil Nadu,Coimbatore,25,1159192,17428,All India Anna Dravida Munnetra Kazhagam,431717,0.3724,Bharatiya Janata Party,389701,42016,False,2,Dravida Munnetra Kazhagam,217083,175067,295758
+2014,Tamil Nadu,Cuddalore,17,974200,10338,All India Anna Dravida Munnetra Kazhagam,481429,0.4942,Dravida Munnetra Kazhagam,278304,203125,False,0,,0,0,11342
+2014,Tamil Nadu,Dharmapuri,15,1088652,12693,Pattali Makkal Katchi,468194,0.4301,All India Anna Dravida Munnetra Kazhagam,391048,77146,False,1,Dravida Munnetra Kazhagam,180297,103151,152264
+2014,Tamil Nadu,Dindigul,18,1072773,10591,All India Anna Dravida Munnetra Kazhagam,510462,0.4758,Dravida Munnetra Kazhagam,382617,127845,False,0,,0,0,51849
+2014,Tamil Nadu,Erode,14,992314,16268,All India Anna Dravida Munnetra Kazhagam,466995,0.4706,Marumalarchi Dravida Munnetra Kazhagam,255432,211563,False,1,Dravida Munnetra Kazhagam,217260,5697,58324
+2014,Tamil Nadu,Kallakurichi,22,1096340,10901,All India Anna Dravida Munnetra Kazhagam,533383,0.4865,Dravida Munnetra Kazhagam,309876,223507,False,0,,0,0,29574
+2014,Tamil Nadu,Kancheepuram,11,1110663,17736,All India Anna Dravida Munnetra Kazhagam,499395,0.4496,Dravida Munnetra Kazhagam,352529,146866,False,1,Marumalarchi Dravida Munnetra Kazhagam,207080,60214,111873
+2014,Tamil Nadu,Kanniyakumari,25,986592,4150,Bharatiya Janata Party,372906,0.378,Indian National Congress,244244,128662,False,1,All India Anna Dravida Munnetra Kazhagam,176239,47577,240780
+2014,Tamil Nadu,Karur,25,1032771,13763,All India Anna Dravida Munnetra Kazhagam,540722,0.5236,Dravida Munnetra Kazhagam,345475,195247,True,0,,0,0,-48673
+2014,Tamil Nadu,Krishnagiri,15,1052371,16020,All India Anna Dravida Munnetra Kazhagam,480491,0.4566,Dravida Munnetra Kazhagam,273900,206591,False,1,Pattali Makkal Katchi,224963,18372,91389
+2014,Tamil Nadu,Madurai,31,958480,19866,All India Anna Dravida Munnetra Kazhagam,454167,0.4738,Dravida Munnetra Kazhagam,256731,197436,False,0,,0,0,50146
+2014,Tamil Nadu,Mayiladuthurai,19,1012357,13181,All India Anna Dravida Munnetra Kazhagam,513729,0.5075,Manithaneya Makkal Katchi,236679,277050,True,0,,0,0,-15101
+2014,Tamil Nadu,Nagapattinam,9,926540,15662,All India Anna Dravida Munnetra Kazhagam,434174,0.4686,Dravida Munnetra Kazhagam,328095,106079,False,0,,0,0,58192
+2014,Tamil Nadu,Namakkal,26,1042753,16002,All India Anna Dravida Munnetra Kazhagam,563272,0.5402,Dravida Munnetra Kazhagam,268898,294374,True,0,,0,0,-83791
+2014,Tamil Nadu,Nilgiris,10,886517,46559,All India Anna Dravida Munnetra Kazhagam,463700,0.5231,Dravida Munnetra Kazhagam,358760,104940,True,0,,0,0,-40883
+2014,Tamil Nadu,Perambalur,21,1019221,11605,All India Anna Dravida Munnetra Kazhagam,462693,0.454,Dravida Munnetra Kazhagam,249645,213048,False,1,Bharatiya Janata Party,238887,25839,93835
+2014,Tamil Nadu,Pollachi,18,999720,12947,All India Anna Dravida Munnetra Kazhagam,417092,0.4172,Bharatiya Janata Party,276118,140974,False,1,Dravida Munnetra Kazhagam,251829,110855,165536
+2014,Tamil Nadu,Ramanathapuram,31,994769,6279,All India Anna Dravida Munnetra Kazhagam,405945,0.4081,Dravida Munnetra Kazhagam,286621,119324,False,1,Bharatiya Janata Party,171082,51758,182879
+2014,Tamil Nadu,Salem,25,1129695,20601,All India Anna Dravida Munnetra Kazhagam,556546,0.4927,Dravida Munnetra Kazhagam,288936,267610,False,0,,0,0,16603
+2014,Tamil Nadu,Sivaganga,27,1018994,8042,All India Anna Dravida Munnetra Kazhagam,475993,0.4671,Dravida Munnetra Kazhagam,246608,229385,False,0,,0,0,67008
+2014,Tamil Nadu,Sriperumbudur,21,1258971,27676,All India Anna Dravida Munnetra Kazhagam,545820,0.4335,Dravida Munnetra Kazhagam,443174,102646,False,1,Marumalarchi Dravida Munnetra Kazhagam,187094,84448,167331
+2014,Tamil Nadu,Tenkasi,18,1003446,14492,All India Anna Dravida Munnetra Kazhagam,424586,0.4231,Puthiya Tamilagam,262812,161774,False,1,Marumalarchi Dravida Munnetra Kazhagam,190233,28459,154274
+2014,Tamil Nadu,Thanjavur,12,1000040,12218,All India Anna Dravida Munnetra Kazhagam,510307,0.5103,Dravida Munnetra Kazhagam,366188,144119,True,0,,0,0,-20574
+2014,Tamil Nadu,Theni,23,1065271,10312,All India Anna Dravida Munnetra Kazhagam,571254,0.5363,Dravida Munnetra Kazhagam,256722,314532,True,0,,0,0,-77237
+2014,Tamil Nadu,Thiruvallur,14,1230842,23598,All India Anna Dravida Munnetra Kazhagam,628499,0.5106,Viduthalai Chiruthaigal Katchi,305069,323430,True,0,,0,0,-26156
+2014,Tamil Nadu,Thoothukkudi,14,905331,11447,All India Anna Dravida Munnetra Kazhagam,366052,0.4043,Dravida Munnetra Kazhagam,242050,124002,False,1,Marumalarchi Dravida Munnetra Kazhagam,182191,58189,173227
+2014,Tamil Nadu,Tiruchirappalli,29,965402,22848,All India Anna Dravida Munnetra Kazhagam,458478,0.4749,Dravida Munnetra Kazhagam,308002,150476,False,0,,0,0,48446
+2014,Tamil Nadu,Tirunelveli,27,949437,12893,All India Anna Dravida Munnetra Kazhagam,398139,0.4193,Dravida Munnetra Kazhagam,272040,126099,False,1,Desiya Murpokku Dravida Kazhagam,127370,1271,153159
+2014,Tamil Nadu,Tiruppur,26,1036249,13941,All India Anna Dravida Munnetra Kazhagam,442778,0.4273,Desiya Murpokku Dravida Kazhagam,263463,179315,False,1,Dravida Munnetra Kazhagam,205411,26096,150693
+2014,Tamil Nadu,Tiruvannamalai,24,1057852,9595,All India Anna Dravida Munnetra Kazhagam,500751,0.4734,Dravida Munnetra Kazhagam,332145,168606,False,0,,0,0,56350
+2014,Tamil Nadu,Vellore,24,967670,7100,All India Anna Dravida Munnetra Kazhagam,383719,0.3965,Bharatiya Janata Party,324326,59393,False,1,Indian Union Muslim League,205896,146503,200232
+2014,Tamil Nadu,Viluppuram,20,1056201,11440,All India Anna Dravida Munnetra Kazhagam,482704,0.457,Dravida Munnetra Kazhagam,289337,193367,False,1,Desiya Murpokku Dravida Kazhagam,209663,16296,90793
+2014,Tamil Nadu,Virudhunagar,26,998705,12225,All India Anna Dravida Munnetra Kazhagam,406694,0.4072,Marumalarchi Dravida Munnetra Kazhagam,261143,145551,False,1,Dravida Munnetra Kazhagam,241505,95954,185317
+2014,Tripura,Tripura East,12,940026,11084,Communist Party of India  (Marxist),623771,0.6636,Indian National Congress,139413,484358,True,0,,0,0,-307516
+2014,Tripura,Tripura West,13,1060050,12699,Communist Party of India  (Marxist),671665,0.6336,Indian National Congress,168179,503486,True,0,,0,0,-283280
+2014,Uttar Pradesh,Agra,15,1065209,5191,Bharatiya Janata Party,583716,0.548,Bahujan Samaj Party,283453,300263,True,0,,0,0,-102223
+2014,Uttar Pradesh,Akbarpur,18,967427,3948,Bharatiya Janata Party,481584,0.4978,Bahujan Samaj Party,202587,278997,False,0,,0,0,4259
+2014,Uttar Pradesh,Aligarh,14,1058174,6183,Bharatiya Janata Party,514622,0.4863,Bahujan Samaj Party,227886,286736,False,0,,0,0,28930
+2014,Uttar Pradesh,Allahabad,23,887961,3621,Bharatiya Janata Party,313772,0.3534,Samajwadi Party,251763,62009,False,2,Bahujan Samaj Party,162073,100064,260417
+2014,Uttar Pradesh,Ambedkar Nagar,14,1026982,7422,Bharatiya Janata Party,432104,0.4208,Bahujan Samaj Party,292675,139429,False,1,Samajwadi Party,234467,95038,162774
+2014,Uttar Pradesh,Amethi,34,872841,1784,Indian National Congress,408651,0.4682,Bharatiya Janata Party,300748,107903,False,0,,0,0,55539
+2014,Uttar Pradesh,Amroha,15,1088081,7779,Bharatiya Janata Party,528880,0.4861,Samajwadi Party,370666,158214,False,1,Bahujan Samaj Party,162983,4769,30321
+2014,Uttar Pradesh,Aonla,13,985145,10496,Bharatiya Janata Party,409907,0.4161,Samajwadi Party,271478,138429,False,1,Bahujan Samaj Party,190200,51771,165331
+2014,Uttar Pradesh,Azamgarh,18,954558,5660,Samajwadi Party,340306,0.3565,Bharatiya Janata Party,277102,63204,False,1,Bahujan Samaj Party,266528,203324,273946
+2014,Uttar Pradesh,Badaun,15,1021308,6286,Samajwadi Party,498378,0.488,Bharatiya Janata Party,332031,166347,False,0,,0,0,24552
+2014,Uttar Pradesh,Baghpat,14,1000352,3911,Bharatiya Janata Party,423475,0.4233,Samajwadi Party,213609,209866,False,0,,0,0,153402
+2014,Uttar Pradesh,Bahraich,10,920765,13498,Bharatiya Janata Party,432392,0.4696,Samajwadi Party,336747,95645,False,1,Bahujan Samaj Party,96904,1259,55981
+2014,Uttar Pradesh,Ballia,15,935541,6670,Bharatiya Janata Party,359758,0.3845,Samajwadi Party,220324,139434,False,2,Qaumi Ekta Dal,163943,24509,216025
+2014,Uttar Pradesh,Banda,13,844502,13824,Bharatiya Janata Party,342066,0.4051,Bahujan Samaj Party,226278,115788,False,1,Samajwadi Party,189730,73942,160370
+2014,Uttar Pradesh,Bansgaon,12,864382,13495,Bharatiya Janata Party,417959,0.4835,Bahujan Samaj Party,228443,189516,False,0,,0,0,28464
+2014,Uttar Pradesh,Barabanki,14,1059442,8726,Bharatiya Janata Party,454214,0.4287,Indian National Congress,242336,211878,False,0,,0,0,151014
+2014,Uttar Pradesh,Bareilly,14,1011154,6737,Bharatiya Janata Party,518258,0.5125,Samajwadi Party,277573,240685,True,0,,0,0,-25362
+2014,Uttar Pradesh,Basti,13,1038366,10168,Bharatiya Janata Party,357680,0.3445,Samajwadi Party,324118,33562,False,1,Bahujan Samaj Party,283747,250185,323006
+2014,Uttar Pradesh,Bhadohi,14,972586,8966,Bharatiya Janata Party,403544,0.4149,Bahujan Samaj Party,245505,158039,False,1,Samajwadi Party,238615,80576,165498
+2014,Uttar Pradesh,Bijnor,12,1054571,5775,Bharatiya Janata Party,486913,0.4617,Samajwadi Party,281139,205774,False,1,Bahujan Samaj Party,230124,24350,80745
+2014,Uttar Pradesh,Bulandshahr,10,1002795,6915,Bharatiya Janata Party,604449,0.6028,Bahujan Samaj Party,182476,421973,True,0,,0,0,-206103
+2014,Uttar Pradesh,Chandauli,21,977386,3186,Bharatiya Janata Party,414135,0.4237,Bahujan Samaj Party,257379,156756,False,1,Samajwadi Party,204145,47389,149116
+2014,Uttar Pradesh,Deoria,15,959152,12405,Bharatiya Janata Party,496500,0.5176,Bahujan Samaj Party,231114,265386,True,0,,0,0,-33848
+2014,Uttar Pradesh,Dhaurahra,15,1052133,8138,Bharatiya Janata Party,360357,0.3425,Bahujan Samaj Party,234682,125675,False,2,Samajwadi Party,234032,108357,331419
+2014,Uttar Pradesh,Domariyaganj,17,928252,6775,Bharatiya Janata Party,298845,0.3219,Bahujan Samaj Party,195257,103588,False,1,Samajwadi Party,174778,71190,330562
+2014,Uttar Pradesh,Etah,11,920080,6201,Bharatiya Janata Party,474978,0.5162,Samajwadi Party,273977,201001,True,0,,0,0,-29876
+2014,Uttar Pradesh,Etawah,10,933439,6165,Bharatiya Janata Party,439646,0.471,Samajwadi Party,266700,172946,False,1,Bahujan Samaj Party,192804,19858,54147
+2014,Uttar Pradesh,Faizabad,11,1011179,11537,Bharatiya Janata Party,491761,0.4863,Samajwadi Party,208986,282775,False,0,,0,0,27657
+2014,Uttar Pradesh,Farrukhabad,22,968691,1986,Bharatiya Janata Party,406195,0.4193,Samajwadi Party,255693,150502,False,0,,0,0,156301
+2014,Uttar Pradesh,Fatehpur,14,1045081,11607,Bharatiya Janata Party,485994,0.465,Bahujan Samaj Party,298788,187206,False,0,,0,0,73093
+2014,Uttar Pradesh,Fatehpur Sikri,28,965291,2677,Bharatiya Janata Party,426589,0.4419,Bahujan Samaj Party,253483,173106,False,1,Samajwadi Party,213397,40291,112113
+2014,Uttar Pradesh,Firozabad,15,1099952,4654,Samajwadi Party,534583,0.486,Bharatiya Janata Party,420524,114059,False,1,Bahujan Samaj Party,118909,4850,30786
+2014,Uttar Pradesh,Gautam Buddha Nagar,24,1195401,3837,Bharatiya Janata Party,599702,0.5017,Samajwadi Party,319490,280212,True,0,,0,0,-4003
+2014,Uttar Pradesh,Ghaziabad,15,1336115,6205,Bharatiya Janata Party,758482,0.5677,Indian National Congress,191222,567260,True,0,,0,0,-180849
+2014,Uttar Pradesh,Ghazipur,18,981062,5611,Bharatiya Janata Party,306929,0.3129,Samajwadi Party,274477,32452,False,3,Bahujan Samaj Party,241645,209193,367204
+2014,Uttar Pradesh,Ghosi,18,1035199,4457,Bharatiya Janata Party,379797,0.3669,Bahujan Samaj Party,233782,146015,False,2,Qaumi Ekta Dal,166443,20428,275605
+2014,Uttar Pradesh,Gonda,15,865744,7988,Bharatiya Janata Party,359643,0.4154,Samajwadi Party,199227,160416,False,0,,0,0,146458
+2014,Uttar Pradesh,Gorakhpur,15,1032046,8153,Bharatiya Janata Party,539127,0.5224,Samajwadi Party,226344,312783,True,0,,0,0,-46208
+2014,Uttar Pradesh,Hamirpur,15,964791,10449,Bharatiya Janata Party,453884,0.4704,Samajwadi Party,187096,266788,False,0,,0,0,57023
+2014,Uttar Pradesh,Hardoi,15,965234,7660,Bharatiya Janata Party,360501,0.3735,Bahujan Samaj Party,279158,81343,False,1,Samajwadi Party,276543,195200,244232
+2014,Uttar Pradesh,Hathras,9,1043604,5669,Bharatiya Janata Party,544277,0.5215,Bahujan Samaj Party,217891,326386,True,0,,0,0,-44950
+2014,Uttar Pradesh,Jalaun,11,1098875,10291,Bharatiya Janata Party,548631,0.4993,Bahujan Samaj Party,261429,287202,False,0,,0,0,1613
+2014,Uttar Pradesh,Jaunpur,21,1004548,2595,Bharatiya Janata Party,367149,0.3655,Bahujan Samaj Party,220839,146310,False,1,Samajwadi Party,180003,33693,270250
+2014,Uttar Pradesh,Jhansi,15,1306845,13959,Bharatiya Janata Party,575889,0.4407,Samajwadi Party,385422,190467,False,1,Bahujan Samaj Party,213792,23325,155067
+2014,Uttar Pradesh,Kairana,11,1115421,3903,Bharatiya Janata Party,565909,0.5074,Samajwadi Party,329081,236828,True,0,,0,0,-16397
+2014,Uttar Pradesh,Kaiserganj,14,931504,11853,Bharatiya Janata Party,381500,0.4096,Samajwadi Party,303282,78218,False,1,Bahujan Samaj Party,146726,68508,168504
+2014,Uttar Pradesh,Kannauj,12,1107080,7380,Samajwadi Party,489164,0.4419,Bharatiya Janata Party,469257,19907,False,1,Bahujan Samaj Party,127785,107878,128752
+2014,Uttar Pradesh,Kanpur,21,832801,2278,Bharatiya Janata Party,474712,0.57,Indian National Congress,251766,222946,True,0,,0,0,-116623
+2014,Uttar Pradesh,Kaushambi,11,894883,15155,Bharatiya Janata Party,331593,0.3705,Samajwadi Party,288746,42847,False,1,Bahujan Samaj Party,201196,158349,231697
+2014,Uttar Pradesh,Kheri,11,1065837,12031,Bharatiya Janata Party,398578,0.374,Bahujan Samaj Party,288304,110274,False,2,Indian National Congress,183940,73666,268681
+2014,Uttar Pradesh,Kushi Nagar,14,940343,10102,Bharatiya Janata Party,370051,0.3935,Indian National Congress,284511,85540,False,2,Bahujan Samaj Party,132881,47341,200241
+2014,Uttar Pradesh,Lalganj,14,890942,7713,Bharatiya Janata Party,324016,0.3637,Samajwadi Party,260930,63086,False,1,Bahujan Samaj Party,233971,170885,242910
+2014,Uttar Pradesh,Lucknow,29,1029187,4596,Bharatiya Janata Party,561106,0.5452,Indian National Congress,288357,272749,True,0,,0,0,-93025
+2014,Uttar Pradesh,Machhlishahr,15,989454,8448,Bharatiya Janata Party,438210,0.4429,Bahujan Samaj Party,266055,172155,False,1,Samajwadi Party,191387,19232,113034
+2014,Uttar Pradesh,Maharajganj,23,1051533,4545,Bharatiya Janata Party,471542,0.4484,Bahujan Samaj Party,231084,240458,False,0,,0,0,108449
+2014,Uttar Pradesh,Mainpuri,13,992942,6323,Samajwadi Party,595918,0.6002,Bharatiya Janata Party,231252,364666,True,0,,0,0,-198894
+2014,Uttar Pradesh,Mathura,20,1074915,1953,Bharatiya Janata Party,574633,0.5346,Rashtriya Lok Dal,243890,330743,True,0,,0,0,-74351
+2014,Uttar Pradesh,Meerut,13,1108171,5213,Bharatiya Janata Party,532981,0.481,Bahujan Samaj Party,300655,232326,False,0,,0,0,42209
+2014,Uttar Pradesh,Mirzapur,23,1003088,4539,Apna Dal,436536,0.4352,Bahujan Samaj Party,217457,219079,False,0,,0,0,130016
+2014,Uttar Pradesh,Misrikh,14,988681,9633,Bharatiya Janata Party,412575,0.4173,Bahujan Samaj Party,325212,87363,False,1,Samajwadi Party,194759,107396,163531
+2014,Uttar Pradesh,Mohanlalganj,18,1111880,4708,Bharatiya Janata Party,455274,0.4095,Bahujan Samaj Party,309858,145416,False,1,Samajwadi Party,242366,96950,201332
+2014,Uttar Pradesh,Moradabad,18,1122758,5207,Bharatiya Janata Party,485224,0.4322,Samajwadi Party,397720,87504,False,1,Bahujan Samaj Party,160945,73441,152310
+2014,Uttar Pradesh,Muzaffarnagar,19,1102695,4739,Bharatiya Janata Party,653391,0.5925,Bahujan Samaj Party,252241,401150,True,0,,0,0,-204087
+2014,Uttar Pradesh,Nagina,14,935726,6470,Bharatiya Janata Party,367825,0.3931,Samajwadi Party,275435,92390,False,1,Bahujan Samaj Party,245685,153295,200076
+2014,Uttar Pradesh,Phulpur,15,951917,8424,Bharatiya Janata Party,503564,0.529,Samajwadi Party,195256,308308,True,0,,0,0,-55211
+2014,Uttar Pradesh,Pilibhit,12,1039026,11521,Bharatiya Janata Party,546934,0.5264,Samajwadi Party,239882,307052,True,0,,0,0,-54842
+2014,Uttar Pradesh,Pratapgarh,15,885358,9098,Apna Dal,375789,0.4244,Bahujan Samaj Party,207567,168222,False,0,,0,0,133780
+2014,Uttar Pradesh,Rae Bareli,17,819727,5409,Indian National Congress,526434,0.6422,Bharatiya Janata Party,173721,352713,True,0,,0,0,-233141
+2014,Uttar Pradesh,Rampur,12,949484,6905,Bharatiya Janata Party,358616,0.3777,Samajwadi Party,335181,23435,False,2,Indian National Congress,156466,133031,232252
+2014,Uttar Pradesh,Robertsganj,14,867384,18489,Bharatiya Janata Party,378211,0.436,Bahujan Samaj Party,187725,190486,False,0,,0,0,110962
+2014,Uttar Pradesh,Saharanpur,14,1188041,6267,Bharatiya Janata Party,472999,0.3981,Indian National Congress,407909,65090,False,1,Bahujan Samaj Party,235033,169943,242043
+2014,Uttar Pradesh,Salempur,13,846427,8322,Bharatiya Janata Party,392213,0.4634,Bahujan Samaj Party,159871,232342,False,0,,0,0,62001
+2014,Uttar Pradesh,Sambhal,13,1049344,7658,Bharatiya Janata Party,360242,0.3433,Samajwadi Party,355068,5174,False,5,Bahujan Samaj Party,252640,247466,328860
+2014,Uttar Pradesh,Sant Kabir Nagar,25,1006902,4747,Bharatiya Janata Party,348892,0.3465,Bahujan Samaj Party,250914,97978,False,1,Samajwadi Party,240169,142191,309118
+2014,Uttar Pradesh,Shahjahanpur,13,1119877,9964,Bharatiya Janata Party,525132,0.4689,Bahujan Samaj Party,289603,235529,False,1,Samajwadi Party,242913,7384,69613
+2014,Uttar Pradesh,Shrawasti,14,965051,14587,Bharatiya Janata Party,345964,0.3585,Samajwadi Party,260051,85913,False,2,Bahujan Samaj Party,194890,108977,273123
+2014,Uttar Pradesh,Sitapur,16,1014290,12682,Bharatiya Janata Party,417546,0.4117,Bahujan Samaj Party,366519,51027,False,1,Samajwadi Party,156170,105143,179198
+2014,Uttar Pradesh,Sultanpur,15,959569,5412,Bharatiya Janata Party,410348,0.4276,Bahujan Samaj Party,231446,178902,False,1,Samajwadi Party,228144,49242,138873
+2014,Uttar Pradesh,Unnao,21,1196977,4626,Bharatiya Janata Party,518834,0.4335,Samajwadi Party,208661,310173,False,0,,0,0,159309
+2014,Uttar Pradesh,Varanasi,42,1028634,2051,Bharatiya Janata Party,581022,0.5648,Aam Aadmi Party,209238,371784,True,0,,0,0,-133410
+2014,Uttarakhand,Almora,9,641280,15245,Bharatiya Janata Party,348186,0.543,Indian National Congress,252496,95690,True,0,,0,0,-55092
+2014,Uttarakhand,Garhwal,10,673365,8659,Bharatiya Janata Party,405690,0.6025,Indian National Congress,221164,184526,True,0,,0,0,-138015
+2014,Uttarakhand,Hardwar,24,1172643,3049,Bharatiya Janata Party,592320,0.5051,Indian National Congress,414498,177822,True,0,,0,0,-11997
+2014,Uttarakhand,Nainital-udhamsingh Nagar,15,1091107,10328,Bharatiya Janata Party,636769,0.5836,Indian National Congress,352052,284717,True,0,,0,0,-182431
+2014,Uttarakhand,Tehri Garhwal,16,765452,10762,Bharatiya Janata Party,446733,0.5836,Indian National Congress,254230,192503,True,0,,0,0,-128014
+2014,West Bengal,Alipurduars,10,1203681,19885,All India Trinamool Congress,362453,0.3011,Revolutionary Socialist Party,341056,21397,False,2,Bharatiya Janata Party,335857,314460,478775
+2014,West Bengal,Arambagh,5,1344097,17837,All India Trinamool Congress,748764,0.5571,Communist Party of India  (Marxist),401919,346845,True,0,,0,0,-153431
+2014,West Bengal,Asansol,14,1130916,11479,Bharatiya Janata Party,419983,0.3714,All India Trinamool Congress,349503,70480,False,1,Communist Party of India  (Marxist),255829,185349,290950
+2014,West Bengal,Baharampur,8,1143395,11192,Indian National Congress,583549,0.5104,All India Trinamool Congress,226982,356567,True,0,,0,0,-23703
+2014,West Bengal,Balurghat,12,1051362,11691,All India Trinamool Congress,409641,0.3896,Revolutionary Socialist Party,302677,106964,False,1,Bharatiya Janata Party,223014,116050,232080
+2014,West Bengal,Bangaon,11,1273723,9965,All India Trinamool Congress,551213,0.4328,Communist Party of India  (Marxist),404612,146601,False,1,Bharatiya Janata Party,244783,98182,171297
+2014,West Bengal,Bankura,14,1212637,23682,All India Trinamool Congress,483455,0.3987,Communist Party of India  (Marxist),384949,98506,False,1,Bharatiya Janata Party,251183,152677,245727
+2014,West Bengal,Barasat,12,1256631,12700,All India Trinamool Congress,525387,0.4181,All India Forward Bloc,352246,173141,False,1,Bharatiya Janata Party,296608,123467,205857
+2014,West Bengal,Bardhaman Purba,9,1306971,13951,All India Trinamool Congress,574660,0.4397,Communist Party of India  (Marxist),460181,114479,False,1,Bharatiya Janata Party,170828,56349,157651
+2014,West Bengal,Barrackpore,12,1040151,10979,All India Trinamool Congress,479206,0.4607,Communist Party of India  (Marxist),272433,206773,False,1,Bharatiya Janata Party,230401,23628,81739
+2014,West Bengal,Basirhat,9,1263800,9971,All India Trinamool Congress,492326,0.3896,Communist Party of India,382667,109659,False,1,Bharatiya Janata Party,233887,124228,279148
+2014,West Bengal,Birbhum,11,1261262,14557,All India Trinamool Congress,460568,0.3652,Communist Party of India  (Marxist),393305,67263,False,2,Bharatiya Janata Party,235753,168490,340126
+2014,West Bengal,Bishnupur,9,1251142,20928,All India Trinamool Congress,578870,0.4627,Communist Party of India  (Marxist),429185,149685,False,1,Bharatiya Janata Party,179530,29845,93402
+2014,West Bengal,Bolpur,7,1287434,17322,All India Trinamool Congress,630693,0.4899,Communist Party of India  (Marxist),394581,236112,False,0,,0,0,26048
+2014,West Bengal,Burdwan - durgapur,8,1314356,16886,All India Trinamool Congress,554521,0.4219,Communist Party of India  (Marxist),447190,107331,False,1,Bharatiya Janata Party,237205,129874,205314
+2014,West Bengal,Cooch behar,12,1321000,11409,All India Trinamool Congress,526499,0.3986,All India Forward Bloc,439392,87107,False,1,Bharatiya Janata Party,217653,130546,268002
+2014,West Bengal,Darjeeling,13,1123964,18045,Bharatiya Janata Party,488257,0.4344,All India Trinamool Congress,291018,197239,False,0,,0,0,147450
+2014,West Bengal,Diamond harbour,16,1250639,10657,All India Trinamool Congress,508481,0.4066,Communist Party of India  (Marxist),437183,71298,False,1,Bharatiya Janata Party,200858,129560,233677
+2014,West Bengal,Dum dum,9,1115807,16837,All India Trinamool Congress,483244,0.4331,Communist Party of India  (Marxist),328310,154934,False,1,Bharatiya Janata Party,254819,99885,149319
+2014,West Bengal,Ghatal,10,1352291,14418,All India Trinamool Congress,685696,0.5071,Communist Party of India,424805,260891,True,0,,0,0,-19101
+2014,West Bengal,Hooghly,9,1332353,16517,All India Trinamool Congress,614312,0.4611,Communist Party of India  (Marxist),425228,189084,False,1,Bharatiya Janata Party,221271,32187,103729
+2014,West Bengal,Howrah,15,1115470,9929,All India Trinamool Congress,488461,0.4379,Communist Party of India  (Marxist),291505,196956,False,1,Bharatiya Janata Party,248120,51164,138548
+2014,West Bengal,Jadavpur,13,1256695,15667,All India Trinamool Congress,584244,0.4649,Communist Party of India  (Marxist),459041,125203,False,1,Bharatiya Janata Party,155511,30308,88207
+2014,West Bengal,Jalpaiguri,12,1285576,16541,All India Trinamool Congress,494773,0.3849,Communist Party of India  (Marxist),425167,69606,False,2,Bharatiya Janata Party,221593,151987,296030
+2014,West Bengal,Jangipur,11,1108005,11079,Indian National Congress,378201,0.3413,Communist Party of India  (Marxist),370040,8161,False,5,All India Trinamool Congress,207455,199294,351603
+2014,West Bengal,Jhargram,13,1234678,22935,All India Trinamool Congress,674504,0.5463,Communist Party of India  (Marxist),326621,347883,True,0,,0,0,-114330
+2014,West Bengal,Joynagar,10,1180229,5823,All India Trinamool Congress,494746,0.4192,Revolutionary Socialist Party,386362,108384,False,2,SOCIALIST UNITY CENTRE OF INDIA (COMMUNIST),117454,9070,190737
+2014,West Bengal,Kanthi,7,1281213,9598,All India Trinamool Congress,676749,0.5282,Communist Party of India  (Marxist),447259,229490,True,0,,0,0,-72285
+2014,West Bengal,Kolkata Dakshin,15,1148475,19504,All India Trinamool Congress,431715,0.3759,Bharatiya Janata Party,295376,136339,False,1,Communist Party of India  (Marxist),278414,142075,285045
+2014,West Bengal,Kolkata Uttar,18,946675,9103,All India Trinamool Congress,343687,0.363,Bharatiya Janata Party,247461,96226,False,2,Communist Party of India  (Marxist),196053,99827,259301
+2014,West Bengal,Krishnanagar,9,1240272,7642,All India Trinamool Congress,438789,0.3538,Communist Party of India  (Marxist),367534,71255,False,2,Bharatiya Janata Party,329387,258132,362694
+2014,West Bengal,Maldaha Dakshin,17,1084015,8392,Indian National Congress,380291,0.3508,Bharatiya Janata Party,216180,164111,False,2,Communist Party of India  (Marxist),209480,45369,323433
+2014,West Bengal,Maldaha Uttar,14,1152504,10481,Indian National Congress,388609,0.3372,Communist Party of India  (Marxist),322904,65705,False,2,All India Trinamool Congress,197313,131608,375286
+2014,West Bengal,Mathurapur,10,1256214,9317,All India Trinamool Congress,627761,0.4997,Communist Party of India  (Marxist),489325,138436,False,0,,0,0,692
+2014,West Bengal,Medinipur,10,1246406,13626,All India Trinamool Congress,579860,0.4652,Communist Party of India,395194,184666,False,0,,0,0,86686
+2014,West Bengal,Murshidabad,12,1277607,10156,Communist Party of India  (Marxist),426947,0.3342,Indian National Congress,408494,18453,False,2,All India Trinamool Congress,289027,270574,423713
+2014,West Bengal,Purulia,12,1187949,16726,All India Trinamool Congress,468277,0.3942,All India Forward Bloc,314400,153877,False,1,Indian National Congress,257923,104046,251395
+2014,West Bengal,Raiganj,12,1097264,10929,Communist Party of India  (Marxist),317515,0.2894,Indian National Congress,315881,1634,False,10,Bharatiya Janata Party,203131,201497,462234
+2014,West Bengal,Ranaghat,9,1338570,14626,All India Trinamool Congress,590451,0.4411,Communist Party of India  (Marxist),388684,201767,False,1,Bharatiya Janata Party,233670,31903,157668
+2014,West Bengal,Srerampur,10,1275059,15374,All India Trinamool Congress,514933,0.4039,Communist Party of India  (Marxist),362407,152526,False,1,Bharatiya Janata Party,287712,135186,245193
+2014,West Bengal,Tamluk,10,1326041,11643,All India Trinamool Congress,716928,0.5407,Communist Party of India  (Marxist),470447,246481,True,0,,0,0,-107815
+2014,West Bengal,Uluberia,13,1177750,8277,All India Trinamool Congress,570785,0.4846,Communist Party of India  (Marxist),369563,201222,False,0,,0,0,36180

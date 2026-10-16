@@ -115,6 +115,32 @@ The control elections for the Shpilkin method — the other three referendums (s
 precincts, same turnout distribution). Early-voting points (numbers ≥ 900, `upr` = 0)
 are not part of the turnout pipeline: `analyze_extra.py` checks them (digit tests).
 
+## Voting-paradox analysis
+
+Which paradoxes from the repo-level catalogue [`paradoxes.md`](../paradoxes.md) are
+testable on a binary ZA/PROTI referendum, and what they show — report —
+[PARADOXES.md](PARADOXES.md), output — `analysis/paradoxes/`:
+
+1. **Multiple-district paradox** (it occurred): territorial splits 8 units /
+   88 districts / 3,083 stations vs the national winner + the decomposition of the
+   national totals into election-day precincts / early voting / postal-abroad
+   (on election-day ballots alone all four questions went ZA — both rejections
+   were decided by early and postal voters);
+2. **gerrymander bound**: deterministic size-constrained precinct packing for the
+   national loser (45 of 88 districts where it is near parity; arithmetic floor
+   just above 25.6%);
+3. **Art. 90 quorum margins** (no-show family): flip votes, quorum margins,
+   counterfactuals (extra registrations to void the quorum, etc.).
+
+```bash
+uv run python scripts/analyze_paradoxes.py
+```
+
+Site figures for the public page in 5 languages (together with the fraud-check
+figures) — `scripts/build_site_figures.py`; the paradoxes are a section of the
+site page — [`site/sloveniya-referendum-2026/index.html`](../site/sloveniya-referendum-2026/)
+(anchor `#paradoxes`).
+
 ## Development
 
 ```bash

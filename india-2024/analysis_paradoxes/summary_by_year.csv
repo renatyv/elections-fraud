@@ -1,0 +1,4 @@
+year,seats,median_winner_share,seats_winner_over_50,seats_winner_under_50,spoiler_seats,spoiler_seat_share,mean_spoilers_when_any
+2024,542,0.5012,279,263,182,0.3358,1.54
+2019,542,0.528,354,188,128,0.2362,1.79
+2014,543,0.4719,206,337,239,0.4401,1.78

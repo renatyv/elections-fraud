@@ -1,0 +1,13 @@
+referendum,level,n,za,proti,ties,national_winner
+preiskava,units,8,5,3,0,PROTI
+preiskava,districts,88,40,48,0,PROTI
+preiskava,stations,3083,1728,1327,28,PROTI
+socialna_pomoc,units,8,8,0,0,ZA
+socialna_pomoc,districts,88,71,17,0,ZA
+socialna_pomoc,stations,3083,2602,463,18,ZA
+volilna_pravica,units,8,6,2,0,ZA
+volilna_pravica,districts,88,64,24,0,ZA
+volilna_pravica,stations,3083,2213,842,28,ZA
+rtv_prispevek,units,8,5,3,0,PROTI
+rtv_prispevek,districts,88,46,42,0,PROTI
+rtv_prispevek,stations,3083,1857,1198,28,PROTI

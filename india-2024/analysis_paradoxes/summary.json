@@ -1,0 +1,45 @@
+{
+  "per_year": [
+    {
+      "year": 2024,
+      "seats": 542,
+      "median_winner_share": 0.5012,
+      "seats_winner_over_50": 279,
+      "seats_winner_under_50": 263,
+      "spoiler_seats": 182,
+      "spoiler_seat_share": 0.3358,
+      "mean_spoilers_when_any": 1.54
+    },
+    {
+      "year": 2019,
+      "seats": 542,
+      "median_winner_share": 0.528,
+      "seats_winner_over_50": 354,
+      "seats_winner_under_50": 188,
+      "spoiler_seats": 128,
+      "spoiler_seat_share": 0.2362,
+      "mean_spoilers_when_any": 1.79
+    },
+    {
+      "year": 2014,
+      "seats": 543,
+      "median_winner_share": 0.4719,
+      "seats_winner_over_50": 206,
+      "seats_winner_under_50": 337,
+      "spoiler_seats": 239,
+      "spoiler_seat_share": 0.4401,
+      "mean_spoilers_when_any": 1.78
+    }
+  ],
+  "bloc_mapped_vote_share_2024": 0.8569,
+  "bloc_seats_2024": {
+    "NDA": 292,
+    "INDIA": 233,
+    "OTHER": 17
+  },
+  "seats_flipped_if_india_unites": 10,
+  "seats_flipped_if_nda_unites": 2,
+  "seats_flipped_if_either_unites": 12,
+  "up_booth_spoiler_cases": 46,
+  "up_booth_significant_overlap": 27
+}

@@ -20,7 +20,9 @@ sloveniya-referendum-2026/   — Slovenia, 4 referendums on 11.10.2026: uv proje
                               against Wikipedia and election-night counting dynamics →
                               README.md, report.md; statistical fraud analysis (2,984
                               precincts, analysis-tool pipeline) →
-                              statistical_fraud_analysis.md; site figures —
+                              statistical_fraud_analysis.md; voting-paradox analysis
+                              (territorial reversals, gerrymander bound, Art. 90
+                              quorum) → PARADOXES.md; site figures —
                               scripts/build_site_figures.py
 india-2024/                  — India, Lok Sabha 2024: uv project `india2024`;
                               constituency-level results (data/results_pc), turnout
