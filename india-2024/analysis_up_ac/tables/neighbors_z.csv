@@ -1,0 +1,82 @@
+key,name,path,parent_key,registered_voters,voted,turnout,share,z_turnout,z_share,n_concelho,concelho,flag
+47-Meerut Cantt.,47-Meerut Cantt.,Uttar Pradesh > Meerut,Meerut,441117.0,245130,55.57029087520998,66.04332395055685,-1.2020212281439646,11.897364957411869,4,Uttar Pradesh,True
+116-Shekhupur,116-Shekhupur,Uttar Pradesh > Aonla,Aonla,404905.0,224901,55.54413998345291,39.857537316419226,-1.6798860027020472,-6.701095629091942,5,Uttar Pradesh,True
+122-Faridpur,122-Faridpur,Uttar Pradesh > Aonla,Aonla,340653.0,202967,59.581744473114874,42.442367478457086,0.5037698540902726,-3.496871969175997,5,Uttar Pradesh,False
+89-Agra North,89-Agra North,Uttar Pradesh > Agra,Agra,451525.0,230551,51.06051713637119,65.0276945231207,-0.12091624928601671,3.05723476240128,4,Uttar Pradesh,False
+162-Bangarmau,162-Bangarmau,Uttar Pradesh > Unnao,Unnao,361374.0,196521,54.381610187783295,44.248197393662764,-0.6744907594765952,-2.2028260373844435,5,Uttar Pradesh,False
+150-Sevata,150-Sevata,Uttar Pradesh > Sitapur,Sitapur,321836.0,216524,67.2777439441206,46.028153922890766,1.1030913208942876,1.781688222881598,5,Uttar Pradesh,False
+111-Gunnaur,111-Gunnaur,Uttar Pradesh > Badaun,Badaun,415282.0,213867,51.499222215265775,36.75228062300402,-0.2590772868925371,-1.5471309400456825,5,Uttar Pradesh,False
+113-Sahaswan,113-Sahaswan,Uttar Pradesh > Badaun,Badaun,425596.0,218261,51.28361168807977,36.85587438891969,-0.6744907594765952,-1.5278293014125404,5,Uttar Pradesh,False
+149-Biswan,149-Biswan,Uttar Pradesh > Sitapur,Sitapur,344650.0,225089,65.30944436384738,34.45836980039007,0.33438320633853574,-1.5061907049076768,5,Uttar Pradesh,False
+272-Haidergarh,272-Haidergarh,Uttar Pradesh > Barabanki,Barabanki,352548.0,223189,63.3074077856065,44.09805142726568,-1.4291413460670928,1.4153606530089864,5,Uttar Pradesh,False
+3-Saharanpur Nagar,3-Saharanpur Nagar,Uttar Pradesh > Saharanpur,Saharanpur,452509.0,270251,59.72279004395493,47.135440756925966,-1.604674686484407,1.3825237314245236,4,Uttar Pradesh,False
+48-Meerut,48-Meerut,Uttar Pradesh > Meerut,Meerut,314957.0,193038,61.290271370377546,39.04619815787565,0.6583800877853104,-1.1529768252713621,4,Uttar Pradesh,False
+87-Agra Cantt.,87-Agra Cantt.,Uttar Pradesh > Agra,Agra,481327.0,230724,47.934979753888726,49.04604635841958,-1.2280652696671712,-1.0805238846211849,4,Uttar Pradesh,False
+119-Meerganj,119-Meerganj,Uttar Pradesh > Bareilly,Bareilly,348323.0,220067,63.179003396272996,54.97280373704372,0.0,1.0578130409749193,5,Uttar Pradesh,False
+166-Bhagwantnagar,166-Bhagwantnagar,Uttar Pradesh > Unnao,Unnao,423214.0,233420,55.15413006185996,46.37177619741239,0.0,-1.0381398374962094,5,Uttar Pradesh,False
+4-Saharanpur,4-Saharanpur,Uttar Pradesh > Saharanpur,Saharanpur,368838.0,246886,66.93616167531545,30.91629334996719,0.09630617221165774,-1.000180241049329,4,Uttar Pradesh,False
+93-Fatehabad,93-Fatehabad,Uttar Pradesh > Fatehpur Sikri,Fatehpur Sikri,321836.0,192219,59.72576094656906,52.04376258330342,0.26691213952866005,0.9954829083681314,5,Uttar Pradesh,False
+268-Barabanki,268-Barabanki,Uttar Pradesh > Barabanki,Barabanki,403590.0,266748,66.09380807254887,35.3779597222847,-0.2560270096165262,-0.8600766436570091,5,Uttar Pradesh,False
+120-Bhojipura,120-Bhojipura,Uttar Pradesh > Bareilly,Bareilly,389437.0,254151,65.2611333797251,46.53729475784081,0.6744907594765952,-0.8151325183444365,5,Uttar Pradesh,False
+92-Kheragarh,92-Kheragarh,Uttar Pradesh > Fatehpur Sikri,Fatehpur Sikri,336715.0,197704,58.71553093862762,37.8323149759236,0.0,-0.7207973471736913,5,Uttar Pradesh,False
+124-Bareilly,124-Bareilly,Uttar Pradesh > Bareilly,Bareilly,462555.0,233122,50.39876339029953,53.24636885407641,-4.140065152719378,0.6744907594765953,5,Uttar Pradesh,True
+91-Fatehpur Sikri,91-Fatehpur Sikri,Uttar Pradesh > Fatehpur Sikri,Fatehpur Sikri,364446.0,224240,61.52900566887824,38.21575098109169,0.743346123019288,-0.6744907594765952,5,Uttar Pradesh,False
+146-Sitapur,146-Sitapur,Uttar Pradesh > Sitapur,Sitapur,403591.0,220552,54.6474029401052,42.13201421886902,-3.8296159339866693,0.6744907594765952,5,Uttar Pradesh,False
+267-Ram Nagar,267-Ram Nagar,Uttar Pradesh > Barabanki,Barabanki,348828.0,232675,66.70192759755524,41.25883743418932,0.0,0.6744907594765952,5,Uttar Pradesh,False
+115-Badaun,115-Badaun,Uttar Pradesh > Badaun,Badaun,381571.0,203314,53.28339941976723,48.67593967951051,3.178469376067373,0.6744907594765952,5,Uttar Pradesh,False
+165-Unnao,165-Unnao,Uttar Pradesh > Unnao,Unnao,428940.0,234980,54.781554529771064,49.4944250574517,-0.3252974609894589,0.6744907594765952,5,Uttar Pradesh,False
+126-Aonla,126-Aonla,Uttar Pradesh > Aonla,Aonla,322227.0,188987,58.65026828912537,45.80738357664813,0.0,0.6744907594765952,5,Uttar Pradesh,False
+148-Laharpur,148-Laharpur,Uttar Pradesh > Sitapur,Sitapur,362080.0,227119,62.7261931064958,38.223574425741575,-0.6744907594765952,-0.43620211951718163,5,Uttar Pradesh,False
+269-Zaidpur,269-Zaidpur,Uttar Pradesh > Barabanki,Barabanki,407291.0,278196,68.30398903977746,37.18421544522567,0.6744907594765952,-0.3887488436352955,5,Uttar Pradesh,False
+114-Bilsi,114-Bilsi,Uttar Pradesh > Badaun,Badaun,356769.0,184213,51.633690146845716,47.04608252403468,0.0,0.370815016437725,5,Uttar Pradesh,False
+1-Behat,1-Behat,Uttar Pradesh > Saharanpur,Saharanpur,374730.0,269206,71.83999146051823,35.350252223204535,1.2526753467415326,-0.3488012779038614,4,Uttar Pradesh,False
+6-Rampur Maniharan,6-Rampur Maniharan,Uttar Pradesh > Saharanpur,Saharanpur,317609.0,210001,66.11934800336263,40.09885667211108,-0.09630617221165774,0.3488012779038614,4,Uttar Pradesh,False
+164-Mohan,164-Mohan,Uttar Pradesh > Unnao,Unnao,351752.0,198632,56.469330664786554,48.89041040718514,1.148307873104635,0.3432162494590618,5,Uttar Pradesh,False
+123-Bithari Chainpur,123-Bithari Chainpur,Uttar Pradesh > Aonla,Aonla,409784.0,245450,59.89740936688597,45.538398859238136,0.6744907594765952,0.3410502076217698,5,Uttar Pradesh,False
+121-Nawabganj,121-Nawabganj,Uttar Pradesh > Bareilly,Bareilly,344105.0,218042,63.3649612763546,48.74244411627118,0.06023969337348683,-0.3255207226969436,5,Uttar Pradesh,False
+88-Agra South,88-Agra South,Uttar Pradesh > Agra,Agra,371668.0,192313,51.74322244583876,54.25634252494631,0.12091624928601923,0.2684576343320056,4,Uttar Pradesh,False
+86-Etmadpur,86-Etmadpur,Uttar Pradesh > Agra,Agra,466585.0,274379,58.80579101342735,52.18256499221879,2.6226671209297105,-0.2684576343320056,4,Uttar Pradesh,False
+49-Meerut South,49-Meerut South,Uttar Pradesh > Meerut,Meerut,497855.0,284981,57.24176718120738,41.83682420933325,-0.6583800877853081,0.19600469368182824,4,Uttar Pradesh,False
+46-Kithore,46-Kithore,Uttar Pradesh > Meerut,Meerut,370320.0,227337,61.38933895009721,41.02587788173504,0.6906014311678801,-0.1960046936818248,4,Uttar Pradesh,False
+90-Agra Rural,90-Agra Rural,Uttar Pradesh > Fatehpur Sikri,Fatehpur Sikri,447274.0,251201,56.16266539078954,44.06789781887811,-0.6744907594765952,0.03225807763755424,5,Uttar Pradesh,False
+398-Chunar,398-Chunar,Uttar Pradesh > Mirzapur,Mirzapur,358223.0,205044,57.23920574614137,0.0,0.5542632185675407,0.0,5,Uttar Pradesh,False
+399-Marihan,399-Marihan,Uttar Pradesh > Mirzapur,Mirzapur,371970.0,198250,53.29730892276259,0.0,0.0,0.0,5,Uttar Pradesh,False
+397-Majhawan,397-Majhawan,Uttar Pradesh > Mirzapur,Mirzapur,402699.0,233945,58.094258987481965,0.0,0.6744907594765952,0.0,5,Uttar Pradesh,False
+396-Mirzapur,396-Mirzapur,Uttar Pradesh > Mirzapur,Mirzapur,402550.0,193252,48.006955657682276,0.0,-0.7438673205934765,0.0,5,Uttar Pradesh,False
+395-Chhanbey,395-Chhanbey,Uttar Pradesh > Mirzapur,Mirzapur,370885.0,158907,42.84535637731372,0.0,-1.4696307685674344,0.0,5,Uttar Pradesh,False
+94-Bah,94-Bah,Uttar Pradesh > Fatehpur Sikri,Fatehpur Sikri,337043.0,163545,48.52348216696386,43.800788773732,-2.6928338323354626,0.0,5,Uttar Pradesh,False
+125-Bareilly Cantt.,125-Bareilly Cantt.,Uttar Pradesh > Bareilly,Bareilly,381747.0,191083,50.054879278684574,50.20854811783361,-4.251463892211399,0.0,5,Uttar Pradesh,True
+266-Kursi,266-Kursi,Uttar Pradesh > Barabanki,Barabanki,407025.0,287573,70.65241692770714,38.6740062523255,1.663212457633529,0.0,5,Uttar Pradesh,False
+286-Bahraich,286-Bahraich,Uttar Pradesh > Bahraich,Bahraich,408768.0,209310,51.205084546735556,0.0,-0.5300358020414376,0.0,4,Uttar Pradesh,False
+285-Mahasi,285-Mahasi,Uttar Pradesh > Bahraich,Bahraich,348042.0,212410,61.02999063331437,0.0,1.3306867458188216,0.0,4,Uttar Pradesh,False
+151-Mahmoodabad,151-Mahmoodabad,Uttar Pradesh > Sitapur,Sitapur,328210.0,211542,64.45324639712379,39.75853494814269,0.0,0.0,5,Uttar Pradesh,False
+283-Nanpara,283-Nanpara,Uttar Pradesh > Bahraich,Bahraich,354469.0,201347,56.802428421103116,0.0,0.530035802041439,0.0,4,Uttar Pradesh,False
+282-Balha,282-Balha,Uttar Pradesh > Bahraich,Bahraich,374526.0,186063,49.679595008090224,0.0,-0.8189457169117514,0.0,4,Uttar Pradesh,False
+112-Bisauli,112-Bisauli,Uttar Pradesh > Badaun,Badaun,431086.0,227442,52.760238096342725,45.05588237880426,2.17050253455058,0.0,5,Uttar Pradesh,False
+117-Dataganj,117-Dataganj,Uttar Pradesh > Aonla,Aonla,416053.0,223815,53.794829024186825,45.26327547304694,-2.625965077889568,0.0,5,Uttar Pradesh,False
+167-Purwa,167-Purwa,Uttar Pradesh > Unnao,Unnao,425126.0,241446,56.79398578303844,48.2646223172055,1.4317657938984567,0.0,5,Uttar Pradesh,False
+178-Tiloi,178-Tiloi,Uttar Pradesh > Amethi,Amethi,347745.0,124251,35.73049217098736,44.25316496446709,,,2,Uttar Pradesh,False
+182-Sareni,182-Sareni,Uttar Pradesh > Amethi,Amethi,378547.0,209194,55.26235843897852,2.0899260973068063,,,2,Uttar Pradesh,False
+274-Bikapur,274-Bikapur,Uttar Pradesh > Ayodhya,Ayodhya,392295.0,213992,54.548745204501714,0.0,,,1,Uttar Pradesh,False
+52-Bagpat,52-Bagpat,Uttar Pradesh > Bagpat,Bagpat,328632.0,189296,57.60120742958689,0.0,,,1,Uttar Pradesh,False
+67-Anupshahr,67-Anupshahr,Uttar Pradesh > Bulandshahr,Bulandshahr,383237.0,209522,54.67165226739589,54.25062761905671,,,2,Uttar Pradesh,False
+68-Debai,68-Debai,Uttar Pradesh > Bulandshahr,Bulandshahr,351635.0,193340,54.983150141481936,67.28767973518154,,,2,Uttar Pradesh,False
+145-Maholi,145-Maholi,Uttar Pradesh > Dhaurahra,Dhaurahra,385393.0,229617,59.57996123437634,40.980415213159304,,,2,Uttar Pradesh,False
+147-Hargaon,147-Hargaon,Uttar Pradesh > Dhaurahra,Dhaurahra,327449.0,208643,63.717708711891014,41.41140608599378,,,2,Uttar Pradesh,False
+241-Ayah Shah,241-Ayah Shah,Uttar Pradesh > Fatehpur,Fatehpur,280787.0,154317,54.958740967352476,43.94849562912706,,,1,Uttar Pradesh,False
+61-Noida,61-Noida,Uttar Pradesh > Gautam Buddha Nagar,Gautam Buddha Nagar,782872.0,43984,5.618287536148949,75.72753728628592,,,3,Uttar Pradesh,False
+62-Dadri,62-Dadri,Uttar Pradesh > Gautam Buddha Nagar,Gautam Buddha Nagar,729481.0,348262,47.74106522308326,63.896721433863014,,,3,Uttar Pradesh,False
+63-Jewar,63-Jewar,Uttar Pradesh > Gautam Buddha Nagar,Gautam Buddha Nagar,369824.0,203537,55.03617937180929,51.46926603025494,,,3,Uttar Pradesh,False
+54-Muradnagar,54-Muradnagar,Uttar Pradesh > Ghaziabad,Ghaziabad,468410.0,247386,52.81398774577827,62.307891311553604,,,3,Uttar Pradesh,False
+55-Sahibabad,55-Sahibabad,Uttar Pradesh > Ghaziabad,Ghaziabad,1054464.0,451395,42.80800482520029,68.90550404856057,,,3,Uttar Pradesh,False
+56-Ghaziabad,56-Ghaziabad,Uttar Pradesh > Ghaziabad,Ghaziabad,476653.0,227660,47.76220856681905,60.26794342440481,,,3,Uttar Pradesh,False
+224-Mauranipur,224-Mauranipur,Uttar Pradesh > Jhansi,Jhansi,423067.0,154748,36.57765791234013,42.22219350169308,,,1,Uttar Pradesh,False
+2-Nakur,2-Nakur,Uttar Pradesh > Kairana,Kairana,360523.0,195138,54.12636641767654,35.192530414373415,,,2,Uttar Pradesh,False
+7-Gangoh,7-Gangoh,Uttar Pradesh > Kairana,Kairana,387637.0,245122,63.234933713757975,41.19826045805762,,,2,Uttar Pradesh,False
+287-Payagpur,287-Payagpur,Uttar Pradesh > Kaiserganj,Kaiserganj,388497.0,219684,56.547154804284204,52.385244259937004,,,2,Uttar Pradesh,False
+288-Kaiserganj,288-Kaiserganj,Uttar Pradesh > Kaiserganj,Kaiserganj,392197.0,222884,56.82960349008279,45.0853358697798,,,2,Uttar Pradesh,False
+175-Lucknow Cantonment,175-Lucknow Cantonment,Uttar Pradesh > Lucknow,Lucknow,371558.0,183694,49.43884938556026,57.72861389049179,,,1,Uttar Pradesh,False
+152-Sidhauli,152-Sidhauli,Uttar Pradesh > Mohanlalganj,Mohanlalganj,361942.0,241169,66.6319465549729,33.435474708606826,,,1,Uttar Pradesh,False
+177-Bachhrawan,177-Bachhrawan,Uttar Pradesh > Rae Bareli,Rae Bareli,346856.0,190456,54.90924187559102,29.385264838072835,,,2,Uttar Pradesh,False
+183-Unchahar,183-Unchahar,Uttar Pradesh > Rae Bareli,Rae Bareli,349371.0,200126,57.28180072186873,26.463827788493248,,,2,Uttar Pradesh,False
+291-Tulsipur,291-Tulsipur,Uttar Pradesh > Shrawasti,Shrawasti,378544.0,188486,49.792362314552605,41.790371698693804,,,1,Uttar Pradesh,False

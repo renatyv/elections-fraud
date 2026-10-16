@@ -26,13 +26,20 @@ india-2024/                  — India, Lok Sabha 2024: uv project `india2024`;
                               constituency-level results (data/results_pc), turnout
                               (data/turnout), Uttar Pradesh Form20 (data/form20),
                               wayback snapshots (data/wayback); 2014/2019 controls
-                              (data/control_*); scripts/ — download and parsing
+                              (data/control_*); scripts/ — download and parsing;
+                              statistical fraud analysis → REPORT.md (national PC +
+                              UP assembly segments + UP booth digit tests, 2014
+                              booth-level control); analysis-tool inputs in data/mai_*
+                              (scripts/build_mai_datasets.py); publishable booth
+                              dataset + provenance → release/ (DATACARD.md; unique —
+                              first public PS-level 2024 dataset)
 site/                        — public website for Vercel (static, deployed from
                               the site/ root): landing page site/index.html + country
                               sections — Minto pyramid, images swapped from
                               img/<lang>/ by language: Slovenian (5 languages
                               SL/EN/HR/IT/HU), Brazilian (PT/EN/ES/RU),
-                              Portuguese (PT/EN) → README.md in each section
+                              Portuguese (PT/EN), Indian (EN/HI)
+                              → README.md in each section
 analysis-tool/               — election forensics (pandas/sklearn, uv): Shpilkin,
                               Klimek fingerprints, Kobak integer peaks, Benford/
                               last-digit, outliers vs neighbors, Isolation

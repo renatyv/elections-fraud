@@ -1,0 +1,241 @@
+{
+  "title": "Uttar Pradesh 2024 (Form 20 assembly segments)",
+  "national": {
+    "n_units": 81,
+    "registered": 32426250,
+    "voted": 17742025,
+    "turnout_pct": 54.71500713156779,
+    "blank_pct": 0.0,
+    "null_pct": 0.006526876159852103,
+    "share:BJP": 39.925070559871266,
+    "share:SP": 23.25104941515977,
+    "share:INC": 17.010555446742973,
+    "share:BSP": 8.1979030014894,
+    "share:ASPKR": 0.03795508122663563,
+    "share:ADAL": 2.3650062492866515,
+    "share:Others": 2.439862417057805
+  },
+  "leader": "BJP",
+  "n_units": 81,
+  "shpilkin": {
+    "party": "BJP",
+    "t_cut": 82.82780648505828,
+    "t_cut_source": "controls",
+    "mode": 55.25,
+    "sigma": 7.482852829727247,
+    "total_votes_party": 7083516,
+    "tail_voters": 0,
+    "tail_votes_party": 0,
+    "tail_share_of_party": 0.0,
+    "observed_share_pct": 39.925070559871266,
+    "honest_share_pct": 39.925070559871266
+  },
+  "fingerprint": {
+    "party": "BJP",
+    "weight_anom": 0.86105024287554,
+    "mean_anom": [
+      54.825458716832095,
+      47.641699677170706
+    ],
+    "mean_main": [
+      53.63147322145792,
+      0.1631899689973961
+    ],
+    "anom_cluster_voters": 27934644,
+    "anom_cluster_votes_party": 7079144,
+    "total_voters": 32426250,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 0.0,
+    "null_pct": 0.7098765432098765,
+    "z": -0.7634761964508555,
+    "z_mult5": -0.54
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 13.580246913580247,
+    "null_pct": 14.537037037037036,
+    "z": -0.872873625752242,
+    "z_mult5": -0.39
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "BJP",
+      "n_numbers": 70,
+      "min_count": 10,
+      "chi2": 10.921763006159615,
+      "dof": 9,
+      "p_value": 0.2811098515348446,
+      "p_null_mc": 0.3341645885286783,
+      "max_dev": 6.603501711740496
+    },
+    {
+      "test": "benford2",
+      "party": "SP",
+      "n_numbers": 46,
+      "min_count": 10,
+      "chi2": 7.238014659171702,
+      "dof": 9,
+      "p_value": 0.612353799619476,
+      "p_null_mc": 0.6184538653366584,
+      "max_dev": 7.597290531616273
+    },
+    {
+      "test": "benford2",
+      "party": "INC",
+      "n_numbers": 29,
+      "min_count": 10,
+      "chi2": 9.965335636578342,
+      "dof": 9,
+      "p_value": 0.3532987848388249,
+      "p_null_mc": 0.4389027431421446,
+      "max_dev": 8.499735205769223
+    },
+    {
+      "test": "benford2",
+      "party": "BSP",
+      "n_numbers": 70,
+      "min_count": 10,
+      "chi2": 2.9341189964730634,
+      "dof": 9,
+      "p_value": 0.9668496681290406,
+      "p_null_mc": 0.9775561097256857,
+      "max_dev": 3.4035643851634614
+    },
+    {
+      "test": "benford2",
+      "party": "Others",
+      "n_numbers": 81,
+      "min_count": 10,
+      "chi2": 17.463181295455346,
+      "dof": 9,
+      "p_value": 0.041937773933353246,
+      "p_null_mc": 0.059850374064837904,
+      "max_dev": 8.526945259397811
+    },
+    {
+      "test": "benford2",
+      "party": "ADAL",
+      "n_numbers": 5,
+      "min_count": 10,
+      "chi2": 8.378093706759014,
+      "dof": 9,
+      "p_value": 0.4965376635797518,
+      "p_null_mc": 0.5411471321695761,
+      "max_dev": 29.11785009944918
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "BJP",
+      "n_numbers": 70,
+      "min_count": 100,
+      "chi2": 9.714285714285714,
+      "dof": 9,
+      "p_value": 0.3741067317666199,
+      "p_null_mc": 0.3915211970074813,
+      "max_dev": 7.142857142857142
+    },
+    {
+      "test": "last",
+      "party": "SP",
+      "n_numbers": 46,
+      "min_count": 100,
+      "chi2": 6.17391304347826,
+      "dof": 9,
+      "p_value": 0.7223940524219941,
+      "p_null_mc": 0.7531172069825436,
+      "max_dev": 7.82608695652174
+    },
+    {
+      "test": "last",
+      "party": "INC",
+      "n_numbers": 29,
+      "min_count": 100,
+      "chi2": 8.586206896551722,
+      "dof": 9,
+      "p_value": 0.476312894865197,
+      "p_null_mc": 0.5236907730673317,
+      "max_dev": 10.689655172413792
+    },
+    {
+      "test": "last",
+      "party": "BSP",
+      "n_numbers": 70,
+      "min_count": 100,
+      "chi2": 12.571428571428571,
+      "dof": 9,
+      "p_value": 0.18297658027483887,
+      "p_null_mc": 0.17955112219451372,
+      "max_dev": 8.571428571428571
+    },
+    {
+      "test": "last",
+      "party": "Others",
+      "n_numbers": 81,
+      "min_count": 100,
+      "chi2": 18.876543209876544,
+      "dof": 9,
+      "p_value": 0.026263324954716418,
+      "p_null_mc": 0.032418952618453865,
+      "max_dev": 9.753086419753085
+    },
+    {
+      "test": "last",
+      "party": "ADAL",
+      "n_numbers": 5,
+      "min_count": 100,
+      "chi2": 9.0,
+      "dof": 9,
+      "p_value": 0.43727418891386727,
+      "p_null_mc": 0.7231920199501247,
+      "max_dev": 30.000000000000004
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "BJP",
+      "pearson_w": -0.2922209794823486,
+      "spearman": -0.2698928034000669
+    },
+    {
+      "party": "SP",
+      "pearson_w": 0.07713644981064266,
+      "spearman": -0.08026851506914949
+    },
+    {
+      "party": "INC",
+      "pearson_w": 0.2467989792075409,
+      "spearman": 0.3307609606942978
+    },
+    {
+      "party": "BSP",
+      "pearson_w": -0.1665991667113512,
+      "spearman": -0.04490676169173365
+    },
+    {
+      "party": "Others",
+      "pearson_w": -0.04992518878758678,
+      "spearman": -0.041124661246612466
+    },
+    {
+      "party": "ADAL",
+      "pearson_w": -0.06623929076732073,
+      "spearman": -0.1489904054243517
+    }
+  ],
+  "neighbors_flagged": 4,
+  "ml_flagged": 1,
+  "selftest": {
+    "t_cut": 71.83999146051823,
+    "clean_tail_party": 0,
+    "injected_added_ballots_party": 574712,
+    "injected_tail_party": 874205,
+    "signal_growth": 874205.0,
+    "peaks_z_clean": -0.7035623639735143,
+    "peaks_z_rounded": 8.1344722357518,
+    "n_rounded_units": 7
+  }
+}

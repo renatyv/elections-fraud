@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India, Lok Sabha 2024 — statistical fraud check</title>
+<meta name="description" content="Independent election-forensics analysis of the Indian 2024 Lok Sabha election: no statistical traces of manipulation at the levels official data allows. Includes a booth-level dataset for Uttar Pradesh recovered from scanned Form 20 PDFs.">
+<meta property="og:title" content="India, Lok Sabha 2024 — statistical fraud check">
+<meta property="og:description" content="Independent election-forensics analysis of the Indian 2024 Lok Sabha election: no statistical traces of manipulation at the levels official data allows. Includes a booth-level dataset for Uttar Pradesh recovered from scanned Form 20 PDFs.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff9933'/%3E%3Crect y='22' width='64' height='21' fill='white'/%3E%3Crect y='42' width='64' height='22' fill='%23138808'/%3E%3Ccircle cx='32' cy='32' r='8' fill='none' stroke='%23000080' stroke-width='3'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#16324f; --muted:#5b6b7b; --line:#e3e8ee; --bg:#f4f7fa; --card:#ffffff;
+    --green:#1e8e5a; --green-soft:#e7f4ee; --red:#c0392b; --red-soft:#faecea;
+    --amber:#8a6116; --amber-soft:#fdf6e7; --blue:#3b82c4; --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+  main{max-width:960px;margin:0 auto;padding:0 18px 60px}
+  header.top{position:sticky;top:0;z-index:10;background:rgba(244,247,250,.92);backdrop-filter:blur(6px);
+             border-bottom:1px solid var(--line)}
+  header.top .bar{max-width:960px;margin:0 auto;padding:10px 18px;display:flex;justify-content:space-between;
+                  align-items:center;gap:12px;flex-wrap:wrap}
+  .brand{font-weight:700;font-size:14px;letter-spacing:.2px}
+  .brand .flag{display:inline-block;width:20px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-1px;
+               background:linear-gradient(180deg,#ff9933 33%,#ffffff 33%,#ffffff 66%,#138808 66%)}
+  .bar .right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  a.home{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+         padding:4px 12px;font-size:13px;text-decoration:none}
+  a.home:hover{border-color:var(--ink)}
+  .langs{display:flex;gap:6px;flex-wrap:wrap}
+  .langs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+                padding:4px 12px;font-size:13px;cursor:pointer}
+  .langs button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .hero{background:linear-gradient(160deg,#16324f,#1d4468);color:#fff;border-radius:0 0 var(--radius) var(--radius);
+        padding:44px 24px 40px;margin:0 -18px}
+  .hero-inner{max-width:860px;margin:0 auto}
+  .kicker{font-size:13px;text-transform:uppercase;letter-spacing:1.4px;color:#9fc3e2;font-weight:600}
+  h1{font-size:clamp(24px,4.6vw,38px);line-height:1.18;margin:10px 0 22px;font-weight:800}
+  .verdict{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);
+           padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+  .verdict .check{flex:none;width:44px;height:44px;border-radius:50%;background:var(--green);display:flex;
+                  align-items:center;justify-content:center;font-size:24px;color:#fff;margin-top:2px}
+  .verdict h2{margin:0 0 6px;font-size:clamp(18px,3vw,23px)}
+  .verdict p{margin:0;color:#dce8f2;font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;
+        padding:6px 14px;font-size:13.5px}
+  .chip b{font-size:15px}
+  section{margin-top:44px}
+  h3.sect{font-size:clamp(19px,3vw,25px);margin:0 0 6px;font-weight:800}
+  p.sect-sub{margin:0 0 18px;color:var(--muted);font-size:15px}
+  .res-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px 16px;
+            border-left:5px solid var(--green)}
+  .res-card h4{margin:0 0 2px;font-size:16.5px}
+  .res-card .sub{color:var(--muted);font-size:13px;margin-bottom:14px}
+  .p-row{display:grid;grid-template-columns:74px 1fr 62px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+  .p-name{font-weight:700;text-align:right;white-space:nowrap}
+  .p-track{height:14px;border-radius:7px;background:#edf1f5;overflow:hidden}
+  .p-fill{height:100%;background:var(--blue);border-radius:7px}
+  .p-row.rest .p-fill{background:#b8c4cf}
+  .p-row.rest .p-name{font-weight:600;color:var(--muted)}
+  .p-pct{font-weight:700;font-variant-numeric:tabular-nums}
+  .p-note{margin:12px 0 0;color:var(--muted);font-size:13px}
+  .args{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+  .arg{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+  .arg .num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;
+            align-items:center;justify-content:center;font-weight:800;font-size:15px;margin-bottom:10px}
+  .arg h4{margin:0 0 8px;font-size:16.5px}
+  .arg p{margin:0;font-size:14.5px;color:#2c4358}
+  figure{margin:0}
+  .fig{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+  .fig img{width:100%;height:auto;border-radius:8px;display:block}
+  .fig figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+  .figs{display:grid;gap:14px}
+  .m-list{display:grid;gap:10px}
+  .m{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:0;display:block}
+  .m summary{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;cursor:pointer;list-style:none;
+             border-radius:var(--radius)}
+  .m summary::-webkit-details-marker{display:none}
+  .m summary:hover{background:#f6f9fc}
+  .m .badge{flex:none;margin-top:2px;background:var(--green-soft);color:var(--green);font-weight:800;font-size:12.5px;
+            border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .m .m-head{flex:1;min-width:0}
+  .m h5{margin:0 0 3px;font-size:15px}
+  .m p{margin:0;font-size:14px;color:#2c4358}
+  .m summary::after{content:"";flex:none;width:8px;height:8px;margin-top:7px;
+                    border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);
+                    transform:rotate(45deg);transition:transform .18s ease}
+  .m[open] summary::after{transform:rotate(225deg)}
+  .m-details{padding:2px 16px 16px;border-top:1px solid var(--line)}
+  .m-details p{margin:12px 0 0;font-size:14px;color:#2c4358}
+  .m-figs{display:grid;gap:12px;margin-top:12px}
+  .limits{background:var(--amber-soft);border:1px solid #ecd9ad;border-radius:var(--radius);padding:20px 22px}
+  .limits h3.sect{color:var(--amber)}
+  .limits ul{margin:10px 0 0;padding-left:20px}
+  .limits li{margin-bottom:9px;font-size:14.5px;color:#4a3d20}
+  .limits li:last-child{margin-bottom:0}
+  .data{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
+  .data ul{margin:10px 0 0;padding-left:20px}
+  .data li{margin-bottom:9px;font-size:14.5px;color:#2c4358}
+  .data a{color:var(--blue)}
+  footer{margin-top:46px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}
+  footer a{color:var(--blue)}
+</style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <div class="brand"><span class="flag"></span><span data-i18n="brand">India · Lok Sabha · April–June 2024</span></div>
+    <div class="right">
+      <a class="home" href="../" data-i18n="home">← All analyses</a>
+      <nav class="langs" aria-label="Language">
+        <button data-lang="hi">हिन्दी</button>
+        <button data-lang="en" aria-pressed="true">English</button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ══ MINTO: ANSWER ══ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="kicker" data-i18n="kicker">Independent statistical audit</div>
+      <h1 data-i18n="h1">India voted over seven phases in 2024. Do the numbers add up?</h1>
+      <div class="verdict">
+        <div class="check">✓</div>
+        <div>
+          <h2 data-i18n="verdict_title">Verdict: no statistical traces of manipulation — at the levels official data allows</h2>
+          <p data-i18n="verdict_text">I ran the standard election-forensics tests on every level India publishes: the official constituency results of all 542 contested constituencies, and — recovered from scanned Form 20 PDFs via the Wayback Machine — the booth-level count of 109,952 polling stations of Uttar Pradesh. Every applicable test is consistent with an honest count. The honest caveat: India publishes no per-station electorate for 2024, so the turnout-based booth tests are impossible this year — see “What this analysis cannot see”.</p>
+        </div>
+      </div>
+      <div class="chips">
+        <div class="chip"><b>542</b> <span data-i18n="chip_units">constituencies analysed</span></div>
+        <div class="chip"><b>646M</b> <span data-i18n="chip_votes">ballots checked (66.1% turnout)</span></div>
+        <div class="chip"><b>109,952</b> <span data-i18n="chip_booths">UP polling stations recovered from Form 20 PDFs</span></div>
+        <div class="chip"><b>0</b> <span data-i18n="chip_tail">votes in the high-turnout anomaly zone</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ MINTO: SITUATION ══ -->
+  <section>
+    <h3 class="sect" data-i18n="sit_title">What was decided in April–June 2024</h3>
+    <p class="sect-sub" data-i18n="sit_intro">General election to the Lok Sabha (543 seats, seven phases from 19 April to 1 June). The BJP won 240 seats with 36.5% of the vote; the Indian National Congress 99 seats with 21.2%. The NDA returned to government with a reduced majority. National turnout: 66.1% — 646 million ballots.</p>
+    <div class="res-card">
+      <h4 data-i18n="res_title">National result — 542 contested constituencies</h4>
+      <div class="sub" data-i18n="res_sub">percentages of ballots polled · rejected ballots 1.15% · NOTA 0.99%</div>
+      <div class="p-row"><span class="p-name">BJP</span><div class="p-track"><div class="p-fill" style="width:36.5%"></div></div><span class="p-pct">36.5%</span></div>
+      <div class="p-row"><span class="p-name">INC</span><div class="p-track"><div class="p-fill" style="width:21.2%"></div></div><span class="p-pct">21.2%</span></div>
+      <div class="p-row"><span class="p-name">SP</span><div class="p-track"><div class="p-fill" style="width:4.6%"></div></div><span class="p-pct">4.6%</span></div>
+      <div class="p-row"><span class="p-name">AITC</span><div class="p-track"><div class="p-fill" style="width:4.4%"></div></div><span class="p-pct">4.4%</span></div>
+      <div class="p-row"><span class="p-name">IND</span><div class="p-track"><div class="p-fill" style="width:2.8%"></div></div><span class="p-pct">2.8%</span></div>
+      <div class="p-row"><span class="p-name">YSRCP</span><div class="p-track"><div class="p-fill" style="width:2.1%"></div></div><span class="p-pct">2.1%</span></div>
+      <div class="p-row"><span class="p-name">BSP</span><div class="p-track"><div class="p-fill" style="width:2.0%"></div></div><span class="p-pct">2.0%</span></div>
+      <div class="p-row"><span class="p-name">TDP</span><div class="p-track"><div class="p-fill" style="width:2.0%"></div></div><span class="p-pct">2.0%</span></div>
+      <div class="p-row"><span class="p-name">DMK</span><div class="p-track"><div class="p-fill" style="width:1.8%"></div></div><span class="p-pct">1.8%</span></div>
+      <div class="p-row rest"><span class="p-name" data-i18n="p_rest">others + NOTA</span><div class="p-track"><div class="p-fill" style="width:22.6%"></div></div><span class="p-pct">22.6%</span></div>
+      <p class="p-note" data-i18n="res_note">Surat was won without a poll (unopposed) and has no count. The booth-level recovery covers Uttar Pradesh — 80 constituencies, 12.6% of the national electorate — which is also the state every serious 2024 fraud debate concentrated on.</p>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: KEY ARGUMENTS ══ -->
+  <section>
+    <h3 class="sect" data-i18n="why_title">Three reasons the numbers can be trusted — at these levels</h3>
+    <div class="args">
+      <div class="arg">
+        <div class="num">1</div>
+        <h4 data-i18n="a1_t">The high-turnout zone is empty</h4>
+        <p data-i18n="a1_b">Constituency turnout is one bell curve that dies out by ~80%. Beyond the 87.6% boundary — the upper percentile of the honest 2014 election, not fitted to 2024 — stand zero votes: not a single constituency, nationally or among Uttar Pradesh's assembly segments. Ballot-stuffing shifts mass precisely into that 88–100% zone.</p>
+      </div>
+      <div class="arg">
+        <div class="num">2</div>
+        <h4 data-i18n="a2_t">The winner's result does not grow with turnout</h4>
+        <p data-i18n="a2_b">In the turnout × result scatter the BJP cloud slopes slightly DOWN (weighted correlation −0.12 nationally, −0.29 in UP's assembly segments) — the comet-tail signature of stuffing is a strongly positive slope. The positive correlations that do exist belong to regional opposition parties in their own strongholds: ordinary voter heterogeneity.</p>
+      </div>
+      <div class="arg">
+        <div class="num">3</div>
+        <h4 data-i18n="a3_t">110,000 recovered UP stations behave like the honest control</h4>
+        <p data-i18n="a3_b">The counting records (Form 20) of 109,952 polling stations — scanned PDFs recovered from the Wayback Machine, transcribed and arithmetically checksummed row by row — show flat last-digit distributions and no excess of round-number shares. The same tests on the honest 2014 booths give the same picture; and the self-test proves the toolkit detects injected fraud (signal ×17.6 million).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: SUPPORTING EVIDENCE ══ -->
+  <section>
+    <div class="figs">
+      <figure class="fig">
+        <img src="img/en/turnout.png" data-fig="turnout" alt="Constituency turnout 2024 vs 2014: one bell curve each, no high-turnout tail" loading="lazy">
+        <figcaption data-i18n="fig1_cap">Turnout of the 542 contested constituencies in 2024 against the 2014 control. One bell curve, fading out by ~80%; the 88–100% zone where stuffing lands contains nothing.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="img/en/comet.png" data-fig="comet" alt="Turnout vs BJP, INC and SP share: clouds slope flat or down, no comet tail" loading="lazy">
+        <figcaption data-i18n="fig2_cap">Each dot is a constituency (size = electors). The BJP share does not rise with turnout (r = −0.12); the cloud even slopes slightly down — the opposite of a stuffing “comet”.</figcaption>
+      </figure>
+      <figure class="fig">
+        <img src="img/en/booths.png" data-fig="booths" alt="UP booth counts: last digits flat against the 2014 control; integer shares at or below the null" loading="lazy">
+        <figcaption data-i18n="fig3_cap">Left: last digits of BJP vote counts (counts ≥ 100) in 2024 and in the honest 2014 control — both flat. Right: share of stations with an exactly integer BJP share, at or below the Monte-Carlo expectation in both years.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h3 class="sect" data-i18n="meth_title">How I checked</h3>
+    <p class="sect-sub" data-i18n="meth_intro">The same families of tests used on this site for Slovenia, Brazil and Portugal, run with open-source code on official ECI exports plus the recovered Form 20 tables. Summary: all clean at the available levels.</p>
+    <div class="m-list">
+      <details class="m">
+        <summary>
+          <span class="badge">✓</span>
+          <span class="m-head">
+            <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
+            <p data-i18n="m1_b">Beyond the honest-decline boundary: zero votes for the leader — nationally and in UP. Recounting without the anomaly zone moves nothing.</p>
+          </span>
+        </summary>
+        <div class="m-details">
+          <p data-i18n="m1_d">The Shpilkin method models the honest bell curve of turnout and measures the votes beyond its decline. The boundary (87.6%) is not fitted to 2024: it is the 99.5th percentile of the 2014 election's elector-weighted turnout. To its right stand zero constituencies and zero votes; the “result without the anomalous zone” (36.73%) differs from the observed one (36.50%) only because there is nothing to remove. In Uttar Pradesh's 81 assembly segments with published electors: boundary 82.8% (from UP-2014), tail zero.</p>
+          <div class="m-figs">
+            <figure class="fig">
+              <img src="img/details/en/shpilkin_core.png" loading="lazy" alt="Turnout histogram with the 87.6% boundary and leader votes by turnout">
+              <figcaption data-i18n="m1_c1">Constituency turnout with the 87.6% anomaly boundary, and BJP votes by turnout — the zone beyond the boundary is empty.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="img/details/en/controls_turnout.png" loading="lazy" alt="Turnout distributions of 2014 and 2024">
+              <figcaption data-i18n="m1_c2">Control: turnout distributions of 2014 and 2024 over the constituencies — same shape, same ceiling; no drift toward a high-turnout tail.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+      <details class="m">
+        <summary>
+          <span class="badge">✓</span>
+          <span class="m-head">
+            <h5 data-i18n="m2_t">Turnout × result scatter and fingerprints</h5>
+            <p data-i18n="m2_b">No “comet tail”, no separated second cluster in the 2D fingerprint — the structure that appears is geography and alliance arithmetic.</p>
+          </span>
+        </summary>
+        <div class="m-details">
+          <p data-i18n="m2_d">In a manipulated count the turnout × result cloud stretches up-right: high-turnout units carry a sharply higher leader share. Here BJP's correlation with turnout is negative (−0.12 nationally, −0.29 in UP segments). The Klimek fingerprint (2D density of turnout × leader share) finds no separated cluster; the second Gaussian component (weight 0.18) is degenerate — pinned near zero share. The correlations that are positive (AITC +0.38, YSRCP +0.33) belong to regional parties whose strongholds vote more — mirrored between government and opposition, i.e. heterogeneity, not direction.</p>
+          <div class="m-figs">
+            <figure class="fig">
+              <img src="img/details/en/comet_scatter.png" loading="lazy" alt="Turnout vs BJP share cloud, compact and flat">
+              <figcaption data-i18n="m2_c1">Turnout vs BJP share, one dot per constituency (area = electors): a compact horizontal band, no up-right tail.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="img/details/en/fingerprint_2d.png" loading="lazy" alt="2D fingerprint: one main mass, no fraud cluster">
+              <figcaption data-i18n="m2_c2">2D election fingerprint weighted by electors: one main mass; the compact up-right cluster typical of manipulated elections is absent.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="img/details/en/correlations.png" loading="lazy" alt="Turnout × share correlation by party, nationally and by state">
+              <figcaption data-i18n="m2_c3">Turnout × share correlation by party (bars) and by state (heatmap). The leader's is negative; regional parties' positives mirror each other across the alliance divide.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+      <details class="m">
+        <summary>
+          <span class="badge">✓</span>
+          <span class="m-head">
+            <h5 data-i18n="m3_t">Round-number peaks (Kobak et al.)</h5>
+            <p data-i18n="m3_b">No excess of exactly-integer turnouts or leader shares — at the constituency level, and across 105,000 recovered UP stations the integer-share rate is BELOW expectation (z = −3.1).</p>
+          </span>
+        </summary>
+        <div class="m-details">
+          <p data-i18n="m3_d">Numbers invented at a desk cluster on round values. Among 542 constituencies, 1.11% have exactly integer turnout vs 0.98% expected (z = +0.3) — at ~1.8M electors per unit the test is nearly vacuous, and reported only for completeness. Where the data is fine-grained it is clean too: across the recovered UP stations, 7.85% have an exactly integer BJP share vs 7.95% expected from the binomial null — a deficit, the opposite of the desk-drawn signature. The honest 2014 booth control gives the same picture (turnout peaks 2.02% vs 2.05%, z = −1.1).</p>
+          <div class="m-figs">
+            <figure class="fig">
+              <img src="img/details/en/integer_peaks.png" loading="lazy" alt="Turnout histogram with 5% gridlines and observed vs Monte-Carlo integer-turnout share">
+              <figcaption data-i18n="m3_c1">Left: constituency turnout, gridlines at multiples of 5 — no spikes. Right: 1.11% exactly-integer turnouts vs the 0.98% Monte-Carlo expectation.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="img/details/en/booth2014_integer_peaks.png" loading="lazy" alt="2014 booth-level integer turnout peaks at null">
+              <figcaption data-i18n="m3_c2">The same test on the 2014 booth control (137,969 stations): 2.02% integer turnouts vs 2.05% expected (z = −1.1). This is what honest UP booth data looks like.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+      <details class="m">
+        <summary>
+          <span class="badge">✓</span>
+          <span class="m-head">
+            <h5 data-i18n="m4_t">Digit tests (Benford, last digit)</h5>
+            <p data-i18n="m4_b">Last digits flat everywhere. The only borderline value — SP's last digit in UP booths (p = 0.03, +0.4 pp on 0s) — is an order of magnitude smaller than invented-number signatures and mirrors 2014's benign profile.</p>
+          </span>
+        </summary>
+        <div class="m-details">
+          <p data-i18n="m4_d">Benford's law on second digits rejects its smooth-count null at booth level (p ≈ 0.002, deviation ≤1.3 pp) — but identically for all four major parties and identically in the honest 2014 control: a stable structural property of UP's booth-size mixture (urban/rural regimes), not a party-specific fabrication trace. Last-digit uniformity — the classic Beber–Scacco test — holds for BJP (p = 0.46), INC (0.25) and BSP (0.06); SP shows the single mildest deviation of this whole analysis (+0.37 pp on trailing 0s, −0.25 pp on 8s; p_mc = 0.027), an order of magnitude below documented fabrication effects. Worth re-checking when the remaining ACs are recovered — not a fraud finding.</p>
+          <div class="m-figs">
+            <figure class="fig">
+              <img src="img/details/en/booth2024_digit_last.png" loading="lazy" alt="Last-digit distribution of UP booth counts against uniformity">
+              <figcaption data-i18n="m4_c1">Last digits of booth-level counts (parties pooled), against the uniform expectation and its 95% Monte-Carlo band: within the band everywhere.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="img/details/en/digit_benford2.png" loading="lazy" alt="Second digits at constituency level against Benford's law">
+              <figcaption data-i18n="m4_c2">Constituency-level second digits against Benford's law: comfortable (BJP p_mc = 0.29). At booth level the same test deviates equally in 2024 and in the honest 2014 control — structure, not fraud.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+      <details class="m">
+        <summary>
+          <span class="badge">✓</span>
+          <span class="m-head">
+            <h5 data-i18n="m5_t">Outliers, machine learning, and the swing vs 2014</h5>
+            <p data-i18n="m5_b">19 of 542 constituencies (3.5%) are neighbour-outliers and 6 are ML-anomalies — small and scattered, audit candidates by construction. Not one constituency combines a 15-point turnout jump with a 15-point leader jump against 2014.</p>
+          </span>
+        </summary>
+        <div class="m-details">
+          <p data-i18n="m5_d">Each constituency is a z-score against the median of its own state: 19 exceed |z| > 4 — an ordinary tail, mixed directions, no clustering. 507 constituencies matched by name between 2014 and 2024: zero double-jumps (turnout AND leader share up sharply together), the sharpest cross-election manipulation signature. The Δ-turnout/Δ-share cloud is structureless.</p>
+          <div class="m-figs">
+            <figure class="fig">
+              <img src="img/details/en/neighbors_outliers.png" loading="lazy" alt="Neighbour outliers in the robust-z plane, both directions">
+              <figcaption data-i18n="m5_c1">The 19 outliers in the plane of robust z of turnout × robust z of BJP share: scattered both ways, no high-turnout clustering.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="img/details/en/swing_previous.png" loading="lazy" alt="Turnout swing vs BJP share swing 2014 to 2024; the double-jump corner is empty">
+              <figcaption data-i18n="m5_c2">Swing in turnout × swing in BJP share, 2014 → 2024, one dot per matched constituency: the up-right double-jump corner is empty.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+      <details class="m">
+        <summary>
+          <span class="badge">✓</span>
+          <span class="m-head">
+            <h5 data-i18n="m6_t">The Form 20 recovery itself: arithmetically exact</h5>
+            <p data-i18n="m6_b">1.16 million station-candidate rows parsed under per-row checksums; against the official ECI constituency totals nothing exceeds the official count anywhere, and 11 fully-recovered constituencies match within ±0.5%.</p>
+          </span>
+        </summary>
+        <div class="m-details">
+          <p data-i18n="m6_d">The UP Form 20s are scans and prints scattered across 54 district websites, most of them gone; everything was recovered from the Wayback Machine and a government CDN. Every parsed row must satisfy sum(candidates) = valid and valid + NOTA + rejected = total under exactly one reading of the table layout; rows that fail are withheld, not guessed. Aggregated and compared with the official ECI export: every delta is ≤ 0 — the recovery never counts more votes than the official result — and where the source files are complete the match is within half a percent. Party labels for candidate columns were assigned by matching each constituency's column sums to the official candidate totals (validated &lt;5% deviation wherever station coverage exceeds 90%).</p>
+          <div class="m-figs">
+            <figure class="fig">
+              <img src="img/details/en/booth2014_shpilkin_core.png" loading="lazy" alt="2014 booth-level Shpilkin baseline: 0.75% tail">
+              <figcaption data-i18n="m6_c1">The 2014 booth-level control — the one year with official per-station electors: Shpilkin tail 0.75% of BJP votes, turnout×BJP correlation +0.06. This is the honest baseline the 2024 statistics sit inside.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+      <details class="m">
+        <summary>
+          <span class="badge">✓</span>
+          <span class="m-head">
+            <h5 data-i18n="m7_t">Self-test: the toolkit actually detects fraud</h5>
+            <p data-i18n="m7_b">Synthetic stuffing injected into the clean data fires every alarm (anomaly-zone signal from 0 to 17.6M votes; round-number z from 0.4 to 11.8). The “clean” verdict is a measurement, not a blind spot.</p>
+          </span>
+        </summary>
+        <div class="m-details">
+          <p data-i18n="m7_d">A clean verdict is only meaningful if the tools can fire. Injecting additive stuffing into the 2024 constituencies grows the anomalous-zone estimate from zero to 17.6 million votes and drives the integer-peak statistic from z = 0.4 to 11.8; in the UP assembly segments the signal reaches 0.87M; at 2014 booth level the tail multiplies ×7. On this data the machinery would see millions of stuffed ballots — it sees none.</p>
+          <div class="m-figs">
+            <figure class="fig">
+              <img src="img/details/en/selftest.png" loading="lazy" alt="Self-test: injected stuffing creates the tail the real data lacks">
+              <figcaption data-i18n="m7_c1">Self-test: the injected mass appears exactly where honest distributions never reach, and every statistic fires. The real 2024 data (blue) stays flat.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: LIMITS ══ -->
+  <section>
+    <div class="limits">
+      <h3 class="sect" data-i18n="lim_title">What this analysis cannot see</h3>
+      <p class="sect-sub" style="color:#7a6a3d" data-i18n="lim_intro">Honest limits — statistics shows anomalies, not intentions; and here it also has honest blind spots.</p>
+      <ul>
+        <li data-i18n="l1"><b>Granularity.</b> The national tests run on 542 units of ~1.8 million electors each. Fraud concentrated in a few hundred booths inside one constituency is statistically invisible at that level.</li>
+        <li data-i18n="l2"><b>No booth-level turnout for 2024.</b> The counting record (Form 20) carries no per-station electorate — I verified this in the raw documents — so the flagship turnout tests at station level are impossible for 2024. The 2014 election, where the ECI did publish per-booth electors, serves as the booth-level baseline instead. Finding Form 17C / per-station electorate data would convert every turnout method to 110,000-station resolution.</li>
+        <li data-i18n="l3"><b>The UP segment subset is not random.</b> Electorate numbers survive in the forms of only 81 of 297 recovered segments (a header field, often left blank); selection correlates with district administration type.</li>
+        <li data-i18n="l4"><b>Recovery coverage.</b> 297 of 403 assembly segments recovered; where source PDFs are partial the sums fall short of the official totals (never exceed them). Party labels in four low-coverage constituencies are approximate.</li>
+        <li data-i18n="l5"><b>Digit tests are weak instruments</b>; their borderline values here are smaller than fabrication signatures by an order of magnitude and replicate in the honest 2014 control.</li>
+        <li data-i18n="l6">Statistics can confirm the numbers are mutually consistent; it cannot substitute documentary evidence (agents' copies of Form 17C, VVPAT audits) or reveal mechanisms. I am an independent researcher with no ties to any electoral body; all inputs are official ECI publications or public archives, and the code is open source.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ MINTO: DATA ══ -->
+  <section>
+    <div class="data">
+      <h3 class="sect" data-i18n="data_title">Data &amp; reproducibility</h3>
+      <ul>
+        <li data-i18n="d1">National results: official ECI constituencywise detailed export (in-rolls), 542 constituencies, cross-checked against the results portal and a Kaggle mirror.</li>
+        <li data-i18n="d2">UP booth data: 315 Form 20 PDFs (Encore digital + scans) recovered from the Wayback Machine and cdn.s3waas.gov.in, transcribed (OCR where needed) and checksum-parsed — <a href="https://github.com/renatyv/elections_analysis" rel="noopener">dataset and build scripts in the repository</a>.</li>
+        <li data-i18n="d3">Controls: ECI 2014 constituency and booth exports (the one cycle with per-booth electors); 2019 has no electorate field and is not used.</li>
+        <li data-i18n="d4">Toolkit: the same open-source election-forensics pipeline used on this site for Slovenia, Brazil and Portugal (Shpilkin, Klimek, Kobak, Beber–Scacco, neighbours, ML).</li>
+        <li data-i18n="d5">Full technical report with every number, table and reproduction command: <a href="https://github.com/renatyv/elections_analysis/blob/main/india-2024/REPORT.md" rel="noopener">india-2024/REPORT.md</a>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer><span data-i18n="footer">Independent analysis · <a href="http://renatyv.org" rel="noopener">renatyv.org</a> · Data: Election Commission of India (results.eci.gov.in), Wayback Machine · Page generated on 15 October 2026</span></footer>
+</main>
+
+<script>
+const I18N = {
+en: {
+  title: "India, Lok Sabha 2024 — statistical fraud check",
+  brand: "India · Lok Sabha · April–June 2024",
+  home: "← All analyses",
+  kicker: "Independent statistical audit",
+  h1: "India voted over seven phases in 2024. Do the numbers add up?",
+  verdict_title: "Verdict: no statistical traces of manipulation — at the levels official data allows",
+  verdict_text: "I ran the standard election-forensics tests on every level India publishes: the official constituency results of all 542 contested constituencies, and — recovered from scanned Form 20 PDFs via the Wayback Machine — the booth-level count of 109,952 polling stations of Uttar Pradesh. Every applicable test is consistent with an honest count. The honest caveat: India publishes no per-station electorate for 2024, so the turnout-based booth tests are impossible this year — see “What this analysis cannot see”.",
+  chip_units: "constituencies analysed",
+  chip_votes: "ballots checked (66.1% turnout)",
+  chip_booths: "UP polling stations recovered from Form 20 PDFs",
+  chip_tail: "votes in the high-turnout anomaly zone",
+  sit_title: "What was decided in April–June 2024",
+  sit_intro: "General election to the Lok Sabha (543 seats, seven phases from 19 April to 1 June). The BJP won 240 seats with 36.5% of the vote; the Indian National Congress 99 seats with 21.2%. The NDA returned to government with a reduced majority. National turnout: 66.1% — 646 million ballots.",
+  res_title: "National result — 542 contested constituencies",
+  res_sub: "percentages of ballots polled · rejected ballots 1.15% · NOTA 0.99%",
+  p_rest: "others + NOTA",
+  res_note: "Surat was won without a poll (unopposed) and has no count. The booth-level recovery covers Uttar Pradesh — 80 constituencies, 12.6% of the national electorate — which is also the state every serious 2024 fraud debate concentrated on.",
+  why_title: "Three reasons the numbers can be trusted — at these levels",
+  a1_t: "The high-turnout zone is empty",
+  a1_b: "Constituency turnout is one bell curve that dies out by ~80%. Beyond the 87.6% boundary — the upper percentile of the honest 2014 election, not fitted to 2024 — stand zero votes: not a single constituency, nationally or among Uttar Pradesh's assembly segments. Ballot-stuffing shifts mass precisely into that 88–100% zone.",
+  a2_t: "The winner's result does not grow with turnout",
+  a2_b: "In the turnout × result scatter the BJP cloud slopes slightly DOWN (weighted correlation −0.12 nationally, −0.29 in UP's assembly segments) — the comet-tail signature of stuffing is a strongly positive slope. The positive correlations that do exist belong to regional opposition parties in their own strongholds: ordinary voter heterogeneity.",
+  a3_t: "110,000 recovered UP stations behave like the honest control",
+  a3_b: "The counting records (Form 20) of 109,952 polling stations — scanned PDFs recovered from the Wayback Machine, transcribed and arithmetically checksummed row by row — show flat last-digit distributions and no excess of round-number shares. The same tests on the honest 2014 booths give the same picture; and the self-test proves the toolkit detects injected fraud (signal ×17.6 million).",
+  fig1_cap: "Turnout of the 542 contested constituencies in 2024 against the 2014 control. One bell curve, fading out by ~80%; the 88–100% zone where stuffing lands contains nothing.",
+  fig1_alt: "Constituency turnout 2024 vs 2014: one bell curve each, no high-turnout tail",
+  fig2_cap: "Each dot is a constituency (size = electors). The BJP share does not rise with turnout (r = −0.12); the cloud even slopes slightly down — the opposite of a stuffing “comet”.",
+  fig2_alt: "Turnout vs BJP, INC and SP share: clouds slope flat or down, no comet tail",
+  fig3_cap: "Left: last digits of BJP vote counts (counts ≥ 100) in 2024 and in the honest 2014 control — both flat. Right: share of stations with an exactly integer BJP share, at or below the Monte-Carlo expectation in both years.",
+  fig3_alt: "UP booth counts: last digits flat against the 2014 control; integer shares at or below the null",
+  meth_title: "How I checked",
+  meth_intro: "The same families of tests used on this site for Slovenia, Brazil and Portugal, run with open-source code on official ECI exports plus the recovered Form 20 tables. Summary: all clean at the available levels.",
+  m1_t: "Anomalous-vote estimate (Shpilkin method)",
+  m1_b: "Beyond the honest-decline boundary: zero votes for the leader — nationally and in UP. Recounting without the anomaly zone moves nothing.",
+  m1_d: "The Shpilkin method models the honest bell curve of turnout and measures the votes beyond its decline. The boundary (87.6%) is not fitted to 2024: it is the 99.5th percentile of the 2014 election's elector-weighted turnout. To its right stand zero constituencies and zero votes; the “result without the anomalous zone” (36.73%) differs from the observed one (36.50%) only because there is nothing to remove. In Uttar Pradesh's 81 assembly segments with published electors: boundary 82.8% (from UP-2014), tail zero.",
+  m1_c1: "Constituency turnout with the 87.6% anomaly boundary, and BJP votes by turnout — the zone beyond the boundary is empty.",
+  m1_c2: "Control: turnout distributions of 2014 and 2024 over the constituencies — same shape, same ceiling; no drift toward a high-turnout tail.",
+  m2_t: "Turnout × result scatter and fingerprints",
+  m2_b: "No “comet tail”, no separated second cluster in the 2D fingerprint — the structure that appears is geography and alliance arithmetic.",
+  m2_d: "In a manipulated count the turnout × result cloud stretches up-right: high-turnout units carry a sharply higher leader share. Here BJP's correlation with turnout is negative (−0.12 nationally, −0.29 in UP segments). The Klimek fingerprint (2D density of turnout × leader share) finds no separated cluster; the second Gaussian component (weight 0.18) is degenerate — pinned near zero share. The correlations that are positive (AITC +0.38, YSRCP +0.33) belong to regional parties whose strongholds vote more — mirrored between government and opposition, i.e. heterogeneity, not direction.",
+  m2_c1: "Turnout vs BJP share, one dot per constituency (area = electors): a compact horizontal band, no up-right tail.",
+  m2_c2: "2D election fingerprint weighted by electors: one main mass; the compact up-right cluster typical of manipulated elections is absent.",
+  m2_c3: "Turnout × share correlation by party (bars) and by state (heatmap). The leader's is negative; regional parties' positives mirror each other across the alliance divide.",
+  m3_t: "Round-number peaks (Kobak et al.)",
+  m3_b: "No excess of exactly-integer turnouts or leader shares — at the constituency level, and across 105,000 recovered UP stations the integer-share rate is BELOW expectation (z = −3.1).",
+  m3_d: "Numbers invented at a desk cluster on round values. Among 542 constituencies, 1.11% have exactly integer turnout vs 0.98% expected (z = +0.3) — at ~1.8M electors per unit the test is nearly vacuous, and reported only for completeness. Where the data is fine-grained it is clean too: across the recovered UP stations, 7.85% have an exactly integer BJP share vs 7.95% expected from the binomial null — a deficit, the opposite of the desk-drawn signature. The honest 2014 booth control gives the same picture (turnout peaks 2.02% vs 2.05%, z = −1.1).",
+  m3_c1: "Left: constituency turnout, gridlines at multiples of 5 — no spikes. Right: 1.11% exactly-integer turnouts vs the 0.98% Monte-Carlo expectation.",
+  m3_c2: "The same test on the 2014 booth control (137,969 stations): 2.02% integer turnouts vs 2.05% expected (z = −1.1). This is what honest UP booth data looks like.",
+  m4_t: "Digit tests (Benford, last digit)",
+  m4_b: "Last digits flat everywhere. The only borderline value — SP's last digit in UP booths (p = 0.03, +0.4 pp on 0s) — is an order of magnitude smaller than invented-number signatures and mirrors 2014's benign profile.",
+  m4_d: "Benford's law on second digits rejects its smooth-count null at booth level (p ≈ 0.002, deviation ≤1.3 pp) — but identically for all four major parties and identically in the honest 2014 control: a stable structural property of UP's booth-size mixture (urban/rural regimes), not a party-specific fabrication trace. Last-digit uniformity — the classic Beber–Scacco test — holds for BJP (p = 0.46), INC (0.25) and BSP (0.06); SP shows the single mildest deviation of this whole analysis (+0.37 pp on trailing 0s, −0.25 pp on 8s; p_mc = 0.027), an order of magnitude below documented fabrication effects. Worth re-checking when the remaining ACs are recovered — not a fraud finding.",
+  m4_c1: "Last digits of booth-level counts (parties pooled), against the uniform expectation and its 95% Monte-Carlo band: within the band everywhere.",
+  m4_c2: "Constituency-level second digits against Benford's law: comfortable (BJP p_mc = 0.29). At booth level the same test deviates equally in 2024 and in the honest 2014 control — structure, not fraud.",
+  m5_t: "Outliers, machine learning, and the swing vs 2014",
+  m5_b: "19 of 542 constituencies (3.5%) are neighbour-outliers and 6 are ML-anomalies — small and scattered, audit candidates by construction. Not one constituency combines a 15-point turnout jump with a 15-point leader jump against 2014.",
+  m5_d: "Each constituency is a z-score against the median of its own state: 19 exceed |z| > 4 — an ordinary tail, mixed directions, no clustering. 507 constituencies matched by name between 2014 and 2024: zero double-jumps (turnout AND leader share up sharply together), the sharpest cross-election manipulation signature. The Δ-turnout/Δ-share cloud is structureless.",
+  m5_c1: "The 19 outliers in the plane of robust z of turnout × robust z of BJP share: scattered both ways, no high-turnout clustering.",
+  m5_c2: "Swing in turnout × swing in BJP share, 2014 → 2024, one dot per matched constituency: the up-right double-jump corner is empty.",
+  m6_t: "The Form 20 recovery itself: arithmetically exact",
+  m6_b: "1.16 million station-candidate rows parsed under per-row checksums; against the official ECI constituency totals nothing exceeds the official count anywhere, and 11 fully-recovered constituencies match within ±0.5%.",
+  m6_d: "The UP Form 20s are scans and prints scattered across 54 district websites, most of them gone; everything was recovered from the Wayback Machine and a government CDN. Every parsed row must satisfy sum(candidates) = valid and valid + NOTA + rejected = total under exactly one reading of the table layout; rows that fail are withheld, not guessed. Aggregated and compared with the official ECI export: every delta is ≤ 0 — the recovery never counts more votes than the official result — and where the source files are complete the match is within half a percent. Party labels for candidate columns were assigned by matching each constituency's column sums to the official candidate totals (validated <5% deviation wherever station coverage exceeds 90%).",
+  m6_c1: "The 2014 booth-level control — the one year with official per-station electors: Shpilkin tail 0.75% of BJP votes, turnout×BJP correlation +0.06. This is the honest baseline the 2024 statistics sit inside.",
+  m7_t: "Self-test: the toolkit actually detects fraud",
+  m7_b: "Synthetic stuffing injected into the clean data fires every alarm (anomaly-zone signal from 0 to 17.6M votes; round-number z from 0.4 to 11.8). The “clean” verdict is a measurement, not a blind spot.",
+  m7_d: "A clean verdict is only meaningful if the tools can fire. Injecting additive stuffing into the 2024 constituencies grows the anomalous-zone estimate from zero to 17.6 million votes and drives the integer-peak statistic from z = 0.4 to 11.8; in the UP assembly segments the signal reaches 0.87M; at 2014 booth level the tail multiplies ×7. On this data the machinery would see millions of stuffed ballots — it sees none.",
+  m7_c1: "Self-test: the injected mass appears exactly where honest distributions never reach, and every statistic fires. The real 2024 data (blue) stays flat.",
+  lim_title: "What this analysis cannot see",
+  lim_intro: "Honest limits — statistics shows anomalies, not intentions; and here it also has honest blind spots.",
+  l1: "<b>Granularity.</b> The national tests run on 542 units of ~1.8 million electors each. Fraud concentrated in a few hundred booths inside one constituency is statistically invisible at that level.",
+  l2: "<b>No booth-level turnout for 2024.</b> The counting record (Form 20) carries no per-station electorate — I verified this in the raw documents — so the flagship turnout tests at station level are impossible for 2024. The 2014 election, where the ECI did publish per-booth electors, serves as the booth-level baseline instead. Finding Form 17C / per-station electorate data would convert every turnout method to 110,000-station resolution.",
+  l3: "<b>The UP segment subset is not random.</b> Electorate numbers survive in the forms of only 81 of 297 recovered segments (a header field, often left blank); selection correlates with district administration type.",
+  l4: "<b>Recovery coverage.</b> 297 of 403 assembly segments recovered; where source PDFs are partial the sums fall short of the official totals (never exceed them). Party labels in four low-coverage constituencies are approximate.",
+  l5: "<b>Digit tests are weak instruments</b>; their borderline values here are smaller than fabrication signatures by an order of magnitude and replicate in the honest 2014 control.",
+  l6: "Statistics can confirm the numbers are mutually consistent; it cannot substitute documentary evidence (agents' copies of Form 17C, VVPAT audits) or reveal mechanisms. I am an independent researcher with no ties to any electoral body; all inputs are official ECI publications or public archives, and the code is open source.",
+  data_title: "Data & reproducibility",
+  d1: "National results: official ECI constituencywise detailed export (in-rolls), 542 constituencies, cross-checked against the results portal and a Kaggle mirror.",
+  d2: "UP booth data: 315 Form 20 PDFs (Encore digital + scans) recovered from the Wayback Machine and cdn.s3waas.gov.in, transcribed (OCR where needed) and checksum-parsed — <a href=\"https://github.com/renatyv/elections_analysis\" rel=\"noopener\">dataset and build scripts in the repository</a>.",
+  d3: "Controls: ECI 2014 constituency and booth exports (the one cycle with per-booth electors); 2019 has no electorate field and is not used.",
+  d4: "Toolkit: the same open-source election-forensics pipeline used on this site for Slovenia, Brazil and Portugal (Shpilkin, Klimek, Kobak, Beber–Scacco, neighbours, ML).",
+  d5: "Full technical report with every number, table and reproduction command: <a href=\"https://github.com/renatyv/elections_analysis/blob/main/india-2024/REPORT.md\" rel=\"noopener\">india-2024/REPORT.md</a>.",
+  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: Election Commission of India (results.eci.gov.in), Wayback Machine · Page generated on 15 October 2026"
+},
+hi: {
+  title: "भारत, लोकसभा 2024 — सांख्यिकीय जाँच",
+  brand: "भारत · लोकसभा · अप्रैल–जून 2024",
+  home: "← सभी विश्लेषण",
+  kicker: "स्वतंत्र सांख्यिकीय अंकेक्षण",
+  h1: "भारत ने 2024 में सात चरणों में मतदान किया। क्या आँकड़े सही हैं?",
+  verdict_title: "निष्कर्ष: हेराफेरी के कोई सांख्यिकीय संकेत नहीं — जितने स्तरों पर आधिकारिक आँकड़े उपलब्ध हैं",
+  verdict_text: "मैंने मानक चुनाव-फॉरेंसिक परीक्षण सभी उपलब्ध स्तरों पर चलाए: सभी 542 चुनावी लोकसभा क्षेत्रों के आधिकारिक परिणाम, और — वेबैक मशीन से बरामद स्कैन किए गए फॉर्म 20 पीडीएफ से — उत्तर प्रदेश के 1,09,952 मतदान केंद्रों का बूथ-स्तरीय हिसाब। हर लागू परीक्षण ईमानदार गिनती के अनुरूप है। ईमानदार चेतावनी: 2024 के लिए प्रति-केंद्र मतदाता संख्या प्रकाशित नहीं है, इसलिए बूथ-स्तरीय मतदान-दर परीक्षण इस बार संभव नहीं — देखें “यह विश्लेषण क्या नहीं देख सकता”।",
+  chip_units: "विश्लेषित लोकसभा क्षेत्र",
+  chip_votes: "जाँचे गए मतपत्र (66.1% मतदान)",
+  chip_booths: "फॉर्म 20 पीडीएफ से बरामद यूपी मतदान केंद्र",
+  chip_tail: "उच्च-मतदान विसंगति क्षेत्र में मत",
+  sit_title: "अप्रैल–जून 2024 में क्या तय हुआ",
+  sit_intro: "लोकसभा के लिए आम चुनाव (543 सीटें, 19 अप्रैल से 1 जून तक सात चरण)। भाजपा ने 36.5% वोट से 240 सीटें जीतीं; भारतीय राष्ट्रीय कांग्रेस ने 21.2% से 99 सीटें। एनडीए घटे बहुमत के साथ सरकार में लौटी। राष्ट्रीय मतदान दर: 66.1% — 64.6 करोड़ मतपत्र।",
+  res_title: "राष्ट्रीय परिणाम — 542 चुनावी क्षेत्र",
+  res_sub: "डाले गए मतपत्रों का प्रतिशत · अस्वीकृत मतपत्र 1.15% · नोटा 0.99%",
+  p_rest: "अन्य + नोटा",
+  res_note: "सूरत में बिना मतदान (निर्विरोध) जीत हुई, वहाँ गिनती नहीं हुई। बूथ-स्तरीय बरामदी उत्तर प्रदेश को मिलती है — 80 लोकसभा क्षेत्र, राष्ट्रीय मतदाताओं का 12.6% — वही राज्य जिस पर 2024 की हर गंभीर बहस केंद्रित थी।",
+  why_title: "आँकड़ों पर भरोसा करने के तीन कारण — इन स्तरों पर",
+  a1_t: "उच्च-मतदान क्षेत्र खाली है",
+  a1_b: "क्षेत्रों की मतदान-दर एक साफ़ घंटी-वक्र है जो ~80% तक मिट जाती है। 87.6% की सीमा के दाईन ओर — जो ईमानदार 2014 चुनाव से ली गई है, 2024 पर फिट नहीं की गई — शून्य मत हैं: देशभर में या यूपी के विधानसभा खंडों में एक भी क्षेत्र नहीं। बैलट-भराई ठीक इसी 88–100% क्षेत्र में भार डालती है।",
+  a2_t: "विजेता का परिणाम मतदान-दर के साथ नहीं बढ़ता",
+  a2_b: "मतदान-दर × परिणाम बिंदु-चित्र में भाजपा का बादल थोड़ा नीचे की ओर ढलान वाला है (भारित सहसंबंध राष्ट्रीय स्तर पर −0.12, यूपी खंडों में −0.29) — जबकि भराई का “पुच्छल-तारा” चिह्न तीव्र धनात्मक ढलान का होता है। जो धनात्मक सहसंबंध हैं वे क्षेत्रीय विपक्षी दलों के अपने गढ़ों के हैं: सामान्य मतदाता विविधता।",
+  a3_t: "बरामद 1.1 लाख यूपी केंद्र ईमानदार नियंत्रण जैसे व्यवहार करते हैं",
+  a3_b: "1,09,952 मतदान केंद्रों के गिनती-अभिलेख (फॉर्म 20) — वेबैक मशीन से बरामद स्कैन पीडीएफ, पंक्ति-दर-पंक्ति अंकगणितीय सत्यापन के साथ — सपाट अंतिम-अंक बंटन और गोल-संख्या हिस्सों की कोई अधिकता नहीं दिखाते। वही परीक्षण ईमानदार 2014 के बूथों पर वही चित्र देते हैं; और स्व-परीक्षण सिद्ध करता है कि टूलकिट डाली गई हेराफेरी को पकड़ लेता है (संकेत ×1.76 करोड़)।",
+  fig1_cap: "2024 के 542 चुनावी क्षेत्रों की मतदान-दर बनाम 2014 नियंत्रण। एक साफ़ घंटी-वक्र जो ~80% तक मिट जाता है; भराई का 88–100% क्षेत्र खाली है।",
+  fig1_alt: "2024 बनाम 2014 क्षेत्रीय मतदान-दर: एक-एक साफ़ घंटी, कोई उच्च-मतदान पूँछ नहीं",
+  fig2_cap: "हर बिंदु एक क्षेत्र है (आकार = मतदाता)। मतदान-दर बढ़ने पर भाजपा का हिस्सा नहीं बढ़ता (r = −0.12); बादल थोड़ा नीचे की ओर है — भराई के “तारे” के ठीक विपरीत।",
+  fig2_alt: "मतदान-दर बनाम भाजपा, कांग्रेस और सपा हिस्सा: बादल सपाट या नीचे, कोई पुच्छल-तारा नहीं",
+  fig3_cap: "बाएँ: भाजपा वोट-संख्याओं (गिनती ≥ 100) के अंतिम अंक 2024 में और ईमानदार 2014 नियंत्रण में — दोनों सपाट। दाएँ: पूर्ण-प्रतिशत भाजपा हिस्से वाले केंद्रों का हिस्सा दोनों वर्षों में मोंटे-कार्लो प्रत्याशा के बराबर या उससे नीचे।",
+  fig3_alt: "यूपी बूथ संख्याएँ: अंतिम अंक 2014 नियंत्रण जैसे सपाट; पूर्ण-प्रतिशत हिस्से शून्य-मॉडल के बराबर या नीचे",
+  meth_title: "मैंने कैसे जाँचा",
+  meth_intro: "इस साइट पर स्लोवेनिया, ब्राज़ील और पुर्तगाल के लिए प्रयुक्त परीक्षण-परिवार, ओपन-सोर्स कोड से आधिकारिक ईसीआई निर्यातों और बरामद फॉर्म 20 तालिकाओं पर। सारांश: उपलब्ध स्तरों पर सब साफ़।",
+  m1_t: "विसंगत मत-आकलन (श्पिल्किन विधि)",
+  m1_b: "ईमानदार-पतन की सीमा के पार: नेता के लिए शून्य मत — राष्ट्रीय स्तर पर और यूपी में। विसंगति-क्षेत्र हटाकर पुनर्गणना से कुछ नहीं बदलता।",
+  m1_d: "श्पिल्किन विधि मतदान-दर के ईमानदार घंटी-वक्र को मॉडल करती है और उसके पतन के पार के मतों को मापती है। सीमा (87.6%) 2024 पर फिट नहीं की गई: वह 2014 चुनाव की मतदाता-भारित मतदान-दर का 99.5वाँ प्रतिशतांक है। उसके दाईन ओर शून्य क्षेत्र और शून्य मत हैं; “विसंगति-क्षेत्र रहित परिणाम” (36.73%) देखे गए परिणाम (36.50%) से केवल इसलिए भिन्न है कि हटाने को कुछ है ही नहीं। यूपी के 81 विधानसभा खंडों में (जहाँ मतदाता संख्या प्रकाशित है): सीमा 82.8% (यूपी-2014 से), पूँछ शून्य।",
+  m1_c1: "87.6% विसंगति-सीमा के साथ क्षेत्रीय मतदान-दर, और मतदान-दर के अनुसार भाजपा मत — सीमा के पार का क्षेत्र खाली है।",
+  m1_c2: "नियंत्रण: 2014 और 2024 की मतदान-दर बंटन एक ही खंडों पर — एक जैसा आकार, एक जैसी छत; उच्च-मतदान पूँछ की ओर कोई बहाव नहीं।",
+  m2_t: "मतदान-दर × परिणाम बिंदु-चित्र और फिंगरप्रिंट",
+  m2_b: "कोई “पुच्छल-तारा” नहीं, 2डी फिंगरप्रिंट में कोई अलग दूसरा समूह नहीं — जो संरचना दिखती है वह भूगोल और गठबंधन-गणित है।",
+  m2_d: "हेराफेरी वाली गिनती में मतदान-दर × परिणाम का बादल ऊपर-दाएँ खिंचता है: उच्च-मतदान इकाइयों पर नेता का हिस्सा तेज़ी से ऊँचा। यहाँ भाजपा का मतदान-दर से सहसंबंध ऋणात्मक है (राष्ट्रीय −0.12, यूपी खंडों में −0.29)। क्लिमेक फिंगरप्रिंट कोई पृथक समूह नहीं पाता; दूसरा गॉसियन घटक (भार 0.18) लगभग शून्य हिस्से पर टिका हुआ है। जो धनात्मक सहसंबंध हैं (टीएमसी +0.38, वाईएसआरसीपी +0.33) वे उन क्षेत्रीय दलों के हैं जिनके गढ़ अधिक वोट करते हैं — सत्ता और विपक्ष में दर्पण-रूप से, अर्थात विविधता, दिशा नहीं।",
+  m2_c1: "मतदान-दर बनाम भाजपा हिस्सा, प्रति क्षेत्र एक बिंदु (क्षेत्रफल = मतदाता): एक सपाट क्षैतिज पट्टी, कोई ऊपर-दाएँ पूँछ नहीं।",
+  m2_c2: "मतदाता-भारित 2डी चुनाव-फिंगरप्रिंट: एक मुख्य भार; हेराफेरी वाले चुनावों का सघन ऊपर-दाएँ समूह अनुपस्थित है।",
+  m2_c3: "दल-वार मतदान-दर × हिस्सा सहसंबंध (स्तंभ) और राज्य-वार (ऊष्मा-मानचित्र)। नेता का ऋणात्मक है; क्षेत्रीय दलों के धनात्मक मान गठबंधन-सीमा के दोनों ओर दर्पण-रूप हैं।",
+  m3_t: "गोल-संख्या शिखर (कोबाक एट अल.)",
+  m3_b: "पूर्ण-प्रतिशत मतदान-दर या नेता-हिस्से की कोई अधिकता नहीं — क्षेत्र स्तर पर, और बरामद 1.05 लाख यूपी केंद्रों पर पूर्ण-प्रतिशत हिस्सों की दर प्रत्याशा से नीचे है (z = −3.1)।",
+  m3_d: "मेज़ पर गढ़े गए आँकड़े गोल मानों पर जमा होते हैं। 542 क्षेत्रों में 1.11% की मतदान-दर ठीक पूर्ण-प्रतिशत है, प्रत्याशित 0.98% के मुकाबले (z = +0.3) — प्रति इकाई ~18 लाख मतदाताओं पर यह परीक्षण लगभग निरर्थक है, फिर भी पूर्णता के लिए दिया गया है। जहाँ आँकड़े सूक्ष्म हैं वहाँ भी साफ़: बरामद यूपी केंद्रों पर 7.85% का भाजपा हिस्सा ठीक पूर्ण-प्रतिशत है, द्विपद शून्य-मॉडल की 7.95% के मुकाबले — घाटा, यानी मेज़ पर लिखे हस्ताक्षर के उलट। ईमानदार 2014 बूथ नियंत्रण वही चित्र देता है (पूर्ण-प्रतिशत मतदान-दर 2.02% बनाम 2.05%, z = −1.1)।",
+  m3_c1: "बाएँ: क्षेत्रीय मतदान-दर, 5 के गुणजों पर रेखाएँ — कोई शिखर नहीं। दाएँ: 1.11% पूर्ण-प्रतिशत मतदान-दर बनाम 0.98% मोंटे-कार्लो प्रत्याशा।",
+  m3_c2: "वही परीक्षण 2014 बूथ नियंत्रण पर (1,37,969 केंद्र): 2.02% पूर्ण-प्रतिशत मतदान-दर बनाम प्रत्याशित 2.05% (z = −1.1)। ईमानदार यूपी बूथ-आँकड़े ऐसे दिखते हैं।",
+  m4_t: "अंक-परीक्षण (बेनफोर्ड, अंतिम अंक)",
+  m4_b: "अंतिम अंक हर जगह सपाट। इकलौता सीमांत मान — यूपी बूथों में सपा का अंतिम अंक (p = 0.03, 0 पर +0.4 अंश) — गढ़े-आँकड़े के चिह्नों से एक कोटि छोटा है और 2014 की निर्दोष प्रोफ़ाइल जैसा है।",
+  m4_d: "दूसरे अंकों पर बेनफोर्ड नियम बूथ स्तर पर अपने स्मूथ-काउंट शून्य-मॉडल को अस्वीकार करता है (p ≈ 0.002, विचलन ≤1.3 अंश) — लेकिन चारों बड़े दलों के लिए समान रूप से, और ईमानदार 2014 नियंत्रण में भी उतना ही: यह यूपी के बूथ-आकार मिश्रण (शहरी/ग्रामीण) का स्थायी संरचनात्मक गुण है, किसी दल-विशेष की गड़बड़ी का संकेत नहीं। अंतिम-अंक एकरूपता — क्लासिक बेबर–स्कैको परीक्षण — भाजपा (p = 0.46), कांग्रेस (0.25) और बसपा (0.06) पर टिकती है; सपा पर इस पूरे विश्लेषण का सबसे हल्का विचलन है (अंतिम 0 पर +0.37 अंश, 8 पर −0.25; p_mc = 0.027) — प्रलेखित गड़बड़ी-प्रभावों से एक कोटि छोटा। शेष खंड बरामद होने पर पुनः जाँचने योग्य — हेराफेरी का निष्कर्ष नहीं।",
+  m4_c1: "बूथ-स्तरीय संख्याओं के अंतिम अंक (दल मिलाकर), समान प्रत्याशा और उसकी 95% मोंटे-कार्लो पट्टी के सापेक्ष: हर जगह पट्टी के भीतर।",
+  m4_c2: "क्षेत्र स्तर पर दूसरे अंक बेनफोर्ड नियम के सापेक्ष: सहज (भाजपा p_mc = 0.29)। बूथ स्तर पर वही परीक्षण 2024 और ईमानदार 2014 नियंत्रण दोनों में बराबर विचलित होता है — संरचना, हेराफेरी नहीं।",
+  m5_t: "विषम-बिंदु, मशीन-लर्निंग और 2014 के मुकाबले झूला",
+  m5_b: "542 में 19 क्षेत्र (3.5%) पड़ोसी-विषम और 6 एमएल-विषम हैं — छोटे और बिखरे हुए, बिना किसी पैटर्न के। 2014 के मुकाबले एक भी क्षेत्र 15-अंश मतदान-उछाल के साथ 15-अंश नेता-हिस्सा उछाल नहीं दिखाता।",
+  m5_d: "हर क्षेत्र अपने राज्य की माध्यिका के सापेक्ष z-स्कोर है: 19 क्षेत्र |z| > 4 पार करते हैं — एक सामान्य पूँछ, दोनों दिशाओं में, कोई समूह नहीं। 2014 और 2024 के बीच नाम से मिलाए गए 507 क्षेत्र: शून्य दोहरे-उछाल (मतदान-दर और नेता-हिस्सा दोनों तेज़ी से ऊपर) — सबसे तीखा अंतर-चुनावी हेराफेरी चिह्न। Δ-मतदान/Δ-हिस्सा बादल संरचनाहीन है।",
+  m5_c1: "मतदान-दर के भारित z × भाजपा हिस्से के भारित z के तल में 19 विषम बिंदु: दोनों ओर बिखरे, कोई उच्च-मतदाव समूह नहीं।",
+  m5_c2: "मतदान-दर में झूला × भाजपा हिस्से में झूला, 2014 → 2024, प्रति क्षेत्र एक बिंदु: ऊपर-दाएँ दोहरे-उछाल का कोना खाली है।",
+  m6_t: "फॉर्म 20 बरामदी आपस में अंकगणितीय रूप से सटीक",
+  m6_b: "11.6 लाख केंद्र-प्रत्याशी पंक्तियाँ प्रति-पंक्ति चेकसम के अंतर्गत पार्स हुईं; आधिकारिक ईसीआई क्षेत्र-योगों के मुकाबले कहीं भी गिनती आधिकारिक योग से अधिक नहीं, और 11 पूर्ण-बरामद क्षेत्र ±0.5% के भीतर मेल खाते हैं।",
+  m6_d: "यूपी के फॉर्म 20 भिखरे हुए स्कैन और प्रिंट हैं जो 54 ज़िला वेबसाइटों पर थे, जिनमें से अधिकांश गायब हो चुकी हैं; सब कुछ वेबैक मशीन और एक सरकारी सीडीएन से बरामद किया गया। पार्स की गई हर पंक्ति को तालिका-लेआउट के ठीक एक पढ़ाई के अंतर्गत योग(प्रत्याशी) = वैध और वैध + नोटा + अस्वीकृत = कुल संतुष्ट करना होता है; जो पंक्तियाँ असफल होती हैं वे रोक दी जाती हैं, अंदाज़ा नहीं लगाया जाता। आधिकारिक ईसीआई निर्यात से तुलना पर: हर अंतर ≤ 0 है — बरामदी कहीं भी आधिकारिक परिणाम से अधिक वोट नहीं गिनती — और जहाँ स्रोत-फाइलें पूर्ण हैं वहाँ मिलान आधे प्रतिशत के भीतर है। प्रत्याशी-स्तंभों के दल-लेबल प्रत्येक क्षेत्र के स्तंभ-योगों को आधिकारिक प्रत्याशी-योगों से मिलाकर लगाए गए (जहाँ केंद्र-कवरेज 90% से ऊपर है वहाँ <5% विचलन के साथ सत्यापित)।",
+  m6_c1: "2014 बूथ-स्तरीय नियंत्रण — एकमात्र वर्ष जिसमें प्रति-केंद्र मतदाता संख्या आधिकारिक रूप से मिली: श्पिल्किन पूँछ भाजपा मतों का 0.75%, मतदान×भाजपा सहसंबंध +0.06। यही वह ईमानदार आधार-रेखा है जिसके भीतर 2024 के आँकड़े बैठते हैं।",
+  m7_t: "स्व-परीक्षण: टूलकिट हेराफेरी को सचमुच पकड़ता है",
+  m7_b: "साफ़ आँकड़ों में डाली गई कृत्रिम भराई हर अलार्म जलाती है (विसंगति-क्षेत्र संकेत 0 से 1.76 करोड़ मत तक; गोल-संख्या z 0.4 से 11.8 तक)। “साफ़” निष्कर्ष एक मापन है, अंधाधुंध विश्वास नहीं।",
+  m7_d: "साफ़ निष्कर्ष का तभी अर्थ है जब औज़ार बज सकें। 2024 के क्षेत्रों में योगात्मक भराई डालने पर विसंगति-क्षेत्र आकलन शून्य से 1.76 करोड़ मत तक बढ़ता है और पूर्ण-प्रतिशत शिखर सांख्यिकी z = 0.4 से 11.8 तक जाती है; यूपी खंडों में संकेत 8.7 लाख तक; 2014 बूथ स्तर पर पूँछ ×7 हो जाती है। इस आँकड़े पर यह तंत्र करोड़ों भरे मत देख लेता — उसे कुछ नहीं दिखता।",
+  m7_c1: "स्व-परीक्षण: डाला गया भार ठीक वहीं दिखता है जहाँ ईमानदार बंटन कभी नहीं पहुँचते, और हर सांख्यिकी बज उठती है। वास्तविक 2024 आँकड़े (नीला) सपाट रहते हैं।",
+  lim_title: "यह विश्लेषण क्या नहीं देख सकता",
+  lim_intro: "ईमानदार सीमाएँ — सांख्यिकी विसंगतियाँ दिखाती है, इरादे नहीं; और यहाँ कुछ ईमानदार अंधे-धब्बे भी हैं।",
+  l1: "<b>सूक्ष्मता।</b> राष्ट्रीय परीक्षण 542 इकाइयों पर चलते हैं, प्रत्येक पर ~18 लाख मतदाता। एक ही क्षेत्र के भीतर कुछ सौ बूथों में केंद्रित हेराफेरी उस स्तर पर सांख्यिकीय रूप से अदृश्य है।",
+  l2: "<b>2024 के लिए बूथ-स्तरीय मतदान-दर नहीं है।</b> गिनती-अभिलेख (फॉर्म 20) में प्रति-केंद्र मतदाता संख्या नहीं होती — मैंने मूल दस्तावेज़ों में इसकी पुष्टि की — इसलिए 2024 के लिए केंद्र-स्तरीय मतदान-दर परीक्षण असंभव हैं। बूथ-स्तरीय आधार-रेखा के रूप में 2014 का चुनाव काम करता है, जिसमें ईसीआई ने प्रति-बूथ मतदाता संख्या प्रकाशित की थी। फॉर्म 17सी / प्रति-केंद्र मतदाता आँकड़ा मिलते ही हर मतदान-दर विधि 1.1 लाख-केंद्र रिज़ॉल्यूशन पर आ जाएगी।",
+  l3: "<b>यूपी खंडों का उपसमुच्चय यादृच्छिक नहीं है।</b> बरामद 297 खंडों में से केवल 81 के फॉर्मों में मतदाता संख्या बची है (एक हेडर फ़ील्ड, अक्सर खाली छोड़ा जाता है); यह चयन ज़िला प्रशासन के प्रकार से सहसंबद्ध है।",
+  l4: "<b>बरामदी-कवरेज।</b> 403 में से 297 विधानसभा खंड बरामद; जहाँ स्रोत पीडीएफ अधूरे हैं वहाँ योग आधिकारिक कुल से कम रहते हैं (कभी अधिक नहीं)। चार कम-कवरेज क्षेत्रों में दल-लेबल सन्निकट हैं।",
+  l5: "<b>अंक-परीक्षण कमज़ोर औज़ार हैं</b>; यहाँ उनके सीमांत मान प्रलेखित गड़बड़ी-चिह्नों से एक कोटि छोटे हैं और ईमानदार 2014 नियंत्रण में दोहराते हैं।",
+  l6: "सांख्यिकी यह पुष्टि कर सकती है कि आँकड़े आपस में संगत हैं; वह प्रलेखनिक साक्ष्य (फॉर्म 17सी की एजेंट-प्रतियाँ, वीवीपैट ऑडिट) या तंत्र का विकल्प नहीं है। मैं किसी चुनावी निकाय से असंबद्ध स्वतंत्र शोधकर्ता हूँ; सभी इनपुट ईसीआई के आधिकारिक प्रकाशन या सार्वजनिक अभिलेखागार हैं, और कोड ओपन-सोर्स है।",
+  data_title: "आँकड़े और पुनरुत्पादनीयता",
+  d1: "राष्ट्रीय परिणाम: आधिकारिक ईसीआई क्षेत्रवार विस्तृत निर्यात (in-rolls), 542 क्षेत्र, परिणाम-पोर्टल और कैगल मिरर से तुलनीत।",
+  d2: "यूपी बूथ आँकड़े: 315 फॉर्म 20 पीडीएफ (एनकोर डिजिटल + स्कैन) वेबैक मशीन और cdn.s3waas.gov.in से बरामद, आवश्यकतानुसार ओसीआर और चेकसम-पार्स — <a href=\"https://github.com/renatyv/elections_analysis\" rel=\"noopener\">डेटासेट और निर्माण-स्क्रिप्ट भंडार में</a>।",
+  d3: "नियंत्रण: ईसीआई 2014 क्षेत्र और बूथ निर्यात (प्रति-बूथ मतदाता संख्या वाला एकमात्र चक्र); 2019 में मतदाता फ़ील्ड नहीं है, उसका उपयोग नहीं हुआ।",
+  d4: "टूलकिट: इस साइट पर स्लोवेनिया, ब्राज़ील और पुर्तगाल के लिए प्रयुक्त वही ओपन-सोर्स चुनाव-फॉरेंसिक पाइपलाइन (श्पिल्किन, क्लिमेक, कोबाक, बेबर–स्कैको, पड़ोसी, एमएल)।",
+  d5: "हर संख्या, तालिका और पुनरुत्पादन-आदेश सहित पूर्ण तकनीकी प्रतिवेदन: <a href=\"https://github.com/renatyv/elections_analysis/blob/main/india-2024/REPORT.md\" rel=\"noopener\">india-2024/REPORT.md</a>।",
+  footer: "स्वतंत्र विश्लेषण · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · आँकड़े: भारत निर्वाचन आयोग (results.eci.gov.in), वेबैक मशीन · पृष्ठ 15 अक्टूबर 2026 को बनाया गया"
+}
+};
+
+(function(){
+  const langs = ["hi","en"];
+  function pick(){
+    const saved = localStorage.getItem("lang");
+    if (saved && langs.includes(saved)) return saved;
+    for (const l of navigator.languages || [navigator.language]) {
+      const p = (l || "").slice(0,2).toLowerCase();
+      if (p === "hi" || p === "mr") return "hi";
+    }
+    return "en";
+  }
+  function apply(lang){
+    const d = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const v = d[el.getAttribute("data-i18n")];
+      if (v !== undefined) el.innerHTML = v;
+    });
+    document.querySelectorAll("img[data-fig]").forEach(img => {
+      img.src = "img/" + lang + "/" + img.dataset.fig + ".png";
+      const alt = d["fig" + ({turnout:1, comet:2, booths:3}[img.dataset.fig] || "") + "_alt"];
+      if (alt !== undefined) img.alt = alt;
+    });
+    document.querySelectorAll(".langs button").forEach(b =>
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    localStorage.setItem("lang", lang);
+  }
+  document.querySelectorAll(".langs button").forEach(b =>
+    b.addEventListener("click", () => apply(b.dataset.lang)));
+  apply(pick());
+})();
+</script>
+</body>
+</html>

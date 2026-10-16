@@ -1,0 +1,184 @@
+{
+  "title": "Uttar Pradesh 2014 (booths, control)",
+  "national": {
+    "n_units": 137969,
+    "registered": 127813583,
+    "voted": 78557002,
+    "turnout_pct": 61.46217026088691,
+    "blank_pct": 0.0,
+    "null_pct": 0.0,
+    "share:BJP": 42.601450090979796,
+    "share:SP": 22.331064772558403,
+    "share:BSP": 19.832047562100193,
+    "share:Others": 15.235437574361608
+  },
+  "leader": "BJP",
+  "n_units": 137969,
+  "shpilkin": {
+    "party": "BJP",
+    "t_cut": 92.10526315789474,
+    "t_cut_source": "own_q995",
+    "mode": 62.25,
+    "sigma": 10.887501713961191,
+    "total_votes_party": 33466422,
+    "tail_voters": 619588,
+    "tail_votes_party": 251385,
+    "tail_share_of_party": 0.7511558899245339,
+    "observed_share_pct": 42.601450090979796,
+    "honest_share_pct": 42.61757645692478
+  },
+  "fingerprint": {
+    "party": "BJP",
+    "weight_anom": 0.4859132478418286,
+    "mean_anom": [
+      62.1313441572662,
+      24.206921688087373
+    ],
+    "mean_main": [
+      61.843113495408666,
+      59.73791639968643
+    ],
+    "anom_cluster_voters": 61198804,
+    "anom_cluster_votes_party": 8347273,
+    "total_voters": 126759085,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 2.0178445882770766,
+    "null_pct": 2.0507758989338183,
+    "z": -1.0524144605350698,
+    "z_mult5": -1.5454595775128415
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 3.906674687792185,
+    "null_pct": 4.876686067160014,
+    "z": -29.669803253363654,
+    "z_mult5": -0.160782835593445
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "BJP",
+      "n_numbers": 129608,
+      "min_count": 10,
+      "chi2": 276.4424168506726,
+      "dof": 9,
+      "p_value": 2.56280325503107e-54,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 0.870618051589811
+    },
+    {
+      "test": "benford2",
+      "party": "SP",
+      "n_numbers": 123054,
+      "min_count": 10,
+      "chi2": 27.872508463817205,
+      "dof": 9,
+      "p_value": 0.0010017908989411657,
+      "p_null_mc": 0.06483790523690773,
+      "max_dev": 0.25612632468815927
+    },
+    {
+      "test": "benford2",
+      "party": "BSP",
+      "n_numbers": 123982,
+      "min_count": 10,
+      "chi2": 76.96152892607529,
+      "dof": 9,
+      "p_value": 6.470979089308594e-13,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 0.38044006333527725
+    },
+    {
+      "test": "benford2",
+      "party": "Others",
+      "n_numbers": 127095,
+      "min_count": 10,
+      "chi2": 12.159695553284234,
+      "dof": 9,
+      "p_value": 0.20445544973999097,
+      "p_null_mc": 0.4713216957605985,
+      "max_dev": 0.17170977807641208
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "BJP",
+      "n_numbers": 107722,
+      "min_count": 100,
+      "chi2": 17.81693618759399,
+      "dof": 9,
+      "p_value": 0.03735779273697823,
+      "p_null_mc": 0.09226932668329177,
+      "max_dev": 0.275895360279238
+    },
+    {
+      "test": "last",
+      "party": "SP",
+      "n_numbers": 60371,
+      "min_count": 100,
+      "chi2": 37.51219956601679,
+      "dof": 9,
+      "p_value": 2.131722926705372e-05,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 0.4603203524871202
+    },
+    {
+      "test": "last",
+      "party": "BSP",
+      "n_numbers": 60172,
+      "min_count": 100,
+      "chi2": 34.50535132619822,
+      "dof": 9,
+      "p_value": 7.281826007141013e-05,
+      "p_null_mc": 0.007481296758104738,
+      "max_dev": 0.5231669214917232
+    },
+    {
+      "test": "last",
+      "party": "Others",
+      "n_numbers": 34559,
+      "min_count": 100,
+      "chi2": 40.995659596631846,
+      "dof": 9,
+      "p_value": 5.011049642215997e-06,
+      "p_null_mc": 0.004987531172069825,
+      "max_dev": 0.6716050811655425
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "BJP",
+      "pearson_w": 0.06363289874017358,
+      "spearman": 0.049672490121348306
+    },
+    {
+      "party": "SP",
+      "pearson_w": 0.04446845386654673,
+      "spearman": -0.021855784530913035
+    },
+    {
+      "party": "BSP",
+      "pearson_w": 0.03164171536405375,
+      "spearman": -0.0027857665347762153
+    },
+    {
+      "party": "Others",
+      "pearson_w": -0.16176375722876954,
+      "spearman": -0.256780681467664
+    }
+  ],
+  "neighbors_flagged": 1435,
+  "ml_flagged": 1369,
+  "selftest": {
+    "t_cut": 92.10526315789474,
+    "clean_tail_party": 251385,
+    "injected_added_ballots_party": 1876579,
+    "injected_tail_party": 1728192,
+    "signal_growth": 6.8746822602780595,
+    "peaks_z_clean": -1.036078022825056,
+    "peaks_z_rounded": 18.078412532130205,
+    "n_rounded_units": 6873
+  }
+}
