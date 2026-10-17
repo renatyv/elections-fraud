@@ -2,7 +2,11 @@
 ```
 portugal-2025/               — Portugal, legislativas 2021–2026: 11 MAI exports,
                               official CNE results, laws, precinct-level maps of
-                              municipalities, reports, parsers
+                              municipalities, reports, parsers; voting-paradox
+                              analysis (legislativas 2025 D'Hondt/FPTP,
+                              autárquicas 2025, presidenciais 2026 runoff) →
+                              PARADOXES.md; site figures —
+                              scripts/build_site_figures.py
 brazil-oct-2026/             — Brazil, rounds of 04/25.10.2026: TSE results by precinct
                               (data/votacao_secao, ~23 GB of CSV; description in
                               DATA_DESCRIPTION.md) + the 2022 control election on the

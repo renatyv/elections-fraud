@@ -135,24 +135,31 @@ def load_cne_official() -> tuple[dict[str, dict[str, int]], list[str]]:
             cells[col_idx(c.get("r"))] = val
         rows.append(cells)
 
-    circles = [rows[0][i] for i in range(1, 23)]  # 22 círculos + Total col 23
+    # Layout: row 0 = column numbers, row 1 = círculo names in C..X, then per
+    # party a "Número" row (votes) and an "md" row (mandates), both values
+    # starting at column C. MAI spells the autonomous regions without "RA",
+    # and its Açores AD list carries the .PPM suffix — align to those names.
+    rename = {"RA Açores": "Açores", "RA Madeira": "Madeira"}
+    circles = [rename.get(rows[1][i], rows[1][i]) for i in range(2, 24)]
     seats: dict[str, dict[str, int]] = {c: {} for c in circles}
     party = None
-    for cells in rows[1:]:
+    ppd_blocks = 0
+    for cells in rows[2:]:
         first = cells.get(0, "")
         second = cells.get(1, "")
-        if first in (None, "", "md") and second != "md":
-            continue
         if second == "Número":
             party = str(first)
-        elif second == "md" or first == "md":
-            if party is None:
-                continue
-            start = 2 if first == "md" else 1
-            for i, c in enumerate(circles):
-                v = cells.get(start + i, "")
-                if v not in ("", "-", None):
-                    seats[c][party] = int(float(v))
+            if party == "PPD/PSD.CDS-PP":
+                ppd_blocks += 1
+                if ppd_blocks == 2:  # Açores-only block: AD coalition with PPM
+                    party = "PPD/PSD.CDS-PP.PPM"
+            continue
+        if second != "md" or party is None:
+            continue
+        for i, c in enumerate(circles):
+            v = cells.get(2 + i, "")
+            if v not in ("", "-", None):
+                seats[c][party] = int(float(v))
     total = sum(s for c in seats.values() for s in c.values())
     if total != TOTAL_SEATS:
         raise ValueError(f"CNE map parsed {total} seats, expected {TOTAL_SEATS}")
@@ -247,7 +254,7 @@ def fptp_simulation() -> dict:
         votes = df[cols].fillna(0).astype(int)
         votes.columns = [PARTY_LABELS.get(c.removeprefix("votes:"),
                                           c.removeprefix("votes:")) for c in cols]
-        votes = votes.groupby(level=0, axis=1).sum()  # merge AD variants
+        votes = votes.T.groupby(level=0).sum().T  # merge AD variants
         winners = votes.idxmax(axis=1).map(lambda p: PARTY_LABELS.get(p, p))
         counts = winners.value_counts().to_dict()
         n = len(winners)
@@ -303,8 +310,10 @@ def load_psd_cds_split() -> dict[str, float]:
                      encoding="utf-8-sig", dtype={"key": str})
     split: dict[str, float] = {}
     for _, r in df.iterrows():
-        psd = r.get("votes:PPD/PSD", 0) or 0
-        cds = r.get("votes:CDS-PP", 0) or 0
+        psd = r.get("votes:PPD/PSD", 0)
+        cds = r.get("votes:CDS-PP", 0)
+        psd = 0 if pd.isna(psd) else int(psd)
+        cds = 0 if pd.isna(cds) else int(cds)
         both = int(psd) + int(cds)
         if both > 0:
             split[str(r["name"])] = int(psd) / both
@@ -443,17 +452,29 @@ def load_presidential() -> tuple[pd.DataFrame, pd.DataFrame]:
     def load(rnd: str) -> pd.DataFrame:
         df = pd.read_csv(DATA / f"presidenciais2026_{rnd}_mai" / "results_freguesias.csv",
                          encoding="utf-8-sig", dtype={"key": str})
-        df = df[~df["key"].str.startswith("FOREIGN")]
+        # territory keys and paths are re-generated per election; the stable
+        # identity is the ID-stripped path chain. Emigrant circles (their
+        # freguesia lists live under África/América/Ásia/Europa/Oceania) are
+        # out of scope, as everywhere in this project.
+        chain = df["path"].map(_id_stripped_path)
+        keep = ~chain.str.contains("AMÉRICA|EUROPA|ÁSIA|OCEANIA|ÁFRICA", regex=True)
+        df, chain = df[keep], chain[keep]
+        df = df.set_index(chain)
         cols = [c for c in df.columns if c.startswith("votes:")]
-        out = pd.DataFrame({"key": df["key"]})
+        out = pd.DataFrame(index=df.index)
         for c in cols:
             out[CAND_SHORT.get(c.removeprefix("votes:"), c.removeprefix("votes:"))] = (
                 df[c].fillna(0).astype(int))
         out["blank"] = df["blank_votes"].fillna(0).astype(int)
         out["null"] = df["null_votes"].fillna(0).astype(int)
         out["abstain"] = (df["registered_voters"] - df["voted"]).astype(int)
-        return out.set_index("key")
+        return out
     return load("1S"), load("2S")
+
+
+def _id_stripped_path(path: str) -> str:
+    parts = [p.strip() for p in path.split(">")]
+    return " > ".join(p for p in parts if not re.fullmatch(r"[A-Za-z-]*\d[A-Za-z0-9-]*", p))
 
 
 def presidential_runoff() -> tuple[dict, pd.DataFrame | None]:
@@ -506,6 +527,10 @@ def ecological_transfers(d1: pd.DataFrame, d2: pd.DataFrame) -> tuple[dict, dict
     Outcomes: Seguro, Ventura, blank, null, abstain in the 2S.
     Assumption (Goodman): transfer rates are homogeneous across freguesias.
     """
+    # freguesia keys are not stable between rounds (mobile/special tables are
+    # re-keyed): the regression runs on the intersection only.
+    common = d1.index.intersection(d2.index)
+    d1, d2 = d1.loc[common], d2.loc[common]
     t1 = d1.sum()
     cand_cols = [c for c in d1.columns if c not in ("blank", "null", "abstain")]
     big = [c for c in cand_cols if t1[c] / t1[cand_cols].sum() >= 0.02]
@@ -516,7 +541,8 @@ def ecological_transfers(d1: pd.DataFrame, d2: pd.DataFrame) -> tuple[dict, dict
     outcomes = ["Seguro", "Ventura", "blank", "null", "abstain"]
 
     X = d1[sources].to_numpy(dtype=float)
-    W = np.sqrt(d2["Seguro"].to_numpy(dtype=float) + d2["Ventura"] + 1)
+    W = np.sqrt(d2["Seguro"].to_numpy(dtype=float)
+                + d2["Ventura"].to_numpy(dtype=float) + 1)
     T = np.zeros((len(sources), len(outcomes)))
     for j, o in enumerate(outcomes):
         y = d2[o].to_numpy(dtype=float)
@@ -565,10 +591,13 @@ def main() -> None:
               f"{r['wins'].get(r['leader'], 0)}/{r['n_districts']}")
 
     metrics["counterfactuals"] = counterfactuals(circles)
-    actual = {PARTY_LABELS.get(p, p): s for c in circles
-              for p, s in c.official_seats.items()}
-    actual = pd.Series(actual).groupby(level=0).sum().sort_values(ascending=False)
-    metrics["counterfactuals"]["actual"] = actual.to_dict()
+    actual: dict[str, int] = {}
+    for c in circles:
+        for p, s in c.official_seats.items():
+            lbl = PARTY_LABELS.get(p, p)
+            actual[lbl] = actual.get(lbl, 0) + s
+    metrics["counterfactuals"]["actual"] = dict(
+        sorted(actual.items(), key=lambda kv: -kv[1]))
     print("✓ counterfactuals:", {k: max(v, key=v.get) if v else "-"
                                  for k, v in metrics["counterfactuals"].items()})
 

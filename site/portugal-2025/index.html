@@ -92,7 +92,10 @@
   .m[open] summary::after{transform:rotate(225deg)}
   .m-details{padding:2px 16px 16px;border-top:1px solid var(--line)}
   .m-details p{margin:12px 0 0;font-size:14px;color:#2c4358}
-  .m-figs{display:grid;gap:12px;margin-top:12px}
+  .m-figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin-top:10px}
+  .m-figs .fig{padding:10px}
+  .m-figs .fig figcaption{font-size:12.5px;margin-top:8px}
+  .m-figs .fig.wide{grid-column:1/-1}
   .limits{background:var(--amber-soft);border:1px solid #ecd9ad;border-radius:var(--radius);padding:20px 22px}
   .limits h3.sect{color:var(--amber)}
   .limits ul{margin:10px 0 0;padding-left:20px}
@@ -102,6 +105,25 @@
   .data ul{margin:10px 0 0;padding-left:20px}
   .data li{margin-bottom:9px;font-size:14.5px;color:#2c4358}
   .data a{color:var(--blue)}
+  section[id]{scroll-margin-top:70px}
+  .note{background:#e9f2fa;border:1px solid #cfe2f1;border-radius:var(--radius);padding:14px 18px;
+        margin-top:16px;font-size:14.5px;color:#1f3c55}
+  .px-sub{font-size:17.5px;font-weight:800;margin:30px 0 6px}
+  .verdict + .verdict{margin-top:14px}
+  .verdict .check.warn{background:#c9962f}
+  .verdict.flip{background:rgba(201,150,47,.14);border-color:rgba(201,150,47,.42)}
+  .flip-head{margin:0 0 8px;font-size:12.5px;text-transform:uppercase;letter-spacing:1.2px;color:#ecd9a8;font-weight:700}
+  .v-line{margin:0;color:#f0ead9;font-size:15.5px;line-height:1.5}
+  .v-line + .v-line{margin-top:8px}
+  .v-line b{color:#fff}
+  .arg .num.px{background:var(--blue)}
+  table.splits{width:100%;border-collapse:collapse;margin-top:18px;background:var(--card);
+               border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:14px}
+  table.splits th,table.splits td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+  table.splits th{background:#eef2f7;font-size:13px}
+  table.splits tr:last-child td{border-bottom:none}
+  table.splits .rev{font-weight:800;color:var(--red)}
+  table.splits .nat{font-weight:700}
   footer{margin-top:46px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13px}
   footer a{color:var(--blue)}
 </style>
@@ -113,6 +135,7 @@
     <div class="brand"><span class="flag"></span><span data-i18n="brand">Portugal · Legislative elections · 18.05.2025</span></div>
     <div class="right">
       <a class="home" href="../" data-i18n="home">← All analyses</a>
+      <a class="home" href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a>
       <nav class="langs" aria-label="Language">
         <button data-lang="pt">Português</button>
         <button data-lang="en" aria-pressed="true">English</button>
@@ -132,6 +155,14 @@
         <div>
           <h2 data-i18n="verdict_title">Verdict: no statistical traces of manipulation</h2>
           <p data-i18n="verdict_text">I ran standard election-forensics tests on the official parish-level results of the 18 May 2025 legislative election — and, as an addendum, on the precinct protocols of six municipalities that publish them. Every applicable test is consistent with an honest count.</p>
+        </div>
+      </div>
+      <div class="verdict flip">
+        <div class="check warn">⇄</div>
+        <div>
+          <p class="flip-head" data-i18n="verdict2_title">Same votes, different counting rules — different winners</p>
+          <p class="v-line" data-i18n="flip1_line"><b>PS</b> finished 4,313 votes ahead of CH — and 2 seats behind (58 vs 60)</p>
+          <p class="v-line" data-i18n="flip2_line">Under winner-take-all districts, AD's <b>33%</b> of votes becomes <b>69–76%</b> of the wins</p>
         </div>
       </div>
       <div class="chips">
@@ -164,49 +195,109 @@
     </div>
   </section>
 
-  <!-- ══ MINTO: KEY ARGUMENTS ══ -->
-  <section>
-    <h3 class="sect" data-i18n="why_title">Three reasons the numbers can be trusted</h3>
+  <!-- ══ MINTO: PARADOXES — SAME VOTES, DIFFERENT RULES ══ -->
+  <section id="paradoxes">
+    <h3 class="sect" data-i18n="px_title">Same votes, different rules — different results</h3>
+    <p class="sect-sub" data-i18n="px_intro">How much do the rules themselves decide? I re-counted the same ballots under alternative rules — one national district, winner-take-all territories, different alliances, the two-round runoff. Theory calls these voting paradoxes; on this data they are simply measurements.</p>
     <div class="args">
       <div class="arg">
-        <div class="num">1</div>
-        <h4 data-i18n="a1_t">The high-turnout zone is physically empty</h4>
-        <p data-i18n="a1_b">Parish turnout forms one bell curve that fades out by ~79%. Above the 78.6% boundary — the upper percentile of the 2022 and 2024 control elections — only 7,779 voters remain: 0.13% of ballots. Ballot-stuffing shifts mass precisely into the 80–100% zone; here that zone contains essentially nothing, and the same ~78–80% ceiling recurred in 2022 and 2024.</p>
+        <div class="num px">1</div>
+        <h4 data-i18n="px1_t">The PS–CH tie flips three ways</h4>
+        <p data-i18n="px1_p">PS finished 4,313 votes ahead of CH nationally (23.81% vs 23.74%) — yet took 2 fewer seats: 58 against 60, under Portugal's 22 D'Hondt circles. One national district would tie them at 56 : 56. Winner-take-all parishes: PS leads 429 : 309. Winner-take-all municipalities: CH leads 67 : 34.</p>
       </div>
       <div class="arg">
-        <div class="num">2</div>
-        <h4 data-i18n="a2_t">The leader’s result does not grow with turnout</h4>
-        <p data-i18n="a2_b">In the turnout × result scatter, the AD cloud stays vertically compact across the whole range (weighted correlation −0.09), and the fingerprint analysis finds no “up-right” cluster. The two clusters it does find are geography — the rural north versus the south and the cities — not fraud.</p>
+        <div class="num px">2</div>
+        <h4 data-i18n="px2_t">Alliances, not voters, move 60+ seats</h4>
+        <p data-i18n="px2_p">Re-running D'Hondt on the identical votes: AD and CH united — 154 seats, a constitutional majority. A united left of five parties (34.1% of the votes) — 84 seats, ahead of AD's 81. AD split as in 2022 — minus 4 seats, handed to PS and CH. Not one ballot changes.</p>
       </div>
       <div class="arg">
-        <div class="num">3</div>
-        <h4 data-i18n="a3_t">Every flagged oddity is tiny — and the toolkit provably works</h4>
-        <p data-i18n="a3_b">The 81 neighbour-outliers and 31 machine-learning anomalies are minute parishes with mixed directions — the most extreme is a parish with an anomalously LOW AD share. In the self-test, injecting 131,629 synthetic ballots grew the anomalous-zone estimate 18-fold and pushed the round-number statistic from z = 0.2 to 5.1: the “clean” verdict is a measurement, not a blind spot.</p>
+        <div class="num px">3</div>
+        <h4 data-i18n="px3_t">In the real plurality races, minorities govern</h4>
+        <p data-i18n="px3_p">Municipal presidents are elected first-past-the-post — the rule most exposed to vote-splitting. In October 2025, 142 of 308 winning lists had no majority; in 49 câmaras the opposing bloc combined had more votes. In Lisboa: 42.8% for the winner, 45.2% for the losing bloc.</p>
       </div>
     </div>
-  </section>
 
-  <!-- ══ MINTO: SUPPORTING EVIDENCE ══ -->
-  <section>
+    <h4 class="px-sub" data-i18n="pxA_t">Rule 1 · National votes, districts, winner-take-all</h4>
+    <p class="sect-sub" data-i18n="pxA_p">Portugal hands out 230 seats over 22 D'Hondt circles — no national tier, no majority bonus. The same ballots, counted four ways:</p>
+    <table class="splits">
+      <thead>
+        <tr>
+          <th data-i18n="t_h_party">List</th>
+          <th data-i18n="t_h_votes">National votes</th>
+          <th data-i18n="t_h_seats">D'Hondt seats (actual)</th>
+          <th data-i18n="t_h_nat">One national district</th>
+          <th data-i18n="t_h_conc">Concelhos (FPTP sim.)</th>
+          <th data-i18n="t_h_freg">Freguesias (FPTP sim.)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AD</td>
+          <td class="nat"><span data-i18n="t_ad1">33.2%</span></td>
+          <td class="nat"><span data-i18n="t_ad2">91</span></td>
+          <td class="nat"><span data-i18n="t_ad3">78</span></td>
+          <td class="nat"><span data-i18n="t_ad4">224 / 325</span></td>
+          <td class="nat"><span data-i18n="t_ad5">2,343 / 3,092</span></td>
+        </tr>
+        <tr>
+          <td>PS</td>
+          <td class="rev"><span data-i18n="t_ps1">23.8% · leads</span></td>
+          <td><span data-i18n="t_ps2">58</span></td>
+          <td><span data-i18n="t_ps3">56</span></td>
+          <td><span data-i18n="t_ps4">34 / 325</span></td>
+          <td><span data-i18n="t_ps5">429 / 3,092</span></td>
+        </tr>
+        <tr>
+          <td>CH</td>
+          <td><span data-i18n="t_ch1">23.7%</span></td>
+          <td class="rev"><span data-i18n="t_ch2">60 · leads</span></td>
+          <td><span data-i18n="t_ch3">56</span></td>
+          <td><span data-i18n="t_ch4">67 / 325</span></td>
+          <td><span data-i18n="t_ch5">309 / 3,092</span></td>
+        </tr>
+      </tbody>
+    </table>
     <div class="figs">
       <figure class="fig">
-        <img src="img/en/turnout.png" data-fig="turnout" alt="Turnout histogram: one smooth bell curve fading out by ~79%" loading="lazy">
-        <figcaption data-i18n="fig1_cap">Turnout of 9.27 million registered voters, parish by parish. One bell curve that fades out before 80% — the zone where ballot-stuffing leaves its trace is empty.</figcaption>
-      </figure>
-      <figure class="fig">
-        <img src="img/en/comet.png" data-fig="comet" alt="Turnout vs AD share: compact cloud, no separate tail" loading="lazy">
-        <figcaption data-i18n="fig2_cap">Each dot is a parish (size = registered voters). The AD share does not rise with turnout; there is no separate high-turnout, high-share cloud.</figcaption>
-      </figure>
-      <figure class="fig">
-        <img src="img/en/selftest.png" data-fig="selftest" alt="Self-test: synthetic stuffing makes the anomalous-zone estimate grow 18-fold" loading="lazy">
-        <figcaption data-i18n="fig3_cap">Sensitivity test: synthetic stuffing (+131,629 AD ballots in 10% of parishes) makes the estimated anomalous zone jump from 14,589 to 255,496 votes (×18). The tools see fraud when it exists.</figcaption>
+        <img src="img/en/px_rules.png" data-fig="px_rules" alt="PS vs CH under three counting rules, and the AD vote amplified under winner-take-all" loading="lazy">
+        <figcaption data-i18n="px_rules_cap">Left: PS vs CH under three counting rules — the leader changes each time. Right: the same AD votes as a share of seats and of won territories; the dashed line is 50%.</figcaption>
       </figure>
     </div>
+    <div class="note" data-i18n="pxA_n">The D'Hondt engine behind every number here reproduces the official CNE allocation in all 22 circles exactly (230 seats) before any counterfactual is run. What cannot be tested on Portuguese ballots at all: the ranked-ballot families of the paradox catalogue (Condorcet cycles, best-is-worst, later-no-harm/help, truncation) — no Portuguese election offers ranked ballots.</div>
+
+    <h4 class="px-sub" data-i18n="pxB_t">Rule 2 · Who runs together — spoilers and clones</h4>
+    <p class="sect-sub" data-i18n="pxB_p">D'Hondt in medium-sized circles punishes splits and rewards merges. Merge or split the lists, keep every vote exactly where it was, re-run the allocation — the seat totals swing by more than most parliamentary majorities:</p>
+    <div class="figs">
+      <figure class="fig">
+        <img src="img/en/px_counterfactuals.png" data-fig="px_counterfactuals" alt="Seats under five alliance scenarios on the same votes; AD+CH reaches 154" loading="lazy">
+        <figcaption data-i18n="px_cf_cap">Each bar: 230 seats, the same votes, a different list structure. The dashed line is the majority (116 seats).</figcaption>
+      </figure>
+    </div>
+
+    <h4 class="px-sub" data-i18n="pxC_t">Rule 3 · Real first-past-the-post — the câmaras</h4>
+    <p class="sect-sub" data-i18n="pxC_p">Municipal presidents (12.10.2025) are the one real plurality race in Portugal. 142 of 308 winners took office below 50%; in 49 câmaras the opposing ideological bloc combined outvoted the winner — the frustrated-majority paradox on real, non-designed territories.</p>
+    <div class="figs">
+      <figure class="fig">
+        <img src="img/en/px_autarquicas.png" data-fig="px_autarquicas" alt="The 10 largest câmaras where the winning list trails the opposing bloc combined" loading="lazy">
+        <figcaption data-i18n="px_aut_cap">The 10 largest câmaras where the winner trails the opposing bloc. Dots: the winning list vs the bloc combined, % of valid votes; dashed line = 50%.</figcaption>
+      </figure>
+    </div>
+    <div class="note" data-i18n="pxC_n">Lisboa is the flagship: the AD+IL list won the câmara with 42.8% while the left lists together polled 45.2% — 6,251 more votes for the losing bloc. Sintra (34.6% vs 38.8%), Porto (38.1% vs 45.6%) and Braga (25.1% vs 30.7%) amplify the pattern.</div>
+
+    <h4 class="px-sub" data-i18n="pxD_t">Rule 4 · The two-round runoff</h4>
+    <p class="sect-sub" data-i18n="pxD_p">January 2026: only the top two advanced, while the eliminated centre (Cotrim + Gouveia + Mendes) held 39.8% of valid votes. Where those voters went, by an ecological estimate (R² = 0.997): Cotrim's split — 40% Seguro, 23% Ventura, 21% blank or null; Gouveia and Mendes — about 77% to Seguro. Blank ballots almost tripled between the rounds.</p>
+    <div class="figs">
+      <figure class="fig">
+        <img src="img/en/px_runoff.png" data-fig="px_runoff" alt="First-round shares with the top-two cutoff, and the blank and null surge between rounds" loading="lazy">
+        <figcaption data-i18n="px_run_cap">Left: first-round shares — the line separates the finalists from the eliminated 39.8%. Right: blank and null ballots, 1st round vs runoff.</figcaption>
+      </figure>
+    </div>
+    <div class="note" data-i18n="pxD_n">The catalogue's no-show paradox stays out of reach: Ventura led third place by 405,745 first-round votes — only a stay-home of that scale could have kept him out of the runoff — and the rule's known non-monotonicity (a candidate losing by gaining votes) had no room to fire either. Both margins are quoted in full in the project report.</div>
   </section>
 
   <section>
-    <h3 class="sect" data-i18n="meth_title">How I checked</h3>
-    <p class="sect-sub" data-i18n="meth_intro">Ten families of tests used by election statisticians worldwide, run on the official parish data with open-source code. Summary: all clean.</p>
+    <h3 class="sect" data-i18n="meth_title">Manipulation detection test results</h3>
+    <p class="sect-sub" data-i18n="meth_intro">Nine families of tests used by election statisticians worldwide, run on the official parish data with open-source code. Summary: all clean.</p>
     <div class="m-list">
       <details class="m">
         <summary>
@@ -219,6 +310,10 @@
         <div class="m-details">
           <p data-i18n="m1_d">The Shpilkin method models the honest bell curve of turnout and measures the votes sitting beyond it — the 80–100% zone where ballot-stuffing lands. The anomaly boundary (78.6%) is not fitted to these data: it is the upper percentile of the 2022 and 2024 control elections. Beyond it stand 7,779 voters (0.13% of ballots) carrying 2,980 votes for AD = 0.15% of the party’s total; recounting without that zone moves AD from 32.72% to 32.71%.</p>
           <div class="m-figs">
+            <figure class="fig wide">
+              <img src="img/en/turnout.png" data-fig="turnout" alt="Turnout histogram: one smooth bell curve fading out by ~79%" loading="lazy">
+              <figcaption data-i18n="fig1_cap">Turnout of 9.27 million registered voters, parish by parish. One bell curve that fades out before 80% — the zone where ballot-stuffing leaves its trace is empty.</figcaption>
+            </figure>
             <figure class="fig">
               <img src="img/details/en/shpilkin_core.png" data-dfig="shpilkin_core" data-dalt="m1_a1" loading="lazy" alt="Turnout histogram with the 78.6% anomaly boundary, and leader votes by turnout with the 2,980-vote anomalous zone highlighted">
               <figcaption data-i18n="m1_c1">Left: parish turnout — one bell curve (mode 69.3%, σ = 6.7 p.p.) that dies out by ~79%; the dashed line is the 78.6% anomaly boundary from the control elections. Right: leader votes by turnout — the red zone beyond the boundary holds only 2,980 votes (0.15% of AD’s votes).</figcaption>
@@ -241,6 +336,10 @@
         <div class="m-details">
           <p data-i18n="m2_d">In a manipulated count the turnout × result scatter stretches into a “comet tail”: as turnout rises, the leading party’s share climbs while opponents fade. Here the clouds of AD, PS and CH all stay vertically compact over the whole turnout range; the weighted turnout × share correlation of the leader is −0.09. The tail that stuffing produces is absent.</p>
           <div class="m-figs">
+            <figure class="fig wide">
+              <img src="img/en/comet.png" data-fig="comet" alt="Turnout vs AD share: compact cloud, no separate tail" loading="lazy">
+              <figcaption data-i18n="fig2_cap">Each dot is a parish (size = registered voters). The AD share does not rise with turnout; there is no separate high-turnout, high-share cloud.</figcaption>
+            </figure>
             <figure class="fig">
               <img src="img/details/en/comet_scatter.png" data-dfig="comet_scatter" data-dalt="m2_a1" loading="lazy" alt="Turnout vs AD, PS and CH share: vertically compact clouds, no comet tail">
               <figcaption data-i18n="m2_c1">Each dot is a parish (area = registered voters), panels for the top-3 lists. No panel shows a tail of high-turnout, high-share parishes.</figcaption>
@@ -314,16 +413,20 @@
         <summary>
           <span class="badge">✓</span>
           <span class="m-head">
-            <h5 data-i18n="m6_t">Outliers vs neighbours</h5>
-            <p data-i18n="m6_b">81 of 3,092 parishes (2.6%) beyond |z| &gt; 4 — small parishes, mixed directions, no clustering at high turnout.</p>
+            <h5 data-i18n="m6_t">Outliers vs neighbours + machine learning</h5>
+            <p data-i18n="m6_b">81 of 3,092 parishes (2.6%) flagged by the neighbour screen and 31 (top 1% by construction) by machine learning — all tiny parishes with mixed directions; a normal statistical tail, not a pattern.</p>
           </span>
         </summary>
         <div class="m-details">
-          <p data-i18n="m6_d">A comparison robust to regional differences: each parish’s turnout and AD share become z-scores against the median of its own municipality. 81 of 3,092 parishes (2.6%) lie beyond |z| &gt; 4 — an ordinary tail for 3,092 heterogeneous territories. The flags are minute parishes in both directions, and the most extreme (Anobra, 1,101 voters) is anomalously LOW for AD (z = −22.6) — the opposite of pro-leader stuffing — with no clustering at high turnout.</p>
+          <p data-i18n="m6_d">Two independent screens for odd parishes: each parish against the median of its own municipality (robust z-scores), and an Isolation Forest over each parish’s full profile (turnout, party shares, blank and invalid rates). The neighbour screen flags 81 of 3,092 parishes (2.6%) beyond |z| &gt; 4 — an ordinary tail for 3,092 heterogeneous territories; machine learning flags exactly 31, the most unusual 1% by construction. All are minute parishes with mixed directions: the most extreme neighbour outlier (Anobra, 1,101 voters) is anomalously LOW for AD (z = −22.6) — the opposite of pro-leader stuffing — and the 31 machine-learning flags are tiny Azorean and mountain communities with high blank-ballot shares (up to 9–10%) that form no cluster in the turnout × result plane. Candidates for manual review, not a fraud signal.</p>
           <div class="m-figs">
             <figure class="fig">
               <img src="img/details/en/neighbors_outliers.png" data-dfig="neighbors_outliers" data-dalt="m6_a1" loading="lazy" alt="The 81 outliers in the plane of robust z of turnout and leader share, both directions">
               <figcaption data-i18n="m6_c1">The 81 outliers (red) in the plane of robust z of turnout × robust z of AD share: scattered both ways; the deepest one is against the leader.</figcaption>
+            </figure>
+            <figure class="fig">
+              <img src="img/details/en/ml_anomalies.png" data-dfig="ml_anomalies" data-dalt="m6_a2" loading="lazy" alt="Isolation Forest anomaly-score distribution and the flagged parishes in the turnout × result plane">
+              <figcaption data-i18n="m6_c2">Left: anomaly-score distribution with the 1% threshold. Right: the flagged parishes in the turnout × result plane — scattered, none in the up-right corner.</figcaption>
             </figure>
           </div>
         </div>
@@ -342,24 +445,6 @@
             <figure class="fig">
               <img src="img/details/en/swing_previous.png" data-dfig="swing_previous" data-dalt="m7_a1" loading="lazy" alt="Turnout swing vs AD share swing 2024 to 2025 per parish; the double-jump corner is empty">
               <figcaption data-i18n="m7_c1">Swing in turnout × swing in AD share, 2024 → 2025, one dot per parish: the up-right corner of double jumps &gt; 15 p.p. is empty (red legend: 0).</figcaption>
-            </figure>
-          </div>
-        </div>
-      </details>
-      <details class="m">
-        <summary>
-          <span class="badge">✓</span>
-          <span class="m-head">
-            <h5 data-i18n="m8_t">Machine learning (Isolation Forest)</h5>
-            <p data-i18n="m8_b">31 anomalies (top 1% by construction): tiny Azorean and mountain parishes with high blank-ballot shares; no suspicious clustering.</p>
-          </span>
-        </summary>
-        <div class="m-details">
-          <p data-i18n="m8_d">A check that presumes no fraud model: an Isolation Forest scores every parish on its full profile (turnout, party shares, blank and invalid rates) and flags the most unusual 1%. The 31 flagged parishes are tiny Azorean and mountain communities with high blank-ballot shares (up to 9–10%) — not high turnout or a high AD share — and they form no cluster in the turnout × result plane. Candidates for manual review, not a fraud signal.</p>
-          <div class="m-figs">
-            <figure class="fig">
-              <img src="img/details/en/ml_anomalies.png" data-dfig="ml_anomalies" data-dalt="m8_a1" loading="lazy" alt="Isolation Forest anomaly-score distribution and the flagged parishes in the turnout × result plane">
-              <figcaption data-i18n="m8_c1">Left: anomaly-score distribution with the 1% threshold. Right: the flagged parishes in the turnout × result plane — scattered, none in the up-right corner.</figcaption>
             </figure>
           </div>
         </div>
@@ -387,6 +472,10 @@
         <div class="m-details">
           <p data-i18n="m10_d">A “clean” verdict is only meaningful if the tools can actually fire. Two synthetic frauds are injected into the same 3,092 parishes: ballot-stuffing (+131,629 AD ballots in 10% of parishes, turnout +5–35 p.p.) grows the anomalous-zone estimate from 14,589 to 255,496 votes (×18), and fitting turnout to whole percents in 5% of parishes pushes the round-number statistic from z = 0.2 to 5.1. Every alarm fires — the clean result above is a measurement, not a blind spot.</p>
           <div class="m-figs">
+            <figure class="fig wide">
+              <img src="img/en/selftest.png" data-fig="selftest" alt="Self-test: synthetic stuffing makes the anomalous-zone estimate grow 18-fold" loading="lazy">
+              <figcaption data-i18n="fig3_cap">Sensitivity test: synthetic stuffing (+131,629 AD ballots in 10% of parishes) makes the estimated anomalous zone jump from 14,589 to 255,496 votes (×18). The tools see fraud when it exists.</figcaption>
+            </figure>
             <figure class="fig">
               <img src="img/details/en/selftest.png" data-dfig="selftest" data-dalt="m10_a1" loading="lazy" alt="Self-test: turnout before and after synthetic stuffing, and the ×18 growth of the anomalous-zone estimate">
               <figcaption data-i18n="m10_c1">Left: the injected mass appears exactly where honest distributions never reach. Right: the Shpilkin signal grows ×18 (14,589 → 255,496 votes) against the 131,629 ballots actually injected.</figcaption>
@@ -451,21 +540,50 @@ en: {
   p_pcp: "3.0%", p_be: "2.0%", p_pan: "1.4%", p_adn: "1.3%",
   p_rest: "11 other lists", p_rest_pct: "1.5%",
   res_note: "The overseas circle (~1.6 million registered voters) is not part of the parish-level official export; percentages above are shares of ballots cast.",
-  why_title: "Three reasons the numbers can be trusted",
-  a1_t: "The high-turnout zone is physically empty",
-  a1_b: "Parish turnout forms one bell curve that fades out by ~79%. Above the 78.6% boundary — the upper percentile of the 2022 and 2024 control elections — only 7,779 voters remain: 0.13% of ballots. Ballot-stuffing shifts mass precisely into the 80–100% zone; here that zone contains essentially nothing, and the same ~78–80% ceiling recurred in 2022 and 2024.",
-  a2_t: "The leader’s result does not grow with turnout",
-  a2_b: "In the turnout × result scatter, the AD cloud stays vertically compact across the whole range (weighted correlation −0.09), and the fingerprint analysis finds no “up-right” cluster. The two clusters it does find are geography — the rural north versus the south and the cities — not fraud.",
-  a3_t: "Every flagged oddity is tiny — and the toolkit provably works",
-  a3_b: "The 81 neighbour-outliers and 31 machine-learning anomalies are minute parishes with mixed directions — the most extreme is a parish with an anomalously LOW AD share. In the self-test, injecting 131,629 synthetic ballots grew the anomalous-zone estimate 18-fold and pushed the round-number statistic from z = 0.2 to 5.1: the “clean” verdict is a measurement, not a blind spot.",
+  paradox_link: "Paradoxes ↓",
+  verdict2_title: "Same votes, different counting rules — different winners",
+  flip1_line: "<b>PS</b> finished 4,313 votes ahead of CH — and 2 seats behind (58 vs 60)",
+  flip2_line: "Under winner-take-all districts, AD's <b>33%</b> of votes becomes <b>69–76%</b> of the wins",
+  px_title: "Same votes, different rules — different results",
+  px_intro: "How much do the rules themselves decide? I re-counted the same ballots under alternative rules — one national district, winner-take-all territories, different alliances, the two-round runoff. Theory calls these voting paradoxes; on this data they are simply measurements.",
+  px1_t: "The PS–CH tie flips three ways",
+  px1_p: "PS finished 4,313 votes ahead of CH nationally (23.81% vs 23.74%) — yet took 2 fewer seats: 58 against 60, under Portugal's 22 D'Hondt circles. One national district would tie them at 56 : 56. Winner-take-all parishes: PS leads 429 : 309. Winner-take-all municipalities: CH leads 67 : 34.",
+  px2_t: "Alliances, not voters, move 60+ seats",
+  px2_p: "Re-running D'Hondt on the identical votes: AD and CH united — 154 seats, a constitutional majority. A united left of five parties (34.1% of the votes) — 84 seats, ahead of AD's 81. AD split as in 2022 — minus 4 seats, handed to PS and CH. Not one ballot changes.",
+  px3_t: "In the real plurality races, minorities govern",
+  px3_p: "Municipal presidents are elected first-past-the-post — the rule most exposed to vote-splitting. In October 2025, 142 of 308 winning lists had no majority; in 49 câmaras the opposing bloc combined had more votes. In Lisboa: 42.8% for the winner, 45.2% for the losing bloc.",
+  pxA_t: "Rule 1 · National votes, districts, winner-take-all",
+  pxA_p: "Portugal hands out 230 seats over 22 D'Hondt circles — no national tier, no majority bonus. The same ballots, counted four ways:",
+  pxA_n: "The D'Hondt engine behind every number here reproduces the official CNE allocation in all 22 circles exactly (230 seats) before any counterfactual is run. What cannot be tested on Portuguese ballots at all: the ranked-ballot families of the paradox catalogue (Condorcet cycles, best-is-worst, later-no-harm/help, truncation) — no Portuguese election offers ranked ballots.",
+  t_h_party: "List", t_h_votes: "National votes", t_h_seats: "D'Hondt seats (actual)",
+  t_h_nat: "One national district", t_h_conc: "Concelhos (FPTP sim.)", t_h_freg: "Freguesias (FPTP sim.)",
+  t_ad1: "33.2%", t_ad2: "91", t_ad3: "78", t_ad4: "224 / 325", t_ad5: "2,343 / 3,092",
+  t_ps1: "23.8% · leads", t_ps2: "58", t_ps3: "56", t_ps4: "34 / 325", t_ps5: "429 / 3,092",
+  t_ch1: "23.7%", t_ch2: "60 · leads", t_ch3: "56", t_ch4: "67 / 325", t_ch5: "309 / 3,092",
+  px_rules_cap: "Left: PS vs CH under three counting rules — the leader changes each time. Right: the same AD votes as a share of seats and of won territories; the dashed line is 50%.",
+  fig4_alt: "PS vs CH under three counting rules, and the AD vote amplified under winner-take-all",
+  pxB_t: "Rule 2 · Who runs together — spoilers and clones",
+  pxB_p: "D'Hondt in medium-sized circles punishes splits and rewards merges. Merge or split the lists, keep every vote exactly where it was, re-run the allocation — the seat totals swing by more than most parliamentary majorities:",
+  px_cf_cap: "Each bar: 230 seats, the same votes, a different list structure. The dashed line is the majority (116 seats).",
+  fig5_alt: "Seats under five alliance scenarios on the same votes; AD+CH reaches 154",
+  pxC_t: "Rule 3 · Real first-past-the-post — the câmaras",
+  pxC_p: "Municipal presidents (12.10.2025) are the one real plurality race in Portugal. 142 of 308 winners took office below 50%; in 49 câmaras the opposing ideological bloc combined outvoted the winner — the frustrated-majority paradox on real, non-designed territories.",
+  px_aut_cap: "The 10 largest câmaras where the winner trails the opposing bloc. Dots: the winning list vs the bloc combined, % of valid votes; dashed line = 50%.",
+  fig6_alt: "The 10 largest câmaras where the winning list trails the opposing bloc combined",
+  pxC_n: "Lisboa is the flagship: the AD+IL list won the câmara with 42.8% while the left lists together polled 45.2% — 6,251 more votes for the losing bloc. Sintra (34.6% vs 38.8%), Porto (38.1% vs 45.6%) and Braga (25.1% vs 30.7%) amplify the pattern.",
+  pxD_t: "Rule 4 · The two-round runoff",
+  pxD_p: "January 2026: only the top two advanced, while the eliminated centre (Cotrim + Gouveia + Mendes) held 39.8% of valid votes. Where those voters went, by an ecological estimate (R² = 0.997): Cotrim's split — 40% Seguro, 23% Ventura, 21% blank or null; Gouveia and Mendes — about 77% to Seguro. Blank ballots almost tripled between the rounds.",
+  px_run_cap: "Left: first-round shares — the line separates the finalists from the eliminated 39.8%. Right: blank and null ballots, 1st round vs runoff.",
+  fig7_alt: "First-round shares with the top-two cutoff, and the blank and null surge between rounds",
+  pxD_n: "The catalogue's no-show paradox stays out of reach: Ventura led third place by 405,745 first-round votes — only a stay-home of that scale could have kept him out of the runoff — and the rule's known non-monotonicity (a candidate losing by gaining votes) had no room to fire either. Both margins are quoted in full in the project report.",
   fig1_cap: "Turnout of 9.27 million registered voters, parish by parish. One bell curve that fades out before 80% — the zone where ballot-stuffing leaves its trace is empty.",
   fig1_alt: "Turnout histogram: one smooth bell curve fading out by ~79%",
   fig2_alt: "Turnout vs AD share: compact cloud, no separate tail",
   fig3_alt: "Self-test: synthetic stuffing makes the anomalous-zone estimate grow 18-fold",
   fig2_cap: "Each dot is a parish (size = registered voters). The AD share does not rise with turnout; there is no separate high-turnout, high-share cloud.",
   fig3_cap: "Sensitivity test: synthetic stuffing (+131,629 AD ballots in 10% of parishes) makes the estimated anomalous zone jump from 14,589 to 255,496 votes (×18). The tools see fraud when it exists.",
-  meth_title: "How I checked",
-  meth_intro: "Ten families of tests used by election statisticians worldwide, run on the official parish data with open-source code. Summary: all clean.",
+  meth_title: "Manipulation detection test results",
+  meth_intro: "Nine families of tests used by election statisticians worldwide, run on the official parish data with open-source code. Summary: all clean.",
   m1_t: "Anomalous-vote estimate (Shpilkin method)",
   m1_b: "Beyond the honest decline: 2,980 AD votes = 0.15% of the party’s votes. Recounting without that zone moves the result from 32.72% to 32.71%.",
   m2_t: "Turnout × result scatter (“comet tail”)",
@@ -476,12 +594,10 @@ en: {
   m4_b: "Parishes with exactly whole-percentage turnout: 1.46% vs 1.44% expected by chance (z = 0.1); no excess of multiples of 5, none in the leader’s share either (z between −0.4 and +0.1).",
   m5_t: "Digit tests (Benford, last digit)",
   m5_b: "12 tests on vote counts: 11 clean. The only borderline value — AD, last digit, p = 0.02 (a deficit of digit 4) — has no “invented numbers” profile and is not significant after multiple-testing correction.",
-  m6_t: "Outliers vs neighbours",
-  m6_b: "81 of 3,092 parishes (2.6%) beyond |z| > 4 — small parishes, mixed directions, no clustering at high turnout.",
+  m6_t: "Outliers vs neighbours + machine learning",
+  m6_b: "81 of 3,092 parishes (2.6%) flagged by the neighbour screen and 31 (top 1% by construction) by machine learning — all tiny parishes with mixed directions; a normal statistical tail, not a pattern.",
   m7_t: "Jumps versus the 2024 election",
   m7_b: "Not a single parish shows a simultaneous jump in turnout and in AD share above 15 points.",
-  m8_t: "Machine learning (Isolation Forest)",
-  m8_b: "31 anomalies (top 1% by construction): tiny Azorean and mountain parishes with high blank-ballot shares; no suspicious clustering.",
   m9_t: "Precinct protocols cross-checked against official totals",
   m9_b: "In six municipalities that publish precinct maps (91 precincts, 60,711 registered voters = 0.66% of the electorate), the precinct sums match the official totals of every list to the exact vote; the row arithmetic is exact; no duplicated protocols.",
   m10_t: "Self-test: the toolkit actually detects fraud",
@@ -507,15 +623,14 @@ en: {
   m5_a1: "Second-digit distributions against Benford's law for the top-6 lists, pooled",
   m5_c2: "Last digits pooled against uniformity: flat. The only per-party deviation in the whole family is AD (p = 0.02, a deficit of 4) — without the round 0/5 excess typical of invented numbers.",
   m5_a2: "Last-digit distributions against uniformity for the top-6 lists, pooled",
-  m6_d: "A comparison robust to regional differences: each parish’s turnout and AD share become z-scores against the median of its own municipality. 81 of 3,092 parishes (2.6%) lie beyond |z| > 4 — an ordinary tail for 3,092 heterogeneous territories. The flags are minute parishes in both directions, and the most extreme (Anobra, 1,101 voters) is anomalously LOW for AD (z = −22.6) — the opposite of pro-leader stuffing — with no clustering at high turnout.",
+  m6_d: "Two independent screens for odd parishes: each parish against the median of its own municipality (robust z-scores), and an Isolation Forest over each parish’s full profile (turnout, party shares, blank and invalid rates). The neighbour screen flags 81 of 3,092 parishes (2.6%) beyond |z| > 4 — an ordinary tail for 3,092 heterogeneous territories; machine learning flags exactly 31, the most unusual 1% by construction. All are minute parishes with mixed directions: the most extreme neighbour outlier (Anobra, 1,101 voters) is anomalously LOW for AD (z = −22.6) — the opposite of pro-leader stuffing — and the 31 machine-learning flags are tiny Azorean and mountain communities with high blank-ballot shares (up to 9–10%) that form no cluster in the turnout × result plane. Candidates for manual review, not a fraud signal.",
   m6_c1: "The 81 outliers (red) in the plane of robust z of turnout × robust z of AD share: scattered both ways; the deepest one is against the leader.",
   m6_a1: "The 81 outliers in the plane of robust z of turnout and leader share, both directions",
+  m6_c2: "Left: anomaly-score distribution with the 1% threshold. Right: the flagged parishes in the turnout × result plane — scattered, none in the up-right corner.",
+  m6_a2: "Isolation Forest anomaly-score distribution and the flagged parishes in the turnout × result plane",
   m7_d: "The sharpest manipulation signature versus a previous election is a double jump — turnout up AND the leader’s share up, sharply, in the same parish. Comparing the same 3,092 parishes with AR-2024: not a single one clears +15 p.p. in both at once. The changes that do exist track the reshuffling of coalitions between the two elections, not the counting.",
   m7_c1: "Swing in turnout × swing in AD share, 2024 → 2025, one dot per parish: the up-right corner of double jumps > 15 p.p. is empty (red legend: 0).",
   m7_a1: "Turnout swing vs AD share swing 2024 to 2025 per parish; the double-jump corner is empty",
-  m8_d: "A check that presumes no fraud model: an Isolation Forest scores every parish on its full profile (turnout, party shares, blank and invalid rates) and flags the most unusual 1%. The 31 flagged parishes are tiny Azorean and mountain communities with high blank-ballot shares (up to 9–10%) — not high turnout or a high AD share — and they form no cluster in the turnout × result plane. Candidates for manual review, not a fraud signal.",
-  m8_c1: "Left: anomaly-score distribution with the 1% threshold. Right: the flagged parishes in the turnout × result plane — scattered, none in the up-right corner.",
-  m8_a1: "Isolation Forest anomaly-score distribution and the flagged parishes in the turnout × result plane",
   m9_d: "The one documentary check: six municipalities publish the official per-precinct maps (91 precincts, 60,711 registered voters = 0.66% of the electorate). Precinct sums match the official totals of every list to the exact vote; the row arithmetic is exact in all 91 protocols (votes + blank + invalid = ballots cast, cast + abstentions = registered); no two protocols coincide — the copy-paste signature of “drawn” results is absent. Honest caveat of scale: at n = 91 the self-test shows the round-number test cannot detect redrawing of ~9% of protocols, so this is a spot check of 0.66% of the electorate, not a national precinct audit.",
   m10_d: "A “clean” verdict is only meaningful if the tools can actually fire. Two synthetic frauds are injected into the same 3,092 parishes: ballot-stuffing (+131,629 AD ballots in 10% of parishes, turnout +5–35 p.p.) grows the anomalous-zone estimate from 14,589 to 255,496 votes (×18), and fitting turnout to whole percents in 5% of parishes pushes the round-number statistic from z = 0.2 to 5.1. Every alarm fires — the clean result above is a measurement, not a blind spot.",
   m10_c1: "Left: the injected mass appears exactly where honest distributions never reach. Right: the Shpilkin signal grows ×18 (14,589 → 255,496 votes) against the 131,629 ballots actually injected.",
@@ -556,21 +671,50 @@ pt: {
   p_pcp: "3,0%", p_be: "2,0%", p_pan: "1,4%", p_adn: "1,3%",
   p_rest: "outras 11 listas", p_rest_pct: "1,5%",
   res_note: "O círculo do estrangeiro (~1,6 milhões de inscritos) não consta da exportação oficial por freguesias; as percentagens acima são quotas dos boletins depositados.",
-  why_title: "Três razões para confiar nos números",
-  a1_t: "A zona de afluência alta está fisicamente vazia",
-  a1_b: "A afluência por freguesia forma uma curva em sino que se esgota por volta dos 79%. Acima da fronteira de 78,6% — o percentil superior das eleições de controlo de 2022 e 2024 — restam apenas 7 779 votantes: 0,13% dos boletins. A inflação de votos desloca a massa precisamente para a faixa dos 80–100%; aqui essa faixa está praticamente vazia — e o mesmo teto de ~78–80% repetiu-se em 2022 e 2024.",
-  a2_t: "O resultado do líder não cresce com a afluência",
-  a2_b: "No diagrama afluência × resultado, a nuvem do AD mantém-se verticalmente compacta em toda a gama (correlação ponderada −0,09) e a análise de «impressões digitais» não encontra nenhum agrupamento «para cima e para a direita». Os dois agrupamentos que encontra são geografia — o norte rural face ao sul e às cidades —, não fraude.",
-  a3_t: "Todos os sinais apontam para freguesias minúsculas — e as ferramentas provam que funcionam",
-  a3_b: "Os 81 desvios «vs. vizinhos» e as 31 anomalias de aprendizagem automática são freguesias minúsculas com direções mistas — a mais extrema é uma freguesia com quota do AD anormalmente BAIXA. No auto-teste, injetar 131 629 boletins sintéticos multiplicou por 18 a estimativa da zona anómala e empurrou a estatística dos números redondos de z = 0,2 para 5,1: o veredicto «limpo» é uma medição, não um ponto cego.",
+  paradox_link: "Paradoxos ↓",
+  verdict2_title: "Os mesmos votos, outras regras de contagem — outros vencedores",
+  flip1_line: "O <b>PS</b> terminou 4 313 votos à frente do CH — e 2 mandatos atrás (58 vs. 60)",
+  flip2_line: "Em círculos winner-take-all, os <b>33%</b> de votos do AD transformam-se em <b>69–76%</b> das vitórias",
+  px_title: "Os mesmos votos, outras regras — outros resultados",
+  px_intro: "Quanto decidem as próprias regras? Recalculei os mesmos boletins sob regras alternativas — um círculo único nacional, territórios winner-take-all, alianças diferentes, a segunda volta. A teoria chama-lhe paradoxos eleitorais; nestes dados são simplesmente medições.",
+  px1_t: "O empate PS–CH vira três vezes",
+  px1_p: "O PS terminou 4 313 votos à frente do CH a nível nacional (23,81% vs. 23,74%) — mas com 2 mandatos menos: 58 contra 60, nos 22 círculos D'Hondt de Portugal. Um círculo único nacional empatá-los-ia em 56 : 56. Freguesias winner-take-all: PS à frente por 429 : 309. Municípios winner-take-all: CH à frente por 67 : 34.",
+  px2_t: "As alianças, não os eleitores, movem mais de 60 mandatos",
+  px2_p: "Reexecutando o D'Hondt com os mesmos votos: AD e CH unidos — 154 mandatos, maioria constitucional. Uma esquerda unida de cinco partidos (34,1% dos votos) — 84 mandatos, à frente dos 81 do AD. AD dividida como em 2022 — menos 4 mandatos, entregues ao PS e ao CH. Nem um boletim muda.",
+  px3_t: "Nas corridas maioritárias reais, minorias governam",
+  px3_p: "Os presidentes de câmara elegem-se por maioria simples — a regra mais exposta à dispersão de votos. Em outubro de 2025, 142 das 308 listas vencedoras ficaram sem maioria; em 49 câmaras o bloco oposto agregado teve mais votos. Em Lisboa: 42,8% para o vencedor, 45,2% para o bloco perdedor.",
+  pxA_t: "Regra 1 · Votos nacionais, círculos, winner-take-all",
+  pxA_p: "Portugal distribui 230 mandatos por 22 círculos D'Hondt — sem nível nacional, sem prémio de maioria. Os mesmos boletins, contados de quatro maneiras:",
+  pxA_n: "O motor D'Hondt por trás de todos estes números reproduz exatamente a alocação oficial da CNE nos 22 círculos (230 mandatos) antes de qualquer contrafactual. O que não é testável em boletins portugueses: as famílias de paradoxos de ballot preferencial (ciclos de Condorcet, best-is-worst, later-no-harm/help, truncatura) — nenhuma eleição portuguesa usa boletins ordenados.",
+  t_h_party: "Lista", t_h_votes: "Votos nacionais", t_h_seats: "Mandatos D'Hondt (real)",
+  t_h_nat: "Um círculo nacional único", t_h_conc: "Concelhos (sim. FPTP)", t_h_freg: "Freguesias (sim. FPTP)",
+  t_ad1: "33,2%", t_ad2: "91", t_ad3: "78", t_ad4: "224 / 325", t_ad5: "2 343 / 3 092",
+  t_ps1: "23,8% · à frente", t_ps2: "58", t_ps3: "56", t_ps4: "34 / 325", t_ps5: "429 / 3 092",
+  t_ch1: "23,7%", t_ch2: "60 · à frente", t_ch3: "56", t_ch4: "67 / 325", t_ch5: "309 / 3 092",
+  px_rules_cap: "À esquerda: PS vs. CH sob três regras de contagem — o líder muda a cada uma. À direita: os mesmos votos do AD como quota de mandatos e de territórios ganhos; a linha tracejada são 50%.",
+  fig4_alt: "PS vs. CH sob três regras de contagem, e os votos do AD amplificados em winner-take-all",
+  pxB_t: "Regra 2 · Quem concorre junto — spoilers e clones",
+  pxB_p: "O D'Hondt em círculos de dimensão média pune divisões e premia fusões. Fundam-se ou dividem-se listas, cada voto fica exatamente onde estava, realoca-se — os totais de mandatos oscilam mais do que a maioria de muitos parlamentos:",
+  px_cf_cap: "Cada barra: 230 mandatos, os mesmos votos, outra estrutura de listas. A linha tracejada é a maioria (116 mandatos).",
+  fig5_alt: "Mandatos em cinco cenários de aliança com os mesmos votos; AD+CH chega a 154",
+  pxC_t: "Regra 3 · Maioria simples real — as câmaras",
+  pxC_p: "Os presidentes de câmara (12.10.2025) são a única corrida maioritária real em Portugal. 142 de 308 vencedores tomaram posse abaixo dos 50%; em 49 câmaras o bloco ideológico oposto agregado teve mais votos do que o vencedor — o paradoxo da maioria frustrada em territórios reais.",
+  px_aut_cap: "As 10 maiores câmaras em que o vencedor fica atrás do bloco oposto. Pontos: lista vencedora vs. bloco agregado, % dos votos válidos; linha tracejada = 50%.",
+  fig6_alt: "As 10 maiores câmaras em que a lista vencedora fica atrás do bloco oposto agregado",
+  pxC_n: "Lisboa é o caso emblemático: a lista AD+IL venceu a câmara com 42,8% enquanto as listas da esquerda somaram 45,2% — 6 251 votos a mais para o bloco perdedor. Sintra (34,6% vs. 38,8%), Porto (38,1% vs. 45,6%) e Braga (25,1% vs. 30,7%) amplificam o padrão.",
+  pxD_t: "Regra 4 · A segunda volta",
+  pxD_p: "Janeiro de 2026: só os dois primeiros avançaram, enquanto o centro eliminado (Cotrim + Gouveia + Mendes) tinha 39,8% dos votos válidos. Para onde foram esses eleitores, por estimativa ecológica (R² = 0,997): a divisão de Cotrim — 40% Seguro, 23% Ventura, 21% brancos ou nulos; Gouveia e Mendes — cerca de 77% para Seguro. Os boletins em branco quase triplicaram entre as voltas.",
+  px_run_cap: "À esquerda: quotas da 1.ª volta — a linha separa os finalistas dos 39,8% eliminados. À direita: boletins brancos e nulos, 1.ª vs. 2.ª volta.",
+  fig7_alt: "Quotas da primeira volta com o corte dos dois primeiros, e o salto dos brancos e nulos entre voltas",
+  pxD_n: "O paradoxo do no-show do catálogo fica fora de alcance: Ventura levou de vantagem sobre o terceiro lugar 405 745 votos na primeira volta — só uma abstenção dessa escala o teria deixado fora da segunda volta —, e a não-monotonicidade conhecida da regra (um candidato perder por ganhar votos) também não teve espaço para disparar. Ambas as margens estão detalhadas no relatório do projeto.",
   fig1_cap: "Afluência de 9,27 milhões de inscritos, freguesia a freguesia. Uma única curva em sino que se esgota antes dos 80% — a faixa onde a inflação de votos deixa rasto está vazia.",
   fig1_alt: "Histograma da afluência: uma curva em sino que se esgota por volta dos 79%",
   fig2_alt: "Afluência vs. quota do AD: nuvem compacta, sem cauda separada",
   fig3_alt: "Auto-teste: a injeção de fraude sintética multiplica por 18 a estimativa da zona anómala",
   fig2_cap: "Cada ponto é uma freguesia (tamanho = inscritos). A quota do AD não cresce com a afluência; não há nuvem separada de afluência alta e quota alta.",
   fig3_cap: "Teste de sensibilidade: injeção de +131 629 boletins para o AD em 10% das freguesias — a estimativa da zona anómala salta de 14 589 para 255 496 votos (×18). As ferramentas vêem a fraude quando ela existe.",
-  meth_title: "Como verifiquei",
-  meth_intro: "Dez famílias de testes usadas por estatísticos eleitorais em todo o mundo, sobre os dados oficiais de freguesia, com código aberto. Resumo: tudo limpo.",
+  meth_title: "Resultados dos testes de deteção de manipulação",
+  meth_intro: "Nove famílias de testes usadas por estatísticos eleitorais em todo o mundo, sobre os dados oficiais de freguesia, com código aberto. Resumo: tudo limpo.",
   m1_t: "Estimativa de votos anómalos (método de Shpilkin)",
   m1_b: "Para além do declínio honesto: 2 980 votos do AD = 0,15% dos votos do partido. Recalcular sem essa zona muda o resultado de 32,72% para 32,71%.",
   m2_t: "Dispersão afluência × resultado («cauda do cometa»)",
@@ -581,12 +725,10 @@ pt: {
   m4_b: "Freguesias com afluência exatamente inteira: 1,46% contra 1,44% esperados ao acaso (z = 0,1); sem excesso de múltiplos de 5 nem de quotas inteiras do líder (z entre −0,4 e +0,1).",
   m5_t: "Testes aos dígitos (Benford, último dígito)",
   m5_b: "12 testes aos contegos: 11 limpos. O único valor limítrofe — AD, último dígito, p = 0,02 (défice do dígito 4) — não tem o perfil de «números inventados» e perde significância após a correção de Bonferroni.",
-  m6_t: "Desvios face aos vizinhos",
-  m6_b: "81 de 3 092 freguesias (2,6%) acima de |z| > 4 — freguesias pequenas, direções mistas, sem acumulação em afluência alta.",
+  m6_t: "Desvios face aos vizinhos + aprendizagem automática",
+  m6_b: "81 de 3 092 freguesias (2,6%) sinalizadas pelo rastreio de vizinhos e 31 (top 1% por construção) pela aprendizagem automática — todas minúsculas, com direções mistas; uma cauda estatística normal, não um padrão.",
   m7_t: "Saltos face às legislativas de 2024",
   m7_b: "Nenhuma freguesia com salto simultâneo de afluência e da quota do AD acima de 15 pontos.",
-  m8_t: "Aprendizagem automática (Isolation Forest)",
-  m8_b: "31 anomalias (top 1% por construção): freguesias minúsculas dos Açores e do interior montanhoso, com muitos boletins em branco; sem qualquer acumulação suspeita.",
   m9_t: "Protocolos de secção conferidos com os totais oficiais",
   m9_b: "Em seis municípios que publicam mapas por secção (91 secções, 60 711 inscritos = 0,66% do eleitorado), as somas por secção coincidem com os totais oficiais de todas as listas ao voto exato; a aritmética das linhas é perfeita; nenhum protocolo duplicado.",
   m10_t: "Auto-teste: as ferramentas apanham fraude",
@@ -612,15 +754,14 @@ pt: {
   m5_a1: "Distribuições dos segundos dígitos contra a lei de Benford para as seis maiores listas, agregadas",
   m5_c2: "Últimos dígitos agregados contra a uniformidade: planos. O único desvio por partido em toda a família é o AD (p = 0,02, défice do 4) — sem o excesso de 0/5 redondos típico de números inventados.",
   m5_a2: "Distribuições do último dígito contra a uniformidade para as seis maiores listas, agregadas",
-  m6_d: "Uma comparação robusta às diferenças regionais: a afluência e a quota do AD de cada freguesia tornam-se z-scores contra a mediana do seu próprio município. 81 de 3 092 freguesias (2,6%) ultrapassam |z| > 4 — uma cauda ordinária para 3 092 territórios heterogéneos. Os sinais são freguesias minúsculas nas duas direções, e a mais extrema (Anobra, 1 101 inscritos) está anormalmente BAIXA para o AD (z = −22,6) — o oposto de uma inflação pró-líder —, sem acumulação em afluência alta.",
+  m6_d: "Dois rastreios independentes de freguesias invulgares: cada freguesia contra a mediana do seu próprio município (z-scores robustos) e uma Isolation Forest sobre o perfil completo de cada freguesia (afluência, quotas partidárias, taxas de brancos e nulos). O rastreio de vizinhos sinaliza 81 de 3 092 freguesias (2,6%) acima de |z| > 4 — uma cauda ordinária para 3 092 territórios heterogéneos; a aprendizagem automática sinaliza exatamente 31, o 1% mais invulgar por construção. Todas são freguesias minúsculas com direções mistas: o desvio de vizinhos mais extremo (Anobra, 1 101 inscritos) está anormalmente BAIXO para o AD (z = −22,6) — o oposto de uma inflação pró-líder —, e as 31 anomalias da aprendizagem automática são comunidades minúsculas dos Açores e do interior montanhoso com quotas elevadas de boletins em branco (até 9–10%), sem qualquer agrupamento no plano afluência × resultado. Candidatas a revisão manual, não sinal de fraude.",
   m6_c1: "As 81 discrepantes (vermelho) no plano do z robusto de afluência × z robusto da quota do AD: dispersas nos dois sentidos; a mais funda é contra o líder.",
   m6_a1: "As 81 discrepantes no plano do z robusto de afluência e da quota do líder, nas duas direções",
+  m6_c2: "À esquerda: distribuição da pontuação de anomalia com o limiar de 1%. À direita: as freguesias sinalizadas no plano afluência × resultado — dispersas, nenhuma no canto superior direito.",
+  m6_a2: "Distribuição da pontuação de anomalia da Isolation Forest e as freguesias sinalizadas no plano afluência × resultado",
   m7_d: "A assinatura de manipulação mais nítida face às eleições anteriores é o salto duplo — afluência a subir E quota do líder a subir, em força, na mesma freguesia. Comparando as mesmas 3 092 freguesias com as legislativas de 2024: nenhuma ultrapassa +15 p.p. nas duas grandezas em simultâneo. As variações que existem seguem a reorganização das coligações entre as duas eleições, não a contagem.",
   m7_c1: "Variação de afluência × variação da quota do AD, 2024 → 2025, um ponto por freguesia: o canto superior direito dos saltos duplos > 15 p.p. está vazio (legenda vermelha: 0).",
   m7_a1: "Variação de afluência vs. variação da quota do AD de 2024 para 2025 por freguesia; o canto dos saltos duplos está vazio",
-  m8_d: "Uma verificação que não pressupõe nenhum modelo de fraude: uma Isolation Forest pontua cada freguesia pelo perfil completo (afluência, quotas partidárias, taxas de brancos e nulos) e sinaliza o 1% mais invulgar. As 31 freguesias sinalizadas são comunidades minúsculas dos Açores e do interior montanhoso com quotas elevadas de boletins em branco (até 9–10%) — e não afluência alta ou quota alta do AD —, e não formam qualquer agrupamento no plano afluência × resultado. Candidatas a revisão manual, não sinal de fraude.",
-  m8_c1: "À esquerda: distribuição da pontuação de anomalia com o limiar de 1%. À direita: as freguesias sinalizadas no plano afluência × resultado — dispersas, nenhuma no canto superior direito.",
-  m8_a1: "Distribuição da pontuação de anomalia da Isolation Forest e as freguesias sinalizadas no plano afluência × resultado",
   m9_d: "A única verificação documental: seis municípios publicam os mapas oficiais por secção de voto (91 secções, 60 711 inscritos = 0,66% do eleitorado). As somas por secção coincidem com os totais oficiais de todas as listas ao voto exato; a aritmética das linhas é perfeita nos 91 protocolos (votos + brancos + nulos = boletins depositados; depositados + abstenções = inscritos); não há dois protocolos iguais — está ausente a assinatura de copy-paste dos resultados «desenhados». Ressalva honesta de escala: com n = 91, o auto-teste mostra que o teste dos números redondos não deteta a reescrita de ~9% dos protocolos, pelo que isto é uma verificação pontual de 0,66% do eleitorado, não uma auditoria nacional por secções.",
   m10_d: "Um veredicto «limpo» só tem sentido se as ferramentas conseguem realmente disparar. Duas fraudes sintéticas são injetadas nas mesmas 3 092 freguesias: a inflação de boletins (+131 629 para o AD em 10% das freguesias, afluência +5–35 p.p.) faz crescer a estimativa da zona anómala de 14 589 para 255 496 votos (×18), e a adaptação da afluência a percentagens inteiras em 5% das freguesias empurra a estatística dos números redondos de z = 0,2 para 5,1. Todos os alarmes disparam — o resultado limpo acima é uma medição, não um ponto cego.",
   m10_c1: "À esquerda: a massa injetada aparece exatamente onde as distribuições honestas nunca chegam. À direita: o sinal de Shpilkin cresce ×18 (14 589 → 255 496 votos) face aos 131 629 boletins efetivamente injetados.",
@@ -662,7 +803,9 @@ pt: {
     });
     document.querySelectorAll("img[data-fig]").forEach(img => {
       img.src = "img/" + lang + "/" + img.dataset.fig + ".png";
-      const alt = d["fig" + ({turnout:1, comet:2, selftest:3}[img.dataset.fig] || "") + "_alt"];
+      const alt = d["fig" + ({turnout:1, comet:2, selftest:3, px_rules:4,
+                              px_counterfactuals:5, px_autarquicas:6,
+                              px_runoff:7}[img.dataset.fig] || "") + "_alt"];
       if (alt !== undefined) img.alt = alt;
     });
     document.querySelectorAll("img[data-dfig]").forEach(img => {

@@ -1,0 +1,424 @@
+{
+  "referendum": {
+    "paradox": "referendum_paradox",
+    "ps_votes": 1442194,
+    "ch_votes": 1437881,
+    "vote_margin_ps_over_ch": 4313,
+    "ps_seats": 58,
+    "ch_seats": 60,
+    "seat_margin_ch_over_ps": 2,
+    "national_single_district_dhondt": {
+      "PPD/PSD.CDS-PP": 77,
+      "PS": 56,
+      "CH": 56,
+      "IL": 13,
+      "L": 10,
+      "PCP-PEV": 7,
+      "B.E.": 4,
+      "PAN": 3,
+      "ADN": 3,
+      "JPP": 0,
+      "R.I.R.": 0,
+      "VP": 0,
+      "PCTP/MRPP": 0,
+      "ND": 0,
+      "E": 0,
+      "PLS": 0,
+      "PPM": 0,
+      "NC": 0,
+      "PPD/PSD.CDS-PP.PPM": 1,
+      "MPT": 0,
+      "PTP": 0
+    },
+    "inversion_present": true
+  },
+  "fptp": {
+    "freguesias": {
+      "paradox": "multiple_district_paradox",
+      "n_districts": 3092,
+      "wins": {
+        "AD": 2343,
+        "PS": 429,
+        "CH": 309,
+        "PCP-PEV": 9,
+        "JPP": 2
+      },
+      "leader": "AD",
+      "leader_share": 0.7577619663648124,
+      "leader_majority": true
+    },
+    "concelhos": {
+      "paradox": "multiple_district_paradox",
+      "n_districts": 325,
+      "wins": {
+        "AD": 224,
+        "CH": 67,
+        "PS": 34
+      },
+      "leader": "AD",
+      "leader_share": 0.6892307692307692,
+      "leader_majority": true
+    }
+  },
+  "counterfactuals": {
+    "AD+CH united right": {
+      "CH+PPD/PSD.CDS-PP": 150,
+      "PS": 57,
+      "IL": 9,
+      "L": 5,
+      "CH+PPD/PSD.CDS-PP.PPM": 4,
+      "PCP-PEV": 3,
+      "B.E.": 1,
+      "PAN": 1,
+      "ADN": 0,
+      "JPP": 0,
+      "R.I.R.": 0,
+      "VP": 0,
+      "PCTP/MRPP": 0,
+      "ND": 0,
+      "E": 0,
+      "PLS": 0,
+      "PPM": 0,
+      "NC": 0,
+      "MPT": 0,
+      "PTP": 0
+    },
+    "Left united (PS+BE+PCP+PAN+L)": {
+      "B.E.+L+PAN+PCP-PEV+PS": 82,
+      "AD": 81,
+      "CH": 55,
+      "IL": 9,
+      "B.E.+L+PCP-PEV+PS": 2,
+      "JPP": 1,
+      "ADN": 0,
+      "R.I.R.": 0,
+      "VP": 0,
+      "PCTP/MRPP": 0,
+      "ND": 0,
+      "E": 0,
+      "PLS": 0,
+      "PPM": 0,
+      "NC": 0,
+      "MPT": 0,
+      "PTP": 0
+    },
+    "IL does not run": {
+      "AD": 95,
+      "CH": 62,
+      "PS": 60,
+      "L": 6,
+      "PCP-PEV": 4,
+      "B.E.": 1,
+      "PAN": 1,
+      "JPP": 1,
+      "ADN": 0,
+      "R.I.R.": 0,
+      "VP": 0,
+      "PCTP/MRPP": 0,
+      "ND": 0,
+      "E": 0,
+      "PLS": 0,
+      "PPM": 0,
+      "NC": 0,
+      "MPT": 0,
+      "PTP": 0
+    },
+    "AD splits (PSD/CDS as in 2022)": {
+      "PPD/PSD": 86,
+      "PS": 61,
+      "CH": 61,
+      "IL": 9,
+      "L": 6,
+      "PCP-PEV": 3,
+      "B.E.": 1,
+      "PAN": 1,
+      "JPP": 1,
+      "CDS-PP": 1,
+      "ADN": 0,
+      "R.I.R.": 0,
+      "VP": 0,
+      "PCTP/MRPP": 0,
+      "ND": 0,
+      "E": 0,
+      "PLS": 0,
+      "PPM": 0,
+      "NC": 0,
+      "MPT": 0,
+      "PTP": 0
+    },
+    "actual": {
+      "AD": 91,
+      "CH": 60,
+      "PS": 58,
+      "IL": 9,
+      "L": 6,
+      "PCP-PEV": 3,
+      "B.E.": 1,
+      "JPP": 1,
+      "PAN": 1,
+      "ADN": 0,
+      "E": 0,
+      "NC": 0,
+      "ND": 0,
+      "PCTP/MRPP": 0,
+      "PLS": 0,
+      "PPM": 0,
+      "R.I.R.": 0,
+      "VP": 0,
+      "MPT": 0,
+      "PTP": 0
+    }
+  },
+  "autarquicas": {
+    "paradox": "frustrated_majority",
+    "n_concelhos": 308,
+    "winners_under_50pct": 142,
+    "frustrated_count": 49,
+    "frustrated_by_bloc": {
+      "socialist": 27,
+      "right": 17,
+      "communist": 4,
+      "left": 1
+    },
+    "biggest_frustrated": [
+      {
+        "concelho": "Lisboa",
+        "winner": "PPD/PSD.CDS-PP.IL",
+        "winner_votes": 110586,
+        "winner_share": 0.4278087692557661,
+        "loser_bloc": "left",
+        "loser_bloc_votes": 116837
+      },
+      {
+        "concelho": "Sintra",
+        "winner": "PPD/PSD.IL.PAN",
+        "winner_votes": 55052,
+        "winner_share": 0.3464067504388918,
+        "loser_bloc": "left",
+        "loser_bloc_votes": 61681
+      },
+      {
+        "concelho": "Vila Nova de Gaia",
+        "winner": "PPD/PSD.CDS-PP.IL",
+        "winner_votes": 61966,
+        "winner_share": 0.42204559231183125,
+        "loser_bloc": "left",
+        "loser_bloc_votes": 65152
+      },
+      {
+        "concelho": "Porto",
+        "winner": "PPD/PSD.CDS-PP.IL",
+        "winner_votes": 42922,
+        "winner_share": 0.38103439092377894,
+        "loser_bloc": "left",
+        "loser_bloc_votes": 51372
+      },
+      {
+        "concelho": "Braga",
+        "winner": "PPD/PSD.CDS-PP.PPM",
+        "winner_votes": 26378,
+        "winner_share": 0.2512357966721591,
+        "loser_bloc": "left",
+        "loser_bloc_votes": 32234
+      },
+      {
+        "concelho": "Almada",
+        "winner": "PS",
+        "winner_votes": 22443,
+        "winner_share": 0.2979963618498798,
+        "loser_bloc": "right",
+        "loser_bloc_votes": 32146
+      },
+      {
+        "concelho": "Seixal",
+        "winner": "PCP-PEV",
+        "winner_votes": 26917,
+        "winner_share": 0.35724524195046853,
+        "loser_bloc": "right",
+        "loser_bloc_votes": 29519
+      },
+      {
+        "concelho": "Gondomar",
+        "winner": "PS",
+        "winner_votes": 31096,
+        "winner_share": 0.40674950948332245,
+        "loser_bloc": "right",
+        "loser_bloc_votes": 33105
+      },
+      {
+        "concelho": "Amadora",
+        "winner": "PS",
+        "winner_votes": 23257,
+        "winner_share": 0.3396521256553678,
+        "loser_bloc": "right",
+        "loser_bloc_votes": 36491
+      },
+      {
+        "concelho": "Odivelas",
+        "winner": "PS",
+        "winner_votes": 25544,
+        "winner_share": 0.41365461847389556,
+        "loser_bloc": "right",
+        "loser_bloc_votes": 29647
+      },
+      {
+        "concelho": "Coimbra",
+        "winner": "PS.L.PAN",
+        "winner_votes": 29511,
+        "winner_share": 0.43582473084931994,
+        "loser_bloc": "right",
+        "loser_bloc_votes": 32599
+      },
+      {
+        "concelho": "Vila Franca de Xira",
+        "winner": "PS",
+        "winner_votes": 18375,
+        "winner_share": 0.30946847210994344,
+        "loser_bloc": "right",
+        "loser_bloc_votes": 28868
+      }
+    ]
+  },
+  "presidential": {
+    "paradox": [
+      "center_squeeze",
+      "lesser_evil_voting",
+      "no_show_margin"
+    ],
+    "first_round": {
+      "Seguro": 1738741,
+      "Ventura": 1297533,
+      "Cotrim": 891788,
+      "Gouveia": 691489,
+      "Mendes": 631809,
+      "C.Martins": 114468,
+      "A.Filipe": 91889,
+      "M.J.Vieira": 60266,
+      "J.Pinto": 37671,
+      "A.Pestana": 10674,
+      "H.Correia": 4594,
+      "blank": 60899,
+      "null": 64817,
+      "abstain": 3566015
+    },
+    "second_round": {
+      "Seguro": 3464424,
+      "Ventura": 1696957,
+      "blank": 174437,
+      "null": 98133,
+      "abstain": 3828702
+    },
+    "valid1": 5570922,
+    "valid2": 5161381,
+    "blank_surge": 113538,
+    "null_surge": 33316,
+    "turnout_change": -262687,
+    "margin_1st_over_2nd": 441208,
+    "margin_2nd_over_3rd": 405745,
+    "centrists_combined": 2215086,
+    "centrists_share": 0.39761569090358834,
+    "top2_combined": 3036274,
+    "top2_share": 0.5450218114703455,
+    "ventura_2s": 1696957,
+    "ventura_2s_share": 0.3287796425026558,
+    "anti_pool_2s": 3464424,
+    "defection_tolerance": 1767467,
+    "transfers": {
+      "Seguro": {
+        "Seguro": 0.9970688793325477,
+        "Ventura": 0.0,
+        "blank": 0.0,
+        "null": 0.00293112066745225,
+        "abstain": 0.0
+      },
+      "Ventura": {
+        "Seguro": 0.0,
+        "Ventura": 0.9900733943674074,
+        "blank": 0.0,
+        "null": 0.009926605632592681,
+        "abstain": 0.0
+      },
+      "Cotrim": {
+        "Seguro": 0.40437721002484817,
+        "Ventura": 0.22916514508170108,
+        "blank": 0.13439386825503444,
+        "null": 0.0811388541079545,
+        "abstain": 0.15092492253046177
+      },
+      "Gouveia": {
+        "Seguro": 0.7741052511921093,
+        "Ventura": 0.09940757945728111,
+        "blank": 0.012335601531503636,
+        "null": 0.0,
+        "abstain": 0.11415156781910599
+      },
+      "Mendes": {
+        "Seguro": 0.7658556322348686,
+        "Ventura": 0.1535880139308215,
+        "blank": 0.0691925360718874,
+        "null": 0.011363817762422655,
+        "abstain": 0.0
+      },
+      "C.Martins": {
+        "Seguro": 1.0,
+        "Ventura": 0.0,
+        "blank": 0.0,
+        "null": 0.0,
+        "abstain": 0.0
+      },
+      "others": {
+        "Seguro": 0.4351664770520726,
+        "Ventura": 0.14501369625061913,
+        "blank": 0.08175916098911651,
+        "null": 0.051762819932767545,
+        "abstain": 0.28629784577542416
+      },
+      "blank": {
+        "Seguro": 0.016595920077970675,
+        "Ventura": 0.0,
+        "blank": 0.42755877233320344,
+        "null": 0.0,
+        "abstain": 0.5558453075888259
+      },
+      "null": {
+        "Seguro": 0.5131970326964371,
+        "Ventura": 0.15107254849628957,
+        "blank": 0.0,
+        "null": 0.3357304188072733,
+        "abstain": 0.0
+      },
+      "abstain": {
+        "Seguro": 0.0,
+        "Ventura": 0.0,
+        "blank": 0.006934911262355786,
+        "null": 0.0,
+        "abstain": 0.9930650887376441
+      }
+    },
+    "transfers_diag": {
+      "r2": 0.9971333041191771,
+      "pred_vs_actual_2s": {
+        "Seguro": [
+          3444501.142890238,
+          3464424.0
+        ],
+        "Ventura": [
+          1726838.6791549223,
+          1696957.0
+        ],
+        "blank": [
+          265678.4452306727,
+          174437.0
+        ],
+        "null": [
+          148410.4340335977,
+          98133.0
+        ],
+        "abstain": [
+          3899923.8376586502,
+          3828702.0
+        ]
+      }
+    }
+  }
+}
