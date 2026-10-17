@@ -6,7 +6,7 @@ venv/
 .zcode
 .env
 # Бразильские данные TSE (~27 ГБ) — качаются скриптами download_votacao_secao*.sh
-brazil-oct-2026/data/
+brazil-oct-2026-round-1/data/
 # Выгрузки MAI/CNE Португалии (~254 МБ) — scripts/fetch_mai_results*.py
 portugal-2025/data/
 # Данные портала DVK Словении (~17 МБ) — uv-проект sloref

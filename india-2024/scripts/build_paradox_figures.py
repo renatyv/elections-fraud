@@ -2,7 +2,7 @@
 
 Data: analysis_paradoxes outputs written by scripts/paradox_analysis.py.
 Run from the india-2024 project:  uv run python scripts/build_paradox_figures.py
-Output: <repo>/site/india-2024/img/<lang>/spoilers.png
+Output: <repo>/site/india-2024/img/<lang>/{spoilers,transfer}.png
 """
 # /// script
 # requires-python = ">=3.11"
@@ -55,6 +55,12 @@ T = {
         "sp_title": "One seat in three decided by vote splitting",
         "sp_ylabel": "Seats where a third candidate's votes\nexceeded the whole winning margin, %",
         "sp_note": "BSP alone was the largest spoiler in 54 of them (2024)",
+        "tr_title": "Uttar Pradesh: whose turf do the spoiler votes sit on?",
+        "tr_xlabel": "Correlation asymmetry:  r(spoiler, runner-up) − r(spoiler, winner)",
+        "tr_legend_pos": "runner-up's turf (p < 0.05)",
+        "tr_legend_neg": "winner's turf (p < 0.05)",
+        "tr_legend_ns": "not significant",
+        "tr_note": "46 spoiler cases · Form 20 booths · permutation test, 2,000 shuffles",
     },
     "hi": {
         "font": "Devanagari Sangam MN",
@@ -66,6 +72,12 @@ T = {
         "sp_title": "हर तीसरी सीट वोट-विभाजन से तय हुई",
         "sp_ylabel": "ऐसी सीटें जहाँ तीसरे प्रत्याशी के मत\nपूरे जीत-अंतर से बड़े थे, %",
         "sp_note": "अकेली बसपा उनमें 54 सीटों की सबसे बड़ी स्पॉइलर रही (2024)",
+        "tr_title": "उत्तर प्रदेश: वोट-काट किसकी ज़मीन पर बैठी है?",
+        "tr_xlabel": "सहसंबंध असममिति:  r(स्पॉइलर, उपविजेता) - r(स्पॉइलर, विजेता)",
+        "tr_legend_pos": "उपविजेता की ज़मीन (p < 0.05)",
+        "tr_legend_neg": "विजेता की ज़मीन (p < 0.05)",
+        "tr_legend_ns": "असार्थक",
+        "tr_note": "46 स्पॉइलर मामले, फॉर्म 20 बूथ, क्रमचय-परीक्षण (2,000 फेरबदल)",
     },
 }
 
@@ -121,7 +133,45 @@ def make(lang: str) -> None:
     plt.close(fig)
 
 
+def make_transfer(lang: str) -> None:
+    """UP booth-transfer asymmetry: r(spoiler, runner) − r(spoiler, winner)
+    for every spoiler case, coloured by permutation significance."""
+    t = T[lang]
+    plt.rcParams["font.family"] = t["font"]
+    plt.rcParams["axes.unicode_minus"] = False  # Devanagari font lacks U+2212
+    d = pd.read_csv(DATA / "up_booth_transfer_2024.csv").sort_values("diff").reset_index(drop=True)
+    labels = [pc if sp == "BSP" else f"{pc} ({sp})" for pc, sp in zip(d["pc"], d["spoiler"])]
+    sig = d["perm_p_two_sided"] < 0.05
+    colors = [BLUE if s and v > 0 else RED if s else GREY for s, v in zip(sig, d["diff"])]
+
+    fig, ax = plt.subplots(figsize=(7.6, 8.8))
+    ax.barh(range(len(d)), d["diff"], color=colors, height=0.72)
+    ax.set_yticks(range(len(d)))
+    ax.set_yticklabels(labels, fontsize=8.5)
+    ax.axvline(0, color=DARK, lw=1.2)
+    ax.set_xlabel(t["tr_xlabel"], fontsize=10)
+    ax.set_title(t["tr_title"])
+    ax.spines[["top", "right"]].set_visible(False)
+
+    from matplotlib.patches import Patch
+
+    ax.legend(
+        handles=[
+            Patch(color=BLUE, label=t["tr_legend_pos"]),
+            Patch(color=RED, label=t["tr_legend_neg"]),
+            Patch(color=GREY, label=t["tr_legend_ns"]),
+        ],
+        loc="lower right", frameon=False, fontsize=10,
+    )
+    ax.text(0.01, -0.095, t["tr_note"], transform=ax.transAxes, fontsize=9.5, color="#5b6b7b")
+
+    fig.tight_layout()
+    fig.savefig(OUT / lang / "transfer.png", dpi=150)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
     for lang in ("en", "hi"):
         make(lang)
-        print(f"img/{lang}/spoilers.png done")
+        make_transfer(lang)
+        print(f"img/{lang}/spoilers.png + transfer.png done")

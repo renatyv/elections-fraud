@@ -7,13 +7,17 @@ portugal-2025/               — Portugal, legislativas 2021–2026: 11 MAI expo
                               autárquicas 2025, presidenciais 2026 runoff) →
                               PARADOXES.md; site figures —
                               scripts/build_site_figures.py
-brazil-oct-2026/             — Brazil, rounds of 04/25.10.2026: TSE results by precinct
+brazil-oct-2026-round-1/             — Brazil, rounds of 04/25.10.2026: TSE results by precinct
                               (data/votacao_secao, ~23 GB of CSV; description in
                               DATA_DESCRIPTION.md) + the 2022 control election on the
                               same precincts (data/votacao_secao_2022); statistical
                               fraud analysis → REPORT_statistical_fraud_analysis.md
                               ("statistical fraud analysis report"; 2022 control —
-                              section 12)
+                              section 12); voting-paradox analysis (bloc cloning,
+                              2022 runoff transfer matrix, 2026 runoff prediction,
+                              lesser-evil desertion; scripts/run_paradox_analysis.py)
+                              → PARADOXES.md; site figures —
+                              scripts/build_site_figures.py
 bulgaria-oct-2026/           — Bulgaria, presidential election of 25.10.2026: captures of
                               results.cik.bg (scrape_cik.py + run_every_15min.sh) →
                               REPORT.md

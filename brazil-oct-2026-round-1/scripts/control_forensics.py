@@ -15,13 +15,13 @@ sections 2022→2026):
    (stuffing signature: the turnout gain is skewed in favor of one candidate).
 4. Klimek fingerprints on the 2022 control (both rounds) — where the components lie.
 
-Run: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/control_forensics.py
-Output: brazil-oct-2026/analysis/{figures/control_*.png, tables/control_*.csv,
+Run: cd analysis-tool && uv run python ../brazil-oct-2026-round-1/scripts/control_forensics.py
+Output: brazil-oct-2026-round-1/analysis/{figures/control_*.png, tables/control_*.csv,
        metrics_control_2022.json}
 
 Flags: --lang ru|en|pt|es — figure label language (default en);
 --fig-out DIR — write the figures (plus tables and metrics_control_2022.json)
-into DIR without touching brazil-oct-2026/analysis/.
+into DIR without touching brazil-oct-2026-round-1/analysis/.
 """
 
 from __future__ import annotations
@@ -278,7 +278,7 @@ def main() -> None:
     ap.add_argument("--lang", default="en", choices=["ru", "en", "pt", "es"],
                     help="figure label language (default en)")
     ap.add_argument("--fig-out", type=Path, default=None,
-                    help="directory for figures/tables/metrics instead of brazil-oct-2026/analysis/")
+                    help="directory for figures/tables/metrics instead of brazil-oct-2026-round-1/analysis/")
     args = ap.parse_args()
     lang = args.lang
     if args.fig_out is not None:

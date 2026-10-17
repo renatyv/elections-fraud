@@ -74,4 +74,4 @@ found. Building the section dataset — `scripts/build_sections_csv.py`
 → `data/secoes_presidente_2026.csv` (499,248 sections, ElectionData format, cross-checks
 against detalhe — 0 mismatches); running the methods — `scripts/run_forensics.py`; an extra
 binomial null for the digit tests — `scripts/digit_binomial_null.py`. Run from `analysis-tool/`
-via `uv run python ../brazil-oct-2026/scripts/<script>`.
+via `uv run python ../brazil-oct-2026-round-1/scripts/<script>`.

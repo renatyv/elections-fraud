@@ -7,12 +7,12 @@ Shpilkin, Klimek fingerprints, Kobak integer peaks, 2D correlations,
 Benford/last digit, outliers vs neighbors, Isolation Forest,
 self-test + Brazilian checks (ballot-machine models, duplicate protocols).
 
-Run: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/run_forensics.py
-Output: brazil-oct-2026/analysis/{figures,tables,metrics.json}
+Run: cd analysis-tool && uv run python ../brazil-oct-2026-round-1/scripts/run_forensics.py
+Output: brazil-oct-2026-round-1/analysis/{figures,tables,metrics.json}
 
 Flags: --lang ru|en|pt|es — figure label language (default en);
 --fig-out DIR — write the figures (plus tables and metrics.json) into DIR
-without touching brazil-oct-2026/analysis/.
+without touching brazil-oct-2026-round-1/analysis/.
 """
 
 from __future__ import annotations
@@ -111,7 +111,7 @@ def main() -> None:
     ap.add_argument("--lang", default="en", choices=["ru", "en", "pt", "es"],
                     help="figure label language (default en)")
     ap.add_argument("--fig-out", type=Path, default=None,
-                    help="directory for figures/tables/metrics instead of brazil-oct-2026/analysis/")
+                    help="directory for figures/tables/metrics instead of brazil-oct-2026-round-1/analysis/")
     args = ap.parse_args()
     lang = args.lang
     if args.fig_out is not None:

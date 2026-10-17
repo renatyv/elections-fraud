@@ -496,7 +496,7 @@ candidates; the 2026 fingerprints reproduce the 2022 structure.**
 ## 14. Files and reproduction
 
 ```
-brazil-oct-2026/
+brazil-oct-2026-round-1/
   download_votacao_secao.sh               — download the 2026 export (~23 GB of CSV)
   download_votacao_secao_2022.sh          — download the 2022 control, both rounds (~0.5 GB)
   data/votacao_secao/                     — TSE 2026 export (zip + CSV)
@@ -523,16 +523,16 @@ brazil-oct-2026/
 
 ```bash
 cd analysis-tool
-uv run python ../brazil-oct-2026/scripts/build_sections_csv.py     # ~2 min
-uv run python ../brazil-oct-2026/scripts/run_forensics.py          # ~2 min
-uv run python ../brazil-oct-2026/scripts/stratified_forensics.py   # ~5 s
-uv run python ../brazil-oct-2026/scripts/digit_binomial_null.py    # ~1 min
+uv run python ../brazil-oct-2026-round-1/scripts/build_sections_csv.py     # ~2 min
+uv run python ../brazil-oct-2026-round-1/scripts/run_forensics.py          # ~2 min
+uv run python ../brazil-oct-2026-round-1/scripts/stratified_forensics.py   # ~5 s
+uv run python ../brazil-oct-2026-round-1/scripts/digit_binomial_null.py    # ~1 min
 
-bash brazil-oct-2026/download_votacao_secao_2022.sh                # 2022 control, ~15 min
-uv run python ../brazil-oct-2026/scripts/build_sections_csv_2022.py  # ~3 min
-uv run python ../brazil-oct-2026/scripts/control_forensics.py        # ~1 min
+bash brazil-oct-2026-round-1/download_votacao_secao_2022.sh                # 2022 control, ~15 min
+uv run python ../brazil-oct-2026-round-1/scripts/build_sections_csv_2022.py  # ~3 min
+uv run python ../brazil-oct-2026-round-1/scripts/control_forensics.py        # ~1 min
 ```
 
 After the 2nd-round results are published (25.10.2026) — fetch the dataset
-(`brazil-oct-2026/download_votacao_secao.sh`, curl `-C -`) and repeat the run,
+(`brazil-oct-2026-round-1/download_votacao_secao.sh`, curl `-C -`) and repeat the run,
 setting `NR_TURNO=2` in the `build_sections_csv.py` filters.

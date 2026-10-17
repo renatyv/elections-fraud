@@ -10,14 +10,14 @@ section 12 of the REPORT). Additionally — a breakdown of the "corner"
 (turnout ≥90% AND share ≥75%) against the regional boundary: how normal the
 high-turnout NE sections are for their region.
 
-Run: cd analysis-tool && uv run python ../brazil-oct-2026/scripts/stratified_forensics.py
-Output: brazil-oct-2026/analysis/{figures/shpilkin_regions.png, fingerprint_*_regions.png,
+Run: cd analysis-tool && uv run python ../brazil-oct-2026-round-1/scripts/stratified_forensics.py
+Output: brazil-oct-2026-round-1/analysis/{figures/shpilkin_regions.png, fingerprint_*_regions.png,
        tables/{shpilkin_by_region,fingerprints_by_region,corners_by_region}.csv,
        metrics_stratified.json}
 
 Flags: --lang ru|en|pt|es — figure label language (default en);
 --fig-out DIR — write the figures (plus tables and metrics_stratified.json)
-into DIR without touching brazil-oct-2026/analysis/.
+into DIR without touching brazil-oct-2026-round-1/analysis/.
 """
 
 from __future__ import annotations
@@ -234,7 +234,7 @@ def main() -> None:
     ap.add_argument("--lang", default="en", choices=["ru", "en", "pt", "es"],
                     help="figure label language (default en)")
     ap.add_argument("--fig-out", type=Path, default=None,
-                    help="directory for figures/tables/metrics instead of brazil-oct-2026/analysis/")
+                    help="directory for figures/tables/metrics instead of brazil-oct-2026-round-1/analysis/")
     args = ap.parse_args()
     lang = args.lang
     if args.fig_out is not None:

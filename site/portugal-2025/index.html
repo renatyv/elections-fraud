@@ -13,7 +13,7 @@
   :root{
     --ink:#16324f; --muted:#5b6b7b; --line:#e3e8ee; --bg:#f4f7fa; --card:#ffffff;
     --green:#1e8e5a; --green-soft:#e7f4ee; --red:#c0392b; --red-soft:#faecea;
-    --amber:#8a6116; --amber-soft:#fdf6e7; --blue:#3b82c4; --radius:12px;
+    --blue:#3b82c4; --radius:12px;
   }
   *{box-sizing:border-box}
   body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -96,11 +96,6 @@
   .m-figs .fig{padding:10px}
   .m-figs .fig figcaption{font-size:12.5px;margin-top:8px}
   .m-figs .fig.wide{grid-column:1/-1}
-  .limits{background:var(--amber-soft);border:1px solid #ecd9ad;border-radius:var(--radius);padding:20px 22px}
-  .limits h3.sect{color:var(--amber)}
-  .limits ul{margin:10px 0 0;padding-left:20px}
-  .limits li{margin-bottom:9px;font-size:14.5px;color:#4a3d20}
-  .limits li:last-child{margin-bottom:0}
   .data{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px}
   .data ul{margin:10px 0 0;padding-left:20px}
   .data li{margin-bottom:9px;font-size:14.5px;color:#2c4358}
@@ -149,12 +144,11 @@
   <div class="hero">
     <div class="hero-inner">
       <div class="kicker" data-i18n="kicker">Independent statistical audit</div>
-      <h1 data-i18n="h1">Portugal voted on 18 May 2025. Do the numbers add up?</h1>
+      <h1 data-i18n="h1">The legislative election of 18 May 2025 — do the numbers add up?</h1>
       <div class="verdict">
         <div class="check">✓</div>
         <div>
-          <h2 data-i18n="verdict_title">Verdict: no statistical traces of manipulation</h2>
-          <p data-i18n="verdict_text">I ran standard election-forensics tests on the official parish-level results of the 18 May 2025 legislative election — and, as an addendum, on the precinct protocols of six municipalities that publish them. Every applicable test is consistent with an honest count.</p>
+          <h2 data-i18n="verdict_title">No traces of fraud in the data</h2>
         </div>
       </div>
       <div class="verdict flip">
@@ -164,12 +158,6 @@
           <p class="v-line" data-i18n="flip1_line"><b>PS</b> finished 4,313 votes ahead of CH — and 2 seats behind (58 vs 60)</p>
           <p class="v-line" data-i18n="flip2_line">Under winner-take-all districts, AD's <b>33%</b> of votes becomes <b>69–76%</b> of the wins</p>
         </div>
-      </div>
-      <div class="chips">
-        <div class="chip"><b data-i18n="n_units">3,092</b> <span data-i18n="chip_units">parishes analysed</span></div>
-        <div class="chip"><b data-i18n="n_votes">5.97M</b> <span data-i18n="chip_votes">ballots checked (64.4% turnout)</span></div>
-        <div class="chip"><b>0</b> <span data-i18n="chip_arith">arithmetic discrepancies</span></div>
-        <div class="chip"><b>91</b> <span data-i18n="chip_sections">precinct protocols checked to the exact vote</span></div>
       </div>
     </div>
   </div>
@@ -486,22 +474,6 @@
     </div>
   </section>
 
-  <!-- ══ MINTO: CAVEATS ══ -->
-  <section>
-    <div class="limits">
-      <h3 class="sect" data-i18n="lim_title">What this analysis cannot see</h3>
-      <p class="sect-sub" style="color:#7a6a3d" data-i18n="lim_intro">Honest limits of the method — statistics shows anomalies, not intentions.</p>
-      <ul>
-        <li data-i18n="l1">The national analysis level is the parish: the Interior Ministry portal does not publish precinct-level results. The precinct check covers six municipalities (0.66% of the electorate); at that scale, the self-test shows the round-number test cannot detect redrawing of ~9% of protocols.</li>
-        <li data-i18n="l2">The overseas electorate (~1.6 million registered voters) is excluded — it is not part of the parish-level official export.</li>
-        <li data-i18n="l3">The Shpilkin method estimates magnitude under model assumptions; the anomaly boundary comes from the 2022/2024 control elections, not only from the shape of the distribution.</li>
-        <li data-i18n="l4">Digit tests are weak; the single borderline deviation (AD, p = 0.02) has no fraud profile and does not survive multiple-testing correction.</li>
-        <li data-i18n="l5">Statistics can confirm the numbers are mutually consistent; it cannot substitute documentary evidence (minutes, witnesses) or reveal mechanisms.</li>
-        <li data-i18n="l6">I am an independent researcher with no ties to any electoral body; all input files are official publications of the Portuguese authorities, and the analysis code is open source.</li>
-      </ul>
-    </div>
-  </section>
-
   <section>
     <div class="data">
       <h3 class="sect" data-i18n="data_title">Data &amp; reproducibility</h3>
@@ -523,15 +495,8 @@ en: {
   brand: "Portugal · Legislative elections · 18.05.2025",
   home: "← All analyses",
   kicker: "Independent statistical audit",
-  h1: "Portugal voted on 18 May 2025. Do the numbers add up?",
-  verdict_title: "Verdict: no statistical traces of manipulation",
-  verdict_text: "I ran standard election-forensics tests on the official parish-level results of the 18 May 2025 legislative election — and, as an addendum, on the precinct protocols of six municipalities that publish them. Every applicable test is consistent with an honest count.",
-  n_units: "3,092",
-  chip_units: "parishes analysed",
-  n_votes: "5.97M",
-  chip_votes: "ballots checked (64.4% turnout)",
-  chip_arith: "arithmetic discrepancies",
-  chip_sections: "precinct protocols checked to the exact vote",
+  h1: "The legislative election of 18 May 2025 — do the numbers add up?",
+  verdict_title: "No traces of fraud in the data",
   sit_title: "What was decided on 18 May 2025",
   sit_intro: "Snap election for the Assembly of the Republic (230 seats). The centre-right coalition AD won 32.7%, ahead of the Socialist Party (23.4%) and Chega (22.6%). National turnout: 64.4% — 5.97 million ballots cast.",
   res_title: "National result — 3,092 parishes (overseas circle excluded)",
@@ -635,14 +600,6 @@ en: {
   m10_d: "A “clean” verdict is only meaningful if the tools can actually fire. Two synthetic frauds are injected into the same 3,092 parishes: ballot-stuffing (+131,629 AD ballots in 10% of parishes, turnout +5–35 p.p.) grows the anomalous-zone estimate from 14,589 to 255,496 votes (×18), and fitting turnout to whole percents in 5% of parishes pushes the round-number statistic from z = 0.2 to 5.1. Every alarm fires — the clean result above is a measurement, not a blind spot.",
   m10_c1: "Left: the injected mass appears exactly where honest distributions never reach. Right: the Shpilkin signal grows ×18 (14,589 → 255,496 votes) against the 131,629 ballots actually injected.",
   m10_a1: "Self-test: turnout before and after synthetic stuffing, and the ×18 growth of the anomalous-zone estimate",
-  lim_title: "What this analysis cannot see",
-  lim_intro: "Honest limits of the method — statistics shows anomalies, not intentions.",
-  l1: "The national analysis level is the parish: the Interior Ministry portal does not publish precinct-level results. The precinct check covers six municipalities (0.66% of the electorate); at that scale, the self-test shows the round-number test cannot detect redrawing of ~9% of protocols.",
-  l2: "The overseas electorate (~1.6 million registered voters) is excluded — it is not part of the parish-level official export.",
-  l3: "The Shpilkin method estimates magnitude under model assumptions; the anomaly boundary comes from the 2022/2024 control elections, not only from the shape of the distribution.",
-  l4: "Digit tests are weak; the single borderline deviation (AD, p = 0.02) has no fraud profile and does not survive multiple-testing correction.",
-  l5: "Statistics can confirm the numbers are mutually consistent; it cannot substitute documentary evidence (minutes, witnesses) or reveal mechanisms.",
-  l6: "I am an independent researcher with no ties to any electoral body; all input files are official publications of the Portuguese authorities, and the analysis code is open source.",
   data_title: "Data & reproducibility",
   d1: "Source: official results portal of the Ministry of Internal Administration at <a href=\"https://eleicoes.mai.gov.pt\" rel=\"noopener\">eleicoes.mai.gov.pt</a> — parish-level export, 3,092 territories (mainland, Madeira, Azores).",
   d2: "Cross-checks: parish sums close exactly against the national totals; the precinct sums of the six publishing municipalities match the official totals to the exact vote.",
@@ -654,15 +611,8 @@ pt: {
   brand: "Portugal · Legislativas · 18.05.2025",
   home: "← Todas as análises",
   kicker: "Auditoria estatística independente",
-  h1: "Portugal votou a 18 de maio de 2025. Os números são fiáveis?",
-  verdict_title: "Veredicto: sem vestígios estatísticos de manipulação",
-  verdict_text: "Apliquei os testes estatísticos padrão de deteção de fraudes eleitorais aos resultados oficiais ao nível de freguesia das legislativas de 18 de maio de 2025 — e, em adendo, aos protocolos de secção de seis municípios que os publicam. Todos os testes aplicáveis são compatíveis com uma contagem honesta.",
-  n_units: "3 092",
-  chip_units: "freguesias analisadas",
-  n_votes: "5,97 M",
-  chip_votes: "boletins verificados (afluência 64,4%)",
-  chip_arith: "discrepâncias aritméticas",
-  chip_sections: "protocolos de secção conferidos ao voto exato",
+  h1: "As legislativas de 18 de maio de 2025 — os números são fiáveis?",
+  verdict_title: "Sem vestígios de fraude nos dados",
   sit_title: "O que se decidiu a 18 de maio de 2025",
   sit_intro: "Eleições antecipadas para a Assembleia da República (230 deputados). A coligação de centro-direita AD venceu com 32,7%, à frente do Partido Socialista (23,4%) e do Chega (22,6%). Afluência nacional: 64,4% — 5,97 milhões de boletins.",
   res_title: "Resultado nacional — 3 092 freguesias (sem o círculo do estrangeiro)",
@@ -766,14 +716,6 @@ pt: {
   m10_d: "Um veredicto «limpo» só tem sentido se as ferramentas conseguem realmente disparar. Duas fraudes sintéticas são injetadas nas mesmas 3 092 freguesias: a inflação de boletins (+131 629 para o AD em 10% das freguesias, afluência +5–35 p.p.) faz crescer a estimativa da zona anómala de 14 589 para 255 496 votos (×18), e a adaptação da afluência a percentagens inteiras em 5% das freguesias empurra a estatística dos números redondos de z = 0,2 para 5,1. Todos os alarmes disparam — o resultado limpo acima é uma medição, não um ponto cego.",
   m10_c1: "À esquerda: a massa injetada aparece exatamente onde as distribuições honestas nunca chegam. À direita: o sinal de Shpilkin cresce ×18 (14 589 → 255 496 votos) face aos 131 629 boletins efetivamente injetados.",
   m10_a1: "Auto-teste: afluência antes e depois da inflação sintética, e crescimento de ×18 da estimativa da zona anómala",
-  lim_title: "O que esta análise não consegue ver",
-  lim_intro: "Limites honestos do método — a estatística mostra anomalias, não intenções.",
-  l1: "O nível nacional da análise é a freguesia: o portal do Ministério da Administração Interna não publica resultados por secção de voto. A verificação por secções cobre seis municípios (0,66% do eleitorado); a essa escala, o auto-teste mostra que o teste dos números redondos não deteta a reescrita de ~9% dos protocolos.",
-  l2: "O círculo eleitoral no estrangeiro (~1,6 milhões de inscritos) fica de fora — não consta da exportação oficial por freguesias.",
-  l3: "O método de Shpilkin estima dimensões sob pressupostos do modelo; a fronteira de anomalia vem das eleições de controlo de 2022/2024, não só da forma da distribuição.",
-  l4: "Os testes aos dígitos são fracos; o único desvio limítrofe (AD, p = 0,02) não tem perfil de fraude e não sobrevive à correção para testes múltiplos.",
-  l5: "A estatística confirma que os números são consistentes entre si; não substitui provas documentais (atas, testemunhas) nem revela mecanismos.",
-  l6: "Sou um investigador independente, sem ligações a organismos eleitorais; todos os ficheiros de entrada são publicações oficiais das autoridades portuguesas e o código de análise é aberto.",
   data_title: "Dados e reprodutibilidade",
   d1: "Fonte: portal oficial de resultados do Ministério da Administração Interna em <a href=\"https://eleicoes.mai.gov.pt\" rel=\"noopener\">eleicoes.mai.gov.pt</a> — exportação ao nível de freguesia, 3 092 territórios (continente, Madeira, Açores).",
   d2: "Verificações cruzadas: as somas por freguesia fecham exatamente com os totais nacionais; as somas por secção dos seis municípios que publicam mapas coincidem com os totais oficiais ao voto exato.",

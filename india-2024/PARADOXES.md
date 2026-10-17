@@ -13,7 +13,7 @@ vote.** Fragmentation decided one seat in three: it was higher than 2019
 (23.6%) but lower than 2014 (44.0%). The BSP was the single biggest spoiler
 nationally (54 seats), cutting both ways — the runner-up was hurt in 112
 INDIA-won and 61 NDA-won seats. Under a full INDIA-bloc consolidation
-counterfactual the bloc gains 10 seats (NDA 292 → 282 — still a governing
+counterfactual the bloc gains 10 seats (NDA 292 → 285 — still a governing
 majority); NDA consolidation gains 2. In Uttar Pradesh, the recovered Form 20
 booth data shows that in most BSP-spoiler seats the BSP's support overlaps
 the opposition's turf far more than the BJP's (permutation p < 0.05 in 27 of
@@ -116,7 +116,8 @@ seat into a single candidate; the rival bloc stays exactly as split as it
 actually was; third parties keep their votes*:
 
 - **INDIA consolidates everywhere: +10 seats** (7 from the BJP, 2 from
-  independents, 1 from the SAD). NDA 292 → 282 — still above the 272 needed
+  independents, 1 from the SAD — the latter two outside the NDA, so the bloc
+  itself only drops to 285). NDA 292 → 285 — still above the 272 needed
   to govern. Fragmentation cost the INDIA bloc roughly a tenth of the seats
   it contested together-but-separately, but full unity would not have
   changed the government.

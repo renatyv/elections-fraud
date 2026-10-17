@@ -11,7 +11,7 @@ Output: data/secoes_deputado_2026_parties.csv — one row per section
 votes_p<NN> for every party, minor parties lumped into votes_p00) and
 data/secoes_deputado_2026_parties_checks.json.
 
-Run from analysis-tool/: uv run python ../brazil-oct-2026/scripts/build_deputy_parties_csv.py
+Run from analysis-tool/: uv run python ../brazil-oct-2026-round-1/scripts/build_deputy_parties_csv.py
 """
 
 from __future__ import annotations

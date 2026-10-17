@@ -20,7 +20,7 @@ presidential round (+ the 2022 both-rounds control):
                 vote (lesser-evil / strategic desertion signature).
 
 Tables -> analysis/paradox/*.csv, headline numbers -> analysis/paradox/paradox_results.json.
-Run from analysis-tool/: uv run python ../brazil-oct-2026/scripts/run_paradox_analysis.py
+Run from analysis-tool/: uv run python ../brazil-oct-2026-round-1/scripts/run_paradox_analysis.py
                          [--only cloning,transfers,predict,desertion] [--bootstrap 200]
 """
 
@@ -83,13 +83,13 @@ def load_2022(turno: int) -> RoundData:
     df = pd.read_csv(DATA / "secoes_presidente_2022.csv", dtype={"key": str})
     df = df[df.turno == turno].set_index("key")
     cands = [c.split(":", 1)[1] for c in df.columns if c.startswith("votes:")]
+    # round 2: only the finalists have rows; zero the rest for a common frame
     for c in df.columns:
         if c.startswith("votes:"):
-            df[c] = df[c].astype("int64")
+            df[c] = df[c].fillna(0).astype("int64")
     df["votes:BRANCO"] = df.blank_votes.astype("int64")
     df["votes:NULO"] = df.null_votes.astype("int64")
     df["votes:VOTED"] = df.voted.astype("int64")
-    # round 2: only the finalists have rows; zero the rest for a common frame
     return RoundData(df=df, candidates=cands)
 
 
@@ -159,10 +159,10 @@ def build_origins_dest(r1: RoundData, r2: RoundData, keys: pd.Index) -> tuple[pd
     a, b = r1.df.loc[keys], r2.df.loc[keys]
     origin_cols = [f"votes:{c}" for c in r1.candidates] + ["votes:BRANCO", "votes:NULO"]
     X = a[origin_cols].copy()
-    X["votes:NEW"] = (b.votes:VOTED - a.votes:VOTED).clip(lower=0)  # type: ignore[index]
+    X["votes:NEW"] = (b["votes:VOTED"] - a["votes:VOTED"]).clip(lower=0)
     dest_cols = [f"votes:{c}" for c in FINALISTS] + ["votes:BRANCO", "votes:NULO"]
     Y = b[dest_cols].copy()
-    Y["votes:NOTV2"] = (a.votes:VOTED - b.votes:VOTED).clip(lower=0)  # type: ignore[index]
+    Y["votes:NOTV2"] = (a["votes:VOTED"] - b["votes:VOTED"]).clip(lower=0)
     X.columns = [c.split(":", 1)[1] for c in X.columns]
     Y.columns = [c.split(":", 1)[1] for c in Y.columns]
     return X.astype("int64"), Y.astype("int64")
@@ -185,9 +185,12 @@ def fit_transfers(X: pd.DataFrame, Y: pd.DataFrame) -> TransferModel:
     )
 
 
-def two_way_lula_share(m: TransferModel) -> float:
-    t = m.matrix
-    return float(t.loc["LULA", "LULA"] / (t.loc["LULA", "LULA"] + t.loc["LULA", "BOLSONARO"]))
+def predicted_lula_share(m: TransferModel, X: pd.DataFrame) -> float:
+    """Model-predicted national Lula share of the two-way valid vote, given origins X."""
+    P = X.values @ m.matrix.values
+    i, j = m.destinations.index("LULA"), m.destinations.index("BOLSONARO")
+    den = P[:, i].sum() + P[:, j].sum()
+    return float(P[:, i].sum() / den) if den > 0 else float("nan")
 
 
 def validate_transfers(X: pd.DataFrame, Y: pd.DataFrame, m: TransferModel, rng: np.random.Generator) -> dict[str, float]:
@@ -198,12 +201,15 @@ def validate_transfers(X: pd.DataFrame, Y: pd.DataFrame, m: TransferModel, rng: 
     m_tr = fit_transfers(X.iloc[train], Y.iloc[train])
     P = X.iloc[test].values @ m_tr.matrix.values
     obs = Y.iloc[test].values
-    lula_err = 100.0 * (
-        (P[:, 0] / (P[:, 0] + P[:, 1])).sum() - (obs[:, 0] / (obs[:, 0] + obs[:, 1])).sum()
-    ) / (obs[:, 0] / (obs[:, 0] + obs[:, 1])).sum()
+    i, j = list(Y.columns).index("LULA"), list(Y.columns).index("BOLSONARO")
+    pred_share = P[:, i].sum() / (P[:, i].sum() + P[:, j].sum())
+    obs_share = obs[:, i].sum() / (obs[:, i].sum() + obs[:, j].sum())
+    lula_err = 100.0 * (pred_share - obs_share) / obs_share
     mae = float(np.abs(P - obs).mean())
     r2 = 1.0 - float(((P - obs) ** 2).sum() / ((obs - obs.mean(axis=0)) ** 2).sum())
     return {"cv_lula_twoway_share_rel_err_pct": round(lula_err, 3),
+            "cv_pred_share_pct": round(100.0 * pred_share, 3),
+            "cv_obs_share_pct": round(100.0 * obs_share, 3),
             "cv_section_mae_votes": round(mae, 2), "cv_r2": round(r2, 4)}
 
 
@@ -222,7 +228,7 @@ def analyse_transfers(r1: RoundData, r2: RoundData, n_boot: int, seed: int = 42)
     for b in range(n_boot):
         sample = rng.integers(0, n, n)
         m_b = fit_transfers(X.iloc[sample], Y.iloc[sample])
-        shares[b] = two_way_lula_share(m_b)
+        shares[b] = predicted_lula_share(m_b, X)
         mats[b] = m_b.matrix.values
     ci = pd.DataFrame(
         {f"{o}->{d}": [np.percentile(mats[:, i, j], 2.5), np.percentile(mats[:, i, j], 97.5)]
@@ -255,21 +261,28 @@ def map_candidates(r26: RoundData, r1_22: RoundData) -> dict[str, dict]:
     keys = r26.df.index.intersection(r1_22.df.index)
     a, b = r26.df.loc[keys], r1_22.df.loc[keys]
     valid26 = r26.valid.loc[keys]
-    keep = valid26 >= MIN_VALID_FOR_SHARES
+    valid22 = r1_22.valid.loc[keys]
+    keep = (valid26 >= MIN_VALID_FOR_SHARES) & (valid22 >= MIN_VALID_FOR_SHARES)
     mapping: dict[str, dict] = {}
     origins22 = r1_22.candidates + ["BRANCO", "NULO"]
     for c in r26.candidates:
         s26 = (a[f"votes:{c}"] / valid26)[keep]
-        best, best_r = None, -1.0
+        best, best_r = None, -2.0
         for o in origins22:
-            s22 = b[f"votes:{o}"] / r1_22.valid.loc[keys]
-            s22 = s22[keep]
+            s22 = (b[f"votes:{o}"] / valid22)[keep]
             r = spearmanr(s26, s22).statistic
-            if r > best_r:
+            if np.isnan(r):
+                continue
+            if float(r) > best_r:
                 best, best_r = o, float(r)
-        forced = c if c in ("LULA", "BOLSONARO", "BRANCO", "NULO") else best
+        if best is None:  # tiny candidates with no usable profile -> null-vote origin
+            best, best_r = "NULO", 0.0
+        forced = c if c in ("LULA", "BOLSONARO") else best
         mapping[c] = {"origin_2022": forced, "spearman": round(best_r, 3),
                       "best_match": best}
+    # non-candidate origins used by origin_totals(): transfer to themselves
+    for extra in ("BRANCO", "NULO"):
+        mapping[extra] = {"origin_2022": extra, "spearman": None, "best_match": extra}
     return mapping
 
 
@@ -301,8 +314,8 @@ def analyse_predict(r26: RoundData, r1_22: RoundData, fit22: TransferFit,
 
     # bootstrap: resample the transfer model over the 2022 sections
     rng = np.random.default_rng(seed)
-    keys22 = r1_22.df.index.intersection(load_2022(2).df.index)
     r2_22 = load_2022(2)
+    keys22 = r1_22.df.index.intersection(r2_22.df.index)
     X22, Y22 = build_origins_dest(r1_22, r2_22, keys22)
     shares = np.empty(n_boot)
     n = len(X22)
@@ -397,7 +410,7 @@ def main() -> None:
     results["totals_2026"] = totals
 
     if only in ("all", "cloning"):
-        cl = analyse_clustering(r26)
+        cl = analyse_cloning(r26)
         results["cloning"] = {
             "n_candidates": len(cl.corr),
             "clusters": cl.labels,
