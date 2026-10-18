@@ -17,3 +17,8 @@ india-2024/data/
 *.log
 portugal-2025/logs_*.txt
 
+
+# US raw/derived election datasets; reproduce with usa-2024/scripts/download.sh
+usa-2024/data/raw/
+usa-2024/data/extracted/
+usa-2024/data/*.csv.gz

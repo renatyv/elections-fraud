@@ -1,0 +1,10 @@
+{
+  "duplicate_vectors": 0,
+  "duplicate_records_checked": 2768,
+  "selftest_state": "PA",
+  "selftest_office": "US SENATE",
+  "selftest_added_party_votes": 68137,
+  "selftest_cutoff": 83.88690639582761,
+  "selftest_original_tail": 9251,
+  "selftest_injected_tail": 276409
+}

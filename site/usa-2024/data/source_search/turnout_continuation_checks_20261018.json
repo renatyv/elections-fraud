@@ -1,0 +1,92 @@
+{
+  "files": 162,
+  "bytes": 31872867,
+  "provenance": {
+    "mirror": 159,
+    "official": 3
+  },
+  "states": {
+    "IA": {
+      "counties": 99,
+      "turnout_rows": 1651,
+      "ballots_cast": 1672068,
+      "registered_voters": 1893715
+    },
+    "WV": {
+      "counties": 55,
+      "turnout_rows": 1649,
+      "ballots_cast": 770587,
+      "registered_voters": 1187991
+    },
+    "OH": {
+      "turnout_rows": 8878,
+      "registered_voters": 8159946,
+      "ballots_cast": 5851387
+    },
+    "VA": {
+      "turnout_rows": 2669,
+      "registered_voters": 6434637,
+      "ballots_cast": 4537976,
+      "missing_registered_rows": 133,
+      "missing_turnout_rows": 131
+    },
+    "SC": {
+      "csv_rows_including_headers": 2495,
+      "first_rows": [
+        [
+          "",
+          "",
+          "Total Ballots Cast",
+          "Registered Voters"
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "State",
+          "South Carolina",
+          "2566404",
+          "3451344"
+        ],
+        [
+          "County",
+          "Abbeville",
+          "12107",
+          "15921"
+        ],
+        [
+          "Precinct",
+          "Abbeville No. 01",
+          "1302",
+          "1672"
+        ],
+        [
+          "Precinct",
+          "Abbeville No. 02",
+          "912",
+          "1411"
+        ],
+        [
+          "Precinct",
+          "Abbeville No. 03",
+          "903",
+          "1282"
+        ]
+      ],
+      "status": "candidate; totals and denominator discrepancy versus VREMS unresolved"
+    },
+    "VT": {
+      "town_rows": 247,
+      "registered_voters": 517051,
+      "voters_cast": 372885,
+      "status": "town geography; denominator timing unresolved"
+    },
+    "KY": {
+      "pdf_files": 4,
+      "status": "PDF magic checked; not transcribed in this pass; publisher unofficial turnout caveat retained"
+    }
+  }
+}

@@ -1,0 +1,7002 @@
+[
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "001",
+    "n": 596,
+    "registered": 436346,
+    "ballots": 366326,
+    "turnout": 83.95310143784978,
+    "leader": "votes:REP",
+    "weighted_r_rep": -0.02588411814241146,
+    "county_demeaned_r_rep": 0.2082314967104461,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.65079365079364,
+      "t_cut_source": "own_q995",
+      "mode": 89.25,
+      "sigma": 5.7228173796160915,
+      "total_votes_party": 204046,
+      "tail_voters": 2647,
+      "tail_votes_party": 1429,
+      "tail_share_of_party": 0.7003322780157415,
+      "observed_share_pct": 55.70066006780846,
+      "honest_share_pct": 55.71314263402616
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.4449507408049357,
+      "mean_anom": [
+        86.71484579594954,
+        46.04782884628523
+      ],
+      "mean_main": [
+        81.80734571505229,
+        63.442019521166124
+      ],
+      "anom_cluster_voters": 187761,
+      "anom_cluster_votes_party": 72773,
+      "total_voters": 436346,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "002",
+    "n": 660,
+    "registered": 463685,
+    "ballots": 405656,
+    "turnout": 87.48525399786493,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.5227747286502835,
+    "county_demeaned_r_rep": 0.06856306232897524,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 96.36711281070745,
+      "t_cut_source": "own_q995",
+      "mode": 91.75,
+      "sigma": 6.299533225880122,
+      "total_votes_party": 294148,
+      "tail_voters": 1310,
+      "tail_votes_party": 885,
+      "tail_share_of_party": 0.30086895032432653,
+      "observed_share_pct": 72.51168477724968,
+      "honest_share_pct": 72.52773614676539
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.580020548195708,
+      "mean_anom": [
+        91.61311110137505,
+        77.06866919213897
+      ],
+      "mean_main": [
+        81.70552001903187,
+        65.2903684025724
+      ],
+      "anom_cluster_voters": 286280,
+      "anom_cluster_votes_party": 201939,
+      "total_voters": 463685,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "003",
+    "n": 483,
+    "registered": 407900,
+    "ballots": 332459,
+    "turnout": 81.50502574160333,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.05342590975433372,
+    "county_demeaned_r_rep": 0.23751835505332633,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 98.46704138988247,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 6.524900068804805,
+      "total_votes_party": 176035,
+      "tail_voters": 1200,
+      "tail_votes_party": 425,
+      "tail_share_of_party": 0.24142926122646063,
+      "observed_share_pct": 52.949386240107806,
+      "honest_share_pct": 53.01289927217072
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6225306263500144,
+      "mean_anom": [
+        83.27888270251887,
+        45.91767182595437
+      ],
+      "mean_main": [
+        78.66514902173769,
+        64.59789582200266
+      ],
+      "anom_cluster_voters": 250216,
+      "anom_cluster_votes_party": 94145,
+      "total_voters": 407900,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "004",
+    "n": 438,
+    "registered": 519692,
+    "ballots": 455717,
+    "turnout": 87.68982397266073,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.21736947638046272,
+    "county_demeaned_r_rep": 0.1562742956332565,
+    "tail": {
+      "party": "REP",
+      "t_cut": 94.7499020504114,
+      "t_cut_source": "own_q995",
+      "mode": 88.25,
+      "sigma": 3.5253489772688273,
+      "total_votes_party": 247237,
+      "tail_voters": 9676,
+      "tail_votes_party": 4989,
+      "tail_share_of_party": 2.017901851260127,
+      "observed_share_pct": 54.25231009595868,
+      "honest_share_pct": 54.31070237937768
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.9222099098562085,
+      "mean_anom": [
+        88.05563025864718,
+        56.38339017657425
+      ],
+      "mean_main": [
+        83.2936245885482,
+        27.001600859318998
+      ],
+      "anom_cluster_voters": 479097,
+      "anom_cluster_votes_party": 238091,
+      "total_voters": 519692,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "005",
+    "n": 783,
+    "registered": 432789,
+    "ballots": 370137,
+    "turnout": 85.52366164574423,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.19239470999523997,
+    "county_demeaned_r_rep": 0.059036158198332064,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 99.04988123515439,
+      "t_cut_source": "own_q995",
+      "mode": 90.25,
+      "sigma": 6.432573282479787,
+      "total_votes_party": 271149,
+      "tail_voters": 2307,
+      "tail_votes_party": 1505,
+      "tail_share_of_party": 0.5550453809529078,
+      "observed_share_pct": 73.25638885061477,
+      "honest_share_pct": 73.30669059076203
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5711111727453949,
+      "mean_anom": [
+        88.02157767316804,
+        70.97367158889378
+      ],
+      "mean_main": [
+        82.10970455886067,
+        76.3392145309623
+      ],
+      "anom_cluster_voters": 272694,
+      "anom_cluster_votes_party": 172503,
+      "total_voters": 432789,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "006",
+    "n": 272,
+    "registered": 408929,
+    "ballots": 325535,
+    "turnout": 79.60672879644143,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.003163004262328139,
+    "county_demeaned_r_rep": 0.11440426881373841,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.77167438782263,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 8.715490678086558,
+      "total_votes_party": 229643,
+      "tail_voters": 1436,
+      "tail_votes_party": 973,
+      "tail_share_of_party": 0.42370113611126836,
+      "observed_share_pct": 70.54325955734406,
+      "honest_share_pct": 70.55560183771009
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.7738638083064945,
+      "mean_anom": [
+        79.62642845839753,
+        75.0831579582569
+      ],
+      "mean_main": [
+        79.22887293027779,
+        54.78001962483051
+      ],
+      "anom_cluster_voters": 320064,
+      "anom_cluster_votes_party": 191618,
+      "total_voters": 408929,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "007",
+    "n": 323,
+    "registered": 468882,
+    "ballots": 398359,
+    "turnout": 84.9593287863471,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.4976332934992272,
+    "county_demeaned_r_rep": 0.3357353101496604,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.23076923076923,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 5.269867103203325,
+      "total_votes_party": 217411,
+      "tail_voters": 3415,
+      "tail_votes_party": 1861,
+      "tail_share_of_party": 0.8559824479902121,
+      "observed_share_pct": 54.57665070953587,
+      "honest_share_pct": 54.57735780262518
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5628525666217559,
+      "mean_anom": [
+        87.42477622145054,
+        48.94862635196322
+      ],
+      "mean_main": [
+        81.88873765667171,
+        62.504087313692644
+      ],
+      "anom_cluster_voters": 275799,
+      "anom_cluster_votes_party": 117871,
+      "total_voters": 468882,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "008",
+    "n": 760,
+    "registered": 382048,
+    "ballots": 295928,
+    "turnout": 77.45832984337046,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6167380604284025,
+    "county_demeaned_r_rep": 0.19549068717343374,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.37748344370861,
+      "t_cut_source": "own_q995",
+      "mode": 71.75,
+      "sigma": 8.869668218168547,
+      "total_votes_party": 157943,
+      "tail_voters": 1568,
+      "tail_votes_party": 988,
+      "tail_share_of_party": 0.6255421259568326,
+      "observed_share_pct": 53.37210402530345,
+      "honest_share_pct": 53.32076369071885
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6053087129206933,
+      "mean_anom": [
+        82.00020172082384,
+        60.74010844549343
+      ],
+      "mean_main": [
+        70.52157908764445,
+        39.68423528605893
+      ],
+      "anom_cluster_voters": 237906,
+      "anom_cluster_votes_party": 119072,
+      "total_voters": 382048,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "009",
+    "n": 319,
+    "registered": 395101,
+    "ballots": 315528,
+    "turnout": 79.86008640828548,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.637936713286901,
+    "county_demeaned_r_rep": 0.4977136316833769,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 96.51100375738056,
+      "t_cut_source": "own_q995",
+      "mode": 84.75,
+      "sigma": 6.884932586267706,
+      "total_votes_party": 174173,
+      "tail_voters": 3072,
+      "tail_votes_party": 1648,
+      "tail_share_of_party": 0.9461856889414547,
+      "observed_share_pct": 55.20048933850562,
+      "honest_share_pct": 55.21577438103285
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.23020405300159,
+      "mean_anom": [
+        85.93514678171216,
+        37.22945836716885
+      ],
+      "mean_main": [
+        78.0626649077479,
+        61.68894717782838
+      ],
+      "anom_cluster_voters": 89594,
+      "anom_cluster_votes_party": 28169,
+      "total_voters": 395101,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "010",
+    "n": 227,
+    "registered": 392880,
+    "ballots": 311799,
+    "turnout": 79.36240073304826,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6372840571471309,
+    "county_demeaned_r_rep": 0.5300874863301146,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.06933019976498,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 6.8937303835776715,
+      "total_votes_party": 166856,
+      "tail_voters": 1881,
+      "tail_votes_party": 646,
+      "tail_share_of_party": 0.3871601860286714,
+      "observed_share_pct": 53.513962520726494,
+      "honest_share_pct": 53.630315115611225
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.49101522470597775,
+      "mean_anom": [
+        83.57440210705087,
+        49.25010473262929
+      ],
+      "mean_main": [
+        75.43904231925389,
+        58.760025980662384
+      ],
+      "anom_cluster_voters": 225927,
+      "anom_cluster_votes_party": 94348,
+      "total_voters": 392880,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "011",
+    "n": 577,
+    "registered": 463170,
+    "ballots": 390250,
+    "turnout": 84.25632057343955,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.32005723768197947,
+    "county_demeaned_r_rep": 0.13828541506475234,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.16342412451363,
+      "t_cut_source": "own_q995",
+      "mode": 89.75,
+      "sigma": 7.444715688499984,
+      "total_votes_party": 270999,
+      "tail_voters": 4671,
+      "tail_votes_party": 3360,
+      "tail_share_of_party": 1.2398569736419691,
+      "observed_share_pct": 69.44240871236387,
+      "honest_share_pct": 69.41223458746457
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4867080998967265,
+      "mean_anom": [
+        89.94393719282222,
+        67.60255701423323
+      ],
+      "mean_main": [
+        78.83928756813542,
+        71.5883123956839
+      ],
+      "anom_cluster_voters": 246155,
+      "anom_cluster_votes_party": 149946,
+      "total_voters": 463170,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "013",
+    "n": 175,
+    "registered": 475312,
+    "ballots": 382369,
+    "turnout": 80.44589659002929,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.07514286904707175,
+    "county_demeaned_r_rep": -0.31216390305022046,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.60593737291582,
+      "t_cut_source": "own_q995",
+      "mode": 89.25,
+      "sigma": 7.793462103164629,
+      "total_votes_party": 327849,
+      "tail_voters": 9858,
+      "tail_votes_party": 8463,
+      "tail_share_of_party": 2.581371302032338,
+      "observed_share_pct": 85.74152193300189,
+      "honest_share_pct": 85.73867617332105
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.45766407885396804,
+      "mean_anom": [
+        85.12093292270536,
+        89.71512520397434
+      ],
+      "mean_main": [
+        76.49771091579042,
+        82.4952915672716
+      ],
+      "anom_cluster_voters": 226585,
+      "anom_cluster_votes_party": 172862,
+      "total_voters": 475312,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "014",
+    "n": 346,
+    "registered": 427637,
+    "ballots": 365903,
+    "turnout": 85.56392454347963,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.49622253665487437,
+    "county_demeaned_r_rep": 0.35007695590291565,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.20560747663552,
+      "t_cut_source": "own_q995",
+      "mode": 88.75,
+      "sigma": 4.9363342673321355,
+      "total_votes_party": 278298,
+      "tail_voters": 2539,
+      "tail_votes_party": 1905,
+      "tail_share_of_party": 0.6845180346247548,
+      "observed_share_pct": 76.0578623296338,
+      "honest_share_pct": 76.06504772074284
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5607991113831011,
+      "mean_anom": [
+        88.6260738378883,
+        74.97317715336261
+      ],
+      "mean_main": [
+        81.65414429457307,
+        77.62262472930963
+      ],
+      "anom_cluster_voters": 268325,
+      "anom_cluster_votes_party": 178479,
+      "total_voters": 427637,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "015",
+    "n": 278,
+    "registered": 442835,
+    "ballots": 366603,
+    "turnout": 82.78546185373784,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6224947786306627,
+    "county_demeaned_r_rep": 0.122968533977874,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.50943396226415,
+      "t_cut_source": "own_q995",
+      "mode": 87.25,
+      "sigma": 5.042067798814947,
+      "total_votes_party": 242984,
+      "tail_voters": 2927,
+      "tail_votes_party": 1907,
+      "tail_share_of_party": 0.7848253382938795,
+      "observed_share_pct": 66.27987223236035,
+      "honest_share_pct": 66.288949504504
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.508529748027678,
+      "mean_anom": [
+        86.4088962296499,
+        62.903479078749605
+      ],
+      "mean_main": [
+        79.05994721238994,
+        70.11652750536166
+      ],
+      "anom_cluster_voters": 230375,
+      "anom_cluster_votes_party": 125637,
+      "total_voters": 442835,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "016",
+    "n": 411,
+    "registered": 312861,
+    "ballots": 223275,
+    "turnout": 71.36555850681293,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.736754054230042,
+    "county_demeaned_r_rep": 0.24610311131559165,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.39766081871345,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 10.756553454098137,
+      "total_votes_party": 128530,
+      "tail_voters": 1120,
+      "tail_votes_party": 380,
+      "tail_share_of_party": 0.295650820820042,
+      "observed_share_pct": 57.56578210726682,
+      "honest_share_pct": 57.68494969728343
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.35712871450219924,
+      "mean_anom": [
+        81.07344938389821,
+        44.49345166295526
+      ],
+      "mean_main": [
+        65.97230298551287,
+        67.53137413535289
+      ],
+      "anom_cluster_voters": 102133,
+      "anom_cluster_votes_party": 34784,
+      "total_voters": 312861,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "017",
+    "n": 172,
+    "registered": 375022,
+    "ballots": 315602,
+    "turnout": 84.15559620502263,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.1752528875338671,
+    "county_demeaned_r_rep": 0.30638625274931136,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.51119402985074,
+      "t_cut_source": "own_q995",
+      "mode": 83.25,
+      "sigma": 3.4936367057243167,
+      "total_votes_party": 212127,
+      "tail_voters": 2521,
+      "tail_votes_party": 1786,
+      "tail_share_of_party": 0.841948455406431,
+      "observed_share_pct": 67.2134523862333,
+      "honest_share_pct": 67.18421111469556
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5275261996667682,
+      "mean_anom": [
+        85.21401526448018,
+        64.54891809127054
+      ],
+      "mean_main": [
+        83.03228122193403,
+        70.26487553066448
+      ],
+      "anom_cluster_voters": 196913,
+      "anom_cluster_votes_party": 107943,
+      "total_voters": 375022,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "019",
+    "n": 224,
+    "registered": 402131,
+    "ballots": 330502,
+    "turnout": 82.18764531956005,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.4022061601442293,
+    "county_demeaned_r_rep": 0.04324878221152585,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.64490861618799,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 6.041096521017217,
+      "total_votes_party": 224381,
+      "tail_voters": 2515,
+      "tail_votes_party": 1736,
+      "tail_share_of_party": 0.7736840463319087,
+      "observed_share_pct": 67.89096586404924,
+      "honest_share_pct": 67.88226362630226
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6974360620423097,
+      "mean_anom": [
+        84.88009837042684,
+        65.7359991674179
+      ],
+      "mean_main": [
+        76.02931971439908,
+        73.3304633582014
+      ],
+      "anom_cluster_voters": 289240,
+      "anom_cluster_votes_party": 162230,
+      "total_voters": 402131,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "020",
+    "n": 355,
+    "registered": 384225,
+    "ballots": 315552,
+    "turnout": 82.1268787819637,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.28165145534029284,
+    "county_demeaned_r_rep": 0.26217554664570436,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.52380952380952,
+      "t_cut_source": "own_q995",
+      "mode": 89.75,
+      "sigma": 7.74444797271426,
+      "total_votes_party": 236886,
+      "tail_voters": 1974,
+      "tail_votes_party": 1412,
+      "tail_share_of_party": 0.5960673066369477,
+      "observed_share_pct": 75.07035290538485,
+      "honest_share_pct": 75.09264042758102
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5543433981237649,
+      "mean_anom": [
+        86.93301219008463,
+        71.71877999612677
+      ],
+      "mean_main": [
+        76.28772135188629,
+        79.87285630404287
+      ],
+      "anom_cluster_voters": 229921,
+      "anom_cluster_votes_party": 145321,
+      "total_voters": 384225,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "021",
+    "n": 434,
+    "registered": 258976,
+    "ballots": 174256,
+    "turnout": 67.28654392685037,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.7741821128719928,
+    "county_demeaned_r_rep": 0.4758800225603016,
+    "tail": {
+      "party": "REP",
+      "t_cut": 89.2041949413942,
+      "t_cut_source": "own_q995",
+      "mode": 75.75,
+      "sigma": 10.375969875865097,
+      "total_votes_party": 85853,
+      "tail_voters": 2504,
+      "tail_votes_party": 1960,
+      "tail_share_of_party": 2.282972056887936,
+      "observed_share_pct": 49.268317877146266,
+      "honest_share_pct": 48.84542829195584
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5014668240314452,
+      "mean_anom": [
+        74.47150834617611,
+        59.06080503522852
+      ],
+      "mean_main": [
+        60.006028184373854,
+        35.70664891380146
+      ],
+      "anom_cluster_voters": 125500,
+      "anom_cluster_votes_party": 57556,
+      "total_voters": 258976,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "022",
+    "n": 243,
+    "registered": 407548,
+    "ballots": 321334,
+    "turnout": 78.84568198101819,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6946002947615145,
+    "county_demeaned_r_rep": 0.6442187574527333,
+    "tail": {
+      "party": "REP",
+      "t_cut": 89.69248291571753,
+      "t_cut_source": "own_q995",
+      "mode": 85.25,
+      "sigma": 7.751669289201584,
+      "total_votes_party": 170862,
+      "tail_voters": 8860,
+      "tail_votes_party": 5271,
+      "tail_share_of_party": 3.0849457456895037,
+      "observed_share_pct": 53.17271125993515,
+      "honest_share_pct": 52.99352906161793
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.680435871879888,
+      "mean_anom": [
+        82.91443313220101,
+        57.994249794741336
+      ],
+      "mean_main": [
+        70.28227664043675,
+        40.272952590296256
+      ],
+      "anom_cluster_voters": 286465,
+      "anom_cluster_votes_party": 137950,
+      "total_voters": 407548,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "023",
+    "n": 529,
+    "registered": 406750,
+    "ballots": 312563,
+    "turnout": 76.8440073755378,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6233722813860502,
+    "county_demeaned_r_rep": 0.3978193186065644,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.30306469920545,
+      "t_cut_source": "own_q995",
+      "mode": 81.25,
+      "sigma": 8.418034724663887,
+      "total_votes_party": 190102,
+      "tail_voters": 183,
+      "tail_votes_party": 120,
+      "tail_share_of_party": 0.06312400711197147,
+      "observed_share_pct": 60.820378611671885,
+      "honest_share_pct": 60.817593956079136
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.4842955356402782,
+      "mean_anom": [
+        82.47256301189277,
+        69.15217764115931
+      ],
+      "mean_main": [
+        71.53908288228006,
+        50.96665002194577
+      ],
+      "anom_cluster_voters": 210207,
+      "anom_cluster_votes_party": 121417,
+      "total_voters": 406750,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "024",
+    "n": 322,
+    "registered": 425408,
+    "ballots": 371435,
+    "turnout": 87.31265044380923,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.0475391762695532,
+    "county_demeaned_r_rep": 0.08652133471518825,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 95.04950495049505,
+      "t_cut_source": "own_q995",
+      "mode": 91.25,
+      "sigma": 5.554267813986347,
+      "total_votes_party": 212465,
+      "tail_voters": 2133,
+      "tail_votes_party": 1332,
+      "tail_share_of_party": 0.6269267879415433,
+      "observed_share_pct": 57.20112536513791,
+      "honest_share_pct": 57.170824961684474
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4719046135381701,
+      "mean_anom": [
+        87.73788799303608,
+        44.28086943114884
+      ],
+      "mean_main": [
+        86.95229356176604,
+        68.84468092165662
+      ],
+      "anom_cluster_voters": 204438,
+      "anom_cluster_votes_party": 79151,
+      "total_voters": 425408,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "025",
+    "n": 266,
+    "registered": 436652,
+    "ballots": 354591,
+    "turnout": 81.20677335727306,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.7091103398414379,
+    "county_demeaned_r_rep": 0.500073927972992,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.76899696048632,
+      "t_cut_source": "own_q995",
+      "mode": 87.25,
+      "sigma": 8.21712793471956,
+      "total_votes_party": 169611,
+      "tail_voters": 350,
+      "tail_votes_party": 243,
+      "tail_share_of_party": 0.14326900967508002,
+      "observed_share_pct": 47.832855317816865,
+      "honest_share_pct": 47.811518147250034
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6893370548225468,
+      "mean_anom": [
+        86.26591795847023,
+        52.19383971638993
+      ],
+      "mean_main": [
+        70.19506269745376,
+        35.73756031338977
+      ],
+      "anom_cluster_voters": 298936,
+      "anom_cluster_votes_party": 135086,
+      "total_voters": 436652,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "026",
+    "n": 519,
+    "registered": 420944,
+    "ballots": 359431,
+    "turnout": 85.3868923182181,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7670295744118354,
+    "county_demeaned_r_rep": 0.23459129471105566,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.94163424124514,
+      "t_cut_source": "own_q995",
+      "mode": 90.75,
+      "sigma": 6.8382676786066,
+      "total_votes_party": 208846,
+      "tail_voters": 1932,
+      "tail_votes_party": 898,
+      "tail_share_of_party": 0.42998190053915325,
+      "observed_share_pct": 58.10461535037323,
+      "honest_share_pct": 58.167435433385826
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6284014263903549,
+      "mean_anom": [
+        89.50842860273441,
+        52.739718894699465
+      ],
+      "mean_main": [
+        78.7233459823759,
+        68.49711173213356
+      ],
+      "anom_cluster_voters": 267244,
+      "anom_cluster_votes_party": 125783,
+      "total_voters": 420944,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "027",
+    "n": 253,
+    "registered": 426086,
+    "ballots": 344381,
+    "turnout": 80.82429368718991,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5152318106486935,
+    "county_demeaned_r_rep": -0.11753091751183005,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.7807486631016,
+      "t_cut_source": "own_q995",
+      "mode": 80.25,
+      "sigma": 6.338310962039457,
+      "total_votes_party": 221346,
+      "tail_voters": 314,
+      "tail_votes_party": 139,
+      "tail_share_of_party": 0.06279761098009451,
+      "observed_share_pct": 64.2735807143832,
+      "honest_share_pct": 64.29183850819753
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.30769877647137595,
+      "mean_anom": [
+        84.73715951832511,
+        53.7448761784484
+      ],
+      "mean_main": [
+        79.10140392050857,
+        69.50082497743787
+      ],
+      "anom_cluster_voters": 109572,
+      "anom_cluster_votes_party": 47610,
+      "total_voters": 426086,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "028",
+    "n": 223,
+    "registered": 464669,
+    "ballots": 362801,
+    "turnout": 78.07729803365406,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.10415333951901952,
+    "county_demeaned_r_rep": -0.06567211477031455,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 89.66442953020135,
+      "t_cut_source": "own_q995",
+      "mode": 80.25,
+      "sigma": 6.17300421968451,
+      "total_votes_party": 244268,
+      "tail_voters": 4315,
+      "tail_votes_party": 3156,
+      "tail_share_of_party": 1.2920235151554849,
+      "observed_share_pct": 67.32837009820811,
+      "honest_share_pct": 67.25841455454328
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5741076176732123,
+      "mean_anom": [
+        78.16013344833601,
+        61.079576620044286
+      ],
+      "mean_main": [
+        77.92000022979187,
+        75.66075188949512
+      ],
+      "anom_cluster_voters": 262316,
+      "anom_cluster_votes_party": 124162,
+      "total_voters": 464669,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "030",
+    "n": 215,
+    "registered": 474733,
+    "ballots": 383397,
+    "turnout": 80.7605538270986,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.14985600821276365,
+    "county_demeaned_r_rep": 0.03189944604075802,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.39323046291688,
+      "t_cut_source": "own_q995",
+      "mode": 83.25,
+      "sigma": 5.41168828130547,
+      "total_votes_party": 240031,
+      "tail_voters": 2014,
+      "tail_votes_party": 1143,
+      "tail_share_of_party": 0.47618849231974203,
+      "observed_share_pct": 62.606384504834416,
+      "honest_share_pct": 62.63729636612015
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.45416787459638364,
+      "mean_anom": [
+        81.94762653023281,
+        57.28424848369921
+      ],
+      "mean_main": [
+        79.67628508294854,
+        67.03077460415027
+      ],
+      "anom_cluster_voters": 212537,
+      "anom_cluster_votes_party": 99335,
+      "total_voters": 474733,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "031",
+    "n": 447,
+    "registered": 394707,
+    "ballots": 300488,
+    "turnout": 76.12938204794949,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.8049125900284103,
+    "county_demeaned_r_rep": 0.5825039930846188,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.89704480457578,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 10.862597634322693,
+      "total_votes_party": 175283,
+      "tail_voters": 1645,
+      "tail_votes_party": 749,
+      "tail_share_of_party": 0.4273089803346588,
+      "observed_share_pct": 58.332778680013845,
+      "honest_share_pct": 58.40324183601423
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4918178610207715,
+      "mean_anom": [
+        84.97902244957929,
+        51.872461033927124
+      ],
+      "mean_main": [
+        67.56187508978017,
+        67.11942019371101
+      ],
+      "anom_cluster_voters": 204280,
+      "anom_cluster_votes_party": 90125,
+      "total_voters": 394707,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "032",
+    "n": 253,
+    "registered": 372226,
+    "ballots": 288325,
+    "turnout": 77.45966160343447,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7888543391093015,
+    "county_demeaned_r_rep": 0.3799575473952478,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 89.89863684026564,
+      "t_cut_source": "own_q995",
+      "mode": 81.75,
+      "sigma": 6.054959106563085,
+      "total_votes_party": 172939,
+      "tail_voters": 372,
+      "tail_votes_party": 177,
+      "tail_share_of_party": 0.10234822683142611,
+      "observed_share_pct": 59.98057747333738,
+      "honest_share_pct": 59.996596666817155
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.29106231558630663,
+      "mean_anom": [
+        83.02277638869255,
+        50.15764081136947
+      ],
+      "mean_main": [
+        75.18870333926144,
+        64.6231455360376
+      ],
+      "anom_cluster_voters": 91886,
+      "anom_cluster_votes_party": 37132,
+      "total_voters": 372226,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "033",
+    "n": 217,
+    "registered": 504337,
+    "ballots": 422431,
+    "turnout": 83.75966863426638,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6318764840266794,
+    "county_demeaned_r_rep": 0.5955669119725062,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.82316118935837,
+      "t_cut_source": "own_q995",
+      "mode": 87.25,
+      "sigma": 5.405763326330998,
+      "total_votes_party": 257073,
+      "tail_voters": 43,
+      "tail_votes_party": 15,
+      "tail_share_of_party": 0.005834918486188748,
+      "observed_share_pct": 60.85561902417199,
+      "honest_share_pct": 60.858263018835764
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.7992793566386359,
+      "mean_anom": [
+        85.68932276157257,
+        59.30763880852448
+      ],
+      "mean_main": [
+        75.83967907965334,
+        68.43979455109749
+      ],
+      "anom_cluster_voters": 431015,
+      "anom_cluster_votes_party": 220269,
+      "total_voters": 504337,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "035",
+    "n": 280,
+    "registered": 345282,
+    "ballots": 258631,
+    "turnout": 74.90428113831592,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7999670506465286,
+    "county_demeaned_r_rep": 0.28508162605552545,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 88.70392390011891,
+      "t_cut_source": "own_q995",
+      "mode": 79.75,
+      "sigma": 7.1135528707161795,
+      "total_votes_party": 169386,
+      "tail_voters": 2773,
+      "tail_votes_party": 1320,
+      "tail_share_of_party": 0.7792851829549077,
+      "observed_share_pct": 65.4933090000812,
+      "honest_share_pct": 65.68721712825082
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.3872630466023686,
+      "mean_anom": [
+        81.5672333355989,
+        58.235050916364834
+      ],
+      "mean_main": [
+        70.81668070615943,
+        70.914151821402
+      ],
+      "anom_cluster_voters": 126463,
+      "anom_cluster_votes_party": 59548,
+      "total_voters": 345282,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "036",
+    "n": 233,
+    "registered": 384106,
+    "ballots": 316159,
+    "turnout": 82.31035182996361,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.28730726545621343,
+    "county_demeaned_r_rep": 0.23000067244097594,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 95.94071079669867,
+      "t_cut_source": "own_q995",
+      "mode": 90.25,
+      "sigma": 7.823335713378673,
+      "total_votes_party": 185105,
+      "tail_voters": 821,
+      "tail_votes_party": 549,
+      "tail_share_of_party": 0.2965884227870668,
+      "observed_share_pct": 58.54807233069437,
+      "honest_share_pct": 58.52640658594905
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.76762242047825,
+      "mean_anom": [
+        83.24480466168193,
+        52.805689914531165
+      ],
+      "mean_main": [
+        79.14158831268955,
+        78.95871172589142
+      ],
+      "anom_cluster_voters": 293755,
+      "anom_cluster_votes_party": 128688,
+      "total_voters": 384106,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "037",
+    "n": 229,
+    "registered": 452396,
+    "ballots": 332072,
+    "turnout": 73.40294785983961,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.462557452066589,
+    "county_demeaned_r_rep": 0.32965268877900533,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 89.95568685376662,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 10.073409909101338,
+      "total_votes_party": 254914,
+      "tail_voters": 4,
+      "tail_votes_party": 2,
+      "tail_share_of_party": 0.0007845783283774136,
+      "observed_share_pct": 76.76467753981065,
+      "honest_share_pct": 76.76499993977137
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4941341697882534,
+      "mean_anom": [
+        82.02933106367827,
+        72.82705238139833
+      ],
+      "mean_main": [
+        64.9300306141083,
+        81.59294860405835
+      ],
+      "anom_cluster_voters": 226337,
+      "anom_cluster_votes_party": 135272,
+      "total_voters": 452396,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "039",
+    "n": 317,
+    "registered": 418506,
+    "ballots": 357521,
+    "turnout": 85.42792695923117,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.8064091166727605,
+    "county_demeaned_r_rep": 0.5653861914769915,
+    "tail": {
+      "party": "REP",
+      "t_cut": 94.16745061147695,
+      "t_cut_source": "own_q995",
+      "mode": 90.75,
+      "sigma": 5.16929664437521,
+      "total_votes_party": 173943,
+      "tail_voters": 4203,
+      "tail_votes_party": 2438,
+      "tail_share_of_party": 1.4016085729233139,
+      "observed_share_pct": 48.652526704725034,
+      "honest_share_pct": 48.54125745079504
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.31490533976219365,
+      "mean_anom": [
+        90.25682780933383,
+        57.33786759470465
+      ],
+      "mean_main": [
+        83.16747206064862,
+        43.89320425148622
+      ],
+      "anom_cluster_voters": 135925,
+      "anom_cluster_votes_party": 71592,
+      "total_voters": 418506,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "040",
+    "n": 176,
+    "registered": 307763,
+    "ballots": 206308,
+    "turnout": 67.03469877795577,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7239050253572216,
+    "county_demeaned_r_rep": 0.46796454492770234,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 82.04617834394904,
+      "t_cut_source": "own_q995",
+      "mode": 66.25,
+      "sigma": 7.960513233477025,
+      "total_votes_party": 135571,
+      "tail_voters": 2703,
+      "tail_votes_party": 1452,
+      "tail_share_of_party": 1.071025514306157,
+      "observed_share_pct": 65.7129146712682,
+      "honest_share_pct": 65.87215441664006
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.3190488203877362,
+      "mean_anom": [
+        75.44947096535536,
+        59.67744306145122
+      ],
+      "mean_main": [
+        63.09327314759286,
+        69.138280194147
+      ],
+      "anom_cluster_voters": 97926,
+      "anom_cluster_votes_party": 44050,
+      "total_voters": 307763,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "041",
+    "n": 124,
+    "registered": 356332,
+    "ballots": 272554,
+    "turnout": 76.48878012639898,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.8172837602726606,
+    "county_demeaned_r_rep": 0.2684684748335728,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 89.80627306273063,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 6.796775218486892,
+      "total_votes_party": 168124,
+      "tail_voters": 147,
+      "tail_votes_party": 65,
+      "tail_share_of_party": 0.03866193999666913,
+      "observed_share_pct": 61.68465698540473,
+      "honest_share_pct": 61.69408275117747
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6955106640613471,
+      "mean_anom": [
+        79.54107218123083,
+        58.575815663280316
+      ],
+      "mean_main": [
+        69.53098504876222,
+        70.69468484902816
+      ],
+      "anom_cluster_voters": 236364,
+      "anom_cluster_votes_party": 108855,
+      "total_voters": 356332,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "042",
+    "n": 243,
+    "registered": 450805,
+    "ballots": 383171,
+    "turnout": 84.99706081343375,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5362229748399461,
+    "county_demeaned_r_rep": 0.19190400422915566,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.97356143079315,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 3.9733941261569776,
+      "total_votes_party": 210216,
+      "tail_voters": 1640,
+      "tail_votes_party": 1017,
+      "tail_share_of_party": 0.4837881036648019,
+      "observed_share_pct": 54.86218946632182,
+      "honest_share_pct": 54.83145537322
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6091634788893466,
+      "mean_anom": [
+        86.66077919636236,
+        57.45212705794033
+      ],
+      "mean_main": [
+        82.42610452197206,
+        50.43278961319707
+      ],
+      "anom_cluster_voters": 342826,
+      "anom_cluster_votes_party": 169103,
+      "total_voters": 450805,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "043",
+    "n": 229,
+    "registered": 412258,
+    "ballots": 297412,
+    "turnout": 72.14220221317719,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5708853931854617,
+    "county_demeaned_r_rep": 0.4159928684981605,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.00233590282645,
+      "t_cut_source": "own_q995",
+      "mode": 74.25,
+      "sigma": 9.673879129519127,
+      "total_votes_party": 199206,
+      "tail_voters": 5037,
+      "tail_votes_party": 3374,
+      "tail_share_of_party": 1.6937240846159252,
+      "observed_share_pct": 66.9798125159711,
+      "honest_share_pct": 66.97973492945704
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6835329888753584,
+      "mean_anom": [
+        76.21572481979167,
+        61.945374988352285
+      ],
+      "mean_main": [
+        63.31485908010931,
+        80.92201064117354
+      ],
+      "anom_cluster_voters": 274670,
+      "anom_cluster_votes_party": 127999,
+      "total_voters": 412258,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "045",
+    "n": 387,
+    "registered": 475507,
+    "ballots": 426175,
+    "turnout": 89.62538932129286,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6377872974663044,
+    "county_demeaned_r_rep": 0.2583839531315619,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.71830985915493,
+      "t_cut_source": "own_q995",
+      "mode": 91.25,
+      "sigma": 3.349240309415674,
+      "total_votes_party": 221837,
+      "tail_voters": 5048,
+      "tail_votes_party": 1916,
+      "tail_share_of_party": 0.8636972191293607,
+      "observed_share_pct": 52.053029858626154,
+      "honest_share_pct": 52.222013786814905
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.9118089818817888,
+      "mean_anom": [
+        90.22203438090848,
+        50.892730542601754
+      ],
+      "mean_main": [
+        83.94564379249374,
+        66.08161246779201
+      ],
+      "anom_cluster_voters": 445529,
+      "anom_cluster_votes_party": 204938,
+      "total_voters": 475507,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "046",
+    "n": 218,
+    "registered": 294019,
+    "ballots": 236527,
+    "turnout": 80.44616164261494,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7114961835461765,
+    "county_demeaned_r_rep": 0.6875702729539976,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.80919080919081,
+      "t_cut_source": "own_q995",
+      "mode": 81.25,
+      "sigma": 5.053175149317137,
+      "total_votes_party": 157798,
+      "tail_voters": 71,
+      "tail_votes_party": 39,
+      "tail_share_of_party": 0.024715142143753407,
+      "observed_share_pct": 66.71458226756353,
+      "honest_share_pct": 66.71812091890246
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.8301320509583806,
+      "mean_anom": [
+        81.68930322071154,
+        64.2743119502229
+      ],
+      "mean_main": [
+        74.58989334409812,
+        80.91733566154437
+      ],
+      "anom_cluster_voters": 241133,
+      "anom_cluster_votes_party": 125815,
+      "total_voters": 294019,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "047",
+    "n": 270,
+    "registered": 412758,
+    "ballots": 331267,
+    "turnout": 80.2569544381938,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7068666847584304,
+    "county_demeaned_r_rep": 0.3483406732984004,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.6144578313253,
+      "t_cut_source": "own_q995",
+      "mode": 83.25,
+      "sigma": 8.686893134190813,
+      "total_votes_party": 197006,
+      "tail_voters": 2615,
+      "tail_votes_party": 1197,
+      "tail_share_of_party": 0.6075957077449418,
+      "observed_share_pct": 59.47045736520692,
+      "honest_share_pct": 59.57943356498667
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6043590355692644,
+      "mean_anom": [
+        85.32482932664779,
+        52.077505420682556
+      ],
+      "mean_main": [
+        72.57699015095041,
+        73.39835118981672
+      ],
+      "anom_cluster_voters": 249077,
+      "anom_cluster_votes_party": 110135,
+      "total_voters": 412758,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "048",
+    "n": 360,
+    "registered": 457686,
+    "ballots": 408412,
+    "turnout": 89.2341037305052,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.46952581741411714,
+    "county_demeaned_r_rep": 0.33040833181304086,
+    "tail": {
+      "party": "REP",
+      "t_cut": 95.67901234567901,
+      "t_cut_source": "own_q995",
+      "mode": 91.25,
+      "sigma": 3.82089760146132,
+      "total_votes_party": 201723,
+      "tail_voters": 2260,
+      "tail_votes_party": 1205,
+      "tail_share_of_party": 0.5973537970385132,
+      "observed_share_pct": 49.39203549357022,
+      "honest_share_pct": 49.3701865311509
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6921938843390664,
+      "mean_anom": [
+        90.72822432945512,
+        51.4722288210545
+      ],
+      "mean_main": [
+        85.90137536787653,
+        44.02300853176817
+      ],
+      "anom_cluster_voters": 349636,
+      "anom_cluster_votes_party": 163151,
+      "total_voters": 457686,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "049",
+    "n": 309,
+    "registered": 453648,
+    "ballots": 400116,
+    "turnout": 88.19966141149085,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.3162916819261177,
+    "county_demeaned_r_rep": -0.18463038305395849,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.640434192673,
+      "t_cut_source": "own_q995",
+      "mode": 91.75,
+      "sigma": 5.114647301883156,
+      "total_votes_party": 205330,
+      "tail_voters": 2692,
+      "tail_votes_party": 1159,
+      "tail_share_of_party": 0.5644572152145327,
+      "observed_share_pct": 51.31761789081166,
+      "honest_share_pct": 51.37359595796932
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5705604945133348,
+      "mean_anom": [
+        91.38565889139784,
+        50.32137692144183
+      ],
+      "mean_main": [
+        83.95960329425793,
+        53.04712095215511
+      ],
+      "anom_cluster_voters": 283027,
+      "anom_cluster_votes_party": 129381,
+      "total_voters": 453648,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "050",
+    "n": 323,
+    "registered": 443972,
+    "ballots": 376484,
+    "turnout": 84.79904138098799,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5375419073891365,
+    "county_demeaned_r_rep": 0.2747209642101775,
+    "tail": {
+      "party": "REP",
+      "t_cut": 92.81314168377824,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 4.84107788143521,
+      "total_votes_party": 195509,
+      "tail_voters": 1295,
+      "tail_votes_party": 833,
+      "tail_share_of_party": 0.4260673421683912,
+      "observed_share_pct": 51.93022811062356,
+      "honest_share_pct": 51.88744872584218
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6590262310685531,
+      "mean_anom": [
+        86.87294846787454,
+        56.63924509766988
+      ],
+      "mean_main": [
+        80.73522199228213,
+        42.001185852461894
+      ],
+      "anom_cluster_voters": 316841,
+      "anom_cluster_votes_party": 155120,
+      "total_voters": 443972,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "051",
+    "n": 237,
+    "registered": 358404,
+    "ballots": 251780,
+    "turnout": 70.25033202754433,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6407077873600523,
+    "county_demeaned_r_rep": 0.1912141550098901,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 86.39667705088266,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 6.422248092952961,
+      "total_votes_party": 165476,
+      "tail_voters": 971,
+      "tail_votes_party": 293,
+      "tail_share_of_party": 0.17706495201721095,
+      "observed_share_pct": 65.72245611247915,
+      "honest_share_pct": 65.86007679150269
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.2558280965105243,
+      "mean_anom": [
+        72.21778074242697,
+        56.48580616238569
+      ],
+      "mean_main": [
+        69.51191991319497,
+        69.66708487406957
+      ],
+      "anom_cluster_voters": 72590,
+      "anom_cluster_votes_party": 27486,
+      "total_voters": 358404,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 HOUSE",
+    "district": "052",
+    "n": 129,
+    "registered": 472339,
+    "ballots": 414741,
+    "turnout": 87.80579202648946,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.42856134390432377,
+    "county_demeaned_r_rep": 0.045274646011316685,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.45517411706594,
+      "t_cut_source": "own_q995",
+      "mode": 89.75,
+      "sigma": 3.236798141855061,
+      "total_votes_party": 244128,
+      "tail_voters": 140,
+      "tail_votes_party": 66,
+      "tail_share_of_party": 0.027034998033818324,
+      "observed_share_pct": 58.8627601322271,
+      "honest_share_pct": 58.866717639368936
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.08240824471943677,
+      "mean_anom": [
+        89.31278124946014,
+        47.39666828326955
+      ],
+      "mean_main": [
+        87.6869698372819,
+        59.97839868298917
+      ],
+      "anom_cluster_voters": 42709,
+      "anom_cluster_votes_party": 18044,
+      "total_voters": 472339,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2020 PRESIDENT",
+    "district": "STATEWIDE",
+    "n": 17241,
+    "registered": 21934983,
+    "ballots": 17777749,
+    "turnout": 81.04747106482827,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.27301385052660726,
+    "county_demeaned_r_rep": 0.2728142810362981,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.640434192673,
+      "t_cut_source": "own_q995",
+      "mode": 87.75,
+      "sigma": 8.455549971671822,
+      "total_votes_party": 11106572,
+      "tail_voters": 114185,
+      "tail_votes_party": 70264,
+      "tail_share_of_party": 0.6326344438229906,
+      "observed_share_pct": 62.47456863070797,
+      "honest_share_pct": 62.48064093973334
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.561928389549941,
+      "mean_anom": [
+        86.22750153433635,
+        57.26513480661081
+      ],
+      "mean_main": [
+        74.48122745856405,
+        70.30923120835931
+      ],
+      "anom_cluster_voters": 13678072,
+      "anom_cluster_votes_party": 6902646,
+      "total_voters": 21934983,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "1",
+    "n": 501,
+    "registered": 438819,
+    "ballots": 331517,
+    "turnout": 75.54754921733107,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.13094496347977044,
+    "county_demeaned_r_rep": 0.23630156792541157,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.75,
+      "t_cut_source": "own_q995",
+      "mode": 79.75,
+      "sigma": 7.356929941620854,
+      "total_votes_party": 208536,
+      "tail_voters": 1616,
+      "tail_votes_party": 1259,
+      "tail_share_of_party": 0.6037326888402962,
+      "observed_share_pct": 62.90356150664974,
+      "honest_share_pct": 62.83006113955399
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6546295787058536,
+      "mean_anom": [
+        77.3302146596752,
+        69.1199087341171
+      ],
+      "mean_main": [
+        72.24197555459936,
+        50.58122630728019
+      ],
+      "anom_cluster_voters": 302059,
+      "anom_cluster_votes_party": 161513,
+      "total_voters": 438819,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "10",
+    "n": 484,
+    "registered": 496308,
+    "ballots": 386713,
+    "turnout": 77.91794611410656,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.06709665464517238,
+    "county_demeaned_r_rep": -0.026300722716432145,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.40170174652933,
+      "t_cut_source": "own_q995",
+      "mode": 83.75,
+      "sigma": 6.473628446158974,
+      "total_votes_party": 241993,
+      "tail_voters": 308,
+      "tail_votes_party": 151,
+      "tail_share_of_party": 0.06239849913014013,
+      "observed_share_pct": 62.57689811307093,
+      "honest_share_pct": 62.587699434531125
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4173749606753193,
+      "mean_anom": [
+        78.79074090180262,
+        55.853847992843086
+      ],
+      "mean_main": [
+        77.12933186854957,
+        67.13959842438248
+      ],
+      "anom_cluster_voters": 187261,
+      "anom_cluster_votes_party": 80617,
+      "total_voters": 496308,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "11",
+    "n": 448,
+    "registered": 459057,
+    "ballots": 368414,
+    "turnout": 80.25452176962774,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.3882703055401273,
+    "county_demeaned_r_rep": -0.38831087681183796,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 97.04347826086956,
+      "t_cut_source": "own_q995",
+      "mode": 87.25,
+      "sigma": 8.215096231465065,
+      "total_votes_party": 274123,
+      "tail_voters": 2271,
+      "tail_votes_party": 1816,
+      "tail_share_of_party": 0.6624763336166611,
+      "observed_share_pct": 74.40623863371098,
+      "honest_share_pct": 74.3717618526095
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6844222470675158,
+      "mean_anom": [
+        84.19543677910359,
+        75.37243054220974
+      ],
+      "mean_main": [
+        71.42376582740458,
+        70.44683291453924
+      ],
+      "anom_cluster_voters": 346392,
+      "anom_cluster_votes_party": 219495,
+      "total_voters": 459057,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "13",
+    "n": 567,
+    "registered": 288694,
+    "ballots": 185136,
+    "turnout": 64.12880073711266,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5071597461618284,
+    "county_demeaned_r_rep": 0.5247676980998595,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 86.95652173913044,
+      "t_cut_source": "own_q995",
+      "mode": 66.25,
+      "sigma": 9.190339532446007,
+      "total_votes_party": 90475,
+      "tail_voters": 1260,
+      "tail_votes_party": 430,
+      "tail_share_of_party": 0.4752694114396242,
+      "observed_share_pct": 48.8694797338173,
+      "honest_share_pct": 48.970501859949096
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.31904636050532925,
+      "mean_anom": [
+        68.82215938299181,
+        39.72005290308805
+      ],
+      "mean_main": [
+        61.80605661006969,
+        54.39398316525178
+      ],
+      "anom_cluster_voters": 66822,
+      "anom_cluster_votes_party": 15777,
+      "total_voters": 288694,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "14",
+    "n": 226,
+    "registered": 425404,
+    "ballots": 296648,
+    "turnout": 69.73324181248883,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6665549713211759,
+    "county_demeaned_r_rep": 0.31423782452217286,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.70484242890085,
+      "t_cut_source": "own_q995",
+      "mode": 77.25,
+      "sigma": 7.66304956612941,
+      "total_votes_party": 187192,
+      "tail_voters": 4217,
+      "tail_votes_party": 2408,
+      "tail_share_of_party": 1.2863797598187956,
+      "observed_share_pct": 63.10239745422184,
+      "honest_share_pct": 63.18892319897685
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4242689401674734,
+      "mean_anom": [
+        76.53980700996026,
+        60.21102793119041
+      ],
+      "mean_main": [
+        64.64653662551667,
+        65.8309074130671
+      ],
+      "anom_cluster_voters": 192315,
+      "anom_cluster_votes_party": 88967,
+      "total_voters": 425404,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "15",
+    "n": 260,
+    "registered": 422675,
+    "ballots": 311943,
+    "turnout": 73.80209380729875,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.0425872855945331,
+    "county_demeaned_r_rep": -0.05847817294450974,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 87.76978417266187,
+      "t_cut_source": "own_q995",
+      "mode": 77.75,
+      "sigma": 8.183463697898429,
+      "total_votes_party": 211618,
+      "tail_voters": 76,
+      "tail_votes_party": 64,
+      "tail_share_of_party": 0.030243174021113515,
+      "observed_share_pct": 67.83867565548834,
+      "honest_share_pct": 67.83468593983974
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4892233710923217,
+      "mean_anom": [
+        80.2783993883237,
+        70.22008872590368
+      ],
+      "mean_main": [
+        67.48521240969932,
+        65.25611395844011
+      ],
+      "anom_cluster_voters": 214363,
+      "anom_cluster_votes_party": 121056,
+      "total_voters": 422675,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "17",
+    "n": 217,
+    "registered": 376032,
+    "ballots": 269859,
+    "turnout": 71.76490298697983,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.3839708823265236,
+    "county_demeaned_r_rep": -0.4338910926064705,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.7466784765279,
+      "t_cut_source": "own_q995",
+      "mode": 71.25,
+      "sigma": 5.568456534344632,
+      "total_votes_party": 172444,
+      "tail_voters": 3351,
+      "tail_votes_party": 2372,
+      "tail_share_of_party": 1.375519009069611,
+      "observed_share_pct": 63.90151894137309,
+      "honest_share_pct": 63.81496990709472
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4254706974223218,
+      "mean_anom": [
+        76.16762021013076,
+        66.55716994248768
+      ],
+      "mean_main": [
+        68.5317003527358,
+        61.61605559904862
+      ],
+      "anom_cluster_voters": 154035,
+      "anom_cluster_votes_party": 79459,
+      "total_voters": 376032,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "18",
+    "n": 311,
+    "registered": 362370,
+    "ballots": 237716,
+    "turnout": 65.6003532301239,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.3692783550634543,
+    "county_demeaned_r_rep": 0.41334114785418585,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.53188507358094,
+      "t_cut_source": "own_q995",
+      "mode": 58.75,
+      "sigma": 9.411053324234055,
+      "total_votes_party": 146576,
+      "tail_voters": 1674,
+      "tail_votes_party": 731,
+      "tail_share_of_party": 0.4987173889313394,
+      "observed_share_pct": 61.6601322586616,
+      "honest_share_pct": 61.787732691639626
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.399510544879901,
+      "mean_anom": [
+        75.06881442067223,
+        59.031399282067746
+      ],
+      "mean_main": [
+        59.26451507042516,
+        64.12803296741818
+      ],
+      "anom_cluster_voters": 145013,
+      "anom_cluster_votes_party": 64299,
+      "total_voters": 362370,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "19",
+    "n": 376,
+    "registered": 485268,
+    "ballots": 380786,
+    "turnout": 78.46921700998212,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.13731518089847508,
+    "county_demeaned_r_rep": 0.04212145552342694,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.66666666666667,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 7.455883939941946,
+      "total_votes_party": 250601,
+      "tail_voters": 2411,
+      "tail_votes_party": 1882,
+      "tail_share_of_party": 0.75099460896006,
+      "observed_share_pct": 65.8115056751036,
+      "honest_share_pct": 65.73346547737033
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4584304171605851,
+      "mean_anom": [
+        83.61962757066989,
+        74.22417612265613
+      ],
+      "mean_main": [
+        74.15719934348743,
+        58.07580251099746
+      ],
+      "anom_cluster_voters": 217712,
+      "anom_cluster_votes_party": 136667,
+      "total_voters": 485268,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "2",
+    "n": 617,
+    "registered": 488005,
+    "ballots": 396968,
+    "turnout": 81.34506818577678,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.525276363059315,
+    "county_demeaned_r_rep": -0.1076960609574831,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.23252858958068,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 6.7061488923578825,
+      "total_votes_party": 272653,
+      "tail_voters": 4111,
+      "tail_votes_party": 3081,
+      "tail_share_of_party": 1.130007738774193,
+      "observed_share_pct": 68.68387376312448,
+      "honest_share_pct": 68.61835222485536
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6283526235026432,
+      "mean_anom": [
+        85.18001492450068,
+        73.23892938600211
+      ],
+      "mean_main": [
+        74.71112728485686,
+        59.48649208904663
+      ],
+      "anom_cluster_voters": 322120,
+      "anom_cluster_votes_party": 201231,
+      "total_voters": 488005,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "21",
+    "n": 307,
+    "registered": 347030,
+    "ballots": 202606,
+    "turnout": 58.38284874506527,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7274133402758342,
+    "county_demeaned_r_rep": 0.5499747852804193,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 84.11347517730496,
+      "t_cut_source": "own_q995",
+      "mode": 63.75,
+      "sigma": 10.943952613489595,
+      "total_votes_party": 102744,
+      "tail_voters": 2079,
+      "tail_votes_party": 694,
+      "tail_share_of_party": 0.6754652339795998,
+      "observed_share_pct": 50.71123263871751,
+      "honest_share_pct": 50.890902471986315
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.39107074422413646,
+      "mean_anom": [
+        68.07211999986527,
+        42.53504691270943
+      ],
+      "mean_main": [
+        52.36639259707389,
+        58.62828539112997
+      ],
+      "anom_cluster_voters": 128848,
+      "anom_cluster_votes_party": 36616,
+      "total_voters": 347030,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "22",
+    "n": 475,
+    "registered": 319006,
+    "ballots": 174898,
+    "turnout": 54.82592803897106,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.7668649252121501,
+    "county_demeaned_r_rep": 0.6631252123115883,
+    "tail": {
+      "party": "REP",
+      "t_cut": 78.0,
+      "t_cut_source": "own_q995",
+      "mode": 52.75,
+      "sigma": 9.564071725928219,
+      "total_votes_party": 89293,
+      "tail_voters": 1373,
+      "tail_votes_party": 1140,
+      "tail_share_of_party": 1.2766958216209556,
+      "observed_share_pct": 51.05432880879141,
+      "honest_share_pct": 50.801325457426884
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.27963188890490764,
+      "mean_anom": [
+        57.264822934554516,
+        54.81341407915359
+      ],
+      "mean_main": [
+        53.903015770887315,
+        47.63611307289973
+      ],
+      "anom_cluster_voters": 44509,
+      "anom_cluster_votes_party": 17089,
+      "total_voters": 319006,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "23",
+    "n": 756,
+    "registered": 418692,
+    "ballots": 276920,
+    "turnout": 66.13931004174907,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4567158953169657,
+    "county_demeaned_r_rep": 0.3072031427833566,
+    "tail": {
+      "party": "REP",
+      "t_cut": 86.71875,
+      "t_cut_source": "own_q995",
+      "mode": 59.75,
+      "sigma": 10.346730650175788,
+      "total_votes_party": 158551,
+      "tail_voters": 1911,
+      "tail_votes_party": 1199,
+      "tail_share_of_party": 0.7562235495203437,
+      "observed_share_pct": 57.25516394626607,
+      "honest_share_pct": 57.21703653334982
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5914818956122838,
+      "mean_anom": [
+        72.94349743729735,
+        62.24617752024282
+      ],
+      "mean_main": [
+        56.3163957539501,
+        48.14947787575683
+      ],
+      "anom_cluster_voters": 248133,
+      "anom_cluster_votes_party": 112897,
+      "total_voters": 418692,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "24",
+    "n": 525,
+    "registered": 447800,
+    "ballots": 354682,
+    "turnout": 79.2054488610987,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.08635918187962682,
+    "county_demeaned_r_rep": -0.11593746505175369,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.03295786399666,
+      "t_cut_source": "own_q995",
+      "mode": 85.25,
+      "sigma": 8.602675853387215,
+      "total_votes_party": 212123,
+      "tail_voters": 3918,
+      "tail_votes_party": 2466,
+      "tail_share_of_party": 1.1625330586499343,
+      "observed_share_pct": 59.80653092065569,
+      "honest_share_pct": 59.77152729470527
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5449713109209599,
+      "mean_anom": [
+        83.85200481288035,
+        66.59459348906258
+      ],
+      "mean_main": [
+        73.6105830094613,
+        51.09631120258575
+      ],
+      "anom_cluster_voters": 254525,
+      "anom_cluster_votes_party": 142066,
+      "total_voters": 447800,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "25",
+    "n": 376,
+    "registered": 387558,
+    "ballots": 248558,
+    "turnout": 64.13440052843703,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.3126623998824019,
+    "county_demeaned_r_rep": 0.46227345379810714,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.03033236527912,
+      "t_cut_source": "own_q995",
+      "mode": 68.25,
+      "sigma": 10.991991166280968,
+      "total_votes_party": 134954,
+      "tail_voters": 2953,
+      "tail_votes_party": 1712,
+      "tail_share_of_party": 1.2685804051750966,
+      "observed_share_pct": 54.294772246316754,
+      "honest_share_pct": 54.25052421571222
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6076517873248489,
+      "mean_anom": [
+        68.3739340898315,
+        47.656617326307334
+      ],
+      "mean_main": [
+        57.29691275722306,
+        66.24957166766794
+      ],
+      "anom_cluster_voters": 234984,
+      "anom_cluster_votes_party": 76428,
+      "total_voters": 387558,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "26",
+    "n": 748,
+    "registered": 463214,
+    "ballots": 351558,
+    "turnout": 75.89537449213539,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6364371059451163,
+    "county_demeaned_r_rep": 0.535586392787851,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.3440256615878,
+      "t_cut_source": "own_q995",
+      "mode": 83.75,
+      "sigma": 9.739472136595031,
+      "total_votes_party": 187163,
+      "tail_voters": 1199,
+      "tail_votes_party": 603,
+      "tail_share_of_party": 0.3221790631695367,
+      "observed_share_pct": 53.238157003965206,
+      "honest_share_pct": 53.248239662745924
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.7092915128000132,
+      "mean_anom": [
+        81.60076490678564,
+        49.51002129883943
+      ],
+      "mean_main": [
+        62.17859235661902,
+        65.42613523662402
+      ],
+      "anom_cluster_voters": 328378,
+      "anom_cluster_votes_party": 132833,
+      "total_voters": 463214,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "27",
+    "n": 240,
+    "registered": 458466,
+    "ballots": 316055,
+    "turnout": 68.93750027264835,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6513669587349956,
+    "county_demeaned_r_rep": 0.3758322483198779,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.53413654618474,
+      "t_cut_source": "own_q995",
+      "mode": 80.25,
+      "sigma": 9.94625494248822,
+      "total_votes_party": 153989,
+      "tail_voters": 2928,
+      "tail_votes_party": 1304,
+      "tail_share_of_party": 0.8468137334484931,
+      "observed_share_pct": 48.722216069987816,
+      "honest_share_pct": 48.761365196869
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6883461866288644,
+      "mean_anom": [
+        74.91466706845006,
+        45.47882611187258
+      ],
+      "mean_main": [
+        55.55225253714606,
+        58.83159829225715
+      ],
+      "anom_cluster_voters": 319270,
+      "anom_cluster_votes_party": 108941,
+      "total_voters": 458466,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "28",
+    "n": 252,
+    "registered": 468567,
+    "ballots": 337322,
+    "turnout": 71.99013161404879,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.17089611922249184,
+    "county_demeaned_r_rep": 0.1611486634727411,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 85.9344894026975,
+      "t_cut_source": "own_q995",
+      "mode": 78.75,
+      "sigma": 8.620092693692046,
+      "total_votes_party": 204186,
+      "tail_voters": 1874,
+      "tail_votes_party": 1266,
+      "tail_share_of_party": 0.6200229202785695,
+      "observed_share_pct": 60.53148030665062,
+      "honest_share_pct": 60.49223724690563
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.14831515058291617,
+      "mean_anom": [
+        78.63908751982821,
+        40.727732359377875
+      ],
+      "mean_main": [
+        70.84253858528031,
+        64.32964403294054
+      ],
+      "anom_cluster_voters": 64868,
+      "anom_cluster_votes_party": 20106,
+      "total_voters": 468567,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "29",
+    "n": 135,
+    "registered": 387034,
+    "ballots": 237377,
+    "turnout": 61.3323377274348,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.2703621999668311,
+    "county_demeaned_r_rep": 0.11511832178272152,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 82.8196872125115,
+      "t_cut_source": "own_q995",
+      "mode": 58.25,
+      "sigma": 8.552646285512516,
+      "total_votes_party": 146305,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 61.634025200419586,
+      "honest_share_pct": 61.634025200419586
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4003794561769893,
+      "mean_anom": [
+        68.05027249693467,
+        62.54544317062828
+      ],
+      "mean_main": [
+        56.85941931741316,
+        60.66799754949907
+      ],
+      "anom_cluster_voters": 139987,
+      "anom_cluster_votes_party": 61392,
+      "total_voters": 387034,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "3",
+    "n": 539,
+    "registered": 537947,
+    "ballots": 442003,
+    "turnout": 82.16478575026908,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.1194278606879118,
+    "county_demeaned_r_rep": -0.028469924548956575,
+    "tail": {
+      "party": "REP",
+      "t_cut": 94.28571428571429,
+      "t_cut_source": "own_q995",
+      "mode": 83.75,
+      "sigma": 4.6931802622870435,
+      "total_votes_party": 234050,
+      "tail_voters": 2478,
+      "tail_votes_party": 1283,
+      "tail_share_of_party": 0.5481734672078615,
+      "observed_share_pct": 52.95212928419038,
+      "honest_share_pct": 52.95876230021045
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.8642950522190235,
+      "mean_anom": [
+        82.93056462552674,
+        55.64103094733213
+      ],
+      "mean_main": [
+        77.55300858558519,
+        35.24058346536149
+      ],
+      "anom_cluster_voters": 465166,
+      "anom_cluster_votes_party": 214834,
+      "total_voters": 537947,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "30",
+    "n": 175,
+    "registered": 478065,
+    "ballots": 345104,
+    "turnout": 72.18767322435234,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.3977149822186883,
+    "county_demeaned_r_rep": -0.2694829072325538,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 87.81325094404394,
+      "t_cut_source": "own_q995",
+      "mode": 75.25,
+      "sigma": 6.752328704942648,
+      "total_votes_party": 213083,
+      "tail_voters": 36,
+      "tail_votes_party": 22,
+      "tail_share_of_party": 0.010324615290755245,
+      "observed_share_pct": 61.74457554824053,
+      "honest_share_pct": 61.74464163585149
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6075135166997886,
+      "mean_anom": [
+        74.24632806461616,
+        70.40531152608456
+      ],
+      "mean_main": [
+        69.14209505882405,
+        46.94774513700712
+      ],
+      "anom_cluster_voters": 289392,
+      "anom_cluster_votes_party": 151712,
+      "total_voters": 478065,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "31",
+    "n": 266,
+    "registered": 418710,
+    "ballots": 269638,
+    "turnout": 64.39731556447182,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7712755964359955,
+    "county_demeaned_r_rep": 0.607508894728627,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 82.14285714285714,
+      "t_cut_source": "own_q995",
+      "mode": 71.25,
+      "sigma": 9.278975918201983,
+      "total_votes_party": 148021,
+      "tail_voters": 1766,
+      "tail_votes_party": 758,
+      "tail_share_of_party": 0.5120895008140737,
+      "observed_share_pct": 54.89619415660997,
+      "honest_share_pct": 54.97513737904671
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4007717052785845,
+      "mean_anom": [
+        73.70036063835853,
+        49.63396147133517
+      ],
+      "mean_main": [
+        58.360702079720966,
+        59.66263073933274
+      ],
+      "anom_cluster_voters": 170552,
+      "anom_cluster_votes_party": 62187,
+      "total_voters": 418710,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "32",
+    "n": 173,
+    "registered": 481562,
+    "ballots": 356650,
+    "turnout": 74.06107624771057,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.16066897831804045,
+    "county_demeaned_r_rep": -0.03397117001918494,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 86.40658335873209,
+      "t_cut_source": "own_q995",
+      "mode": 80.25,
+      "sigma": 7.054214455894335,
+      "total_votes_party": 212929,
+      "tail_voters": 259,
+      "tail_votes_party": 174,
+      "tail_share_of_party": 0.08171737997172766,
+      "observed_share_pct": 59.70250946305902,
+      "honest_share_pct": 59.69707428077589
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6529741496614341,
+      "mean_anom": [
+        78.23658154125067,
+        60.60646567217039
+      ],
+      "mean_main": [
+        66.14185643658922,
+        57.623822819289245
+      ],
+      "anom_cluster_voters": 329312,
+      "anom_cluster_votes_party": 155649,
+      "total_voters": 481562,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "33",
+    "n": 390,
+    "registered": 409982,
+    "ballots": 246562,
+    "turnout": 60.13971345083443,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7805419674736861,
+    "county_demeaned_r_rep": 0.6055121377197927,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 79.67836257309942,
+      "t_cut_source": "own_q995",
+      "mode": 72.25,
+      "sigma": 11.30142766608672,
+      "total_votes_party": 136995,
+      "tail_voters": 3264,
+      "tail_votes_party": 1409,
+      "tail_share_of_party": 1.0285046899521881,
+      "observed_share_pct": 55.5620898597513,
+      "honest_share_pct": 55.72836603671218
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.37267295510798937,
+      "mean_anom": [
+        72.279929202285,
+        50.131878634039225
+      ],
+      "mean_main": [
+        52.7361046598289,
+        60.639287475758806
+      ],
+      "anom_cluster_voters": 163912,
+      "anom_cluster_votes_party": 59391,
+      "total_voters": 409982,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "35",
+    "n": 342,
+    "registered": 396094,
+    "ballots": 246938,
+    "turnout": 62.34328215019667,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.7649837059541046,
+    "county_demeaned_r_rep": 0.5110645821905099,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 82.183908045977,
+      "t_cut_source": "own_q995",
+      "mode": 68.75,
+      "sigma": 8.416887123526037,
+      "total_votes_party": 136282,
+      "tail_voters": 1783,
+      "tail_votes_party": 832,
+      "tail_share_of_party": 0.6104988186260841,
+      "observed_share_pct": 55.18875183244377,
+      "honest_share_pct": 55.250759723440275
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.46925642714042864,
+      "mean_anom": [
+        69.05636022839228,
+        49.95649722312034
+      ],
+      "mean_main": [
+        56.38162115861597,
+        61.336103024069466
+      ],
+      "anom_cluster_voters": 179985,
+      "anom_cluster_votes_party": 61452,
+      "total_voters": 396094,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "36",
+    "n": 160,
+    "registered": 500782,
+    "ballots": 391432,
+    "turnout": 78.16415126741776,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.21881367761957593,
+    "county_demeaned_r_rep": 0.05198049545261519,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 87.91208791208791,
+      "t_cut_source": "own_q995",
+      "mode": 80.25,
+      "sigma": 4.490427325294011,
+      "total_votes_party": 244063,
+      "tail_voters": 1853,
+      "tail_votes_party": 1384,
+      "tail_share_of_party": 0.5670666999913957,
+      "observed_share_pct": 62.351315170962,
+      "honest_share_pct": 62.29262870945303
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.44876449205101687,
+      "mean_anom": [
+        78.58093445755567,
+        54.387160696877736
+      ],
+      "mean_main": [
+        77.80484014767937,
+        69.06767226427704
+      ],
+      "anom_cluster_voters": 217875,
+      "anom_cluster_votes_party": 91630,
+      "total_voters": 500782,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "38",
+    "n": 221,
+    "registered": 450410,
+    "ballots": 296391,
+    "turnout": 65.80471126307143,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5830772315274098,
+    "county_demeaned_r_rep": 0.5348971968520931,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 80.6717904924566,
+      "t_cut_source": "own_q995",
+      "mode": 61.75,
+      "sigma": 6.2517065466807145,
+      "total_votes_party": 163088,
+      "tail_voters": 3194,
+      "tail_votes_party": 1420,
+      "tail_share_of_party": 0.8706955753948789,
+      "observed_share_pct": 55.02461275814718,
+      "honest_share_pct": 55.1397183463678
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5103709973141878,
+      "mean_anom": [
+        69.64515843696618,
+        48.41213959755619
+      ],
+      "mean_main": [
+        61.959163336949125,
+        62.525943660527936
+      ],
+      "anom_cluster_voters": 226326,
+      "anom_cluster_votes_party": 76421,
+      "total_voters": 450410,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "39",
+    "n": 194,
+    "registered": 385936,
+    "ballots": 238233,
+    "turnout": 61.728628580904605,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6058610913472074,
+    "county_demeaned_r_rep": 0.35921738224519406,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 85.06304558680893,
+      "t_cut_source": "own_q995",
+      "mode": 57.25,
+      "sigma": 9.479745836236619,
+      "total_votes_party": 129010,
+      "tail_voters": 2210,
+      "tail_votes_party": 1059,
+      "tail_share_of_party": 0.8208665994884118,
+      "observed_share_pct": 54.152867151066395,
+      "honest_share_pct": 54.211242124708185
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.45189277657847754,
+      "mean_anom": [
+        69.5190921127734,
+        50.31135654298956
+      ],
+      "mean_main": [
+        55.477965285449876,
+        58.49339088842781
+      ],
+      "anom_cluster_voters": 168723,
+      "anom_cluster_votes_party": 58965,
+      "total_voters": 385936,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "4",
+    "n": 538,
+    "registered": 449384,
+    "ballots": 353665,
+    "turnout": 78.69995371441796,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.4515801099562547,
+    "county_demeaned_r_rep": -0.003734197863974765,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.0891045434495,
+      "t_cut_source": "own_q995",
+      "mode": 85.25,
+      "sigma": 7.71962192422757,
+      "total_votes_party": 224789,
+      "tail_voters": 2362,
+      "tail_votes_party": 1813,
+      "tail_share_of_party": 0.8065341275596226,
+      "observed_share_pct": 63.55986597486322,
+      "honest_share_pct": 63.471134604600586
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6399506526440254,
+      "mean_anom": [
+        81.27681549541875,
+        70.77678832766901
+      ],
+      "mean_main": [
+        74.22047619303027,
+        49.470358354954
+      ],
+      "anom_cluster_voters": 284038,
+      "anom_cluster_votes_party": 164679,
+      "total_voters": 449384,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "40",
+    "n": 378,
+    "registered": 498645,
+    "ballots": 399179,
+    "turnout": 80.05274293334938,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4724246368555248,
+    "county_demeaned_r_rep": 0.48306918875384874,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.35516739446871,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 5.069967959203574,
+      "total_votes_party": 211857,
+      "tail_voters": 1866,
+      "tail_votes_party": 1013,
+      "tail_share_of_party": 0.478152716218959,
+      "observed_share_pct": 53.07318270750716,
+      "honest_share_pct": 53.06748080228938
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5563676093198422,
+      "mean_anom": [
+        82.0115205198965,
+        55.45740042310022
+      ],
+      "mean_main": [
+        77.70378206259397,
+        49.534774904486326
+      ],
+      "anom_cluster_voters": 327242,
+      "anom_cluster_votes_party": 149095,
+      "total_voters": 498645,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "41",
+    "n": 352,
+    "registered": 481572,
+    "ballots": 363219,
+    "turnout": 75.42361266851063,
+    "leader": "votes:REP",
+    "weighted_r_rep": -0.20477238309645537,
+    "county_demeaned_r_rep": -0.05787065276200781,
+    "tail": {
+      "party": "REP",
+      "t_cut": 92.66266728195662,
+      "t_cut_source": "own_q995",
+      "mode": 75.25,
+      "sigma": 7.352371759026703,
+      "total_votes_party": 180320,
+      "tail_voters": 3570,
+      "tail_votes_party": 1375,
+      "tail_share_of_party": 0.7625332741792369,
+      "observed_share_pct": 49.64498002582464,
+      "honest_share_pct": 49.755456014058154
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.12955984447765134,
+      "mean_anom": [
+        86.20298452309838,
+        30.05943286913034
+      ],
+      "mean_main": [
+        73.74459917407331,
+        52.80625475001911
+      ],
+      "anom_cluster_voters": 61490,
+      "anom_cluster_votes_party": 15565,
+      "total_voters": 481572,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "42",
+    "n": 158,
+    "registered": 403457,
+    "ballots": 251981,
+    "turnout": 62.455478526831854,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5761181209405305,
+    "county_demeaned_r_rep": 0.6203115976903885,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.59186487418131,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 12.274018796424627,
+      "total_votes_party": 159148,
+      "tail_voters": 2844,
+      "tail_votes_party": 1786,
+      "tail_share_of_party": 1.1222258526654434,
+      "observed_share_pct": 63.15873022172307,
+      "honest_share_pct": 63.162838117180506
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6454668375445625,
+      "mean_anom": [
+        69.85601198845653,
+        61.08319438707628
+      ],
+      "mean_main": [
+        49.13439778038124,
+        69.14199782330549
+      ],
+      "anom_cluster_voters": 253111,
+      "anom_cluster_votes_party": 108111,
+      "total_voters": 403457,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "43",
+    "n": 208,
+    "registered": 406694,
+    "ballots": 226680,
+    "turnout": 55.73723733322842,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.3813487225820366,
+    "county_demeaned_r_rep": 0.08193976714218094,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 84.31561996779388,
+      "t_cut_source": "own_q995",
+      "mode": 57.75,
+      "sigma": 10.99131600957088,
+      "total_votes_party": 160045,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 70.60393506264337,
+      "honest_share_pct": 70.60393506264337
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4238684420221993,
+      "mean_anom": [
+        61.443473133427275,
+        61.734020023803666
+      ],
+      "mean_main": [
+        51.52114252450539,
+        78.16682019408728
+      ],
+      "anom_cluster_voters": 159213,
+      "anom_cluster_votes_party": 60074,
+      "total_voters": 406694,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "44",
+    "n": 167,
+    "registered": 425300,
+    "ballots": 254473,
+    "turnout": 59.83376440159887,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5216540304750628,
+    "county_demeaned_r_rep": 0.467040184153868,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.31658291457286,
+      "t_cut_source": "own_q995",
+      "mode": 53.25,
+      "sigma": 10.073024404637083,
+      "total_votes_party": 164742,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 64.73849877983126,
+      "honest_share_pct": 64.73849877983126
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.2989112516629735,
+      "mean_anom": [
+        72.68807332912574,
+        62.90246920175793
+      ],
+      "mean_main": [
+        54.34045409661432,
+        66.24503540532096
+      ],
+      "anom_cluster_voters": 123498,
+      "anom_cluster_votes_party": 56516,
+      "total_voters": 425300,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "45",
+    "n": 390,
+    "registered": 451473,
+    "ballots": 329193,
+    "turnout": 72.91532383996385,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5884069446291191,
+    "county_demeaned_r_rep": 0.5533139363606905,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 89.00709219858156,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 7.485393190893671,
+      "total_votes_party": 157586,
+      "tail_voters": 2308,
+      "tail_votes_party": 1058,
+      "tail_share_of_party": 0.6713794372596551,
+      "observed_share_pct": 47.87039821624396,
+      "honest_share_pct": 47.884730103859155
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.3461036461641783,
+      "mean_anom": [
+        81.02692932300587,
+        44.32564487943214
+      ],
+      "mean_main": [
+        68.5079511543985,
+        50.28702019015852
+      ],
+      "anom_cluster_voters": 160339,
+      "anom_cluster_votes_party": 57516,
+      "total_voters": 451473,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "46",
+    "n": 276,
+    "registered": 345499,
+    "ballots": 221235,
+    "turnout": 64.03347042972628,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5532097812878171,
+    "county_demeaned_r_rep": 0.523072175863316,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 81.91653786707883,
+      "t_cut_source": "own_q995",
+      "mode": 65.25,
+      "sigma": 7.009997431102068,
+      "total_votes_party": 133973,
+      "tail_voters": 1398,
+      "tail_votes_party": 677,
+      "tail_share_of_party": 0.5053256999544684,
+      "observed_share_pct": 60.55687391235564,
+      "honest_share_pct": 60.63401520217252
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.7727213267558977,
+      "mean_anom": [
+        66.37997295245302,
+        58.116174711046604
+      ],
+      "mean_main": [
+        55.88430112130562,
+        71.15268579891008
+      ],
+      "anom_cluster_voters": 271288,
+      "anom_cluster_votes_party": 104534,
+      "total_voters": 345499,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "47",
+    "n": 352,
+    "registered": 456393,
+    "ballots": 367830,
+    "turnout": 80.595013508095,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.45989010784880546,
+    "county_demeaned_r_rep": 0.5286051280844937,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.89590134203844,
+      "t_cut_source": "own_q995",
+      "mode": 84.75,
+      "sigma": 5.310502939429915,
+      "total_votes_party": 179899,
+      "tail_voters": 2098,
+      "tail_votes_party": 1505,
+      "tail_share_of_party": 0.8365805257394426,
+      "observed_share_pct": 48.90819128401707,
+      "honest_share_pct": 48.77724672711165
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5592489071084387,
+      "mean_anom": [
+        83.21054271410858,
+        43.00425182925922
+      ],
+      "mean_main": [
+        77.3605594276662,
+        56.923620345915666
+      ],
+      "anom_cluster_voters": 251899,
+      "anom_cluster_votes_party": 88769,
+      "total_voters": 456393,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "48",
+    "n": 429,
+    "registered": 488218,
+    "ballots": 377313,
+    "turnout": 77.28371342310197,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4102640160226852,
+    "county_demeaned_r_rep": 0.36062680286493976,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.26086956521739,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 6.109050205766024,
+      "total_votes_party": 213434,
+      "tail_voters": 1283,
+      "tail_votes_party": 759,
+      "tail_share_of_party": 0.35561344490568514,
+      "observed_share_pct": 56.56682913125177,
+      "honest_share_pct": 56.55798739462277
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5496822939373783,
+      "mean_anom": [
+        78.96433995801817,
+        60.71813379845279
+      ],
+      "mean_main": [
+        75.22708242174704,
+        50.836522555993824
+      ],
+      "anom_cluster_voters": 282449,
+      "anom_cluster_votes_party": 137312,
+      "total_voters": 488218,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "49",
+    "n": 390,
+    "registered": 482727,
+    "ballots": 392703,
+    "turnout": 81.3509499157909,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.2438338594992846,
+    "county_demeaned_r_rep": 0.2155185666758341,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.57733537519142,
+      "t_cut_source": "own_q995",
+      "mode": 85.75,
+      "sigma": 6.593590732761426,
+      "total_votes_party": 197250,
+      "tail_voters": 4759,
+      "tail_votes_party": 2626,
+      "tail_share_of_party": 1.3313054499366286,
+      "observed_share_pct": 50.22879886326308,
+      "honest_share_pct": 50.16806549398882
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.7016358722071013,
+      "mean_anom": [
+        84.6155312791968,
+        49.25303249551901
+      ],
+      "mean_main": [
+        73.82353972610832,
+        52.94357295663339
+      ],
+      "anom_cluster_voters": 362095,
+      "anom_cluster_votes_party": 151254,
+      "total_voters": 482727,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "5",
+    "n": 442,
+    "registered": 470452,
+    "ballots": 366514,
+    "turnout": 77.90677901252413,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4725627066643472,
+    "county_demeaned_r_rep": 0.3530545488527922,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.76193507320178,
+      "t_cut_source": "own_q995",
+      "mode": 82.75,
+      "sigma": 7.4606186696732095,
+      "total_votes_party": 214470,
+      "tail_voters": 943,
+      "tail_votes_party": 463,
+      "tail_share_of_party": 0.2158810089989276,
+      "observed_share_pct": 58.516182192221855,
+      "honest_share_pct": 58.54047503768078
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5979406272330928,
+      "mean_anom": [
+        82.3583760430052,
+        61.745465617887646
+      ],
+      "mean_main": [
+        71.31676487749421,
+        52.60184591495013
+      ],
+      "anom_cluster_voters": 292921,
+      "anom_cluster_votes_party": 149421,
+      "total_voters": 470452,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "50",
+    "n": 412,
+    "registered": 463952,
+    "ballots": 376574,
+    "turnout": 81.16658619857226,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.15966122343619366,
+    "county_demeaned_r_rep": -0.09577927318694665,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.07317073170732,
+      "t_cut_source": "own_q995",
+      "mode": 83.75,
+      "sigma": 5.82116367690863,
+      "total_votes_party": 229213,
+      "tail_voters": 2351,
+      "tail_votes_party": 1893,
+      "tail_share_of_party": 0.825869387861945,
+      "observed_share_pct": 60.86798345079586,
+      "honest_share_pct": 60.74452933144141
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6948313067219752,
+      "mean_anom": [
+        83.39928936321562,
+        62.21409207344049
+      ],
+      "mean_main": [
+        76.0217694361112,
+        57.26624232274427
+      ],
+      "anom_cluster_voters": 366135,
+      "anom_cluster_votes_party": 187691,
+      "total_voters": 463952,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "51",
+    "n": 356,
+    "registered": 445352,
+    "ballots": 342885,
+    "turnout": 76.99190752483429,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.2338058150990968,
+    "county_demeaned_r_rep": -0.15596121401525687,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.53601340033501,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 7.294185513779563,
+      "total_votes_party": 197603,
+      "tail_voters": 2206,
+      "tail_votes_party": 1566,
+      "tail_share_of_party": 0.7924980896039028,
+      "observed_share_pct": 57.629525934351165,
+      "honest_share_pct": 57.54302437191608
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.7315515663574691,
+      "mean_anom": [
+        80.32682392519868,
+        59.91518475477356
+      ],
+      "mean_main": [
+        68.14918803834419,
+        50.36717294103651
+      ],
+      "anom_cluster_voters": 331300,
+      "anom_cluster_votes_party": 159573,
+      "total_voters": 445352,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "52",
+    "n": 340,
+    "registered": 429529,
+    "ballots": 271977,
+    "turnout": 63.3198224101283,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.667087513715151,
+    "county_demeaned_r_rep": 0.5781525273231414,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 79.11585365853658,
+      "t_cut_source": "own_q995",
+      "mode": 61.75,
+      "sigma": 8.286388023403171,
+      "total_votes_party": 172208,
+      "tail_voters": 2273,
+      "tail_votes_party": 1253,
+      "tail_share_of_party": 0.7276084734739385,
+      "observed_share_pct": 63.31711872695118,
+      "honest_share_pct": 63.38615667546644
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5037188693838353,
+      "mean_anom": [
+        69.2085994168402,
+        58.49911326930209
+      ],
+      "mean_main": [
+        57.44080200928033,
+        69.4182122748622
+      ],
+      "anom_cluster_voters": 217217,
+      "anom_cluster_votes_party": 87570,
+      "total_voters": 429529,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "6",
+    "n": 289,
+    "registered": 410987,
+    "ballots": 306177,
+    "turnout": 74.49797682165129,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.22449012093576806,
+    "county_demeaned_r_rep": 0.281770509829522,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.33579033579034,
+      "t_cut_source": "own_q995",
+      "mode": 77.25,
+      "sigma": 7.800478479799411,
+      "total_votes_party": 165319,
+      "tail_voters": 1387,
+      "tail_votes_party": 904,
+      "tail_share_of_party": 0.5468215994531784,
+      "observed_share_pct": 53.99458483164967,
+      "honest_share_pct": 53.943698940253945
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5533172639944725,
+      "mean_anom": [
+        78.15653039294459,
+        49.328523431291885
+      ],
+      "mean_main": [
+        69.98005755996607,
+        60.383368578171016
+      ],
+      "anom_cluster_voters": 235031,
+      "anom_cluster_votes_party": 91319,
+      "total_voters": 410987,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "7",
+    "n": 305,
+    "registered": 424547,
+    "ballots": 313283,
+    "turnout": 73.7923009702106,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.07121127335426919,
+    "county_demeaned_r_rep": 0.006063471232068505,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.28169014084507,
+      "t_cut_source": "own_q995",
+      "mode": 79.25,
+      "sigma": 9.753169697298087,
+      "total_votes_party": 196254,
+      "tail_voters": 1519,
+      "tail_votes_party": 1139,
+      "tail_share_of_party": 0.5803703364007867,
+      "observed_share_pct": 62.64431839582741,
+      "honest_share_pct": 62.58419830384521
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.2956190700956321,
+      "mean_anom": [
+        83.42850856912469,
+        73.1433970550184
+      ],
+      "mean_main": [
+        69.66323327751476,
+        58.1714691638604
+      ],
+      "anom_cluster_voters": 121336,
+      "anom_cluster_votes_party": 75048,
+      "total_voters": 424547,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "8",
+    "n": 295,
+    "registered": 423294,
+    "ballots": 289001,
+    "turnout": 68.27429635194451,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.03349830359589508,
+    "county_demeaned_r_rep": 0.17437585075756423,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 86.97214734950585,
+      "t_cut_source": "own_q995",
+      "mode": 70.25,
+      "sigma": 9.093241072578257,
+      "total_votes_party": 201817,
+      "tail_voters": 1586,
+      "tail_votes_party": 975,
+      "tail_share_of_party": 0.48311093713611836,
+      "observed_share_pct": 69.83263033691925,
+      "honest_share_pct": 69.87874675991162
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.1592238480787626,
+      "mean_anom": [
+        81.42723306099471,
+        74.70029116745744
+      ],
+      "mean_main": [
+        65.97132531479265,
+        68.749566526572
+      ],
+      "anom_cluster_voters": 66509,
+      "anom_cluster_votes_party": 41015,
+      "total_voters": 423294,
+      "separated": true
+    }
+  },
+  {
+    "sample": "CA2024 HOUSE",
+    "district": "9",
+    "n": 236,
+    "registered": 370385,
+    "ballots": 262001,
+    "turnout": 70.73747586970315,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.702553511705113,
+    "county_demeaned_r_rep": 0.6268462817910283,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 85.90361445783132,
+      "t_cut_source": "own_q995",
+      "mode": 74.25,
+      "sigma": 8.394062810074132,
+      "total_votes_party": 130139,
+      "tail_voters": 1579,
+      "tail_votes_party": 373,
+      "tail_share_of_party": 0.28661661761654844,
+      "observed_share_pct": 49.671184461128014,
+      "honest_share_pct": 49.82912349955073
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.37088003946640496,
+      "mean_anom": [
+        77.5527740411088,
+        40.0773419951024
+      ],
+      "mean_main": [
+        66.66687945383777,
+        56.772242386992446
+      ],
+      "anom_cluster_voters": 120428,
+      "anom_cluster_votes_party": 35693,
+      "total_voters": 370385,
+      "separated": false
+    }
+  },
+  {
+    "sample": "CA2024 SENATE",
+    "district": "STATEWIDE",
+    "n": 17867,
+    "registered": 22453086,
+    "ballots": 16029290,
+    "turnout": 71.39014209449873,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.11764611245935315,
+    "county_demeaned_r_rep": 0.30293172466580154,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.1663807890223,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 10.76079680605948,
+      "total_votes_party": 8984286,
+      "tail_voters": 116859,
+      "tail_votes_party": 75391,
+      "tail_share_of_party": 0.8391429213183997,
+      "observed_share_pct": 56.04918246534937,
+      "honest_share_pct": 55.987014177783394
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.42252632349665503,
+      "mean_anom": [
+        76.613489951608,
+        45.14000894823564
+      ],
+      "mean_main": [
+        67.6519311607832,
+        64.45036944634523
+      ],
+      "anom_cluster_voters": 9213377,
+      "anom_cluster_votes_party": 3124371,
+      "total_voters": 22453086,
+      "separated": false
+    }
+  },
+  {
+    "sample": "IA2024 HOUSE",
+    "district": "001",
+    "n": 302,
+    "registered": 409691,
+    "ballots": 299468,
+    "turnout": 73.09606508319685,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6419397867443436,
+    "county_demeaned_r_rep": 0.6846671340342005,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.75510204081633,
+      "t_cut_source": "own_q995",
+      "mode": 79.75,
+      "sigma": 8.049219417158962,
+      "total_votes_party": 159510,
+      "tail_voters": 1708,
+      "tail_votes_party": 984,
+      "tail_share_of_party": 0.6168892232461914,
+      "observed_share_pct": 53.264455634658795,
+      "honest_share_pct": 53.23952176249328
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5207200353684707,
+      "mean_anom": [
+        78.12013875702095,
+        59.627553048583856
+      ],
+      "mean_main": [
+        67.81776800444531,
+        44.76173357094542
+      ],
+      "anom_cluster_voters": 219554,
+      "anom_cluster_votes_party": 103391,
+      "total_voters": 409691,
+      "separated": true
+    }
+  },
+  {
+    "sample": "IA2024 HOUSE",
+    "district": "002",
+    "n": 357,
+    "registered": 507551,
+    "ballots": 382432,
+    "turnout": 75.34848714710444,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5767534137677361,
+    "county_demeaned_r_rep": 0.6877120658762108,
+    "tail": {
+      "party": "REP",
+      "t_cut": 86.35588402501422,
+      "t_cut_source": "own_q995",
+      "mode": 81.75,
+      "sigma": 7.561946284888917,
+      "total_votes_party": 205102,
+      "tail_voters": 1482,
+      "tail_votes_party": 1060,
+      "tail_share_of_party": 0.5168160232469698,
+      "observed_share_pct": 53.630972303572925,
+      "honest_share_pct": 53.56135975849849
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.47920533174121455,
+      "mean_anom": [
+        80.07749169507024,
+        62.06250748889146
+      ],
+      "mean_main": [
+        70.86605487675716,
+        44.06072141308554
+      ],
+      "anom_cluster_voters": 241624,
+      "anom_cluster_votes_party": 122795,
+      "total_voters": 507551,
+      "separated": true
+    }
+  },
+  {
+    "sample": "IA2024 HOUSE",
+    "district": "003",
+    "n": 362,
+    "registered": 557126,
+    "ballots": 418116,
+    "turnout": 75.04873224369352,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.17466612872807205,
+    "county_demeaned_r_rep": 0.6397160383587444,
+    "tail": {
+      "party": "REP",
+      "t_cut": 90.55118110236221,
+      "t_cut_source": "own_q995",
+      "mode": 79.75,
+      "sigma": 9.378846804589282,
+      "total_votes_party": 207998,
+      "tail_voters": 5053,
+      "tail_votes_party": 2601,
+      "tail_share_of_party": 1.2504927931999346,
+      "observed_share_pct": 49.74648183757618,
+      "honest_share_pct": 49.72534456003079
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.9257269685636369,
+      "mean_anom": [
+        76.57942339653943,
+        48.13764790398736
+      ],
+      "mean_main": [
+        55.17078550882927,
+        67.21330624459122
+      ],
+      "anom_cluster_voters": 530889,
+      "anom_cluster_votes_party": 200442,
+      "total_voters": 557126,
+      "separated": false
+    }
+  },
+  {
+    "sample": "IA2024 HOUSE",
+    "district": "004",
+    "n": 357,
+    "registered": 417541,
+    "ballots": 305652,
+    "turnout": 73.20287109529363,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.47820347867664,
+    "county_demeaned_r_rep": 0.6405088698126074,
+    "tail": {
+      "party": "REP",
+      "t_cut": 97.61194029850746,
+      "t_cut_source": "own_q995",
+      "mode": 77.75,
+      "sigma": 8.929214946305668,
+      "total_votes_party": 194286,
+      "tail_voters": 2179,
+      "tail_votes_party": 1443,
+      "tail_share_of_party": 0.7427194960007412,
+      "observed_share_pct": 63.564445840367476,
+      "honest_share_pct": 63.54535658855977
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6088429411200267,
+      "mean_anom": [
+        77.14108179661494,
+        70.15824390177038
+      ],
+      "mean_main": [
+        67.11874097421124,
+        51.14391357870412
+      ],
+      "anom_cluster_voters": 263774,
+      "anom_cluster_votes_party": 143293,
+      "total_voters": 417541,
+      "separated": true
+    }
+  },
+  {
+    "sample": "ID2024 HOUSE",
+    "district": "1",
+    "n": 456,
+    "registered": 622807,
+    "ballots": 468702,
+    "turnout": 75.25637958468675,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.10947013437303987,
+    "county_demeaned_r_rep": 0.37441505957907006,
+    "tail": {
+      "party": "REP",
+      "t_cut": 91.24143183549124,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 9.054384853028427,
+      "total_votes_party": 315272,
+      "tail_voters": 4188,
+      "tail_votes_party": 2998,
+      "tail_share_of_party": 0.9509249156284098,
+      "observed_share_pct": 67.26491459392109,
+      "honest_share_pct": 67.22596089676522
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7922397331644091,
+      "mean_anom": [
+        79.07196154307634,
+        68.39316900632295
+      ],
+      "mean_main": [
+        60.92944641910491,
+        63.25935882375634
+      ],
+      "anom_cluster_voters": 508894,
+      "anom_cluster_votes_party": 274645,
+      "total_voters": 622807,
+      "separated": true
+    }
+  },
+  {
+    "sample": "ID2024 HOUSE",
+    "district": "2",
+    "n": 518,
+    "registered": 555575,
+    "ballots": 407705,
+    "turnout": 73.3843315483958,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.06612739393139669,
+    "county_demeaned_r_rep": 0.3782365463437653,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.02308802308802,
+      "t_cut_source": "own_q995",
+      "mode": 80.25,
+      "sigma": 10.302794575129427,
+      "total_votes_party": 237312,
+      "tail_voters": 2724,
+      "tail_votes_party": 2025,
+      "tail_share_of_party": 0.8533070388349514,
+      "observed_share_pct": 58.2067916753535,
+      "honest_share_pct": 58.09828115393068
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.8715014155437671,
+      "mean_anom": [
+        77.57225986091863,
+        57.03216621073327
+      ],
+      "mean_main": [
+        44.344929631049546,
+        67.23905497516664
+      ],
+      "anom_cluster_voters": 485397,
+      "anom_cluster_votes_party": 216199,
+      "total_voters": 555575,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "001",
+    "n": 691,
+    "registered": 424569,
+    "ballots": 346854,
+    "turnout": 81.69555478614784,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5247338296858692,
+    "county_demeaned_r_rep": 0.2671478263233462,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.45283018867924,
+      "t_cut_source": "own_q995",
+      "mode": 84.75,
+      "sigma": 4.560531098435135,
+      "total_votes_party": 169074,
+      "tail_voters": 1968,
+      "tail_votes_party": 810,
+      "tail_share_of_party": 0.47908016608112425,
+      "observed_share_pct": 48.74500510301164,
+      "honest_share_pct": 48.78829526278248
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5236554344447784,
+      "mean_anom": [
+        83.237209856131,
+        43.68195738912444
+      ],
+      "mean_main": [
+        80.01807217078726,
+        54.68736252517668
+      ],
+      "anom_cluster_voters": 219326,
+      "anom_cluster_votes_party": 77268,
+      "total_voters": 424569,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "002",
+    "n": 292,
+    "registered": 466736,
+    "ballots": 384539,
+    "turnout": 82.38897363820233,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.49025457402254824,
+    "county_demeaned_r_rep": 0.49229431137754487,
+    "tail": {
+      "party": "REP",
+      "t_cut": 91.08910891089108,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 3.8331375169655066,
+      "total_votes_party": 173970,
+      "tail_voters": 2211,
+      "tail_votes_party": 871,
+      "tail_share_of_party": 0.500661033511525,
+      "observed_share_pct": 45.241184899321006,
+      "honest_share_pct": 45.27499947688895
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6435000186197954,
+      "mean_anom": [
+        83.52631042323155,
+        47.84569334364748
+      ],
+      "mean_main": [
+        80.22247114272652,
+        39.79222070040578
+      ],
+      "anom_cluster_voters": 363659,
+      "anom_cluster_votes_party": 145009,
+      "total_voters": 466736,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "003",
+    "n": 245,
+    "registered": 483430,
+    "ballots": 405198,
+    "turnout": 83.81730550441635,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.47850106915787993,
+    "county_demeaned_r_rep": 0.5512137651961075,
+    "tail": {
+      "party": "REP",
+      "t_cut": 90.03436426116839,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 3.9817892311224745,
+      "total_votes_party": 223077,
+      "tail_voters": 3266,
+      "tail_votes_party": 1683,
+      "tail_share_of_party": 0.7544480157075808,
+      "observed_share_pct": 55.0538255371448,
+      "honest_share_pct": 55.082451758008816
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7828517273431347,
+      "mean_anom": [
+        84.95704061611126,
+        57.71464430664895
+      ],
+      "mean_main": [
+        79.90670122843555,
+        44.88100743535462
+      ],
+      "anom_cluster_voters": 399055,
+      "anom_cluster_votes_party": 195185,
+      "total_voters": 483430,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "004",
+    "n": 228,
+    "registered": 453269,
+    "ballots": 370000,
+    "turnout": 81.6292312070757,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5420957103930781,
+    "county_demeaned_r_rep": 0.45772813202898033,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 89.18507235338919,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 5.853298318795468,
+      "total_votes_party": 203299,
+      "tail_voters": 5535,
+      "tail_votes_party": 3944,
+      "tail_share_of_party": 1.939999704868199,
+      "observed_share_pct": 54.94567567567567,
+      "honest_share_pct": 54.69798197357771
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5847778354015332,
+      "mean_anom": [
+        83.9270996160005,
+        47.731884222715614
+      ],
+      "mean_main": [
+        78.32704441873538,
+        65.3556610290431
+      ],
+      "anom_cluster_voters": 264366,
+      "anom_cluster_votes_party": 105758,
+      "total_voters": 453269,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "005",
+    "n": 234,
+    "registered": 472409,
+    "ballots": 376895,
+    "turnout": 79.7815028926206,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.2730264476419408,
+    "county_demeaned_r_rep": 0.36227070455477767,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.3225806451613,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 6.849928346972244,
+      "total_votes_party": 249964,
+      "tail_voters": 1513,
+      "tail_votes_party": 1005,
+      "tail_share_of_party": 0.40205789633707256,
+      "observed_share_pct": 66.32191989811486,
+      "honest_share_pct": 66.32150715804167
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5306047675550756,
+      "mean_anom": [
+        80.42198607994759,
+        58.76775456704843
+      ],
+      "mean_main": [
+        79.16575496701546,
+        74.97844306865412
+      ],
+      "anom_cluster_voters": 247431,
+      "anom_cluster_votes_party": 116261,
+      "total_voters": 472409,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "006",
+    "n": 277,
+    "registered": 458455,
+    "ballots": 376475,
+    "turnout": 82.11820135018704,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5640028535221532,
+    "county_demeaned_r_rep": 0.4123501876971968,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.88086642599278,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 3.8570497523011147,
+      "total_votes_party": 235378,
+      "tail_voters": 1230,
+      "tail_votes_party": 760,
+      "tail_share_of_party": 0.32288489153616734,
+      "observed_share_pct": 62.52154857560263,
+      "honest_share_pct": 62.5239510186678
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7088215663303904,
+      "mean_anom": [
+        83.3355860755709,
+        65.8983287505681
+      ],
+      "mean_main": [
+        79.35662794750108,
+        53.713950359324585
+      ],
+      "anom_cluster_voters": 350366,
+      "anom_cluster_votes_party": 192140,
+      "total_voters": 458455,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "007",
+    "n": 1316,
+    "registered": 419996,
+    "ballots": 342560,
+    "turnout": 81.56268154934808,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.36316221559723044,
+    "county_demeaned_r_rep": 0.11519976237059242,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.91525423728814,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 5.493788768620712,
+      "total_votes_party": 173579,
+      "tail_voters": 1996,
+      "tail_votes_party": 1080,
+      "tail_share_of_party": 0.6221950812022191,
+      "observed_share_pct": 50.67112330686595,
+      "honest_share_pct": 50.65097896430627
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.755155126345769,
+      "mean_anom": [
+        82.10492128167672,
+        49.44892404349049
+      ],
+      "mean_main": [
+        79.83124981593178,
+        55.49250842844997
+      ],
+      "anom_cluster_voters": 375659,
+      "anom_cluster_votes_party": 152607,
+      "total_voters": 419996,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2016 HOUSE",
+    "district": "008",
+    "n": 800,
+    "registered": 444652,
+    "ballots": 365325,
+    "turnout": 82.15975639376411,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.34153653845804816,
+    "county_demeaned_r_rep": 0.3906287144732287,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.95694956949569,
+      "t_cut_source": "own_q995",
+      "mode": 83.75,
+      "sigma": 4.882599948216237,
+      "total_votes_party": 178936,
+      "tail_voters": 1834,
+      "tail_votes_party": 747,
+      "tail_share_of_party": 0.41746769794786964,
+      "observed_share_pct": 48.97994936015876,
+      "honest_share_pct": 49.02157137315642
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.567257277716608,
+      "mean_anom": [
+        83.00201453450458,
+        41.21867850852861
+      ],
+      "mean_main": [
+        81.0364522741658,
+        59.49262641638166
+      ],
+      "anom_cluster_voters": 255995,
+      "anom_cluster_votes_party": 86824,
+      "total_voters": 444652,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "1.0",
+    "n": 691,
+    "registered": 441375,
+    "ballots": 377119,
+    "turnout": 85.44185783064287,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5447536997233985,
+    "county_demeaned_r_rep": 0.5497213336248867,
+    "tail": {
+      "party": "REP",
+      "t_cut": 96.03174603174604,
+      "t_cut_source": "own_q995",
+      "mode": 88.25,
+      "sigma": 5.206753697878584,
+      "total_votes_party": 179234,
+      "tail_voters": 2362,
+      "tail_votes_party": 1588,
+      "tail_share_of_party": 0.8859926130086926,
+      "observed_share_pct": 47.527173120420876,
+      "honest_share_pct": 47.402983800169174
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7107445345253043,
+      "mean_anom": [
+        86.7220236275047,
+        52.55117687372249
+      ],
+      "mean_main": [
+        82.50429251233092,
+        34.12625662305714
+      ],
+      "anom_cluster_voters": 307524,
+      "anom_cluster_votes_party": 142522,
+      "total_voters": 441375,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "2.0",
+    "n": 289,
+    "registered": 503330,
+    "ballots": 436078,
+    "turnout": 86.63858701051001,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.4674347722645609,
+    "county_demeaned_r_rep": 0.49466414224384575,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.85714285714286,
+      "t_cut_source": "own_q995",
+      "mode": 88.75,
+      "sigma": 4.027062491649353,
+      "total_votes_party": 204534,
+      "tail_voters": 1841,
+      "tail_votes_party": 603,
+      "tail_share_of_party": 0.2948165097245446,
+      "observed_share_pct": 46.90307697246823,
+      "honest_share_pct": 46.96306394894954
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.9931,
+      "mean_anom": [
+        86.83713024397657,
+        46.70362176812128
+      ],
+      "mean_main": [
+        56.27780179598174,
+        85.87345398165827
+      ],
+      "anom_cluster_voters": 499890,
+      "anom_cluster_votes_party": 202869,
+      "total_voters": 503330,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "3.0",
+    "n": 246,
+    "registered": 521757,
+    "ballots": 456734,
+    "turnout": 87.53768516761635,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5131676294411351,
+    "county_demeaned_r_rep": 0.5494250292508893,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.97026951931092,
+      "t_cut_source": "own_q995",
+      "mode": 90.25,
+      "sigma": 4.077240455563078,
+      "total_votes_party": 246666,
+      "tail_voters": 2240,
+      "tail_votes_party": 1373,
+      "tail_share_of_party": 0.5566231260084487,
+      "observed_share_pct": 54.00648955409494,
+      "honest_share_pct": 53.97056946846383
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.7124530499220576,
+      "mean_anom": [
+        89.22812272358993,
+        51.87220237153045
+      ],
+      "mean_main": [
+        83.3750566121028,
+        59.71410856984491
+      ],
+      "anom_cluster_voters": 402209,
+      "anom_cluster_votes_party": 187120,
+      "total_voters": 521757,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "4.0",
+    "n": 224,
+    "registered": 479269,
+    "ballots": 407934,
+    "turnout": 85.11587438369683,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5136754060255956,
+    "county_demeaned_r_rep": 0.3684294963737669,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.46011131725417,
+      "t_cut_source": "own_q995",
+      "mode": 90.25,
+      "sigma": 6.5976111836985245,
+      "total_votes_party": 245813,
+      "tail_voters": 1823,
+      "tail_votes_party": 797,
+      "tail_share_of_party": 0.32423020751546905,
+      "observed_share_pct": 60.25803193653876,
+      "honest_share_pct": 60.33227368872057
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5762460338798302,
+      "mean_anom": [
+        88.01613596778678,
+        53.55557221290202
+      ],
+      "mean_main": [
+        81.14077136220111,
+        69.40089710167506
+      ],
+      "anom_cluster_voters": 273587,
+      "anom_cluster_votes_party": 128729,
+      "total_voters": 479269,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "5.0",
+    "n": 236,
+    "registered": 498987,
+    "ballots": 412961,
+    "turnout": 82.7598714996583,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.35076430618513277,
+    "county_demeaned_r_rep": 0.38267348812455154,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.44919786096257,
+      "t_cut_source": "own_q995",
+      "mode": 83.75,
+      "sigma": 7.681825221298859,
+      "total_votes_party": 255924,
+      "tail_voters": 1779,
+      "tail_votes_party": 1185,
+      "tail_share_of_party": 0.46302808646316873,
+      "observed_share_pct": 61.97292238250101,
+      "honest_share_pct": 61.952857858563846
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4633662073972172,
+      "mean_anom": [
+        85.14518681201596,
+        52.2201564867304
+      ],
+      "mean_main": [
+        80.7029981143518,
+        70.69204357237273
+      ],
+      "anom_cluster_voters": 237884,
+      "anom_cluster_votes_party": 105267,
+      "total_voters": 498987,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "6.0",
+    "n": 278,
+    "registered": 496515,
+    "ballots": 428565,
+    "turnout": 86.31461285157548,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.509491712659341,
+    "county_demeaned_r_rep": 0.6183359921654537,
+    "tail": {
+      "party": "REP",
+      "t_cut": 92.7927927927928,
+      "t_cut_source": "own_q995",
+      "mode": 88.75,
+      "sigma": 4.407392595756201,
+      "total_votes_party": 270901,
+      "tail_voters": 1812,
+      "tail_votes_party": 1253,
+      "tail_share_of_party": 0.46253059235661736,
+      "observed_share_pct": 63.21118150105585,
+      "honest_share_pct": 63.185964714952206
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7533151689621835,
+      "mean_anom": [
+        87.89796723763172,
+        65.61220281737128
+      ],
+      "mean_main": [
+        81.64057810322302,
+        54.764663331497
+      ],
+      "anom_cluster_voters": 408184,
+      "anom_cluster_votes_party": 234406,
+      "total_voters": 496515,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "7.0",
+    "n": 1316,
+    "registered": 436546,
+    "ballots": 370960,
+    "turnout": 84.97615371575962,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5544636043908107,
+    "county_demeaned_r_rep": 0.29913789923115586,
+    "tail": {
+      "party": "REP",
+      "t_cut": 96.66666666666667,
+      "t_cut_source": "own_q995",
+      "mode": 89.75,
+      "sigma": 5.838923820472312,
+      "total_votes_party": 194057,
+      "tail_voters": 2396,
+      "tail_votes_party": 1229,
+      "tail_share_of_party": 0.6333190763538548,
+      "observed_share_pct": 52.312109122277334,
+      "honest_share_pct": 52.31872890461358
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.8785555129733358,
+      "mean_anom": [
+        85.71595864724763,
+        54.00981986349411
+      ],
+      "mean_main": [
+        79.64809969675767,
+        36.196423286298156
+      ],
+      "anom_cluster_voters": 410298,
+      "anom_cluster_votes_party": 188541,
+      "total_voters": 436546,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2020 HOUSE",
+    "district": "8.0",
+    "n": 795,
+    "registered": 470214,
+    "ballots": 402596,
+    "turnout": 85.6197390975173,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4900751997227726,
+    "county_demeaned_r_rep": 0.43849292604858714,
+    "tail": {
+      "party": "REP",
+      "t_cut": 94.83870967741936,
+      "t_cut_source": "own_q995",
+      "mode": 88.75,
+      "sigma": 5.210215134262665,
+      "total_votes_party": 223408,
+      "tail_voters": 2231,
+      "tail_votes_party": 1344,
+      "tail_share_of_party": 0.6015899162071188,
+      "observed_share_pct": 55.49185784260152,
+      "honest_share_pct": 55.46538783360184
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7883674317839372,
+      "mean_anom": [
+        86.80473056745878,
+        60.00335739806514
+      ],
+      "mean_main": [
+        81.46862135857641,
+        37.601812693300204
+      ],
+      "anom_cluster_voters": 379846,
+      "anom_cluster_votes_party": 197588,
+      "total_voters": 470214,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2020 SENATE",
+    "district": "STATEWIDE",
+    "n": 4075,
+    "registered": 3847993,
+    "ballots": 3292947,
+    "turnout": 85.57570141109925,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.38078100662140246,
+    "county_demeaned_r_rep": 0.4846663380820325,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.44444444444444,
+      "t_cut_source": "own_q995",
+      "mode": 89.25,
+      "sigma": 5.602765957955492,
+      "total_votes_party": 1566510,
+      "tail_voters": 18037,
+      "tail_votes_party": 5722,
+      "tail_share_of_party": 0.36527056961015253,
+      "observed_share_pct": 47.57167364066291,
+      "honest_share_pct": 47.65895856680031
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6981222939628654,
+      "mean_anom": [
+        87.37998055672378,
+        41.658129883951496
+      ],
+      "mean_main": [
+        81.37371100531341,
+        62.30477468078933
+      ],
+      "anom_cluster_voters": 2880245,
+      "anom_cluster_votes_party": 1053822,
+      "total_voters": 3847993,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "1",
+    "n": 745,
+    "registered": 478617,
+    "ballots": 391830,
+    "turnout": 81.86712966735406,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.514949911842532,
+    "county_demeaned_r_rep": 0.5159034532164135,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.11740890688259,
+      "t_cut_source": "own_q995",
+      "mode": 82.75,
+      "sigma": 5.842149829558806,
+      "total_votes_party": 220929,
+      "tail_voters": 2704,
+      "tail_votes_party": 1942,
+      "tail_share_of_party": 0.8790154302966111,
+      "observed_share_pct": 56.3838909731261,
+      "honest_share_pct": 56.27663019176308
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5783023139245607,
+      "mean_anom": [
+        84.04762000684057,
+        64.66179710666034
+      ],
+      "mean_main": [
+        78.72244757129687,
+        43.71678335339441
+      ],
+      "anom_cluster_voters": 288648,
+      "anom_cluster_votes_party": 157371,
+      "total_voters": 478617,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "2",
+    "n": 256,
+    "registered": 515738,
+    "ballots": 428892,
+    "turnout": 83.16082972361936,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.4745638943641473,
+    "county_demeaned_r_rep": 0.4775832236023564,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.3976721629486,
+      "t_cut_source": "own_q995",
+      "mode": 85.25,
+      "sigma": 4.431633503556619,
+      "total_votes_party": 231751,
+      "tail_voters": 1674,
+      "tail_votes_party": 873,
+      "tail_share_of_party": 0.37669740367894855,
+      "observed_share_pct": 54.03481529149529,
+      "honest_share_pct": 54.04219859650108
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4292272199364738,
+      "mean_anom": [
+        85.1342086184081,
+        47.92226274845157
+      ],
+      "mean_main": [
+        81.74567174082524,
+        58.92747729413613
+      ],
+      "anom_cluster_voters": 221481,
+      "anom_cluster_votes_party": 86931,
+      "total_voters": 515738,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "3",
+    "n": 229,
+    "registered": 512314,
+    "ballots": 427638,
+    "turnout": 83.47185515133297,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.44079822059479623,
+    "county_demeaned_r_rep": 0.5452705157370452,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.40697674418605,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 4.764367180903489,
+      "total_votes_party": 240209,
+      "tail_voters": 2087,
+      "tail_votes_party": 1282,
+      "tail_share_of_party": 0.5337019012609853,
+      "observed_share_pct": 56.17110733844981,
+      "honest_share_pct": 56.145326882089336
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6018290967474899,
+      "mean_anom": [
+        86.10697659454604,
+        53.86511583396568
+      ],
+      "mean_main": [
+        79.4311723730389,
+        60.13182873448252
+      ],
+      "anom_cluster_voters": 348285,
+      "anom_cluster_votes_party": 162168,
+      "total_voters": 512314,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "4",
+    "n": 211,
+    "registered": 472272,
+    "ballots": 380530,
+    "turnout": 80.57433004709151,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.19212396486193664,
+    "county_demeaned_r_rep": 0.11810519164341261,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.92755585646582,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 6.967080498952952,
+      "total_votes_party": 242802,
+      "tail_voters": 1429,
+      "tail_votes_party": 1221,
+      "tail_share_of_party": 0.5028788889712605,
+      "observed_share_pct": 63.806270202086566,
+      "honest_share_pct": 63.724706608529125
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.23779591940097303,
+      "mean_anom": [
+        82.47507226895921,
+        79.38348147531624
+      ],
+      "mean_main": [
+        79.90419307138603,
+        58.83485543469934
+      ],
+      "anom_cluster_voters": 116974,
+      "anom_cluster_votes_party": 76668,
+      "total_voters": 472272,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "5",
+    "n": 217,
+    "registered": 468471,
+    "ballots": 371457,
+    "turnout": 79.29135421402819,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.1451104828656669,
+    "county_demeaned_r_rep": 0.24798581012795895,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.61505529789511,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 8.931995622180402,
+      "total_votes_party": 261066,
+      "tail_voters": 4354,
+      "tail_votes_party": 3458,
+      "tail_share_of_party": 1.3245692660093615,
+      "observed_share_pct": 70.28162075287315,
+      "honest_share_pct": 70.17322113957118
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6307327343042425,
+      "mean_anom": [
+        83.12606653818702,
+        65.95942884937213
+      ],
+      "mean_main": [
+        72.85707622041963,
+        78.15621229161475
+      ],
+      "anom_cluster_voters": 304109,
+      "anom_cluster_votes_party": 167594,
+      "total_voters": 468471,
+      "separated": false
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "6",
+    "n": 270,
+    "registered": 521549,
+    "ballots": 434557,
+    "turnout": 83.32045502915354,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5356112238622041,
+    "county_demeaned_r_rep": 0.6724612939236483,
+    "tail": {
+      "party": "REP",
+      "t_cut": 90.33915724563207,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 4.873661117996174,
+      "total_votes_party": 260095,
+      "tail_voters": 1013,
+      "tail_votes_party": 796,
+      "tail_share_of_party": 0.3060420231069417,
+      "observed_share_pct": 59.85290767379193,
+      "honest_share_pct": 59.80915431882347
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7113755198904346,
+      "mean_anom": [
+        85.42454836923294,
+        61.74184366715342
+      ],
+      "mean_main": [
+        78.24171360747893,
+        54.17075916219047
+      ],
+      "anom_cluster_voters": 400498,
+      "anom_cluster_votes_party": 211648,
+      "total_voters": 521549,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "7",
+    "n": 1319,
+    "registered": 487225,
+    "ballots": 403471,
+    "turnout": 82.80999538201037,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5976365375286083,
+    "county_demeaned_r_rep": 0.33694923354121,
+    "tail": {
+      "party": "REP",
+      "t_cut": 94.83204134366925,
+      "t_cut_source": "own_q995",
+      "mode": 87.25,
+      "sigma": 5.385671671777782,
+      "total_votes_party": 275098,
+      "tail_voters": 1821,
+      "tail_votes_party": 1373,
+      "tail_share_of_party": 0.49909486801067254,
+      "observed_share_pct": 68.18284337659956,
+      "honest_share_pct": 68.15013071081788
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6208120026675381,
+      "mean_anom": [
+        85.1493209262664,
+        71.8834034700667
+      ],
+      "mean_main": [
+        78.94761659151597,
+        61.015794540260885
+      ],
+      "anom_cluster_voters": 331125,
+      "anom_cluster_votes_party": 205248,
+      "total_voters": 487225,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2024 HOUSE",
+    "district": "8",
+    "n": 828,
+    "registered": 526694,
+    "ballots": 434039,
+    "turnout": 82.40819147360706,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4377239846402106,
+    "county_demeaned_r_rep": 0.4513860770577498,
+    "tail": {
+      "party": "REP",
+      "t_cut": 93.5244161358811,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 5.776519874221898,
+      "total_votes_party": 244498,
+      "tail_voters": 2848,
+      "tail_votes_party": 1675,
+      "tail_share_of_party": 0.6850771785454278,
+      "observed_share_pct": 56.330882708696684,
+      "honest_share_pct": 56.31448708345026
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7771494475763447,
+      "mean_anom": [
+        83.81861982529925,
+        61.4103643309943
+      ],
+      "mean_main": [
+        77.81917888191418,
+        36.852233796421984
+      ],
+      "anom_cluster_voters": 423551,
+      "anom_cluster_votes_party": 217591,
+      "total_voters": 526694,
+      "separated": true
+    }
+  },
+  {
+    "sample": "MN2024 SENATE",
+    "district": "STATEWIDE",
+    "n": 4075,
+    "registered": 3982880,
+    "ballots": 3272414,
+    "turnout": 82.16200337444262,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.315413889001764,
+    "county_demeaned_r_rep": 0.4005848006338847,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.56198347107438,
+      "t_cut_source": "own_q995",
+      "mode": 86.25,
+      "sigma": 6.0554587183732265,
+      "total_votes_party": 1792441,
+      "tail_voters": 19512,
+      "tail_votes_party": 9289,
+      "tail_share_of_party": 0.5182318413827847,
+      "observed_share_pct": 54.77427367075193,
+      "honest_share_pct": 54.81726778119968
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6240711299201158,
+      "mean_anom": [
+        84.29812073147528,
+        47.654852835717456
+      ],
+      "mean_main": [
+        78.55714181259798,
+        67.4889268215315
+      ],
+      "anom_cluster_voters": 2669634,
+      "anom_cluster_votes_party": 1070635,
+      "total_voters": 3982880,
+      "separated": false
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "001",
+    "n": 547,
+    "registered": 576566,
+    "ballots": 407154,
+    "turnout": 70.6170672568275,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6720905974431258,
+    "county_demeaned_r_rep": 0.5958130972924048,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 88.43115124153499,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 11.82388734570316,
+      "total_votes_party": 213821,
+      "tail_voters": 1038,
+      "tail_votes_party": 201,
+      "tail_share_of_party": 0.09400386304432212,
+      "observed_share_pct": 52.516001316455196,
+      "honest_share_pct": 52.60073476543648
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6269990645548131,
+      "mean_anom": [
+        78.66282580776048,
+        42.80819779946535
+      ],
+      "mean_main": [
+        57.14893657466639,
+        76.08110991986337
+      ],
+      "anom_cluster_voters": 369315,
+      "anom_cluster_votes_party": 123965,
+      "total_voters": 576566,
+      "separated": false
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "002",
+    "n": 705,
+    "registered": 527325,
+    "ballots": 382711,
+    "turnout": 72.57592566254208,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.16596981889035783,
+    "county_demeaned_r_rep": 0.41014649903686806,
+    "tail": {
+      "party": "REP",
+      "t_cut": 86.84931506849315,
+      "t_cut_source": "own_q995",
+      "mode": 75.75,
+      "sigma": 7.817407012922774,
+      "total_votes_party": 268033,
+      "tail_voters": 2257,
+      "tail_votes_party": 1341,
+      "tail_share_of_party": 0.500311528804289,
+      "observed_share_pct": 70.0353530470773,
+      "honest_share_pct": 70.09835617446524
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6837005953113248,
+      "mean_anom": [
+        75.80553184216853,
+        71.89083673451752
+      ],
+      "mean_main": [
+        65.68439055873472,
+        65.39106874694087
+      ],
+      "anom_cluster_voters": 403584,
+      "anom_cluster_votes_party": 219796,
+      "total_voters": 527325,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "003",
+    "n": 538,
+    "registered": 543215,
+    "ballots": 363062,
+    "turnout": 66.83578325340795,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6032772289618541,
+    "county_demeaned_r_rep": 0.6387587342171434,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 89.25438596491227,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 13.836598659333717,
+      "total_votes_party": 241552,
+      "tail_voters": 1924,
+      "tail_votes_party": 1314,
+      "tail_share_of_party": 0.5439822481287673,
+      "observed_share_pct": 66.53188711569925,
+      "honest_share_pct": 66.52249278669096
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5863851911144875,
+      "mean_anom": [
+        76.84517774316632,
+        61.66411983991919
+      ],
+      "mean_main": [
+        52.37206691396598,
+        76.5436911562354
+      ],
+      "anom_cluster_voters": 322795,
+      "anom_cluster_votes_party": 153058,
+      "total_voters": 543215,
+      "separated": false
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "004",
+    "n": 603,
+    "registered": 536488,
+    "ballots": 408965,
+    "turnout": 76.2300368321379,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.22766283010458735,
+    "county_demeaned_r_rep": 0.6461660295878504,
+    "tail": {
+      "party": "REP",
+      "t_cut": 89.20547945205479,
+      "t_cut_source": "own_q995",
+      "mode": 83.25,
+      "sigma": 8.934446237161689,
+      "total_votes_party": 271478,
+      "tail_voters": 3716,
+      "tail_votes_party": 2242,
+      "tail_share_of_party": 0.8258496084397262,
+      "observed_share_pct": 66.3817197070654,
+      "honest_share_pct": 66.43717812998922
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.4993421457746314,
+      "mean_anom": [
+        79.44938732969656,
+        75.99558099327318
+      ],
+      "mean_main": [
+        72.8718267537618,
+        55.66864947776105
+      ],
+      "anom_cluster_voters": 275746,
+      "anom_cluster_votes_party": 167566,
+      "total_voters": 536488,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "005",
+    "n": 600,
+    "registered": 537344,
+    "ballots": 399628,
+    "turnout": 74.37098022868032,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.48605162133264035,
+    "county_demeaned_r_rep": 0.7201315406427329,
+    "tail": {
+      "party": "REP",
+      "t_cut": 91.36786188579018,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 9.898312645467554,
+      "total_votes_party": 254549,
+      "tail_voters": 844,
+      "tail_votes_party": 434,
+      "tail_share_of_party": 0.17049762521164885,
+      "observed_share_pct": 63.69648773359224,
+      "honest_share_pct": 63.722466297544536
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.559221811653229,
+      "mean_anom": [
+        76.442313584536,
+        74.92322071358024
+      ],
+      "mean_main": [
+        72.04096239364141,
+        46.49814742051839
+      ],
+      "anom_cluster_voters": 302413,
+      "anom_cluster_votes_party": 173678,
+      "total_voters": 537344,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "006",
+    "n": 693,
+    "registered": 529966,
+    "ballots": 382382,
+    "turnout": 72.15217579995698,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6211542921359106,
+    "county_demeaned_r_rep": 0.729803047004236,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.00854700854701,
+      "t_cut_source": "own_q995",
+      "mode": 78.75,
+      "sigma": 9.273495032138351,
+      "total_votes_party": 243360,
+      "tail_voters": 2613,
+      "tail_votes_party": 1808,
+      "tail_share_of_party": 0.7429322813938198,
+      "observed_share_pct": 63.64316311960291,
+      "honest_share_pct": 63.604980922613485
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.8004590823651992,
+      "mean_anom": [
+        76.24164474953201,
+        66.6488663947768
+      ],
+      "mean_main": [
+        55.812589220253734,
+        44.87878730537665
+      ],
+      "anom_cluster_voters": 430441,
+      "anom_cluster_votes_party": 219148,
+      "total_voters": 529966,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "007",
+    "n": 517,
+    "registered": 549292,
+    "ballots": 424400,
+    "turnout": 77.26309503870436,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.35149404751361624,
+    "county_demeaned_r_rep": 0.39566995167707075,
+    "tail": {
+      "party": "REP",
+      "t_cut": 86.86131386861314,
+      "t_cut_source": "own_q995",
+      "mode": 80.75,
+      "sigma": 6.3502353877515745,
+      "total_votes_party": 204179,
+      "tail_voters": 2206,
+      "tail_votes_party": 1311,
+      "tail_share_of_party": 0.6420836618849147,
+      "observed_share_pct": 48.11003770028275,
+      "honest_share_pct": 48.05089603357698
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6390411437991443,
+      "mean_anom": [
+        80.13862259016626,
+        51.611455885581265
+      ],
+      "mean_main": [
+        72.29887491858989,
+        41.29259892034625
+      ],
+      "anom_cluster_voters": 407989,
+      "anom_cluster_votes_party": 166013,
+      "total_voters": 549292,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "008",
+    "n": 578,
+    "registered": 535579,
+    "ballots": 394379,
+    "turnout": 73.63600888010919,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4990156417838313,
+    "county_demeaned_r_rep": 0.5596073534235089,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.75964391691394,
+      "t_cut_source": "own_q995",
+      "mode": 79.75,
+      "sigma": 9.243685101680148,
+      "total_votes_party": 236468,
+      "tail_voters": 1722,
+      "tail_votes_party": 1582,
+      "tail_share_of_party": 0.669012297647039,
+      "observed_share_pct": 59.959582026426354,
+      "honest_share_pct": 59.81963902337154
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5308137979881388,
+      "mean_anom": [
+        80.25994104966756,
+        68.67984313106166
+      ],
+      "mean_main": [
+        66.03137201392306,
+        47.35138604622554
+      ],
+      "anom_cluster_voters": 299710,
+      "anom_cluster_votes_party": 165548,
+      "total_voters": 535579,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "009",
+    "n": 592,
+    "registered": 556766,
+    "ballots": 383278,
+    "turnout": 68.84005129623576,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6989871832353209,
+    "county_demeaned_r_rep": 0.7235999871988752,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 86.79245283018868,
+      "t_cut_source": "own_q995",
+      "mode": 79.75,
+      "sigma": 11.910066417881815,
+      "total_votes_party": 180799,
+      "tail_voters": 1348,
+      "tail_votes_party": 454,
+      "tail_share_of_party": 0.2511075835596436,
+      "observed_share_pct": 47.17176566356535,
+      "honest_share_pct": 47.219385751315684
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6213100921354693,
+      "mean_anom": [
+        77.02190385585668,
+        41.588776723748424
+      ],
+      "mean_main": [
+        55.52296232008925,
+        62.18859407334753
+      ],
+      "anom_cluster_voters": 361284,
+      "anom_cluster_votes_party": 115610,
+      "total_voters": 556766,
+      "separated": false
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "010",
+    "n": 570,
+    "registered": 545654,
+    "ballots": 383983,
+    "turnout": 70.37115094913626,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6103951821340672,
+    "county_demeaned_r_rep": 0.607775621046891,
+    "tail": {
+      "party": "REP",
+      "t_cut": 86.46288209606988,
+      "t_cut_source": "own_q995",
+      "mode": 81.75,
+      "sigma": 11.097213350887994,
+      "total_votes_party": 213647,
+      "tail_voters": 1402,
+      "tail_votes_party": 461,
+      "tail_share_of_party": 0.21577649112788852,
+      "observed_share_pct": 55.63970279934268,
+      "honest_share_pct": 55.72310177452618
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7003607818969795,
+      "mean_anom": [
+        76.68118835920104,
+        61.44744045076536
+      ],
+      "mean_main": [
+        56.10045050846863,
+        36.152432339045056
+      ],
+      "anom_cluster_voters": 385073,
+      "anom_cluster_votes_party": 182415,
+      "total_voters": 545654,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "011",
+    "n": 640,
+    "registered": 551657,
+    "ballots": 326585,
+    "turnout": 59.20073523946945,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5066478510858163,
+    "county_demeaned_r_rep": 0.5115693464475457,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 84.55414012738854,
+      "t_cut_source": "own_q995",
+      "mode": 79.25,
+      "sigma": 14.15685598578453,
+      "total_votes_party": 236534,
+      "tail_voters": 2681,
+      "tail_votes_party": 1376,
+      "tail_share_of_party": 0.5817345497898823,
+      "observed_share_pct": 72.42647396543013,
+      "honest_share_pct": 72.60114107883817
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4851739863315395,
+      "mean_anom": [
+        71.3392568184926,
+        68.89353325448619
+      ],
+      "mean_main": [
+        47.853890121893684,
+        78.04900350191339
+      ],
+      "anom_cluster_voters": 272184,
+      "anom_cluster_votes_party": 134492,
+      "total_voters": 551657,
+      "separated": false
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "012",
+    "n": 562,
+    "registered": 521525,
+    "ballots": 390664,
+    "turnout": 74.9080101625042,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.3324060405264746,
+    "county_demeaned_r_rep": 0.5177168264952845,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.78787878787878,
+      "t_cut_source": "own_q995",
+      "mode": 77.25,
+      "sigma": 8.458333927035442,
+      "total_votes_party": 256887,
+      "tail_voters": 765,
+      "tail_votes_party": 528,
+      "tail_share_of_party": 0.2055378434876035,
+      "observed_share_pct": 65.75650687035406,
+      "honest_share_pct": 65.75010451424599
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6429057210588628,
+      "mean_anom": [
+        78.17772319913283,
+        72.22043691443679
+      ],
+      "mean_main": [
+        69.24920797504154,
+        52.26490229767784
+      ],
+      "anom_cluster_voters": 357765,
+      "anom_cluster_votes_party": 202266,
+      "total_voters": 521525,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "013",
+    "n": 549,
+    "registered": 548069,
+    "ballots": 398604,
+    "turnout": 72.72879874614328,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.5825280578055928,
+    "county_demeaned_r_rep": 0.6772878726485345,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 87.228714524207,
+      "t_cut_source": "own_q995",
+      "mode": 82.75,
+      "sigma": 11.278315898740026,
+      "total_votes_party": 196441,
+      "tail_voters": 3774,
+      "tail_votes_party": 1691,
+      "tail_share_of_party": 0.8608182609536705,
+      "observed_share_pct": 49.28224503517275,
+      "honest_share_pct": 49.32502596053998
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5654460188547684,
+      "mean_anom": [
+        81.18286906492156,
+        44.136237910779165
+      ],
+      "mean_main": [
+        62.00767822206708,
+        59.43394796067921
+      ],
+      "anom_cluster_voters": 328068,
+      "anom_cluster_votes_party": 117766,
+      "total_voters": 548069,
+      "separated": false
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "014",
+    "n": 628,
+    "registered": 541269,
+    "ballots": 409079,
+    "turnout": 75.57776262819411,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5094158877493694,
+    "county_demeaned_r_rep": 0.5597619504286937,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.63819095477388,
+      "t_cut_source": "own_q995",
+      "mode": 81.75,
+      "sigma": 8.351207908374489,
+      "total_votes_party": 242638,
+      "tail_voters": 2820,
+      "tail_votes_party": 1851,
+      "tail_share_of_party": 0.7628648439238701,
+      "observed_share_pct": 59.31323778536664,
+      "honest_share_pct": 59.26933311015879
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6956837506940837,
+      "mean_anom": [
+        79.81590836018555,
+        62.41204117403192
+      ],
+      "mean_main": [
+        66.00141907823169,
+        49.82910216059526
+      ],
+      "anom_cluster_voters": 400789,
+      "anom_cluster_votes_party": 199765,
+      "total_voters": 541269,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 HOUSE",
+    "district": "015",
+    "n": 519,
+    "registered": 521941,
+    "ballots": 368298,
+    "turnout": 70.56314794200877,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.47577431807020637,
+    "county_demeaned_r_rep": 0.49850790163910136,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.13629402756509,
+      "t_cut_source": "own_q995",
+      "mode": 82.75,
+      "sigma": 10.803907726112293,
+      "total_votes_party": 194843,
+      "tail_voters": 4148,
+      "tail_votes_party": 2517,
+      "tail_share_of_party": 1.291809302874622,
+      "observed_share_pct": 52.90362695425986,
+      "honest_share_pct": 52.8150487436496
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.35615647479750767,
+      "mean_anom": [
+        75.22757437357973,
+        70.6093186299261
+      ],
+      "mean_main": [
+        67.8749973745666,
+        40.3849441983154
+      ],
+      "anom_cluster_voters": 186690,
+      "anom_cluster_votes_party": 100237,
+      "total_voters": 521941,
+      "separated": true
+    }
+  },
+  {
+    "sample": "OH2024 SENATE",
+    "district": "STATEWIDE",
+    "n": 8878,
+    "registered": 8159946,
+    "ballots": 5851387,
+    "turnout": 71.7086485621351,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5000447942066069,
+    "county_demeaned_r_rep": 0.5924756158612019,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.36734693877551,
+      "t_cut_source": "own_q995",
+      "mode": 81.75,
+      "sigma": 10.870395294658733,
+      "total_votes_party": 2857383,
+      "tail_voters": 30541,
+      "tail_votes_party": 17213,
+      "tail_share_of_party": 0.6024043679128769,
+      "observed_share_pct": 48.832575934560474,
+      "honest_share_pct": 48.793079219068844
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6733756755673209,
+      "mean_anom": [
+        77.82014146789301,
+        55.41782063952346
+      ],
+      "mean_main": [
+        59.00046094045571,
+        29.625226608489633
+      ],
+      "anom_cluster_voters": 5731860,
+      "anom_cluster_votes_party": 2474845,
+      "total_voters": 8159946,
+      "separated": true
+    }
+  },
+  {
+    "sample": "SC2024 HOUSE",
+    "district": "001",
+    "n": 352,
+    "registered": 534350,
+    "ballots": 387388,
+    "turnout": 72.49705249368391,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.40709375457463715,
+    "county_demeaned_r_rep": 0.46477514970225725,
+    "tail": {
+      "party": "REP",
+      "t_cut": 88.9351081530782,
+      "t_cut_source": "own_q995",
+      "mode": 72.75,
+      "sigma": 8.477318251657719,
+      "total_votes_party": 218433,
+      "tail_voters": 1584,
+      "tail_votes_party": 959,
+      "tail_share_of_party": 0.439036226211241,
+      "observed_share_pct": 56.38610385453344,
+      "honest_share_pct": 56.369037127660675
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5956136335719756,
+      "mean_anom": [
+        76.90981297355228,
+        60.071887870248275
+      ],
+      "mean_main": [
+        66.04267108697888,
+        49.85078189656969
+      ],
+      "anom_cluster_voters": 338413,
+      "anom_cluster_votes_party": 158241,
+      "total_voters": 534350,
+      "separated": true
+    }
+  },
+  {
+    "sample": "SC2024 HOUSE",
+    "district": "002",
+    "n": 274,
+    "registered": 472679,
+    "ballots": 348414,
+    "turnout": 73.71048851334626,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.7703191204060894,
+    "county_demeaned_r_rep": 0.6753226642723815,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.43386243386243,
+      "t_cut_source": "own_q995",
+      "mode": 77.75,
+      "sigma": 7.773616579683475,
+      "total_votes_party": 199312,
+      "tail_voters": 2068,
+      "tail_votes_party": 1427,
+      "tail_share_of_party": 0.7159629124187203,
+      "observed_share_pct": 57.20550838944474,
+      "honest_share_pct": 57.13506147032159
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6669653197503016,
+      "mean_anom": [
+        77.52691971421677,
+        66.17837110475504
+      ],
+      "mean_main": [
+        65.84524132794871,
+        34.21592834827247
+      ],
+      "anom_cluster_voters": 323917,
+      "anom_cluster_votes_party": 166687,
+      "total_voters": 472679,
+      "separated": true
+    }
+  },
+  {
+    "sample": "SC2024 HOUSE",
+    "district": "003",
+    "n": 307,
+    "registered": 401649,
+    "ballots": 313389,
+    "turnout": 78.02558950725634,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6612799560552518,
+    "county_demeaned_r_rep": 0.7580395287108368,
+    "tail": {
+      "party": "REP",
+      "t_cut": 90.4833836858006,
+      "t_cut_source": "own_q995",
+      "mode": 80.25,
+      "sigma": 6.912761072153221,
+      "total_votes_party": 217073,
+      "tail_voters": 695,
+      "tail_votes_party": 507,
+      "tail_share_of_party": 0.23356198145324383,
+      "observed_share_pct": 69.2663111979042,
+      "honest_share_pct": 69.25812455627546
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7149639213317793,
+      "mean_anom": [
+        80.84819014867493,
+        74.45398865924986
+      ],
+      "mean_main": [
+        71.33862798842291,
+        53.51691152898083
+      ],
+      "anom_cluster_voters": 303488,
+      "anom_cluster_votes_party": 182866,
+      "total_voters": 401649,
+      "separated": true
+    }
+  },
+  {
+    "sample": "SC2024 HOUSE",
+    "district": "004",
+    "n": 222,
+    "registered": 455860,
+    "ballots": 347206,
+    "turnout": 76.16505067345237,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6975303231522739,
+    "county_demeaned_r_rep": 0.7739016275250169,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.70588235294117,
+      "t_cut_source": "own_q995",
+      "mode": 81.75,
+      "sigma": 7.38165484350709,
+      "total_votes_party": 200844,
+      "tail_voters": 2640,
+      "tail_votes_party": 1666,
+      "tail_share_of_party": 0.8294995120591105,
+      "observed_share_pct": 57.84577455458719,
+      "honest_share_pct": 57.80547123047544
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.4885178484511049,
+      "mean_anom": [
+        81.9288942238235,
+        63.601419711437366
+      ],
+      "mean_main": [
+        70.7396390170747,
+        50.51321162035136
+      ],
+      "anom_cluster_voters": 237540,
+      "anom_cluster_votes_party": 125413,
+      "total_voters": 455860,
+      "separated": true
+    }
+  },
+  {
+    "sample": "SC2024 HOUSE",
+    "district": "005",
+    "n": 326,
+    "registered": 463590,
+    "ballots": 360211,
+    "turnout": 77.70033866131712,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4986567166212634,
+    "county_demeaned_r_rep": 0.6058356849415825,
+    "tail": {
+      "party": "REP",
+      "t_cut": 90.06849315068493,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 6.349547546625971,
+      "total_votes_party": 218343,
+      "tail_voters": 2259,
+      "tail_votes_party": 1392,
+      "tail_share_of_party": 0.6375290254324618,
+      "observed_share_pct": 60.61530602896636,
+      "honest_share_pct": 60.608964330413016
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.8083911545145568,
+      "mean_anom": [
+        79.89740123424912,
+        65.23645067024614
+      ],
+      "mean_main": [
+        68.58511376505335,
+        37.527185683712474
+      ],
+      "anom_cluster_voters": 382086,
+      "anom_cluster_votes_party": 199049,
+      "total_voters": 463590,
+      "separated": true
+    }
+  },
+  {
+    "sample": "SC2024 HOUSE",
+    "district": "006",
+    "n": 358,
+    "registered": 451495,
+    "ballots": 277559,
+    "turnout": 61.475542364810245,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6154165842142025,
+    "county_demeaned_r_rep": 0.5528168908448589,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.31518451300666,
+      "t_cut_source": "own_q995",
+      "mode": 67.25,
+      "sigma": 10.889139345740368,
+      "total_votes_party": 162298,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 58.473333597541426,
+      "honest_share_pct": 58.473333597541426
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.44960162708425794,
+      "mean_anom": [
+        67.49934338055263,
+        45.12372050646812
+      ],
+      "mean_main": [
+        56.40784819264765,
+        73.13155015673426
+      ],
+      "anom_cluster_voters": 204053,
+      "anom_cluster_votes_party": 59784,
+      "total_voters": 451495,
+      "separated": false
+    }
+  },
+  {
+    "sample": "SC2024 HOUSE",
+    "district": "007",
+    "n": 236,
+    "registered": 327899,
+    "ballots": 241115,
+    "turnout": 73.5333136118134,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.6667282484173802,
+    "county_demeaned_r_rep": 0.6081929021651911,
+    "tail": {
+      "party": "REP",
+      "t_cut": 85.9304932735426,
+      "t_cut_source": "own_q995",
+      "mode": 75.75,
+      "sigma": 7.302658782925927,
+      "total_votes_party": 143652,
+      "tail_voters": 594,
+      "tail_votes_party": 504,
+      "tail_share_of_party": 0.3508478823824242,
+      "observed_share_pct": 59.57820956804844,
+      "honest_share_pct": 59.51580111507935
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7916103712702912,
+      "mean_anom": [
+        76.43605451020284,
+        64.5480377019889
+      ],
+      "mean_main": [
+        62.41197745434559,
+        33.73964046203219
+      ],
+      "anom_cluster_voters": 263239,
+      "anom_cluster_votes_party": 130909,
+      "total_voters": 327899,
+      "separated": true
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "001",
+    "n": 213,
+    "registered": 618881,
+    "ballots": 478807,
+    "turnout": 77.36656966363485,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.4022546198852176,
+    "county_demeaned_r_rep": 0.6035500597663186,
+    "tail": {
+      "party": "REP",
+      "t_cut": 87.35763097949886,
+      "t_cut_source": "own_q995",
+      "mode": 79.75,
+      "sigma": 5.464720601420253,
+      "total_votes_party": 259930,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 54.2870091707097,
+      "honest_share_pct": 54.2870091707097
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.33866276485963603,
+      "mean_anom": [
+        78.17818759478232,
+        67.7575844038634
+      ],
+      "mean_main": [
+        76.93510391296778,
+        46.79181290085348
+      ],
+      "anom_cluster_voters": 208677,
+      "anom_cluster_votes_party": 111598,
+      "total_voters": 618881,
+      "separated": false
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "002",
+    "n": 221,
+    "registered": 606696,
+    "ballots": 416939,
+    "turnout": 68.72288592639477,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.7052945655427105,
+    "county_demeaned_r_rep": 0.7283136156168533,
+    "tail": {
+      "party": "REP",
+      "t_cut": 82.04379562043796,
+      "t_cut_source": "own_q995",
+      "mode": 73.75,
+      "sigma": 7.922995368837601,
+      "total_votes_party": 203374,
+      "tail_voters": 4135,
+      "tail_votes_party": 2301,
+      "tail_share_of_party": 1.1314130616499651,
+      "observed_share_pct": 48.77787877843042,
+      "honest_share_pct": 48.70907258650595
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5600693630165161,
+      "mean_anom": [
+        74.07378705818937,
+        54.70031412461094
+      ],
+      "mean_main": [
+        62.02461690012946,
+        38.56794975463191
+      ],
+      "anom_cluster_voters": 360650,
+      "anom_cluster_votes_party": 147030,
+      "total_voters": 606696,
+      "separated": true
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "003",
+    "n": 183,
+    "registered": 535282,
+    "ballots": 322701,
+    "turnout": 60.286166917624726,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6109769710369336,
+    "county_demeaned_r_rep": 0.6312626823439712,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 80.71012188659247,
+      "t_cut_source": "own_q995",
+      "mode": 56.75,
+      "sigma": 8.666930144263983,
+      "total_votes_party": 210853,
+      "tail_voters": 3027,
+      "tail_votes_party": 1681,
+      "tail_share_of_party": 0.7972378861102285,
+      "observed_share_pct": 65.34005162673806,
+      "honest_share_pct": 65.43290977683515
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6007670237746594,
+      "mean_anom": [
+        62.836113738730766,
+        58.373929102456785
+      ],
+      "mean_main": [
+        56.31553213398015,
+        78.13364975561302
+      ],
+      "anom_cluster_voters": 337807,
+      "anom_cluster_votes_party": 122293,
+      "total_voters": 535282,
+      "separated": false
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "004",
+    "n": 248,
+    "registered": 574001,
+    "ballots": 385241,
+    "turnout": 67.11503986926851,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.4909664644605524,
+    "county_demeaned_r_rep": 0.6306017623156794,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 85.61020036429872,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 9.191254850812795,
+      "total_votes_party": 243233,
+      "tail_voters": 4394,
+      "tail_votes_party": 2453,
+      "tail_share_of_party": 1.0084980245279218,
+      "observed_share_pct": 63.137879924514785,
+      "honest_share_pct": 63.22223885182238
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5403001132591466,
+      "mean_anom": [
+        70.35280943384245,
+        50.919273056229635
+      ],
+      "mean_main": [
+        63.30400706284674,
+        79.75823710505114
+      ],
+      "anom_cluster_voters": 309234,
+      "anom_cluster_votes_party": 108966,
+      "total_voters": 574001,
+      "separated": false
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "005",
+    "n": 302,
+    "registered": 616354,
+    "ballots": 446038,
+    "turnout": 72.36717860190734,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.43469803534683193,
+    "county_demeaned_r_rep": 0.5395210411674096,
+    "tail": {
+      "party": "REP",
+      "t_cut": 86.10400682011935,
+      "t_cut_source": "own_q995",
+      "mode": 75.25,
+      "sigma": 8.141042228337778,
+      "total_votes_party": 243051,
+      "tail_voters": 5654,
+      "tail_votes_party": 3620,
+      "tail_share_of_party": 1.489399344170565,
+      "observed_share_pct": 54.491097171093045,
+      "honest_share_pct": 54.36868732742334
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.570038327890606,
+      "mean_anom": [
+        75.0568651344292,
+        66.70100422145825
+      ],
+      "mean_main": [
+        68.84663921424026,
+        36.268910058591686
+      ],
+      "anom_cluster_voters": 355641,
+      "anom_cluster_votes_party": 178939,
+      "total_voters": 616354,
+      "separated": true
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "006",
+    "n": 253,
+    "registered": 575552,
+    "ballots": 416199,
+    "turnout": 72.31301428889137,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.5964949994167468,
+    "county_demeaned_r_rep": 0.35840274305471786,
+    "tail": {
+      "party": "REP",
+      "t_cut": 92.50629722921914,
+      "t_cut_source": "own_q995",
+      "mode": 76.75,
+      "sigma": 8.082047998477647,
+      "total_votes_party": 251285,
+      "tail_voters": 2938,
+      "tail_votes_party": 1588,
+      "tail_share_of_party": 0.6319517679129275,
+      "observed_share_pct": 60.37616620895293,
+      "honest_share_pct": 60.42113821531671
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6466890943309213,
+      "mean_anom": [
+        75.55864002360887,
+        67.76268933968923
+      ],
+      "mean_main": [
+        66.52728027752298,
+        44.01575382637904
+      ],
+      "anom_cluster_voters": 389691,
+      "anom_cluster_votes_party": 200494,
+      "total_voters": 575552,
+      "separated": true
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "007",
+    "n": 191,
+    "registered": 581317,
+    "ballots": 404881,
+    "turnout": 69.64891788817461,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.6781200254584908,
+    "county_demeaned_r_rep": 0.4932232843196347,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 80.54662379421222,
+      "t_cut_source": "own_q995",
+      "mode": 71.75,
+      "sigma": 6.050150550381832,
+      "total_votes_party": 197393,
+      "tail_voters": 2620,
+      "tail_votes_party": 708,
+      "tail_share_of_party": 0.3586753329652014,
+      "observed_share_pct": 48.75333740037196,
+      "honest_share_pct": 48.89487173750376
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5314508708550314,
+      "mean_anom": [
+        72.88171922856282,
+        39.92979627245455
+      ],
+      "mean_main": [
+        66.14565208744963,
+        59.85757946526081
+      ],
+      "anom_cluster_voters": 313277,
+      "anom_cluster_votes_party": 90132,
+      "total_voters": 581317,
+      "separated": false
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "008",
+    "n": 170,
+    "registered": 568558,
+    "ballots": 394167,
+    "turnout": 69.3274916543255,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.2648125037480774,
+    "county_demeaned_r_rep": 0.29791118034911024,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.23180506572619,
+      "t_cut_source": "own_q995",
+      "mode": 74.75,
+      "sigma": 7.489693227317364,
+      "total_votes_party": 266939,
+      "tail_voters": 4896,
+      "tail_votes_party": 3611,
+      "tail_share_of_party": 1.352743510689708,
+      "observed_share_pct": 67.72231059424051,
+      "honest_share_pct": 67.64644681982475
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5338523235994951,
+      "mean_anom": [
+        74.90196945612468,
+        68.20080111741551
+      ],
+      "mean_main": [
+        62.69578206629749,
+        66.7882805888184
+      ],
+      "anom_cluster_voters": 306977,
+      "anom_cluster_votes_party": 157550,
+      "total_voters": 568558,
+      "separated": true
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "009",
+    "n": 366,
+    "registered": 577516,
+    "ballots": 409895,
+    "turnout": 70.97552275607949,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.22206636971531044,
+    "county_demeaned_r_rep": 0.42972771127310805,
+    "tail": {
+      "party": "REP",
+      "t_cut": 83.64427860696517,
+      "t_cut_source": "own_q995",
+      "mode": 74.25,
+      "sigma": 6.265686248987413,
+      "total_votes_party": 283665,
+      "tail_voters": 5039,
+      "tail_votes_party": 3793,
+      "tail_share_of_party": 1.337140641249361,
+      "observed_share_pct": 69.20430842044914,
+      "honest_share_pct": 69.12877665145137
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6884860680195833,
+      "mean_anom": [
+        71.40768188555988,
+        76.17024678698878
+      ],
+      "mean_main": [
+        70.17455772435558,
+        53.209020188106535
+      ],
+      "anom_cluster_voters": 416792,
+      "anom_cluster_votes_party": 227229,
+      "total_voters": 577516,
+      "separated": false
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "010",
+    "n": 196,
+    "registered": 573539,
+    "ballots": 422324,
+    "turnout": 73.63474846523079,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.4615924648384087,
+    "county_demeaned_r_rep": 0.5397750880296344,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 84.19071518193225,
+      "t_cut_source": "own_q995",
+      "mode": 76.25,
+      "sigma": 5.978344579815936,
+      "total_votes_party": 210771,
+      "tail_voters": 4523,
+      "tail_votes_party": 2488,
+      "tail_share_of_party": 1.180428047501791,
+      "observed_share_pct": 49.90741705420483,
+      "honest_share_pct": 49.85220236428348
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4937085639606139,
+      "mean_anom": [
+        77.12834778012888,
+        45.42928257363432
+      ],
+      "mean_main": [
+        70.08008466217483,
+        54.8781462933835
+      ],
+      "anom_cluster_voters": 272775,
+      "anom_cluster_votes_party": 93704,
+      "total_voters": 573539,
+      "separated": false
+    }
+  },
+  {
+    "sample": "VA2024 HOUSE",
+    "district": "011",
+    "n": 180,
+    "registered": 577404,
+    "ballots": 419014,
+    "turnout": 72.56860014824976,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.38092922269195006,
+    "county_demeaned_r_rep": 0.43176221810665194,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 83.0239622004725,
+      "t_cut_source": "own_q995",
+      "mode": 78.75,
+      "sigma": 5.81475643049109,
+      "total_votes_party": 265644,
+      "tail_voters": 4082,
+      "tail_votes_party": 2964,
+      "tail_share_of_party": 1.1157790125129874,
+      "observed_share_pct": 63.39740438266979,
+      "honest_share_pct": 63.30675869781073
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.31908757891313555,
+      "mean_anom": [
+        77.94526550045506,
+        61.33777463632201
+      ],
+      "mean_main": [
+        69.97260833426148,
+        64.3678223543713
+      ],
+      "anom_cluster_voters": 208230,
+      "anom_cluster_votes_party": 100402,
+      "total_voters": 577404,
+      "separated": false
+    }
+  },
+  {
+    "sample": "VA2024 SENATE",
+    "district": "STATEWIDE",
+    "n": 2531,
+    "registered": 6429000,
+    "ballots": 4533768,
+    "turnout": 70.52057862809146,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.4679689610582756,
+    "county_demeaned_r_rep": 0.564778192867644,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 85.77749683944374,
+      "t_cut_source": "own_q995",
+      "mode": 75.25,
+      "sigma": 8.155639825993969,
+      "total_votes_party": 2351924,
+      "tail_voters": 26123,
+      "tail_votes_party": 11255,
+      "tail_share_of_party": 0.47854437473319716,
+      "observed_share_pct": 51.875702506171464,
+      "honest_share_pct": 51.92664905954218
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4197369825208556,
+      "mean_anom": [
+        74.83518132531897,
+        38.0219104508416
+      ],
+      "mean_main": [
+        67.32815540894293,
+        63.76466794793172
+      ],
+      "anom_cluster_voters": 2657893,
+      "anom_cluster_votes_party": 726338,
+      "total_voters": 6429000,
+      "separated": false
+    }
+  },
+  {
+    "sample": "WA2020 PRESIDENT",
+    "district": "STATEWIDE",
+    "n": 7278,
+    "registered": 4892094,
+    "ballots": 4115835,
+    "turnout": 84.13237766894912,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.12333774569266429,
+    "county_demeaned_r_rep": 0.02879821436196722,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.72693032015066,
+      "t_cut_source": "own_q995",
+      "mode": 87.75,
+      "sigma": 6.287045432008974,
+      "total_votes_party": 2369099,
+      "tail_voters": 27362,
+      "tail_votes_party": 20726,
+      "tail_share_of_party": 0.874847357581933,
+      "observed_share_pct": 57.56059220061057,
+      "honest_share_pct": 57.43887754670264
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5588000240901784,
+      "mean_anom": [
+        85.83112231789764,
+        48.0975277931644
+      ],
+      "mean_main": [
+        81.95520584499384,
+        69.07204218775163
+      ],
+      "anom_cluster_voters": 2786849,
+      "anom_cluster_votes_party": 1128694,
+      "total_voters": 4892094,
+      "separated": false
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "001",
+    "n": 800,
+    "registered": 470917,
+    "ballots": 378354,
+    "turnout": 80.34409460690524,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.05973575059717604,
+    "county_demeaned_r_rep": -0.027262862495664154,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 90.38901601830663,
+      "t_cut_source": "own_q995",
+      "mode": 83.75,
+      "sigma": 5.385331151252349,
+      "total_votes_party": 227213,
+      "tail_voters": 1822,
+      "tail_votes_party": 1077,
+      "tail_share_of_party": 0.4740045684005757,
+      "observed_share_pct": 60.053019130232535,
+      "honest_share_pct": 60.0575781075712
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.611653149990561,
+      "mean_anom": [
+        81.21979716626869,
+        66.62732569675721
+      ],
+      "mean_main": [
+        78.84032681796263,
+        49.410529281531396
+      ],
+      "anom_cluster_voters": 294307,
+      "anom_cluster_votes_party": 159319,
+      "total_voters": 470917,
+      "separated": true
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "002",
+    "n": 708,
+    "registered": 529830,
+    "ballots": 429211,
+    "turnout": 81.00919162750316,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.13821876733406122,
+    "county_demeaned_r_rep": -0.14376090574098246,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.37588652482269,
+      "t_cut_source": "own_q995",
+      "mode": 84.75,
+      "sigma": 6.917696612498223,
+      "total_votes_party": 263750,
+      "tail_voters": 2067,
+      "tail_votes_party": 1394,
+      "tail_share_of_party": 0.5285308056872038,
+      "observed_share_pct": 61.44996283879024,
+      "honest_share_pct": 61.42097278669488
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.3155571436486461,
+      "mean_anom": [
+        82.79852595395708,
+        47.342993148264455
+      ],
+      "mean_main": [
+        80.22267577356556,
+        67.56959700949864
+      ],
+      "anom_cluster_voters": 156068,
+      "anom_cluster_votes_party": 58432,
+      "total_voters": 529830,
+      "separated": false
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "003",
+    "n": 651,
+    "registered": 532957,
+    "ballots": 427755,
+    "turnout": 80.26069645393531,
+    "leader": "votes:DEM",
+    "weighted_r_rep": 0.18156777860670487,
+    "county_demeaned_r_rep": 0.1512189572732157,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 91.10251450676982,
+      "t_cut_source": "own_q995",
+      "mode": 84.25,
+      "sigma": 5.745530068820616,
+      "total_votes_party": 215177,
+      "tail_voters": 2520,
+      "tail_votes_party": 1385,
+      "tail_share_of_party": 0.6436561528416141,
+      "observed_share_pct": 50.303795396897755,
+      "honest_share_pct": 50.2762002187026
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.3536860899396125,
+      "mean_anom": [
+        82.48705413405929,
+        38.03825497817223
+      ],
+      "mean_main": [
+        79.07036363089259,
+        57.33913114830494
+      ],
+      "anom_cluster_voters": 184396,
+      "anom_cluster_votes_party": 56497,
+      "total_voters": 532957,
+      "separated": false
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "005",
+    "n": 837,
+    "registered": 526102,
+    "ballots": 409686,
+    "turnout": 77.87197159486183,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.2684150221814644,
+    "county_demeaned_r_rep": 0.3412525732557094,
+    "tail": {
+      "party": "REP",
+      "t_cut": 90.8466819221968,
+      "t_cut_source": "own_q995",
+      "mode": 82.75,
+      "sigma": 7.790894674802438,
+      "total_votes_party": 240619,
+      "tail_voters": 1821,
+      "tail_votes_party": 1330,
+      "tail_share_of_party": 0.5527410553613804,
+      "observed_share_pct": 58.73254150739835,
+      "honest_share_pct": 58.668677135817
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.5374481616232747,
+      "mean_anom": [
+        81.70314099253478,
+        67.58348528046618
+      ],
+      "mean_main": [
+        73.47666553911114,
+        47.68596909235902
+      ],
+      "anom_cluster_voters": 285195,
+      "anom_cluster_votes_party": 158708,
+      "total_voters": 526102,
+      "separated": true
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "006",
+    "n": 666,
+    "registered": 545620,
+    "ballots": 440076,
+    "turnout": 80.6561343059272,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.14492658121328544,
+    "county_demeaned_r_rep": -0.05296825591447572,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 93.04446978335234,
+      "t_cut_source": "own_q995",
+      "mode": 86.75,
+      "sigma": 7.389758525644059,
+      "total_votes_party": 239687,
+      "tail_voters": 3296,
+      "tail_votes_party": 2340,
+      "tail_share_of_party": 0.9762732229949893,
+      "observed_share_pct": 54.46491060634981,
+      "honest_share_pct": 54.34017125326251
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.6356569328919597,
+      "mean_anom": [
+        82.77088229444496,
+        48.27133557984817
+      ],
+      "mean_main": [
+        77.06140492697605,
+        64.97988191948055
+      ],
+      "anom_cluster_voters": 354958,
+      "anom_cluster_votes_party": 142060,
+      "total_voters": 545620,
+      "separated": false
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "007",
+    "n": 1075,
+    "registered": 524727,
+    "ballots": 441471,
+    "turnout": 84.13346368683143,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.22816995318974825,
+    "county_demeaned_r_rep": -0.23201024196985465,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.32624113475177,
+      "t_cut_source": "own_q995",
+      "mode": 88.25,
+      "sigma": 6.820249720437408,
+      "total_votes_party": 352286,
+      "tail_voters": 1997,
+      "tail_votes_party": 1669,
+      "tail_share_of_party": 0.4737627950017883,
+      "observed_share_pct": 79.79822004163354,
+      "honest_share_pct": 79.78105644474986
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.685274947457835,
+      "mean_anom": [
+        86.867800684532,
+        82.58027735085979
+      ],
+      "mean_main": [
+        78.06420343599889,
+        73.0666900923356
+      ],
+      "anom_cluster_voters": 379282,
+      "anom_cluster_votes_party": 272281,
+      "total_voters": 524727,
+      "separated": true
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "008",
+    "n": 902,
+    "registered": 533949,
+    "ballots": 432955,
+    "turnout": 81.08545947272118,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.1562576183005163,
+    "county_demeaned_r_rep": 0.032456057360885915,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.75549805950841,
+      "t_cut_source": "own_q995",
+      "mode": 83.25,
+      "sigma": 5.786785804728652,
+      "total_votes_party": 224607,
+      "tail_voters": 907,
+      "tail_votes_party": 575,
+      "tail_share_of_party": 0.2560027069503622,
+      "observed_share_pct": 51.87767781871095,
+      "honest_share_pct": 51.8534977595082
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.4778673884870689,
+      "mean_anom": [
+        81.30224422709462,
+        40.87877949075829
+      ],
+      "mean_main": [
+        80.98680919059332,
+        61.729506128019416
+      ],
+      "anom_cluster_voters": 253887,
+      "anom_cluster_votes_party": 83639,
+      "total_voters": 533949,
+      "separated": false
+    }
+  },
+  {
+    "sample": "WA2024 HOUSE",
+    "district": "010",
+    "n": 608,
+    "registered": 476738,
+    "ballots": 362397,
+    "turnout": 76.01596684132585,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.11255966254983855,
+    "county_demeaned_r_rep": -0.008581570582629514,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 94.22066549912434,
+      "t_cut_source": "own_q995",
+      "mode": 83.25,
+      "sigma": 8.415432788045175,
+      "total_votes_party": 203732,
+      "tail_voters": 2614,
+      "tail_votes_party": 1832,
+      "tail_share_of_party": 0.8992205446370722,
+      "observed_share_pct": 56.21790467360381,
+      "honest_share_pct": 56.11715951003799
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.3730097190719343,
+      "mean_anom": [
+        82.52420079821601,
+        59.21742432129029
+      ],
+      "mean_main": [
+        72.15356921803236,
+        54.13582155180114
+      ],
+      "anom_cluster_voters": 165389,
+      "anom_cluster_votes_party": 85875,
+      "total_voters": 476738,
+      "separated": true
+    }
+  },
+  {
+    "sample": "WA2024 SENATE",
+    "district": "STATEWIDE",
+    "n": 7822,
+    "registered": 5017611,
+    "ballots": 3961561,
+    "turnout": 78.95313128100206,
+    "leader": "votes:DEM",
+    "weighted_r_rep": -0.10444535570753179,
+    "county_demeaned_r_rep": 0.010193561391478726,
+    "tail": {
+      "party": "DEM",
+      "t_cut": 92.76807980049875,
+      "t_cut_source": "own_q995",
+      "mode": 83.25,
+      "sigma": 7.978791008009295,
+      "total_votes_party": 2252575,
+      "tail_voters": 18832,
+      "tail_votes_party": 14360,
+      "tail_share_of_party": 0.6374926473036414,
+      "observed_share_pct": 56.86079300558542,
+      "honest_share_pct": 56.76816742920956
+    },
+    "mixture": {
+      "party": "DEM",
+      "weight_anom": 0.5407893352096289,
+      "mean_anom": [
+        81.23455280384303,
+        47.158616452100674
+      ],
+      "mean_main": [
+        76.28295847431095,
+        67.67211565783047
+      ],
+      "anom_cluster_voters": 2738154,
+      "anom_cluster_votes_party": 1035247,
+      "total_voters": 5017611,
+      "separated": false
+    }
+  },
+  {
+    "sample": "WV2024 HOUSE",
+    "district": "001",
+    "n": 858,
+    "registered": 572206,
+    "ballots": 357168,
+    "turnout": 62.41947829977316,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.1642902857739532,
+    "county_demeaned_r_rep": 0.316761958261091,
+    "tail": {
+      "party": "REP",
+      "t_cut": 76.92307692307692,
+      "t_cut_source": "own_q995",
+      "mode": 66.75,
+      "sigma": 7.669203701101767,
+      "total_votes_party": 220840,
+      "tail_voters": 865,
+      "tail_votes_party": 438,
+      "tail_share_of_party": 0.1983336352110125,
+      "observed_share_pct": 61.83084710836357,
+      "honest_share_pct": 61.858025332371604
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.70884143141183,
+      "mean_anom": [
+        64.23888065330745,
+        66.59365369398269
+      ],
+      "mean_main": [
+        57.915265566865216,
+        49.15633916698144
+      ],
+      "anom_cluster_voters": 426633,
+      "anom_cluster_votes_party": 182717,
+      "total_voters": 572206,
+      "separated": true
+    }
+  },
+  {
+    "sample": "WV2024 HOUSE",
+    "district": "002",
+    "n": 755,
+    "registered": 615780,
+    "ballots": 401869,
+    "turnout": 65.26178180519017,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.34764872328678376,
+    "county_demeaned_r_rep": 0.3414664871351115,
+    "tail": {
+      "party": "REP",
+      "t_cut": 79.54545454545455,
+      "t_cut_source": "own_q995",
+      "mode": 69.25,
+      "sigma": 7.085300952393892,
+      "total_votes_party": 268190,
+      "tail_voters": 2911,
+      "tail_votes_party": 2070,
+      "tail_share_of_party": 0.7718408590924345,
+      "observed_share_pct": 66.73567754666321,
+      "honest_share_pct": 66.70376330340537
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.7219530978418012,
+      "mean_anom": [
+        67.10137671999316,
+        70.63913168120942
+      ],
+      "mean_main": [
+        60.464090750777764,
+        54.82705328824052
+      ],
+      "anom_cluster_voters": 485837,
+      "anom_cluster_votes_party": 229551,
+      "total_voters": 615780,
+      "separated": true
+    }
+  },
+  {
+    "sample": "WV2024 SENATE",
+    "district": "STATEWIDE",
+    "n": 1613,
+    "registered": 1187986,
+    "ballots": 759037,
+    "turnout": 63.89275631194307,
+    "leader": "votes:REP",
+    "weighted_r_rep": 0.2003816409289978,
+    "county_demeaned_r_rep": 0.2494422473790485,
+    "tail": {
+      "party": "REP",
+      "t_cut": 78.89039242219215,
+      "t_cut_source": "own_q995",
+      "mode": 68.75,
+      "sigma": 7.480722473591912,
+      "total_votes_party": 505159,
+      "tail_voters": 3057,
+      "tail_votes_party": 2224,
+      "tail_share_of_party": 0.4402574239001978,
+      "observed_share_pct": 66.55261864704883,
+      "honest_share_pct": 66.52755363898515
+    },
+    "mixture": {
+      "party": "REP",
+      "weight_anom": 0.6930226421843553,
+      "mean_anom": [
+        66.087785464441,
+        70.93816840749189
+      ],
+      "mean_main": [
+        59.07083966606077,
+        55.81177394977451
+      ],
+      "anom_cluster_voters": 883748,
+      "anom_cluster_votes_party": 415618,
+      "total_voters": 1187986,
+      "separated": true
+    }
+  }
+]

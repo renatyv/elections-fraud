@@ -1,0 +1,10 @@
+{
+  "t_cut": 92.56198347107438,
+  "clean_tail_party": 9401,
+  "injected_added_ballots_party": 45950,
+  "injected_tail_party": 156258,
+  "signal_growth": 16.621423252845442,
+  "peaks_z_clean": -1.4876971285465748,
+  "peaks_z_rounded": 0.3130234367860263,
+  "n_rounded_units": 194
+}

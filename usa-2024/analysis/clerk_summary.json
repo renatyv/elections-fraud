@@ -1,0 +1,11 @@
+{
+  "regular_contests": {
+    "US HOUSE": 435,
+    "US SENATE": 33
+  },
+  "plurality_eligible_with_two_records": 448,
+  "spoiler_bounds": 10,
+  "nonmajority_plurality": 10,
+  "source": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+  "limit": "Candidate totals and pooled write-ins; Alaska/Maine ranked choice and Louisiana majority rule excluded from plurality claims; Clerk PDF totals do not supply ranked preferences."
+}

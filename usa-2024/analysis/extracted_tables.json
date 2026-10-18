@@ -1,0 +1,826 @@
+[
+  {
+    "source": "data/raw/precinct_sources/ca_swdb/state_g24_registration_by_g24_srprec.zip",
+    "member": "state_g24_registration_by_g24_srprec.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/ca_swdb/state_g24_registration_by_g24_srprec.zip/state_g24_registration_by_g24_srprec.csv",
+    "rows": 20061,
+    "columns": 144
+  },
+  {
+    "source": "data/raw/precinct_sources/ca_swdb/state_g24_sov_data_by_g24_srprec.zip",
+    "member": "state_g24_sov_data_by_g24_srprec.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/ca_swdb/state_g24_sov_data_by_g24_srprec.zip/state_g24_sov_data_by_g24_srprec.csv",
+    "rows": 25246,
+    "columns": 76
+  },
+  {
+    "source": "data/raw/precinct_sources/ca_swdb/state_g24_sov_data_by_g24_svprec.zip",
+    "member": "state_g24_sov_data_by_g24_svprec.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/ca_swdb/state_g24_sov_data_by_g24_svprec.zip/state_g24_sov_data_by_g24_svprec.csv",
+    "rows": 51300,
+    "columns": 76
+  },
+  {
+    "source": "data/raw/precinct_sources/ca_swdb/state_g24_voters_by_g24_srprec.zip",
+    "member": "state_g24_voters_by_g24_srprec.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/ca_swdb/state_g24_voters_by_g24_srprec.zip/state_g24_voters_by_g24_srprec.csv",
+    "rows": 20061,
+    "columns": 144
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/ca2020_srprec_sov.zip",
+    "member": "state_g20_sov_data_by_g20_srprec.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/expansion_20261018/ca2020_srprec_sov.zip/state_g20_sov_data_by_g20_srprec.csv",
+    "rows": 21347,
+    "columns": 75
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Results",
+    "output": "data/extracted/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx/Results.csv.gz",
+    "rows": 4122,
+    "columns": 52
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Fields",
+    "output": "data/extracted/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx/Fields.csv.gz",
+    "rows": 73,
+    "columns": 2
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Counties",
+    "output": "data/extracted/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx/Counties.csv.gz",
+    "rows": 88,
+    "columns": 4
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Districts",
+    "output": "data/extracted/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx/Districts.csv.gz",
+    "rows": 68,
+    "columns": 7
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Notes",
+    "output": "data/extracted/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx/Notes.csv.gz",
+    "rows": 5,
+    "columns": 1
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2020_precinct_results.zip",
+    "member": "2020Gen_Precinct_Results_GIS-Ready.xlsx",
+    "sheet": "FINAL",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2020_precinct_results.zip/2020Gen_Precinct_Results_GIS-Ready/FINAL.csv.gz",
+    "rows": 7437,
+    "columns": 593
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2020_precinct_results.zip",
+    "member": "2020Gen_Precinct_Results_GIS-Ready.xlsx",
+    "sheet": "RAW",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2020_precinct_results.zip/2020Gen_Precinct_Results_GIS-Ready/RAW.csv.gz",
+    "rows": 559705,
+    "columns": 15
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2020_precinct_results.zip",
+    "member": "2020Gen_Precinct_Results_GIS-Ready.xlsx",
+    "sheet": "Candidate Codes",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2020_precinct_results.zip/2020Gen_Precinct_Results_GIS-Ready/Candidate_Codes.csv.gz",
+    "rows": 589,
+    "columns": 11
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2020_precinct_results.zip",
+    "member": "2020Gen_Precinct_Results_GIS-Ready.xlsx",
+    "sheet": "PIVOT",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2020_precinct_results.zip/2020Gen_Precinct_Results_GIS-Ready/PIVOT.csv.gz",
+    "rows": 7441,
+    "columns": 593
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2020_precinct_results.zip",
+    "member": "2020Gen_Precinct_Turnout_GIS-Ready.xlsx",
+    "sheet": "FINAL",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2020_precinct_results.zip/2020Gen_Precinct_Turnout_GIS-Ready/FINAL.csv.gz",
+    "rows": 7352,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2024_precinct_associations.xlsx",
+    "member": "",
+    "sheet": "Sheet1",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2024_precinct_associations.xlsx/Sheet1.csv.gz",
+    "rows": 237711,
+    "columns": 8
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2024_precinct_results.zip",
+    "member": "2024Gen_Precinct_Results_GIS-Ready_Federal.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2024_precinct_results.zip/2024Gen_Precinct_Results_GIS-Ready_Federal.csv",
+    "rows": 8137,
+    "columns": 45
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2024_precinct_results.zip",
+    "member": "2024Gen_Precinct_Results_GIS-Ready_Legislative.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2024_precinct_results.zip/2024Gen_Precinct_Results_GIS-Ready_Legislative.csv",
+    "rows": 8137,
+    "columns": 347
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2024_precinct_results.zip",
+    "member": "2024Gen_Precinct_Results_GIS-Ready_Measures-Statewide-Judicial.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2024_precinct_results.zip/2024Gen_Precinct_Results_GIS-Ready_Measures-Statewide-Judicial.csv",
+    "rows": 8137,
+    "columns": 165
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2024_precinct_results.zip",
+    "member": "2024Gen_Precinct_Turnout_GIS-Ready.csv",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2024_precinct_results.zip/2024Gen_Precinct_Turnout_GIS-Ready.csv",
+    "rows": 7935,
+    "columns": 3
+  },
+  {
+    "source": "data/raw/precinct_sources/expansion_20261018/wa2024_reconciliation.xlsx",
+    "member": "",
+    "sheet": "Sheet1",
+    "output": "data/extracted/precinct_sources/expansion_20261018/wa2024_reconciliation.xlsx/Sheet1.csv.gz",
+    "rows": 40,
+    "columns": 61
+  },
+  {
+    "source": "data/raw/precinct_sources/id_results/raw_races_general.xlsx",
+    "member": "",
+    "sheet": "raw_races",
+    "output": "data/extracted/precinct_sources/id_results/raw_races_general.xlsx/raw_races.csv.gz",
+    "rows": 79625,
+    "columns": 7
+  },
+  {
+    "source": "data/raw/precinct_sources/id_results/raw_stats_general.xlsx",
+    "member": "",
+    "sheet": "raw_stats",
+    "output": "data/extracted/precinct_sources/id_results/raw_stats_general.xlsx/raw_stats.csv.gz",
+    "rows": 1031,
+    "columns": 7
+  },
+  {
+    "source": "data/raw/precinct_sources/nc_registration/voter_stats_20241105.zip",
+    "member": "voter_stats_20241105.txt",
+    "sheet": "",
+    "output": "data/extracted/precinct_sources/nc_registration/voter_stats_20241105.zip/voter_stats_20241105.txt",
+    "rows": 685050,
+    "columns": 12
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "By county",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/By_county.csv.gz",
+    "rows": 69,
+    "columns": 4
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "By vote method",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/By_vote_method.csv.gz",
+    "rows": 69,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "By congressional district",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/By_congressional_district.csv.gz",
+    "rows": 19,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "By senate district",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/By_senate_district.csv.gz",
+    "rows": 52,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "By state legislative district",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/By_state_legislative_district.csv.gz",
+    "rows": 205,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "By county & party",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/By_county___party.csv.gz",
+    "rows": 69,
+    "columns": 13
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "By county & age",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/By_county___age.csv.gz",
+    "rows": 69,
+    "columns": 22
+  },
+  {
+    "source": "data/raw/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx",
+    "member": "",
+    "sheet": "Disclaimer",
+    "output": "data/extracted/precinct_sources/pa_bulk/voter%20registration%20-%20vote%20history%20summary%20-%202024%20general.xlsx/Disclaimer.csv.gz",
+    "rows": 7,
+    "columns": 1
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Albany",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Albany.csv.gz",
+    "rows": 25,
+    "columns": 68
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Big Horn",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Big_Horn.csv.gz",
+    "rows": 18,
+    "columns": 60
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Campbell",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Campbell.csv.gz",
+    "rows": 43,
+    "columns": 71
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Carbon",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Carbon.csv.gz",
+    "rows": 24,
+    "columns": 52
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Converse",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Converse.csv.gz",
+    "rows": 24,
+    "columns": 55
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Crook",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Crook.csv.gz",
+    "rows": 22,
+    "columns": 51
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Fremont",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Fremont.csv.gz",
+    "rows": 1013,
+    "columns": 77
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Goshen",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Goshen.csv.gz",
+    "rows": 995,
+    "columns": 51
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Hot Springs",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Hot_Springs.csv.gz",
+    "rows": 10,
+    "columns": 52
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Johnson",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Johnson.csv.gz",
+    "rows": 21,
+    "columns": 47
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Laramie",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Laramie.csv.gz",
+    "rows": 990,
+    "columns": 102
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Lincoln",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Lincoln.csv.gz",
+    "rows": 20,
+    "columns": 67
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Natrona",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Natrona.csv.gz",
+    "rows": 1027,
+    "columns": 99
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Niobrara",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Niobrara.csv.gz",
+    "rows": 11,
+    "columns": 47
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Park",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Park.csv.gz",
+    "rows": 27,
+    "columns": 72
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Platte",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Platte.csv.gz",
+    "rows": 13,
+    "columns": 52
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Sheridan",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Sheridan.csv.gz",
+    "rows": 34,
+    "columns": 60
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Sublette",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Sublette.csv.gz",
+    "rows": 13,
+    "columns": 55
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Sweetwater",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Sweetwater.csv.gz",
+    "rows": 41,
+    "columns": 82
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Teton",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Teton.csv.gz",
+    "rows": 996,
+    "columns": 63
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Uinta",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Uinta.csv.gz",
+    "rows": 15,
+    "columns": 59
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Washakie",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Washakie.csv.gz",
+    "rows": 10,
+    "columns": 51
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP - OFFICIAL.xlsx",
+    "sheet": "Weston",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_-_OFFICIAL/Weston.csv.gz",
+    "rows": 13,
+    "columns": 55
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Albany",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Albany.csv.gz",
+    "rows": 997,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Big Horn",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Big_Horn.csv.gz",
+    "rows": 999,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Campbell",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Campbell.csv.gz",
+    "rows": 1023,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Carbon",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Carbon.csv.gz",
+    "rows": 1005,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Converse",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Converse.csv.gz",
+    "rows": 1005,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Crook",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Crook.csv.gz",
+    "rows": 1003,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Fremont",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Fremont.csv.gz",
+    "rows": 1018,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Goshen",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Goshen.csv.gz",
+    "rows": 1000,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Hot Springs",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Hot_Springs.csv.gz",
+    "rows": 991,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Johnson",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Johnson.csv.gz",
+    "rows": 1002,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Laramie",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Laramie.csv.gz",
+    "rows": 1026,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Lincoln",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Lincoln.csv.gz",
+    "rows": 1001,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Natrona",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Natrona.csv.gz",
+    "rows": 1032,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Niobrara",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Niobrara.csv.gz",
+    "rows": 992,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Park",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Park.csv.gz",
+    "rows": 1008,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Platte",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Platte.csv.gz",
+    "rows": 994,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Sheridan",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Sheridan.csv.gz",
+    "rows": 1015,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Sublette",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Sublette.csv.gz",
+    "rows": 994,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Sweetwater",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Sweetwater.csv.gz",
+    "rows": 1021,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Teton",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Teton.csv.gz",
+    "rows": 1003,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Uinta",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Uinta.csv.gz",
+    "rows": 996,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Washakie",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Washakie.csv.gz",
+    "rows": 991,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 County General PbP TBC - OFFICIAL.xlsx",
+    "sheet": "Weston",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_County_General_PbP_TBC_-_OFFICIAL/Weston.csv.gz",
+    "rows": 994,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "Statewide Senate Odd",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/Statewide_Senate_Odd.csv.gz",
+    "rows": 1002,
+    "columns": 146
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "Statewide Total Ballots Cast",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/Statewide_Total_Ballots_Cast.csv.gz",
+    "rows": 1000,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "Statewide Candidates",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/Statewide_Candidates.csv.gz",
+    "rows": 1001,
+    "columns": 19
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "Statewide Senate Even",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/Statewide_Senate_Even.csv.gz",
+    "rows": 1001,
+    "columns": 64
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "Statewide House",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/Statewide_House.csv.gz",
+    "rows": 1001,
+    "columns": 264
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "BLANKSS",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/BLANKSS.csv.gz",
+    "rows": 1000,
+    "columns": 64
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "BLANKSH",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/BLANKSH.csv.gz",
+    "rows": 1000,
+    "columns": 264
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "Statewide Judicial",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/Statewide_Judicial.csv.gz",
+    "rows": 998,
+    "columns": 121
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "Statewide Ballot Issue",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/Statewide_Ballot_Issue.csv.gz",
+    "rows": 34,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "BLANKJR",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/BLANKJR.csv.gz",
+    "rows": 999,
+    "columns": 121
+  },
+  {
+    "source": "data/raw/precinct_sources/wy_results/2024_Wyoming_General_Results.zip",
+    "member": "2024 General Results Summaries - OFFICIAL.xlsx",
+    "sheet": "BLANKSBI",
+    "output": "data/extracted/precinct_sources/wy_results/2024_Wyoming_General_Results.zip/2024_General_Results_Summaries_-_OFFICIAL/BLANKSBI.csv.gz",
+    "rows": 36,
+    "columns": 5
+  },
+  {
+    "source": "data/raw/eavs2024_codebook.xlsx",
+    "member": "",
+    "sheet": "Variables",
+    "output": "data/extracted/eavs2024_codebook.xlsx/Variables.csv.gz",
+    "rows": 536,
+    "columns": 9
+  },
+  {
+    "source": "data/raw/eavs2024_codebook.xlsx",
+    "member": "",
+    "sheet": "Value Labels",
+    "output": "data/extracted/eavs2024_codebook.xlsx/Value_Labels.csv.gz",
+    "rows": 437,
+    "columns": 3
+  },
+  {
+    "source": "data/raw/mn2020_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Notes",
+    "output": "data/extracted/mn2020_official_precinct.xlsx/Notes.csv.gz",
+    "rows": 2,
+    "columns": 1
+  },
+  {
+    "source": "data/raw/mn2020_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Precinct-Results",
+    "output": "data/extracted/mn2020_official_precinct.xlsx/Precinct-Results.csv.gz",
+    "rows": 4162,
+    "columns": 61
+  },
+  {
+    "source": "data/raw/mn2020_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Fields",
+    "output": "data/extracted/mn2020_official_precinct.xlsx/Fields.csv.gz",
+    "rows": 73,
+    "columns": 16383
+  },
+  {
+    "source": "data/raw/mn2020_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Counties",
+    "output": "data/extracted/mn2020_official_precinct.xlsx/Counties.csv.gz",
+    "rows": 89,
+    "columns": 3
+  },
+  {
+    "source": "data/raw/mn2020_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Districts",
+    "output": "data/extracted/mn2020_official_precinct.xlsx/Districts.csv.gz",
+    "rows": 65,
+    "columns": 7
+  },
+  {
+    "source": "data/raw/mn2020_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Voting-Equipment-by-County",
+    "output": "data/extracted/mn2020_official_precinct.xlsx/Voting-Equipment-by-County.csv.gz",
+    "rows": 89,
+    "columns": 4
+  },
+  {
+    "source": "data/raw/mn2024_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Notes",
+    "output": "data/extracted/mn2024_official_precinct.xlsx/Notes.csv.gz",
+    "rows": 2,
+    "columns": 1
+  },
+  {
+    "source": "data/raw/mn2024_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Precinct-Results",
+    "output": "data/extracted/mn2024_official_precinct.xlsx/Precinct-Results.csv.gz",
+    "rows": 4105,
+    "columns": 57
+  },
+  {
+    "source": "data/raw/mn2024_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Fields",
+    "output": "data/extracted/mn2024_official_precinct.xlsx/Fields.csv.gz",
+    "rows": 59,
+    "columns": 2
+  },
+  {
+    "source": "data/raw/mn2024_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Counties",
+    "output": "data/extracted/mn2024_official_precinct.xlsx/Counties.csv.gz",
+    "rows": 89,
+    "columns": 3
+  },
+  {
+    "source": "data/raw/mn2024_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Districts",
+    "output": "data/extracted/mn2024_official_precinct.xlsx/Districts.csv.gz",
+    "rows": 67,
+    "columns": 7
+  },
+  {
+    "source": "data/raw/mn2024_official_precinct.xlsx",
+    "member": "",
+    "sheet": "Voting-Equipment-by-County",
+    "output": "data/extracted/mn2024_official_precinct.xlsx/Voting-Equipment-by-County.csv.gz",
+    "rows": 89,
+    "columns": 4
+  }
+]

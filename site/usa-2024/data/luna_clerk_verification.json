@@ -1,0 +1,144 @@
+{
+  "model": "openai/gpt-6-luna",
+  "reasoning": "low",
+  "sha256": "d4ba800fc17135b616ae556c92861080ab962d95916ace34b546c5aac824aec4",
+  "pages": [
+    6,
+    13,
+    27,
+    36,
+    43,
+    44,
+    54,
+    57,
+    59,
+    61,
+    78
+  ],
+  "extraction": {
+    "races": [
+      {
+        "state_po": "AZ",
+        "office": "US HOUSE",
+        "district": "006",
+        "winner_votes": 215596,
+        "runner_up_votes": 204774,
+        "margin": 10822,
+        "other_votes": 10850
+      },
+      {
+        "state_po": "AZ",
+        "office": "US SENATE",
+        "district": "STATEWIDE",
+        "winner_votes": 1676335,
+        "runner_up_votes": 1595761,
+        "margin": 80574,
+        "other_votes": 76718
+      },
+      {
+        "state_po": "CO",
+        "office": "US HOUSE",
+        "district": "008",
+        "winner_votes": 163320,
+        "runner_up_votes": 160871,
+        "margin": 2449,
+        "other_votes": 9425
+      },
+      {
+        "state_po": "IA",
+        "office": "US HOUSE",
+        "district": "001",
+        "winner_votes": 206955,
+        "runner_up_votes": 206156,
+        "margin": 799,
+        "other_votes": 967
+      },
+      {
+        "state_po": "MI",
+        "office": "US SENATE",
+        "district": "STATEWIDE",
+        "winner_votes": 2712686,
+        "runner_up_votes": 2693680,
+        "margin": 19006,
+        "other_votes": 170821
+      },
+      {
+        "state_po": "NC",
+        "office": "US HOUSE",
+        "district": "001",
+        "winner_votes": 186341,
+        "runner_up_votes": 180034,
+        "margin": 6307,
+        "other_votes": 9949
+      },
+      {
+        "state_po": "NV",
+        "office": "US SENATE",
+        "district": "STATEWIDE",
+        "winner_votes": 701105,
+        "runner_up_votes": 677046,
+        "margin": 24059,
+        "other_votes": 42197
+      },
+      {
+        "state_po": "OH",
+        "office": "US HOUSE",
+        "district": "009",
+        "winner_votes": 181098,
+        "runner_up_votes": 178716,
+        "margin": 2382,
+        "other_votes": 15381
+      },
+      {
+        "state_po": "OR",
+        "office": "US HOUSE",
+        "district": "005",
+        "winner_votes": 191365,
+        "runner_up_votes": 180420,
+        "margin": 10945,
+        "other_votes": 29508
+      },
+      {
+        "state_po": "PA",
+        "office": "US SENATE",
+        "district": "STATEWIDE",
+        "winner_votes": 3399295,
+        "runner_up_votes": 3384180,
+        "margin": 15115,
+        "other_votes": 179662
+      },
+      {
+        "state_po": "WI",
+        "office": "US SENATE",
+        "district": "STATEWIDE",
+        "winner_votes": 1672777,
+        "runner_up_votes": 1643996,
+        "margin": 28781,
+        "other_votes": 74014
+      }
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 49610,
+    "completion_tokens": 927,
+    "total_tokens": 50537,
+    "cost": 0.006664675,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 49607,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.006664675,
+      "upstream_inference_prompt_cost": 0.006201175,
+      "upstream_inference_completions_cost": 0.0004635
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 476,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

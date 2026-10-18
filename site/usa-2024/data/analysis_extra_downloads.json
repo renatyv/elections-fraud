@@ -1,0 +1,30 @@
+[
+  {
+    "file": "mn2020_official_precinct.xlsx",
+    "url": "https://www.sos.mn.gov/media/4373/2020-general-federal-state-results-by-precinct-official.xlsx",
+    "download_date": "2026-10-17",
+    "bytes": 1396119,
+    "sha256": "ea2b7a7c9c8203f56f44d94dede6b2df398eb1f590bf35e527431fba6021517a"
+  },
+  {
+    "file": "mn2024_post_election_review.pdf",
+    "url": "https://www.sos.mn.gov/media/ixzn1dkx/2024-post-election-review-results.pdf",
+    "download_date": "2026-10-17",
+    "bytes": 1642847,
+    "sha256": "5bc0e90c33dbbeff92167a6113231e4a6d2e54f8311c79a83b35e1e3051cccfc"
+  },
+  {
+    "file": "md2024_official_results.csv",
+    "url": "https://elections.maryland.gov/elections/archive/2024/election_data/PG24_AllPrecincts.csv",
+    "download_date": "2026-10-17",
+    "bytes": 17317785,
+    "sha256": "fa25069f8504691c03528c70c2a76240b06514ab54b491fd624229867018aacc"
+  },
+  {
+    "file": "clerk_statistics2024.pdf",
+    "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+    "download_date": "2026-10-17",
+    "bytes": 608100,
+    "sha256": "d4ba800fc17135b616ae556c92861080ab962d95916ace34b546c5aac824aec4"
+  }
+]

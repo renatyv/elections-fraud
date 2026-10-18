@@ -1,0 +1,11 @@
+state_po,office,district,winner,runner_up,winner_votes,runner_up_votes,total,margin,other_votes,plurality_eligible,below_majority,spoiler_capacity,minimum_transfer_if_rest_abstain,minimum_transfer_if_rest_back_leader,runner_up_fraction_if_rest_abstain_pct
+AZ,US HOUSE,006,Juan Ciscomani,Kirsten Engel,215596,204774,431220,10822,10850,True,True,True,10823,10837,99.75
+CO,US HOUSE,008,Gabe Evans,Yadira Caraveo,163320,160871,333616,2449,9425,True,True,True,2450,5938,25.99
+IA,US HOUSE,001,Mariannette Miller-Meeks,Christina Bohannan,206955,206156,414078,799,967,True,True,True,800,884,82.73
+MI,US SENATE,STATEWIDE,Elissa Slotkin,Mike Rogers,2712686,2693680,5577187,19006,170821,True,True,True,19007,94914,11.13
+NC,US HOUSE,001,Donald G. Davis,Laurie Buckhout,186341,180034,376324,6307,9949,True,True,True,6308,8129,63.4
+NV,US SENATE,STATEWIDE,Jacky Rosen,Sam Brown,701105,677046,1420348,24059,42197,True,True,True,24060,33129,57.02
+OH,US HOUSE,009,Marcy Kaptur,Derek Merrin,181098,178716,375195,2382,15381,True,True,True,2383,8882,15.49
+OR,US HOUSE,005,Janelle S. Bynum,Lori Chavez-DeRemer,191365,180420,401293,10945,29508,True,True,True,10946,20227,37.1
+PA,US SENATE,STATEWIDE,Dave McCormick,Robert P. Casey,3399295,3384180,6963137,15115,179662,True,True,True,15116,97389,8.41
+WI,US SENATE,STATEWIDE,Tammy Baldwin,Eric Hovde,1672777,1643996,3390787,28781,74014,True,True,True,28782,51398,38.89

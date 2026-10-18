@@ -1,0 +1,5 @@
+file,url,download_date,bytes,sha256
+usa-2024/data/raw/mn2024_official_precinct.xlsx,https://sos.mn.gov/media/yt3llxwd/2024-general-federal-state-results-by-precinct-official.xlsx,2026-10-17,1296820,13adf003bfabf1a19e4c47dc7fe100d8862cd22186b1f6ae0f52a721a5b57459
+usa-2024/data/raw/md2024_official_precinct_turnout.csv,https://elections.maryland.gov/press_room/2024_stats/PG24/Updated-Official_by_Party_and_Precinct.csv,2026-10-17,743683,e0bcb64c8d6ad8c6fe7a63d5b4adaf177a0365f457f83a9ca1367b569a30290b
+usa-2024/data/raw/kaggle_king_county_2024.zip,https://www.kaggle.com/api/v1/datasets/download/irakozekelly/november-2024-general-election-precinct-results,2026-10-17,2754042,9dfc7643342758116104374bf688266a45d69c8c7a4c216ab70cbf4ea8d61cc3
+usa-2024/data/raw/wa_king2024_official_final.csv,https://data.kingcounty.gov/api/views/uuda-pmuy/rows.csv?accessType=DOWNLOAD,2026-10-17,46413565,0d24fb6a52d393c6f1de349759ab72c499c7624bee98b682d85d9549deea6bf2

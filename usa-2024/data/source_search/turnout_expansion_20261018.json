@@ -1,0 +1,258 @@
+[
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wa2024_precinct_results.zip",
+    "url": "https://www.sos.wa.gov/sites/default/files/2025-01/2024Gen_Precinct_Results_GIS-Ready.zip",
+    "source_page": "https://www.sos.wa.gov/vi/node/12933",
+    "retrieved_at_utc": "2026-10-18T09:05:39.812258+00:00",
+    "members": [
+      "2024Gen_Precinct_Results_GIS-Ready_Federal.csv",
+      "2024Gen_Precinct_Results_GIS-Ready_Legislative.csv",
+      "2024Gen_Precinct_Results_GIS-Ready_Measures-Statewide-Judicial.csv",
+      "2024Gen_Precinct_Turnout_GIS-Ready.csv"
+    ],
+    "status": "downloaded",
+    "bytes": 991917,
+    "sha256": "451ed498b42e7c409e5fc5615b92e802a9c3a00d2832c9ffccafd697e34f8db9",
+    "resolved_url": "https://www.sos.wa.gov/sites/default/files/2025-01/2024Gen_Precinct_Results_GIS-Ready.zip"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wa2024_reconciliation.xlsx",
+    "url": "https://www.sos.wa.gov/sites/default/files/2024-12/2024%20General%20Reconciliation.xlsx",
+    "source_page": "https://www.sos.wa.gov/vi/node/12933",
+    "retrieved_at_utc": "2026-10-18T09:05:39.814268+00:00",
+    "members": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "xl/workbook.xml",
+      "xl/_rels/workbook.xml.rels",
+      "xl/worksheets/sheet1.xml",
+      "xl/theme/theme1.xml",
+      "xl/styles.xml",
+      "xl/sharedStrings.xml",
+      "docProps/core.xml",
+      "docProps/app.xml"
+    ],
+    "status": "downloaded",
+    "bytes": 23479,
+    "sha256": "88a8b991394f32419683e45ca39dcce22e4edead9bf58d38bfc4b11afdacf44c",
+    "resolved_url": "https://www.sos.wa.gov/sites/default/files/2024-12/2024%20General%20Reconciliation.xlsx"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wa2024_precinct_associations.xlsx",
+    "url": "https://www.sos.wa.gov/sites/default/files/2026-01/2024-11-01-Districts_Precincts.xlsx",
+    "source_page": "https://www.sos.wa.gov/vi/node/12933",
+    "retrieved_at_utc": "2026-10-18T09:05:39.814604+00:00",
+    "members": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "xl/workbook.xml",
+      "xl/_rels/workbook.xml.rels",
+      "xl/worksheets/sheet1.xml",
+      "xl/theme/theme1.xml",
+      "xl/styles.xml",
+      "xl/sharedStrings.xml",
+      "docProps/core.xml",
+      "docProps/app.xml"
+    ],
+    "status": "downloaded",
+    "bytes": 8846652,
+    "sha256": "cd42d714c63d69364872df3b30648599d7b133738baa8f28ba2047c57cca1e07",
+    "resolved_url": "https://www.sos.wa.gov/sites/default/files/2026-01/2024-11-01-Districts_Precincts.xlsx"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/ca2020_srprec_sov.zip",
+    "url": "https://statewidedatabase.org/pub/data/G20/state/state_g20_sov_data_by_g20_srprec.zip",
+    "source_page": "https://statewidedatabase.org/pub/data/G20/state/",
+    "retrieved_at_utc": "2026-10-18T09:05:39.818101+00:00",
+    "members": [
+      "state_g20_sov_data_by_g20_srprec.csv"
+    ],
+    "status": "downloaded",
+    "bytes": 4709553,
+    "sha256": "54fa714d9d33b8b562fe08c299c0cdbd8454c8ab95882303491524af3ae58779",
+    "resolved_url": "https://statewidedatabase.org/pub/data/G20/state/state_g20_sov_data_by_g20_srprec.zip"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/mn2016_official_precinct.xlsx",
+    "url": "https://www.sos.mn.gov/media/2806/2016-general-federal-state-results-by-precinct-official.xlsx",
+    "source_page": "https://www.sos.mn.gov/elections-voting/election-results/2016/2016-general-election-results/2016-precinct-results-spreadsheet/",
+    "retrieved_at_utc": "2026-10-18T09:05:40.391224+00:00",
+    "members": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "xl/_rels/workbook.xml.rels",
+      "xl/workbook.xml",
+      "xl/worksheets/sheet4.xml",
+      "xl/worksheets/sheet2.xml",
+      "xl/worksheets/_rels/sheet1.xml.rels",
+      "xl/worksheets/_rels/sheet2.xml.rels",
+      "xl/worksheets/_rels/sheet4.xml.rels",
+      "xl/worksheets/sheet3.xml",
+      "xl/worksheets/sheet1.xml",
+      "xl/worksheets/sheet5.xml",
+      "xl/theme/theme1.xml",
+      "xl/styles.xml",
+      "xl/sharedStrings.xml",
+      "xl/printerSettings/printerSettings3.bin",
+      "xl/printerSettings/printerSettings2.bin",
+      "docProps/app.xml",
+      "docProps/core.xml",
+      "xl/printerSettings/printerSettings1.bin"
+    ],
+    "status": "downloaded",
+    "bytes": 1195229,
+    "sha256": "1f2c36c544304de67ea9a0fcf5797a734f54a9ed69ecb15346ddd33be5b9e00a",
+    "resolved_url": "https://www.sos.mn.gov/media/2806/2016-general-federal-state-results-by-precinct-official.xlsx"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/va2024_turnout.csv",
+    "url": "https://enr.elections.virginia.gov/cdn/results/d2c804ee-4ec2-46bb-91d7-5b41526eab03/Election%20Turnout_bb03ef46-1af5-4f14-86a8-ead1b9094036.csv",
+    "source_page": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2024NovemberGeneral/reports",
+    "retrieved_at_utc": "2026-10-18T09:05:40.564061+00:00",
+    "status": "failed",
+    "error": "curl: (56) The requested URL returned error: 404"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/nm2024_turnout.html",
+    "url": "https://electionresults.sos.nm.gov/VoterTurnoutDetails.aspx?eid=2882",
+    "source_page": "https://www.sos.nm.gov/sos-archive/election-results-archive/2024-election-results/",
+    "retrieved_at_utc": "2026-10-18T09:05:41.514516+00:00",
+    "status": "failed",
+    "error": "curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wa2020_precinct_results.zip",
+    "url": "https://www.sos.wa.gov/sites/default/files/2024-02/2020Gen_Precinct_Results_GIS-Ready.zip",
+    "source_page": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets/2020-general-election-data",
+    "retrieved_at_utc": "2026-10-18T09:06:58.779772+00:00",
+    "members": [
+      "2020Gen_Precinct_Results_GIS-Ready.xlsx",
+      "2020Gen_Precinct_Turnout_GIS-Ready.xlsx",
+      "Readme2020General.pdf"
+    ],
+    "status": "downloaded",
+    "bytes": 49398384,
+    "sha256": "39e58cbb420c2588b8e257f114d3a3d10b63ad14e4fb7b234d78f3226a0b912e",
+    "resolved_url": "https://www.sos.wa.gov/sites/default/files/2024-02/2020Gen_Precinct_Results_GIS-Ready.zip"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wa_king2020_final.csv",
+    "url": "https://data.kingcounty.gov/api/views/2824-fjrn/rows.csv?accessType=DOWNLOAD",
+    "source_page": "https://data.kingcounty.gov/Voting-Elections/November-2020-General-Final-Precinct-Results/2824-fjrn",
+    "retrieved_at_utc": "2026-10-18T09:06:58.781576+00:00",
+    "status": "failed",
+    "error": "curl: (28) Operation timed out after 100005 milliseconds with 27095526 bytes received"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/oh2024_statewide_precinct.xlsx",
+    "url": "https://www.ohiosos.gov/globalassets/elections/2024/gen/official/statewide-races-precinct-level.xlsx",
+    "source_page": "https://www.ohiosos.gov/elections/election-results-and-data/2024-official-election-results/",
+    "retrieved_at_utc": "2026-10-18T09:06:58.783255+00:00",
+    "status": "failed",
+    "error": "curl: (56) The requested URL returned error: 403"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/ca2020_errata.txt",
+    "url": "https://statewidedatabase.org/d10/g20_problems.txt",
+    "source_page": "https://statewidedatabase.org/d10/g20_problems.txt",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.881583+00:00",
+    "bytes": 14526,
+    "sha256": "eea2881367b4edad46209fa54d0dcf2f626b38c12c45bd60a84c728f0cac6bb3",
+    "kind": "publisher_caveats"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wa_source_page.html",
+    "url": "https://www.sos.wa.gov/vi/node/12933",
+    "source_page": "https://www.sos.wa.gov/vi/node/12933",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.881759+00:00",
+    "bytes": 170437,
+    "sha256": "a2f4dc9aa1fd2415e801580ab6aca75d11458b3b66dc9dc59fc98d032bfe2d63",
+    "kind": "source_page"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wa20_source_page.html",
+    "url": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets/2020-general-election-data",
+    "source_page": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets/2020-general-election-data",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.881912+00:00",
+    "bytes": 194293,
+    "sha256": "0df76ac1f0340b07763c82260b803660113692264eb9fa529a2989b6114d86d1",
+    "kind": "source_page"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/mn16_source_page.html",
+    "url": "https://www.sos.mn.gov/elections-voting/election-results/2016/2016-general-election-results/2016-precinct-results-spreadsheet/",
+    "source_page": "https://www.sos.mn.gov/elections-voting/election-results/2016/2016-general-election-results/2016-precinct-results-spreadsheet/",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882046+00:00",
+    "bytes": 43193,
+    "sha256": "ec6fbed32c53c3ac39bd163046c14616f2401aba75ce9c75848168042f6fdef8",
+    "kind": "source_page"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/ca20_source_page.html",
+    "url": "https://statewidedatabase.org/pub/data/G20/state/",
+    "source_page": "https://statewidedatabase.org/pub/data/G20/state/",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882113+00:00",
+    "bytes": 14836,
+    "sha256": "e64e67ca4fd14edd9c39a65cd7a94d36d27e27397179bd5a9bac6da47a0dd094",
+    "kind": "source_page"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/id20_source_page.html",
+    "url": "https://voteidaho.gov/election-results/2020-election-results/",
+    "source_page": "https://voteidaho.gov/election-results/2020-election-results/",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882204+00:00",
+    "bytes": 457079,
+    "sha256": "70483ef2d97239cb4b342f663a6b2543f5d6ba18f35cee99cf76b9039e2c9198",
+    "kind": "source_page"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/wv_source_page.html",
+    "url": "https://sos.wv.gov/elections/election-data/historical-election-results-and-turnout",
+    "source_page": "https://sos.wv.gov/elections/election-data/historical-election-results-and-turnout",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882460+00:00",
+    "bytes": 102877,
+    "sha256": "1d9ea27471622283fd7bfb1cd6ceb39efcd4bdd7b4267bc53c71d114f22215da",
+    "kind": "source_page"
+  },
+  {
+    "name": "data/raw/precinct_sources/expansion_20261018/va_source_page.html",
+    "url": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2024NovemberGeneral/reports",
+    "source_page": "https://enr.elections.virginia.gov/results/public/Virginia/elections/2024NovemberGeneral/reports",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882556+00:00",
+    "bytes": 13961,
+    "sha256": "fc19c7d8e6f8498095aa1b4e23bb64b17132d97291d1b3fbc06812143dd0cb14",
+    "kind": "source_page"
+  },
+  {
+    "name": "ia2024_frontend",
+    "url": "https://electionresults.iowa.gov/IA/122322/web.345435/",
+    "source_page": "https://electionresults.iowa.gov/IA/122322/web.345435/",
+    "status": "failed",
+    "error": "HTTP 403",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882568+00:00"
+  },
+  {
+    "name": "ia2024_clarity_frontend",
+    "url": "https://results.enr.clarityelections.com/IA/122322/web.345435/",
+    "source_page": "https://results.enr.clarityelections.com/IA/122322/web.345435/",
+    "status": "failed",
+    "error": "HTTP 403",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882570+00:00"
+  },
+  {
+    "name": "wv2024_clarity_frontend",
+    "url": "https://results.enr.clarityelections.com/WV/122766/web.345435/",
+    "source_page": "https://results.enr.clarityelections.com/WV/122766/web.345435/",
+    "status": "failed",
+    "error": "HTTP 403",
+    "retrieved_at_utc": "2026-10-18T09:09:24.882572+00:00"
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "requested_model": "openai/gpt-6-luna",
+  "returned_model": "openai/gpt-6-luna",
+  "reasoning": "low",
+  "source_sha256": "5bc0e90c33dbbeff92167a6113231e4a6d2e54f8311c79a83b35e1e3051cccfc",
+  "pages": [
+    1,
+    4,
+    5
+  ],
+  "extraction": {
+    "pages": [
+      {
+        "page": 1,
+        "tables": [
+          {
+            "precinct": "0150 - PALISADE",
+            "county": "Aitkin County",
+            "office": "U.S. President & Vice President",
+            "machine": 81,
+            "hand": 81,
+            "raw_difference": 0,
+            "explained_difference": 0,
+            "adjusted_difference": 0,
+            "status": "ACCEPTABLE"
+          }
+        ]
+      },
+      {
+        "page": 4,
+        "tables": [
+          {
+            "precinct": "0215 - WEALTHWOOD TWP",
+            "county": "Aitkin County",
+            "office": "U.S. Senator",
+            "machine": 209,
+            "hand": 209,
+            "raw_difference": 0,
+            "explained_difference": 0,
+            "adjusted_difference": 0,
+            "status": "ACCEPTABLE"
+          },
+          {
+            "precinct": "0215 - WEALTHWOOD TWP",
+            "county": "Aitkin County",
+            "office": "U.S. Representative District 8",
+            "machine": 209,
+            "hand": 209,
+            "raw_difference": 2,
+            "explained_difference": 2,
+            "adjusted_difference": 0,
+            "status": "ACCEPTABLE"
+          }
+        ]
+      },
+      {
+        "page": 5,
+        "tables": [
+          {
+            "precinct": "0030 - ANDOVER P-6",
+            "county": "Anoka County",
+            "office": "U.S. President & Vice President",
+            "machine": 2369,
+            "hand": 2369,
+            "raw_difference": 2,
+            "explained_difference": 2,
+            "adjusted_difference": 0,
+            "status": "ACCEPTABLE"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 9153,
+    "completion_tokens": 407,
+    "total_tokens": 9560,
+    "cost": 0.00134755,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 9150,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00134755,
+      "upstream_inference_prompt_cost": 0.00114405,
+      "upstream_inference_completions_cost": 0.0002035
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 134,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

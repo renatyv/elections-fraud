@@ -1,0 +1,1402 @@
+state_po,office,district,special,candidate,votes,labels,pdf_pages
+AK,US HOUSE,001,False,Eric Hafner,3417.0,"Eric Hafner, Democrat",4
+AK,US HOUSE,001,False,John Wayne Howe,13010.0,"John Wayne Howe, Independence",4
+AK,US HOUSE,001,False,Mary Sattler Peltola,152828.0,"Mary Sattler Peltola, Democrat",4
+AK,US HOUSE,001,False,Nick Begich,159550.0,"Nick Begich, Republican",4
+AK,US HOUSE,001,False,Write-in,750.0,Write-in,4
+AL,US HOUSE,001,False,Barry Moore,258619.0,"Barry Moore, Republican",3
+AL,US HOUSE,001,False,Tom Holmes,70929.0,"Tom Holmes, Democrat",3
+AL,US HOUSE,001,False,Write-in,306.0,Write-in,3
+AL,US HOUSE,002,False,Caroleene Dobson,131414.0,"Caroleene Dobson, Republican",3
+AL,US HOUSE,002,False,Shomari Figures,158041.0,"Shomari Figures, Democrat",3
+AL,US HOUSE,002,False,Write-in,219.0,Write-in,3
+AL,US HOUSE,003,False,Mike Rogers,243848.0,"Mike Rogers, Republican",3
+AL,US HOUSE,003,False,Write-in,5160.0,Write-in,3
+AL,US HOUSE,004,False,Robert B. Aderholt,274498.0,"Robert B. Aderholt, Republican",3
+AL,US HOUSE,004,False,Write-in,3374.0,Write-in,3
+AL,US HOUSE,005,False,Dale W. Strong,250322.0,"Dale W. Strong, Republican",3
+AL,US HOUSE,005,False,Write-in,12088.0,Write-in,3
+AL,US HOUSE,006,False,Elizabeth Anderson,102504.0,"Elizabeth Anderson, Democrat",3
+AL,US HOUSE,006,False,Gary J. Palmer,243741.0,"Gary J. Palmer, Republican",3
+AL,US HOUSE,006,False,Write-in,380.0,Write-in,3
+AL,US HOUSE,007,False,Robin Litaker,106312.0,"Robin Litaker, Republican",3
+AL,US HOUSE,007,False,Terri A. Sewell,186723.0,"Terri A. Sewell, Democrat",3
+AL,US HOUSE,007,False,Write-in,185.0,Write-in,3
+AR,US HOUSE,001,False,Eric A. “Rick” Crawford,194711.0,"Eric A. “Rick” Crawford, Republican",8
+AR,US HOUSE,001,False,Rodney Govens,64113.0,"Rodney Govens, Democrat",8
+AR,US HOUSE,001,False,Steve G. Parsons,8353.0,"Steve G. Parsons, Libertarian",8
+AR,US HOUSE,002,False,J. French Hill,180509.0,"J. French Hill, Republican",8
+AR,US HOUSE,002,False,Marcus A. Jones,125777.0,"Marcus A. Jones, Democrat",8
+AR,US HOUSE,003,False,Bobby Wilson,13331.0,"Bobby Wilson, Libertarian",8
+AR,US HOUSE,003,False,Caitlin Draper,95652.0,"Caitlin Draper, Democrat",8
+AR,US HOUSE,003,False,Steve Womack,192101.0,"Steve Womack, Republican",8
+AR,US HOUSE,004,False,Bruce Westerman,197046.0,"Bruce Westerman, Republican",8
+AR,US HOUSE,004,False,Risie Howard,73207.0,"Risie Howard, Democrat",8
+AZ,US HOUSE,001,False,Amish Shah,208966.0,"Amish Shah, Democrat",6
+AZ,US HOUSE,001,False,David Schweikert,225538.0,"David Schweikert, Republican",6
+AZ,US HOUSE,002,False,Charles “Charlie” Everette Holt,5.0,"Charles “Charlie” Everette Holt, Jr., Write-in (None)",6
+AZ,US HOUSE,002,False,David Alexander,22.0,"David Alexander, Write-in (Democratic)",6
+AZ,US HOUSE,002,False,Elijah Crane,221413.0,"Elijah Crane, Republican",6
+AZ,US HOUSE,002,False,Jonathan Nez,184963.0,"Jonathan Nez, Democrat",6
+AZ,US HOUSE,002,False,Richard William Ester,28.0,"Richard William Ester, Write-in (Independent)",6
+AZ,US HOUSE,003,False,Alan Aversa,5008.0,"Alan Aversa, Green",6
+AZ,US HOUSE,003,False,Candace Cunningham,16.0,"Candace Cunningham, Write-in (Green)",6
+AZ,US HOUSE,003,False,Jeff Zink,53705.0,"Jeff Zink, Republican",6
+AZ,US HOUSE,003,False,Yassamin Ansari,143336.0,"Yassamin Ansari, Democrat",6
+AZ,US HOUSE,004,False,Greg Stanton,176428.0,"Greg Stanton, Democrat",6
+AZ,US HOUSE,004,False,Kelly Cooper,152052.0,"Kelly Cooper, Republican",6
+AZ,US HOUSE,004,False,Vincent Beck-Jones,6065.0,"Vincent Beck-Jones, Green",6
+AZ,US HOUSE,005,False,Andy Biggs,255628.0,"Andy Biggs, Republican",6
+AZ,US HOUSE,005,False,Katrina Schaffner,167680.0,"Katrina Schaffner, Democrat",6
+AZ,US HOUSE,006,False,Athena Eastwood,10759.0,"Athena Eastwood, Green",6
+AZ,US HOUSE,006,False,Juan Ciscomani,215596.0,"Juan Ciscomani, Republican",6
+AZ,US HOUSE,006,False,Kirsten Engel,204774.0,"Kirsten Engel, Democrat",6
+AZ,US HOUSE,006,False,Luis Pozzolo,91.0,"Luis Pozzolo, Write-in (Independent)",6
+AZ,US HOUSE,007,False,Daniel Francis Butierez,99057.0,"Daniel Francis Butierez, Sr., Republican",6
+AZ,US HOUSE,007,False,Raúl M. Grijalva,171954.0,"Raúl M. Grijalva, Democrat",6
+AZ,US HOUSE,008,False,Abraham “Abe” Hamadeh,208269.0,"Abraham “Abe” Hamadeh, Republican",6
+AZ,US HOUSE,008,False,Gregory Whitten,160344.0,"Gregory Whitten, Democrat",6
+AZ,US HOUSE,009,False,Paul A. Gosar,249583.0,"Paul A. Gosar, Republican",6
+AZ,US HOUSE,009,False,Quacy Smith,132640.0,"Quacy Smith, Democrat",6
+AZ,US SENATE,STATEWIDE,False,Benjamin Rodriguez,2.0,"Benjamin Rodriguez, Write-in (Us Altogether)",6
+AZ,US SENATE,STATEWIDE,False,Christopher Beckett,103.0,"Christopher Beckett, Write-in (Independent)",6
+AZ,US SENATE,STATEWIDE,False,David Bozic,12.0,"David Bozic, Write-in (None)",6
+AZ,US SENATE,STATEWIDE,False,Eduardo Quintana,75868.0,"Eduardo Quintana, Green",6
+AZ,US SENATE,STATEWIDE,False,Jannie “Jannie” Prosser,82.0,"Jannie “Jannie” Prosser, Write-in (Republican)",6
+AZ,US SENATE,STATEWIDE,False,Kari Lake,1595761.0,"Kari Lake, Republican",6
+AZ,US SENATE,STATEWIDE,False,Ruben Gallego,1676335.0,"Ruben Gallego, Democrat",6
+AZ,US SENATE,STATEWIDE,False,Sarah Williams,535.0,"Sarah Williams, Write-in (Libertarian)",6
+AZ,US SENATE,STATEWIDE,False,Shawn Petty,24.0,"Shawn Petty, Write-in (None)",6
+AZ,US SENATE,STATEWIDE,False,Steven Cavin Sanders,92.0,"Steven Cavin Sanders, Write-in (Independent)",6
+CA,US HOUSE,001,False,Doug LaMalfa,208592.0,"Doug LaMalfa, Republican",8
+CA,US HOUSE,001,False,Rose Penelope Yee,110636.0,"Rose Penelope Yee, Democrat",8
+CA,US HOUSE,002,False,Chris Coulombe,106734.0,"Chris Coulombe, Republican",8
+CA,US HOUSE,002,False,Jared Huffman,272883.0,"Jared Huffman, Democrat",8
+CA,US HOUSE,003,False,Jessica Morse,188067.0,"Jessica Morse, Democrat",8
+CA,US HOUSE,003,False,Kevin Kiley,234246.0,"Kevin Kiley, Republican",8
+CA,US HOUSE,004,False,John Munn,114950.0,"John Munn, Republican",8
+CA,US HOUSE,004,False,Mike Thompson,227730.0,"Mike Thompson, Democrat",8
+CA,US HOUSE,005,False,Michael J. “Mike” Barkley,140919.0,"Michael J. “Mike” Barkley, Democrat",9
+CA,US HOUSE,005,False,Tom McClintock,227643.0,"Tom McClintock, Republican",9
+CA,US HOUSE,006,False,Ami Bera,165408.0,"Ami Bera, Democrat",9
+CA,US HOUSE,006,False,Christine Bish,121664.0,"Christine Bish, Republican",9
+CA,US HOUSE,007,False,Doris O. Matsui,197429.0,"Doris O. Matsui, Democrat",9
+CA,US HOUSE,007,False,Tom Silva,98341.0,"Tom Silva, Republican",9
+CA,US HOUSE,008,False,John Garamendi,201962.0,"John Garamendi, Democrat",9
+CA,US HOUSE,008,False,Rudy Recile,71068.0,"Rudy Recile, Republican",9
+CA,US HOUSE,009,False,Josh Harder,130183.0,"Josh Harder, Democrat",9
+CA,US HOUSE,009,False,Kevin Lincoln,121174.0,"Kevin Lincoln, Republican",9
+CA,US HOUSE,010,False,Katherine Piccinini,122219.0,"Katherine Piccinini, Republican",9
+CA,US HOUSE,010,False,Mark DeSaulnier,242325.0,"Mark DeSaulnier, Democrat",9
+CA,US HOUSE,011,False,Bruce Lou,64315.0,"Bruce Lou, Republican",9
+CA,US HOUSE,011,False,Nancy Pelosi,274796.0,"Nancy Pelosi, Democrat",9
+CA,US HOUSE,012,False,Jennifer Tran,97849.0,"Jennifer Tran, Democrat",9
+CA,US HOUSE,012,False,Lateefah Simon,185176.0,"Lateefah Simon, Democrat",9
+CA,US HOUSE,013,False,Adam Gray,105554.0,"Adam Gray, Democrat",9
+CA,US HOUSE,013,False,John S. Duarte,105367.0,"John S. Duarte, Republican",9
+CA,US HOUSE,014,False,Eric Swalwell,187263.0,"Eric Swalwell, Democrat",9
+CA,US HOUSE,014,False,Vin Kruttiventi,89125.0,"Vin Kruttiventi, Republican",9
+CA,US HOUSE,015,False,Anna Cheng Kramer,77896.0,"Anna Cheng Kramer, Republican",9
+CA,US HOUSE,015,False,Kevin Mullin,211648.0,"Kevin Mullin, Democrat",9
+CA,US HOUSE,016,False,Evan Low,128893.0,"Evan Low, Democrat",9
+CA,US HOUSE,016,False,Sam Liccardo,179583.0,"Sam Liccardo, Democrat",9
+CA,US HOUSE,017,False,Anita Chen,82415.0,"Anita Chen, Republican",9
+CA,US HOUSE,017,False,Ro Khanna,172462.0,"Ro Khanna, Democrat",9
+CA,US HOUSE,018,False,Peter D. Hernandez,80832.0,"Peter D. Hernandez, Republican",9
+CA,US HOUSE,018,False,Zoe Lofgren,147674.0,"Zoe Lofgren, Democrat",9
+CA,US HOUSE,019,False,Jason Michael Anderson,111862.0,"Jason Michael Anderson, Republican",9
+CA,US HOUSE,019,False,Jimmy Panetta,252458.0,"Jimmy Panetta, Democrat",9
+CA,US HOUSE,020,False,Mike Boudreaux,100926.0,"Mike Boudreaux, Republican",9
+CA,US HOUSE,020,False,Vince Fong,187862.0,"Vince Fong, Republican",9
+CA,US HOUSE,021,False,Jim Costa,102798.0,"Jim Costa, Democrat",9
+CA,US HOUSE,021,False,Michael Maher,92733.0,"Michael Maher, Republican",9
+CA,US HOUSE,022,False,David G. Valadao,89484.0,"David G. Valadao, Republican",9
+CA,US HOUSE,022,False,Rudy Salas,78023.0,"Rudy Salas, Democrat",9
+CA,US HOUSE,023,False,Derek Marshall,105563.0,"Derek Marshall, Democrat",9
+CA,US HOUSE,023,False,Jay Obernolte,159286.0,"Jay Obernolte, Republican",9
+CA,US HOUSE,024,False,Salud O. Carbajal,214724.0,"Salud O. Carbajal, Democrat",9
+CA,US HOUSE,024,False,Thomas Cole,127755.0,"Thomas Cole, Republican",9
+CA,US HOUSE,025,False,Ian M. Weeks,107194.0,"Ian M. Weeks, Republican",9
+CA,US HOUSE,025,False,Raul Ruiz,137837.0,"Raul Ruiz, Democrat",9
+CA,US HOUSE,026,False,Julia Brownley,187393.0,"Julia Brownley, Democrat",9
+CA,US HOUSE,026,False,Michael Koslow,146913.0,"Michael Koslow, Republican",9
+CA,US HOUSE,027,False,George Whitesides,154040.0,"George Whitesides, Democrat",10
+CA,US HOUSE,027,False,Mike Garcia,146050.0,"Mike Garcia, Republican",10
+CA,US HOUSE,028,False,April A. Verlato,110455.0,"April A. Verlato, Republican",10
+CA,US HOUSE,028,False,Judy Chu,204489.0,"Judy Chu, Democrat",10
+CA,US HOUSE,029,False,Benito Benny Bernal,63374.0,"Benito Benny Bernal, Republican",10
+CA,US HOUSE,029,False,Luz Maria Rivas,146312.0,"Luz Maria Rivas, Democrat",10
+CA,US HOUSE,030,False,Alex Balekian,98559.0,"Alex Balekian, Republican",10
+CA,US HOUSE,030,False,Laura Friedman,213100.0,"Laura Friedman, Democrat",10
+CA,US HOUSE,031,False,Daniel Jose Bocic Martinez,99856.0,"Daniel Jose Bocic Martinez, Republican",10
+CA,US HOUSE,031,False,Gil Cisneros,148095.0,"Gil Cisneros, Democrat",10
+CA,US HOUSE,032,False,Brad Sherman,212934.0,"Brad Sherman, Democrat",10
+CA,US HOUSE,032,False,Larry Thompson,108711.0,"Larry Thompson, Republican",10
+CA,US HOUSE,033,False,Pete Aguilar,137197.0,"Pete Aguilar, Democrat",10
+CA,US HOUSE,033,False,Tom Herman,96078.0,"Tom Herman, Republican",10
+CA,US HOUSE,034,False,David Kim,84020.0,"David Kim, Democrat",10
+CA,US HOUSE,034,False,Jimmy Gomez,105394.0,"Jimmy Gomez, Democrat",10
+CA,US HOUSE,035,False,Mike Cargile,97142.0,"Mike Cargile, Republican",10
+CA,US HOUSE,035,False,Norma J. Torres,136413.0,"Norma J. Torres, Democrat",10
+CA,US HOUSE,036,False,Melissa Toomim,111985.0,"Melissa Toomim, Republican",10
+CA,US HOUSE,036,False,Ted Lieu,246002.0,"Ted Lieu, Democrat",10
+CA,US HOUSE,037,False,Juan Rey,44450.0,"Juan Rey, No Party Preference",10
+CA,US HOUSE,037,False,Sydney Kamlager-Dove,160364.0,"Sydney Kamlager-Dove, Democrat",10
+CA,US HOUSE,038,False,Eric J. Ching,110818.0,"Eric J. Ching, Republican",10
+CA,US HOUSE,038,False,Linda T. Sánchez,165110.0,"Linda T. Sánchez, Democrat",10
+CA,US HOUSE,039,False,David Serpa,99469.0,"David Serpa, Republican",10
+CA,US HOUSE,039,False,Mark Takano,130191.0,"Mark Takano, Democrat",10
+CA,US HOUSE,040,False,Joe Kerr,171637.0,"Joe Kerr, Democrat",10
+CA,US HOUSE,040,False,Young Kim,211998.0,"Young Kim, Republican",10
+CA,US HOUSE,041,False,Ken Calvert,183216.0,"Ken Calvert, Republican",10
+CA,US HOUSE,041,False,Will Rollins,171229.0,"Will Rollins, Democrat",10
+CA,US HOUSE,042,False,John Briscoe,74410.0,"John Briscoe, Republican",10
+CA,US HOUSE,042,False,Robert Garcia,159153.0,"Robert Garcia, Democrat",10
+CA,US HOUSE,043,False,Maxine Waters,160080.0,"Maxine Waters, Democrat",10
+CA,US HOUSE,043,False,Steve Williams,53152.0,"Steve Williams, Republican",10
+CA,US HOUSE,044,False,Nanette Diaz Barragán,164765.0,"Nanette Diaz Barragán, Democrat",10
+CA,US HOUSE,044,False,Roger Groh,66087.0,"Roger Groh, Republican",10
+CA,US HOUSE,045,False,Derek Tran,158264.0,"Derek Tran, Democrat",10
+CA,US HOUSE,045,False,Michelle Steel,157611.0,"Michelle Steel, Republican",10
+CA,US HOUSE,046,False,David Pan,77279.0,"David Pan, Republican",10
+CA,US HOUSE,046,False,J. Luis Correa,134013.0,"J. Luis Correa, Democrat",10
+CA,US HOUSE,047,False,Dave Min,181721.0,"Dave Min, Democrat",10
+CA,US HOUSE,047,False,Scott Baugh,171554.0,"Scott Baugh, Republican",10
+CA,US HOUSE,048,False,Darrell Issa,213625.0,"Darrell Issa, Republican",10
+CA,US HOUSE,048,False,Stephen Houlahan,146665.0,"Stephen Houlahan, Democrat",10
+CA,US HOUSE,049,False,Matt Gunderson,180950.0,"Matt Gunderson, Republican",11
+CA,US HOUSE,049,False,Mike Levin,197397.0,"Mike Levin, Democrat",11
+CA,US HOUSE,050,False,Peter J. Bono,128859.0,"Peter J. Bono, Republican",11
+CA,US HOUSE,050,False,Scott H. Peters,231836.0,"Scott H. Peters, Democrat",11
+CA,US HOUSE,051,False,Bill Wells,128749.0,"Bill Wells, Republican",11
+CA,US HOUSE,051,False,Sara Jacobs,198835.0,"Sara Jacobs, Democrat",11
+CA,US HOUSE,052,False,Juan Vargas,172217.0,"Juan Vargas, Democrat",11
+CA,US HOUSE,052,False,Justin Lee,87501.0,"Justin Lee, Republican",11
+CA,US SENATE,STATEWIDE,False,Adam B. Schiff,9036252.0,"Adam B. Schiff, Democrat",8
+CA,US SENATE,STATEWIDE,False,Steve Garvey,6312594.0,"Steve Garvey, Republican",8
+CA,US SENATE,STATEWIDE,True,Adam B. Schiff,8837051.0,"Adam B. Schiff, Democrat",8
+CA,US SENATE,STATEWIDE,True,Steve Garvey,6204637.0,"Steve Garvey, Republican",8
+CO,US HOUSE,001,False,Charles H. “Chuck” Norris,88.0,"Charles H. “Chuck” Norris, Write-in (Democratic)",12
+CO,US HOUSE,001,False,Critter Milton,4084.0,"Critter Milton, Unity Party",12
+CO,US HOUSE,001,False,Daniel Lutz,2351.0,"Daniel Lutz, Approval Voting Party",12
+CO,US HOUSE,001,False,Diana DeGette,264606.0,"Diana DeGette, Democrat",12
+CO,US HOUSE,001,False,John R. Johnson,8.0,"John R. Johnson, Write-in (Unaffiliated)",12
+CO,US HOUSE,001,False,Valdamar Archuleta,74598.0,"Valdamar Archuleta, Republican",12
+CO,US HOUSE,002,False,Cynthia Munhos de Aquino Sirianni,3744.0,"Cynthia Munhos de Aquino Sirianni, Unity Party",12
+CO,US HOUSE,002,False,Gaylon Kent,5180.0,"Gaylon Kent, Libertarian",12
+CO,US HOUSE,002,False,Jan Kok,2349.0,"Jan Kok, Approval Voting Party",12
+CO,US HOUSE,002,False,Joe Neguse,284994.0,"Joe Neguse, Democrat",12
+CO,US HOUSE,002,False,Marshall Dawson,120633.0,"Marshall Dawson, Republican",12
+CO,US HOUSE,002,False,Mike Watson,8.0,"Mike Watson, Write-in (Unaffiliated)",12
+CO,US HOUSE,003,False,Adam Frisch,182147.0,"Adam Frisch, Democrat",12
+CO,US HOUSE,003,False,Adam Withrow,2721.0,"Adam Withrow, Unity Party",12
+CO,US HOUSE,003,False,James Wiley,10734.0,"James Wiley, Libertarian",12
+CO,US HOUSE,003,False,Jeff Hurd,201951.0,"Jeff Hurd, Republican",12
+CO,US HOUSE,004,False,Frank Atwood,6233.0,"Frank Atwood, Approval Voting Party",12
+CO,US HOUSE,004,False,Hannah Goodman,11676.0,"Hannah Goodman, Libertarian",12
+CO,US HOUSE,004,False,Lauren Boebert,240213.0,"Lauren Boebert, Republican",12
+CO,US HOUSE,004,False,Paul Noel Fiorino,1436.0,"Paul Noel Fiorino, Unity Party",12
+CO,US HOUSE,004,False,Trisha Calvarese,188249.0,"Trisha Calvarese, Democrat",12
+CO,US HOUSE,005,False,Christopher Mitchell,4006.0,"Christopher Mitchell, American Constitution",12
+CO,US HOUSE,005,False,Christopher Sweat,1627.0,"Christopher Sweat, Forward Party",12
+CO,US HOUSE,005,False,Jeff Crank,197924.0,"Jeff Crank, Republican",12
+CO,US HOUSE,005,False,Joseph Gaye,4094.0,"Joseph Gaye, Unaffiliated",12
+CO,US HOUSE,005,False,Marcus Murphy,4.0,"Marcus Murphy, Write-in (Unaffiliated)",12
+CO,US HOUSE,005,False,Michael Keith Vance,6458.0,"Michael Keith Vance, Libertarian",12
+CO,US HOUSE,005,False,River Gassen,147972.0,"River Gassen, Democrat",12
+CO,US HOUSE,006,False,Brad Nickle,25.0,"Brad Nickle, Write-in (Unaffiliated)",13
+CO,US HOUSE,006,False,Jason Crow,202686.0,"Jason Crow, Democrat",13
+CO,US HOUSE,006,False,John E. Fabbricatore,132174.0,"John E. Fabbricatore, Republican",13
+CO,US HOUSE,006,False,John Kittleson,4832.0,"John Kittleson, Libertarian",13
+CO,US HOUSE,006,False,Travis Nicks,4004.0,"Travis Nicks, Approval Voting Party",13
+CO,US HOUSE,007,False,Brittany Pettersen,235688.0,"Brittany Pettersen, Democrat",13
+CO,US HOUSE,007,False,Patrick Bohan,9697.0,"Patrick Bohan, Libertarian",13
+CO,US HOUSE,007,False,Patrick Flaherty,37.0,"Patrick Flaherty, Write-in (Unaffiliated)",13
+CO,US HOUSE,007,False,Ron Tupa,5271.0,"Ron Tupa, Unity Party",13
+CO,US HOUSE,007,False,Sergei Matveyuk,175273.0,"Sergei Matveyuk, Republican",13
+CO,US HOUSE,008,False,Chris Baum,5741.0,"Chris Baum, Approval Voting Party",13
+CO,US HOUSE,008,False,Gabe Evans,163320.0,"Gabe Evans, Republican",13
+CO,US HOUSE,008,False,James K. Treibert,7.0,"James K. Treibert, Write-in (Unaffiliated)",13
+CO,US HOUSE,008,False,Susan Patricia Hall,3677.0,"Susan Patricia Hall, Unity Party",13
+CO,US HOUSE,008,False,Yadira Caraveo,160871.0,"Yadira Caraveo, Democrat",13
+CT,US HOUSE,001,False,Jim Griffin,115065.0,"Jim Griffin, Republican",15
+CT,US HOUSE,001,False,John B. Larson,208649.0,"John B. Larson, Democrat | Working Families",15
+CT,US HOUSE,001,False,Mary L. Sanders,6768.0,"Mary L. Sanders, Green",15
+CT,US HOUSE,002,False,Jeffery Russell,4.0,"Jeffery Russell, Write-in",15
+CT,US HOUSE,002,False,Joe Courtney,218162.0,"Joe Courtney, Democrat",15
+CT,US HOUSE,002,False,Kenneth Kusmierski,3.0,"Kenneth Kusmierski, Jr., Write-in",15
+CT,US HOUSE,002,False,Mike France,157878.0,"Mike France, Republican",15
+CT,US HOUSE,003,False,Michael Massey,135113.0,"Michael Massey, Republican | Independent",15
+CT,US HOUSE,003,False,Omar Scott Antar,2.0,"Omar Scott Antar, Write-in",15
+CT,US HOUSE,003,False,Rosa L. DeLauro,193684.0,"Rosa L. DeLauro, Democrat",15
+CT,US HOUSE,003,False,Shahd Omar,124.0,"Shahd Omar, Write-in",15
+CT,US HOUSE,004,False,Benjamin Wesley,5273.0,"Benjamin Wesley, Independent",15
+CT,US HOUSE,004,False,James A. Himes,200791.0,"James A. Himes, Democrat",15
+CT,US HOUSE,004,False,Michael Goldstein,122793.0,"Michael Goldstein, Republican",15
+CT,US HOUSE,005,False,Ahmad A J Darwish,76.0,"Ahmad A J Darwish, Write-in",15
+CT,US HOUSE,005,False,Bertram Ferguson,3.0,"Bertram Ferguson, Write-in",15
+CT,US HOUSE,005,False,George Logan,157258.0,"George Logan, Republican",15
+CT,US HOUSE,005,False,Jahana Hayes,180268.0,"Jahana Hayes, Democrat | Working Families",15
+CT,US SENATE,STATEWIDE,False,Christopher Murphy,1000695.0,"Christopher Murphy, Democrat | Working Families",15
+CT,US SENATE,STATEWIDE,False,John Flynn,7.0,"John Flynn, Write-in",15
+CT,US SENATE,STATEWIDE,False,Justin C. Paglino,14422.0,"Justin C. Paglino, Green",15
+CT,US SENATE,STATEWIDE,False,Matthew M. Corey,678256.0,"Matthew M. Corey, Republican",15
+CT,US SENATE,STATEWIDE,False,Robert Finley Hyde,14879.0,"Robert Finley Hyde, Cheaper Gas Groceries Party",15
+DE,US HOUSE,001,False,John J. Whalen III,209606.0,"John J. Whalen III, Republican",16
+DE,US HOUSE,001,False,Sarah McBride,287830.0,"Sarah McBride, Democrat",16
+DE,US SENATE,STATEWIDE,False,Eric Hansen,197753.0,"Eric Hansen, Republican",16
+DE,US SENATE,STATEWIDE,False,Lisa Blunt Rochester,283298.0,"Lisa Blunt Rochester, Democrat",16
+DE,US SENATE,STATEWIDE,False,Michael “Dr. Mike” Katz,19555.0,"Michael “Dr. Mike” Katz, Independent",16
+FL,US HOUSE,001,False,Gay Valimont,140980.0,"Gay Valimont, Democrat",16
+FL,US HOUSE,001,False,Matt Gaetz,274108.0,"Matt Gaetz, Republican",16
+FL,US HOUSE,002,False,Neal P. Dunn,247957.0,"Neal P. Dunn, Republican",16
+FL,US HOUSE,002,False,Yen Bailey,154323.0,"Yen Bailey, Democrat",16
+FL,US HOUSE,003,False,Kat Cammack,241174.0,"Kat Cammack, Republican",16
+FL,US HOUSE,003,False,Tom Wells,150283.0,"Tom Wells, Democrat",16
+FL,US HOUSE,004,False,Aaron Bean,222364.0,"Aaron Bean, Republican",16
+FL,US HOUSE,004,False,LaShonda “L. J.” Holloway,165912.0,"LaShonda “L. J.” Holloway, Democrat",16
+FL,US HOUSE,004,False,Todd Schaefer,73.0,"Todd Schaefer, Write-in",16
+FL,US HOUSE,005,False,Gary L. Koniz,23.0,"Gary L. Koniz, Write-in",16
+FL,US HOUSE,005,False,Jay McGovern,156570.0,"Jay McGovern, Democrat",16
+FL,US HOUSE,005,False,John H. Rutherford,267471.0,"John H. Rutherford, Republican",16
+FL,US HOUSE,006,False,James David Stockton III,143050.0,"James David Stockton III, Democrat",16
+FL,US HOUSE,006,False,Michael Waltz,284414.0,"Michael Waltz, Republican",16
+FL,US HOUSE,006,False,Richard Paul Dembinsky,10.0,"Richard Paul Dembinsky, Write-in",16
+FL,US HOUSE,007,False,Cory Mills,233937.0,"Cory Mills, Republican",16
+FL,US HOUSE,007,False,Jennifer Adams,179917.0,"Jennifer Adams, Democrat",16
+FL,US HOUSE,008,False,Mike Haridopolos,280352.0,"Mike Haridopolos, Republican",17
+FL,US HOUSE,008,False,Sandy Kennedy,170096.0,"Sandy Kennedy, Democrat",17
+FL,US HOUSE,009,False,Darren Soto,178785.0,"Darren Soto, Democrat",17
+FL,US HOUSE,009,False,Marcus Carter,7412.0,"Marcus Carter, No Party Affiliation",17
+FL,US HOUSE,009,False,Thomas Chalifoux,138076.0,"Thomas Chalifoux, Republican",17
+FL,US HOUSE,010,False,Maxwell Frost,181455.0,"Maxwell Frost, Democrat",17
+FL,US HOUSE,010,False,Willie J. Montague,109460.0,"Willie J. Montague, Republican",17
+FL,US HOUSE,011,False,Barbie Harden Hall,176726.0,"Barbie Harden Hall, Democrat",17
+FL,US HOUSE,011,False,Daniel Webster,269277.0,"Daniel Webster, Republican",17
+FL,US HOUSE,012,False,Gus M. Bilirakis,306487.0,"Gus M. Bilirakis, Republican",17
+FL,US HOUSE,012,False,Rock Aboujaoude,124949.0,"Rock Aboujaoude, Jr., Democrat",17
+FL,US HOUSE,013,False,Anna Paulina Luna,225636.0,"Anna Paulina Luna, Republican",17
+FL,US HOUSE,013,False,Tony D’Arrigo,27.0,"Tony D’Arrigo, Write-in",17
+FL,US HOUSE,013,False,Whitney Fox,185930.0,"Whitney Fox, Democrat",17
+FL,US HOUSE,014,False,Christopher Bradley,2595.0,"Christopher Bradley, No Party Affiliation",17
+FL,US HOUSE,014,False,Kathy Castor,199423.0,"Kathy Castor, Democrat",17
+FL,US HOUSE,014,False,Nathaniel T. Snyder,2524.0,"Nathaniel T. Snyder, Libertarian Party of Florida",17
+FL,US HOUSE,014,False,Robert “Rocky” Rochford,145643.0,"Robert “Rocky” Rochford, Republican",17
+FL,US HOUSE,015,False,Laurel M. Lee,195334.0,"Laurel M. Lee, Republican",17
+FL,US HOUSE,015,False,Patricia “Pat” Kemp,152361.0,"Patricia “Pat” Kemp, Democrat",17
+FL,US HOUSE,016,False,Jan Schneider,168625.0,"Jan Schneider, Democrat",17
+FL,US HOUSE,016,False,Vern Buchanan,247516.0,"Vern Buchanan, Republican",17
+FL,US HOUSE,017,False,Manny Lopez,164566.0,"Manny Lopez, Democrat",17
+FL,US HOUSE,017,False,Ralph E. Hartman,8.0,"Ralph E. Hartman, Write-in",17
+FL,US HOUSE,017,False,W. Gregory Steube,291347.0,"W. Gregory Steube, Republican",17
+FL,US HOUSE,018,False,Andrea Doria Kale,119637.0,"Andrea Doria Kale, Democrat",17
+FL,US HOUSE,018,False,Scott Franklin,225170.0,"Scott Franklin, Republican",17
+FL,US HOUSE,019,False,Byron Donalds,275708.0,"Byron Donalds, Republican",17
+FL,US HOUSE,019,False,Kari L. Lerner,140038.0,"Kari L. Lerner, Democrat",17
+FL,US HOUSE,020,False,Sheila Cherfilus-McCormick,,"Sheila Cherfilus-McCormick, Democrat",17
+FL,US HOUSE,021,False,Brian J. Mast,277435.0,"Brian J. Mast, Republican",17
+FL,US HOUSE,021,False,Elizabeth Felton,19.0,"Elizabeth Felton, Write-in",17
+FL,US HOUSE,021,False,Thomas Witkop,171312.0,"Thomas Witkop, Democrat",17
+FL,US HOUSE,022,False,Dan Franzese,165248.0,"Dan Franzese, Republican",17
+FL,US HOUSE,022,False,Lois Frankel,201608.0,"Lois Frankel, Democrat",17
+FL,US HOUSE,023,False,Jared Moskowitz,196311.0,"Jared Moskowitz, Democrat",17
+FL,US HOUSE,023,False,Joseph “Joe” Kaufman,178006.0,"Joseph “Joe” Kaufman, Republican",17
+FL,US HOUSE,024,False,Frederica S. Wilson,194874.0,"Frederica S. Wilson, Democrat",17
+FL,US HOUSE,024,False,Jesus Gabriel Navarro,90692.0,"Jesus Gabriel Navarro, Republican",17
+FL,US HOUSE,024,False,Lavern Spicer,22.0,"Lavern Spicer, Write-in",17
+FL,US HOUSE,025,False,Chris Eddy,156208.0,"Chris Eddy, Republican",17
+FL,US HOUSE,025,False,Debbie Wasserman Schultz,186942.0,"Debbie Wasserman Schultz, Democrat",17
+FL,US HOUSE,025,False,Eddie Goldfarb,41.0,"Eddie Goldfarb, Write-in",17
+FL,US HOUSE,026,False,Joey Atkins,89072.0,"Joey Atkins, Democrat",17
+FL,US HOUSE,026,False,Mario Diaz-Balart,217199.0,"Mario Diaz-Balart, Republican",17
+FL,US HOUSE,027,False,Lucia Baez-Geller,130708.0,"Lucia Baez-Geller, Democrat",18
+FL,US HOUSE,027,False,Maria Elvira Salazar,199159.0,"Maria Elvira Salazar, Republican",18
+FL,US HOUSE,028,False,Carlos A. Gimenez,210057.0,"Carlos A. Gimenez, Republican",18
+FL,US HOUSE,028,False,Phil Ehr,115280.0,"Phil Ehr, Democrat",18
+FL,US SENATE,STATEWIDE,False,Ben Everidge,62683.0,"Ben Everidge, No Party Affiliation",16
+FL,US SENATE,STATEWIDE,False,Debbie Mucarsel-Powell,4603077.0,"Debbie Mucarsel-Powell, Democrat",16
+FL,US SENATE,STATEWIDE,False,Feena Bonoan,57363.0,"Feena Bonoan, Libertarian Party of Florida",16
+FL,US SENATE,STATEWIDE,False,Howard Knepper,13.0,"Howard Knepper, Write-in",16
+FL,US SENATE,STATEWIDE,False,Rick Scott,5977706.0,"Rick Scott, Republican",16
+FL,US SENATE,STATEWIDE,False,Tuan “T Q” Nguyen,56586.0,"Tuan “T Q” Nguyen, No Party Affiliation",16
+GA,US HOUSE,001,False,Earl L. “Buddy” Carter,220576.0,"Earl L. “Buddy” Carter, Republican",20
+GA,US HOUSE,001,False,Patti Hewitt,135281.0,"Patti Hewitt, Democrat",20
+GA,US HOUSE,002,False,A. Wayne Johnson,136473.0,"A. Wayne Johnson, Republican",20
+GA,US HOUSE,002,False,Sanford D. Bishop,176028.0,"Sanford D. Bishop, Jr., Democrat",20
+GA,US HOUSE,003,False,Brian Jack,273036.0,"Brian Jack, Republican",20
+GA,US HOUSE,003,False,Maura Keller,138749.0,"Maura Keller, Democrat",20
+GA,US HOUSE,004,False,Eugene Yu,74071.0,"Eugene Yu, Republican",20
+GA,US HOUSE,004,False,Henry C. “Hank” Johnson,229290.0,"Henry C. “Hank” Johnson, Jr., Democrat",20
+GA,US HOUSE,005,False,John “Bongo” Salvesen,49221.0,"John “Bongo” Salvesen, Republican",20
+GA,US HOUSE,005,False,Nikema Williams,294470.0,"Nikema Williams, Democrat",20
+GA,US HOUSE,006,False,Jeff Criswell,93909.0,"Jeff Criswell, Republican",20
+GA,US HOUSE,006,False,Lucy McBath,277027.0,"Lucy McBath, Democrat",20
+GA,US HOUSE,007,False,Bob Christian,149535.0,"Bob Christian, Democrat",20
+GA,US HOUSE,007,False,Richard McCormick,275907.0,"Richard McCormick, Republican",20
+GA,US HOUSE,008,False,Austin Scott,231547.0,"Austin Scott, Republican",20
+GA,US HOUSE,008,False,Darrius Butler,104434.0,"Darrius Butler, Democrat",20
+GA,US HOUSE,009,False,Andrew S. Clyde,271062.0,"Andrew S. Clyde, Republican",20
+GA,US HOUSE,009,False,Tambrei Cash,121754.0,"Tambrei Cash, Democrat",20
+GA,US HOUSE,010,False,Alexandra “Lexy” Doherty,150274.0,"Alexandra “Lexy” Doherty, Democrat",20
+GA,US HOUSE,010,False,Mike Collins,256442.0,"Mike Collins, Republican",20
+GA,US HOUSE,011,False,Barry Loudermilk,269849.0,"Barry Loudermilk, Republican",20
+GA,US HOUSE,011,False,Katy “Kate” L. Stamper,131064.0,"Katy “Kate” L. Stamper, Democrat",20
+GA,US HOUSE,012,False,Elizabeth “Liz” Johnson,135417.0,"Elizabeth “Liz” Johnson, Democrat",20
+GA,US HOUSE,012,False,Rick W. Allen,205849.0,"Rick W. Allen, Republican",20
+GA,US HOUSE,013,False,David Scott,256902.0,"David Scott, Democrat",20
+GA,US HOUSE,013,False,Jonathan Chavez,100730.0,"Jonathan Chavez, Republican",20
+GA,US HOUSE,014,False,Marjorie Taylor Greene,243446.0,"Marjorie Taylor Greene, Republican",20
+GA,US HOUSE,014,False,Shawn Harris,134759.0,"Shawn Harris, Democrat",20
+HI,US HOUSE,001,False,Ed Case,164237.0,"Ed Case, Democrat",21
+HI,US HOUSE,001,False,Patrick C. Largey,64373.0,"Patrick C. Largey, Republican",21
+HI,US HOUSE,002,False,Aaron Toman,4497.0,"Aaron Toman, Libertarian",21
+HI,US HOUSE,002,False,Jill N. Tokuda,166251.0,"Jill N. Tokuda, Democrat",21
+HI,US HOUSE,002,False,Randall Kelly Meyer,3937.0,"Randall Kelly Meyer, Nonpartisan",21
+HI,US HOUSE,002,False,Steve Bond,75471.0,"Steve Bond, Republican",21
+HI,US SENATE,STATEWIDE,False,Bob McDermott,160075.0,"Bob McDermott, Republican",21
+HI,US SENATE,STATEWIDE,False,Emma Jane Avila Pohlman,8270.0,"Emma Jane Avila Pohlman, Green",21
+HI,US SENATE,STATEWIDE,False,Mazie K. Hirono,324194.0,"Mazie K. Hirono, Democrat",21
+HI,US SENATE,STATEWIDE,False,Shelby Pikachu Billionaire,9224.0,"Shelby Pikachu Billionaire, We The People",21
+IA,US HOUSE,001,False,Christina Bohannan,206156.0,"Christina Bohannan, Democrat",27
+IA,US HOUSE,001,False,Mariannette Miller-Meeks,206955.0,"Mariannette Miller-Meeks, Republican",27
+IA,US HOUSE,001,False,Write-in,967.0,Write-in,27
+IA,US HOUSE,002,False,Ashley Hinson,233340.0,"Ashley Hinson, Republican",27
+IA,US HOUSE,002,False,Jody Madlom Puffett,5381.0,"Jody Madlom Puffett, No Party",27
+IA,US HOUSE,002,False,Sarah Corkery,169740.0,"Sarah Corkery, Democrat",27
+IA,US HOUSE,002,False,Write-in,341.0,Write-in,27
+IA,US HOUSE,003,False,Lanon Baccam,197962.0,"Lanon Baccam, Democrat",27
+IA,US HOUSE,003,False,Write-in,1197.0,Write-in,27
+IA,US HOUSE,003,False,Zachary Nunn,213746.0,"Zachary Nunn, Republican",27
+IA,US HOUSE,004,False,Randy Feenstra,250522.0,"Randy Feenstra, Republican",27
+IA,US HOUSE,004,False,Ryan Melton,122175.0,"Ryan Melton, Democrat",27
+IA,US HOUSE,004,False,Write-in,1127.0,Write-in,27
+ID,US HOUSE,001,False,Brendan J. Gomez,6933.0,"Brendan J. Gomez, Constitution",23
+ID,US HOUSE,001,False,David D. Bot,3.0,"David D. Bot, Write-in",23
+ID,US HOUSE,001,False,Kaylee Peterson,118656.0,"Kaylee Peterson, Democrat",23
+ID,US HOUSE,001,False,Margot Dupre,7.0,"Margot Dupre, Write-in",23
+ID,US HOUSE,001,False,Matt Loesby,9594.0,"Matt Loesby, Libertarian",23
+ID,US HOUSE,001,False,Russ Fulcher,331049.0,"Russ Fulcher, Republican",23
+ID,US HOUSE,002,False,David Roth,126229.0,"David Roth, Democrat",23
+ID,US HOUSE,002,False,Idaho Law - Carta Sierra,9804.0,"Idaho Law - Carta Sierra, Constitution",23
+ID,US HOUSE,002,False,Michael K. Simpson,250119.0,"Michael K. Simpson, Republican",23
+ID,US HOUSE,002,False,Todd Corsetti,21310.0,"Todd Corsetti, Libertarian",23
+IL,US HOUSE,001,False,Hilary Myrick-Winston,45.0,"Hilary Myrick-Winston, Write-in",23
+IL,US HOUSE,001,False,Jonathan L. Jackson,208398.0,"Jonathan L. Jackson, Democrat",23
+IL,US HOUSE,001,False,Marcus Lewis,108064.0,"Marcus Lewis, Republican",23
+IL,US HOUSE,002,False,Ashley Ramos,94004.0,"Ashley Ramos, Republican",23
+IL,US HOUSE,002,False,Hilary Myrick-Winston,29.0,"Hilary Myrick-Winston, Write-in",23
+IL,US HOUSE,002,False,Mike Vick,33.0,"Mike Vick, Write-in",23
+IL,US HOUSE,002,False,Robin L. Kelly,195777.0,"Robin L. Kelly, Democrat",23
+IL,US HOUSE,003,False,Angel Oakley,96.0,"Angel Oakley, Write-in",23
+IL,US HOUSE,003,False,Delia C. Ramirez,174825.0,"Delia C. Ramirez, Democrat",23
+IL,US HOUSE,003,False,John Booras,84987.0,"John Booras, Republican",23
+IL,US HOUSE,004,False,Alicia Martinez,26.0,"Alicia Martinez, Write-in",23
+IL,US HOUSE,004,False,Ed Hershey,10704.0,"Ed Hershey, Working Class",23
+IL,US HOUSE,004,False,Jesús G. “Chuy” García,139343.0,"Jesús G. “Chuy” García, Democrat",23
+IL,US HOUSE,004,False,Lupe Castillo,56323.0,"Lupe Castillo, Republican",23
+IL,US HOUSE,005,False,Frank Rowder,9.0,"Frank Rowder, Write-in",24
+IL,US HOUSE,005,False,Mike Quigley,251025.0,"Mike Quigley, Democrat",24
+IL,US HOUSE,005,False,Tommy Hanson,112931.0,"Tommy Hanson, Republican",24
+IL,US HOUSE,006,False,Niki Conforti,166116.0,"Niki Conforti, Republican",24
+IL,US HOUSE,006,False,Peter J. Meyer,86.0,"Peter J. Meyer, Jr., Write-in",24
+IL,US HOUSE,006,False,Sean Casten,196647.0,"Sean Casten, Democrat",24
+IL,US HOUSE,007,False,Chad Koppie,44598.0,"Chad Koppie, Republican",24
+IL,US HOUSE,007,False,Danny K. Davis,222408.0,"Danny K. Davis, Democrat",24
+IL,US HOUSE,007,False,Lien Choi,133.0,"Lien Choi, Write-in",24
+IL,US HOUSE,007,False,Lowell Martin Seida,13.0,"Lowell Martin Seida, Write-in",24
+IL,US HOUSE,008,False,Mark Rice,130153.0,"Mark Rice, Republican",24
+IL,US HOUSE,008,False,Raja Krishnamoorthi,172920.0,"Raja Krishnamoorthi, Democrat",24
+IL,US HOUSE,009,False,Janice D. Schakowsky,231722.0,"Janice D. Schakowsky, Democrat",24
+IL,US HOUSE,009,False,Seth Alan Cohen,107106.0,"Seth Alan Cohen, Republican",24
+IL,US HOUSE,010,False,Bradley Scott Schneider,196358.0,"Bradley Scott Schneider, Democrat",24
+IL,US HOUSE,010,False,Jim Carris,131025.0,"Jim Carris, Republican",24
+IL,US HOUSE,010,False,Joseph Severino,238.0,"Joseph Severino, Write-in",24
+IL,US HOUSE,011,False,Anna Schiefelbein,229.0,"Anna Schiefelbein, Write-in",24
+IL,US HOUSE,011,False,Bill Foster,199825.0,"Bill Foster, Democrat",24
+IL,US HOUSE,011,False,Jerry Evans,159630.0,"Jerry Evans, Republican",24
+IL,US HOUSE,012,False,Brian Roberts,94875.0,"Brian Roberts, Democrat",24
+IL,US HOUSE,012,False,Mike Bost,272754.0,"Mike Bost, Republican",24
+IL,US HOUSE,013,False,Chibuihe Asonye,244.0,"Chibuihe Asonye, Write-in",24
+IL,US HOUSE,013,False,Joshua Loyd,137917.0,"Joshua Loyd, Republican",24
+IL,US HOUSE,013,False,Nikki Budzinski,191339.0,"Nikki Budzinski, Democrat",24
+IL,US HOUSE,014,False,Constant Connor VlaKancic,3.0,"Constant Connor VlaKancic, Write-in",24
+IL,US HOUSE,014,False,James T. “Jim” Marter,149464.0,"James T. “Jim” Marter, Republican",24
+IL,US HOUSE,014,False,Lauren Underwood,183446.0,"Lauren Underwood, Democrat",24
+IL,US HOUSE,014,False,Roy Jones,16.0,"Roy Jones, Write-in",24
+IL,US HOUSE,015,False,Mary E. Miller,308825.0,"Mary E. Miller, Republican",24
+IL,US HOUSE,015,False,William Bonnett,1409.0,"William Bonnett, Write-in",24
+IL,US HOUSE,016,False,Darin LaHood,310925.0,"Darin LaHood, Republican",24
+IL,US HOUSE,016,False,Scott Summers,183.0,"Scott Summers, Write-in",24
+IL,US HOUSE,017,False,Eric Sorensen,170261.0,"Eric Sorensen, Democrat",24
+IL,US HOUSE,017,False,Joe McGraw,142567.0,"Joe McGraw, Republican",24
+IN,US HOUSE,001,False,Dakotah Miskus,5200.0,"Dakotah Miskus, Libertarian",25
+IN,US HOUSE,001,False,Frank J. Mrvan,172467.0,"Frank J. Mrvan, Democrat",25
+IN,US HOUSE,001,False,Randy Niemeyer,145056.0,"Randy Niemeyer, Republican",25
+IN,US HOUSE,002,False,Lori A. Camp,101962.0,"Lori A. Camp, Democrat",25
+IN,US HOUSE,002,False,Michael John Hubbard,13.0,"Michael John Hubbard, Write-in (Independent)",25
+IN,US HOUSE,002,False,Rudy Yakym III,184848.0,"Rudy Yakym III, Republican",25
+IN,US HOUSE,002,False,William E. Henry,7795.0,"William E. Henry, Libertarian",25
+IN,US HOUSE,003,False,Jarrad Lancaster,11015.0,"Jarrad Lancaster, Libertarian",25
+IN,US HOUSE,003,False,Kiley M. Adolph,97871.0,"Kiley M. Adolph, Democrat",25
+IN,US HOUSE,003,False,Marlin A. Stutzman,202653.0,"Marlin A. Stutzman, Republican",25
+IN,US HOUSE,004,False,Ashley Groff,13710.0,"Ashley Groff, Libertarian",25
+IN,US HOUSE,004,False,Derrick Holder,100091.0,"Derrick Holder, Democrat",25
+IN,US HOUSE,004,False,James R. Baird,209794.0,"James R. Baird, Republican",25
+IN,US HOUSE,005,False,Deborah A. Pickett,136554.0,"Deborah A. Pickett, Democrat",25
+IN,US HOUSE,005,False,Lauri Shillings,9567.0,"Lauri Shillings, Libertarian",25
+IN,US HOUSE,005,False,Robby Slaughter,9790.0,"Robby Slaughter, Independent",25
+IN,US HOUSE,005,False,Victoria Spartz,203293.0,"Victoria Spartz, Republican",25
+IN,US HOUSE,006,False,Cynthia “Cinde” Wirth,99841.0,"Cynthia “Cinde” Wirth, Democrat",25
+IN,US HOUSE,006,False,James Michael Sceniak,13711.0,"James Michael Sceniak, Libertarian",25
+IN,US HOUSE,006,False,Jefferson Shreve,201357.0,"Jefferson Shreve, Republican",25
+IN,US HOUSE,007,False,André Carson,185987.0,"André Carson, Democrat",25
+IN,US HOUSE,007,False,John P. Schmitz,78792.0,"John P. Schmitz, Republican",25
+IN,US HOUSE,007,False,Rusty Johnson,7369.0,"Rusty Johnson, Libertarian",25
+IN,US HOUSE,008,False,Erik Hurt,95311.0,"Erik Hurt, Democrat",25
+IN,US HOUSE,008,False,K. Richard Fitzlaff,8381.0,"K. Richard Fitzlaff, Libertarian",25
+IN,US HOUSE,008,False,Mark Messmer,219941.0,"Mark Messmer, Republican",25
+IN,US HOUSE,009,False,Erin Houchin,222884.0,"Erin Houchin, Republican",25
+IN,US HOUSE,009,False,Russell “Russ” Brooksbank,9454.0,"Russell “Russ” Brooksbank, Libertarian",25
+IN,US HOUSE,009,False,Timothy “Tim” Peck,113400.0,"Timothy “Tim” Peck, Democrat",25
+IN,US SENATE,STATEWIDE,False,Andrew Horning,73233.0,"Andrew Horning, Libertarian",25
+IN,US SENATE,STATEWIDE,False,Antonio Xavier Alvarez,19.0,"Antonio Xavier Alvarez, Write-in (Independent)",25
+IN,US SENATE,STATEWIDE,False,Jim Banks,1659416.0,"Jim Banks, Republican",25
+IN,US SENATE,STATEWIDE,False,Phillip “Phil” D. Beachy,168.0,"Phillip “Phil” D. Beachy, Write-in (Independent)",25
+IN,US SENATE,STATEWIDE,False,Valerie McCray,1097061.0,"Valerie McCray, Democrat",25
+KS,US HOUSE,001,False,Paul Buskirk,93965.0,"Paul Buskirk, Democrat",27
+KS,US HOUSE,001,False,Tracey Mann,210493.0,"Tracey Mann, Republican",27
+KS,US HOUSE,002,False,Derek Schmidt,172847.0,"Derek Schmidt, Republican",27
+KS,US HOUSE,002,False,John Hauer,14229.0,"John Hauer, Libertarian",27
+KS,US HOUSE,002,False,Nancy Boyda,115685.0,"Nancy Boyda, Democrat",27
+KS,US HOUSE,003,False,Prasanth Reddy,167570.0,"Prasanth Reddy, Republican",27
+KS,US HOUSE,003,False,Sharice Davids,209871.0,"Sharice Davids, Democrat",27
+KS,US HOUSE,003,False,Steve Roberts,15892.0,"Steve Roberts, Libertarian",27
+KS,US HOUSE,004,False,Esau Freeman,106632.0,"Esau Freeman, Democrat",27
+KS,US HOUSE,004,False,Ron Estes,198465.0,"Ron Estes, Republican",27
+KY,US HOUSE,001,False,Erin Marshall,85524.0,"Erin Marshall, Democrat",28
+KY,US HOUSE,001,False,James Comer,252729.0,"James Comer, Republican",28
+KY,US HOUSE,002,False,Brett Guthrie,252826.0,"Brett Guthrie, Republican",28
+KY,US HOUSE,002,False,Hank Linderman,93029.0,"Hank Linderman, Democrat",28
+KY,US HOUSE,003,False,Daniel Cobble,27.0,"Daniel Cobble, Write-in",28
+KY,US HOUSE,003,False,Jared Randall,24.0,"Jared Randall, Write-in",28
+KY,US HOUSE,003,False,Mike Craven,124713.0,"Mike Craven, Republican",28
+KY,US HOUSE,003,False,Morgan McGarvey,203100.0,"Morgan McGarvey, Democrat",28
+KY,US HOUSE,004,False,Benjamin August Middendorf,1131.0,"Benjamin August Middendorf, Write-in",28
+KY,US HOUSE,004,False,Thomas Massie,278386.0,"Thomas Massie, Republican",28
+KY,US HOUSE,005,False,Harold Rogers,261407.0,"Harold Rogers, Republican",28
+KY,US HOUSE,006,False,Andy Barr,222293.0,"Andy Barr, Republican",28
+KY,US HOUSE,006,False,Randy Cravens,130345.0,"Randy Cravens, Democrat",28
+LA,US HOUSE,001,False,J. “Frankie” Hyers,6781.0,"J. “Frankie” Hyers, No Party",29
+LA,US HOUSE,001,False,Mel Manuel,85911.0,"Mel Manuel, Democrat",29
+LA,US HOUSE,001,False,Randall Arrington,17856.0,"Randall Arrington, Republican",29
+LA,US HOUSE,001,False,Ross Shales,8330.0,"Ross Shales, Republican",29
+LA,US HOUSE,001,False,Steve Scalise,238842.0,"Steve Scalise, Republican",29
+LA,US HOUSE,002,False,Christy Lynch,41641.0,"Christy Lynch, Republican",29
+LA,US HOUSE,002,False,Devin Davis,32482.0,"Devin Davis, Democrat",29
+LA,US HOUSE,002,False,Devin Lance Graham,39174.0,"Devin Lance Graham, Republican",29
+LA,US HOUSE,002,False,Shondrell Perrilloux,7878.0,"Shondrell Perrilloux, Republican",29
+LA,US HOUSE,002,False,Troy A. Carter,184009.0,"Troy A. Carter, Democrat",29
+LA,US HOUSE,003,False,Clay Higgins,226279.0,"Clay Higgins, Republican",29
+LA,US HOUSE,003,False,Priscilla Gonzalez,59834.0,"Priscilla Gonzalez, Democrat",29
+LA,US HOUSE,003,False,Sadi Summerlin,21323.0,"Sadi Summerlin, Democrat",29
+LA,US HOUSE,003,False,“Xan” John,13246.0,"“Xan” John, Republican",29
+LA,US HOUSE,004,False,Joshua Morott,43427.0,"Joshua Morott, Republican",29
+LA,US HOUSE,004,False,Mike Johnson,262821.0,"Mike Johnson, Republican",29
+LA,US HOUSE,005,False,Julia Letlow,201037.0,"Julia Letlow, Republican",29
+LA,US HOUSE,005,False,M. V. “Vinny” Mendoza,35833.0,"M. V. “Vinny” Mendoza, Republican",29
+LA,US HOUSE,005,False,Michael Vallien,82981.0,"Michael Vallien, Jr., Democrat",29
+LA,US HOUSE,006,False,Cleo Fields,150323.0,"Cleo Fields, Democrat",29
+LA,US HOUSE,006,False,Elbert Guillory,111737.0,"Elbert Guillory, Republican",29
+LA,US HOUSE,006,False,Peter Williams,6252.0,"Peter Williams, Democrat",29
+LA,US HOUSE,006,False,Quentin Anthony Anderson,23811.0,"Quentin Anthony Anderson, Democrat",29
+LA,US HOUSE,006,False,Wilken Jones,3910.0,"Wilken Jones, Jr., Democrat",29
+MA,US HOUSE,001,False,All Others,1181.0,All Others,35
+MA,US HOUSE,001,False,Nadia Donya Milleron,133552.0,"Nadia Donya Milleron, Independent",35
+MA,US HOUSE,001,False,Richard E. Neal,223325.0,"Richard E. Neal, Democrat",35
+MA,US HOUSE,002,False,All Others,822.0,All Others,35
+MA,US HOUSE,002,False,Cornelius Shea,114065.0,"Cornelius Shea, Independent",35
+MA,US HOUSE,002,False,James P. McGovern,251441.0,"James P. McGovern, Democrat",35
+MA,US HOUSE,003,False,All Others,6861.0,All Others,35
+MA,US HOUSE,003,False,Lori Trahan,264698.0,"Lori Trahan, Democrat",35
+MA,US HOUSE,004,False,All Others,7279.0,All Others,35
+MA,US HOUSE,004,False,Jake Auchincloss,289347.0,"Jake Auchincloss, Democrat",35
+MA,US HOUSE,004,False,Sana A. Fadel,1099.0,"Sana A. Fadel, Write-in",35
+MA,US HOUSE,005,False,All Others,5201.0,All Others,35
+MA,US HOUSE,005,False,Katherine M. Clark,286689.0,"Katherine M. Clark, Democrat",35
+MA,US HOUSE,006,False,All Others,7191.0,All Others,35
+MA,US HOUSE,006,False,Seth Moulton,321186.0,"Seth Moulton, Democrat",35
+MA,US HOUSE,007,False,All Others,6907.0,All Others,35
+MA,US HOUSE,007,False,Ayanna Pressley,232094.0,"Ayanna Pressley, Democrat",35
+MA,US HOUSE,008,False,All Others,760.0,All Others,35
+MA,US HOUSE,008,False,Robert G. Burke,110638.0,"Robert G. Burke, Republican",35
+MA,US HOUSE,008,False,Stephen F. Lynch,265432.0,"Stephen F. Lynch, Democrat",35
+MA,US HOUSE,009,False,All Others,642.0,All Others,35
+MA,US HOUSE,009,False,Dan Sullivan,193822.0,"Dan Sullivan, Republican",35
+MA,US HOUSE,009,False,William R. Keating,251931.0,"William R. Keating, Democrat",35
+MA,US SENATE,STATEWIDE,False,All Others,6221.0,All Others,35
+MA,US SENATE,STATEWIDE,False,Elizabeth Warren,2041668.0,"Elizabeth Warren, Democrat",35
+MA,US SENATE,STATEWIDE,False,John Deaton,1365440.0,"John Deaton, Republican",35
+MD,US HOUSE,001,False,Andy Harris,246356.0,"Andy Harris, Republican",33
+MD,US HOUSE,001,False,Blane H. Miller III,154985.0,"Blane H. Miller III, Democrat",33
+MD,US HOUSE,001,False,Joshua W. O’Brien,12664.0,"Joshua W. O’Brien, Libertarian",33
+MD,US HOUSE,001,False,Other Write-ins,675.0,Other Write-ins,33
+MD,US HOUSE,002,False,Jasen Joseph Wunder,8169.0,"Jasen Joseph Wunder, Libertarian",33
+MD,US HOUSE,002,False,John “Johnny O” Olszewski,223797.0,"John “Johnny O” Olszewski, Jr., Democrat",33
+MD,US HOUSE,002,False,Kim Klacik,152079.0,"Kim Klacik, Republican",33
+MD,US HOUSE,002,False,Other Write-ins,749.0,Other Write-ins,33
+MD,US HOUSE,003,False,Miguel Barajas,10471.0,"Miguel Barajas, Libertarian",33
+MD,US HOUSE,003,False,Other Write-ins,862.0,Other Write-ins,33
+MD,US HOUSE,003,False,Robert J. Steinberger,151186.0,"Robert J. Steinberger, Republican",33
+MD,US HOUSE,003,False,Sarah Elfreth,236681.0,"Sarah Elfreth, Democrat",33
+MD,US HOUSE,004,False,George McDermott,30454.0,"George McDermott, Republican",33
+MD,US HOUSE,004,False,Glenn Ivey,239596.0,"Glenn Ivey, Democrat",33
+MD,US HOUSE,004,False,Other Write-ins,920.0,Other Write-ins,33
+MD,US HOUSE,005,False,Michelle Talkington,133985.0,"Michelle Talkington, Republican",33
+MD,US HOUSE,005,False,Other Write-ins,999.0,Other Write-ins,33
+MD,US HOUSE,005,False,Steny H. Hoyer,283619.0,"Steny H. Hoyer, Democrat",33
+MD,US HOUSE,006,False,April McClain Delaney,199788.0,"April McClain Delaney, Democrat",33
+MD,US HOUSE,006,False,Neil C. Parrott,175974.0,"Neil C. Parrott, Republican",33
+MD,US HOUSE,006,False,Other Write-ins,862.0,Other Write-ins,33
+MD,US HOUSE,007,False,Kweisi Mfume,232849.0,"Kweisi Mfume, Democrat",33
+MD,US HOUSE,007,False,Other Write-ins,649.0,Other Write-ins,33
+MD,US HOUSE,007,False,Ronald M. Owens-Bey,6840.0,"Ronald M. Owens-Bey, Libertarian",33
+MD,US HOUSE,007,False,Scott M. Collier,49799.0,"Scott M. Collier, Republican",33
+MD,US HOUSE,008,False,Cheryl Riley,77821.0,"Cheryl Riley, Republican",33
+MD,US HOUSE,008,False,Jamie Raskin,292101.0,"Jamie Raskin, Democrat",33
+MD,US HOUSE,008,False,Nancy Wallace,9612.0,"Nancy Wallace, Green",33
+MD,US HOUSE,008,False,Other Write-ins,786.0,Other Write-ins,33
+MD,US SENATE,STATEWIDE,False,Angela Alsobrooks,1650912.0,"Angela Alsobrooks, Democrat",33
+MD,US SENATE,STATEWIDE,False,Billy Bridges,70.0,"Billy Bridges, Write-in (Unaffiliated)",33
+MD,US SENATE,STATEWIDE,False,Christy Renee Helmondollar,3.0,"Christy Renee Helmondollar, Write-in (Unaffiliated)",33
+MD,US SENATE,STATEWIDE,False,Irwin William Gibbs,2.0,"Irwin William Gibbs, Write-in (Unaffiliated)",33
+MD,US SENATE,STATEWIDE,False,Larry Hogan,1294344.0,"Larry Hogan, Republican",33
+MD,US SENATE,STATEWIDE,False,Mike Scott,69396.0,"Mike Scott, Libertarian",33
+MD,US SENATE,STATEWIDE,False,Other Write-ins,5755.0,Other Write-ins,33
+MD,US SENATE,STATEWIDE,False,Patrick J. Burke,879.0,"Patrick J. Burke, Write-in (Other Candidates)",33
+MD,US SENATE,STATEWIDE,False,Robin Rowe,17.0,"Robin Rowe, Write-in (Unaffiliated)",33
+ME,US HOUSE,001,False,Chellie Pingree,249798.0,"Chellie Pingree, Democrat",31
+ME,US HOUSE,001,False,Ethan Weld Alcorn,20883.0,"Ethan Weld Alcorn, Unenrolled Independent",31
+ME,US HOUSE,001,False,Ronald C. Russell,154849.0,"Ronald C. Russell, Republican",31
+ME,US HOUSE,002,False,Austin Theriault,194445.0,"Austin Theriault, Republican",31
+ME,US HOUSE,002,False,Jared F. Golden,197151.0,"Jared F. Golden, Democrat",31
+ME,US SENATE,STATEWIDE,False,Angus S. King,427331.0,"Angus S. King, Jr., Independent",31
+ME,US SENATE,STATEWIDE,False,David Allen Costello,88891.0,"David Allen Costello, Democrat",31
+ME,US SENATE,STATEWIDE,False,Demi Kouzounas,284338.0,"Demi Kouzounas, Republican",31
+ME,US SENATE,STATEWIDE,False,Jason S. Cherry,20222.0,"Jason S. Cherry, Independent",31
+MI,US HOUSE,001,False,Andrew Gale,5486.0,"Andrew Gale, Libertarian",36
+MI,US HOUSE,001,False,Callie Barr,180937.0,"Callie Barr, Democrat",36
+MI,US HOUSE,001,False,Jack Bergman,282264.0,"Jack Bergman, Republican",36
+MI,US HOUSE,001,False,Liz Hakola,8497.0,"Liz Hakola, Working Class",36
+MI,US HOUSE,002,False,Ben DeJong,7037.0,"Ben DeJong, Libertarian",36
+MI,US HOUSE,002,False,John R. Moolenaar,279167.0,"John R. Moolenaar, Republican",36
+MI,US HOUSE,002,False,Michael Lynch,135824.0,"Michael Lynch, Democrat",36
+MI,US HOUSE,002,False,Scott Adams,6522.0,"Scott Adams, U.S. Taxpayers",36
+MI,US HOUSE,003,False,Alex Avery,5281.0,"Alex Avery, Libertarian",36
+MI,US HOUSE,003,False,Hillary J. Scholten,225510.0,"Hillary J. Scholten, Democrat",36
+MI,US HOUSE,003,False,Louis Palus,5546.0,"Louis Palus, Working Class",36
+MI,US HOUSE,003,False,Paul Hudson,183952.0,"Paul Hudson, Republican",36
+MI,US HOUSE,004,False,Bill Huizenga,234489.0,"Bill Huizenga, Republican",36
+MI,US HOUSE,004,False,Curtis Clark,6687.0,"Curtis Clark, U.S. Taxpayers",36
+MI,US HOUSE,004,False,Jessica Swartz,184641.0,"Jessica Swartz, Democrat",36
+MI,US HOUSE,005,False,James Bronke,6379.0,"James Bronke, Green",36
+MI,US HOUSE,005,False,Libbi Urban,134282.0,"Libbi Urban, Democrat",36
+MI,US HOUSE,005,False,Tim Walberg,269215.0,"Tim Walberg, Republican",36
+MI,US HOUSE,006,False,Bill Krebaum,5523.0,"Bill Krebaum, Libertarian",36
+MI,US HOUSE,006,False,Clyde K. Shabazz,7963.0,"Clyde K. Shabazz, Green",36
+MI,US HOUSE,006,False,Debbie Dingell,281162.0,"Debbie Dingell, Democrat",36
+MI,US HOUSE,006,False,Heather Smiley,158658.0,"Heather Smiley, Republican",36
+MI,US HOUSE,007,False,Curtis Hertel,209959.0,"Curtis Hertel, Democrat",36
+MI,US HOUSE,007,False,L. Rachel Dailey,14231.0,"L. Rachel Dailey, Libertarian",36
+MI,US HOUSE,007,False,Tom Barrett,226722.0,"Tom Barrett, Republican",36
+MI,US HOUSE,008,False,James Allen Little,2681.0,"James Allen Little, U.S. Taxpayers",37
+MI,US HOUSE,008,False,Jim Casha,1602.0,"Jim Casha, Green",37
+MI,US HOUSE,008,False,Kathy Goodwin,8492.0,"Kathy Goodwin, Working Class",37
+MI,US HOUSE,008,False,Kristen McDonald Rivet,217490.0,"Kristen McDonald Rivet, Democrat",37
+MI,US HOUSE,008,False,Paul Junge,189317.0,"Paul Junge, Republican",37
+MI,US HOUSE,008,False,Steve Barcelo,4768.0,"Steve Barcelo, Libertarian",37
+MI,US HOUSE,009,False,Clinton St. Mosley,138138.0,"Clinton St. Mosley, Democrat",37
+MI,US HOUSE,009,False,Jim Walkowicz,12169.0,"Jim Walkowicz, Working Class",37
+MI,US HOUSE,009,False,Kevin Vayko,5338.0,"Kevin Vayko, Libertarian",37
+MI,US HOUSE,009,False,Lisa C. McClain,312593.0,"Lisa C. McClain, Republican",37
+MI,US HOUSE,010,False,Andrea L. Kirby,11162.0,"Andrea L. Kirby, Working Class",37
+MI,US HOUSE,010,False,Carl J. Marlinga,191363.0,"Carl J. Marlinga, Democrat",37
+MI,US HOUSE,010,False,John James,217437.0,"John James, Republican",37
+MI,US HOUSE,010,False,Mike Saliba,5339.0,"Mike Saliba, Libertarian",37
+MI,US HOUSE,011,False,Douglas Campbell,9713.0,"Douglas Campbell, Green",37
+MI,US HOUSE,011,False,Haley M. Stevens,260780.0,"Haley M. Stevens, Democrat",37
+MI,US HOUSE,011,False,Nick Somberg,177432.0,"Nick Somberg, Republican",37
+MI,US HOUSE,012,False,Brenda K. Sanders,8254.0,"Brenda K. Sanders, Green",37
+MI,US HOUSE,012,False,Gary Walkowicz,9401.0,"Gary Walkowicz, Working Class",37
+MI,US HOUSE,012,False,James D. Hooper,92490.0,"James D. Hooper, Republican",37
+MI,US HOUSE,012,False,Rashida Tlaib,253354.0,"Rashida Tlaib, Democrat",37
+MI,US HOUSE,013,False,Chris Clark,5726.0,"Chris Clark, Libertarian",37
+MI,US HOUSE,013,False,Chris Dardzinski,2825.0,"Chris Dardzinski, U.S. Taxpayers",37
+MI,US HOUSE,013,False,Danetta Lynese Simpson,1.0,"Danetta Lynese Simpson, Write-in",37
+MI,US HOUSE,013,False,Martell D. Bivings,78917.0,"Martell D. Bivings, Republican",37
+MI,US HOUSE,013,False,Shakira Lynette Hawkins,25.0,"Shakira Lynette Hawkins, Write-in",37
+MI,US HOUSE,013,False,Shri Thanedar,220788.0,"Shri Thanedar, Democrat",37
+MI,US HOUSE,013,False,Simone R. Coleman,13367.0,"Simone R. Coleman, Working Class",37
+MI,US SENATE,STATEWIDE,False,Dave Stein,41363.0,"Dave Stein, U.S. Taxpayers",36
+MI,US SENATE,STATEWIDE,False,Doug Dern,18779.0,"Doug Dern, Natural Law",36
+MI,US SENATE,STATEWIDE,False,Douglas P. Marsh,53978.0,"Douglas P. Marsh, Green",36
+MI,US SENATE,STATEWIDE,False,Elissa Slotkin,2712686.0,"Elissa Slotkin, Democrat",36
+MI,US SENATE,STATEWIDE,False,James Chapman,1.0,"James Chapman, Write-in",36
+MI,US SENATE,STATEWIDE,False,Joseph Solis-Mullen,56697.0,"Joseph Solis-Mullen, Libertarian",36
+MI,US SENATE,STATEWIDE,False,Marcus A. Irvine,1.0,"Marcus A. Irvine, Write-in",36
+MI,US SENATE,STATEWIDE,False,Mike Rogers,2693680.0,"Mike Rogers, Republican",36
+MI,US SENATE,STATEWIDE,False,Valerie Lee Willis,2.0,"Valerie Lee Willis, Write-in",36
+MN,US HOUSE,001,False,Brad Finstad,220929.0,"Brad Finstad, Republican",39
+MN,US HOUSE,001,False,Rachel Bohman,156375.0,"Rachel Bohman, Democratic-Farmer-Labor",39
+MN,US HOUSE,001,False,Write-in,297.0,Write-in,39
+MN,US HOUSE,002,False,Angie Craig,231751.0,"Angie Craig, Democrat",39
+MN,US HOUSE,002,False,Joe Teirab,175621.0,"Joe Teirab, Republican",39
+MN,US HOUSE,002,False,Thomas William Bowman,9492.0,"Thomas William Bowman, Constitutional Conservative",39
+MN,US HOUSE,002,False,Write-in,455.0,Write-in,39
+MN,US HOUSE,003,False,Kelly Morrison,240209.0,"Kelly Morrison, Democratic-Farmer-Labor",39
+MN,US HOUSE,003,False,Tad Jude,170427.0,"Tad Jude, Republican",39
+MN,US HOUSE,003,False,Write-in,504.0,Write-in,39
+MN,US HOUSE,004,False,Betty McCollum,242802.0,"Betty McCollum, Democrat",39
+MN,US HOUSE,004,False,May Lor Xiong,117618.0,"May Lor Xiong, Republican",39
+MN,US HOUSE,004,False,Write-in,623.0,Write-in,39
+MN,US HOUSE,005,False,Dalia Al-Aqidi,86213.0,"Dalia Al-Aqidi, Republican",39
+MN,US HOUSE,005,False,Ilhan Omar,261066.0,"Ilhan Omar, Democrat",39
+MN,US HOUSE,005,False,Write-in,3768.0,Write-in,39
+MN,US HOUSE,006,False,Jeanne Hendricks,155836.0,"Jeanne Hendricks, Democratic-Farmer-Labor",39
+MN,US HOUSE,006,False,Tom Emmer,260095.0,"Tom Emmer, Republican",39
+MN,US HOUSE,006,False,Write-in,565.0,Write-in,39
+MN,US HOUSE,007,False,A J “John” Peters,114979.0,"A J “John” Peters, Democratic-Farmer-Labor",39
+MN,US HOUSE,007,False,Michelle Fischbach,275098.0,"Michelle Fischbach, Republican",39
+MN,US HOUSE,007,False,Write-in,433.0,Write-in,39
+MN,US HOUSE,008,False,Jen Schultz,176724.0,"Jen Schultz, Democratic-Farmer-Labor",39
+MN,US HOUSE,008,False,Pete Stauber,244498.0,"Pete Stauber, Republican",39
+MN,US HOUSE,008,False,Write-in,384.0,Write-in,39
+MN,US SENATE,STATEWIDE,False,Amy Klobuchar,1792441.0,"Amy Klobuchar, Democrat",39
+MN,US SENATE,STATEWIDE,False,Joyce Lynne Lacey,46377.0,"Joyce Lynne Lacey, Independence-Alliance",39
+MN,US SENATE,STATEWIDE,False,Rebecca Whiting,55215.0,"Rebecca Whiting, Libertarian",39
+MN,US SENATE,STATEWIDE,False,Royce White,1291712.0,"Royce White, Republican",39
+MN,US SENATE,STATEWIDE,False,Write-in,3578.0,Write-in,39
+MO,US HOUSE,001,False,Andrew Jones,56453.0,"Andrew Jones, Republican",41
+MO,US HOUSE,001,False,Blake Ashby,2279.0,"Blake Ashby, Better Party",41
+MO,US HOUSE,001,False,Don Fitz,5151.0,"Don Fitz, Green",41
+MO,US HOUSE,001,False,Rochelle A. Riggins,10070.0,"Rochelle A. Riggins, Libertarian",41
+MO,US HOUSE,001,False,Wesley Bell,233312.0,"Wesley Bell, Democrat",41
+MO,US HOUSE,002,False,Ann Wagner,233444.0,"Ann Wagner, Republican",41
+MO,US HOUSE,002,False,Brandon Daugherty,8951.0,"Brandon Daugherty, Libertarian",41
+MO,US HOUSE,002,False,Ray Hartmann,182056.0,"Ray Hartmann, Democrat",41
+MO,US HOUSE,002,False,Shelby Davis,3941.0,"Shelby Davis, Green",41
+MO,US HOUSE,003,False,Bethany E. Mann,138532.0,"Bethany E. Mann, Democrat",42
+MO,US HOUSE,003,False,Bob Onder,240620.0,"Bob Onder, Republican",42
+MO,US HOUSE,003,False,Jordan Rowden,9298.0,"Jordan Rowden, Libertarian",42
+MO,US HOUSE,003,False,William Hastings,4013.0,"William Hastings, Green",42
+MO,US HOUSE,004,False,David Haave,2.0,"David Haave, Write-in",42
+MO,US HOUSE,004,False,Jeanette Cass,96568.0,"Jeanette Cass, Democrat",42
+MO,US HOUSE,004,False,Mark Alford,259886.0,"Mark Alford, Republican",42
+MO,US HOUSE,004,False,Thomas Holbrook,9240.0,"Thomas Holbrook, Libertarian",42
+MO,US HOUSE,005,False,Emanuel Cleaver,199900.0,"Emanuel Cleaver, Democrat",42
+MO,US HOUSE,005,False,Michael Day,4414.0,"Michael Day, Green",42
+MO,US HOUSE,005,False,Sean E. Smith,120957.0,"Sean E. Smith, Republican",42
+MO,US HOUSE,005,False,William Truman “Bill” Wayne,6658.0,"William Truman “Bill” Wayne, Libertarian",42
+MO,US HOUSE,006,False,Andy Maidment,5919.0,"Andy Maidment, Libertarian",42
+MO,US HOUSE,006,False,Mike Diel,3058.0,"Mike Diel, Green",42
+MO,US HOUSE,006,False,Pam May,100999.0,"Pam May, Democrat",42
+MO,US HOUSE,006,False,Sam Graves,265210.0,"Sam Graves, Republican",42
+MO,US HOUSE,007,False,Eric Burlison,263231.0,"Eric Burlison, Republican",42
+MO,US HOUSE,007,False,Kevin Craig,7982.0,"Kevin Craig, Libertarian",42
+MO,US HOUSE,007,False,Missi Hesketh,96655.0,"Missi Hesketh, Democrat",42
+MO,US HOUSE,008,False,Jake Dawson,7166.0,"Jake Dawson, Libertarian",42
+MO,US HOUSE,008,False,Jason Smith,271249.0,"Jason Smith, Republican",42
+MO,US HOUSE,008,False,Randi McCallian,77649.0,"Randi McCallian, Democrat",42
+MO,US SENATE,STATEWIDE,False,Gina Bufe,19.0,"Gina Bufe, Write-in",41
+MO,US SENATE,STATEWIDE,False,Jared Young,21111.0,"Jared Young, Better Party",41
+MO,US SENATE,STATEWIDE,False,Josh Hawley,1651907.0,"Josh Hawley, Republican",41
+MO,US SENATE,STATEWIDE,False,Lucas Kunce,1243728.0,"Lucas Kunce, Democrat",41
+MO,US SENATE,STATEWIDE,False,Nathan Kline,20123.0,"Nathan Kline, Green",41
+MO,US SENATE,STATEWIDE,False,W. C. Young,35671.0,"W. C. Young, Libertarian",41
+MS,US HOUSE,001,False,Dianne Dodson Black,96697.0,"Dianne Dodson Black, Democrat",41
+MS,US HOUSE,001,False,Trent Kelly,223589.0,"Trent Kelly, Republican",41
+MS,US HOUSE,002,False,Bennie G. Thompson,177885.0,"Bennie G. Thompson, Democrat",41
+MS,US HOUSE,002,False,Ron Eller,108956.0,"Ron Eller, Republican",41
+MS,US HOUSE,003,False,Michael Guest,265159.0,"Michael Guest, Republican",41
+MS,US HOUSE,004,False,Craig Elliot Raybon,75771.0,"Craig Elliot Raybon, Democrat",41
+MS,US HOUSE,004,False,Mike Ezell,215095.0,"Mike Ezell, Republican",41
+MS,US SENATE,STATEWIDE,False,Roger F. Wicker,763420.0,"Roger F. Wicker, Republican",41
+MS,US SENATE,STATEWIDE,False,Ty Pinkins,451981.0,"Ty Pinkins, Democrat",41
+MT,US HOUSE,001,False,Dennis Hayes,9954.0,"Dennis Hayes, Libertarian",42
+MT,US HOUSE,001,False,Monica Tranel,143783.0,"Monica Tranel, Democrat",42
+MT,US HOUSE,001,False,Ryan K. Zinke,168529.0,"Ryan K. Zinke, Republican",42
+MT,US HOUSE,002,False,John B. Driscoll,93713.0,"John B. Driscoll, Democrat",43
+MT,US HOUSE,002,False,Troy Downing,181832.0,"Troy Downing, Republican",43
+MT,US SENATE,STATEWIDE,False,Jon Tester,276305.0,"Jon Tester, Democrat",42
+MT,US SENATE,STATEWIDE,False,Robert Barb,4003.0,"Robert Barb, Green",42
+MT,US SENATE,STATEWIDE,False,Sid Daoud,7272.0,"Sid Daoud, Libertarian",42
+MT,US SENATE,STATEWIDE,False,Tim Sheehy,319682.0,"Tim Sheehy, Republican",42
+NC,US HOUSE,001,False,Donald G. Davis,186341.0,"Donald G. Davis, Democrat",54
+NC,US HOUSE,001,False,Laurie Buckhout,180034.0,"Laurie Buckhout, Republican",54
+NC,US HOUSE,001,False,Tom Bailey,9949.0,"Tom Bailey, Libertarian",54
+NC,US HOUSE,002,False,Alan D. Swain,128164.0,"Alan D. Swain, Republican",54
+NC,US HOUSE,002,False,Deborah K. Ross,268662.0,"Deborah K. Ross, Democrat",54
+NC,US HOUSE,002,False,Michael Dublin,8691.0,"Michael Dublin, Green",54
+NC,US HOUSE,003,False,Gheorghe Cormos,72565.0,"Gheorghe Cormos, Libertarian",54
+NC,US HOUSE,003,False,Gregory F. Murphy,248276.0,"Gregory F. Murphy, Republican",54
+NC,US HOUSE,004,False,Eric Blankenburg,112084.0,"Eric Blankenburg, Republican",54
+NC,US HOUSE,004,False,Guy Meilleur,8632.0,"Guy Meilleur, Libertarian",54
+NC,US HOUSE,004,False,Valerie P. Foushee,308064.0,"Valerie P. Foushee, Democrat",54
+NC,US HOUSE,005,False,Chuck Hubbard,162390.0,"Chuck Hubbard, Democrat",54
+NC,US HOUSE,005,False,Virginia Foxx,238304.0,"Virginia Foxx, Republican",54
+NC,US HOUSE,006,False,Addison McDowell,233303.0,"Addison McDowell, Republican",54
+NC,US HOUSE,006,False,Kevin E. Hayes,104017.0,"Kevin E. Hayes, Constitution",54
+NC,US HOUSE,007,False,David Rouzer,254022.0,"David Rouzer, Republican",54
+NC,US HOUSE,007,False,Marlando D. Pridgen,179512.0,"Marlando D. Pridgen, Democrat",54
+NC,US HOUSE,008,False,Justin E. Dues,161709.0,"Justin E. Dues, Democrat",54
+NC,US HOUSE,008,False,Mark Harris,238640.0,"Mark Harris, Republican",54
+NC,US HOUSE,009,False,Nigel William Bristow,140852.0,"Nigel William Bristow, Democrat",54
+NC,US HOUSE,009,False,Richard Hudson,210042.0,"Richard Hudson, Republican",54
+NC,US HOUSE,009,False,Shelane Etchison,22183.0,"Shelane Etchison, Unaffiliated",54
+NC,US HOUSE,010,False,Pat Harrigan,233814.0,"Pat Harrigan, Republican",54
+NC,US HOUSE,010,False,Ralph R. Scott,155383.0,"Ralph R. Scott, Jr., Democrat",54
+NC,US HOUSE,010,False,Steven Feldman,11614.0,"Steven Feldman, Libertarian",54
+NC,US HOUSE,010,False,Todd Helm,5884.0,"Todd Helm, Constitution",54
+NC,US HOUSE,011,False,Caleb Rudow,186977.0,"Caleb Rudow, Democrat",54
+NC,US HOUSE,011,False,Chuck Edwards,245546.0,"Chuck Edwards, Republican",54
+NC,US HOUSE,012,False,Addul Ali,91128.0,"Addul Ali, Republican",54
+NC,US HOUSE,012,False,Alma S. Adams,259627.0,"Alma S. Adams, Democrat",54
+NC,US HOUSE,013,False,Brad Knott,243655.0,"Brad Knott, Republican",54
+NC,US HOUSE,013,False,Frank Pierce,171835.0,"Frank Pierce, Democrat",54
+NC,US HOUSE,014,False,Pam Genant,168269.0,"Pam Genant, Democrat",54
+NC,US HOUSE,014,False,Tim Moore,232987.0,"Tim Moore, Republican",54
+ND,US HOUSE,001,False,Julie Fedorchak,249101.0,"Julie Fedorchak, Republican",56
+ND,US HOUSE,001,False,Trygve Hammer,109231.0,"Trygve Hammer, Democratic-Nonpartisan League",56
+ND,US HOUSE,001,False,Write-in,1455.0,Write-in,56
+ND,US SENATE,STATEWIDE,False,Katrina Christiansen,121602.0,"Katrina Christiansen, Democratic-Nonpartisan League",56
+ND,US SENATE,STATEWIDE,False,Kevin Cramer,241569.0,"Kevin Cramer, Republican",56
+ND,US SENATE,STATEWIDE,False,Write-in,1156.0,Write-in,56
+NE,US HOUSE,001,False,Carol Blood,124498.0,"Carol Blood, Democrat",43
+NE,US HOUSE,001,False,Mike Flood,187559.0,"Mike Flood, Republican",43
+NE,US HOUSE,002,False,Don Bacon,160198.0,"Don Bacon, Republican",43
+NE,US HOUSE,002,False,Tony Vargas,154369.0,"Tony Vargas, Democrat",43
+NE,US HOUSE,003,False,Adrian Smith,243481.0,"Adrian Smith, Republican",43
+NE,US HOUSE,003,False,Daniel Ebers,59287.0,"Daniel Ebers, Democrat",43
+NE,US SENATE,STATEWIDE,False,Dan Osborn,436493.0,"Dan Osborn, By Petition",43
+NE,US SENATE,STATEWIDE,False,Deb Fischer,499124.0,"Deb Fischer, Republican",43
+NE,US SENATE,STATEWIDE,False,Write-in (Scattering),2719.0,Write-in (Scattering),43
+NE,US SENATE,STATEWIDE,True,Pete Ricketts,585103.0,"Pete Ricketts, Republican",43
+NE,US SENATE,STATEWIDE,True,Preston Love,349902.0,"Preston Love, Jr., Democrat",43
+NH,US HOUSE,001,False,Chris Pappas,218577.0,"Chris Pappas, Democrat",44
+NH,US HOUSE,001,False,Russell Prescott,185936.0,"Russell Prescott, Republican",44
+NH,US HOUSE,001,False,Write-in,295.0,Write-in,44
+NH,US HOUSE,002,False,Lily Tang Williams,187810.0,"Lily Tang Williams, Republican",44
+NH,US HOUSE,002,False,Maggie Goodlander,211641.0,"Maggie Goodlander, Democrat",44
+NH,US HOUSE,002,False,Write-in,367.0,Write-in,44
+NJ,US HOUSE,001,False,Austin Johnson,2091.0,"Austin Johnson, No Slogan",45
+NJ,US HOUSE,001,False,Donald Norcross,208808.0,"Donald Norcross, Democrat",45
+NJ,US HOUSE,001,False,Robin Brownfield,5771.0,"Robin Brownfield, Green",45
+NJ,US HOUSE,001,False,Theodore “Teddy” Liddell,144390.0,"Theodore “Teddy” Liddell, Republican",45
+NJ,US HOUSE,002,False,Jefferson Van Drew,215946.0,"Jefferson Van Drew, Republican",45
+NJ,US HOUSE,002,False,Joseph F. Salerno,153117.0,"Joseph F. Salerno, Democrat",45
+NJ,US HOUSE,002,False,Thomas Cannavo,2557.0,"Thomas Cannavo, Green",45
+NJ,US HOUSE,003,False,Chris Russomanno,1951.0,"Chris Russomanno, Libertarian",45
+NJ,US HOUSE,003,False,Douglas Anthony Wynn,1332.0,"Douglas Anthony Wynn, Why Not Wynn",45
+NJ,US HOUSE,003,False,Herb Conaway,202034.0,"Herb Conaway, Democrat",45
+NJ,US HOUSE,003,False,Justin R. Barbera,1235.0,"Justin R. Barbera, Join The Revolution",45
+NJ,US HOUSE,003,False,Rajesh Mohan,169454.0,"Rajesh Mohan, Republican",45
+NJ,US HOUSE,003,False,Steven Welzer,3478.0,"Steven Welzer, Green",45
+NJ,US HOUSE,004,False,Barry Bendar,1823.0,"Barry Bendar, Green",45
+NJ,US HOUSE,004,False,Christopher H. Smith,265652.0,"Christopher H. Smith, Republican",45
+NJ,US HOUSE,004,False,John Morrison,1950.0,"John Morrison, Libertarian",45
+NJ,US HOUSE,004,False,Matthew Jenkins,124803.0,"Matthew Jenkins, Democrat",45
+NJ,US HOUSE,005,False,Aamir Arif,2375.0,"Aamir Arif, Peace Freedom Liberty",45
+NJ,US HOUSE,005,False,Beau Forte,3428.0,"Beau Forte, Green",45
+NJ,US HOUSE,005,False,James Tosone,2440.0,"James Tosone, Libertarian",45
+NJ,US HOUSE,005,False,Josh Gottheimer,208359.0,"Josh Gottheimer, Democrat",45
+NJ,US HOUSE,005,False,Mary Jo Guinchard,165287.0,"Mary Jo Guinchard, Republican",45
+NJ,US HOUSE,006,False,Fahad Akhtar,4871.0,"Fahad Akhtar, Common Sense Independent",45
+NJ,US HOUSE,006,False,Frank Pallone,170275.0,"Frank Pallone, Jr., Democrat",45
+NJ,US HOUSE,006,False,Herb Tarbous,4246.0,"Herb Tarbous, Green",45
+NJ,US HOUSE,006,False,Matthew Amitrano,1770.0,"Matthew Amitrano, Libertarian",45
+NJ,US HOUSE,006,False,Scott Fegler,122519.0,"Scott Fegler, Republican",45
+NJ,US HOUSE,007,False,Andrew Black,4258.0,"Andrew Black, Green",46
+NJ,US HOUSE,007,False,Lana Leguia,3784.0,"Lana Leguia, Libertarian",46
+NJ,US HOUSE,007,False,Sue Altman,200025.0,"Sue Altman, Democrat",46
+NJ,US HOUSE,007,False,Thomas H. Kean,223331.0,"Thomas H. Kean, Jr., Republican",46
+NJ,US HOUSE,008,False,Anthony Valdes,68152.0,"Anthony Valdes, Republican",46
+NJ,US HOUSE,008,False,Christian J. Robbins,5465.0,"Christian J. Robbins, Green",46
+NJ,US HOUSE,008,False,Lea Sherman,2419.0,"Lea Sherman, Socialist Workers",46
+NJ,US HOUSE,008,False,Pablo R. Olivera,4295.0,"Pablo R. Olivera, Labour",46
+NJ,US HOUSE,008,False,Robert Menendez,116434.0,"Robert Menendez, Democrat",46
+NJ,US HOUSE,009,False,Benjamin Taylor,5027.0,"Benjamin Taylor, Green",46
+NJ,US HOUSE,009,False,Billy Prempeh,117939.0,"Billy Prempeh, Republican",46
+NJ,US HOUSE,009,False,Bruno Pereira,3533.0,"Bruno Pereira, Libertarian",46
+NJ,US HOUSE,009,False,Nellie Pou,130514.0,"Nellie Pou, Democrat",46
+NJ,US HOUSE,010,False,Carmen Bucco,54405.0,"Carmen Bucco, Republican",46
+NJ,US HOUSE,010,False,Cynthia A. Johnson,2132.0,"Cynthia A. Johnson, C4C 2024",46
+NJ,US HOUSE,010,False,Donna Weiss,1136.0,"Donna Weiss, Social Activist",46
+NJ,US HOUSE,010,False,Jon Carlos Serrano,3198.0,"Jon Carlos Serrano, Green",46
+NJ,US HOUSE,010,False,LaMonica McIver,182020.0,"LaMonica McIver, Democrat",46
+NJ,US HOUSE,010,False,Michelle Middleton,1686.0,"Michelle Middleton, All Of Us!",46
+NJ,US HOUSE,011,False,Joseph Belnome,164556.0,"Joseph Belnome, Republican",46
+NJ,US HOUSE,011,False,Joshua Lanzara,1832.0,"Joshua Lanzara, Truth Freedom Prosperity",46
+NJ,US HOUSE,011,False,Lily Benavides,4780.0,"Lily Benavides, Green",46
+NJ,US HOUSE,011,False,Mikie Sherrill,222583.0,"Mikie Sherrill, Democrat",46
+NJ,US HOUSE,012,False,Bonnie Watson Coleman,196871.0,"Bonnie Watson Coleman, Democrat",46
+NJ,US HOUSE,012,False,Darius Mayfield,117222.0,"Darius Mayfield, Republican",46
+NJ,US HOUSE,012,False,Kim Meudt,4652.0,"Kim Meudt, Green",46
+NJ,US HOUSE,012,False,Vic Kaplan,2915.0,"Vic Kaplan, Libertarian",46
+NJ,US SENATE,STATEWIDE,False,Andy Kim,2161491.0,"Andy Kim, Democrat",45
+NJ,US SENATE,STATEWIDE,False,Christina Khalil,45443.0,"Christina Khalil, Green",45
+NJ,US SENATE,STATEWIDE,False,Curtis Bashaw,1773589.0,"Curtis Bashaw, Republican",45
+NJ,US SENATE,STATEWIDE,False,Joanne Kuniansky,9806.0,"Joanne Kuniansky, Socialist Workers",45
+NJ,US SENATE,STATEWIDE,False,Kenneth R. Kaplan,24242.0,"Kenneth R. Kaplan, Libertarian",45
+NJ,US SENATE,STATEWIDE,False,Patricia G. Mooneyham,17224.0,"Patricia G. Mooneyham, Vote Better",45
+NM,US HOUSE,001,False,Melanie A. Stansbury,193203.0,"Melanie A. Stansbury, Democrat",48
+NM,US HOUSE,001,False,Steve Jones,149546.0,"Steve Jones, Republican",48
+NM,US HOUSE,002,False,Gabe Vasquez,138177.0,"Gabe Vasquez, Democrat",48
+NM,US HOUSE,002,False,Yvette Herrell,127145.0,"Yvette Herrell, Republican",48
+NM,US HOUSE,003,False,Sharon E. Clahchischilliage,126085.0,"Sharon E. Clahchischilliage, Republican",48
+NM,US HOUSE,003,False,Teresa Leger Fernandez,162342.0,"Teresa Leger Fernandez, Democrat",48
+NM,US SENATE,STATEWIDE,False,Martin Heinrich,497333.0,"Martin Heinrich, Democrat",48
+NM,US SENATE,STATEWIDE,False,Nella Louise Domenici,405978.0,"Nella Louise Domenici, Republican",48
+NV,US HOUSE,001,False,David Goossen,2596.0,"David Goossen, No Political Party",44
+NV,US HOUSE,001,False,David Havlicek,2711.0,"David Havlicek, Libertarian",44
+NV,US HOUSE,001,False,Dina Titus,167885.0,"Dina Titus, Democrat",44
+NV,US HOUSE,001,False,Mark Robertson,143650.0,"Mark Robertson, Republican",44
+NV,US HOUSE,001,False,Ron “Ron Q.” Quince,3321.0,"Ron “Ron Q.” Quince, No Political Party",44
+NV,US HOUSE,001,False,William Hoge,2736.0,"William Hoge, Independent American",44
+NV,US HOUSE,002,False,Greg Kidd,144064.0,"Greg Kidd, No Political Party",44
+NV,US HOUSE,002,False,Javi “Trujillo” Tachiquin,15817.0,"Javi “Trujillo” Tachiquin, Libertarian",44
+NV,US HOUSE,002,False,Lynn Chapman,19784.0,"Lynn Chapman, Independent American",44
+NV,US HOUSE,002,False,Mark E. Amodei,219919.0,"Mark E. Amodei, Republican",44
+NV,US HOUSE,003,False,Drew Johnson,181084.0,"Drew Johnson, Republican",44
+NV,US HOUSE,003,False,Susie Lee,191304.0,"Susie Lee, Democrat",44
+NV,US HOUSE,004,False,John Lee,148061.0,"John Lee, Republican",44
+NV,US HOUSE,004,False,Russell Best,4919.0,"Russell Best, Independent American",44
+NV,US HOUSE,004,False,Steven Horsford,174926.0,"Steven Horsford, Democrat",44
+NV,US HOUSE,004,False,Tim “T J” Ferreira,4300.0,"Tim “T J” Ferreira, Libertarian",44
+NV,US SENATE,STATEWIDE,False,Christopher Cunningham,20881.0,"Christopher Cunningham, Libertarian",44
+NV,US SENATE,STATEWIDE,False,Jacky Rosen,701105.0,"Jacky Rosen, Democrat",43
+NV,US SENATE,STATEWIDE,False,Janine Hansen,21316.0,"Janine Hansen, Independent American",44
+NV,US SENATE,STATEWIDE,False,Sam Brown,677046.0,"Sam Brown, Republican",43
+NY,US HOUSE,001,False,John P. Avlon,183540.0,"John P. Avlon, Democrat | Common Sense Suffolk",48
+NY,US HOUSE,001,False,Nick LaLota,226285.0,"Nick LaLota, Republican | Conservative",48
+NY,US HOUSE,001,False,Scattering,275.0,Scattering,48
+NY,US HOUSE,002,False,Andrew R. Garbarino,202597.0,"Andrew R. Garbarino, Republican | Conservative",49
+NY,US HOUSE,002,False,Rob Lubin,136371.0,"Rob Lubin, Democrat | Working Families",49
+NY,US HOUSE,002,False,Scattering,189.0,Scattering,49
+NY,US HOUSE,003,False,Michael J. LiPetri,174693.0,"Michael J. LiPetri, Jr., Republican | Conservative",49
+NY,US HOUSE,003,False,Scattering,780.0,Scattering,49
+NY,US HOUSE,003,False,Thomas R. Suozzi,187651.0,"Thomas R. Suozzi, Democrat | Common Sense",49
+NY,US HOUSE,004,False,Anthony D’Esposito,183157.0,"Anthony D’Esposito, Republican | Conservative",49
+NY,US HOUSE,004,False,Laura A. Gillen,191760.0,"Laura A. Gillen, Democrat | Common Sense",49
+NY,US HOUSE,004,False,Scattering,601.0,Scattering,49
+NY,US HOUSE,005,False,Conservative,5840.0,"Conservative, Common Sense",49
+NY,US HOUSE,005,False,Gregory W. Meeks,168425.0,"Gregory W. Meeks, Democrat",49
+NY,US HOUSE,005,False,Paul King,56689.0,"Paul King, Republican",49
+NY,US HOUSE,005,False,Scattering,782.0,Scattering,49
+NY,US HOUSE,006,False,Grace Meng,120205.0,"Grace Meng, Democrat",49
+NY,US HOUSE,006,False,Joseph J. Chou,3272.0,"Joseph J. Chou, Truth",49
+NY,US HOUSE,006,False,Scattering,654.0,Scattering,49
+NY,US HOUSE,006,False,Thomas J. Zmich,74559.0,"Thomas J. Zmich, Republican | Conservative",49
+NY,US HOUSE,007,False,Bill Kregler,48435.0,"Bill Kregler, Republican | Conservative",49
+NY,US HOUSE,007,False,Nydia M. Velázquez,172795.0,"Nydia M. Velázquez, Democrat | Working Families",49
+NY,US HOUSE,007,False,Scattering,549.0,Scattering,49
+NY,US HOUSE,008,False,Hakeem S. Jeffries,168036.0,"Hakeem S. Jeffries, Democrat",49
+NY,US HOUSE,008,False,John J. Delaney,54863.0,"John J. Delaney, Republican | Conservative",49
+NY,US HOUSE,008,False,Scattering,905.0,Scattering,49
+NY,US HOUSE,009,False,Menachem M. Raitport,60064.0,"Menachem M. Raitport, Republican | Conservative",49
+NY,US HOUSE,009,False,Scattering,2501.0,Scattering,49
+NY,US HOUSE,009,False,Yvette D. Clarke,173207.0,"Yvette D. Clarke, Democrat",49
+NY,US HOUSE,010,False,Alexander Dodenhoff,37555.0,"Alexander Dodenhoff, Republican",49
+NY,US HOUSE,010,False,Daniel S. Goldman,206206.0,"Daniel S. Goldman, Democrat",49
+NY,US HOUSE,010,False,Paul J. Briscoe,6747.0,"Paul J. Briscoe, Conservative",49
+NY,US HOUSE,010,False,Scattering,4048.0,Scattering,49
+NY,US HOUSE,011,False,Andrea S. Morse,93586.0,"Andrea S. Morse, Democrat",50
+NY,US HOUSE,011,False,Nicole Malliotakis,167099.0,"Nicole Malliotakis, Republican | Conservative",50
+NY,US HOUSE,011,False,Scattering,1043.0,Scattering,50
+NY,US HOUSE,012,False,Jerrold Nadler,260165.0,"Jerrold Nadler, Democrat | Working Families",50
+NY,US HOUSE,012,False,Michael K. Zumbluskas,62989.0,"Michael K. Zumbluskas, Republican",50
+NY,US HOUSE,012,False,Scattering,866.0,Scattering,50
+NY,US HOUSE,013,False,Adriano Espaillat,181800.0,"Adriano Espaillat, Democrat",50
+NY,US HOUSE,013,False,Ruben D. Vargas,35822.0,"Ruben D. Vargas, Republican | Conservative",50
+NY,US HOUSE,013,False,Scattering,1351.0,Scattering,50
+NY,US HOUSE,014,False,Alexandria Ocasio-Cortez,132714.0,"Alexandria Ocasio-Cortez, Democrat | Working Families",50
+NY,US HOUSE,014,False,Scattering,759.0,Scattering,50
+NY,US HOUSE,014,False,Tina Forte,59078.0,"Tina Forte, Republican | Conservative",50
+NY,US HOUSE,015,False,Gonzalo Duran,36010.0,"Gonzalo Duran, Republican | Conservative",50
+NY,US HOUSE,015,False,Jose Vega,4086.0,"Jose Vega, LaRouche",50
+NY,US HOUSE,015,False,Ritchie Torres,130392.0,"Ritchie Torres, Democrat",50
+NY,US HOUSE,015,False,Scattering,607.0,Scattering,50
+NY,US HOUSE,016,False,George S. Latimer,217668.0,"George S. Latimer, Democrat",50
+NY,US HOUSE,016,False,Miriam Levitt Flisser,86408.0,"Miriam Levitt Flisser, Republican",50
+NY,US HOUSE,016,False,Scattering,1003.0,Scattering,50
+NY,US HOUSE,017,False,Anthony Frascone,7530.0,"Anthony Frascone, Working Families",50
+NY,US HOUSE,017,False,Michael Lawler,197845.0,"Michael Lawler, Republican | Conservative",50
+NY,US HOUSE,017,False,Mondaire L. Jones,173899.0,"Mondaire L. Jones, Democrat",50
+NY,US HOUSE,017,False,Scattering,234.0,Scattering,50
+NY,US HOUSE,018,False,Alison Esposito,155129.0,"Alison Esposito, Republican | Conservative",50
+NY,US HOUSE,018,False,Patrick Ryan,207106.0,"Patrick Ryan, Democrat | Working Families",50
+NY,US HOUSE,018,False,Scattering,274.0,Scattering,50
+NY,US HOUSE,019,False,Josh Riley,192647.0,"Josh Riley, Democrat | Working Families",50
+NY,US HOUSE,019,False,Marcus J. Molinaro,184290.0,"Marcus J. Molinaro, Republican | Conservative",50
+NY,US HOUSE,019,False,Scattering,406.0,Scattering,50
+NY,US HOUSE,020,False,Kevin M. Waltz,141151.0,"Kevin M. Waltz, Republican | Conservative",51
+NY,US HOUSE,020,False,Paul Tonko,221997.0,"Paul Tonko, Democrat | Working Families",51
+NY,US HOUSE,020,False,Scattering,297.0,Scattering,51
+NY,US HOUSE,021,False,Elise M. Stefanik,215996.0,"Elise M. Stefanik, Republican | Conservative",51
+NY,US HOUSE,021,False,Paula Collins,132447.0,"Paula Collins, Democrat | Working Families",51
+NY,US HOUSE,021,False,Scattering,197.0,Scattering,51
+NY,US HOUSE,022,False,Brandon Williams,161939.0,"Brandon Williams, Republican | Conservative",51
+NY,US HOUSE,022,False,John W. Mannion,194450.0,"John W. Mannion, Democrat | Working Families",51
+NY,US HOUSE,022,False,Scattering,403.0,Scattering,51
+NY,US HOUSE,023,False,Nicholas A. Langworthy,246969.0,"Nicholas A. Langworthy, Republican | Conservative",51
+NY,US HOUSE,023,False,Scattering,228.0,Scattering,51
+NY,US HOUSE,023,False,Thomas A. Carle,128397.0,"Thomas A. Carle, Democrat",51
+NY,US HOUSE,024,False,Claudia Tenney,235867.0,"Claudia Tenney, Republican | Conservative",51
+NY,US HOUSE,024,False,David Wagenhauser,123317.0,"David Wagenhauser, Democrat",51
+NY,US HOUSE,024,False,Scattering,223.0,Scattering,51
+NY,US HOUSE,025,False,Gregg A. Sadwick,141195.0,"Gregg A. Sadwick, Republican",51
+NY,US HOUSE,025,False,Joseph D. Morelle,219175.0,"Joseph D. Morelle, Democrat | Working Families",51
+NY,US HOUSE,025,False,Scattering,263.0,Scattering,51
+NY,US HOUSE,026,False,Anthony G. Marecki,111772.0,"Anthony G. Marecki, Republican | Conservative",51
+NY,US HOUSE,026,False,Scattering,401.0,Scattering,51
+NY,US HOUSE,026,False,Timothy M. Kennedy,209131.0,"Timothy M. Kennedy, Democrat | Working Families",51
+NY,US SENATE,STATEWIDE,False,Diane Sare,39413.0,"Diane Sare, LaRouche",48
+NY,US SENATE,STATEWIDE,False,Kirsten E. Gillibrand,4711298.0,"Kirsten E. Gillibrand, Democrat | Working Families",48
+NY,US SENATE,STATEWIDE,False,Michael D. Sapraicone,3246114.0,"Michael D. Sapraicone, Republican | Conservative",48
+NY,US SENATE,STATEWIDE,False,Scattering,13492.0,Scattering,48
+OH,US HOUSE,001,False,Greg Landsman,213916.0,"Greg Landsman, Democrat",56
+OH,US HOUSE,001,False,Orlando Sonza,177993.0,"Orlando Sonza, Republican",56
+OH,US HOUSE,002,False,Alexander David Schrank,4.0,"Alexander David Schrank, Write-in",56
+OH,US HOUSE,002,False,David J. Taylor,268211.0,"David J. Taylor, Republican",56
+OH,US HOUSE,002,False,Samantha Meadows,96401.0,"Samantha Meadows, Democrat",56
+OH,US HOUSE,003,False,Joyce Beatty,242632.0,"Joyce Beatty, Democrat",56
+OH,US HOUSE,003,False,Michael Young,100355.0,"Michael Young, Republican",56
+OH,US HOUSE,004,False,Jim Jordan,273297.0,"Jim Jordan, Republican",56
+OH,US HOUSE,004,False,Tamie Wilson,125905.0,"Tamie Wilson, Democrat",56
+OH,US HOUSE,005,False,Keith Mundy,123024.0,"Keith Mundy, Democrat",56
+OH,US HOUSE,005,False,Robert E. Latta,255633.0,"Robert E. Latta, Republican",56
+OH,US HOUSE,006,False,Michael A. Rulli,245860.0,"Michael A. Rulli, Republican",56
+OH,US HOUSE,006,False,Michael L. Kripchak,122515.0,"Michael L. Kripchak, Democrat",56
+OH,US HOUSE,007,False,Dennis Kucinich,51264.0,"Dennis Kucinich, Independent",56
+OH,US HOUSE,007,False,Matt Diemer,144613.0,"Matt Diemer, Democrat",56
+OH,US HOUSE,007,False,Max L. Miller,204494.0,"Max L. Miller, Republican",56
+OH,US HOUSE,008,False,Vanessa Enoch,140625.0,"Vanessa Enoch, Democrat",57
+OH,US HOUSE,008,False,Warren Davidson,237503.0,"Warren Davidson, Republican",57
+OH,US HOUSE,009,False,Derek Merrin,178716.0,"Derek Merrin, Republican",57
+OH,US HOUSE,009,False,Marcy Kaptur,181098.0,"Marcy Kaptur, Democrat",57
+OH,US HOUSE,009,False,Tom Pruss,15381.0,"Tom Pruss, Libertarian",57
+OH,US HOUSE,010,False,Amy Cox,145420.0,"Amy Cox, Democrat",57
+OH,US HOUSE,010,False,Michael Harbaugh,11631.0,"Michael Harbaugh, Independent",57
+OH,US HOUSE,010,False,Michael R. Turner,213695.0,"Michael R. Turner, Republican",57
+OH,US HOUSE,011,False,Alan Rapoport,59394.0,"Alan Rapoport, Republican",57
+OH,US HOUSE,011,False,Christopher Zelonish,2.0,"Christopher Zelonish, Write-in",57
+OH,US HOUSE,011,False,Sean Freeman,6107.0,"Sean Freeman, Independent",57
+OH,US HOUSE,011,False,Shontel M. Brown,236883.0,"Shontel M. Brown, Democrat",57
+OH,US HOUSE,011,False,Tracy Deforde,27.0,"Tracy Deforde, Write-in",57
+OH,US HOUSE,012,False,Jerrad Christian,119738.0,"Jerrad Christian, Democrat",57
+OH,US HOUSE,012,False,Troy Balderson,260450.0,"Troy Balderson, Republican",57
+OH,US HOUSE,013,False,Emilia Strong Sykes,197466.0,"Emilia Strong Sykes, Democrat",57
+OH,US HOUSE,013,False,Kevin Coughlin,188924.0,"Kevin Coughlin, Republican",57
+OH,US HOUSE,014,False,Brian Bob Kenderes,140431.0,"Brian Bob Kenderes, Democrat",57
+OH,US HOUSE,014,False,David P. Joyce,243427.0,"David P. Joyce, Republican",57
+OH,US HOUSE,015,False,Adam Miller,151411.0,"Adam Miller, Democrat",57
+OH,US HOUSE,015,False,Mike Carey,196338.0,"Mike Carey, Republican",57
+OH,US SENATE,STATEWIDE,False,Bernie Moreno,2857383.0,"Bernie Moreno, Republican",56
+OH,US SENATE,STATEWIDE,False,David Allen Pastorius,13.0,"David Allen Pastorius, Write-in",56
+OH,US SENATE,STATEWIDE,False,Don Kissick,195648.0,"Don Kissick, Libertarian",56
+OH,US SENATE,STATEWIDE,False,Nathan Russell,19.0,"Nathan Russell, Write-in",56
+OH,US SENATE,STATEWIDE,False,Sherrod Brown,2650949.0,"Sherrod Brown, Democrat",56
+OH,US SENATE,STATEWIDE,False,Stephen Faris,84.0,"Stephen Faris, Write-in",56
+OH,US SENATE,STATEWIDE,False,Tariq K. Shabazz,524.0,"Tariq K. Shabazz, Write-in",56
+OK,US HOUSE,001,False,Dennis Baker,107903.0,"Dennis Baker, Democrat",57
+OK,US HOUSE,001,False,Kevin Hern,188832.0,"Kevin Hern, Republican",57
+OK,US HOUSE,001,False,Mark David Garcia Sanders,15766.0,"Mark David Garcia Sanders, Independent",57
+OK,US HOUSE,002,False,Brandon Wade,68841.0,"Brandon Wade, Democrat",58
+OK,US HOUSE,002,False,Josh Brecheen,238123.0,"Josh Brecheen, Republican",58
+OK,US HOUSE,002,False,Ronnie Hopkins,14061.0,"Ronnie Hopkins, Independent",58
+OK,US HOUSE,003,False,Frank D. Lucas,,"Frank D. Lucas, Republican",58
+OK,US HOUSE,004,False,James Stacy,19870.0,"James Stacy, Independent",58
+OK,US HOUSE,004,False,Mary Brannon,86641.0,"Mary Brannon, Democrat",58
+OK,US HOUSE,004,False,Tom Cole,199962.0,"Tom Cole, Republican",58
+OK,US HOUSE,005,False,Madison Horn,134471.0,"Madison Horn, Democrat",58
+OK,US HOUSE,005,False,Stephanie I. Bice,207636.0,"Stephanie I. Bice, Republican",58
+OR,US HOUSE,001,False,Bob Todd,98908.0,"Bob Todd, Republican",58
+OR,US HOUSE,001,False,Joe Christman,10840.0,"Joe Christman, Libertarian",58
+OR,US HOUSE,001,False,Miscellaneous,687.0,Miscellaneous,58
+OR,US HOUSE,001,False,Suzanne Bonamici,241556.0,"Suzanne Bonamici, Democrat",58
+OR,US HOUSE,002,False,Cliff Bentz,224601.0,"Cliff Bentz, Republican",58
+OR,US HOUSE,002,False,Dan Ruby,115337.0,"Dan Ruby, Democrat",58
+OR,US HOUSE,002,False,Michael Kurt Stettler,11255.0,"Michael Kurt Stettler, Constitution",58
+OR,US HOUSE,002,False,Miscellaneous,296.0,Miscellaneous,58
+OR,US HOUSE,003,False,David K. Frosch,2459.0,"David K. Frosch, Constitution",58
+OR,US HOUSE,003,False,David W. Walker,10245.0,"David W. Walker, Progressive, Independent",58
+OR,US HOUSE,003,False,Joanna Harbour,84344.0,"Joanna Harbour, Republican",58
+OR,US HOUSE,003,False,Joe Meyer,10106.0,"Joe Meyer, Pacific Green",58
+OR,US HOUSE,003,False,Maxine E. Dexter,226405.0,"Maxine E. Dexter, Democrat",58
+OR,US HOUSE,003,False,Miscellaneous,810.0,Miscellaneous,58
+OR,US HOUSE,004,False,Dan Bahlen,5704.0,"Dan Bahlen, Libertarian",58
+OR,US HOUSE,004,False,Justin Filip,10315.0,"Justin Filip, Pacific Green",58
+OR,US HOUSE,004,False,Miscellaneous,454.0,Miscellaneous,58
+OR,US HOUSE,004,False,Monique DeSpain,166430.0,"Monique DeSpain, Republican",58
+OR,US HOUSE,004,False,Val T. Hoyle,195862.0,"Val T. Hoyle, Democrat",58
+OR,US HOUSE,005,False,Andrea Thorn Townsend,4155.0,"Andrea Thorn Townsend, Pacific Green",59
+OR,US HOUSE,005,False,Brett Smith,18665.0,"Brett Smith, Independent",59
+OR,US HOUSE,005,False,Janelle S. Bynum,191365.0,"Janelle S. Bynum, Democrat",59
+OR,US HOUSE,005,False,Lori Chavez-DeRemer,180420.0,"Lori Chavez-DeRemer, Republican",59
+OR,US HOUSE,005,False,Miscellaneous,495.0,Miscellaneous,59
+OR,US HOUSE,005,False,Sonja Feintech,6193.0,"Sonja Feintech, Libertarian",59
+OR,US HOUSE,006,False,Andrea Salinas,180869.0,"Andrea Salinas, Democrat",59
+OR,US HOUSE,006,False,Mike Erickson,157634.0,"Mike Erickson, Republican",59
+OR,US HOUSE,006,False,Miscellaneous,562.0,Miscellaneous,59
+PA,US HOUSE,001,False,Ashley Ehasz,202042.0,"Ashley Ehasz, Democrat",61
+PA,US HOUSE,001,False,Brian K. Fitzpatrick,261390.0,"Brian K. Fitzpatrick, Republican",61
+PA,US HOUSE,002,False,Aaron Bashir,77355.0,"Aaron Bashir, Republican",61
+PA,US HOUSE,002,False,Brendan F. Boyle,193691.0,"Brendan F. Boyle, Democrat",61
+PA,US HOUSE,003,False,Dwight Evans,340223.0,"Dwight Evans, Democrat",61
+PA,US HOUSE,004,False,David Winkler,186457.0,"David Winkler, Republican",61
+PA,US HOUSE,004,False,Madeleine Dean,269066.0,"Madeleine Dean, Democrat",61
+PA,US HOUSE,005,False,Alfeia Goodwin,142355.0,"Alfeia Goodwin, Republican",61
+PA,US HOUSE,005,False,Mary Gay Scanlon,267754.0,"Mary Gay Scanlon, Democrat",61
+PA,US HOUSE,006,False,Chrissy Houlahan,235625.0,"Chrissy Houlahan, Democrat",61
+PA,US HOUSE,006,False,Neil Young,183638.0,"Neil Young, Republican",61
+PA,US HOUSE,007,False,Ryan E. Mackenzie,203688.0,"Ryan E. Mackenzie, Republican",61
+PA,US HOUSE,007,False,Susan Wild,199626.0,"Susan Wild, Democrat",61
+PA,US HOUSE,008,False,Matt Cartwright,189411.0,"Matt Cartwright, Democrat",61
+PA,US HOUSE,008,False,Rob Bresnahan,195663.0,"Rob Bresnahan, Jr., Republican",61
+PA,US HOUSE,009,False,Amanda Waldman,115523.0,"Amanda Waldman, Democrat",61
+PA,US HOUSE,009,False,Daniel Meuser,276212.0,"Daniel Meuser, Republican",61
+PA,US HOUSE,010,False,Janelle Stelson,200434.0,"Janelle Stelson, Democrat",61
+PA,US HOUSE,010,False,Scott Perry,205567.0,"Scott Perry, Republican",61
+PA,US HOUSE,011,False,Jim Atkinson,149641.0,"Jim Atkinson, Democrat",61
+PA,US HOUSE,011,False,Lloyd Smucker,253672.0,"Lloyd Smucker, Republican",61
+PA,US HOUSE,012,False,James Hayes,181426.0,"James Hayes, Republican",61
+PA,US HOUSE,012,False,Summer L. Lee,234802.0,"Summer L. Lee, Democrat",61
+PA,US HOUSE,013,False,Beth Farnham,104823.0,"Beth Farnham, Democrat",61
+PA,US HOUSE,013,False,John Joyce,301460.0,"John Joyce, Republican",61
+PA,US HOUSE,014,False,Chris Dziados,134755.0,"Chris Dziados, Democrat",61
+PA,US HOUSE,014,False,Guy Reschenthaler,268380.0,"Guy Reschenthaler, Republican",61
+PA,US HOUSE,015,False,Glenn Thompson,279027.0,"Glenn Thompson, Republican",61
+PA,US HOUSE,015,False,Zach Womer,111408.0,"Zach Womer, Democrat",61
+PA,US HOUSE,016,False,Mike Kelly,256923.0,"Mike Kelly, Republican",61
+PA,US HOUSE,016,False,Preston Nouri,146709.0,"Preston Nouri, Democrat",61
+PA,US HOUSE,017,False,Christopher R. Deluzio,242838.0,"Christopher R. Deluzio, Democrat",61
+PA,US HOUSE,017,False,Rob Mercuri,207900.0,"Rob Mercuri, Republican",61
+PA,US SENATE,STATEWIDE,False,Dave McCormick,3399295.0,"Dave McCormick, Republican",61
+PA,US SENATE,STATEWIDE,False,John C. Thomas,89653.0,"John C. Thomas, Libertarian",61
+PA,US SENATE,STATEWIDE,False,Leila Hazou,66388.0,"Leila Hazou, Green",61
+PA,US SENATE,STATEWIDE,False,Marty Selker,23621.0,"Marty Selker, Constitution",61
+PA,US SENATE,STATEWIDE,False,Robert P. Casey,3384180.0,"Robert P. Casey, Jr., Democrat",61
+RI,US HOUSE,001,False,Allen Rodney Waters,70742.0,"Allen Rodney Waters, Republican",62
+RI,US HOUSE,001,False,C. D. Reynolds,10463.0,"C. D. Reynolds, Independent",62
+RI,US HOUSE,001,False,Gabe Amo,139352.0,"Gabe Amo, Democrat",62
+RI,US HOUSE,001,False,Write-in,561.0,Write-in,62
+RI,US HOUSE,002,False,Seth Magaziner,153439.0,"Seth Magaziner, Democrat",62
+RI,US HOUSE,002,False,Stephen Joseph Corvi,109381.0,"Stephen Joseph Corvi, Republican",62
+RI,US HOUSE,002,False,Write-in,660.0,Write-in,62
+RI,US SENATE,STATEWIDE,False,Patricia L. Morgan,196039.0,"Patricia L. Morgan, Republican",62
+RI,US SENATE,STATEWIDE,False,Sheldon Whitehouse,294665.0,"Sheldon Whitehouse, Democrat",62
+RI,US SENATE,STATEWIDE,False,Write-in,1244.0,Write-in,62
+SC,US HOUSE,001,False,Michael B. Moore,162582.0,"Michael B. Moore, Democrat",64
+SC,US HOUSE,001,False,Nancy Mace,227502.0,"Nancy Mace, Republican",64
+SC,US HOUSE,001,False,Write-in,693.0,Write-in,64
+SC,US HOUSE,002,False,David Robinson II,142985.0,"David Robinson II, Democrat",64
+SC,US HOUSE,002,False,Joe Wilson,211514.0,"Joe Wilson, Republican",64
+SC,US HOUSE,002,False,Write-in,786.0,Write-in,64
+SC,US HOUSE,003,False,Bryon L. Best,87735.0,"Bryon L. Best, Democrat",64
+SC,US HOUSE,003,False,Mike Bedenbaugh,9918.0,"Mike Bedenbaugh, Alliance",64
+SC,US HOUSE,003,False,Sheri Biggs,248451.0,"Sheri Biggs, Republican",64
+SC,US HOUSE,003,False,Write-in,609.0,Write-in,64
+SC,US HOUSE,004,False,Kathryn Harvey,128976.0,"Kathryn Harvey, Democrat",64
+SC,US HOUSE,004,False,Mark Hackett,9779.0,"Mark Hackett, Constitution",64
+SC,US HOUSE,004,False,William R. Timmons IV,206916.0,"William R. Timmons IV, Republican",64
+SC,US HOUSE,004,False,Write-in,743.0,Write-in,64
+SC,US HOUSE,005,False,Evangeline Hundley,130592.0,"Evangeline Hundley, Democrat",64
+SC,US HOUSE,005,False,Ralph Norman,228260.0,"Ralph Norman, Republican",64
+SC,US HOUSE,005,False,Write-in,557.0,Write-in,64
+SC,US HOUSE,006,False,Duke Buckner,112360.0,"Duke Buckner, Republican",64
+SC,US HOUSE,006,False,Gregg Marcel Dixon,4927.0,"Gregg Marcel Dixon, United Citizens",64
+SC,US HOUSE,006,False,James E. Clyburn,182056.0,"James E. Clyburn, Democrat",64
+SC,US HOUSE,006,False,Joseph Oddo,1056.0,"Joseph Oddo, Alliance",64
+SC,US HOUSE,006,False,Michael Simpson,5279.0,"Michael Simpson, Libertarian",64
+SC,US HOUSE,006,False,Write-in,299.0,Write-in,64
+SC,US HOUSE,007,False,Mal Hyman,129522.0,"Mal Hyman, Democrat",64
+SC,US HOUSE,007,False,Russell Fry,240326.0,"Russell Fry, Republican",64
+SC,US HOUSE,007,False,Write-in,481.0,Write-in,64
+SD,US HOUSE,001,False,Dusty Johnson,303630.0,"Dusty Johnson, Republican",66
+SD,US HOUSE,001,False,Sheryl Johnson,117818.0,"Sheryl Johnson, Democrat",66
+TN,US HOUSE,001,False,Diana Harshbarger,257825.0,"Diana Harshbarger, Republican",66
+TN,US HOUSE,001,False,Kevin Jenkins,64021.0,"Kevin Jenkins, Democrat",66
+TN,US HOUSE,001,False,Levi Brake,2639.0,"Levi Brake, Independent",66
+TN,US HOUSE,001,False,Richard G. Baker,5714.0,"Richard G. Baker, Independent",66
+TN,US HOUSE,002,False,Jane George,111316.0,"Jane George, Democrat",66
+TN,US HOUSE,002,False,Tim Burchett,250782.0,"Tim Burchett, Republican",66
+TN,US HOUSE,003,False,Charles J. “Chuck” Fleischmann,236519.0,"Charles J. “Chuck” Fleischmann, Republican",66
+TN,US HOUSE,003,False,Jack Allen,102841.0,"Jack Allen, Democrat",66
+TN,US HOUSE,003,False,Jean Howard-Hill,5120.0,"Jean Howard-Hill, Independent",66
+TN,US HOUSE,003,False,Stephen “Scooter” King,5848.0,"Stephen “Scooter” King, Independent",66
+TN,US HOUSE,004,False,Earnest Ensley,4689.0,"Earnest Ensley, Independent",66
+TN,US HOUSE,004,False,Keith Nolan,5601.0,"Keith Nolan, Independent",66
+TN,US HOUSE,004,False,Scott DesJarlais,219133.0,"Scott DesJarlais, Republican",66
+TN,US HOUSE,004,False,Victoria Isabel Broderick,83832.0,"Victoria Isabel Broderick, Democrat",66
+TN,US HOUSE,005,False,Andrew Ogles,205075.0,"Andrew Ogles, Republican",66
+TN,US HOUSE,005,False,Bob Titley,3065.0,"Bob Titley, Independent",66
+TN,US HOUSE,005,False,Jim Larkin,7607.0,"Jim Larkin, Independent",66
+TN,US HOUSE,005,False,Maryam Abolfazli,142387.0,"Maryam Abolfazli, Democrat",66
+TN,US HOUSE,005,False,Yomi “Fapas” Faparusi,2580.0,"Yomi “Fapas” Faparusi, Independent",66
+TN,US HOUSE,006,False,John W. Rose,225543.0,"John W. Rose, Republican",66
+TN,US HOUSE,006,False,Lore Bergman,106144.0,"Lore Bergman, Democrat",66
+TN,US HOUSE,007,False,Mark E. Green,191992.0,"Mark E. Green, Republican",66
+TN,US HOUSE,007,False,Megan Barry,122764.0,"Megan Barry, Democrat",66
+TN,US HOUSE,007,False,Shaun Greene,7900.0,"Shaun Greene, Independent",66
+TN,US HOUSE,008,False,David Kustoff,240411.0,"David Kustoff, Republican",66
+TN,US HOUSE,008,False,James Hart,6861.0,"James Hart, Independent",66
+TN,US HOUSE,008,False,Sarah Freeman,85043.0,"Sarah Freeman, Democrat",66
+TN,US HOUSE,009,False,Charlotte Bergmann,57411.0,"Charlotte Bergmann, Republican",67
+TN,US HOUSE,009,False,Dennis Clark,3062.0,"Dennis Clark, Independent",67
+TN,US HOUSE,009,False,Steve Cohen,159522.0,"Steve Cohen, Democrat",67
+TN,US HOUSE,009,False,Wendell Wells,3708.0,"Wendell Wells, Independent",67
+TN,US SENATE,STATEWIDE,False,Gloria Johnson,1027461.0,"Gloria Johnson, Democrat",66
+TN,US SENATE,STATEWIDE,False,Hastina Robinson,8278.0,"Hastina Robinson, Independent",66
+TN,US SENATE,STATEWIDE,False,Marsha Blackburn,1918743.0,"Marsha Blackburn, Republican",66
+TN,US SENATE,STATEWIDE,False,Pamela Jeanine “P.” Moses,24682.0,"Pamela Jeanine “P.” Moses, Independent",66
+TN,US SENATE,STATEWIDE,False,Tharon Chandler,28444.0,"Tharon Chandler, Independent",66
+TX,US HOUSE,001,False,Nathaniel Moran,258523.0,"Nathaniel Moran, Republican",67
+TX,US HOUSE,002,False,Dan Crenshaw,214631.0,"Dan Crenshaw, Republican",67
+TX,US HOUSE,002,False,Peter Filler,112252.0,"Peter Filler, Democrat",67
+TX,US HOUSE,003,False,Keith Self,237794.0,"Keith Self, Republican",67
+TX,US HOUSE,003,False,Sandeep Srivastava,142953.0,"Sandeep Srivastava, Democrat",67
+TX,US HOUSE,004,False,Pat Fallon,241603.0,"Pat Fallon, Republican",67
+TX,US HOUSE,004,False,Simon Cardell,111696.0,"Simon Cardell, Democrat",67
+TX,US HOUSE,005,False,Lance Gooden,192185.0,"Lance Gooden, Republican",67
+TX,US HOUSE,005,False,Ruth “Truth” Torres,107712.0,"Ruth “Truth” Torres, Democrat",67
+TX,US HOUSE,006,False,Jake Ellzey,188119.0,"Jake Ellzey, Republican",67
+TX,US HOUSE,006,False,John Love III,98319.0,"John Love III, Democrat",67
+TX,US HOUSE,007,False,Caroline Kane,94651.0,"Caroline Kane, Republican",67
+TX,US HOUSE,007,False,Lizzie Fletcher,149820.0,"Lizzie Fletcher, Democrat",67
+TX,US HOUSE,008,False,Laura Jones,108754.0,"Laura Jones, Democrat",67
+TX,US HOUSE,008,False,Morgan Luttrell,233423.0,"Morgan Luttrell, Republican",67
+TX,US HOUSE,009,False,Al Green,184141.0,"Al Green, Democrat",67
+TX,US HOUSE,010,False,Jeff Miller,8309.0,"Jeff Miller, Libertarian",68
+TX,US HOUSE,010,False,Michael T. McCaul,221229.0,"Michael T. McCaul, Republican",68
+TX,US HOUSE,010,False,Theresa Boisseau,118280.0,"Theresa Boisseau, Democrat",68
+TX,US HOUSE,011,False,August Pfluger,211975.0,"August Pfluger, Republican",68
+TX,US HOUSE,012,False,Craig Goldman,215564.0,"Craig Goldman, Republican",68
+TX,US HOUSE,012,False,Trey J. Hunt,124154.0,"Trey J. Hunt, Democrat",68
+TX,US HOUSE,013,False,Ronny Jackson,240622.0,"Ronny Jackson, Republican",68
+TX,US HOUSE,014,False,Randy K. Weber,210320.0,"Randy K. Weber, Sr., Republican",68
+TX,US HOUSE,014,False,Rhonda Hart,95875.0,"Rhonda Hart, Democrat",68
+TX,US HOUSE,015,False,Michelle Vallejo,95965.0,"Michelle Vallejo, Democrat",68
+TX,US HOUSE,015,False,Monica De La Cruz,127804.0,"Monica De La Cruz, Republican",68
+TX,US HOUSE,016,False,D. “DMB” Montanez,156.0,"D. “DMB” Montanez, Write-in",68
+TX,US HOUSE,016,False,Irene Armendariz Jackson,89281.0,"Irene Armendariz Jackson, Republican",68
+TX,US HOUSE,016,False,Veronica Escobar,131391.0,"Veronica Escobar, Democrat",68
+TX,US HOUSE,017,False,Mark Lorenzen,97941.0,"Mark Lorenzen, Democrat",68
+TX,US HOUSE,017,False,Pete Sessions,193101.0,"Pete Sessions, Republican",68
+TX,US HOUSE,018,False,Kevin Dural,14.0,"Kevin Dural, Write-in",68
+TX,US HOUSE,018,False,Lana Centonze,66810.0,"Lana Centonze, Republican",68
+TX,US HOUSE,018,False,Sylvester Turner,151834.0,"Sylvester Turner, Democrat",68
+TX,US HOUSE,018,False,Vince Duncan,62.0,"Vince Duncan, Write-in",68
+TX,US HOUSE,019,False,Bernard Johnson,23964.0,"Bernard Johnson, Libertarian",68
+TX,US HOUSE,019,False,Jodey C. Arrington,214950.0,"Jodey C. Arrington, Republican",68
+TX,US HOUSE,019,False,Nathan Lewis,27461.0,"Nathan Lewis, Independent",68
+TX,US HOUSE,020,False,Joaquin Castro,157890.0,"Joaquin Castro, Democrat",68
+TX,US HOUSE,021,False,Bob King,8914.0,"Bob King, Libertarian",68
+TX,US HOUSE,021,False,Chip Roy,263744.0,"Chip Roy, Republican",68
+TX,US HOUSE,021,False,Kristin Hook,153765.0,"Kristin Hook, Democrat",68
+TX,US HOUSE,022,False,Marquette Greene-Scott,127604.0,"Marquette Greene-Scott, Democrat",68
+TX,US HOUSE,022,False,Troy E. Nehls,209285.0,"Troy E. Nehls, Republican",68
+TX,US HOUSE,023,False,S. Limon,109373.0,"S. Limon, Democrat",68
+TX,US HOUSE,023,False,Tony Gonzales,180720.0,"Tony Gonzales, Republican",68
+TX,US HOUSE,024,False,Beth Van Duyne,227108.0,"Beth Van Duyne, Republican",68
+TX,US HOUSE,024,False,Sam Eppler,149518.0,"Sam Eppler, Democrat",68
+TX,US HOUSE,025,False,Chad Hagg,1661.0,"Chad Hagg, Write-in",68
+TX,US HOUSE,025,False,Roger Williams,263042.0,"Roger Williams, Republican",68
+TX,US HOUSE,026,False,Brandon Gill,241096.0,"Brandon Gill, Republican",68
+TX,US HOUSE,026,False,Ernest R. Lineberger III,138558.0,"Ernest R. Lineberger III, Democrat",68
+TX,US HOUSE,026,False,Phil Gray,8773.0,"Phil Gray, Libertarian",68
+TX,US HOUSE,027,False,Michael Cloud,183980.0,"Michael Cloud, Republican",68
+TX,US HOUSE,027,False,Tanya Lloyd,94596.0,"Tanya Lloyd, Democrat",68
+TX,US HOUSE,028,False,Henry Cuellar,125280.0,"Henry Cuellar, Democrat",68
+TX,US HOUSE,028,False,Jay Furman,112018.0,"Jay Furman, Republican",68
+TX,US HOUSE,029,False,Alan Garza,52830.0,"Alan Garza, Republican",68
+TX,US HOUSE,029,False,Sylvia R. Garcia,99379.0,"Sylvia R. Garcia, Democrat",68
+TX,US HOUSE,030,False,Jasmine Crockett,197650.0,"Jasmine Crockett, Democrat",69
+TX,US HOUSE,030,False,Jrmar “J J” Jefferson,35175.0,"Jrmar “J J” Jefferson, Libertarian",69
+TX,US HOUSE,031,False,John R. Carter,229087.0,"John R. Carter, Republican",69
+TX,US HOUSE,031,False,Stuart Whitlow,126470.0,"Stuart Whitlow, Democrat",69
+TX,US HOUSE,032,False,Darrell Day,85941.0,"Darrell Day, Republican",69
+TX,US HOUSE,032,False,Julie Johnson,140536.0,"Julie Johnson, Democrat",69
+TX,US HOUSE,032,False,Kevin A. Hale,5987.0,"Kevin A. Hale, Libertarian",69
+TX,US HOUSE,033,False,Marc A. Veasey,114289.0,"Marc A. Veasey, Democrat",69
+TX,US HOUSE,033,False,Patrick David Gillespie,51864.0,"Patrick David Gillespie, Republican",69
+TX,US HOUSE,034,False,Mayra Flores,97603.0,"Mayra Flores, Republican",69
+TX,US HOUSE,034,False,Vicente Gonzalez,102780.0,"Vicente Gonzalez, Democrat",69
+TX,US HOUSE,035,False,Greg Casar,170509.0,"Greg Casar, Democrat",69
+TX,US HOUSE,035,False,Steven Wright,82610.0,"Steven Wright, Republican",69
+TX,US HOUSE,036,False,Brian Babin,206009.0,"Brian Babin, Republican",69
+TX,US HOUSE,036,False,Dayna Steele,91009.0,"Dayna Steele, Democrat",69
+TX,US HOUSE,037,False,Girish Altekar,7511.0,"Girish Altekar, Libertarian",69
+TX,US HOUSE,037,False,Jenny Garcia Sharon,80366.0,"Jenny Garcia Sharon, Republican",69
+TX,US HOUSE,037,False,Lloyd Doggett,252980.0,"Lloyd Doggett, Democrat",69
+TX,US HOUSE,038,False,Avery Ayers,94.0,"Avery Ayers, Write-in",69
+TX,US HOUSE,038,False,Melissa McDonough,127640.0,"Melissa McDonough, Democrat",69
+TX,US HOUSE,038,False,Wesley Hunt,215030.0,"Wesley Hunt, Republican",69
+TX,US SENATE,STATEWIDE,False,Analisa Roche,1906.0,"Analisa Roche, Write-in",67
+TX,US SENATE,STATEWIDE,False,Colin Z. Allred,5031249.0,"Colin Z. Allred, Democrat",67
+TX,US SENATE,STATEWIDE,False,Ted Brown,267039.0,"Ted Brown, Libertarian",67
+TX,US SENATE,STATEWIDE,False,Ted Cruz,5990741.0,"Ted Cruz, Republican",67
+TX,US SENATE,STATEWIDE,False,Tracy Andrus,919.0,"Tracy Andrus, Write-in",67
+UT,US HOUSE,001,False,Bill Campbell,117319.0,"Bill Campbell, Democrat",70
+UT,US HOUSE,001,False,Blake D. Moore,230975.0,"Blake D. Moore, Republican",70
+UT,US HOUSE,001,False,Daniel R. Cottam,17601.0,"Daniel R. Cottam, Libertarian",70
+UT,US HOUSE,002,False,Cassie Easley,19650.0,"Cassie Easley, Constitution",70
+UT,US HOUSE,002,False,Celeste Maloy,205234.0,"Celeste Maloy, Republican",70
+UT,US HOUSE,002,False,Nathaniel E. Woodward,121114.0,"Nathaniel E. Woodward, Democrat",70
+UT,US HOUSE,002,False,Tyler Murset,7840.0,"Tyler Murset, Unaffiliated",70
+UT,US HOUSE,003,False,Glenn J. Wright,122780.0,"Glenn J. Wright, Democrat",70
+UT,US HOUSE,003,False,Mike Kennedy,242496.0,"Mike Kennedy, Republican",70
+UT,US HOUSE,004,False,Burgess Owens,230627.0,"Burgess Owens, Republican",70
+UT,US HOUSE,004,False,Katrina Fallick-Wang,109838.0,"Katrina Fallick-Wang, Democrat",70
+UT,US HOUSE,004,False,M. Evan Bullard,5856.0,"M. Evan Bullard, Unaffiliated",70
+UT,US HOUSE,004,False,Vaughn R. Cook,17347.0,"Vaughn R. Cook, United Utah",70
+UT,US SENATE,STATEWIDE,False,Carlton E. Bowen,83972.0,"Carlton E. Bowen, Independent American",70
+UT,US SENATE,STATEWIDE,False,Caroline Gleich,464515.0,"Caroline Gleich, Democrat",70
+UT,US SENATE,STATEWIDE,False,John R. Curtis,914700.0,"John R. Curtis, Republican",70
+UT,US SENATE,STATEWIDE,False,Laird Fetzer Hamblin,322.0,"Laird Fetzer Hamblin, Write-in (Adjudicated)",70
+VA,US HOUSE,001,False,Leslie C. Mehta,208445.0,"Leslie C. Mehta, Democrat",74
+VA,US HOUSE,001,False,Robert J. Wittman,269657.0,"Robert J. Wittman, Republican",74
+VA,US HOUSE,001,False,Write-in,804.0,Write-in,74
+VA,US HOUSE,002,False,Jennifer A. Kiggans,207368.0,"Jennifer A. Kiggans, Republican",74
+VA,US HOUSE,002,False,Missy Cotter Smasal,191666.0,"Missy Cotter Smasal, Democrat",74
+VA,US HOUSE,002,False,Robert E. Reid,9197.0,"Robert E. Reid, Jr., Independent",74
+VA,US HOUSE,002,False,Write-in,471.0,Write-in,74
+VA,US HOUSE,003,False,John Sitka III,93801.0,"John Sitka III, Republican",74
+VA,US HOUSE,003,False,Robert C. “Bobby” Scott,219926.0,"Robert C. “Bobby” Scott, Democrat",74
+VA,US HOUSE,003,False,Write-in,670.0,Write-in,74
+VA,US HOUSE,004,False,Jennifer L. McClellan,252885.0,"Jennifer L. McClellan, Democrat",74
+VA,US HOUSE,004,False,William J. “Bill” Moher III,121814.0,"William J. “Bill” Moher III, Republican",74
+VA,US HOUSE,004,False,Write-in,809.0,Write-in,74
+VA,US HOUSE,005,False,Gloria Tinsley Witt,184229.0,"Gloria Tinsley Witt, Democrat",74
+VA,US HOUSE,005,False,John J. McGuire III,249564.0,"John J. McGuire III, Republican",74
+VA,US HOUSE,005,False,Write-in,2046.0,Write-in,74
+VA,US HOUSE,006,False,Ben Cline,256933.0,"Ben Cline, Republican",74
+VA,US HOUSE,006,False,Ken L. Mitchell,141612.0,"Ken L. Mitchell, Democrat",74
+VA,US HOUSE,006,False,Robert C. “Robby” Wells,7980.0,"Robert C. “Robby” Wells, Jr., Independent",74
+VA,US HOUSE,006,False,Write-in,510.0,Write-in,74
+VA,US HOUSE,007,False,Derrick M. Anderson,192847.0,"Derrick M. Anderson, Republican",74
+VA,US HOUSE,007,False,Eugene S. Vindman,203336.0,"Eugene S. Vindman, Democrat",74
+VA,US HOUSE,007,False,Write-in,1116.0,Write-in,74
+VA,US HOUSE,008,False,Bentley F. Hensel,3656.0,"Bentley F. Hensel, Independent",74
+VA,US HOUSE,008,False,David R. Kennedy,9956.0,"David R. Kennedy, Independent",74
+VA,US HOUSE,008,False,Donald S. Beyer,274593.0,"Donald S. Beyer, Jr., Democrat",74
+VA,US HOUSE,008,False,Jerry W. Torres,94676.0,"Jerry W. Torres, Republican",74
+VA,US HOUSE,008,False,Write-in,1034.0,Write-in,74
+VA,US HOUSE,009,False,H. Morgan Griffith,290645.0,"H. Morgan Griffith, Republican",74
+VA,US HOUSE,009,False,Karen G. H. Baker,109570.0,"Karen G. H. Baker, Democrat",74
+VA,US HOUSE,009,False,Write-in,748.0,Write-in,74
+VA,US HOUSE,010,False,Mike W. Clancy,196343.0,"Mike W. Clancy, Republican",74
+VA,US HOUSE,010,False,Suhas Subramanyam,215131.0,"Suhas Subramanyam, Democrat",74
+VA,US HOUSE,010,False,Write-in,1538.0,Write-in,74
+VA,US HOUSE,011,False,Gerald E. Connolly,273529.0,"Gerald E. Connolly, Democrat",74
+VA,US HOUSE,011,False,Mike L. Van Meter,134802.0,"Mike L. Van Meter, Republican",74
+VA,US HOUSE,011,False,Write-in,1855.0,Write-in,74
+VA,US SENATE,STATEWIDE,False,Hung Cao,2019911.0,"Hung Cao, Republican",74
+VA,US SENATE,STATEWIDE,False,Tim Kaine,2417115.0,"Tim Kaine, Democrat",74
+VA,US SENATE,STATEWIDE,False,Write-in,8509.0,Write-in,74
+VT,US HOUSE,001,False,Adam Ortiz,19286.0,"Adam Ortiz, Independent",72
+VT,US HOUSE,001,False,Becca Balint,218398.0,"Becca Balint, Democrat",72
+VT,US HOUSE,001,False,Jill “Jessy” Diamondstone,7552.0,"Jill “Jessy” Diamondstone, Green Mountain Peace and Justice",72
+VT,US HOUSE,001,False,Mark Coester,104451.0,"Mark Coester, Republican, Libertarian",72
+VT,US HOUSE,001,False,Write-in,929.0,Write-in,72
+VT,US SENATE,STATEWIDE,False,Bernard Sanders,229429.0,"Bernard Sanders, Independent",72
+VT,US SENATE,STATEWIDE,False,Gerald Malloy,116512.0,"Gerald Malloy, Republican",72
+VT,US SENATE,STATEWIDE,False,Justin Schoville,3339.0,"Justin Schoville, Green Mountain Peace and Justice",72
+VT,US SENATE,STATEWIDE,False,Mark Stewart Greenstein,1104.0,"Mark Stewart Greenstein, Epic",72
+VT,US SENATE,STATEWIDE,False,Matt Hill,4530.0,"Matt Hill, Libertarian",72
+VT,US SENATE,STATEWIDE,False,Steve Berry,7941.0,"Steve Berry, Independent",72
+VT,US SENATE,STATEWIDE,False,Write-in,398.0,Write-in,72
+WA,US HOUSE,001,False,Jeb Brewer,132538.0,"Jeb Brewer, Republican",75
+WA,US HOUSE,001,False,Suzan K. DelBene,227213.0,"Suzan K. DelBene, Democrat",75
+WA,US HOUSE,001,False,Write-in,907.0,Write-in,75
+WA,US HOUSE,002,False,Cody Hart,148167.0,"Cody Hart, Republican",75
+WA,US HOUSE,002,False,Rick Larsen,263750.0,"Rick Larsen, Democrat",75
+WA,US HOUSE,002,False,Write-in,1303.0,Write-in,75
+WA,US HOUSE,003,False,Joe Kent,199054.0,"Joe Kent, Republican",75
+WA,US HOUSE,003,False,Marie Gluesenkamp Perez,215177.0,"Marie Gluesenkamp Perez, Democrat",75
+WA,US HOUSE,003,False,Write-in,1673.0,Write-in,75
+WA,US HOUSE,004,False,Dan Newhouse,153477.0,"Dan Newhouse, Republican",75
+WA,US HOUSE,004,False,Jerrod Sessler,136175.0,"Jerrod Sessler, Republican",75
+WA,US HOUSE,004,False,Write-in,5400.0,Write-in,75
+WA,US HOUSE,005,False,Carmela Conroy,156074.0,"Carmela Conroy, Democrat",75
+WA,US HOUSE,005,False,Michael Baumgartner,240619.0,"Michael Baumgartner, Republican",75
+WA,US HOUSE,005,False,Write-in,593.0,Write-in,75
+WA,US HOUSE,006,False,Drew C. MacEwen,182182.0,"Drew C. MacEwen, Republican",75
+WA,US HOUSE,006,False,Emily Randall,239687.0,"Emily Randall, Democrat",75
+WA,US HOUSE,006,False,Write-in,753.0,Write-in,75
+WA,US HOUSE,007,False,Dan Alexander,66220.0,"Dan Alexander, Republican",75
+WA,US HOUSE,007,False,Pramila Jayapal,352286.0,"Pramila Jayapal, Democrat",75
+WA,US HOUSE,007,False,Write-in,1313.0,Write-in,75
+WA,US HOUSE,008,False,Carmen Goers,190675.0,"Carmen Goers, Republican",76
+WA,US HOUSE,008,False,Kim Schrier,224607.0,"Kim Schrier, Democrat",76
+WA,US HOUSE,008,False,Write-in,995.0,Write-in,76
+WA,US HOUSE,009,False,Adam Smith,182780.0,"Adam Smith, Democrat",76
+WA,US HOUSE,009,False,Melissa Chaudhry,90601.0,"Melissa Chaudhry, Democrat",76
+WA,US HOUSE,009,False,Write-in,5917.0,Write-in,76
+WA,US HOUSE,010,False,Don Hewett,143492.0,"Don Hewett, Republican",76
+WA,US HOUSE,010,False,Marilyn Strickland,203732.0,"Marilyn Strickland, Democrat",76
+WA,US HOUSE,010,False,Write-in,820.0,Write-in,76
+WA,US SENATE,STATEWIDE,False,Maria Cantwell,2252577.0,"Maria Cantwell, Democrat",75
+WA,US SENATE,STATEWIDE,False,Raul Garcia,1549187.0,"Raul Garcia, Republican",75
+WA,US SENATE,STATEWIDE,False,Write-in,10627.0,Write-in,75
+WI,US HOUSE,001,False,Bryan Steil,212515.0,"Bryan Steil, Republican",78
+WI,US HOUSE,001,False,Chester Todd,8191.0,"Chester Todd, Jr., Green",78
+WI,US HOUSE,001,False,Peter Barca,172402.0,"Peter Barca, Democrat",78
+WI,US HOUSE,001,False,Scattering,385.0,Scattering,78
+WI,US HOUSE,002,False,Erik Olsen,136357.0,"Erik Olsen, Republican",78
+WI,US HOUSE,002,False,Mark Pocan,320317.0,"Mark Pocan, Democrat",78
+WI,US HOUSE,002,False,Scattering,583.0,Scattering,78
+WI,US HOUSE,003,False,Derrick Van Orden,212064.0,"Derrick Van Orden, Republican",79
+WI,US HOUSE,003,False,Rebecca Cooke,200808.0,"Rebecca Cooke, Democrat",79
+WI,US HOUSE,003,False,Scattering,309.0,Scattering,79
+WI,US HOUSE,004,False,Gwen Moore,249938.0,"Gwen Moore, Democrat",79
+WI,US HOUSE,004,False,Micah Leavitt,13.0,"Micah Leavitt, Write-in",79
+WI,US HOUSE,004,False,Robert R. Raymond,8792.0,"Robert R. Raymond, Independent",79
+WI,US HOUSE,004,False,Scattering,618.0,Scattering,79
+WI,US HOUSE,004,False,Tim Rogers,74921.0,"Tim Rogers, Republican",79
+WI,US HOUSE,005,False,Ben Steinhoff,165653.0,"Ben Steinhoff, Democrat",79
+WI,US HOUSE,005,False,Scattering,508.0,Scattering,79
+WI,US HOUSE,005,False,Scott Fitzgerald,300521.0,"Scott Fitzgerald, Republican",79
+WI,US HOUSE,006,False,Glenn Grothman,251889.0,"Glenn Grothman, Republican",79
+WI,US HOUSE,006,False,John Zarbano,159042.0,"John Zarbano, Democrat",79
+WI,US HOUSE,006,False,Scattering,418.0,Scattering,79
+WI,US HOUSE,007,False,Kyle Kilbourn,156524.0,"Kyle Kilbourn, Democrat",79
+WI,US HOUSE,007,False,Scattering,307.0,Scattering,79
+WI,US HOUSE,007,False,Thomas P. Tiffany,273553.0,"Thomas P. Tiffany, Republican",79
+WI,US HOUSE,008,False,Kristin Lyerly,178666.0,"Kristin Lyerly, Democrat",79
+WI,US HOUSE,008,False,Scattering,272.0,Scattering,79
+WI,US HOUSE,008,False,Tony Wied,240040.0,"Tony Wied, Republican",79
+WI,US SENATE,STATEWIDE,False,Eric Hovde,1643996.0,"Eric Hovde, Republican",78
+WI,US SENATE,STATEWIDE,False,John Schiess,26.0,"John Schiess, Write-in",78
+WI,US SENATE,STATEWIDE,False,Phil Anderson,42315.0,"Phil Anderson, Disrupt the Corruption",78
+WI,US SENATE,STATEWIDE,False,Scattering,2922.0,Scattering,78
+WI,US SENATE,STATEWIDE,False,Tammy Baldwin,1672777.0,"Tammy Baldwin, Democrat",78
+WI,US SENATE,STATEWIDE,False,Thomas Leager,28751.0,"Thomas Leager, America First",78
+WV,US HOUSE,001,False,A. Warden,3.0,"A. Warden, Write-in",78
+WV,US HOUSE,001,False,Carol D. Miller,228491.0,"Carol D. Miller, Republican",78
+WV,US HOUSE,001,False,Chris Bob Reed,90038.0,"Chris Bob Reed, Democrat",78
+WV,US HOUSE,001,False,Jim Umberger,171.0,"Jim Umberger, Write-in",78
+WV,US HOUSE,001,False,Wes Holden,25616.0,"Wes Holden, Independent",78
+WV,US HOUSE,002,False,Riley Moore,268190.0,"Riley Moore, Republican",78
+WV,US HOUSE,002,False,Steven Wendelin,110775.0,"Steven Wendelin, Democrat",78
+WV,US SENATE,STATEWIDE,False,David Moran,26075.0,"David Moran, Libertarian",78
+WV,US SENATE,STATEWIDE,False,Glenn Elliott,207548.0,"Glenn Elliott, Democrat",78
+WV,US SENATE,STATEWIDE,False,Jim Justice,514079.0,"Jim Justice, Republican",78
+WV,US SENATE,STATEWIDE,False,Joshua Standridge,2.0,"Joshua Standridge, Write-in",78
+WV,US SENATE,STATEWIDE,False,Lewie Andrews,6.0,"Lewie Andrews, Write-in",78
+WV,US SENATE,STATEWIDE,False,Tim Stevenski,7.0,"Tim Stevenski, Write-in",78
+WY,US HOUSE,001,False,Harriet M. Hageman,184680.0,"Harriet M. Hageman, Republican",81
+WY,US HOUSE,001,False,Jeffrey Haggit,5362.0,"Jeffrey Haggit, Constitution",81
+WY,US HOUSE,001,False,Kyle G. Cameron,60778.0,"Kyle G. Cameron, Democrat",81
+WY,US HOUSE,001,False,Richard Brubaker,9223.0,"Richard Brubaker, Libertarian",81
+WY,US HOUSE,001,False,Write-in,1505.0,Write-in,81
+WY,US SENATE,STATEWIDE,False,John Barrasso,198418.0,"John Barrasso, Republican",81
+WY,US SENATE,STATEWIDE,False,Scott D. Morrow,63727.0,"Scott D. Morrow, Democrat",81
+WY,US SENATE,STATEWIDE,False,Write-in,2017.0,Write-in,81

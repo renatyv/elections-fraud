@@ -1,0 +1,10 @@
+{
+  "archives": 51,
+  "candidate_units": 1594228,
+  "digit_tests": 284,
+  "digit_tests_q_below_005": 22,
+  "regular_reported_races": 392,
+  "usable_screen_races": 349,
+  "below_majority_usable": 7,
+  "spoiler_capacity_usable": 7
+}

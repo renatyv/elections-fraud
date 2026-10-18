@@ -1,0 +1,589 @@
+DistrictName,RaceName,SeqNo,Candidate,BallotOrder,Combo,LName,Election,Race,Candidate.1,Code
+Turnout,Turnout,0,Registered Voters,1,0|1,RegVot,G20,T,REGVOT,G20TREGVOT
+Turnout,Turnout,0,Ballots Cast,2,0|2,BalCst,G20,T,BALCST,G20TBALCST
+State of Washington,Referendum Measure No. 90,200,Approved,1,200|1,Approved,G20,R0090,A,G20R0090A
+State of Washington,Referendum Measure No. 90,200,Rejected,2,200|2,Rejected,G20,R0090,R,G20R0090R
+State of Washington,Advisory Vote No. 32,632,Repealed,1,632|1,Repealed,G20,A0032,R,G20A0032R
+State of Washington,Advisory Vote No. 32,632,Maintained,2,632|2,Maintained,G20,A0032,M,G20A0032M
+State of Washington,Advisory Vote No. 33,633,Repealed,1,633|1,Repealed,G20,A0033,R,G20A0033R
+State of Washington,Advisory Vote No. 33,633,Maintained,2,633|2,Maintained,G20,A0033,M,G20A0033M
+State of Washington,Advisory Vote No. 34,634,Repealed,1,634|1,Repealed,G20,A0034,R,G20A0034R
+State of Washington,Advisory Vote No. 34,634,Maintained,2,634|2,Maintained,G20,A0034,M,G20A0034M
+State of Washington,Advisory Vote No. 35,635,Repealed,1,635|1,Repealed,G20,A0035,R,G20A0035R
+State of Washington,Advisory Vote No. 35,635,Maintained,2,635|2,Maintained,G20,A0035,M,G20A0035M
+State of Washington,Engrossed Senate Joint Resolution No. 8212,700,Approved,1,700|1,Approved,G20,M8212,A,G20M8212A
+State of Washington,Engrossed Senate Joint Resolution No. 8212,700,Rejected,2,700|2,Rejected,G20,M8212,R,G20M8212R
+United States,President/Vice President,1010,Joseph R. Biden / Kamala D. Harris,1,1010|1,Biden,G20,PRS,BIDE,G20PRSBIDE
+United States,President/Vice President,1010,Donald J. Trump / Michael R. Pence,2,1010|2,Trump,G20,PRS,TRUM,G20PRSTRUM
+United States,President/Vice President,1010,"Jo Jorgensen / Jeremy ""Spike"" Cohen",3,1010|3,Jorgensen,G20,PRS,JORG,G20PRSJORG
+United States,President/Vice President,1010,Howie Hawkins / Angela Walker,4,1010|4,Hawkins,G20,PRS,HAWK,G20PRSHAWK
+United States,President/Vice President,1010,Gloria La Riva / Sunil Freeman,5,1010|5,LaRiva,G20,PRS,LARI,G20PRSLARI
+United States,President/Vice President,1010,Alyson Kennedy / Malcolm M. Jarrett,6,1010|6,Kennedy,G20,PRS,KENN,G20PRSKENN
+United States,President/Vice President,1010,WRITE-IN,7,1010|7,W0000,G20,PRS,W000,G20PRSW000
+Congressional District 1,U.S. Representative,1101,Suzan DelBene,1,1101|1,DelBene,G20,C01,DELB,G20C01DELB
+Congressional District 1,U.S. Representative,1101,"Jeffrey Beeler, Sr.",2,1101|2,Beeler,G20,C01,BEEL,G20C01BEEL
+Congressional District 1,U.S. Representative,1101,WRITE-IN,3,1101|3,W0000,G20,C01,W000,G20C01W000
+Congressional District 2,U.S. Representative,1102,Rick Larsen,1,1102|1,Larsen,G20,C02,LARS,G20C02LARS
+Congressional District 2,U.S. Representative,1102,Timothy S. Hazelo,2,1102|2,Hazelo,G20,C02,HAZE,G20C02HAZE
+Congressional District 2,U.S. Representative,1102,WRITE-IN,3,1102|3,W0000,G20,C02,W000,G20C02W000
+Congressional District 3,U.S. Representative,1103,Jaime Herrera Beutler,1,1103|1,Beutler,G20,C03,BEUT,G20C03BEUT
+Congressional District 3,U.S. Representative,1103,Carolyn Long,2,1103|2,Long,G20,C03,LONG,G20C03LONG
+Congressional District 3,U.S. Representative,1103,WRITE-IN,3,1103|3,W0000,G20,C03,W000,G20C03W000
+Congressional District 4,U.S. Representative,1104,Dan Newhouse,1,1104|1,Newhouse,G20,C04,NEWH,G20C04NEWH
+Congressional District 4,U.S. Representative,1104,Douglas E. McKinley,2,1104|2,McKinley,G20,C04,MCKI,G20C04MCKI
+Congressional District 4,U.S. Representative,1104,WRITE-IN,3,1104|3,W0000,G20,C04,W000,G20C04W000
+Congressional District 5,U.S. Representative,1105,Cathy McMorris Rodgers,1,1105|1,Rodgers,G20,C05,RODG,G20C05RODG
+Congressional District 5,U.S. Representative,1105,Dave Wilson,2,1105|2,Wilson,G20,C05,WILS,G20C05WILS
+Congressional District 5,U.S. Representative,1105,WRITE-IN,3,1105|3,W0000,G20,C05,W000,G20C05W000
+Congressional District 6,U.S. Representative,1106,Derek Kilmer,1,1106|1,Kilmer,G20,C06,KILM,G20C06KILM
+Congressional District 6,U.S. Representative,1106,Elizabeth Kreiselmaier,2,1106|2,Kreiselmaier,G20,C06,KREI,G20C06KREI
+Congressional District 6,U.S. Representative,1106,WRITE-IN,3,1106|3,W0000,G20,C06,W000,G20C06W000
+Congressional District 7,U.S. Representative,1107,Pramila Jayapal,1,1107|1,Jayapal,G20,C07,JAYA,G20C07JAYA
+Congressional District 7,U.S. Representative,1107,Craig Keller,2,1107|2,Keller,G20,C07,KELL,G20C07KELL
+Congressional District 7,U.S. Representative,1107,WRITE-IN,3,1107|3,W0000,G20,C07,W000,G20C07W000
+Congressional District 8,U.S. Representative,1108,Kim Schrier,1,1108|1,Schrier,G20,C08,SCHR,G20C08SCHR
+Congressional District 8,U.S. Representative,1108,Jesse Jensen,2,1108|2,Jensen,G20,C08,JENS,G20C08JENS
+Congressional District 8,U.S. Representative,1108,WRITE-IN,3,1108|3,W0000,G20,C08,W000,G20C08W000
+Congressional District 9,U.S. Representative,1109,Adam Smith,1,1109|1,Smith,G20,C09,SMIT,G20C09SMIT
+Congressional District 9,U.S. Representative,1109,Doug Basler,2,1109|2,Basler,G20,C09,BASL,G20C09BASL
+Congressional District 9,U.S. Representative,1109,WRITE-IN,3,1109|3,W0000,G20,C09,W000,G20C09W000
+Congressional District 10,U.S. Representative,1110,Marilyn Strickland,1,1110|1,Strickland,G20,C10,STRI,G20C10STRI
+Congressional District 10,U.S. Representative,1110,Beth Doglio,2,1110|2,Doglio,G20,C10,DOGL,G20C10DOGL
+Congressional District 10,U.S. Representative,1110,WRITE-IN,3,1110|3,W0000,G20,C10,W000,G20C10W000
+State of Washington,Governor,2010,Jay Inslee,1,2010|1,Inslee,G20,GOV,INSL,G20GOVINSL
+State of Washington,Governor,2010,Loren Culp,2,2010|2,Culp,G20,GOV,CULP,G20GOVCULP
+State of Washington,Governor,2010,WRITE-IN,3,2010|3,W0000,G20,GOV,W000,G20GOVW000
+State of Washington,Lt. Governor,2020,Denny Heck,1,2020|1,Heck,G20,LTG,HECK,G20LTGHECK
+State of Washington,Lt. Governor,2020,Marko Liias,2,2020|2,Liias,G20,LTG,LIIA,G20LTGLIIA
+State of Washington,Lt. Governor,2020,WRITE-IN,3,2020|3,W0000,G20,LTG,W000,G20LTGW000
+State of Washington,Secretary of State,2030,Kim Wyman,1,2030|1,Wyman,G20,SOS,WYMA,G20SOSWYMA
+State of Washington,Secretary of State,2030,Gael Tarleton,2,2030|2,Tarleton,G20,SOS,TARL,G20SOSTARL
+State of Washington,Secretary of State,2030,WRITE-IN,3,2030|3,W0000,G20,SOS,W000,G20SOSW000
+State of Washington,State Treasurer,2040,Mike Pellicciotti,1,2040|1,Pellicciotti,G20,TRE,PELL,G20TREPELL
+State of Washington,State Treasurer,2040,Duane A. Davidson,2,2040|2,Davidson,G20,TRE,DAVI,G20TREDAVI
+State of Washington,State Treasurer,2040,WRITE-IN,3,2040|3,W0000,G20,TRE,W000,G20TREW000
+State of Washington,State Auditor,2050,Pat (Patrice) McCarthy,1,2050|1,McCarthy,G20,AUD,MCCA,G20AUDMCCA
+State of Washington,State Auditor,2050,Chris Leyba,2,2050|2,Leyba,G20,AUD,LEYB,G20AUDLEYB
+State of Washington,State Auditor,2050,WRITE-IN,3,2050|3,W0000,G20,AUD,W000,G20AUDW000
+State of Washington,Attorney General,2060,Bob Ferguson,1,2060|1,Ferguson,G20,ATG,FERG,G20ATGFERG
+State of Washington,Attorney General,2060,Matt Larkin,2,2060|2,Larkin,G20,ATG,LARK,G20ATGLARK
+State of Washington,Attorney General,2060,WRITE-IN,3,2060|3,W0000,G20,ATG,W000,G20ATGW000
+State of Washington,Commissioner of Public Lands,2070,Hilary Franz,1,2070|1,Franz,G20,CPL,FRAN,G20CPLFRAN
+State of Washington,Commissioner of Public Lands,2070,Sue Kuehl Pederson,2,2070|2,Pederson,G20,CPL,PEDE,G20CPLPEDE
+State of Washington,Commissioner of Public Lands,2070,WRITE-IN,3,2070|3,W0000,G20,CPL,W000,G20CPLW000
+State of Washington,Superintendent of Public Instruction,2080,Chris Reykdal,1,2080|1,Reykdal,G20,SPI,REYK,G20SPIREYK
+State of Washington,Superintendent of Public Instruction,2080,Maia Espinoza,2,2080|2,Espinoza,G20,SPI,ESPI,G20SPIESPI
+State of Washington,Superintendent of Public Instruction,2080,WRITE-IN,3,2080|3,W0000,G20,SPI,W000,G20SPIW000
+State of Washington,Insurance Commissioner,2090,Mike Kreidler,1,2090|1,Kreidler,G20,INC,KREI,G20INCKREI
+State of Washington,Insurance Commissioner,2090,Chirayu Avinash Patel,2,2090|2,Patel,G20,INC,PATE,G20INCPATE
+State of Washington,Insurance Commissioner,2090,WRITE-IN,3,2090|3,W0000,G20,INC,W000,G20INCW000
+Legislative District 1,State Senator,4010,Derek Stanford,1,4010|1,Stanford,G20,01S,STAN,G2001SSTAN
+Legislative District 1,State Senator,4010,Art Coday,2,4010|2,Coday,G20,01S,CODA,G2001SCODA
+Legislative District 1,State Senator,4010,WRITE-IN,3,4010|3,W0000,G20,01S,W000,G2001SW000
+Legislative District 1,State Representative Pos. 1,4011,Davina Duerr,1,4011|1,Duerr,G20,011,DUER,G20011DUER
+Legislative District 1,State Representative Pos. 1,4011,Adam Bartholomew,2,4011|2,Bartholomew,G20,011,BART,G20011BART
+Legislative District 1,State Representative Pos. 1,4011,WRITE-IN,3,4011|3,W0000,G20,011,W000,G20011W000
+Legislative District 1,State Representative Pos. 2,4012,Shelley Kloba,1,4012|1,Kloba,G20,012,KLOB,G20012KLOB
+Legislative District 1,State Representative Pos. 2,4012,Jeb Brewer,2,4012|2,Brewer,G20,012,BREW,G20012BREW
+Legislative District 1,State Representative Pos. 2,4012,WRITE-IN,3,4012|3,W0000,G20,012,W000,G20012W000
+Legislative District 2,State Senator,4020,Rick Payne,1,4020|1,Payne,G20,02S,PAYN,G2002SPAYN
+Legislative District 2,State Senator,4020,Jim McCune,2,4020|2,McCune,G20,02S,MCCU,G2002SMCCU
+Legislative District 2,State Senator,4020,WRITE-IN,3,4020|3,W0000,G20,02S,W000,G2002SW000
+Legislative District 2,State Representative Pos. 1,4021,Andrew Barkis,1,4021|1,Barkis,G20,021,BARK,G20021BARK
+Legislative District 2,State Representative Pos. 1,4021,WRITE-IN,2,4021|2,W0000,G20,021,W000,G20021W000
+Legislative District 2,State Representative Pos. 2,4022,JT Wilcox,1,4022|1,Wilcox,G20,022,WILC,G20022WILC
+Legislative District 2,State Representative Pos. 2,4022,Veronica Whitcher Rockett,2,4022|2,Rockett,G20,022,ROCK,G20022ROCK
+Legislative District 2,State Representative Pos. 2,4022,WRITE-IN,3,4022|3,W0000,G20,022,W000,G20022W000
+Legislative District 3,State Senator,4030,Andy Billig,1,4030|1,Billig,G20,03S,BILL,G2003SBILL
+Legislative District 3,State Senator,4030,Dave Lucas,2,4030|2,Lucas,G20,03S,LUCA,G2003SLUCA
+Legislative District 3,State Senator,4030,WRITE-IN,3,4030|3,W0000,G20,03S,W000,G2003SW000
+Legislative District 3,State Representative Pos. 1,4031,Marcus Riccelli,1,4031|1,Riccelli,G20,031,RICC,G20031RICC
+Legislative District 3,State Representative Pos. 1,4031,Laura D Carder,2,4031|2,Carder,G20,031,CARD,G20031CARD
+Legislative District 3,State Representative Pos. 1,4031,WRITE-IN,3,4031|3,W0000,G20,031,W000,G20031W000
+Legislative District 3,State Representative Pos. 2,4032,Timm Ormsby,1,4032|1,Ormsby,G20,032,ORMS,G20032ORMS
+Legislative District 3,State Representative Pos. 2,4032,Bob Apple,2,4032|2,Apple,G20,032,APPL,G20032APPL
+Legislative District 3,State Representative Pos. 2,4032,WRITE-IN,3,4032|3,W0000,G20,032,W000,G20032W000
+Legislative District 4,State Senator,4040,Mike Padden,1,4040|1,Padden,G20,04S,PADD,G2004SPADD
+Legislative District 4,State Senator,4040,John Roskelley,2,4040|2,Roskelley,G20,04S,ROSK,G2004SROSK
+Legislative District 4,State Senator,4040,WRITE-IN,3,4040|3,W0000,G20,04S,W000,G2004SW000
+Legislative District 4,State Representative Pos. 1,4041,Bob McCaslin,1,4041|1,McCaslin,G20,041,MCCA,G20041MCCA
+Legislative District 4,State Representative Pos. 1,4041,Lori Feagan,2,4041|2,Feagan,G20,041,FEAG,G20041FEAG
+Legislative District 4,State Representative Pos. 1,4041,WRITE-IN,3,4041|3,W0000,G20,041,W000,G20041W000
+Legislative District 4,State Representative Pos. 2,4042,Lance Gurel,1,4042|1,Gurel,G20,042,GURE,G20042GURE
+Legislative District 4,State Representative Pos. 2,4042,Rob Chase,2,4042|2,Chase,G20,042,CHAS,G20042CHAS
+Legislative District 4,State Representative Pos. 2,4042,WRITE-IN,3,4042|3,W0000,G20,042,W000,G20042W000
+Legislative District 5,State Senator,4050,Ingrid Anderson,1,4050|1,Anderson,G20,05S,ANDE,G2005SANDE
+Legislative District 5,State Senator,4050,Mark Mullet,2,4050|2,Mullet,G20,05S,MULL,G2005SMULL
+Legislative District 5,State Senator,4050,WRITE-IN,3,4050|3,W0000,G20,05S,W000,G2005SW000
+Legislative District 5,State Representative Pos. 1,4051,Bill Ramos,1,4051|1,Ramos,G20,051,RAMO,G20051RAMO
+Legislative District 5,State Representative Pos. 1,4051,Ken Moninski,2,4051|2,Moninski,G20,051,MONI,G20051MONI
+Legislative District 5,State Representative Pos. 1,4051,WRITE-IN,3,4051|3,W0000,G20,051,W000,G20051W000
+Legislative District 5,State Representative Pos. 2,4052,Lisa Callan,1,4052|1,Callan,G20,052,CALL,G20052CALL
+Legislative District 5,State Representative Pos. 2,4052,WRITE-IN,2,4052|2,W0000,G20,052,W000,G20052W000
+Legislative District 6,State Representative Pos. 1,4061,Mike Volz,1,4061|1,Volz,G20,061,VOLZ,G20061VOLZ
+Legislative District 6,State Representative Pos. 1,4061,Zack Zappone,2,4061|2,Zappone,G20,061,ZAPP,G20061ZAPP
+Legislative District 6,State Representative Pos. 1,4061,WRITE-IN,3,4061|3,W0000,G20,061,W000,G20061W000
+Legislative District 6,State Representative Pos. 2,4062,Jenny Graham,1,4062|1,Graham,G20,062,GRAH,G20062GRAH
+Legislative District 6,State Representative Pos. 2,4062,Tom McGarry,2,4062|2,McGarry,G20,062,MCGA,G20062MCGA
+Legislative District 6,State Representative Pos. 2,4062,WRITE-IN,3,4062|3,W0000,G20,062,W000,G20062W000
+Legislative District 7,State Representative Pos. 1,4071,Jacquelin Maycumber,1,4071|1,Maycumber,G20,071,MAYC,G20071MAYC
+Legislative District 7,State Representative Pos. 1,4071,Georgia D. Davenport,2,4071|2,Davenport,G20,071,DAVE,G20071DAVE
+Legislative District 7,State Representative Pos. 1,4071,WRITE-IN,3,4071|3,W0000,G20,071,W000,G20071W000
+Legislative District 7,State Representative Pos. 2,4072,Joel Kretz,1,4072|1,Kretz,G20,072,KRET,G20072KRET
+Legislative District 7,State Representative Pos. 2,4072,JJ Wandler,2,4072|2,Wandler,G20,072,WAND,G20072WAND
+Legislative District 7,State Representative Pos. 2,4072,WRITE-IN,3,4072|3,W0000,G20,072,W000,G20072W000
+Legislative District 8,State Representative Pos. 1,4081,Brad Klippert,1,4081|1,Klippert,G20,081,KLIP,G20081KLIP
+Legislative District 8,State Representative Pos. 1,4081,Shir Regev,2,4081|2,Regev,G20,081,REGE,G20081REGE
+Legislative District 8,State Representative Pos. 1,4081,WRITE-IN,3,4081|3,W0000,G20,081,W000,G20081W000
+Legislative District 8,State Representative Pos. 2,4082,Matt Boehnke,1,4082|1,Boehnke,G20,082,BOEH,G20082BOEH
+Legislative District 8,State Representative Pos. 2,4082,Larry Stanley,2,4082|2,Stanley,G20,082,STAN,G20082STAN
+Legislative District 8,State Representative Pos. 2,4082,WRITE-IN,3,4082|3,W0000,G20,082,W000,G20082W000
+Legislative District 9,State Senator,4090,Mark G. Schoesler,1,4090|1,Schoesler,G20,09S,SCHO,G2009SSCHO
+Legislative District 9,State Senator,4090,Jenn Goulet,2,4090|2,Goulet,G20,09S,GOUL,G2009SGOUL
+Legislative District 9,State Senator,4090,WRITE-IN,3,4090|3,W0000,G20,09S,W000,G2009SW000
+Legislative District 9,State Representative Pos. 1,4091,Mary Dye,1,4091|1,Dye,G20,091,DYE,G20091DYE
+Legislative District 9,State Representative Pos. 1,4091,Brett Borden,2,4091|2,Borden,G20,091,BORD,G20091BORD
+Legislative District 9,State Representative Pos. 1,4091,WRITE-IN,3,4091|3,W0000,G20,091,W000,G20091W000
+Legislative District 9,State Representative Pos. 2,4092,Joe Schmick,1,4092|1,Schmick,G20,092,SCHM,G20092SCHM
+Legislative District 9,State Representative Pos. 2,4092,WRITE-IN,2,4092|2,W0000,G20,092,W000,G20092W000
+Legislative District 10,State Senator,4100,Ron Muzzall,1,4100|1,Muzzall,G20,10S,MUZZ,G2010SMUZZ
+Legislative District 10,State Senator,4100,Helen Price Johnson,2,4100|2,Johnson,G20,10S,JOHN,G2010SJOHN
+Legislative District 10,State Senator,4100,WRITE-IN,3,4100|3,W0000,G20,10S,W000,G2010SW000
+Legislative District 10,State Representative Pos. 1,4101,Greg Gilday,1,4101|1,Gilday,G20,101,GILD,G20101GILD
+Legislative District 10,State Representative Pos. 1,4101,Angie Homola,2,4101|2,Homola,G20,101,HOMO,G20101HOMO
+Legislative District 10,State Representative Pos. 1,4101,WRITE-IN,3,4101|3,W0000,G20,101,W000,G20101W000
+Legislative District 10,State Representative Pos. 2,4102,Bill Bruch,1,4102|1,Bruch,G20,102,BRUC,G20102BRUC
+Legislative District 10,State Representative Pos. 2,4102,Dave Paul,2,4102|2,Paul,G20,102,PAUL,G20102PAUL
+Legislative District 10,State Representative Pos. 2,4102,WRITE-IN,3,4102|3,W0000,G20,102,W000,G20102W000
+Legislative District 11,State Senator,4110,Bob Hasegawa,1,4110|1,Hasegawa,G20,11S,HASE,G2011SHASE
+Legislative District 11,State Senator,4110,WRITE-IN,2,4110|2,W0000,G20,11S,W000,G2011SW000
+Legislative District 11,State Representative Pos. 1,4111,David Hackney,1,4111|1,Hackney,G20,111,HACK,G20111HACK
+Legislative District 11,State Representative Pos. 1,4111,Zack Hudgins,2,4111|2,Hudgins,G20,111,HUDG,G20111HUDG
+Legislative District 11,State Representative Pos. 1,4111,WRITE-IN,3,4111|3,W0000,G20,111,W000,G20111W000
+Legislative District 11,State Representative Pos. 2,4112,Steve Bergquist,1,4112|1,Bergquist,G20,112,BERG,G20112BERG
+Legislative District 11,State Representative Pos. 2,4112,Sean Atchison,2,4112|2,Atchison,G20,112,ATCH,G20112ATCH
+Legislative District 11,State Representative Pos. 2,4112,WRITE-IN,3,4112|3,W0000,G20,112,W000,G20112W000
+Legislative District 12,State Senator,4120,Brad Hawkins,1,4120|1,Hawkins,G20,12S,HAWK,G2012SHAWK
+Legislative District 12,State Senator,4120,WRITE-IN,2,4120|2,W0000,G20,12S,W000,G2012SW000
+Legislative District 12,State Representative Pos. 1,4121,Keith Goehner,1,4121|1,Goehner,G20,121,GOEH,G20121GOEH
+Legislative District 12,State Representative Pos. 1,4121,Adrianne Moore,2,4121|2,Moore,G20,121,MOOR,G20121MOOR
+Legislative District 12,State Representative Pos. 1,4121,WRITE-IN,3,4121|3,W0000,G20,121,W000,G20121W000
+Legislative District 12,State Representative Pos. 2,4122,Mike Steele,1,4122|1,Steele,G20,122,STEE,G20122STEE
+Legislative District 12,State Representative Pos. 2,4122,WRITE-IN,2,4122|2,W0000,G20,122,W000,G20122W000
+Legislative District 13,State Representative Pos. 1,4131,Tom Dent,1,4131|1,Dent,G20,131,DENT,G20131DENT
+Legislative District 13,State Representative Pos. 1,4131,Eduardo Castañeda-Díaz,2,4131|2,Castañeda-Díaz,G20,131,CAST,G20131CAST
+Legislative District 13,State Representative Pos. 1,4131,WRITE-IN,3,4131|3,W0000,G20,131,W000,G20131W000
+Legislative District 13,State Representative Pos. 2,4132,Alex Ybarra,1,4132|1,Ybarra,G20,132,YBAR,G20132YBAR
+Legislative District 13,State Representative Pos. 2,4132,WRITE-IN,2,4132|2,W0000,G20,132,W000,G20132W000
+Legislative District 14,State Senator,4140,Curtis P. King,1,4140|1,King,G20,14S,KING,G2014SKING
+Legislative District 14,State Senator,4140,WRITE-IN,2,4140|2,W0000,G20,14S,W000,G2014SW000
+Legislative District 14,State Representative Pos. 1,4141,Chris Corry,1,4141|1,Corry,G20,141,CORR,G20141CORR
+Legislative District 14,State Representative Pos. 1,4141,Tracy Rushing,2,4141|2,Rushing,G20,141,RUSH,G20141RUSH
+Legislative District 14,State Representative Pos. 1,4141,WRITE-IN,3,4141|3,W0000,G20,141,W000,G20141W000
+Legislative District 14,State Representative Pos. 2,4142,Gina Mosbrucker,1,4142|1,Mosbrucker,G20,142,MOSB,G20142MOSB
+Legislative District 14,State Representative Pos. 2,4142,Devin Kuh,2,4142|2,Kuh,G20,142,KUH,G20142KUH
+Legislative District 14,State Representative Pos. 2,4142,WRITE-IN,3,4142|3,W0000,G20,142,W000,G20142W000
+Legislative District 15,"Representative, Position 1",4151,Bruce Chandler,1,4151|1,Chandler,G20,151,CHAN,G20151CHAN
+Legislative District 15,"Representative, Position 1",4151,Jack McEntire,2,4151|2,McEntire,G20,151,MCEN,G20151MCEN
+Legislative District 15,"Representative, Position 1",4151,WRITE-IN,3,4151|3,W0000,G20,151,W000,G20151W000
+Legislative District 15,"Representative, Position 2",4152,Jeremie Dufault,1,4152|1,Dufault,G20,152,DUFA,G20152DUFA
+Legislative District 15,"Representative, Position 2",4152,AJ Cooper,2,4152|2,Cooper,G20,152,COOP,G20152COOP
+Legislative District 15,"Representative, Position 2",4152,WRITE-IN,3,4152|3,W0000,G20,152,W000,G20152W000
+Legislative District 16,State Senator,4160,Danielle Garbe Reser,1,4160|1,Reser,G20,16S,RESE,G2016SRESE
+Legislative District 16,State Senator,4160,Perry Dozier,2,4160|2,Dozier,G20,16S,DOZI,G2016SDOZI
+Legislative District 16,State Senator,4160,WRITE-IN,3,4160|3,W0000,G20,16S,W000,G2016SW000
+Legislative District 16,State Representative Pos. 1,4161,Mark Klicker,1,4161|1,Klicker,G20,161,KLIC,G20161KLIC
+Legislative District 16,State Representative Pos. 1,4161,Frances Chvatal,2,4161|2,Chvatal,G20,161,CHVA,G20161CHVA
+Legislative District 16,State Representative Pos. 1,4161,WRITE-IN,3,4161|3,W0000,G20,161,W000,G20161W000
+Legislative District 16,State Representative Pos. 2,4162,Skyler Rude,1,4162|1,Rude,G20,162,RUDE,G20162RUDE
+Legislative District 16,State Representative Pos. 2,4162,Carly Coburn,2,4162|2,Coburn,G20,162,COBU,G20162COBU
+Legislative District 16,State Representative Pos. 2,4162,WRITE-IN,3,4162|3,W0000,G20,162,W000,G20162W000
+Legislative District 17,State Senator,4170,Lynda Wilson,1,4170|1,Wilson,G20,17S,WILS,G2017SWILS
+Legislative District 17,State Senator,4170,Daniel Smith,2,4170|2,Smith,G20,17S,SMIT,G2017SSMIT
+Legislative District 17,State Senator,4170,WRITE-IN,3,4170|3,W0000,G20,17S,W000,G2017SW000
+Legislative District 17,State Representative Pos. 1,4171,Vicki Kraft,1,4171|1,Kraft,G20,171,KRAF,G20171KRAF
+Legislative District 17,State Representative Pos. 1,4171,Tanisha L. Harris,2,4171|2,Harris,G20,171,HARR,G20171HARR
+Legislative District 17,State Representative Pos. 1,4171,WRITE-IN,3,4171|3,W0000,G20,171,W000,G20171W000
+Legislative District 17,State Representative Pos. 2,4172,Paul Harris,1,4172|1,Harris,G20,172,HARR,G20172HARR
+Legislative District 17,State Representative Pos. 2,4172,Bryan White,2,4172|2,White,G20,172,WHIT,G20172WHIT
+Legislative District 17,State Representative Pos. 2,4172,WRITE-IN,3,4172|3,W0000,G20,172,W000,G20172W000
+Legislative District 18,State Senator,4180,Rick Bell,1,4180|1,Bell,G20,18S,BELL,G2018SBELL
+Legislative District 18,State Senator,4180,Ann Rivers,2,4180|2,Rivers,G20,18S,RIVE,G2018SRIVE
+Legislative District 18,State Senator,4180,WRITE-IN,3,4180|3,W0000,G20,18S,W000,G2018SW000
+Legislative District 18,State Representative Pos. 1,4181,Brandon Vick,1,4181|1,Vick,G20,181,VICK,G20181VICK
+Legislative District 18,State Representative Pos. 1,4181,Kassandra Bessert,2,4181|2,Bessert,G20,181,BESS,G20181BESS
+Legislative District 18,State Representative Pos. 1,4181,WRITE-IN,3,4181|3,W0000,G20,181,W000,G20181W000
+Legislative District 18,State Representative Pos. 2,4182,Larry Hoff,1,4182|1,Hoff,G20,182,HOFF,G20182HOFF
+Legislative District 18,State Representative Pos. 2,4182,Donna L. Sinclair,2,4182|2,Sinclair,G20,182,SINC,G20182SINC
+Legislative District 18,State Representative Pos. 2,4182,WRITE-IN,3,4182|3,W0000,G20,182,W000,G20182W000
+Legislative District 19,State Senator,4190,Dean Takko,1,4190|1,Takko,G20,19S,TAKK,G2019STAKK
+Legislative District 19,State Senator,4190,Jeff Wilson,2,4190|2,Wilson,G20,19S,WILS,G2019SWILS
+Legislative District 19,State Senator,4190,WRITE-IN,3,4190|3,W0000,G20,19S,W000,G2019SW000
+Legislative District 19,State Representative Pos. 1,4191,Jim Walsh,1,4191|1,Walsh,G20,191,WALS,G20191WALS
+Legislative District 19,State Representative Pos. 1,4191,Marianna Everson,2,4191|2,Everson,G20,191,EVER,G20191EVER
+Legislative District 19,State Representative Pos. 1,4191,WRITE-IN,3,4191|3,W0000,G20,191,W000,G20191W000
+Legislative District 19,State Representative Pos. 2,4192,Joel McEntire,1,4192|1,McEntire,G20,192,MCEN,G20192MCEN
+Legislative District 19,State Representative Pos. 2,4192,Brian E. Blake,2,4192|2,Blake,G20,192,BLAK,G20192BLAK
+Legislative District 19,State Representative Pos. 2,4192,WRITE-IN,3,4192|3,W0000,G20,192,W000,G20192W000
+Legislative District 20,State Senator,4200,John Braun,1,4200|1,Braun,G20,20S,BRAU,G2020SBRAU
+Legislative District 20,State Senator,4200,WRITE-IN,2,4200|2,W0000,G20,20S,W000,G2020SW000
+Legislative District 20,State Representative Pos. 1,4201,Peter Abbarno,1,4201|1,Abbarno,G20,201,ABBA,G20201ABBA
+Legislative District 20,State Representative Pos. 1,4201,Timothy Zahn,2,4201|2,Zahn,G20,201,ZAHN,G20201ZAHN
+Legislative District 20,State Representative Pos. 1,4201,WRITE-IN,3,4201|3,W0000,G20,201,W000,G20201W000
+Legislative District 20,State Representative Pos. 2,4202,Ed Orcutt,1,4202|1,Orcutt,G20,202,ORCU,G20202ORCU
+Legislative District 20,State Representative Pos. 2,4202,Will Rollet,2,4202|2,Rollet,G20,202,ROLL,G20202ROLL
+Legislative District 20,State Representative Pos. 2,4202,WRITE-IN,3,4202|3,W0000,G20,202,W000,G20202W000
+Legislative District 21,State Representative Pos. 1,4211,Strom H. Peterson,1,4211|1,Peterson,G20,211,PETE,G20211PETE
+Legislative District 21,State Representative Pos. 1,4211,Brian Thompson,2,4211|2,Thompson,G20,211,THOM,G20211THOM
+Legislative District 21,State Representative Pos. 1,4211,WRITE-IN,3,4211|3,W0000,G20,211,W000,G20211W000
+Legislative District 21,State Representative Pos. 2,4212,Lillian Ortiz-Self,1,4212|1,Ortiz-Self,G20,212,ORTI,G20212ORTI
+Legislative District 21,State Representative Pos. 2,4212,Amy Schaper,2,4212|2,Schaper,G20,212,SCHA,G20212SCHA
+Legislative District 21,State Representative Pos. 2,4212,WRITE-IN,3,4212|3,W0000,G20,212,W000,G20212W000
+Legislative District 22,State Senator,4220,Sam Hunt,1,4220|1,Hunt,G20,22S,HUNT,G2022SHUNT
+Legislative District 22,State Senator,4220,Garry Holland,2,4220|2,Holland,G20,22S,HOLL,G2022SHOLL
+Legislative District 22,State Senator,4220,WRITE-IN,3,4220|3,W0000,G20,22S,W000,G2022SW000
+Legislative District 22,State Representative Pos. 1,4221,Laurie Dolan,1,4221|1,Dolan,G20,221,DOLA,G20221DOLA
+Legislative District 22,State Representative Pos. 1,4221,J. D. Ingram,2,4221|2,Ingram,G20,221,INGR,G20221INGR
+Legislative District 22,State Representative Pos. 1,4221,WRITE-IN,3,4221|3,W0000,G20,221,W000,G20221W000
+Legislative District 22,State Representative Pos. 2,4222,Dusty Pierpoint,1,4222|1,Pierpoint,G20,222,PIER,G20222PIER
+Legislative District 22,State Representative Pos. 2,4222,Jessica Bateman,2,4222|2,Bateman,G20,222,BATE,G20222BATE
+Legislative District 22,State Representative Pos. 2,4222,WRITE-IN,3,4222|3,W0000,G20,222,W000,G20222W000
+Legislative District 23,State Senator,4230,Christine Rolfes,1,4230|1,Rolfes,G20,23S,ROLF,G2023SROLF
+Legislative District 23,State Senator,4230,Pam Madden-Boyer,2,4230|2,Madden-Boyer,G20,23S,MADD,G2023SMADD
+Legislative District 23,State Senator,4230,WRITE-IN,3,4230|3,W0000,G20,23S,W000,G2023SW000
+Legislative District 23,State Representative Pos. 1,4231,Tarra Simmons,1,4231|1,Simmons,G20,231,SIMM,G20231SIMM
+Legislative District 23,State Representative Pos. 1,4231,April Ferguson,2,4231|2,Ferguson,G20,231,FERG,G20231FERG
+Legislative District 23,State Representative Pos. 1,4231,WRITE-IN,3,4231|3,W0000,G20,231,W000,G20231W000
+Legislative District 23,State Representative Pos. 2,4232,Drew Hansen,1,4232|1,Hansen,G20,232,HANS,G20232HANS
+Legislative District 23,State Representative Pos. 2,4232,Elaina Gonzales-Blanton,2,4232|2,Gonzales-Blanton,G20,232,GONZ,G20232GONZ
+Legislative District 23,State Representative Pos. 2,4232,WRITE-IN,3,4232|3,W0000,G20,232,W000,G20232W000
+Legislative District 24,State Senator,4240,Kevin Van De Wege,1,4240|1,VanDeWege,G20,24S,VAND,G2024SVAND
+Legislative District 24,State Senator,4240,Connie Beauvais,2,4240|2,Beauvais,G20,24S,BEAU,G2024SBEAU
+Legislative District 24,State Senator,4240,WRITE-IN,3,4240|3,W0000,G20,24S,W000,G2024SW000
+Legislative District 24,State Representative Pos. 1,4241,Mike Chapman,1,4241|1,Chapman,G20,241,CHAP,G20241CHAP
+Legislative District 24,State Representative Pos. 1,4241,Sue Forde,2,4241|2,Forde,G20,241,FORD,G20241FORD
+Legislative District 24,State Representative Pos. 1,4241,WRITE-IN,3,4241|3,W0000,G20,241,W000,G20241W000
+Legislative District 24,State Representative Pos. 2,4242,Steve Tharinger,1,4242|1,Tharinger,G20,242,THAR,G20242THAR
+Legislative District 24,State Representative Pos. 2,4242,Brian Pruiett,2,4242|2,Pruiett,G20,242,PRUI,G20242PRUI
+Legislative District 24,State Representative Pos. 2,4242,WRITE-IN,3,4242|3,W0000,G20,242,W000,G20242W000
+Legislative District 25,State Senator,4250,Chris Gildon,1,4250|1,Gildon,G20,25S,GILD,G2025SGILD
+Legislative District 25,State Senator,4250,Julie Door,2,4250|2,Door,G20,25S,DOOR,G2025SDOOR
+Legislative District 25,State Senator,4250,WRITE-IN,3,4250|3,W0000,G20,25S,W000,G2025SW000
+Legislative District 25,State Representative Pos. 1,4251,Kelly Chambers,1,4251|1,Chambers,G20,251,CHAM,G20251CHAM
+Legislative District 25,State Representative Pos. 1,4251,Jamie Smith,2,4251|2,Smith,G20,251,SMIT,G20251SMIT
+Legislative District 25,State Representative Pos. 1,4251,WRITE-IN,3,4251|3,W0000,G20,251,W000,G20251W000
+Legislative District 25,State Representative Pos. 2,4252,Cyndy Jacobsen,1,4252|1,Jacobsen,G20,252,JACO,G20252JACO
+Legislative District 25,State Representative Pos. 2,4252,Brian Duthie,2,4252|2,Duthie,G20,252,DUTH,G20252DUTH
+Legislative District 25,State Representative Pos. 2,4252,WRITE-IN,3,4252|3,W0000,G20,252,W000,G20252W000
+Legislative District 26,State Representative Pos. 1,4261,Jesse L. Young,1,4261|1,Young,G20,261,YOUN,G20261YOUN
+Legislative District 26,State Representative Pos. 1,4261,Carrie Hesch,2,4261|2,Hesch,G20,261,HESC,G20261HESC
+Legislative District 26,State Representative Pos. 1,4261,WRITE-IN,3,4261|3,W0000,G20,261,W000,G20261W000
+Legislative District 26,State Representative Pos. 2,4262,Joy Stanford,1,4262|1,Stanford,G20,262,STAN,G20262STAN
+Legislative District 26,State Representative Pos. 2,4262,Michelle Caldier,2,4262|2,Caldier,G20,262,CALD,G20262CALD
+Legislative District 26,State Representative Pos. 2,4262,WRITE-IN,3,4262|3,W0000,G20,262,W000,G20262W000
+Legislative District 27,State Senator,4270,Jeannie Darneille,1,4270|1,Darneille,G20,27S,DARN,G2027SDARN
+Legislative District 27,State Senator,4270,Kyle Paskewitz,2,4270|2,Paskewitz,G20,27S,PASK,G2027SPASK
+Legislative District 27,State Senator,4270,WRITE-IN,3,4270|3,W0000,G20,27S,W000,G2027SW000
+Legislative District 27,State Representative Pos. 1,4271,Laurie Jinkins,1,4271|1,Jinkins,G20,271,JINK,G20271JINK
+Legislative District 27,State Representative Pos. 1,4271,Ryan Talen,2,4271|2,Talen,G20,271,TALE,G20271TALE
+Legislative District 27,State Representative Pos. 1,4271,WRITE-IN,3,4271|3,W0000,G20,271,W000,G20271W000
+Legislative District 27,State Representative Pos. 2,4272,Jake Fey,1,4272|1,Fey,G20,272,FEY,G20272FEY
+Legislative District 27,State Representative Pos. 2,4272,Barry Knowles,2,4272|2,Knowles,G20,272,KNOW,G20272KNOW
+Legislative District 27,State Representative Pos. 2,4272,WRITE-IN,3,4272|3,W0000,G20,272,W000,G20272W000
+Legislative District 28,State Senator,4280,Twina Nobles,1,4280|1,Nobles,G20,28S,NOBL,G2028SNOBL
+Legislative District 28,State Senator,4280,Steve O'Ban,2,4280|2,O'Ban,G20,28S,O'BA,G2028SO'BA
+Legislative District 28,State Senator,4280,WRITE-IN,3,4280|3,W0000,G20,28S,W000,G2028SW000
+Legislative District 28,State Representative Pos. 1,4281,Mari Leavitt,1,4281|1,Leavitt,G20,281,LEAV,G20281LEAV
+Legislative District 28,State Representative Pos. 1,4281,Kevin Ballard,2,4281|2,Ballard,G20,281,BALL,G20281BALL
+Legislative District 28,State Representative Pos. 1,4281,WRITE-IN,3,4281|3,W0000,G20,281,W000,G20281W000
+Legislative District 28,State Representative Pos. 2,4282,Dan Bronoske,1,4282|1,Bronoske,G20,282,BRON,G20282BRON
+Legislative District 28,State Representative Pos. 2,4282,Chris Nye,2,4282|2,Nye,G20,282,NYE,G20282NYE
+Legislative District 28,State Representative Pos. 2,4282,WRITE-IN,3,4282|3,W0000,G20,282,W000,G20282W000
+Legislative District 29,State Representative Pos. 1,4291,Melanie Morgan,1,4291|1,Morgan,G20,291,MORG,G20291MORG
+Legislative District 29,State Representative Pos. 1,4291,Koshin Mohamed Fidaar,2,4291|2,Fidaar,G20,291,FIDA,G20291FIDA
+Legislative District 29,State Representative Pos. 1,4291,WRITE-IN,3,4291|3,W0000,G20,291,W000,G20291W000
+Legislative District 29,State Representative Pos. 2,4292,Terry Harder,1,4292|1,Harder,G20,292,HARD,G20292HARD
+Legislative District 29,State Representative Pos. 2,4292,Steve Kirby,2,4292|2,Kirby,G20,292,KIRB,G20292KIRB
+Legislative District 29,State Representative Pos. 2,4292,WRITE-IN,3,4292|3,W0000,G20,292,W000,G20292W000
+Legislative District 30,State Representative Pos. 1,4301,Jamila Taylor,1,4301|1,Taylor,G20,301,TAYL,G20301TAYL
+Legislative District 30,State Representative Pos. 1,4301,Martin A. Moore,2,4301|2,Moore,G20,301,MOOR,G20301MOOR
+Legislative District 30,State Representative Pos. 1,4301,WRITE-IN,3,4301|3,W0000,G20,301,W000,G20301W000
+Legislative District 30,State Representative Pos. 2,4302,Jesse Johnson,1,4302|1,Johnson,G20,302,JOHN,G20302JOHN
+Legislative District 30,State Representative Pos. 2,4302,Jack Walsh,2,4302|2,Walsh,G20,302,WALS,G20302WALS
+Legislative District 30,State Representative Pos. 2,4302,WRITE-IN,3,4302|3,W0000,G20,302,W000,G20302W000
+Legislative District 31,State Representative Pos. 1,4311,Drew Stokesbary,1,4311|1,Stokesbary,G20,311,STOK,G20311STOK
+Legislative District 31,State Representative Pos. 1,4311,Katie Young,2,4311|2,Young,G20,311,YOUN,G20311YOUN
+Legislative District 31,State Representative Pos. 1,4311,WRITE-IN,3,4311|3,W0000,G20,311,W000,G20311W000
+Legislative District 31,State Representative Pos. 2,4312,Eric E. Robertson,1,4312|1,Robertson,G20,312,ROBE,G20312ROBE
+Legislative District 31,State Representative Pos. 2,4312,Thomas R. Clark,2,4312|2,Clark,G20,312,CLAR,G20312CLAR
+Legislative District 31,State Representative Pos. 2,4312,WRITE-IN,3,4312|3,W0000,G20,312,W000,G20312W000
+Legislative District 32,State Representative Pos. 1,4321,Cindy Ryu,1,4321|1,Ryu,G20,321,RYU,G20321RYU
+Legislative District 32,State Representative Pos. 1,4321,Shirley Sutton,2,4321|2,Sutton,G20,321,SUTT,G20321SUTT
+Legislative District 32,State Representative Pos. 1,4321,WRITE-IN,3,4321|3,W0000,G20,321,W000,G20321W000
+Legislative District 32,State Representative Pos. 2,4322,Lauren Davis,1,4322|1,Davis,G20,322,DAVI,G20322DAVI
+Legislative District 32,State Representative Pos. 2,4322,Tamra Smilanich,2,4322|2,Smilanich,G20,322,SMIL,G20322SMIL
+Legislative District 32,State Representative Pos. 2,4322,WRITE-IN,3,4322|3,W0000,G20,322,W000,G20322W000
+Legislative District 33,State Representative Pos. 1,4331,Tina L. Orwall,1,4331|1,Orwall,G20,331,ORWA,G20331ORWA
+Legislative District 33,State Representative Pos. 1,4331,Kerry French,2,4331|2,French,G20,331,FREN,G20331FREN
+Legislative District 33,State Representative Pos. 1,4331,WRITE-IN,3,4331|3,W0000,G20,331,W000,G20331W000
+Legislative District 33,State Representative Pos. 2,4332,Mia Su-Ling Gregerson,1,4332|1,Gregerson,G20,332,GREG,G20332GREG
+Legislative District 33,State Representative Pos. 2,4332,Marliza Melzer,2,4332|2,Melzer,G20,332,MELZ,G20332MELZ
+Legislative District 33,State Representative Pos. 2,4332,WRITE-IN,3,4332|3,W0000,G20,332,W000,G20332W000
+Legislative District 34,State Representative Pos. 1,4341,Eileen L. Cody,1,4341|1,Cody,G20,341,CODY,G20341CODY
+Legislative District 34,State Representative Pos. 1,4341,WRITE-IN,2,4341|2,W0000,G20,341,W000,G20341W000
+Legislative District 34,State Representative Pos. 2,4342,Joe Fitzgibbon,1,4342|1,Fitzgibbon,G20,342,FITZ,G20342FITZ
+Legislative District 34,State Representative Pos. 2,4342,WRITE-IN,2,4342|2,W0000,G20,342,W000,G20342W000
+Legislative District 35,State Representative Pos. 1,4351,Dan Griffey,1,4351|1,Griffey,G20,351,GRIF,G20351GRIF
+Legislative District 35,State Representative Pos. 1,4351,Colton Myers,2,4351|2,Myers,G20,351,MYER,G20351MYER
+Legislative District 35,State Representative Pos. 1,4351,WRITE-IN,3,4351|3,W0000,G20,351,W000,G20351W000
+Legislative District 35,State Representative Pos. 2,4352,Drew C. MacEwen,1,4352|1,MacEwen,G20,352,MACE,G20352MACE
+Legislative District 35,State Representative Pos. 2,4352,Darcy Huffman,2,4352|2,Huffman,G20,352,HUFF,G20352HUFF
+Legislative District 35,State Representative Pos. 2,4352,WRITE-IN,3,4352|3,W0000,G20,352,W000,G20352W000
+Legislative District 36,State Representative Pos. 1,4361,Noel Christina Frame,1,4361|1,Frame,G20,361,FRAM,G20361FRAM
+Legislative District 36,State Representative Pos. 1,4361,WRITE-IN,2,4361|2,W0000,G20,361,W000,G20361W000
+Legislative District 36,State Representative Pos. 2,4362,Liz Berry,1,4362|1,Berry,G20,362,BERR,G20362BERR
+Legislative District 36,State Representative Pos. 2,4362,Sarah Reyneveld,2,4362|2,Reyneveld,G20,362,REYN,G20362REYN
+Legislative District 36,State Representative Pos. 2,4362,WRITE-IN,3,4362|3,W0000,G20,362,W000,G20362W000
+Legislative District 37,State Representative Pos. 1,4371,Sharon Tomiko Santos,1,4371|1,Santos,G20,371,SANT,G20371SANT
+Legislative District 37,State Representative Pos. 1,4371,John Stafford,2,4371|2,Stafford,G20,371,STAF,G20371STAF
+Legislative District 37,State Representative Pos. 1,4371,WRITE-IN,3,4371|3,W0000,G20,371,W000,G20371W000
+Legislative District 37,State Representative Pos. 2,4372,Kirsten Harris-Talley,1,4372|1,Harris-Talley,G20,372,HARR,G20372HARR
+Legislative District 37,State Representative Pos. 2,4372,Chukundi Salisbury,2,4372|2,Salisbury,G20,372,SALI,G20372SALI
+Legislative District 37,State Representative Pos. 2,4372,WRITE-IN,3,4372|3,W0000,G20,372,W000,G20372W000
+Legislative District 38,State Senator,4380,June Robinson,1,4380|1,Robinson,G20,38S,ROBI,G2038SROBI
+Legislative District 38,State Senator,4380,Bernard Moody,2,4380|2,Moody,G20,38S,MOOD,G2038SMOOD
+Legislative District 38,State Senator,4380,WRITE-IN,3,4380|3,W0000,G20,38S,W000,G2038SW000
+Legislative District 38,State Representative Pos. 1,4381,Emily Wicks,1,4381|1,Wicks,G20,381,WICK,G20381WICK
+Legislative District 38,State Representative Pos. 1,4381,Bert Johnson,2,4381|2,Johnson,G20,381,JOHN,G20381JOHN
+Legislative District 38,State Representative Pos. 1,4381,WRITE-IN,3,4381|3,W0000,G20,381,W000,G20381W000
+Legislative District 38,State Representative Pos. 2,4382,Mike Sells,1,4382|1,Sells,G20,382,SELL,G20382SELL
+Legislative District 38,State Representative Pos. 2,4382,David Wiley,2,4382|2,Wiley,G20,382,WILE,G20382WILE
+Legislative District 38,State Representative Pos. 2,4382,WRITE-IN,3,4382|3,W0000,G20,382,W000,G20382W000
+Legislative District 39,State Senator,4390,Keith L. Wagoner,1,4390|1,Wagoner,G20,39S,WAGO,G2039SWAGO
+Legislative District 39,State Senator,4390,Kathryn A. Lewandowsky,2,4390|2,Lewandowsky,G20,39S,LEWA,G2039SLEWA
+Legislative District 39,State Senator,4390,WRITE-IN,3,4390|3,W0000,G20,39S,W000,G2039SW000
+Legislative District 39,State Representative Pos. 1,4391,Robert J. Sutherland,1,4391|1,Sutherland,G20,391,SUTH,G20391SUTH
+Legislative District 39,State Representative Pos. 1,4391,Claus Joens,2,4391|2,Joens,G20,391,JOEN,G20391JOEN
+Legislative District 39,State Representative Pos. 1,4391,WRITE-IN,3,4391|3,W0000,G20,391,W000,G20391W000
+Legislative District 39,State Representative Pos. 2,4392,Carolyn Eslick,1,4392|1,Eslick,G20,392,ESLI,G20392ESLI
+Legislative District 39,State Representative Pos. 2,4392,Ryan Johnson,2,4392|2,Johnson,G20,392,JOHN,G20392JOHN
+Legislative District 39,State Representative Pos. 2,4392,WRITE-IN,3,4392|3,W0000,G20,392,W000,G20392W000
+Legislative District 40,State Senator,4400,Elizabeth (Liz) Lovelett,1,4400|1,Lovelett,G20,40S,LOVE,G2040SLOVE
+Legislative District 40,State Senator,4400,Charles Carrell,2,4400|2,Carrell,G20,40S,CARR,G2040SCARR
+Legislative District 40,State Senator,4400,WRITE-IN,3,4400|3,W0000,G20,40S,W000,G2040SW000
+Legislative District 40,State Representative Pos. 1,4401,Debra Lekanoff,1,4401|1,Lekanoff,G20,401,LEKA,G20401LEKA
+Legislative District 40,State Representative Pos. 1,4401,WRITE-IN,2,4401|2,W0000,G20,401,W000,G20401W000
+Legislative District 40,State Representative Pos. 2,4402,Alex Ramel,1,4402|1,Ramel,G20,402,RAME,G20402RAME
+Legislative District 40,State Representative Pos. 2,4402,Russ Dzialo,2,4402|2,Dzialo,G20,402,DZIA,G20402DZIA
+Legislative District 40,State Representative Pos. 2,4402,WRITE-IN,3,4402|3,W0000,G20,402,W000,G20402W000
+Legislative District 41,State Senator,4410,Lisa Wellman,1,4410|1,Wellman,G20,41S,WELL,G2041SWELL
+Legislative District 41,State Senator,4410,Mike Nykreim,2,4410|2,Nykreim,G20,41S,NYKR,G2041SNYKR
+Legislative District 41,State Senator,4410,WRITE-IN,3,4410|3,W0000,G20,41S,W000,G2041SW000
+Legislative District 41,State Representative Pos. 1,4411,Tana Senn,1,4411|1,Senn,G20,411,SENN,G20411SENN
+Legislative District 41,State Representative Pos. 1,4411,WRITE-IN,2,4411|2,W0000,G20,411,W000,G20411W000
+Legislative District 41,State Representative Pos. 2,4412,My-Linh Thai,1,4412|1,Thai,G20,412,THAI,G20412THAI
+Legislative District 41,State Representative Pos. 2,4412,Al Rosenthal,2,4412|2,Rosenthal,G20,412,ROSE,G20412ROSE
+Legislative District 41,State Representative Pos. 2,4412,WRITE-IN,3,4412|3,W0000,G20,412,W000,G20412W000
+Legislative District 42,State Representative Pos. 1,4421,Luanne Van Werven,1,4421|1,Werven,G20,421,WERV,G20421WERV
+Legislative District 42,State Representative Pos. 1,4421,Alicia Rule,2,4421|2,Rule,G20,421,RULE,G20421RULE
+Legislative District 42,State Representative Pos. 1,4421,WRITE-IN,3,4421|3,W0000,G20,421,W000,G20421W000
+Legislative District 42,State Representative Pos. 2,4422,Jennifer Sefzik,1,4422|1,Sefzik,G20,422,SEFZ,G20422SEFZ
+Legislative District 42,State Representative Pos. 2,4422,Sharon Shewmake,2,4422|2,Shewmake,G20,422,SHEW,G20422SHEW
+Legislative District 42,State Representative Pos. 2,4422,WRITE-IN,3,4422|3,W0000,G20,422,W000,G20422W000
+Legislative District 43,State Representative Pos. 1,4431,Nicole Macri,1,4431|1,Macri,G20,431,MACR,G20431MACR
+Legislative District 43,State Representative Pos. 1,4431,Leslie Klein,2,4431|2,Klein,G20,431,KLEI,G20431KLEI
+Legislative District 43,State Representative Pos. 1,4431,WRITE-IN,3,4431|3,W0000,G20,431,W000,G20431W000
+Legislative District 43,State Representative Pos. 2,4432,Frank Chopp,1,4432|1,Chopp,G20,432,CHOP,G20432CHOP
+Legislative District 43,State Representative Pos. 2,4432,Sherae Lascelles,2,4432|2,Lascelles,G20,432,LASC,G20432LASC
+Legislative District 43,State Representative Pos. 2,4432,WRITE-IN,3,4432|3,W0000,G20,432,W000,G20432W000
+Legislative District 44,State Representative Pos. 1,4441,John Lovick,1,4441|1,Lovick,G20,441,LOVI,G20441LOVI
+Legislative District 44,State Representative Pos. 1,4441,John T. Kartak,2,4441|2,Kartak,G20,441,KART,G20441KART
+Legislative District 44,State Representative Pos. 1,4441,WRITE-IN,3,4441|3,W0000,G20,441,W000,G20441W000
+Legislative District 44,State Representative Pos. 2,4442,Mark A. James,1,4442|1,James,G20,442,JAME,G20442JAME
+Legislative District 44,State Representative Pos. 2,4442,April Berg,2,4442|2,Berg,G20,442,BERG,G20442BERG
+Legislative District 44,State Representative Pos. 2,4442,WRITE-IN,3,4442|3,W0000,G20,442,W000,G20442W000
+Legislative District 45,State Representative Pos. 1,4451,Roger Goodman,1,4451|1,Goodman,G20,451,GOOD,G20451GOOD
+Legislative District 45,State Representative Pos. 1,4451,John P. Gibbons,2,4451|2,Gibbons,G20,451,GIBB,G20451GIBB
+Legislative District 45,State Representative Pos. 1,4451,WRITE-IN,3,4451|3,W0000,G20,451,W000,G20451W000
+Legislative District 45,State Representative Pos. 2,4452,Larry Springer,1,4452|1,Springer,G20,452,SPRI,G20452SPRI
+Legislative District 45,State Representative Pos. 2,4452,Amber Krabach,2,4452|2,Krabach,G20,452,KRAB,G20452KRAB
+Legislative District 45,State Representative Pos. 2,4452,WRITE-IN,3,4452|3,W0000,G20,452,W000,G20452W000
+Legislative District 46,State Representative Pos. 1,4461,Gerry Pollet,1,4461|1,Pollet,G20,461,POLL,G20461POLL
+Legislative District 46,State Representative Pos. 1,4461,Eric J. Brown,2,4461|2,Brown,G20,461,BROW,G20461BROW
+Legislative District 46,State Representative Pos. 1,4461,WRITE-IN,3,4461|3,W0000,G20,461,W000,G20461W000
+Legislative District 46,State Representative Pos. 2,4462,Javier Valdez,1,4462|1,Valdez,G20,462,VALD,G20462VALD
+Legislative District 46,State Representative Pos. 2,4462,Beth Daranciang,2,4462|2,Daranciang,G20,462,DARA,G20462DARA
+Legislative District 46,State Representative Pos. 2,4462,WRITE-IN,3,4462|3,W0000,G20,462,W000,G20462W000
+Legislative District 47,State Representative Pos. 1,4471,Debra Entenman,1,4471|1,Entenman,G20,471,ENTE,G20471ENTE
+Legislative District 47,State Representative Pos. 1,4471,Kyle Lyebyedyev,2,4471|2,Lyebyedyev,G20,471,LYEB,G20471LYEB
+Legislative District 47,State Representative Pos. 1,4471,WRITE-IN,3,4471|3,W0000,G20,471,W000,G20471W000
+Legislative District 47,State Representative Pos. 2,4472,Pat Sullivan,1,4472|1,Sullivan,G20,472,SULL,G20472SULL
+Legislative District 47,State Representative Pos. 2,4472,Ted Cooke,2,4472|2,Cooke,G20,472,COOK,G20472COOK
+Legislative District 47,State Representative Pos. 2,4472,WRITE-IN,3,4472|3,W0000,G20,472,W000,G20472W000
+Legislative District 48,State Representative Pos. 1,4481,Vandana Slatter,1,4481|1,Slatter,G20,481,SLAT,G20481SLAT
+Legislative District 48,State Representative Pos. 1,4481,Victor H. Bishop,2,4481|2,Bishop,G20,481,BISH,G20481BISH
+Legislative District 48,State Representative Pos. 1,4481,WRITE-IN,3,4481|3,W0000,G20,481,W000,G20481W000
+Legislative District 48,State Representative Pos. 2,4482,Amy Walen,1,4482|1,Walen,G20,482,WALE,G20482WALE
+Legislative District 48,State Representative Pos. 2,4482,Tim J. Hickey,2,4482|2,Hickey,G20,482,HICK,G20482HICK
+Legislative District 48,State Representative Pos. 2,4482,WRITE-IN,3,4482|3,W0000,G20,482,W000,G20482W000
+Legislative District 49,State Senator,4490,Annette Cleveland,1,4490|1,Cleveland,G20,49S,CLEV,G2049SCLEV
+Legislative District 49,State Senator,4490,Rey Reynolds,2,4490|2,Reynolds,G20,49S,REYN,G2049SREYN
+Legislative District 49,State Senator,4490,WRITE-IN,3,4490|3,W0000,G20,49S,W000,G2049SW000
+Legislative District 49,State Representative Pos. 1,4491,Sharon Wylie,1,4491|1,Wylie,G20,491,WYLI,G20491WYLI
+Legislative District 49,State Representative Pos. 1,4491,Justin Forsman,2,4491|2,Forsman,G20,491,FORS,G20491FORS
+Legislative District 49,State Representative Pos. 1,4491,WRITE-IN,3,4491|3,W0000,G20,491,W000,G20491W000
+Legislative District 49,State Representative Pos. 2,4492,Monica Stonier,1,4492|1,Stonier,G20,492,STON,G20492STON
+Legislative District 49,State Representative Pos. 2,4492,Park Llafet,2,4492|2,Llafet,G20,492,LLAF,G20492LLAF
+Legislative District 49,State Representative Pos. 2,4492,WRITE-IN,3,4492|3,W0000,G20,492,W000,G20492W000
+Supreme Court,Justice Position #03,6003,Dave Larson,1,6003|1,Larson,G20,SC3,LARS,G20SC3LARS
+Supreme Court,Justice Position #03,6003,Raquel Montoya-Lewis,2,6003|2,Montoya-Lewis,G20,SC3,MONT,G20SC3MONT
+Supreme Court,Justice Position #03,6003,WRITE-IN,3,6003|3,W0000,G20,SC3,W000,G20SC3W000
+Supreme Court,Justice Position #04,6004,Charles W. Johnson,1,6004|1,Johnson,G20,SC4,JOHN,G20SC4JOHN
+Supreme Court,Justice Position #04,6004,WRITE-IN,2,6004|2,W0000,G20,SC4,W000,G20SC4W000
+Supreme Court,Justice Position #06,6006,Richard S. Serns,1,6006|1,Serns,G20,SC6,SERN,G20SC6SERN
+Supreme Court,Justice Position #06,6006,G. Helen Whitener,2,6006|2,Whitener,G20,SC6,WHIT,G20SC6WHIT
+Supreme Court,Justice Position #06,6006,WRITE-IN,3,6006|3,W0000,G20,SC6,W000,G20SC6W000
+Supreme Court,Justice Position #07,6007,Debra L. Stephens,1,6007|1,Stephens,G20,SC7,STEP,G20SC7STEP
+Supreme Court,Justice Position #07,6007,WRITE-IN,2,6007|2,W0000,G20,SC7,W000,G20SC7W000
+"Court of Appeals, Division 1, District 1",Judge Position 5,7115,David S. Mann,2,7115|2,Mann,G20,A115,MAN,G20A115MAN
+"Court of Appeals, Division 1, District 1",Judge Position 6,7116,Bill Bowman,2,7116|2,Bowman,G20,A116,BOW,G20A116BOW
+"Court Of Appeals, Division 1, District 2",Judge Position 2,7122,Linda Coburn,1,7122|1,Coburn,G20,A122,COB,G20A122COB
+"Court Of Appeals, Division 1, District 2",Judge Position 2,7122,WRITE-IN,97,7122|97,W0000,G20,A122,W00,G20A122W00
+"Court of Appeals, Division 2, District 1",Judge Position 2,7212,Lisa Worswick,1,7212|1,Worswick,G20,A212,WOR,G20A212WOR
+"Court of Appeals, Division 2, District 1",Judge Position 2,7212,WRITE-IN,2,7212|2,W0000,G20,A212,W00,G20A212W00
+"Court of Appeals, Division 2, District 2",Judge Position 1,7221,Lisa L. Sutton,1,7221|1,Sutton,G20,A221,SUT,G20A221SUT
+"Court of Appeals, Division 2, District 2",Judge Position 1,7221,WRITE-IN,2,7221|2,W0000,G20,A221,W00,G20A221W00
+"Court of Appeals, Division 3, District 1",Judge Position 2,7312,Marshall Casey,1,7312|1,Casey,G20,A312,CAS,G20A312CAS
+"Court of Appeals, Division 3, District 1",Judge Position 2,7312,Tracy Arlene Staab,2,7312|2,Staab,G20,A312,STA,G20A312STA
+"Court of Appeals, Division 3, District 1",Judge Position 2,7312,WRITE-IN,3,7312|3,W0000,G20,A312,W00,G20A312W00
+"Court of Appeals, Division 3, District 3",Judge Position 1,7331,Rebecca Pennell,1,7331|1,Pennell,G20,A331,PEN,G20A331PEN
+"Court of Appeals, Division 3, District 3",Judge Position 1,7331,WRITE-IN,2,7331|2,W0000,G20,A331,W00,G20A331W00
+Adams Superior Court ,Judge Position 1,10101,Steve Dixon,2,10101|2,Dixon,G20,AD01,DIX,G20AD01DIX
+Adams Superior Court ,Judge Position 1,10101,WRITE-IN,3,10101|3,W0000,G20,AD01,W00,G20AD01W00
+"Asotin, Columbia, Garfield Superior Court",Judge Position 1,10201,Brooke J. Burns,1,10201|1,Burns,G20,AS01,BUR,G20AS01BUR
+"Asotin, Columbia, Garfield Superior Court",Judge Position 1,10201,G. Scott Marinella,2,10201|2,Marinella,G20,AS01,MAR,G20AS01MAR
+"Asotin, Columbia, Garfield Superior Court",Judge Position 1,10201,WRITE-IN,3,10201|3,W0000,G20,AS01,W00,G20AS01W00
+"Benton, Franklin Superior Court",Judge Position 1,10301,Dave Petersen,1,10301|1,Petersen,G20,BE01,PET,G20BE01PET
+"Benton, Franklin Superior Court",Judge Position 1,10301,Sharon Brown,2,10301|2,Brown,G20,BE01,BRO,G20BE01BRO
+"Benton, Franklin Superior Court",Judge Position 1,10301,WRITE-IN,3,10301|3,W0000,G20,BE01,W00,G20BE01W00
+"Benton, Franklin Superior Court",Judge Position 2,10302,Joe Burrowes,1,10302|1,Burrowes,G20,BE02,BUR,G20BE02BUR
+"Benton, Franklin Superior Court",Judge Position 2,10302,WRITE-IN,2,10302|2,W0000,G20,BE02,W00,G20BE02W00
+"Benton, Franklin Superior Court",Judge Position 3,10303,Alexander Carl Ekstrom,1,10303|1,Ekstrom,G20,BE03,EKS,G20BE03EKS
+"Benton, Franklin Superior Court",Judge Position 3,10303,WRITE-IN,2,10303|2,W0000,G20,BE03,W00,G20BE03W00
+"Benton, Franklin Superior Court",Judge Position 4,10304,Cameron Mitchell,1,10304|1,Mitchell,G20,BE04,MIT,G20BE04MIT
+"Benton, Franklin Superior Court",Judge Position 4,10304,WRITE-IN,2,10304|2,W0000,G20,BE04,W00,G20BE04W00
+"Benton, Franklin Superior Court",Judge Position 5,10305,Sam Swanberg,1,10305|1,Swanberg,G20,BE05,SWA,G20BE05SWA
+"Benton, Franklin Superior Court",Judge Position 5,10305,WRITE-IN,2,10305|2,W0000,G20,BE05,W00,G20BE05W00
+"Benton, Franklin Superior Court",Judge Position 6,10306,Carrie Runge,1,10306|1,Runge,G20,BE06,RUN,G20BE06RUN
+"Benton, Franklin Superior Court",Judge Position 6,10306,WRITE-IN,2,10306|2,W0000,G20,BE06,W00,G20BE06W00
+"Benton, Franklin Superior Court",Judge Position 7,10307,Jacqueline Shea Brown,1,10307|1,Brown,G20,BE07,BRO,G20BE07BRO
+"Benton, Franklin Superior Court",Judge Position 7,10307,WRITE-IN,2,10307|2,W0000,G20,BE07,W00,G20BE07W00
+Chelan Superior Court,Judge Position 1,10401,Lesley A. Allan,1,10401|1,Allan,G20,CH01,ALL,G20CH01ALL
+Chelan Superior Court,Judge Position 1,10401,WRITE-IN,2,10401|2,W0000,G20,CH01,W00,G20CH01W00
+Chelan Superior Court,Judge Position 2,10402,Travis Brandt,1,10402|1,Brandt,G20,CH02,BRA,G20CH02BRA
+Chelan Superior Court,Judge Position 2,10402,WRITE-IN,2,10402|2,W0000,G20,CH02,W00,G20CH02W00
+Chelan Superior Court,Judge Position 3,10403,Kristin Ferrera,1,10403|1,Ferrera,G20,CH03,FER,G20CH03FER
+Chelan Superior Court,Judge Position 3,10403,WRITE-IN,2,10403|2,W0000,G20,CH03,W00,G20CH03W00
+Clallam Superior Court,Judge Position 1,10501,Lauren Erickson,1,10501|1,Erickson,G20,CM01,ERI,G20CM01ERI
+Clallam Superior Court,Judge Position 1,10501,Lisa N. Dublin,2,10501|2,Dublin,G20,CM01,DUB,G20CM01DUB
+Clallam Superior Court,Judge Position 1,10501,WRITE-IN,3,10501|3,W0000,G20,CM01,W00,G20CM01W00
+Clallam Superior Court,Judge Position 2,10502,Simon Barnhart,1,10502|1,Barnhart,G20,CM02,BAR,G20CM02BAR
+Clallam Superior Court,Judge Position 2,10502,WRITE-IN,2,10502|2,W0000,G20,CM02,W00,G20CM02W00
+Clallam Superior Court,Judge Position 3,10503,Brent Basden,1,10503|1,Basden,G20,CM03,BAS,G20CM03BAS
+Clallam Superior Court,Judge Position 3,10503,WRITE-IN,2,10503|2,W0000,G20,CM03,W00,G20CM03W00
+Douglas Superior Court ,Judge Position 1,10901,Brian C. Huber,2,10901|2,Huber,G20,DG01,HUB,G20DG01HUB
+Douglas Superior Court ,Judge Position 1,10901,WRITE-IN,3,10901|3,W0000,G20,DG01,W00,G20DG01W00
+"Ferry, Pend Oreille, Stevens Superior Court",Judge Position 1,11001,Patrick A. Monasmith,1,11001|1,Monasmith,G20,FE01,MON,G20FE01MON
+"Ferry, Pend Oreille, Stevens Superior Court",Judge Position 1,11001,WRITE-IN,2,11001|2,W0000,G20,FE01,W00,G20FE01W00
+"Ferry, Pend Oreille, Stevens Superior Court",Judge Position 2,11002,Jessica Taylor Reeves,1,11002|1,Reeves,G20,FE02,REE,G20FE02REE
+"Ferry, Pend Oreille, Stevens Superior Court",Judge Position 2,11002,WRITE-IN,2,11002|2,W0000,G20,FE02,W00,G20FE02W00
+Grant Superior Court,Judge Position #01,11301,David Estudillo,2,11301|2,Estudillo,G20,GR01,EST,G20GR01EST
+Grant Superior Court,Judge Position #01,11301,WRITE-IN,3,11301|3,W0000,G20,GR01,W00,G20GR01W00
+Grant Superior Court,Judge Position #02,11302,John D Knodell,1,11302|1,Knodell,G20,GR02,KNO,G20GR02KNO
+Grant Superior Court,Judge Position #02,11302,Kevin J McCrae,2,11302|2,McCrae,G20,GR02,MCC,G20GR02MCC
+Grant Superior Court,Judge Position #02,11302,WRITE-IN,3,11302|3,W0000,G20,GR02,W00,G20GR02W00
+Grant Superior Court,Judge Position #03,11303,John Antosz,2,11303|2,Antosz,G20,GR03,ANT,G20GR03ANT
+Grant Superior Court,Judge Position #03,11303,WRITE-IN,3,11303|3,W0000,G20,GR03,W00,G20GR03W00
+Grays Harbor Superior Court,Judge Position 1,11401,Katie Svoboda,1,11401|1,Svoboda,G20,GY01,SVO,G20GY01SVO
+Grays Harbor Superior Court,Judge Position 1,11401,WRITE-IN,2,11401|2,W0000,G20,GY01,W00,G20GY01W00
+Grays Harbor Superior Court,Judge Position 2,11402,David L. Edwards,1,11402|1,Edwards,G20,GY02,EDW,G20GY02EDW
+Grays Harbor Superior Court,Judge Position 2,11402,WRITE-IN,2,11402|2,W0000,G20,GY02,W00,G20GY02W00
+Grays Harbor Superior Court,Judge Position 3,11403,David Mistachkin,1,11403|1,Mistachkin,G20,GY03,MIS,G20GY03MIS
+Grays Harbor Superior Court,Judge Position 3,11403,WRITE-IN,2,11403|2,W0000,G20,GY03,W00,G20GY03W00
+Island Superior Court,Judge Position 1,11501,Christon C. Skinner,5,11501|5,Skinner,G20,IS01,SKI,G20IS01SKI
+Island Superior Court,Judge Position 1,11501,WRITE-IN,6,11501|6,W0000,G20,IS01,W00,G20IS01W00
+Island Superior Court,Judge Position 2,11502,Kathleen Petrich,4,11502|4,Petrich,G20,IS02,PET,G20IS02PET
+Island Superior Court,Judge Position 2,11502,Carolyn Cliff,5,11502|5,Cliff,G20,IS02,CLI,G20IS02CLI
+Island Superior Court,Judge Position 2,11502,WRITE-IN,6,11502|6,W0000,G20,IS02,W00,G20IS02W00
+Jefferson Superior Court,Judge Position 1,11601,Keith C. Harper,1,11601|1,Harper,G20,JE01,HAR,G20JE01HAR
+Jefferson Superior Court,Judge Position 1,11601,WRITE-IN,2,11601|2,W0000,G20,JE01,W00,G20JE01W00
+King County Superior Court,Judge Position 13,11713,Hillary Madsen,1,11713|1,Madsen,G20,KI13,MAD,G20KI13MAD
+King County Superior Court,Judge Position 13,11713,Andrea Robertson,2,11713|2,Robertson,G20,KI13,ROB,G20KI13ROB
+King County Superior Court,Judge Position 30,11730,Doug North,1,11730|1,North,G20,KI30,NOR,G20KI30NOR
+King County Superior Court,Judge Position 30,11730,Carolyn Ladd,2,11730|2,Ladd,G20,KI30,LAD,G20KI30LAD
+Kitsap Superior Court,Judge Position 1,11801,Tina Robinson,1,11801|1,Robinson,G20,KP01,ROB,G20KP01ROB
+Kitsap Superior Court,Judge Position 1,11801,Lynn Fleischbein,2,11801|2,Fleischbein,G20,KP01,FLE,G20KP01FLE
+Kitsap Superior Court,Judge Position 1,11801,WRITE-IN,3,11801|3,W0000,G20,KP01,W00,G20KP01W00
+Kittitas Superior Court,Judge Position 1,11901,Candace Hooper,1,11901|1,Hooper,G20,KS01,HOO,G20KS01HOO
+Kittitas Superior Court,Judge Position 1,11901,WRITE-IN,2,11901|2,W0000,G20,KS01,W00,G20KS01W00
+Kittitas Superior Court,Judge Position 2,11902,Scott R Sparks,1,11902|1,Sparks,G20,KS02,SPA,G20KS02SPA
+Kittitas Superior Court,Judge Position 2,11902,WRITE-IN,2,11902|2,W0000,G20,KS02,W00,G20KS02W00
+"Klickitat, Skamania Superior Court",Judge Position 1,12001,Randall Krog,1,12001|1,Krog,G20,KT01,KRO,G20KT01KRO
+"Klickitat, Skamania Superior Court",Judge Position 1,12001,WRITE-IN,2,12001|2,W0000,G20,KT01,W00,G20KT01W00
+Lewis Superior Court,Judge Position 1,12101,J. Andrew Toynbee,1,12101|1,Toynbee,G20,LE01,TOY,G20LE01TOY
+Lewis Superior Court,Judge Position 1,12101,WRITE-IN,2,12101|2,W0000,G20,LE01,W00,G20LE01W00
+Lewis Superior Court,Judge Position 2,12102,James W. Lawler,1,12102|1,Lawler,G20,LE02,LAW,G20LE02LAW
+Lewis Superior Court,Judge Position 2,12102,WRITE-IN,2,12102|2,W0000,G20,LE02,W00,G20LE02W00
+Lewis Superior Court,Judge Position 3,12103,Joely O'Rourke,1,12103|1,O'Rourke,G20,LE03,O'R,G20LE03O'R
+Lewis Superior Court,Judge Position 3,12103,WRITE-IN,2,12103|2,W0000,G20,LE03,W00,G20LE03W00
+Lincoln Superior Court,SUPERIOR COURT JUDGE,12201,Jeff Barkdull,1,12201|1,Barkdull,G20,LI01,BAR,G20LI01BAR
+Lincoln Superior Court,SUPERIOR COURT JUDGE,12201,Dan B. Johnson,2,12201|2,Johnson,G20,LI01,JOH,G20LI01JOH
+Lincoln Superior Court,SUPERIOR COURT JUDGE,12201,WRITE-IN,3,12201|3,W0000,G20,LI01,W00,G20LI01W00
+Mason Superior Court,Judge Position 1,12301,Amber Finlay,2,12301|2,Finlay,G20,MA01,FIN,G20MA01FIN
+Mason Superior Court,Judge Position 1,12301,WRITE-IN,3,12301|3,W0000,G20,MA01,W00,G20MA01W00
+Mason Superior Court,Judge Position 2,12302,Monty D. Cobb,2,12302|2,Cobb,G20,MA02,COB,G20MA02COB
+Mason Superior Court,Judge Position 2,12302,WRITE-IN,3,12302|3,W0000,G20,MA02,W00,G20MA02W00
+Mason Superior Court,Judge Position 3,12303,Daniel Goodell,2,12303|2,Goodell,G20,MA03,GOO,G20MA03GOO
+Mason Superior Court,Judge Position 3,12303,WRITE-IN,3,12303|3,W0000,G20,MA03,W00,G20MA03W00
+Okanogan Superior Court,Judge Position 1,12401,"Henry ""Hank"" Rawson",1,12401|1,Rawson,G20,OK01,RAW,G20OK01RAW
+Okanogan Superior Court,Judge Position 1,12401,WRITE-IN,2,12401|2,W0000,G20,OK01,W00,G20OK01W00
+Okanogan Superior Court,Judge Position 2,12402,Chris Culp,1,12402|1,Culp,G20,OK02,CUL,G20OK02CUL
+Okanogan Superior Court,Judge Position 2,12402,WRITE-IN,2,12402|2,W0000,G20,OK02,W00,G20OK02W00
+"Pacific, Wahkiakum Superior Court",Judge Position 1,12501,Donald J. Richter,1,12501|1,Richter,G20,PA01,RIC,G20PA01RIC
+"Pacific, Wahkiakum Superior Court",Judge Position 1,12501,WRITE-IN,2,12501|2,W0000,G20,PA01,W00,G20PA01W00
+Pierce Superior Court,Judge Position 4,12704,Brady J. Horenstein,1,12704|1,Horenstein,G20,PI04,HOR,G20PI04HOR
+Pierce Superior Court,Judge Position 4,12704,Bryan Chushcoff,2,12704|2,Chushcoff,G20,PI04,CHU,G20PI04CHU
+Pierce Superior Court,Judge Position 4,12704,WRITE-IN,3,12704|3,W0000,G20,PI04,W00,G20PI04W00
+San Juan Superior Court,Judge Position 1,12801,Kathryn C. Loring,1,12801|1,Loring,G20,SJ01,LOR,G20SJ01LOR
+San Juan Superior Court,Judge Position 1,12801,WRITE-IN,2,12801|2,W0000,G20,SJ01,W00,G20SJ01W00
+Skagit Superior Court,Judge Position 3,12903,Tom Seguine,1,12903|1,Seguine,G20,SK03,SEG,G20SK03SEG
+Skagit Superior Court,Judge Position 3,12903,Elizabeth Yost Neidzwski,2,12903|2,Neidzwski,G20,SK03,NEI,G20SK03NEI
+Skagit Superior Court,Judge Position 3,12903,WRITE-IN,3,12903|3,W0000,G20,SK03,W00,G20SK03W00
+Snohomish Superior Court,Judge Position 8,13108,Robert Grant,1,13108|1,Grant,G20,SN08,GRA,G20SN08GRA
+Snohomish Superior Court,Judge Position 8,13108,Cassandra Lopez Shaw,2,13108|2,Shaw,G20,SN08,SHA,G20SN08SHA
+Snohomish Superior Court,Judge Position 8,13108,WRITE-IN,3,13108|3,W0000,G20,SN08,W00,G20SN08W00
+Thurston Superior Court,Judge Position 8,13408,Sharonda D. Amamilo,1,13408|1,Amamilo,G20,TH08,AMA,G20TH08AMA
+Thurston Superior Court,Judge Position 8,13408,Scott Ahlf,2,13408|2,Ahlf,G20,TH08,AHL,G20TH08AHL
+Thurston Superior Court,Judge Position 8,13408,WRITE-IN,3,13408|3,W0000,G20,TH08,W00,G20TH08W00
+Walla Walla  Superior Court,Judge Position 1,13601,Michael S. Mitchell,2,13601|2,Mitchell,G20,WL01,MIT,G20WL01MIT
+Walla Walla  Superior Court,Judge Position 1,13601,Brandon L. Johnson,3,13601|3,Johnson,G20,WL01,JOH,G20WL01JOH
+Walla Walla  Superior Court,Judge Position 1,13601,WRITE-IN,4,13601|4,W0000,G20,WL01,W00,G20WL01W00
+Walla Walla  Superior Court,Judge Position 2,13602,M. Scott Wolfram,2,13602|2,Wolfram,G20,WL02,WOL,G20WL02WOL
+Walla Walla  Superior Court,Judge Position 2,13602,WRITE-IN,3,13602|3,W0000,G20,WL02,W00,G20WL02W00
+Whatcom Superior Court,Judge Position 2,13702,Evan Jones,1,13702|1,Jones,G20,WM02,JON,G20WM02JON
+Whatcom Superior Court,Judge Position 2,13702,James Erb,2,13702|2,Erb,G20,WM02,ERB,G20WM02ERB
+Whatcom Superior Court,Judge Position 2,13702,WRITE-IN,3,13702|3,W0000,G20,WM02,W00,G20WM02W00
+Whatcom Superior Court,Judge Position 4,13704,David E. Freeman,1,13704|1,Freeman,G20,WM04,FRE,G20WM04FRE
+Whatcom Superior Court,Judge Position 4,13704,Jim Nelson,2,13704|2,Nelson,G20,WM04,NEL,G20WM04NEL
+Whatcom Superior Court,Judge Position 4,13704,WRITE-IN,3,13704|3,W0000,G20,WM04,W00,G20WM04W00
+Whitman Superior Court,Judge Position 1,13801,Gary J Libey,1,13801|1,Libey,G20,WT01,LIB,G20WT01LIB
+Whitman Superior Court,Judge Position 1,13801,WRITE-IN,2,13801|2,W0000,G20,WT01,W00,G20WT01W00
+Yakima Superior Court,"Judge, Department 2",13902,Elisabeth Tutsch,1,13902|1,Tutsch,G20,YA02,TUT,G20YA02TUT
+Yakima Superior Court,"Judge, Department 2",13902,Bronson Faul,2,13902|2,Faul,G20,YA02,FAU,G20YA02FAU
+Yakima Superior Court,"Judge, Department 2",13902,WRITE-IN,3,13902|3,W0000,G20,YA02,W00,G20YA02W00
+Yakima Superior Court,"Judge, Department 3",13903,Douglas L. Federspiel,1,13903|1,Federspiel,G20,YA03,FED,G20YA03FED
+Yakima Superior Court,"Judge, Department 3",13903,Jeff Swan,2,13903|2,Swan,G20,YA03,SWA,G20YA03SWA
+Yakima Superior Court,"Judge, Department 3",13903,WRITE-IN,3,13903|3,W0000,G20,YA03,W00,G20YA03W00
+Yakima Superior Court,"Judge, Department 4",13904,Scott Bruns,1,13904|1,Bruns,G20,YA04,BRU,G20YA04BRU
+Yakima Superior Court,"Judge, Department 4",13904,Blaine George Gibson,2,13904|2,Gibson,G20,YA04,GIB,G20YA04GIB
+Yakima Superior Court,"Judge, Department 4",13904,WRITE-IN,3,13904|3,W0000,G20,YA04,W00,G20YA04W00

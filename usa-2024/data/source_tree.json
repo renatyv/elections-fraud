@@ -1,0 +1,486 @@
+{
+  "sha": "df531089c78e6d0098db1a6bfb3849a066a06995",
+  "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/trees/df531089c78e6d0098db1a6bfb3849a066a06995",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fdbf82bf034c9252b676250fec501ad6f08ab15",
+      "size": 26,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/2fdbf82bf034c9252b676250fec501ad6f08ab15"
+    },
+    {
+      "path": "2024-president-state.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d1d8f08ffa664ea8416add341080fcd73cf594",
+      "size": 75635,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/e0d1d8f08ffa664ea8416add341080fcd73cf594"
+    },
+    {
+      "path": "2024-senate-county.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d512a62fb3ed7b5c443b353f2c88e01c0aa87dc",
+      "size": 1170326,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/4d512a62fb3ed7b5c443b353f2c88e01c0aa87dc"
+    },
+    {
+      "path": "2024-senate-state.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69782c53cf7104cf9bd256801e90a3edfccd5efb",
+      "size": 18828,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/69782c53cf7104cf9bd256801e90a3edfccd5efb"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e43f96c3148b97398d28b55c0fcd6b652e440bff",
+      "size": 14402,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/e43f96c3148b97398d28b55c0fcd6b652e440bff"
+    },
+    {
+      "path": "codebook.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4938cc6c986c8439357838669b5b1087744183ee",
+      "size": 11335,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/4938cc6c986c8439357838669b5b1087744183ee"
+    },
+    {
+      "path": "individual_states",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5c537a4c99f188aa7da48d7f52508040a9c7cff",
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/trees/d5c537a4c99f188aa7da48d7f52508040a9c7cff"
+    },
+    {
+      "path": "individual_states/.DS_Store",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0153c760f3ad3d085742d5d7008eb3a1698e31f9",
+      "size": 6148,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/0153c760f3ad3d085742d5d7008eb3a1698e31f9"
+    },
+    {
+      "path": "individual_states/ak24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6267ef1b26748f717a6c5a7f75db06725d79be9",
+      "size": 881696,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/f6267ef1b26748f717a6c5a7f75db06725d79be9"
+    },
+    {
+      "path": "individual_states/al24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "274a28a8ac0e026ed6407580f72fa761923b28ee",
+      "size": 1779544,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/274a28a8ac0e026ed6407580f72fa761923b28ee"
+    },
+    {
+      "path": "individual_states/ar24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca708cf019b5b7928cb8b93bb11a3316c01412d1",
+      "size": 1358121,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/ca708cf019b5b7928cb8b93bb11a3316c01412d1"
+    },
+    {
+      "path": "individual_states/az24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de2a9949d6c5abb23c0c81ec3b5b304c5543b0b6",
+      "size": 9504594,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/de2a9949d6c5abb23c0c81ec3b5b304c5543b0b6"
+    },
+    {
+      "path": "individual_states/ca24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e968a2b47a8f23336a1a0cfb9abb86b80470650",
+      "size": 14044715,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/9e968a2b47a8f23336a1a0cfb9abb86b80470650"
+    },
+    {
+      "path": "individual_states/co24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e099f3ea81223d876af933b842a5028b29a52af9",
+      "size": 1910511,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/e099f3ea81223d876af933b842a5028b29a52af9"
+    },
+    {
+      "path": "individual_states/ct24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abe93d82c9f1cd4ce5227c5cb599695755c964d6",
+      "size": 1207731,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/abe93d82c9f1cd4ce5227c5cb599695755c964d6"
+    },
+    {
+      "path": "individual_states/dc24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b829aa029df3bcebe5f76609ec4f3e63ffaeec5",
+      "size": 80916,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/0b829aa029df3bcebe5f76609ec4f3e63ffaeec5"
+    },
+    {
+      "path": "individual_states/de24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1c86cb2cd85460feff6c18955770096b7842fba",
+      "size": 335183,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/f1c86cb2cd85460feff6c18955770096b7842fba"
+    },
+    {
+      "path": "individual_states/fl24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a595430ad95b8ba64cd9bca296121de552356b5",
+      "size": 3431532,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/4a595430ad95b8ba64cd9bca296121de552356b5"
+    },
+    {
+      "path": "individual_states/ga24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1e0701d1f91949a64f8cb5777852d8671c0d72e",
+      "size": 691608,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/d1e0701d1f91949a64f8cb5777852d8671c0d72e"
+    },
+    {
+      "path": "individual_states/hi24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4d8ac116179b7bc64cb79411af57402e7c1de23",
+      "size": 132334,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/a4d8ac116179b7bc64cb79411af57402e7c1de23"
+    },
+    {
+      "path": "individual_states/ia24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4f1dddf404c0b7726916f00d01ab1723fd07c6c",
+      "size": 1551251,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/f4f1dddf404c0b7726916f00d01ab1723fd07c6c"
+    },
+    {
+      "path": "individual_states/id24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbca0f499e3442ec8e55dedc5a2ee6fd2c452a3f",
+      "size": 547664,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/dbca0f499e3442ec8e55dedc5a2ee6fd2c452a3f"
+    },
+    {
+      "path": "individual_states/il24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9087406d28a50d453f3eb1e069e6a9ab82c2c5d",
+      "size": 8228596,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/a9087406d28a50d453f3eb1e069e6a9ab82c2c5d"
+    },
+    {
+      "path": "individual_states/in24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0678685c9fa212f7eecc689211fe672a4fe16f60",
+      "size": 2797838,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/0678685c9fa212f7eecc689211fe672a4fe16f60"
+    },
+    {
+      "path": "individual_states/ks24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6e025b3e97167ce293f60760549739e86c5d530",
+      "size": 1020612,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/c6e025b3e97167ce293f60760549739e86c5d530"
+    },
+    {
+      "path": "individual_states/ky24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74c7a22055e774fb98968cb1735331b21dafecd5",
+      "size": 886810,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/74c7a22055e774fb98968cb1735331b21dafecd5"
+    },
+    {
+      "path": "individual_states/la24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b247d7cce3d25810312a545fbb4af247e64fbcd",
+      "size": 355834,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/8b247d7cce3d25810312a545fbb4af247e64fbcd"
+    },
+    {
+      "path": "individual_states/ma24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "771addf632302ac9831894b4d3478f6dda6bdc86",
+      "size": 622652,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/771addf632302ac9831894b4d3478f6dda6bdc86"
+    },
+    {
+      "path": "individual_states/md24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57e064ee22b69ef596c61ff9ad060dc1cf81e0fd",
+      "size": 3887627,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/57e064ee22b69ef596c61ff9ad060dc1cf81e0fd"
+    },
+    {
+      "path": "individual_states/me24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54ecbaac30b777c17440b3a335afe7d7c22b56fc",
+      "size": 466925,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/54ecbaac30b777c17440b3a335afe7d7c22b56fc"
+    },
+    {
+      "path": "individual_states/mi24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "baf53ada7987e37fb8bd252b8aa10b8c1a5a7b8b",
+      "size": 2525722,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/baf53ada7987e37fb8bd252b8aa10b8c1a5a7b8b"
+    },
+    {
+      "path": "individual_states/mn24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61856505fe1cb712787b6cd7b8f86e5309363413",
+      "size": 2136076,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/61856505fe1cb712787b6cd7b8f86e5309363413"
+    },
+    {
+      "path": "individual_states/mo24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cfd0d294ea3ad5e3a29dc3103fca433d6f031cf",
+      "size": 1521087,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/5cfd0d294ea3ad5e3a29dc3103fca433d6f031cf"
+    },
+    {
+      "path": "individual_states/ms24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "785896715cb68b5be30eb336e015f3059ec7cc84",
+      "size": 291684,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/785896715cb68b5be30eb336e015f3059ec7cc84"
+    },
+    {
+      "path": "individual_states/mt24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87808abb33a5981a8188e5ea904a5864957afca5",
+      "size": 340551,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/87808abb33a5981a8188e5ea904a5864957afca5"
+    },
+    {
+      "path": "individual_states/nc24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f9c322ed8fd286b087b7437d9df7c3d07d00435",
+      "size": 12217100,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/7f9c322ed8fd286b087b7437d9df7c3d07d00435"
+    },
+    {
+      "path": "individual_states/nd24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3799fb5ac27705ede424e81e3b50acd2cc352a38",
+      "size": 181174,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/3799fb5ac27705ede424e81e3b50acd2cc352a38"
+    },
+    {
+      "path": "individual_states/ne24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7fab06b8e5bfe8e85b554877c78d9430b6e4a62",
+      "size": 328208,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/f7fab06b8e5bfe8e85b554877c78d9430b6e4a62"
+    },
+    {
+      "path": "individual_states/nh24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c43bdf57b4ece2797abe6e1205a415b6e2e9736",
+      "size": 227047,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/9c43bdf57b4ece2797abe6e1205a415b6e2e9736"
+    },
+    {
+      "path": "individual_states/nj24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8c35c9173833632b89f8eea564471e9c607e516",
+      "size": 4151520,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/a8c35c9173833632b89f8eea564471e9c607e516"
+    },
+    {
+      "path": "individual_states/nm24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9134b3c97491f0bc0d0f3931e3ccdc1f84ef68a",
+      "size": 963204,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/c9134b3c97491f0bc0d0f3931e3ccdc1f84ef68a"
+    },
+    {
+      "path": "individual_states/nv24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8be0b74fff5aed9e63467eef724beca41b2f8a3",
+      "size": 565507,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/e8be0b74fff5aed9e63467eef724beca41b2f8a3"
+    },
+    {
+      "path": "individual_states/ny24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b16c03447db01b8c92c9db0a931433a3da8eded",
+      "size": 6261021,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/7b16c03447db01b8c92c9db0a931433a3da8eded"
+    },
+    {
+      "path": "individual_states/oh24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cb2776cd2f2b4422f9c49c29cfa70f5e5e3589b",
+      "size": 16511891,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/6cb2776cd2f2b4422f9c49c29cfa70f5e5e3589b"
+    },
+    {
+      "path": "individual_states/ok24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24b2059a0fed92d0d4ed96aceff744038d8a4d7e",
+      "size": 2164718,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/24b2059a0fed92d0d4ed96aceff744038d8a4d7e"
+    },
+    {
+      "path": "individual_states/or24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e65e634702278875aae15bf3aeebff282f90157a",
+      "size": 900126,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/e65e634702278875aae15bf3aeebff282f90157a"
+    },
+    {
+      "path": "individual_states/pa24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e734a01b4cf2e1f2ef25b12422e67f209815899",
+      "size": 1657617,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/3e734a01b4cf2e1f2ef25b12422e67f209815899"
+    },
+    {
+      "path": "individual_states/ri24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "627267071457b2cd7eed92bfe3ca9d9ab6700567",
+      "size": 705441,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/627267071457b2cd7eed92bfe3ca9d9ab6700567"
+    },
+    {
+      "path": "individual_states/sc24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c391108a92e88070ec59d30a0d7c1225b8eeac53",
+      "size": 2279665,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/c391108a92e88070ec59d30a0d7c1225b8eeac53"
+    },
+    {
+      "path": "individual_states/sd24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1806f85ec0a3ab75eba30021d9e32870d4d4c738",
+      "size": 189810,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/1806f85ec0a3ab75eba30021d9e32870d4d4c738"
+    },
+    {
+      "path": "individual_states/tn24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "768b359b76c6c121696ad5a326029054c285938d",
+      "size": 324586,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/768b359b76c6c121696ad5a326029054c285938d"
+    },
+    {
+      "path": "individual_states/tx24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9ee351e0883b633081f0d04fa8e8f93e79db5f5",
+      "size": 3860299,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/b9ee351e0883b633081f0d04fa8e8f93e79db5f5"
+    },
+    {
+      "path": "individual_states/ut24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "181f8e0f15893d86b5276c8640a71b8606221504",
+      "size": 2869489,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/181f8e0f15893d86b5276c8640a71b8606221504"
+    },
+    {
+      "path": "individual_states/va24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b7bc3244bc74e33e818cb914413406736de16ca",
+      "size": 581971,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/9b7bc3244bc74e33e818cb914413406736de16ca"
+    },
+    {
+      "path": "individual_states/vt24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "629fbd6567dc26b9e13add323a08dc76c522649c",
+      "size": 433761,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/629fbd6567dc26b9e13add323a08dc76c522649c"
+    },
+    {
+      "path": "individual_states/wa24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72d46fb8056e565b3d19b09dcb35709ad2f7301f",
+      "size": 2682480,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/72d46fb8056e565b3d19b09dcb35709ad2f7301f"
+    },
+    {
+      "path": "individual_states/wi24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07cf8ab6b5bffccb6bb77a4816216426af8aebbc",
+      "size": 951627,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/07cf8ab6b5bffccb6bb77a4816216426af8aebbc"
+    },
+    {
+      "path": "individual_states/wv24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11dd358b1f4d2941ba0f02af9e4fea4d67045f73",
+      "size": 498571,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/11dd358b1f4d2941ba0f02af9e4fea4d67045f73"
+    },
+    {
+      "path": "individual_states/wy24.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9258ee209a65c3231371d2b6142f89753e33b212",
+      "size": 129750,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/9258ee209a65c3231371d2b6142f89753e33b212"
+    },
+    {
+      "path": "progress_map.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1f84e006f06656614835b7ef882fcb4c801080b",
+      "size": 197115,
+      "url": "https://api.github.com/repos/MEDSL/2024-elections-official/git/blobs/c1f84e006f06656614835b7ef882fcb4c801080b"
+    }
+  ],
+  "truncated": false
+}

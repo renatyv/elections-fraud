@@ -1,0 +1,589 @@
+[
+  {
+    "source": "data/raw/precinct_sources/ms_county/Attala.pdf",
+    "sha256": "d221e6e626db2da560b560db7cd8d7d2484538eb16173c42722ddd52aed68712",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Bolivar.pdf",
+    "sha256": "4efa7e7bdd90db3a41962c14bdd079935426918337b99799feea8736ca743a59",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Carroll.pdf",
+    "sha256": "fcee1a7ae6ddc4a56aec9f7d83d7a67b1081f384a3ff7107819cf8dbd25a5435",
+    "pages": [
+      2,
+      3
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Chickasaw.pdf",
+    "sha256": "d46c2020dbaf0957f29109c8086c04b9e4842b4c1cb00eb46958b837b06a3da4",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Clarke.pdf",
+    "sha256": "034c24fbe8b7690e995b0f60fcf4bda4c607ccce5b754ce31c10208c8ab6dc3e",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Covington.pdf",
+    "sha256": "a549e658ea755294cb08429bb0a97850148831e2e92aaa0c06dbbfedf44b7511",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/DeSoto.pdf",
+    "sha256": "2f372535f106ee680d882bf68108a464c08909093722f1fdf210bb46d35f382e",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Grenada.pdf",
+    "sha256": "86c5bb13658b564e2b7bce3288f81551948c8e877b6c15f9e6d8d5faf57dbbd1",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Harrison.pdf",
+    "sha256": "7c15890fba7575031a17abf684680aa09bcb3a828e3a7c9dab6ae9466fc441a1",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Hinds.pdf",
+    "sha256": "4cb855fe37ab0668d8488f297754abccb889776a3a91df93bec9b35cdb2978de",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Holmes.pdf",
+    "sha256": "a5cc5f0c7cbeebe41ff755a25cf1c18019ca4310bd9b4c5d4a65dc764728a997",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Humphreys.pdf",
+    "sha256": "363d3708931500939d0c36ebcfaf94264226753ca5ea7ef2aa4c4309dd64c4c4",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Jefferson.pdf",
+    "sha256": "300f4aa12bdc0b6ac33e1d2bf82ad456bda138c8297a8017823a6c13759b4c2d",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Jones.pdf",
+    "sha256": "ef4ff10efc80c53adc39f73837515b89f84d6c6a6d78e49e0b969ea2b1568094",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Kemper.pdf",
+    "sha256": "fa174d181b4297ff1a5d5ca7d290c125953e6972d8f66d2f2f219b39317da5b0",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Lamar.pdf",
+    "sha256": "c5a864e5499595e8e9ea264d1002a332cdd3855eba9d5e0d150362158dfa412f",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Lauderdale.pdf",
+    "sha256": "1b81c7beca3c435552cc5b99dd0fb1a2b2b5b7bed9a27969dae8d3403a941050",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Lee.pdf",
+    "sha256": "4384e84818c359095b474da801c3b4bac9c41c1f8b3cedeabbfe6ed898f6f5ac",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Lincoln.pdf",
+    "sha256": "c16d7285b6091019529a897ffbbfa8fb7c608258194dbe9210c65491d1b5e987",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Madison.pdf",
+    "sha256": "0be400067073fed9baeeaa0061b60fa6c5df92827cd588376e3ad57350e2b50d",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Marshall.pdf",
+    "sha256": "770710ae6c65933fb3d5545731a42195f1cae5c6ac5f6dcc29514843d605007f",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Montgomery.pdf",
+    "sha256": "dc1a44fd5ea6fa3021a44f3df38f028cd3b272ba92a90fb151536caa599bfc9d",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Neshoba.pdf",
+    "sha256": "cb6017c667165bac527f49201d4000f875b91ba57b06157407ee184d6a6791a2",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Oktibbeha.pdf",
+    "sha256": "1cf785f1b953b611428c3d877e40014d556ae201d0b217f979a211be66c2710b",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Panola.pdf",
+    "sha256": "e5f84c328f4761a91b86bde7c665e7e9251d3347ed058a786e53311340ce0144",
+    "pages": [
+      2,
+      3
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Pontotoc.pdf",
+    "sha256": "fb2fad2fd91826e07030750243f2d48e5fc44bf5fec66b92a614f602f6de2e12",
+    "pages": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Rankin.pdf",
+    "sha256": "514e5047aa6b360ee4e5c2a681625bb5071a7511e07ebdfb06973effe3eab217",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Sunflower.pdf",
+    "sha256": "c000cd95f1374fd4892de4a0a46db422e97b0779514a781f8e28e2716ec6915c",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Tallahatchie.pdf",
+    "sha256": "956ff3547b05704e33160d8a06c53eb758077adf44c5e53d1a474d7d1bbf1a73",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Tippah.pdf",
+    "sha256": "424330beaaaec9ca3f1b4ad28322c6c3c774dd901aa343d9e8953c1763e876dd",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Tishomingo.pdf",
+    "sha256": "2281bc1ba4c0aa1c03e87188063ffe1a07e34a9e6edcba4909bb190b4eb8b10b",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Tunica.pdf",
+    "sha256": "9f4fe3e9237f9673eb9cf142229b15ba77908b330abcc04fbe06c9195cf8c9f4",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Walthall.pdf",
+    "sha256": "8691f39b522d15ba5e530be342e4eee718b7fac9df23fd8b35b49f32b4a82680",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Warren.pdf",
+    "sha256": "27cd35fa8a9f9b6b626a2133d0aa9fccdd20994b83578373f94447b6a4f6314b",
+    "pages": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "source": "data/raw/precinct_sources/ms_county/Yalobusha.pdf",
+    "sha256": "1563fc8e19ddf46571b15368f1caddf80daf721968ed21ff668391dbce253f35",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+]

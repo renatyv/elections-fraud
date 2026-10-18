@@ -1,0 +1,49 @@
+source,measure,extracted,reference,difference,note
+WA2024,G24TREGVOT,5017633.0,5013112.0,4521.0,County reconciliation workbook; registration is active voters.
+WA2024,G24TBALCST,3961569.0,3961569.0,0.0,County reconciliation workbook; registration is active voters.
+WA2024,registration versus published statewide turnout table,5017633.0,5017620.0,13.0,Previously recorded official summary in TURNOUT_EXPANSION.md; not a newly fetched certification.
+WA2024 King overlap,G24TREGVOT,1430421.0,1425313.0,5108.0,Overlap; never append King County twice.
+WA2024 King overlap,G24TBALCST,1142444.0,1142444.0,0.0,Overlap; never append King County twice.
+WA2024 King overlap,G24SENCANT,828204.0,828204.0,0.0,Overlap; never append King County twice.
+WA2024 King overlap,G24SENGARC,271832.0,271832.0,0.0,Overlap; never append King County twice.
+WA2024 King overlap,G24SENW-I,3370.0,3370.0,0.0,Overlap; never append King County twice.
+WA2020,turnout-versus-results registration,4892871.0,4887581.0,5290.0,
+WA2020,turnout-versus-results ballots,4116894.0,4116894.0,0.0,
+CA2024 SR versus SV,TOTREG,22580761.0,22580761.0,0.0,"Observed numeric sums, not complete totals when masked; 0 unknown SR cells, 0 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,TOTVOTE,16140918.0,16140918.0,0.0,"Observed numeric sums, not complete totals when masked; 0 unknown SR cells, 0 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,CNGDEM01,8824945.0,8821122.0,3823.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,CNGDEM02,310728.0,310685.0,43.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,CNGIND01,44450.0,44450.0,0.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,CNGREP01,5736489.0,5730853.0,5636.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,CNGREP02,187759.0,187620.0,139.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,PRSAIP01,197557.0,197429.0,128.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,PRSDEM01,9273189.0,9269338.0,3851.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,PRSGRN01,167765.0,167673.0,92.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,PRSLIB01,66633.0,66590.0,43.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,PRSPAF01,72520.0,72485.0,35.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,PRSREP01,6077748.0,6071622.0,6126.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,USPDEM01,8834218.0,8830546.0,3672.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,USPREP01,6200741.0,6194924.0,5817.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,USSDEM01,9033324.0,9029508.0,3816.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+CA2024 SR versus SV,USSREP01,6308579.0,6302558.0,6021.0,"Observed numeric sums, not complete totals when masked; 1974 unknown SR cells, 4748 unknown SV cells. Aggregate rows excluded."
+ND2024,precinct ballots versus statewide HTML,371975.0,371975.0,0.0,
+MD-official2024 HOUSE,candidate votes versus House Clerk,2935328.0,2935328.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+MD-official2024 SENATE,candidate votes versus House Clerk,3021378.0,3021378.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+ND2024 HOUSE,candidate votes versus House Clerk,331661.0,359787.0,-28126.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+ND2024 SENATE,candidate votes versus House Clerk,334582.0,364327.0,-29745.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+WA2024 HOUSE,candidate votes versus House Clerk,3768180.0,3768180.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+WA2024 SENATE,candidate votes versus House Clerk,3812391.0,3812391.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+WY2024 HOUSE,candidate votes versus House Clerk,261548.0,261548.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+WY2024 SENATE,candidate votes versus House Clerk,264162.0,264162.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+PA2024 HOUSE,candidate votes versus House Clerk,6817299.0,6819484.0,-2185.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+PA2024 SENATE,candidate votes versus House Clerk,6960775.0,6963137.0,-2362.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+PA2024 registration,precinct-versus-county registration,9175133.0,9175132.0,1.0,Vote history is not precinct ballots.
+DE2024,mode sum versus total,4957441.0,4957441.0,0.0,State/district summary; no precinct identifier.
+DE2024 SENATE,candidate votes versus House Clerk,500606.0,500606.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+DE2024 HOUSE,candidate votes versus House Clerk,497436.0,497436.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography."
+CA2024 HOUSE,candidate votes versus House Clerk,15104371.0,15111243.0,-6872.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography. 1974 units have unknown candidate totals; extracted sum is a lower bound if nonzero."
+CA2024 SENATE,candidate votes versus House Clerk,15341903.0,15348846.0,-6943.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography. 1974 units have unknown candidate totals; extracted sum is a lower bound if nonzero."
+ID2024 HOUSE,candidate votes versus House Clerk,873704.0,873704.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography. 1 units have unknown candidate totals; extracted sum is a lower bound if nonzero."
+MD2024 SENATE,candidate votes versus House Clerk,3021378.0,3021378.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography. 269 units have unknown candidate totals; extracted sum is a lower bound if nonzero."
+MN2024 HOUSE,candidate votes versus House Clerk,3146762.0,3146762.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography. 0 units have unknown candidate totals; extracted sum is a lower bound if nonzero."
+MN2024 SENATE,candidate votes versus House Clerk,3189323.0,3189323.0,0.0,"All candidate/write-in totals; excludes undervotes and overvotes. Statewide sum, not proof of precinct geography. 0 units have unknown candidate totals; extracted sum is a lower bound if nonzero."

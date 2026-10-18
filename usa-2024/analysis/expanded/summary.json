@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-18",
+  "eligible_2024_reporting_units": 47236,
+  "current_contest_samples": 110,
+  "historical_contest_samples": 65,
+  "tested_current_unit_contest_observations": 87106,
+  "digit_tests": 694,
+  "digit_theoretical_bh_flags": 10,
+  "digit_mc_bh_flags": 8,
+  "digit_flags_under_both_nulls": 8,
+  "digit_both_nulls_current": 1,
+  "digit_both_nulls_historical": 7,
+  "integer_screens": 525,
+  "integer_approx_bh_flagged_screens": 0,
+  "mad_flags": 2753,
+  "isolation_flags": 1451,
+  "duplicate_unit_contest_rows": 1673,
+  "spoiler_bounds": 10,
+  "selftest": {
+    "t_cut": 92.56198347107438,
+    "clean_tail_party": 9401,
+    "injected_added_ballots_party": 45950,
+    "injected_tail_party": 156258,
+    "signal_growth": 16.621423252845442,
+    "peaks_z_clean": -1.4876971285465748,
+    "peaks_z_rounded": 0.3130234367860263,
+    "n_rounded_units": 194
+  }
+}

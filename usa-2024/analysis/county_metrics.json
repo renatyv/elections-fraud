@@ -1,0 +1,1297 @@
+[
+  {
+    "state": "FL",
+    "office": "US HOUSE",
+    "n_counties": 67,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 84.40421627890352,
+      "t_cut_source": "own_q995",
+      "mode": 68.75,
+      "sigma": 4.446518647759666,
+      "total_votes_party": 5975436,
+      "tail_voters": 8579,
+      "tail_votes_party": 5176,
+      "tail_share_of_party": 0.08662129424530696,
+      "observed_share_pct": 54.326466878047114,
+      "honest_share_pct": 54.32177800811716
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.4374725175902788,
+      "mean_anom": [
+        71.74548796279204,
+        63.60362920809611
+      ],
+      "mean_main": [
+        68.39804450884527,
+        46.391344666888884
+      ],
+      "anom_cluster_voters": 7016715,
+      "anom_cluster_votes_party": 3250059,
+      "total_voters": 15740083,
+      "separated": true
+    }
+  },
+  {
+    "state": "FL",
+    "office": "US SENATE",
+    "n_counties": 67,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 84.40421627890352,
+      "t_cut_source": "own_q995",
+      "mode": 68.75,
+      "sigma": 4.446518647759666,
+      "total_votes_party": 5977707,
+      "tail_voters": 8579,
+      "tail_votes_party": 5118,
+      "tail_share_of_party": 0.0856181141029495,
+      "observed_share_pct": 54.34711397497528,
+      "honest_share_pct": 54.34296894803953
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.399413944182469,
+      "mean_anom": [
+        71.23592213513335,
+        62.64826734543681
+      ],
+      "mean_main": [
+        68.94905067400501,
+        48.283888418498734
+      ],
+      "anom_cluster_voters": 5562366,
+      "anom_cluster_votes_party": 2575889,
+      "total_voters": 15740083,
+      "separated": true
+    }
+  },
+  {
+    "state": "MD",
+    "office": "US HOUSE",
+    "n_counties": 22,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 77.26730594914365,
+      "t_cut_source": "own_q995",
+      "mode": 67.75,
+      "sigma": 5.217010096911595,
+      "total_votes_party": 1773098,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 61.3913424640839,
+      "honest_share_pct": 61.3913424640839
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.6355112120164458,
+      "mean_anom": [
+        69.46118569196554,
+        51.609654911252804
+      ],
+      "mean_main": [
+        61.6360408285409,
+        81.15538777107287
+      ],
+      "anom_cluster_voters": 2487733,
+      "anom_cluster_votes_party": 853062,
+      "total_voters": 4334106,
+      "separated": false
+    }
+  },
+  {
+    "state": "MD",
+    "office": "US SENATE",
+    "n_counties": 22,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 77.26730594914365,
+      "t_cut_source": "own_q995",
+      "mode": 67.75,
+      "sigma": 5.217010096911595,
+      "total_votes_party": 1574593,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 54.518350426512946,
+      "honest_share_pct": 54.518350426512946
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.7500571143281825,
+      "mean_anom": [
+        69.22924193075424,
+        47.10344971645958
+      ],
+      "mean_main": [
+        58.745911713900156,
+        81.33622841065997
+      ],
+      "anom_cluster_voters": 3253089,
+      "anom_cluster_votes_party": 1057643,
+      "total_voters": 4334106,
+      "separated": false
+    }
+  },
+  {
+    "state": "MI",
+    "office": "US HOUSE",
+    "n_counties": 78,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 79.2146351030888,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 5.748861525642933,
+      "total_votes_party": 2370936,
+      "tail_voters": 151115,
+      "tail_votes_party": 54484,
+      "tail_share_of_party": 2.2979953908498585,
+      "observed_share_pct": 47.53542898524457,
+      "honest_share_pct": 47.89413409270834
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.7595421150267545,
+      "mean_anom": [
+        69.45101639398253,
+        43.099200559310454
+      ],
+      "mean_main": [
+        60.526027936376735,
+        63.49582016353284
+      ],
+      "anom_cluster_voters": 5610332,
+      "anom_cluster_votes_party": 1678817,
+      "total_voters": 7408975,
+      "separated": false
+    }
+  },
+  {
+    "state": "MI",
+    "office": "US SENATE",
+    "n_counties": 78,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 79.2146351030888,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 5.748861525642933,
+      "total_votes_party": 2426511,
+      "tail_voters": 151115,
+      "tail_votes_party": 59697,
+      "tail_share_of_party": 2.460199026503486,
+      "observed_share_pct": 48.649664656665045,
+      "honest_share_pct": 48.935400814909784
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.7595473150574223,
+      "mean_anom": [
+        69.45098481278515,
+        44.63314558900254
+      ],
+      "mean_main": [
+        60.52593468388019,
+        62.95528970097374
+      ],
+      "anom_cluster_voters": 5610332,
+      "anom_cluster_votes_party": 1740268,
+      "total_voters": 7408975,
+      "separated": false
+    }
+  },
+  {
+    "state": "MN",
+    "office": "US HOUSE",
+    "n_counties": 85,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 88.11470092124043,
+      "t_cut_source": "own_q995",
+      "mode": 85.25,
+      "sigma": 1.9119928536676314,
+      "total_votes_party": 1513627,
+      "tail_voters": 29672,
+      "tail_votes_party": 10264,
+      "tail_share_of_party": 0.6781062969939093,
+      "observed_share_pct": 48.106369880406824,
+      "honest_share_pct": 48.235033664929276
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.611288936943467,
+      "mean_anom": [
+        85.25168295776095,
+        38.5368136703515
+      ],
+      "mean_main": [
+        84.31242161115057,
+        63.38193677120376
+      ],
+      "anom_cluster_voters": 2207634,
+      "anom_cluster_votes_party": 715076,
+      "total_voters": 3706600,
+      "separated": false
+    }
+  },
+  {
+    "state": "MN",
+    "office": "US SENATE",
+    "n_counties": 85,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 88.11470092124043,
+      "t_cut_source": "own_q995",
+      "mode": 85.25,
+      "sigma": 1.9119928536676314,
+      "total_votes_party": 1718337,
+      "tail_voters": 29672,
+      "tail_votes_party": 12786,
+      "tail_share_of_party": 0.744091525701885,
+      "observed_share_pct": 54.61250050454215,
+      "honest_share_pct": 54.72218612687275
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.5683734136730422,
+      "mean_anom": [
+        85.17542830928198,
+        44.91323860612258
+      ],
+      "mean_main": [
+        84.50622340578947,
+        67.60721465336583
+      ],
+      "anom_cluster_voters": 2002026,
+      "anom_cluster_votes_party": 751986,
+      "total_voters": 3706600,
+      "separated": false
+    }
+  },
+  {
+    "state": "MO",
+    "office": "US HOUSE",
+    "n_counties": 111,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 92.60034904013962,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 8.115953396734946,
+      "total_votes_party": 1442699,
+      "tail_voters": 25061,
+      "tail_votes_party": 14941,
+      "tail_share_of_party": 1.0356283604549528,
+      "observed_share_pct": 59.52266314489634,
+      "honest_share_pct": 59.52166155282818
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.9338000000000141,
+      "mean_anom": [
+        74.74047348521673,
+        62.00311498143751
+      ],
+      "mean_main": [
+        53.21887244231553,
+        14.363379177531487
+      ],
+      "anom_cluster_voters": 3083225,
+      "anom_cluster_votes_party": 1425843,
+      "total_voters": 3303737,
+      "separated": true
+    }
+  },
+  {
+    "state": "MO",
+    "office": "US SENATE",
+    "n_counties": 111,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 92.60034904013962,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 8.115953396734946,
+      "total_votes_party": 1395034,
+      "tail_voters": 25061,
+      "tail_votes_party": 14531,
+      "tail_share_of_party": 1.0416233582837409,
+      "observed_share_pct": 57.55610758562758,
+      "honest_share_pct": 57.551652548025615
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.9338000000001143,
+      "mean_anom": [
+        74.74047348521401,
+        59.8696510053694
+      ],
+      "mean_main": [
+        53.21887244231628,
+        15.396151814169432
+      ],
+      "anom_cluster_voters": 3083225,
+      "anom_cluster_votes_party": 1376966,
+      "total_voters": 3303737,
+      "separated": true
+    }
+  },
+  {
+    "state": "MS",
+    "office": "US HOUSE",
+    "n_counties": 63,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 71.89219698038663,
+      "t_cut_source": "own_q995",
+      "mode": 64.25,
+      "sigma": 6.386454467583879,
+      "total_votes_party": 753454,
+      "tail_voters": 4512,
+      "tail_votes_party": 3206,
+      "tail_share_of_party": 0.42550706479758554,
+      "observed_share_pct": 68.5323272215926,
+      "honest_share_pct": 68.52193164319729
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.8883365048367904,
+      "mean_anom": [
+        58.91852764464179,
+        72.29201172007586
+      ],
+      "mean_main": [
+        50.207455791440644,
+        29.652676999584667
+      ],
+      "anom_cluster_voters": 1680724,
+      "anom_cluster_votes_party": 721073,
+      "total_voters": 1898330,
+      "separated": true
+    }
+  },
+  {
+    "state": "MS",
+    "office": "US SENATE",
+    "n_counties": 73,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 71.89219698038663,
+      "t_cut_source": "own_q995",
+      "mode": 64.25,
+      "sigma": 6.725716310990231,
+      "total_votes_party": 732833,
+      "tail_voters": 4512,
+      "tail_votes_party": 3170,
+      "tail_share_of_party": 0.4325678565239284,
+      "observed_share_pct": 62.93539879476581,
+      "honest_share_pct": 62.906917697853885
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.8479288405518953,
+      "mean_anom": [
+        59.14785849164431,
+        67.34241440993502
+      ],
+      "mean_main": [
+        48.8045028538672,
+        31.225493548897088
+      ],
+      "anom_cluster_voters": 1698651,
+      "anom_cluster_votes_party": 682816,
+      "total_voters": 2023080,
+      "separated": true
+    }
+  },
+  {
+    "state": "MT",
+    "office": "US HOUSE",
+    "n_counties": 56,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 87.6701361088871,
+      "t_cut_source": "own_q995",
+      "mode": 73.75,
+      "sigma": 4.424412471345615,
+      "total_votes_party": 350273,
+      "tail_voters": 5185,
+      "tail_votes_party": 4385,
+      "tail_share_of_party": 1.2518806759299175,
+      "observed_share_pct": 57.19461875207169,
+      "honest_share_pct": 56.96086213313396
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.7126503795747574,
+      "mean_anom": [
+        77.18231743592278,
+        63.68420452026356
+      ],
+      "mean_main": [
+        74.85119519588704,
+        40.15602492441448
+      ],
+      "anom_cluster_voters": 564409,
+      "anom_cluster_votes_party": 278823,
+      "total_voters": 800573,
+      "separated": true
+    }
+  },
+  {
+    "state": "MT",
+    "office": "US SENATE",
+    "n_counties": 56,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 87.6701361088871,
+      "t_cut_source": "own_q995",
+      "mode": 73.75,
+      "sigma": 4.424412471345615,
+      "total_votes_party": 319618,
+      "tail_voters": 5185,
+      "tail_votes_party": 4097,
+      "tail_share_of_party": 1.281842699722794,
+      "observed_share_pct": 52.189091526608244,
+      "honest_share_pct": 51.96002226474628
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.4834590226800357,
+      "mean_anom": [
+        77.07410739134946,
+        59.40248510160683
+      ],
+      "mean_main": [
+        75.98680343885525,
+        44.9330952833284
+      ],
+      "anom_cluster_voters": 404330,
+      "anom_cluster_votes_party": 191318,
+      "total_voters": 800573,
+      "separated": false
+    }
+  },
+  {
+    "state": "NE",
+    "office": "US HOUSE",
+    "n_counties": 93,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 86.43533123028391,
+      "t_cut_source": "own_q995",
+      "mode": 75.25,
+      "sigma": 3.879375980378649,
+      "total_votes_party": 591238,
+      "tail_voters": 5025,
+      "tail_votes_party": 4215,
+      "tail_share_of_party": 0.712910875146726,
+      "observed_share_pct": 61.25898181102321,
+      "honest_share_pct": 61.1405865933425
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.5593569764125657,
+      "mean_anom": [
+        76.80255479273626,
+        49.561607342305166
+      ],
+      "mean_main": [
+        75.84561330315344,
+        75.98119833596165
+      ],
+      "anom_cluster_voters": 705011,
+      "anom_cluster_votes_party": 268778,
+      "total_voters": 1263487,
+      "separated": false
+    }
+  },
+  {
+    "state": "NE",
+    "office": "US SENATE",
+    "n_counties": 93,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 86.43533123028391,
+      "t_cut_source": "own_q995",
+      "mode": 75.25,
+      "sigma": 3.879375980378649,
+      "total_votes_party": 499124,
+      "tail_voters": 5025,
+      "tail_votes_party": 3693,
+      "tail_share_of_party": 0.7398962983146473,
+      "observed_share_pct": 51.71492366431987,
+      "honest_share_pct": 51.60094571511895
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.5577560385558102,
+      "mean_anom": [
+        76.79745730848758,
+        41.648377607468824
+      ],
+      "mean_main": [
+        75.85550638674951,
+        64.26096767133268
+      ],
+      "anom_cluster_voters": 705011,
+      "anom_cluster_votes_party": 225954,
+      "total_voters": 1263487,
+      "separated": false
+    }
+  },
+  {
+    "state": "NM",
+    "office": "US SENATE",
+    "n_counties": 21,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 74.94677939298096,
+      "t_cut_source": "own_q995",
+      "mode": 68.75,
+      "sigma": 4.839855884989063,
+      "total_votes_party": 395541,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 56.9027947813102,
+      "honest_share_pct": 56.9027947813102
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.8203743065282636,
+      "mean_anom": [
+        66.43934293915584,
+        60.826808546017645
+      ],
+      "mean_main": [
+        66.16546991617862,
+        37.36848708385568
+      ],
+      "anom_cluster_voters": 854933,
+      "anom_cluster_votes_party": 347439,
+      "total_voters": 1047026,
+      "separated": false
+    }
+  },
+  {
+    "state": "NY",
+    "office": "US HOUSE",
+    "n_counties": 61,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 73.91133290539001,
+      "t_cut_source": "own_q995",
+      "mode": 67.25,
+      "sigma": 7.708047253913209,
+      "total_votes_party": 4465680,
+      "tail_voters": 19937,
+      "tail_votes_party": 7075,
+      "tail_share_of_party": 0.15843051898031207,
+      "observed_share_pct": 53.34468631650167,
+      "honest_share_pct": 53.38731769441668
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.6287440292500536,
+      "mean_anom": [
+        67.40554490178752,
+        46.2627016706521
+      ],
+      "mean_main": [
+        52.229025444450315,
+        68.676149772296
+      ],
+      "anom_cluster_voters": 8541676,
+      "anom_cluster_votes_party": 2662805,
+      "total_voters": 13553122,
+      "separated": false
+    }
+  },
+  {
+    "state": "NY",
+    "office": "US SENATE",
+    "n_counties": 61,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 73.91133290539001,
+      "t_cut_source": "own_q995",
+      "mode": 67.25,
+      "sigma": 7.708047253913209,
+      "total_votes_party": 4705149,
+      "tail_voters": 19937,
+      "tail_votes_party": 8086,
+      "tail_share_of_party": 0.17185428134156858,
+      "observed_share_pct": 56.205258208694204,
+      "honest_share_pct": 56.2426127929453
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.628742665921755,
+      "mean_anom": [
+        67.40556309104481,
+        49.637590728492384
+      ],
+      "mean_main": [
+        52.229050371138364,
+        70.28915477338373
+      ],
+      "anom_cluster_voters": 8541676,
+      "anom_cluster_votes_party": 2859409,
+      "total_voters": 13553122,
+      "separated": false
+    }
+  },
+  {
+    "state": "OH",
+    "office": "US HOUSE",
+    "n_counties": 88,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 98.56275806051308,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 5.25641278841882,
+      "total_votes_party": 3104290,
+      "tail_voters": 43684,
+      "tail_votes_party": 28699,
+      "tail_share_of_party": 0.924494812018207,
+      "observed_share_pct": 53.05005019973084,
+      "honest_share_pct": 52.95492843332947
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.7058881205707805,
+      "mean_anom": [
+        74.68414323852116,
+        60.43942752508294
+      ],
+      "mean_main": [
+        67.1172590225594,
+        33.12836255776617
+      ],
+      "anom_cluster_voters": 5672850,
+      "anom_cluster_votes_party": 2566269,
+      "total_voters": 8074098,
+      "separated": true
+    }
+  },
+  {
+    "state": "OH",
+    "office": "US SENATE",
+    "n_counties": 88,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 98.56275806051308,
+      "t_cut_source": "own_q995",
+      "mode": 73.25,
+      "sigma": 5.25641278841882,
+      "total_votes_party": 2857383,
+      "tail_voters": 43684,
+      "tail_votes_party": 27395,
+      "tail_share_of_party": 0.9587444175317065,
+      "observed_share_pct": 48.83058979343345,
+      "honest_share_pct": 48.72618368540589
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.6713311297598646,
+      "mean_anom": [
+        74.95739874367072,
+        55.64986041917298
+      ],
+      "mean_main": [
+        67.35471327636631,
+        33.113388472039794
+      ],
+      "anom_cluster_voters": 5299270,
+      "anom_cluster_votes_party": 2229424,
+      "total_voters": 8074098,
+      "separated": true
+    }
+  },
+  {
+    "state": "PA",
+    "office": "US HOUSE",
+    "n_counties": 67,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 83.88690639582761,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 5.244629293936141,
+      "total_votes_party": 3480992,
+      "tail_voters": 12170,
+      "tail_votes_party": 9644,
+      "tail_share_of_party": 0.2770474623325765,
+      "observed_share_pct": 49.20216964964045,
+      "honest_share_pct": 49.15040342191837
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.8086206375300901,
+      "mean_anom": [
+        78.43741583694249,
+        54.78407844468625
+      ],
+      "mean_main": [
+        71.69299723838758,
+        21.17244602553491
+      ],
+      "anom_cluster_voters": 7425025,
+      "anom_cluster_votes_party": 3200137,
+      "total_voters": 9175133,
+      "separated": true
+    }
+  },
+  {
+    "state": "PA",
+    "office": "US SENATE",
+    "n_counties": 67,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 83.88690639582761,
+      "t_cut_source": "own_q995",
+      "mode": 82.25,
+      "sigma": 5.244629293936141,
+      "total_votes_party": 3399054,
+      "tail_voters": 12170,
+      "tail_votes_party": 9251,
+      "tail_share_of_party": 0.2721639609138307,
+      "observed_share_pct": 48.044014911924236,
+      "honest_share_pct": 47.995817466537254
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.8087338843397954,
+      "mean_anom": [
+        78.43802997787378,
+        52.62897313497584
+      ],
+      "mean_main": [
+        71.68640715069833,
+        25.005093161700227
+      ],
+      "anom_cluster_voters": 7425025,
+      "anom_cluster_votes_party": 3073775,
+      "total_voters": 9175133,
+      "separated": true
+    }
+  },
+  {
+    "state": "TN",
+    "office": "US HOUSE",
+    "n_counties": 95,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 74.98545926356762,
+      "t_cut_source": "own_q995",
+      "mode": 66.75,
+      "sigma": 6.159218323397867,
+      "total_votes_party": 1884691,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 60.9900584467929,
+      "honest_share_pct": 60.9900584467929
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.7614000732069766,
+      "mean_anom": [
+        66.80667025973374,
+        67.50701392982532
+      ],
+      "mean_main": [
+        54.93144260293066,
+        34.25131131228145
+      ],
+      "anom_cluster_voters": 3690718,
+      "anom_cluster_votes_party": 1671151,
+      "total_voters": 4825601,
+      "separated": true
+    }
+  },
+  {
+    "state": "TN",
+    "office": "US SENATE",
+    "n_counties": 95,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 74.98545926356762,
+      "t_cut_source": "own_q995",
+      "mode": 66.75,
+      "sigma": 6.159218323397867,
+      "total_votes_party": 1918743,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 62.09200750381614,
+      "honest_share_pct": 62.09200750381614
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.7614001518341591,
+      "mean_anom": [
+        66.8066690285208,
+        68.59993394185865
+      ],
+      "mean_main": [
+        54.93144261856348,
+        35.39878945345305
+      ],
+      "anom_cluster_voters": 3690718,
+      "anom_cluster_votes_party": 1698051,
+      "total_voters": 4825601,
+      "separated": true
+    }
+  },
+  {
+    "state": "TX",
+    "office": "US HOUSE",
+    "n_counties": 251,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 74.38634516391222,
+      "t_cut_source": "own_q995",
+      "mode": 58.75,
+      "sigma": 5.938504898008341,
+      "total_votes_party": 6162120,
+      "tail_voters": 66561,
+      "tail_votes_party": 52050,
+      "tail_share_of_party": 0.8446768319993768,
+      "observed_share_pct": 53.67341278910958,
+      "honest_share_pct": 53.53039418331909
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.5912157541189484,
+      "mean_anom": [
+        64.81068485237677,
+        65.24859852265143
+      ],
+      "mean_main": [
+        57.275032188635514,
+        35.8874204135659
+      ],
+      "anom_cluster_voters": 10756871,
+      "anom_cluster_votes_party": 4555259,
+      "total_voters": 18610216,
+      "separated": true
+    }
+  },
+  {
+    "state": "TX",
+    "office": "US SENATE",
+    "n_counties": 245,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 74.38634516391222,
+      "t_cut_source": "own_q995",
+      "mode": 58.75,
+      "sigma": 5.898472311830321,
+      "total_votes_party": 5871379,
+      "tail_voters": 66561,
+      "tail_votes_party": 50940,
+      "tail_share_of_party": 0.867598565856505,
+      "observed_share_pct": 52.08125286401789,
+      "honest_share_pct": 51.93603747393244
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.29275401009044805,
+      "mean_anom": [
+        65.22915190946749,
+        72.27689572734147
+      ],
+      "mean_main": [
+        60.33400159071189,
+        43.129921316989176
+      ],
+      "anom_cluster_voters": 5000362,
+      "anom_cluster_votes_party": 2377763,
+      "total_voters": 18270793,
+      "separated": true
+    }
+  },
+  {
+    "state": "UT",
+    "office": "US HOUSE",
+    "n_counties": 28,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 84.43890928159412,
+      "t_cut_source": "own_q995",
+      "mode": 74.25,
+      "sigma": 2.1488602572770996,
+      "total_votes_party": 866908,
+      "tail_voters": 4116,
+      "tail_votes_party": 3279,
+      "tail_share_of_party": 0.37824082832319,
+      "observed_share_pct": 59.09812283897427,
+      "honest_share_pct": 59.04025212267053
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.624376806249068,
+      "mean_anom": [
+        75.57502656872818,
+        67.95906274353604
+      ],
+      "mean_main": [
+        73.76084257280465,
+        44.240036012754565
+      ],
+      "anom_cluster_voters": 1215251,
+      "anom_cluster_votes_party": 624370,
+      "total_voters": 1958407,
+      "separated": false
+    }
+  },
+  {
+    "state": "UT",
+    "office": "US SENATE",
+    "n_counties": 28,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 84.43890928159412,
+      "t_cut_source": "own_q995",
+      "mode": 74.25,
+      "sigma": 2.1488602572770996,
+      "total_votes_party": 872894,
+      "tail_voters": 4116,
+      "tail_votes_party": 3229,
+      "tail_share_of_party": 0.3699189134075844,
+      "observed_share_pct": 59.50619539490189,
+      "honest_share_pct": 59.45289107042754
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.6238554424338343,
+      "mean_anom": [
+        75.57333009368392,
+        67.79700612403698
+      ],
+      "mean_main": [
+        73.76617085692124,
+        45.59339226015847
+      ],
+      "anom_cluster_voters": 1215251,
+      "anom_cluster_votes_party": 622990,
+      "total_voters": 1958407,
+      "separated": false
+    }
+  },
+  {
+    "state": "VA",
+    "office": "US HOUSE",
+    "n_counties": 92,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 83.19617064158548,
+      "t_cut_source": "own_q995",
+      "mode": 72.25,
+      "sigma": 3.519490308005656,
+      "total_votes_party": 1573468,
+      "tail_voters": 19814,
+      "tail_votes_party": 12068,
+      "tail_share_of_party": 0.7669682510225819,
+      "observed_share_pct": 49.178313219874504,
+      "honest_share_pct": 49.1052306159508
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.4037793393956837,
+      "mean_anom": [
+        73.97737215177499,
+        65.65603999366378
+      ],
+      "mean_main": [
+        72.45661596985249,
+        37.669030420735886
+      ],
+      "anom_cluster_voters": 1864860,
+      "anom_cluster_votes_party": 903073,
+      "total_voters": 4376320,
+      "separated": false
+    }
+  },
+  {
+    "state": "VA",
+    "office": "US SENATE",
+    "n_counties": 89,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 83.19617064158548,
+      "t_cut_source": "own_q995",
+      "mode": 72.25,
+      "sigma": 3.510830406346172,
+      "total_votes_party": 1624744,
+      "tail_voters": 19814,
+      "tail_votes_party": 7956,
+      "tail_share_of_party": 0.4896771429837562,
+      "observed_share_pct": 51.23200054487905,
+      "honest_share_pct": 51.30165265654926
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.39111028476520365,
+      "mean_anom": [
+        73.98531528018795,
+        35.577272374794866
+      ],
+      "mean_main": [
+        72.50988928274474,
+        61.60782250525041
+      ],
+      "anom_cluster_voters": 1705762,
+      "anom_cluster_votes_party": 446654,
+      "total_voters": 4337237,
+      "separated": false
+    }
+  },
+  {
+    "state": "WA",
+    "office": "US HOUSE",
+    "n_counties": 39,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 80.26667536023994,
+      "t_cut_source": "own_q995",
+      "mode": 71.75,
+      "sigma": 2.954532822214025,
+      "total_votes_party": 2154848,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 54.5557381241123,
+      "honest_share_pct": 54.5557381241123
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.9136017195680936,
+      "mean_anom": [
+        70.99984697823301,
+        59.10905715780895
+      ],
+      "mean_main": [
+        65.68149151331798,
+        0.23047384714166838
+      ],
+      "anom_cluster_voters": 5118363,
+      "anom_cluster_votes_party": 2154202,
+      "total_voters": 5597156,
+      "separated": true
+    }
+  },
+  {
+    "state": "WA",
+    "office": "US SENATE",
+    "n_counties": 39,
+    "leader": "votes:DEMOCRAT",
+    "turnout_tail": {
+      "party": "DEMOCRAT",
+      "t_cut": 80.26667536023994,
+      "t_cut_source": "own_q995",
+      "mode": 71.75,
+      "sigma": 2.954532822214025,
+      "total_votes_party": 2251055,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 56.99147553932974,
+      "honest_share_pct": 56.99147553932974
+    },
+    "mixture": {
+      "party": "DEMOCRAT",
+      "weight_anom": 0.283199508415495,
+      "mean_anom": [
+        71.59144571778941,
+        72.45359475523108
+      ],
+      "mean_main": [
+        70.12507464413382,
+        50.539779946279246
+      ],
+      "anom_cluster_voters": 1596674,
+      "anom_cluster_votes_party": 828204,
+      "total_voters": 5597156,
+      "separated": false
+    }
+  },
+  {
+    "state": "WV",
+    "office": "US HOUSE",
+    "n_counties": 54,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 73.41093382160606,
+      "t_cut_source": "own_q995",
+      "mode": 64.75,
+      "sigma": 4.333500424248109,
+      "total_votes_party": 494799,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 64.5419184171806,
+      "honest_share_pct": 64.5419184171806
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.846650920059896,
+      "mean_anom": [
+        63.69671159254965,
+        67.23165442411887
+      ],
+      "mean_main": [
+        63.01250304007087,
+        49.142397856743145
+      ],
+      "anom_cluster_voters": 1019602,
+      "anom_cluster_votes_party": 437139,
+      "total_voters": 1205925,
+      "separated": false
+    }
+  },
+  {
+    "state": "WV",
+    "office": "US SENATE",
+    "n_counties": 54,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 73.41093382160606,
+      "t_cut_source": "own_q995",
+      "mode": 64.75,
+      "sigma": 4.333500424248109,
+      "total_votes_party": 511786,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 66.75771426186228,
+      "honest_share_pct": 66.75771426186228
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.5963212461020096,
+      "mean_anom": [
+        64.28529369389324,
+        72.59245907848661
+      ],
+      "mean_main": [
+        62.567331461180665,
+        58.198917205361276
+      ],
+      "anom_cluster_voters": 703942,
+      "anom_cluster_votes_party": 328737,
+      "total_voters": 1205925,
+      "separated": false
+    }
+  },
+  {
+    "state": "WY",
+    "office": "US HOUSE",
+    "n_counties": 23,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 93.27307009760426,
+      "t_cut_source": "own_q995",
+      "mode": 91.75,
+      "sigma": 1.674323786865594,
+      "total_votes_party": 184680,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 68.11668504700819,
+      "honest_share_pct": 68.11668504700819
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.613613545310517,
+      "mean_anom": [
+        91.65720588067512,
+        74.82005155071552
+      ],
+      "mean_main": [
+        90.74220851440275,
+        57.31617682411338
+      ],
+      "anom_cluster_voters": 176641,
+      "anom_cluster_votes_party": 121487,
+      "total_voters": 296960,
+      "separated": false
+    }
+  },
+  {
+    "state": "WY",
+    "office": "US SENATE",
+    "n_counties": 23,
+    "leader": "votes:REPUBLICAN",
+    "turnout_tail": {
+      "party": "REPUBLICAN",
+      "t_cut": 93.27307009760426,
+      "t_cut_source": "own_q995",
+      "mode": 91.75,
+      "sigma": 1.674323786865594,
+      "total_votes_party": 198418,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 73.18375792536966,
+      "honest_share_pct": 73.18375792536966
+    },
+    "mixture": {
+      "party": "REPUBLICAN",
+      "weight_anom": 0.6095135600554713,
+      "mean_anom": [
+        91.65366199091788,
+        79.33658814132745
+      ],
+      "mean_main": [
+        90.7573473872535,
+        63.41589535243994
+      ],
+      "anom_cluster_voters": 176641,
+      "anom_cluster_votes_party": 128710,
+      "total_voters": 296960,
+      "separated": false
+    }
+  }
+]

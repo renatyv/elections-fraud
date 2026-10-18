@@ -1,0 +1,658 @@
+county,precinct,office,machine,hand,raw_difference,explained_difference,adjusted_difference,status
+Aitkin County,0150 - PALISADE,U.S. President & Vice President,81,81,0,0,0,ACCEPTABLE
+Aitkin County,0150 - PALISADE,U.S. Senator,81,81,0,0,0,ACCEPTABLE
+Aitkin County,0150 - PALISADE,U.S. Representative District 8,81,81,0,0,0,ACCEPTABLE
+Aitkin County,0215 - WEALTHWOOD TWP,U.S. President & Vice President,209,209,0,0,0,ACCEPTABLE
+Aitkin County,0215 - WEALTHWOOD TWP,U.S. Senator,209,209,0,0,0,ACCEPTABLE
+Aitkin County,0215 - WEALTHWOOD TWP,U.S. Representative District 8,209,209,2,2,0,ACCEPTABLE
+Anoka County,0030 - ANDOVER P-6,U.S. President & Vice President,2369,2369,2,2,0,ACCEPTABLE
+Anoka County,0030 - ANDOVER P-6,U.S. Senator,2369,2369,4,4,0,ACCEPTABLE
+Anoka County,0030 - ANDOVER P-6,U.S. Representative District 6,2369,2369,6,6,0,ACCEPTABLE
+Anoka County,0420 - BLAINE W-2 P-4,U.S. President & Vice President,1434,1434,2,2,0,ACCEPTABLE
+Anoka County,0420 - BLAINE W-2 P-4,U.S. Senator,1434,1434,0,0,0,ACCEPTABLE
+Anoka County,0420 - BLAINE W-2 P-4,U.S. Representative District 6,1434,1434,2,2,0,ACCEPTABLE
+Anoka County,0445 - BLAINE W-2 P-9,U.S. President & Vice President,1208,1208,0,0,0,ACCEPTABLE
+Anoka County,0445 - BLAINE W-2 P-9,U.S. Senator,1208,1208,0,0,0,ACCEPTABLE
+Anoka County,0445 - BLAINE W-2 P-9,U.S. Representative District 6,1208,1208,0,0,0,ACCEPTABLE
+Anoka County,0540 - BLAINE W-3 P-8,U.S. President & Vice President,2157,2157,4,4,0,ACCEPTABLE
+Anoka County,0540 - BLAINE W-3 P-8,U.S. Senator,2157,2157,8,8,0,ACCEPTABLE
+Anoka County,0540 - BLAINE W-3 P-8,U.S. Representative District 6,2157,2157,4,4,0,ACCEPTABLE
+Anoka County,0840 - COLUMBIA HEIGHTS P-8,U.S. President & Vice President,1097,1097,0,0,0,ACCEPTABLE
+Anoka County,0840 - COLUMBIA HEIGHTS P-8,U.S. Senator,1097,1097,2,2,0,ACCEPTABLE
+Anoka County,0840 - COLUMBIA HEIGHTS P-8,U.S. Representative District 5,1097,1097,4,4,0,ACCEPTABLE
+Anoka County,1515 - EAST BETHEL P-3,U.S. President & Vice President,2328,2328,2,2,0,ACCEPTABLE
+Anoka County,1515 - EAST BETHEL P-3,U.S. Senator,2328,2328,4,4,0,ACCEPTABLE
+Anoka County,1515 - EAST BETHEL P-3,U.S. Representative District 6,2328,2328,4,4,0,ACCEPTABLE
+Anoka County,1715 - FRIDLEY W-2 P-3,U.S. President & Vice President,1426,1426,0,0,0,ACCEPTABLE
+Anoka County,1715 - FRIDLEY W-2 P-3,U.S. Senator,1426,1426,10,10,0,ACCEPTABLE
+Anoka County,1715 - FRIDLEY W-2 P-3,U.S. Representative District 5,1426,1426,4,4,0,ACCEPTABLE
+Anoka County,2520 - OAK GROVE P-4,U.S. President & Vice President,922,922,0,0,0,ACCEPTABLE
+Anoka County,2520 - OAK GROVE P-4,U.S. Senator,922,922,2,2,0,ACCEPTABLE
+Anoka County,2520 - OAK GROVE P-4,U.S. Representative District 6,922,922,4,4,0,ACCEPTABLE
+Becker County,0065 - DETROIT LAKES W2 P1,U.S. President & Vice President,1833,1833,0,0,0,ACCEPTABLE
+Becker County,0065 - DETROIT LAKES W2 P1,U.S. Senator,1833,1833,0,0,0,ACCEPTABLE
+Becker County,0065 - DETROIT LAKES W2 P1,U.S. Representative District 7,1833,1833,0,0,0,ACCEPTABLE
+Becker County,0220 - TWO INLETS TWP,U.S. President & Vice President,157,157,2,2,0,ACCEPTABLE
+Becker County,0220 - TWO INLETS TWP,U.S. Senator,157,157,0,0,0,ACCEPTABLE
+Becker County,0220 - TWO INLETS TWP,U.S. Representative District 8,157,157,0,0,0,ACCEPTABLE
+Beltrami County,0040 - BEMIDJI W-5,U.S. President & Vice President,1725,1725,0,0,0,ACCEPTABLE
+Beltrami County,0040 - BEMIDJI W-5,U.S. Senator,1725,1725,0,0,0,ACCEPTABLE
+Beltrami County,0040 - BEMIDJI W-5,U.S. Representative District 8,1725,1725,0,0,0,ACCEPTABLE
+Beltrami County,0070 - DURAND TWP,U.S. President & Vice President,140,140,2,2,0,ACCEPTABLE
+Beltrami County,0070 - DURAND TWP,U.S. Senator,140,140,2,2,0,ACCEPTABLE
+Beltrami County,0070 - DURAND TWP,U.S. Representative District 8,140,140,0,0,0,ACCEPTABLE
+Beltrami County,0290 - WASKISH TWP,U.S. President & Vice President,84,84,0,0,0,ACCEPTABLE
+Beltrami County,0290 - WASKISH TWP,U.S. Senator,84,84,0,0,0,ACCEPTABLE
+Beltrami County,0290 - WASKISH TWP,U.S. Representative District 8,84,84,0,0,0,ACCEPTABLE
+Benton County,0005 - ALBERTA TWP,U.S. President & Vice President,490,490,0,0,0,ACCEPTABLE
+Benton County,0005 - ALBERTA TWP,U.S. Senator,490,490,0,0,0,ACCEPTABLE
+Benton County,0005 - ALBERTA TWP,U.S. Representative District 6,490,490,0,0,0,ACCEPTABLE
+Benton County,0060 - RICE,U.S. President & Vice President,1192,1192,0,0,0,ACCEPTABLE
+Benton County,0060 - RICE,U.S. Senator,1192,1192,0,0,0,ACCEPTABLE
+Benton County,0060 - RICE,U.S. Representative District 6,1192,1192,0,0,0,ACCEPTABLE
+Big Stone County,0035 - CLINTON,U.S. President & Vice President,201,201,2,2,0,ACCEPTABLE
+Big Stone County,0035 - CLINTON,U.S. Senator,201,201,0,0,0,ACCEPTABLE
+Big Stone County,0035 - CLINTON,U.S. Representative District 7,201,201,0,0,0,ACCEPTABLE
+Big Stone County,0045 - FOSTER TWP,U.S. President & Vice President,93,93,0,0,0,ACCEPTABLE
+Big Stone County,0045 - FOSTER TWP,U.S. Senator,93,93,0,0,0,ACCEPTABLE
+Big Stone County,0045 - FOSTER TWP,U.S. Representative District 7,93,93,0,0,0,ACCEPTABLE
+Blue Earth County,0015 - BUTTERNUT VALLEY TWP,U.S. President & Vice President,186,186,0,0,0,ACCEPTABLE
+Blue Earth County,0015 - BUTTERNUT VALLEY TWP,U.S. Senator,186,186,0,0,0,ACCEPTABLE
+Blue Earth County,0015 - BUTTERNUT VALLEY TWP,U.S. Representative District 1,186,186,0,0,0,ACCEPTABLE
+Blue Earth County,0230 - SAINT CLAIR,U.S. President & Vice President,462,462,0,0,0,ACCEPTABLE
+Blue Earth County,0230 - SAINT CLAIR,U.S. Senator,462,462,0,0,0,ACCEPTABLE
+Blue Earth County,0230 - SAINT CLAIR,U.S. Representative District 1,462,462,0,0,0,ACCEPTABLE
+Brown County,0010 - BASHAW TWP,U.S. President & Vice President,144,144,0,0,0,ACCEPTABLE
+Brown County,0010 - BASHAW TWP,U.S. Senator,144,144,0,0,0,ACCEPTABLE
+Brown County,0010 - BASHAW TWP,U.S. Representative District 7,144,144,0,0,0,ACCEPTABLE
+Brown County,0025 - COMFREY,U.S. President & Vice President,207,207,0,0,0,ACCEPTABLE
+Brown County,0025 - COMFREY,U.S. Senator,207,207,0,0,0,ACCEPTABLE
+Brown County,0025 - COMFREY,U.S. Representative District 7,207,207,0,0,0,ACCEPTABLE
+Carlton County,0075 - CROMWELL,U.S. President & Vice President,123,123,0,0,0,ACCEPTABLE
+Carlton County,0075 - CROMWELL,U.S. Senator,123,123,0,0,0,ACCEPTABLE
+Carlton County,0075 - CROMWELL,U.S. Representative District 8,123,123,0,0,0,ACCEPTABLE
+Carlton County,0150 - SKELTON TWP,U.S. President & Vice President,285,285,0,0,0,ACCEPTABLE
+Carlton County,0150 - SKELTON TWP,U.S. Senator,285,285,0,0,0,ACCEPTABLE
+Carlton County,0150 - SKELTON TWP,U.S. Representative District 8,285,285,0,0,0,ACCEPTABLE
+Carver County,0045 - CHASKA W-2 P-1,U.S. President & Vice President,2046,2046,0,0,0,ACCEPTABLE
+Carver County,0045 - CHASKA W-2 P-1,U.S. Senator,2046,2046,0,0,0,ACCEPTABLE
+Carver County,0045 - CHASKA W-2 P-1,U.S. Representative District 6,2046,2046,0,0,0,ACCEPTABLE
+Carver County,0105 - NORWOOD YOUNG AMERICA,U.S. President & Vice President,2257,2257,0,0,0,ACCEPTABLE
+Carver County,0105 - NORWOOD YOUNG AMERICA,U.S. Senator,2257,2257,0,0,0,ACCEPTABLE
+Carver County,0105 - NORWOOD YOUNG AMERICA,U.S. Representative District 6,2257,2257,0,0,0,ACCEPTABLE
+Carver County,0140 - WATERTOWN TWP,U.S. President & Vice President,879,879,0,0,0,ACCEPTABLE
+Carver County,0140 - WATERTOWN TWP,U.S. Senator,879,879,0,0,0,ACCEPTABLE
+Carver County,0140 - WATERTOWN TWP,U.S. Representative District 6,879,879,0,0,0,ACCEPTABLE
+Cass County,0060 - BULL MOOSE TWP,U.S. President & Vice President,63,63,0,0,0,ACCEPTABLE
+Cass County,0060 - BULL MOOSE TWP,U.S. Senator,63,63,0,0,0,ACCEPTABLE
+Cass County,0060 - BULL MOOSE TWP,U.S. Representative District 8,63,63,0,0,0,ACCEPTABLE
+Cass County,0135 - KEGO TWP,U.S. President & Vice President,383,383,0,0,0,ACCEPTABLE
+Cass County,0135 - KEGO TWP,U.S. Senator,383,383,0,0,0,ACCEPTABLE
+Cass County,0135 - KEGO TWP,U.S. Representative District 8,383,383,0,0,0,ACCEPTABLE
+Cass County,0245 - SALEM TWP,U.S. President & Vice President,76,76,0,0,0,ACCEPTABLE
+Cass County,0245 - SALEM TWP,U.S. Senator,76,76,0,0,0,ACCEPTABLE
+Cass County,0245 - SALEM TWP,U.S. Representative District 8,76,76,0,0,0,ACCEPTABLE
+Chippewa County,0065 - MAYNARD,U.S. President & Vice President,172,172,0,0,0,ACCEPTABLE
+Chippewa County,0065 - MAYNARD,U.S. Senator,172,172,0,0,0,ACCEPTABLE
+Chippewa County,0065 - MAYNARD,U.S. Representative District 7,172,172,0,0,0,ACCEPTABLE
+Chippewa County,0110 - ROSEWOOD TWP,U.S. President & Vice President,215,215,2,2,0,ACCEPTABLE
+Chippewa County,0110 - ROSEWOOD TWP,U.S. Senator,215,215,0,0,0,ACCEPTABLE
+Chippewa County,0110 - ROSEWOOD TWP,U.S. Representative District 7,215,215,0,0,0,ACCEPTABLE
+Chisago County,0067 - NORTH BRANCH P-A,U.S. President & Vice President,3322,3323,1,0,1,ACCEPTABLE
+Chisago County,0067 - NORTH BRANCH P-A,U.S. Senator,3322,3323,7,6,1,ACCEPTABLE
+Chisago County,0067 - NORTH BRANCH P-A,U.S. Representative District 8,3322,3323,3,2,1,ACCEPTABLE
+Chisago County,0110 - WYOMING P-B,U.S. President & Vice President,2930,2930,0,0,0,ACCEPTABLE
+Chisago County,0110 - WYOMING P-B,U.S. Senator,2930,2930,0,0,0,ACCEPTABLE
+Chisago County,0110 - WYOMING P-B,U.S. Representative District 8,2930,2930,2,2,0,ACCEPTABLE
+Clay County,0180 - MOORHEAD CITY W-2 P-7,U.S. President & Vice President,871,871,0,0,0,ACCEPTABLE
+Clay County,0180 - MOORHEAD CITY W-2 P-7,U.S. Senator,871,871,0,0,0,ACCEPTABLE
+Clay County,0180 - MOORHEAD CITY W-2 P-7,U.S. Representative District 7,871,871,0,0,0,ACCEPTABLE
+Clay County,0220 - MORKEN TWP,U.S. President & Vice President,110,110,0,0,0,ACCEPTABLE
+Clay County,0220 - MORKEN TWP,U.S. Senator,110,110,0,0,0,ACCEPTABLE
+Clay County,0220 - MORKEN TWP,U.S. Representative District 7,110,110,0,0,0,ACCEPTABLE
+Clearwater County,0070 - LA PRAIRIE TWP,U.S. President & Vice President,168,168,2,2,0,ACCEPTABLE
+Clearwater County,0070 - LA PRAIRIE TWP,U.S. Senator,168,168,0,0,0,ACCEPTABLE
+Clearwater County,0070 - LA PRAIRIE TWP,U.S. Representative District 8,168,168,0,0,0,ACCEPTABLE
+Clearwater County,0130 - WINSOR TWP,U.S. President & Vice President,64,64,0,0,0,ACCEPTABLE
+Clearwater County,0130 - WINSOR TWP,U.S. Senator,64,64,0,0,0,ACCEPTABLE
+Clearwater County,0130 - WINSOR TWP,U.S. Representative District 8,64,64,0,0,0,ACCEPTABLE
+Cook County,0040 - GUNFLINT PREC 8,U.S. President & Vice President,269,269,0,0,0,ACCEPTABLE
+Cook County,0040 - GUNFLINT PREC 8,U.S. Senator,269,269,0,0,0,ACCEPTABLE
+Cook County,0040 - GUNFLINT PREC 8,U.S. Representative District 8,269,269,0,0,0,ACCEPTABLE
+Cook County,0065 - MAPLE HILL PREC 8A,U.S. President & Vice President,308,308,0,0,0,ACCEPTABLE
+Cook County,0065 - MAPLE HILL PREC 8A,U.S. Senator,308,308,0,0,0,ACCEPTABLE
+Cook County,0065 - MAPLE HILL PREC 8A,U.S. Representative District 8,308,308,0,0,0,ACCEPTABLE
+Cottonwood County,0060 - JEFFERS,U.S. President & Vice President,157,157,0,0,0,ACCEPTABLE
+Cottonwood County,0060 - JEFFERS,U.S. Senator,157,157,0,0,0,ACCEPTABLE
+Cottonwood County,0060 - JEFFERS,U.S. Representative District 7,157,157,0,0,0,ACCEPTABLE
+Cottonwood County,0075 - MOUNTAIN LAKE P-1,U.S. President & Vice President,972,972,2,2,0,ACCEPTABLE
+Cottonwood County,0075 - MOUNTAIN LAKE P-1,U.S. Senator,972,972,0,0,0,ACCEPTABLE
+Cottonwood County,0075 - MOUNTAIN LAKE P-1,U.S. Representative District 7,972,972,0,0,0,ACCEPTABLE
+Crow Wing County,0060 - CENTER TWP,U.S. President & Vice President,731,731,0,0,0,ACCEPTABLE
+Crow Wing County,0060 - CENTER TWP,U.S. Senator,731,731,0,0,0,ACCEPTABLE
+Crow Wing County,0060 - CENTER TWP,U.S. Representative District 8,731,731,2,2,0,ACCEPTABLE
+Crow Wing County,0250 - PLATTE LAKE TWP,U.S. President & Vice President,202,202,0,0,0,ACCEPTABLE
+Crow Wing County,0250 - PLATTE LAKE TWP,U.S. Senator,202,202,0,0,0,ACCEPTABLE
+Crow Wing County,0250 - PLATTE LAKE TWP,U.S. Representative District 8,202,202,0,0,0,ACCEPTABLE
+Dakota County,1100 - APPLE VALLEY P-10,U.S. President & Vice President,2493,2493,2,2,0,ACCEPTABLE
+Dakota County,1100 - APPLE VALLEY P-10,U.S. Senator,2493,2493,2,2,0,ACCEPTABLE
+Dakota County,1100 - APPLE VALLEY P-10,U.S. Representative District 2,2493,2493,0,0,0,ACCEPTABLE
+Dakota County,3070 - LAKEVILLE P-17,U.S. President & Vice President,3400,3400,0,0,0,ACCEPTABLE
+Dakota County,3070 - LAKEVILLE P-17,U.S. Senator,3400,3400,2,2,0,ACCEPTABLE
+Dakota County,3070 - LAKEVILLE P-17,U.S. Representative District 2,3400,3400,2,2,0,ACCEPTABLE
+Dakota County,3110 - LILYDALE,U.S. President & Vice President,748,748,2,2,0,ACCEPTABLE
+Dakota County,3110 - LILYDALE,U.S. Senator,748,748,2,2,0,ACCEPTABLE
+Dakota County,3110 - LILYDALE,U.S. Representative District 2,748,748,2,2,0,ACCEPTABLE
+Dakota County,3610 - NEW TRIER,U.S. President & Vice President,59,59,0,0,0,ACCEPTABLE
+Dakota County,3610 - NEW TRIER,U.S. Senator,59,59,0,0,0,ACCEPTABLE
+Dakota County,3610 - NEW TRIER,U.S. Representative District 2,59,59,0,0,0,ACCEPTABLE
+Dakota County,3910 - RANDOLPH CITY,U.S. President & Vice President,279,279,0,0,0,ACCEPTABLE
+Dakota County,3910 - RANDOLPH CITY,U.S. Senator,279,279,0,0,0,ACCEPTABLE
+Dakota County,3910 - RANDOLPH CITY,U.S. Representative District 2,279,279,2,2,0,ACCEPTABLE
+Dodge County,0045 - HAYFIELD TWP.,U.S. President & Vice President,300,300,0,0,0,ACCEPTABLE
+Dodge County,0045 - HAYFIELD TWP.,U.S. Senator,300,300,0,0,0,ACCEPTABLE
+Dodge County,0045 - HAYFIELD TWP.,U.S. Representative District 1,300,300,0,0,0,ACCEPTABLE
+Dodge County,0085 - WEST CONCORD,U.S. President & Vice President,446,446,0,0,0,ACCEPTABLE
+Dodge County,0085 - WEST CONCORD,U.S. Senator,446,446,0,0,0,ACCEPTABLE
+Dodge County,0085 - WEST CONCORD,U.S. Representative District 1,446,446,0,0,0,ACCEPTABLE
+Douglas County,0120 - MILLERVILLE CITY,U.S. President & Vice President,58,58,0,0,0,ACCEPTABLE
+Douglas County,0120 - MILLERVILLE CITY,U.S. Senator,58,58,0,0,0,ACCEPTABLE
+Douglas County,0120 - MILLERVILLE CITY,U.S. Representative District 7,58,58,0,0,0,ACCEPTABLE
+Douglas County,0140 - MOE TWP.,U.S. President & Vice President,610,610,2,2,0,ACCEPTABLE
+Douglas County,0140 - MOE TWP.,U.S. Senator,610,610,2,2,0,ACCEPTABLE
+Douglas County,0140 - MOE TWP.,U.S. Representative District 7,610,610,2,2,0,ACCEPTABLE
+Faribault County,0050 - DELAVAN TWP.,U.S. President & Vice President,188,188,0,0,0,ACCEPTABLE
+Faribault County,0050 - DELAVAN TWP.,U.S. Senator,188,188,0,0,0,ACCEPTABLE
+Faribault County,0050 - DELAVAN TWP.,U.S. Representative District 1,188,188,0,0,0,ACCEPTABLE
+Faribault County,0065 - ELMORE,U.S. President & Vice President,246,246,0,0,0,ACCEPTABLE
+Faribault County,0065 - ELMORE,U.S. Senator,246,246,0,0,0,ACCEPTABLE
+Faribault County,0065 - ELMORE,U.S. Representative District 1,246,246,0,0,0,ACCEPTABLE
+Fillmore County,0010 - ARENDAHL TWP.,U.S. President & Vice President,217,217,0,0,0,ACCEPTABLE
+Fillmore County,0010 - ARENDAHL TWP.,U.S. Senator,217,217,0,0,0,ACCEPTABLE
+Fillmore County,0010 - ARENDAHL TWP.,U.S. Representative District 1,217,217,0,0,0,ACCEPTABLE
+Fillmore County,0105 - MABEL,U.S. President & Vice President,377,377,0,0,0,ACCEPTABLE
+Fillmore County,0105 - MABEL,U.S. Senator,377,377,0,0,0,ACCEPTABLE
+Fillmore County,0105 - MABEL,U.S. Representative District 1,377,377,0,0,0,ACCEPTABLE
+Freeborn County,0155 - HOLLANDALE,U.S. President & Vice President,159,159,0,0,0,ACCEPTABLE
+Freeborn County,0155 - HOLLANDALE,U.S. Senator,159,159,0,0,0,ACCEPTABLE
+Freeborn County,0155 - HOLLANDALE,U.S. Representative District 1,159,159,0,0,0,ACCEPTABLE
+Freeborn County,0175 - MANSFIELD TWP.,U.S. President & Vice President,165,165,0,0,0,ACCEPTABLE
+Freeborn County,0175 - MANSFIELD TWP.,U.S. Senator,165,165,0,0,0,ACCEPTABLE
+Freeborn County,0175 - MANSFIELD TWP.,U.S. Representative District 1,165,165,0,0,0,ACCEPTABLE
+Goodhue County,0005 - BELLECHESTER,U.S. President & Vice President,62,62,0,0,0,ACCEPTABLE
+Goodhue County,0005 - BELLECHESTER,U.S. Senator,62,62,0,0,0,ACCEPTABLE
+Goodhue County,0005 - BELLECHESTER,U.S. Representative District 1,62,62,0,0,0,ACCEPTABLE
+Goodhue County,0140 - RED WING W-3 P-1,U.S. President & Vice President,1235,1235,0,0,0,ACCEPTABLE
+Goodhue County,0140 - RED WING W-3 P-1,U.S. Senator,1235,1235,0,0,0,ACCEPTABLE
+Goodhue County,0140 - RED WING W-3 P-1,U.S. Representative District 1,1235,1235,0,0,0,ACCEPTABLE
+Grant County,0020 - ELBOW LAKE,U.S. President & Vice President,651,651,0,0,0,ACCEPTABLE
+Grant County,0020 - ELBOW LAKE,U.S. Senator,651,651,0,0,0,ACCEPTABLE
+Grant County,0020 - ELBOW LAKE,U.S. Representative District 7,651,651,0,0,0,ACCEPTABLE
+Grant County,0095 - POMME DE TERRE TWP,U.S. President & Vice President,91,91,0,0,0,ACCEPTABLE
+Grant County,0095 - POMME DE TERRE TWP,U.S. Senator,91,91,0,0,0,ACCEPTABLE
+Grant County,0095 - POMME DE TERRE TWP,U.S. Representative District 7,91,91,0,0,0,ACCEPTABLE
+Hennepin County,0120 - BLOOMINGTON W-3 P-24,U.S. President & Vice President,1201,1201,4,4,0,ACCEPTABLE
+Hennepin County,0120 - BLOOMINGTON W-3 P-24,U.S. Senator,1201,1201,4,4,0,ACCEPTABLE
+Hennepin County,0120 - BLOOMINGTON W-3 P-24,U.S. Representative District 3,1201,1201,6,6,0,ACCEPTABLE
+Hennepin County,0730 - EDEN PRAIRIE P-09,U.S. President & Vice President,2187,2185,8,6,2,ACCEPTABLE
+Hennepin County,0730 - EDEN PRAIRIE P-09,U.S. Senator,2187,2185,4,2,2,ACCEPTABLE
+Hennepin County,0730 - EDEN PRAIRIE P-09,U.S. Representative District 3,2187,2185,2,0,2,ACCEPTABLE
+Hennepin County,0755 - EDEN PRAIRIE P-14,U.S. President & Vice President,2359,2359,0,0,0,ACCEPTABLE
+Hennepin County,0755 - EDEN PRAIRIE P-14,U.S. Senator,2359,2359,0,0,0,ACCEPTABLE
+Hennepin County,0755 - EDEN PRAIRIE P-14,U.S. Representative District 3,2359,2359,0,0,0,ACCEPTABLE
+Hennepin County,1190 - MAPLE GROVE P-01,U.S. President & Vice President,3005,3004,1,0,1,ACCEPTABLE
+Hennepin County,1190 - MAPLE GROVE P-01,U.S. Senator,3005,3004,1,0,1,ACCEPTABLE
+Hennepin County,1190 - MAPLE GROVE P-01,U.S. Representative District 3,3005,3004,1,0,1,ACCEPTABLE
+Hennepin County,1395 - MINNEAPOLIS W-1 P-08,U.S. President & Vice President,1244,1243,3,2,1,ACCEPTABLE
+Hennepin County,1395 - MINNEAPOLIS W-1 P-08,U.S. Senator,1244,1243,3,2,1,ACCEPTABLE
+Hennepin County,1395 - MINNEAPOLIS W-1 P-08,U.S. Representative District 5,1244,1243,1,0,1,ACCEPTABLE
+Hennepin County,1535 - MINNEAPOLIS W-4 P-04,U.S. President & Vice President,1137,1137,4,4,0,ACCEPTABLE
+Hennepin County,1535 - MINNEAPOLIS W-4 P-04,U.S. Senator,1137,1137,2,2,0,ACCEPTABLE
+Hennepin County,1535 - MINNEAPOLIS W-4 P-04,U.S. Representative District 5,1137,1137,2,2,0,ACCEPTABLE
+Hennepin County,1710 - MINNEAPOLIS W-7 P-12,U.S. President & Vice President,1581,1580,1,0,1,ACCEPTABLE
+Hennepin County,1710 - MINNEAPOLIS W-7 P-12,U.S. Senator,1581,1580,1,0,1,ACCEPTABLE
+Hennepin County,1710 - MINNEAPOLIS W-7 P-12,U.S. Representative District 5,1581,1580,5,4,1,ACCEPTABLE
+Hennepin County,1805 - MINNEAPOLIS W-9 P-08,U.S. President & Vice President,1448,1447,11,10,1,ACCEPTABLE
+Hennepin County,1805 - MINNEAPOLIS W-9 P-08,U.S. Senator,1448,1447,7,6,1,ACCEPTABLE
+Hennepin County,1805 - MINNEAPOLIS W-9 P-08,U.S. Representative District 5,1448,1447,3,2,1,ACCEPTABLE
+Hennepin County,2195 - MINNETONKA W-4 P-C,U.S. President & Vice President,2061,2060,5,4,1,ACCEPTABLE
+Hennepin County,2195 - MINNETONKA W-4 P-C,U.S. Senator,2061,2060,1,0,1,ACCEPTABLE
+Hennepin County,2195 - MINNETONKA W-4 P-C,U.S. Representative District 3,2061,2060,1,0,1,ACCEPTABLE
+Hennepin County,2230 - MINNETONKA BEACH P-01,U.S. President & Vice President,375,375,0,0,0,ACCEPTABLE
+Hennepin County,2230 - MINNETONKA BEACH P-01,U.S. Senator,375,375,0,0,0,ACCEPTABLE
+Hennepin County,2230 - MINNETONKA BEACH P-01,U.S. Representative District 3,375,375,0,0,0,ACCEPTABLE
+Hennepin County,2605 - RICHFIELD W-3 P-07,U.S. President & Vice President,2288,2288,0,0,0,ACCEPTABLE
+Hennepin County,2605 - RICHFIELD W-3 P-07,U.S. Senator,2288,2288,8,8,0,ACCEPTABLE
+Hennepin County,2605 - RICHFIELD W-3 P-07,U.S. Representative District 5,2288,2288,10,10,0,ACCEPTABLE
+Hennepin County,2715 - ROGERS P-02,U.S. President & Vice President,4512,4512,2,2,0,ACCEPTABLE
+Hennepin County,2715 - ROGERS P-02,U.S. Senator,4512,4512,10,10,0,ACCEPTABLE
+Hennepin County,2715 - ROGERS P-02,U.S. Representative District 3,4512,4512,10,10,0,ACCEPTABLE
+Houston County,0070 - LA CRESCENT P-1,U.S. President & Vice President,1479,1479,0,0,0,ACCEPTABLE
+Houston County,0070 - LA CRESCENT P-1,U.S. Senator,1479,1479,0,0,0,ACCEPTABLE
+Houston County,0070 - LA CRESCENT P-1,U.S. Representative District 1,1479,1479,0,0,0,ACCEPTABLE
+Houston County,0090 - MONEY CREEK TWP.,U.S. President & Vice President,387,387,0,0,0,ACCEPTABLE
+Houston County,0090 - MONEY CREEK TWP.,U.S. Senator,387,387,0,0,0,ACCEPTABLE
+Houston County,0090 - MONEY CREEK TWP.,U.S. Representative District 1,387,387,0,0,0,ACCEPTABLE
+Hubbard County,0070 - HUBBARD TWP.,U.S. President & Vice President,517,517,0,0,0,ACCEPTABLE
+Hubbard County,0070 - HUBBARD TWP.,U.S. Senator,517,517,0,0,0,ACCEPTABLE
+Hubbard County,0070 - HUBBARD TWP.,U.S. Representative District 7,517,517,0,0,0,ACCEPTABLE
+Hubbard County,0122 - PARK RAPIDS P-2,U.S. President & Vice President,1311,1311,0,0,0,ACCEPTABLE
+Hubbard County,0122 - PARK RAPIDS P-2,U.S. Senator,1311,1311,0,0,0,ACCEPTABLE
+Hubbard County,0122 - PARK RAPIDS P-2,U.S. Representative District 7,1311,1311,0,0,0,ACCEPTABLE
+Isanti County,0055 - OXFORD TWP,U.S. President & Vice President,690,690,0,0,0,ACCEPTABLE
+Isanti County,0055 - OXFORD TWP,U.S. Senator,690,690,0,0,0,ACCEPTABLE
+Isanti County,0055 - OXFORD TWP,U.S. Representative District 8,690,690,0,0,0,ACCEPTABLE
+Isanti County,0060 - SPENCER BROOK TWP,U.S. President & Vice President,1161,1161,0,0,0,ACCEPTABLE
+Isanti County,0060 - SPENCER BROOK TWP,U.S. Senator,1161,1161,0,0,0,ACCEPTABLE
+Isanti County,0060 - SPENCER BROOK TWP,U.S. Representative District 8,1161,1161,0,0,0,ACCEPTABLE
+Itasca County,0095 - DEER RIVER P-1,U.S. President & Vice President,2,2,0,0,0,ACCEPTABLE
+Itasca County,0095 - DEER RIVER P-1,U.S. Senator,2,2,0,0,0,ACCEPTABLE
+Itasca County,0095 - DEER RIVER P-1,U.S. Representative District 8,2,2,0,0,0,ACCEPTABLE
+Itasca County,0120 - FEELEY TWP,U.S. President & Vice President,193,193,0,0,0,ACCEPTABLE
+Itasca County,0120 - FEELEY TWP,U.S. Senator,193,193,0,0,0,ACCEPTABLE
+Itasca County,0120 - FEELEY TWP,U.S. Representative District 8,193,193,0,0,0,ACCEPTABLE
+Itasca County,0372 - WILDWOOD TWP,U.S. President & Vice President,107,107,0,0,0,ACCEPTABLE
+Itasca County,0372 - WILDWOOD TWP,U.S. Senator,107,107,0,0,0,ACCEPTABLE
+Itasca County,0372 - WILDWOOD TWP,U.S. Representative District 8,107,107,0,0,0,ACCEPTABLE
+Jackson County,0045 - HERON LAKE,U.S. President & Vice President,305,305,0,0,0,ACCEPTABLE
+Jackson County,0045 - HERON LAKE,U.S. Senator,305,305,0,0,0,ACCEPTABLE
+Jackson County,0045 - HERON LAKE,U.S. Representative District 1,305,305,0,0,0,ACCEPTABLE
+Jackson County,0080 - KIMBALL TWP.,U.S. President & Vice President,74,74,0,0,0,ACCEPTABLE
+Jackson County,0080 - KIMBALL TWP.,U.S. Senator,74,74,0,0,0,ACCEPTABLE
+Jackson County,0080 - KIMBALL TWP.,U.S. Representative District 1,74,74,0,0,0,ACCEPTABLE
+Kanabec County,0010 - ARTHUR TWP.,U.S. President & Vice President,1116,1116,0,0,0,ACCEPTABLE
+Kanabec County,0010 - ARTHUR TWP.,U.S. Senator,1116,1116,0,0,0,ACCEPTABLE
+Kanabec County,0010 - ARTHUR TWP.,U.S. Representative District 8,1116,1116,0,0,0,ACCEPTABLE
+Kanabec County,0085 - PEACE TWP.,U.S. President & Vice President,628,628,0,0,0,ACCEPTABLE
+Kanabec County,0085 - PEACE TWP.,U.S. Senator,628,628,2,2,0,ACCEPTABLE
+Kanabec County,0085 - PEACE TWP.,U.S. Representative District 8,628,628,2,2,0,ACCEPTABLE
+Kandiyohi County,0120 - NORWAY LAKE TWP.,U.S. President & Vice President,201,201,2,2,0,ACCEPTABLE
+Kandiyohi County,0120 - NORWAY LAKE TWP.,U.S. Senator,201,201,0,0,0,ACCEPTABLE
+Kandiyohi County,0120 - NORWAY LAKE TWP.,U.S. Representative District 7,201,201,0,0,0,ACCEPTABLE
+Kandiyohi County,0125 - PENNOCK,U.S. President & Vice President,236,236,0,0,0,ACCEPTABLE
+Kandiyohi County,0125 - PENNOCK,U.S. Senator,236,236,0,0,0,ACCEPTABLE
+Kandiyohi County,0125 - PENNOCK,U.S. Representative District 7,236,236,0,0,0,ACCEPTABLE
+Kittson County,0100 - LANCASTER,U.S. President & Vice President,200,200,0,0,0,ACCEPTABLE
+Kittson County,0100 - LANCASTER,U.S. Senator,200,200,0,0,0,ACCEPTABLE
+Kittson County,0100 - LANCASTER,U.S. Representative District 7,200,200,0,0,0,ACCEPTABLE
+Kittson County,0125 - PERCY TWP,U.S. President & Vice President,28,28,0,0,0,ACCEPTABLE
+Kittson County,0125 - PERCY TWP,U.S. Senator,28,28,0,0,0,ACCEPTABLE
+Kittson County,0125 - PERCY TWP,U.S. Representative District 7,28,28,0,0,0,ACCEPTABLE
+Koochiching County,0050 - INTERNATIONAL FALLS - EAST WARD,U.S. President & Vice President,938,938,6,6,0,ACCEPTABLE
+Koochiching County,0050 - INTERNATIONAL FALLS - EAST WARD,U.S. Senator,938,938,0,0,0,ACCEPTABLE
+Koochiching County,0050 - INTERNATIONAL FALLS - EAST WARD,U.S. Representative District 8,938,938,0,0,0,ACCEPTABLE
+Koochiching County,0070 - JAMESON PRECINCT,U.S. President & Vice President,95,95,0,0,0,ACCEPTABLE
+Koochiching County,0070 - JAMESON PRECINCT,U.S. Senator,95,95,0,0,0,ACCEPTABLE
+Koochiching County,0070 - JAMESON PRECINCT,U.S. Representative District 8,95,95,0,0,0,ACCEPTABLE
+Lac Qui Parle County,0150 - RIVERSIDE TWP.,U.S. President & Vice President,183,183,0,0,0,ACCEPTABLE
+Lac Qui Parle County,0150 - RIVERSIDE TWP.,U.S. Senator,183,183,0,0,0,ACCEPTABLE
+Lac Qui Parle County,0150 - RIVERSIDE TWP.,U.S. Representative District 7,183,183,0,0,0,ACCEPTABLE
+Lac Qui Parle County,0165 - YELLOW BANK TWP.,U.S. President & Vice President,84,84,0,0,0,ACCEPTABLE
+Lac Qui Parle County,0165 - YELLOW BANK TWP.,U.S. Senator,84,84,0,0,0,ACCEPTABLE
+Lac Qui Parle County,0165 - YELLOW BANK TWP.,U.S. Representative District 7,84,84,0,0,0,ACCEPTABLE
+Lake County,0060 - SILVER CREEK,U.S. President & Vice President,851,851,2,2,0,ACCEPTABLE
+Lake County,0060 - SILVER CREEK,U.S. Senator,851,851,0,0,0,ACCEPTABLE
+Lake County,0060 - SILVER CREEK,U.S. Representative District 8,851,851,0,0,0,ACCEPTABLE
+Lake County,0065 - STONY RIVER TWP.,U.S. President & Vice President,111,111,0,0,0,ACCEPTABLE
+Lake County,0065 - STONY RIVER TWP.,U.S. Senator,111,111,0,0,0,ACCEPTABLE
+Lake County,0065 - STONY RIVER TWP.,U.S. Representative District 8,111,111,0,0,0,ACCEPTABLE
+Lake Of The Woods County,0010 - 0010 - 1-B BAUDETTE CITY,U.S. President & Vice President,256,256,0,0,0,ACCEPTABLE
+Lake Of The Woods County,0010 - 0010 - 1-B BAUDETTE CITY,U.S. Senator,256,256,0,0,0,ACCEPTABLE
+Lake Of The Woods County,0010 - 0010 - 1-B BAUDETTE CITY,U.S. Representative District 8,256,256,0,0,0,ACCEPTABLE
+Lake Of The Woods County,0055 - 0055 - 3-B WILLIAMS CITY,U.S. President & Vice President,69,69,0,0,0,ACCEPTABLE
+Lake Of The Woods County,0055 - 0055 - 3-B WILLIAMS CITY,U.S. Senator,69,69,0,0,0,ACCEPTABLE
+Lake Of The Woods County,0055 - 0055 - 3-B WILLIAMS CITY,U.S. Representative District 8,69,69,0,0,0,ACCEPTABLE
+Le Sueur County,0010 - CLEVELAND TWP.,U.S. President & Vice President,526,526,0,0,0,ACCEPTABLE
+Le Sueur County,0010 - CLEVELAND TWP.,U.S. Senator,526,526,0,0,0,ACCEPTABLE
+Le Sueur County,0010 - CLEVELAND TWP.,U.S. Representative District 2,526,526,0,0,0,ACCEPTABLE
+Le Sueur County,0120 - TYRONE TWP.,U.S. President & Vice President,373,373,6,6,0,ACCEPTABLE
+Le Sueur County,0120 - TYRONE TWP.,U.S. Senator,373,373,0,0,0,ACCEPTABLE
+Le Sueur County,0120 - TYRONE TWP.,U.S. Representative District 2,373,373,0,0,0,ACCEPTABLE
+Lincoln County,0020 - DIAMOND LAKE TWP,U.S. President & Vice President,109,109,0,0,0,ACCEPTABLE
+Lincoln County,0020 - DIAMOND LAKE TWP,U.S. Senator,109,109,0,0,0,ACCEPTABLE
+Lincoln County,0020 - DIAMOND LAKE TWP,U.S. Representative District 7,109,109,0,0,0,ACCEPTABLE
+Lincoln County,0050 - IVANHOE,U.S. President & Vice President,283,283,0,0,0,ACCEPTABLE
+Lincoln County,0050 - IVANHOE,U.S. Senator,283,283,0,0,0,ACCEPTABLE
+Lincoln County,0050 - IVANHOE,U.S. Representative District 7,283,283,0,0,0,ACCEPTABLE
+Lyon County,0115 - MARSHALL W-3,U.S. President & Vice President,2018,2018,0,0,0,ACCEPTABLE
+Lyon County,0115 - MARSHALL W-3,U.S. Senator,2018,2018,0,0,0,ACCEPTABLE
+Lyon County,0115 - MARSHALL W-3,U.S. Representative District 7,2018,2018,0,0,0,ACCEPTABLE
+Lyon County,0130 - MONROE TWP,U.S. President & Vice President,107,107,0,0,0,ACCEPTABLE
+Lyon County,0130 - MONROE TWP,U.S. Senator,107,107,0,0,0,ACCEPTABLE
+Lyon County,0130 - MONROE TWP,U.S. Representative District 7,107,107,0,0,0,ACCEPTABLE
+Lyon County,0180 - VALLERS TWP,U.S. President & Vice President,138,138,0,0,0,ACCEPTABLE
+Lyon County,0180 - VALLERS TWP,U.S. Senator,138,138,0,0,0,ACCEPTABLE
+Lyon County,0180 - VALLERS TWP,U.S. Representative District 7,138,138,0,0,0,ACCEPTABLE
+Mcleod County,0050 - GLENCOE TOWNSHIP,U.S. President & Vice President,347,347,0,0,0,ACCEPTABLE
+Mcleod County,0050 - GLENCOE TOWNSHIP,U.S. Senator,347,347,0,0,0,ACCEPTABLE
+Mcleod County,0050 - GLENCOE TOWNSHIP,U.S. Representative District 7,347,347,0,0,0,ACCEPTABLE
+Mcleod County,0120 - RICH VALLEY TOWNSHIP,U.S. President & Vice President,462,462,0,0,0,ACCEPTABLE
+Mcleod County,0120 - RICH VALLEY TOWNSHIP,U.S. Senator,462,462,0,0,0,ACCEPTABLE
+Mcleod County,0120 - RICH VALLEY TOWNSHIP,U.S. Representative District 7,462,462,0,0,0,ACCEPTABLE
+Mahnomen County,0040 - ISLAND LAKE TWP,U.S. President & Vice President,129,129,0,0,0,ACCEPTABLE
+Mahnomen County,0040 - ISLAND LAKE TWP,U.S. Senator,129,129,0,0,0,ACCEPTABLE
+Mahnomen County,0040 - ISLAND LAKE TWP,U.S. Representative District 8,129,129,0,0,0,ACCEPTABLE
+Mahnomen County,0095 - WAUBUN,U.S. President & Vice President,153,153,0,0,0,ACCEPTABLE
+Mahnomen County,0095 - WAUBUN,U.S. Senator,153,153,0,0,0,ACCEPTABLE
+Mahnomen County,0095 - WAUBUN,U.S. Representative District 8,153,153,0,0,0,ACCEPTABLE
+Marshall County,0130 - LINCOLN TWP.,U.S. President & Vice President,67,67,0,0,0,ACCEPTABLE
+Marshall County,0130 - LINCOLN TWP.,U.S. Senator,67,67,0,0,0,ACCEPTABLE
+Marshall County,0130 - LINCOLN TWP.,U.S. Representative District 7,67,67,0,0,0,ACCEPTABLE
+Marshall County,0225 - STEPHEN,U.S. President & Vice President,309,309,0,0,0,ACCEPTABLE
+Marshall County,0225 - STEPHEN,U.S. Senator,309,309,0,0,0,ACCEPTABLE
+Marshall County,0225 - STEPHEN,U.S. Representative District 7,309,309,0,0,0,ACCEPTABLE
+Martin County,0180 - TENHASSEN TWP.,U.S. President & Vice President,139,139,0,0,0,ACCEPTABLE
+Martin County,0180 - TENHASSEN TWP.,U.S. Senator,139,139,0,0,0,ACCEPTABLE
+Martin County,0180 - TENHASSEN TWP.,U.S. Representative District 1,139,139,0,0,0,ACCEPTABLE
+Martin County,0195 - TRUMAN,U.S. President & Vice President,558,558,0,0,0,ACCEPTABLE
+Martin County,0195 - TRUMAN,U.S. Senator,558,558,0,0,0,ACCEPTABLE
+Martin County,0195 - TRUMAN,U.S. Representative District 1,558,558,0,0,0,ACCEPTABLE
+Meeker County,0135 - MANANNAH TWP.,U.S. President & Vice President,327,327,0,0,0,ACCEPTABLE
+Meeker County,0135 - MANANNAH TWP.,U.S. Senator,327,327,0,0,0,ACCEPTABLE
+Meeker County,0135 - MANANNAH TWP.,U.S. Representative District 7,327,327,0,0,0,ACCEPTABLE
+Meeker County,0145 - UNION GROVE TWP.,U.S. President & Vice President,428,428,0,0,0,ACCEPTABLE
+Meeker County,0145 - UNION GROVE TWP.,U.S. Senator,428,428,0,0,0,ACCEPTABLE
+Meeker County,0145 - UNION GROVE TWP.,U.S. Representative District 7,428,428,0,0,0,ACCEPTABLE
+Mille Lacs County,0045 - HAYLAND TWP.,U.S. President & Vice President,304,304,0,0,0,ACCEPTABLE
+Mille Lacs County,0045 - HAYLAND TWP.,U.S. Senator,304,304,0,0,0,ACCEPTABLE
+Mille Lacs County,0045 - HAYLAND TWP.,U.S. Representative District 8,304,304,0,0,0,ACCEPTABLE
+Mille Lacs County,0110 - PRINCETON,U.S. President & Vice President,2393,2393,6,6,0,ACCEPTABLE
+Mille Lacs County,0110 - PRINCETON,U.S. Senator,2393,2393,10,10,0,ACCEPTABLE
+Mille Lacs County,0110 - PRINCETON,U.S. Representative District 8,2393,2393,0,0,0,ACCEPTABLE
+Morrison County,0055 - DARLING TOWNSHIP,U.S. President & Vice President,345,345,0,0,0,ACCEPTABLE
+Morrison County,0055 - DARLING TOWNSHIP,U.S. Senator,345,345,0,0,0,ACCEPTABLE
+Morrison County,0055 - DARLING TOWNSHIP,U.S. Representative District 7,345,345,0,0,0,ACCEPTABLE
+Morrison County,0205 - RIPLEY TOWNSHIP,U.S. President & Vice President,496,496,0,0,0,ACCEPTABLE
+Morrison County,0205 - RIPLEY TOWNSHIP,U.S. Senator,496,496,0,0,0,ACCEPTABLE
+Morrison County,0205 - RIPLEY TOWNSHIP,U.S. Representative District 7,496,496,0,0,0,ACCEPTABLE
+Mower County,0020 - AUSTIN W-1 P-2,U.S. President & Vice President,1828,1828,0,0,0,ACCEPTABLE
+Mower County,0020 - AUSTIN W-1 P-2,U.S. Senator,1828,1828,4,4,0,ACCEPTABLE
+Mower County,0020 - AUSTIN W-1 P-2,U.S. Representative District 1,1828,1828,0,0,0,ACCEPTABLE
+Mower County,0140 - LYLE,U.S. President & Vice President,284,284,0,0,0,ACCEPTABLE
+Mower County,0140 - LYLE,U.S. Senator,284,284,0,0,0,ACCEPTABLE
+Mower County,0140 - LYLE,U.S. Representative District 1,284,284,0,0,0,ACCEPTABLE
+Murray County,0015 - BONDIN TWP,U.S. President & Vice President,150,150,0,0,0,ACCEPTABLE
+Murray County,0015 - BONDIN TWP,U.S. Senator,150,150,0,0,0,ACCEPTABLE
+Murray County,0015 - BONDIN TWP,U.S. Representative District 7,150,150,0,0,0,ACCEPTABLE
+Murray County,0020 - CAMERON TWP,U.S. President & Vice President,65,65,0,0,0,ACCEPTABLE
+Murray County,0020 - CAMERON TWP,U.S. Senator,65,65,0,0,0,ACCEPTABLE
+Murray County,0020 - CAMERON TWP,U.S. Representative District 7,65,65,0,0,0,ACCEPTABLE
+Nicollet County,0045 - LAKE PRAIRIE TOWNSHIP,U.S. President & Vice President,425,425,0,0,0,ACCEPTABLE
+Nicollet County,0045 - LAKE PRAIRIE TOWNSHIP,U.S. Senator,425,425,0,0,0,ACCEPTABLE
+Nicollet County,0045 - LAKE PRAIRIE TOWNSHIP,U.S. Representative District 1,425,425,0,0,0,ACCEPTABLE
+Nicollet County,0085 - NORTH MANKATO P-4,U.S. President & Vice President,1335,1335,0,0,0,ACCEPTABLE
+Nicollet County,0085 - NORTH MANKATO P-4,U.S. Senator,1335,1335,0,0,0,ACCEPTABLE
+Nicollet County,0085 - NORTH MANKATO P-4,U.S. Representative District 1,1335,1335,0,0,0,ACCEPTABLE
+Nobles County,0035 - DUNDEE,U.S. President & Vice President,37,37,0,0,0,ACCEPTABLE
+Nobles County,0035 - DUNDEE,U.S. Senator,37,37,0,0,0,ACCEPTABLE
+Nobles County,0035 - DUNDEE,U.S. Representative District 1,37,37,0,0,0,ACCEPTABLE
+Nobles County,0180 - WORTHINGTON W-2 P-3,U.S. President & Vice President,260,260,0,0,0,ACCEPTABLE
+Nobles County,0180 - WORTHINGTON W-2 P-3,U.S. Senator,260,260,0,0,0,ACCEPTABLE
+Nobles County,0180 - WORTHINGTON W-2 P-3,U.S. Representative District 1,260,260,0,0,0,ACCEPTABLE
+Norman County,0070 - HENDRUM,U.S. President & Vice President,163,163,2,2,0,ACCEPTABLE
+Norman County,0070 - HENDRUM,U.S. Senator,163,163,0,0,0,ACCEPTABLE
+Norman County,0070 - HENDRUM,U.S. Representative District 7,163,163,0,0,0,ACCEPTABLE
+Norman County,0120 - ROCKWELL TWP.,U.S. President & Vice President,30,30,0,0,0,ACCEPTABLE
+Norman County,0120 - ROCKWELL TWP.,U.S. Senator,30,30,0,0,0,ACCEPTABLE
+Norman County,0120 - ROCKWELL TWP.,U.S. Representative District 7,30,30,0,0,0,ACCEPTABLE
+Olmsted County,0120 - ROCHESTER W1 P5,U.S. President & Vice President,580,580,0,0,0,ACCEPTABLE
+Olmsted County,0120 - ROCHESTER W1 P5,U.S. Senator,580,580,0,0,0,ACCEPTABLE
+Olmsted County,0120 - ROCHESTER W1 P5,U.S. Representative District 1,580,580,0,0,0,ACCEPTABLE
+Olmsted County,0180 - ROCHESTER W2 P3,U.S. President & Vice President,716,716,0,0,0,ACCEPTABLE
+Olmsted County,0180 - ROCHESTER W2 P3,U.S. Senator,716,716,0,0,0,ACCEPTABLE
+Olmsted County,0180 - ROCHESTER W2 P3,U.S. Representative District 1,716,716,0,0,0,ACCEPTABLE
+Olmsted County,0325 - ROCHESTER W4 P6,U.S. President & Vice President,676,676,0,0,0,ACCEPTABLE
+Olmsted County,0325 - ROCHESTER W4 P6,U.S. Senator,676,676,0,0,0,ACCEPTABLE
+Olmsted County,0325 - ROCHESTER W4 P6,U.S. Representative District 1,676,676,0,0,0,ACCEPTABLE
+Olmsted County,0450 - ROCHESTER W6 P4,U.S. President & Vice President,515,515,0,0,0,ACCEPTABLE
+Olmsted County,0450 - ROCHESTER W6 P4,U.S. Senator,515,515,0,0,0,ACCEPTABLE
+Olmsted County,0450 - ROCHESTER W6 P4,U.S. Representative District 1,515,515,0,0,0,ACCEPTABLE
+Otter Tail County,0005 - AASTAD TWP,U.S. President & Vice President,119,119,0,0,0,ACCEPTABLE
+Otter Tail County,0005 - AASTAD TWP,U.S. Senator,119,119,0,0,0,ACCEPTABLE
+Otter Tail County,0005 - AASTAD TWP,U.S. Representative District 7,119,119,0,0,0,ACCEPTABLE
+Otter Tail County,0300 - NORWEGIAN GROVE TWP,U.S. President & Vice President,205,205,0,0,0,ACCEPTABLE
+Otter Tail County,0300 - NORWEGIAN GROVE TWP,U.S. Senator,205,205,0,0,0,ACCEPTABLE
+Otter Tail County,0300 - NORWEGIAN GROVE TWP,U.S. Representative District 7,205,205,2,2,0,ACCEPTABLE
+Pennington County,0020 - DEER PARK TWP,U.S. President & Vice President,84,84,0,0,0,ACCEPTABLE
+Pennington County,0020 - DEER PARK TWP,U.S. Senator,84,84,0,0,0,ACCEPTABLE
+Pennington County,0020 - DEER PARK TWP,U.S. Representative District 7,84,84,0,0,0,ACCEPTABLE
+Pennington County,0060 - NORTH TWP,U.S. President & Vice President,395,395,0,0,0,ACCEPTABLE
+Pennington County,0060 - NORTH TWP,U.S. Senator,395,395,0,0,0,ACCEPTABLE
+Pennington County,0060 - NORTH TWP,U.S. Representative District 7,395,395,0,0,0,ACCEPTABLE
+Pine County,0190 - PINE LAKE TWP.,U.S. President & Vice President,400,400,0,0,0,ACCEPTABLE
+Pine County,0190 - PINE LAKE TWP.,U.S. Senator,400,400,0,0,0,ACCEPTABLE
+Pine County,0190 - PINE LAKE TWP.,U.S. Representative District 8,400,400,0,0,0,ACCEPTABLE
+Pine County,0207 - RUTLEDGE,U.S. President & Vice President,107,107,0,0,0,ACCEPTABLE
+Pine County,0207 - RUTLEDGE,U.S. Senator,107,107,0,0,0,ACCEPTABLE
+Pine County,0207 - RUTLEDGE,U.S. Representative District 8,107,107,0,0,0,ACCEPTABLE
+Pipestone County,0110 - SWEET TWP.,U.S. President & Vice President,193,193,0,0,0,ACCEPTABLE
+Pipestone County,0110 - SWEET TWP.,U.S. Senator,193,193,0,0,0,ACCEPTABLE
+Pipestone County,0110 - SWEET TWP.,U.S. Representative District 7,193,193,0,0,0,ACCEPTABLE
+Pipestone County,0125 - WOODSTOCK,U.S. President & Vice President,46,46,0,0,0,ACCEPTABLE
+Pipestone County,0125 - WOODSTOCK,U.S. Senator,46,46,0,0,0,ACCEPTABLE
+Pipestone County,0125 - WOODSTOCK,U.S. Representative District 7,46,46,0,0,0,ACCEPTABLE
+Polk County,0120 - EAST GRAND FORKS W-2,U.S. President & Vice President,918,918,0,0,0,ACCEPTABLE
+Polk County,0120 - EAST GRAND FORKS W-2,U.S. Senator,918,918,0,0,0,ACCEPTABLE
+Polk County,0120 - EAST GRAND FORKS W-2,U.S. Representative District 7,918,918,0,0,0,ACCEPTABLE
+Polk County,0310 - KNUTE TWP.,U.S. President & Vice President,311,311,0,0,0,ACCEPTABLE
+Polk County,0310 - KNUTE TWP.,U.S. Senator,311,311,0,0,0,ACCEPTABLE
+Polk County,0310 - KNUTE TWP.,U.S. Representative District 7,311,311,0,0,0,ACCEPTABLE
+Pope County,0145 - WESTPORT TWP.,U.S. President & Vice President,155,155,0,0,0,ACCEPTABLE
+Pope County,0145 - WESTPORT TWP.,U.S. Senator,155,155,0,0,0,ACCEPTABLE
+Pope County,0145 - WESTPORT TWP.,U.S. Representative District 7,155,155,0,0,0,ACCEPTABLE
+Pope County,0150 - WHITE BEAR LAKE TWP.,U.S. President & Vice President,335,335,0,0,0,ACCEPTABLE
+Pope County,0150 - WHITE BEAR LAKE TWP.,U.S. Senator,335,335,0,0,0,ACCEPTABLE
+Pope County,0150 - WHITE BEAR LAKE TWP.,U.S. Representative District 7,335,335,0,0,0,ACCEPTABLE
+Ramsey County,0090 - LAUDERDALE P-1,U.S. President & Vice President,1395,1395,4,4,0,ACCEPTABLE
+Ramsey County,0090 - LAUDERDALE P-1,U.S. Senator,1395,1395,2,2,0,ACCEPTABLE
+Ramsey County,0090 - LAUDERDALE P-1,U.S. Representative District 4,1395,1395,0,0,0,ACCEPTABLE
+Ramsey County,1200 - ST. PAUL W-5 P-05,U.S. President & Vice President,1173,1171,4,4,0,ACCEPTABLE
+Ramsey County,1200 - ST. PAUL W-5 P-05,U.S. Senator,1173,1171,2,2,0,ACCEPTABLE
+Ramsey County,1200 - ST. PAUL W-5 P-05,U.S. Representative District 4,1173,1171,2,0,2,ACCEPTABLE
+Ramsey County,1500 - ST. PAUL W-7 P-08,U.S. President & Vice President,1639,1639,4,3,1,ACCEPTABLE
+Ramsey County,1500 - ST. PAUL W-7 P-08,U.S. Senator,1639,1639,0,0,0,ACCEPTABLE
+Ramsey County,1500 - ST. PAUL W-7 P-08,U.S. Representative District 4,1639,1639,0,0,0,ACCEPTABLE
+Ramsey County,1660 - VADNAIS HEIGHTS P-1,U.S. President & Vice President,1656,1656,0,0,0,ACCEPTABLE
+Ramsey County,1660 - VADNAIS HEIGHTS P-1,U.S. Senator,1656,1656,0,0,0,ACCEPTABLE
+Ramsey County,1660 - VADNAIS HEIGHTS P-1,U.S. Representative District 4,1656,1656,0,0,0,ACCEPTABLE
+Ramsey County,1760 - WHITE BEAR LAKE W-3 P-1,U.S. President & Vice President,2796,2796,4,3,1,ACCEPTABLE
+Ramsey County,1760 - WHITE BEAR LAKE W-3 P-1,U.S. Senator,2796,2796,0,0,0,ACCEPTABLE
+Ramsey County,1760 - WHITE BEAR LAKE W-3 P-1,U.S. Representative District 4,2796,2797,3,3,0,ACCEPTABLE
+Red Lake County,0040 - LAMBERT TWP.,U.S. President & Vice President,83,83,0,0,0,ACCEPTABLE
+Red Lake County,0040 - LAMBERT TWP.,U.S. Senator,83,83,0,0,0,ACCEPTABLE
+Red Lake County,0040 - LAMBERT TWP.,U.S. Representative District 7,83,83,0,0,0,ACCEPTABLE
+Red Lake County,0070 - RED LAKE FALLS W-2,U.S. President & Vice President,187,187,0,0,0,ACCEPTABLE
+Red Lake County,0070 - RED LAKE FALLS W-2,U.S. Senator,187,187,0,0,0,ACCEPTABLE
+Red Lake County,0070 - RED LAKE FALLS W-2,U.S. Representative District 7,187,187,0,0,0,ACCEPTABLE
+Redwood County,0110 - REDWOOD FALLS W-1,U.S. President & Vice President,802,802,0,0,0,ACCEPTABLE
+Redwood County,0110 - REDWOOD FALLS W-1,U.S. Senator,802,802,0,0,0,ACCEPTABLE
+Redwood County,0110 - REDWOOD FALLS W-1,U.S. Representative District 7,802,802,0,0,0,ACCEPTABLE
+Redwood County,0145 - SHERIDAN TWP.,U.S. President & Vice President,121,121,0,0,0,ACCEPTABLE
+Redwood County,0145 - SHERIDAN TWP.,U.S. Senator,121,121,0,0,0,ACCEPTABLE
+Redwood County,0145 - SHERIDAN TWP.,U.S. Representative District 7,121,121,0,0,0,ACCEPTABLE
+Renville County,0085 - FRANKLIN,U.S. President & Vice President,233,233,0,0,0,ACCEPTABLE
+Renville County,0085 - FRANKLIN,U.S. Senator,233,233,0,0,0,ACCEPTABLE
+Renville County,0085 - FRANKLIN,U.S. Representative District 7,233,233,0,0,0,ACCEPTABLE
+Renville County,0185 - WINFIELD TWP.,U.S. President & Vice President,127,127,0,0,0,ACCEPTABLE
+Renville County,0185 - WINFIELD TWP.,U.S. Senator,127,127,0,0,0,ACCEPTABLE
+Renville County,0185 - WINFIELD TWP.,U.S. Representative District 7,127,127,0,0,0,ACCEPTABLE
+Rice County,0065 - MORRISTOWN,U.S. President & Vice President,551,551,0,0,0,ACCEPTABLE
+Rice County,0065 - MORRISTOWN,U.S. Senator,551,551,0,0,0,ACCEPTABLE
+Rice County,0065 - MORRISTOWN,U.S. Representative District 2,551,551,0,0,0,ACCEPTABLE
+Rice County,0155 - WHEELING TWP.,U.S. President & Vice President,360,360,0,0,0,ACCEPTABLE
+Rice County,0155 - WHEELING TWP.,U.S. Senator,360,360,0,0,0,ACCEPTABLE
+Rice County,0155 - WHEELING TWP.,U.S. Representative District 1,360,360,0,0,0,ACCEPTABLE
+Rock County,0005 - BATTLE PLAIN TWP,U.S. President & Vice President,115,115,0,0,0,ACCEPTABLE
+Rock County,0005 - BATTLE PLAIN TWP,U.S. Senator,115,115,0,0,0,ACCEPTABLE
+Rock County,0005 - BATTLE PLAIN TWP,U.S. Representative District 1,115,115,0,0,0,ACCEPTABLE
+Rock County,0035 - HILLS,U.S. President & Vice President,391,391,0,0,0,ACCEPTABLE
+Rock County,0035 - HILLS,U.S. Senator,391,391,0,0,0,ACCEPTABLE
+Rock County,0035 - HILLS,U.S. Representative District 1,391,391,0,0,0,ACCEPTABLE
+Roseau County,0045 - ENSTROM TOWNSHIP,U.S. President & Vice President,227,227,0,0,0,ACCEPTABLE
+Roseau County,0045 - ENSTROM TOWNSHIP,U.S. Senator,227,227,0,0,0,ACCEPTABLE
+Roseau County,0045 - ENSTROM TOWNSHIP,U.S. Representative District 7,227,227,0,0,0,ACCEPTABLE
+Roseau County,0122 - JUNEBERRY/BLOOMING VALLEY UNORG,U.S. President & Vice President,11,11,0,0,0,ACCEPTABLE
+Roseau County,0122 - JUNEBERRY/BLOOMING VALLEY UNORG,U.S. Senator,11,11,0,0,0,ACCEPTABLE
+Roseau County,0122 - JUNEBERRY/BLOOMING VALLEY UNORG,U.S. Representative District 7,11,11,0,0,0,ACCEPTABLE
+Roseau County,0145 - REINE TOWNSHIP,U.S. President & Vice President,57,57,0,0,0,ACCEPTABLE
+Roseau County,0145 - REINE TOWNSHIP,U.S. Senator,57,57,0,0,0,ACCEPTABLE
+Roseau County,0145 - REINE TOWNSHIP,U.S. Representative District 7,57,57,0,0,0,ACCEPTABLE
+St. Louis County,0025 - ARROWHEAD TWP.,U.S. President & Vice President,126,126,0,0,0,ACCEPTABLE
+St. Louis County,0025 - ARROWHEAD TWP.,U.S. Senator,126,126,2,2,0,ACCEPTABLE
+St. Louis County,0025 - ARROWHEAD TWP.,U.S. Representative District 8,126,126,0,0,0,ACCEPTABLE
+St. Louis County,0095 - CHERRY TWP.,U.S. President & Vice President,561,561,0,0,0,ACCEPTABLE
+St. Louis County,0095 - CHERRY TWP.,U.S. Senator,561,561,0,0,0,ACCEPTABLE
+St. Louis County,0095 - CHERRY TWP.,U.S. Representative District 8,561,561,0,0,0,ACCEPTABLE
+St. Louis County,0125 - COOK,U.S. President & Vice President,314,314,0,0,0,ACCEPTABLE
+St. Louis County,0125 - COOK,U.S. Senator,314,314,0,0,0,ACCEPTABLE
+St. Louis County,0125 - COOK,U.S. Representative District 8,314,314,0,0,0,ACCEPTABLE
+St. Louis County,0230 - DULUTH P-17,U.S. President & Vice President,1226,1224,2,2,0,ACCEPTABLE
+St. Louis County,0230 - DULUTH P-17,U.S. Senator,1226,1224,2,2,0,ACCEPTABLE
+St. Louis County,0230 - DULUTH P-17,U.S. Representative District 8,1226,1224,2,2,0,ACCEPTABLE
+St. Louis County,0825 - MOUNTAIN IRON P-2,U.S. President & Vice President,821,821,0,0,0,ACCEPTABLE
+St. Louis County,0825 - MOUNTAIN IRON P-2,U.S. Senator,821,821,0,0,0,ACCEPTABLE
+St. Louis County,0825 - MOUNTAIN IRON P-2,U.S. Representative District 8,821,821,0,0,0,ACCEPTABLE
+St. Louis County,0960 - UNORG. PRCT. 14,U.S. President & Vice President,515,515,0,0,0,ACCEPTABLE
+St. Louis County,0960 - UNORG. PRCT. 14,U.S. Senator,515,515,0,0,0,ACCEPTABLE
+St. Louis County,0960 - UNORG. PRCT. 14,U.S. Representative District 8,515,515,0,0,0,ACCEPTABLE
+Scott County,0015 - BLAKELEY TWP.,U.S. President & Vice President,291,291,0,0,0,ACCEPTABLE
+Scott County,0015 - BLAKELEY TWP.,U.S. Senator,291,291,0,0,0,ACCEPTABLE
+Scott County,0015 - BLAKELEY TWP.,U.S. Representative District 2,291,291,0,0,0,ACCEPTABLE
+Scott County,0020 - CEDAR LAKE TWP.,U.S. President & Vice President,2193,2193,0,0,0,ACCEPTABLE
+Scott County,0020 - CEDAR LAKE TWP.,U.S. Senator,2193,2193,0,0,0,ACCEPTABLE
+Scott County,0020 - CEDAR LAKE TWP.,U.S. Representative District 2,2193,2193,0,0,0,ACCEPTABLE
+Scott County,0030 - CREDIT RIVER P-2,U.S. President & Vice President,2251,2251,0,0,0,ACCEPTABLE
+Scott County,0030 - CREDIT RIVER P-2,U.S. Senator,2251,2251,2,2,0,ACCEPTABLE
+Scott County,0030 - CREDIT RIVER P-2,U.S. Representative District 2,2251,2251,2,2,0,ACCEPTABLE
+Scott County,0090 - PRIOR LAKE P-3,U.S. President & Vice President,2115,2115,2,2,0,ACCEPTABLE
+Scott County,0090 - PRIOR LAKE P-3,U.S. Senator,2115,2115,0,0,0,ACCEPTABLE
+Scott County,0090 - PRIOR LAKE P-3,U.S. Representative District 2,2115,2115,0,0,0,ACCEPTABLE
+Sherburne County,0020 - BIG LAKE CITY P-01,U.S. President & Vice President,1579,1579,2,2,0,ACCEPTABLE
+Sherburne County,0020 - BIG LAKE CITY P-01,U.S. Senator,1579,1579,0,0,0,ACCEPTABLE
+Sherburne County,0020 - BIG LAKE CITY P-01,U.S. Representative District 6,1579,1579,0,0,0,ACCEPTABLE
+Sherburne County,0040 - CLEAR LAKE TWP,U.S. President & Vice President,1192,1192,2,2,0,ACCEPTABLE
+Sherburne County,0040 - CLEAR LAKE TWP,U.S. Senator,1192,1192,0,0,0,ACCEPTABLE
+Sherburne County,0040 - CLEAR LAKE TWP,U.S. Representative District 6,1192,1192,2,2,0,ACCEPTABLE
+Sherburne County,0050 - ELK RIVER W2 P2A,U.S. President & Vice President,2781,2781,0,0,0,ACCEPTABLE
+Sherburne County,0050 - ELK RIVER W2 P2A,U.S. Senator,2781,2781,0,0,0,ACCEPTABLE
+Sherburne County,0050 - ELK RIVER W2 P2A,U.S. Representative District 6,2781,2781,0,0,0,ACCEPTABLE
+Sibley County,0055 - GREEN ISLE,U.S. President & Vice President,378,378,0,0,0,ACCEPTABLE
+Sibley County,0055 - GREEN ISLE,U.S. Senator,378,378,0,0,0,ACCEPTABLE
+Sibley County,0055 - GREEN ISLE,U.S. Representative District 7,378,378,0,0,0,ACCEPTABLE
+Sibley County,0095 - NEW AUBURN TWP.,U.S. President & Vice President,251,251,0,0,0,ACCEPTABLE
+Sibley County,0095 - NEW AUBURN TWP.,U.S. Senator,251,251,0,0,0,ACCEPTABLE
+Sibley County,0095 - NEW AUBURN TWP.,U.S. Representative District 7,251,251,0,0,0,ACCEPTABLE
+Stearns County,0055 - COLLEGEVILLE TWP P2,U.S. President & Vice President,639,639,2,2,0,ACCEPTABLE
+Stearns County,0055 - COLLEGEVILLE TWP P2,U.S. Senator,639,639,0,0,0,ACCEPTABLE
+Stearns County,0055 - COLLEGEVILLE TWP P2,U.S. Representative District 6,639,639,0,0,0,ACCEPTABLE
+Stearns County,0400 - ST MARTIN TWP,U.S. President & Vice President,277,277,0,0,0,ACCEPTABLE
+Stearns County,0400 - ST MARTIN TWP,U.S. Senator,277,277,0,0,0,ACCEPTABLE
+Stearns County,0400 - ST MARTIN TWP,U.S. Representative District 7,277,277,0,0,0,ACCEPTABLE
+Stearns County,0430 - SAUK CENTRE TWP,U.S. President & Vice President,746,746,0,0,0,ACCEPTABLE
+Stearns County,0430 - SAUK CENTRE TWP,U.S. Senator,746,746,0,0,0,ACCEPTABLE
+Stearns County,0430 - SAUK CENTRE TWP,U.S. Representative District 7,746,746,0,0,0,ACCEPTABLE
+Steele County,0035 - ELLENDALE,U.S. President & Vice President,374,374,0,0,0,ACCEPTABLE
+Steele County,0035 - ELLENDALE,U.S. Senator,374,374,0,0,0,ACCEPTABLE
+Steele County,0035 - ELLENDALE,U.S. Representative District 1,374,374,0,0,0,ACCEPTABLE
+Steele County,0060 - MERIDEN TWP,U.S. President & Vice President,387,387,0,0,0,ACCEPTABLE
+Steele County,0060 - MERIDEN TWP,U.S. Senator,387,387,0,0,0,ACCEPTABLE
+Steele County,0060 - MERIDEN TWP,U.S. Representative District 1,387,387,0,0,0,ACCEPTABLE
+Stevens County,0045 - FRAMNAS TWP.,U.S. President & Vice President,236,236,0,0,0,ACCEPTABLE
+Stevens County,0045 - FRAMNAS TWP.,U.S. Senator,236,236,2,2,0,ACCEPTABLE
+Stevens County,0045 - FRAMNAS TWP.,U.S. Representative District 7,236,236,2,2,0,ACCEPTABLE
+Stevens County,0070 - MORRIS P-1,U.S. President & Vice President,741,741,2,2,0,ACCEPTABLE
+Stevens County,0070 - MORRIS P-1,U.S. Senator,741,741,2,2,0,ACCEPTABLE
+Stevens County,0070 - MORRIS P-1,U.S. Representative District 7,741,741,0,0,0,ACCEPTABLE
+Swift County,0005 - APPLETON,U.S. President & Vice President,663,663,0,0,0,ACCEPTABLE
+Swift County,0005 - APPLETON,U.S. Senator,663,663,0,0,0,ACCEPTABLE
+Swift County,0005 - APPLETON,U.S. Representative District 7,663,663,2,2,0,ACCEPTABLE
+Swift County,0060 - DUBLIN TWP.,U.S. President & Vice President,93,93,0,0,0,ACCEPTABLE
+Swift County,0060 - DUBLIN TWP.,U.S. Senator,93,93,0,0,0,ACCEPTABLE
+Swift County,0060 - DUBLIN TWP.,U.S. Representative District 7,93,93,0,0,0,ACCEPTABLE
+Swift County,0140 - TARA TWP.,U.S. President & Vice President,51,51,0,0,0,ACCEPTABLE
+Swift County,0140 - TARA TWP.,U.S. Senator,51,51,0,0,0,ACCEPTABLE
+Swift County,0140 - TARA TWP.,U.S. Representative District 7,51,51,0,0,0,ACCEPTABLE
+Todd County,0120 - LITTLE SAUK TWP,U.S. President & Vice President,468,468,0,0,0,ACCEPTABLE
+Todd County,0120 - LITTLE SAUK TWP,U.S. Senator,468,468,0,0,0,ACCEPTABLE
+Todd County,0120 - LITTLE SAUK TWP,U.S. Representative District 7,468,468,0,0,0,ACCEPTABLE
+Todd County,0145 - OSAKIS,U.S. President & Vice President,94,94,0,0,0,ACCEPTABLE
+Todd County,0145 - OSAKIS,U.S. Senator,94,94,0,0,0,ACCEPTABLE
+Todd County,0145 - OSAKIS,U.S. Representative District 7,94,94,0,0,0,ACCEPTABLE
+Traverse County,0030 - FOLSOM TWP.,U.S. President & Vice President,68,68,0,0,0,ACCEPTABLE
+Traverse County,0030 - FOLSOM TWP.,U.S. Senator,68,68,0,0,0,ACCEPTABLE
+Traverse County,0030 - FOLSOM TWP.,U.S. Representative District 7,68,68,0,0,0,ACCEPTABLE
+Traverse County,0060 - TARA TWP.,U.S. President & Vice President,51,51,0,0,0,ACCEPTABLE
+Traverse County,0060 - TARA TWP.,U.S. Senator,51,51,0,0,0,ACCEPTABLE
+Traverse County,0060 - TARA TWP.,U.S. Representative District 7,51,51,0,0,0,ACCEPTABLE
+Traverse County,0090 - WHEATON P-2,U.S. President & Vice President,351,351,2,2,0,ACCEPTABLE
+Traverse County,0090 - WHEATON P-2,U.S. Senator,351,351,0,0,0,ACCEPTABLE
+Traverse County,0090 - WHEATON P-2,U.S. Representative District 7,351,351,0,0,0,ACCEPTABLE
+Wabasha County,0015 - ELGIN CITY,U.S. President & Vice President,683,683,0,0,0,ACCEPTABLE
+Wabasha County,0015 - ELGIN CITY,U.S. Senator,683,683,0,0,0,ACCEPTABLE
+Wabasha County,0015 - ELGIN CITY,U.S. Representative District 1,683,683,0,0,0,ACCEPTABLE
+Wabasha County,0130 - PLAINVIEW TWP.,U.S. President & Vice President,287,287,0,0,0,ACCEPTABLE
+Wabasha County,0130 - PLAINVIEW TWP.,U.S. Senator,287,287,0,0,0,ACCEPTABLE
+Wabasha County,0130 - PLAINVIEW TWP.,U.S. Representative District 1,287,287,0,0,0,ACCEPTABLE
+Wadena County,0030 - LEAF RIVER TWP,U.S. President & Vice President,287,287,0,0,0,ACCEPTABLE
+Wadena County,0030 - LEAF RIVER TWP,U.S. Senator,287,287,0,0,0,ACCEPTABLE
+Wadena County,0030 - LEAF RIVER TWP,U.S. Representative District 7,287,287,0,0,0,ACCEPTABLE
+Wadena County,0070 - ROCKWOOD TWP.,U.S. President & Vice President,250,250,0,0,0,ACCEPTABLE
+Wadena County,0070 - ROCKWOOD TWP.,U.S. Senator,250,250,0,0,0,ACCEPTABLE
+Wadena County,0070 - ROCKWOOD TWP.,U.S. Representative District 7,250,250,0,0,0,ACCEPTABLE
+Waseca County,0030 - IOSCO TWP.,U.S. President & Vice President,387,387,0,0,0,ACCEPTABLE
+Waseca County,0030 - IOSCO TWP.,U.S. Senator,387,387,0,0,0,ACCEPTABLE
+Waseca County,0030 - IOSCO TWP.,U.S. Representative District 1,387,387,0,0,0,ACCEPTABLE
+Waseca County,0075 - WALDORF,U.S. President & Vice President,117,117,0,0,0,ACCEPTABLE
+Waseca County,0075 - WALDORF,U.S. Senator,117,117,0,0,0,ACCEPTABLE
+Waseca County,0075 - WALDORF,U.S. Representative District 1,117,117,0,0,0,ACCEPTABLE
+Washington County,0215 - MAY TWP.,U.S. President & Vice President,2064,2064,0,0,0,ACCEPTABLE
+Washington County,0215 - MAY TWP.,U.S. Senator,2064,2064,2,2,0,ACCEPTABLE
+Washington County,0215 - MAY TWP.,U.S. Representative District 8,2064,2064,0,0,0,ACCEPTABLE
+Washington County,0265 - OAKDALE P-8,U.S. President & Vice President,872,872,0,0,0,ACCEPTABLE
+Washington County,0265 - OAKDALE P-8,U.S. Senator,872,872,2,2,0,ACCEPTABLE
+Washington County,0265 - OAKDALE P-8,U.S. Representative District 4,872,872,0,0,0,ACCEPTABLE
+Washington County,0370 - WILLERNIE,U.S. President & Vice President,318,318,0,0,0,ACCEPTABLE
+Washington County,0370 - WILLERNIE,U.S. Senator,318,318,0,0,0,ACCEPTABLE
+Washington County,0370 - WILLERNIE,U.S. Representative District 4,318,318,0,0,0,ACCEPTABLE
+Washington County,0410 - WOODBURY P-08,U.S. President & Vice President,3109,3109,0,0,0,ACCEPTABLE
+Washington County,0410 - WOODBURY P-08,U.S. Senator,3109,3109,0,0,0,ACCEPTABLE
+Washington County,0410 - WOODBURY P-08,U.S. Representative District 4,3109,3109,2,2,0,ACCEPTABLE
+Watonwan County,0060 - MADELIA TWP,U.S. President & Vice President,185,185,0,0,0,ACCEPTABLE
+Watonwan County,0060 - MADELIA TWP,U.S. Senator,185,185,0,0,0,ACCEPTABLE
+Watonwan County,0060 - MADELIA TWP,U.S. Representative District 1,185,185,0,0,0,ACCEPTABLE
+Watonwan County,0090 - ROSENDALE TWP,U.S. President & Vice President,181,181,0,0,0,ACCEPTABLE
+Watonwan County,0090 - ROSENDALE TWP,U.S. Senator,181,181,0,0,0,ACCEPTABLE
+Watonwan County,0090 - ROSENDALE TWP,U.S. Representative District 1,181,181,0,0,0,ACCEPTABLE
+Wilkin County,0035 - BRECKENRIDGE P-2,U.S. President & Vice President,602,602,0,0,0,ACCEPTABLE
+Wilkin County,0035 - BRECKENRIDGE P-2,U.S. Senator,602,602,0,0,0,ACCEPTABLE
+Wilkin County,0035 - BRECKENRIDGE P-2,U.S. Representative District 7,602,602,0,0,0,ACCEPTABLE
+Wilkin County,0075 - DEERHORN TWP.,U.S. President & Vice President,69,69,0,0,0,ACCEPTABLE
+Wilkin County,0075 - DEERHORN TWP.,U.S. Senator,69,69,0,0,0,ACCEPTABLE
+Wilkin County,0075 - DEERHORN TWP.,U.S. Representative District 7,69,69,0,0,0,ACCEPTABLE
+Winona County,0160 - WINONA W-1 P-2,U.S. President & Vice President,1125,1125,0,0,0,ACCEPTABLE
+Winona County,0160 - WINONA W-1 P-2,U.S. Senator,1125,1125,0,0,0,ACCEPTABLE
+Winona County,0160 - WINONA W-1 P-2,U.S. Representative District 1,1125,1125,2,2,0,ACCEPTABLE
+Winona County,0210 - WINONA W-3 P-4,U.S. President & Vice President,827,827,0,0,0,ACCEPTABLE
+Winona County,0210 - WINONA W-3 P-4,U.S. Senator,827,827,0,0,0,ACCEPTABLE
+Winona County,0210 - WINONA W-3 P-4,U.S. Representative District 1,827,827,0,0,0,ACCEPTABLE
+Wright County,0010 - ALBION TWP,U.S. President & Vice President,860,860,4,4,0,ACCEPTABLE
+Wright County,0010 - ALBION TWP,U.S. Senator,860,860,0,0,0,ACCEPTABLE
+Wright County,0010 - ALBION TWP,U.S. Representative District 6,860,860,0,0,0,ACCEPTABLE
+Wright County,0020 - BUFFALO P-1,U.S. President & Vice President,1676,1676,2,2,0,ACCEPTABLE
+Wright County,0020 - BUFFALO P-1,U.S. Senator,1676,1676,2,2,0,ACCEPTABLE
+Wright County,0020 - BUFFALO P-1,U.S. Representative District 6,1676,1676,2,2,0,ACCEPTABLE
+Wright County,0105 - MAPLE LAKE,U.S. President & Vice President,1225,1225,0,0,0,ACCEPTABLE
+Wright County,0105 - MAPLE LAKE,U.S. Senator,1225,1225,0,0,0,ACCEPTABLE
+Wright County,0105 - MAPLE LAKE,U.S. Representative District 6,1225,1225,0,0,0,ACCEPTABLE
+Wright County,0143 - OTSEGO CITY P4B,U.S. President & Vice President,1505,1505,0,0,0,ACCEPTABLE
+Wright County,0143 - OTSEGO CITY P4B,U.S. Senator,1505,1505,2,2,0,ACCEPTABLE
+Wright County,0143 - OTSEGO CITY P4B,U.S. Representative District 6,1505,1505,0,0,0,ACCEPTABLE
+Yellow Medicine County,0020 - CLARKFIELD,U.S. President & Vice President,392,392,0,0,0,ACCEPTABLE
+Yellow Medicine County,0020 - CLARKFIELD,U.S. Senator,392,392,0,0,0,ACCEPTABLE
+Yellow Medicine County,0020 - CLARKFIELD,U.S. Representative District 7,392,392,0,0,0,ACCEPTABLE
+Yellow Medicine County,0120 - POSEN TWP,U.S. President & Vice President,144,144,0,0,0,ACCEPTABLE
+Yellow Medicine County,0120 - POSEN TWP,U.S. Senator,144,144,0,0,0,ACCEPTABLE
+Yellow Medicine County,0120 - POSEN TWP,U.S. Representative District 7,144,144,0,0,0,ACCEPTABLE
+Yellow Medicine County,0130 - SANDNES TWP,U.S. President & Vice President,145,145,0,0,0,ACCEPTABLE
+Yellow Medicine County,0130 - SANDNES TWP,U.S. Senator,145,145,0,0,0,ACCEPTABLE
+Yellow Medicine County,0130 - SANDNES TWP,U.S. Representative District 7,145,145,0,0,0,ACCEPTABLE

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "eavs2024.zip",
+    "url": "https://www.eac.gov/sites/default/files/2026-02/2024_EAVS_for_Public_Release_nolabel_V2_csv.zip",
+    "sha256": "4073b9f48e1791d44a78ddc543379f6c040c31ce733dfa47676330b4d7f6d6df",
+    "downloaded": "2026-10-17"
+  },
+  {
+    "file": "eavs2024_codebook.xlsx",
+    "url": "https://www.eac.gov/sites/default/files/2025-06/2024_EAVS_Codebook.xlsx",
+    "sha256": "8ad78412e20f930c750b34f5123edef40b57a56f2088c44321080247025aac24",
+    "downloaded": "2026-10-17"
+  }
+]

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="report-layout" content="editorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>United States 2024 — Senate &amp; House election analysis</title>
+    <meta name="description" content="What the 2024 Senate and House results tell me: one unusual number pattern, a Minnesota hand check, and ten close races.">
+    <meta property="og:title" content="United States 2024 — Senate &amp; House election analysis">
+    <meta property="og:description" content="A plain-English guide to the findings, with charts, methods and sources available to expand.">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316324f'/%3E%3Cpath d='M14 34l12 12 24-28' stroke='%23ffffff' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css?v=usa-cards-20261018">
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body class="page-usa-2024">
+    <header class="top">
+      <div class="bar">
+        <span class="brand">🇺🇸 United States · Election Forensics</span>
+        <div class="right">
+          <a class="home" href="../index.html">← All analyses</a><a class="home" href="#ohio">Ohio finding ↓</a><a class="home" href="#expanded-paradoxes">Vote splitting ↓</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="hero-inner">
+          <div class="kicker">
+            Independent statistical audit · 5 November 2024
+          </div>
+          <h1>Senate and House 2024 —<br>do the numbers add up?</h1>
+          <div class="verdict">
+            <div class="check warn" aria-hidden="true">!</div>
+            <div><h2>Ohio’s unusual vote-count pattern needs investigation</h2>
+<p>I checked vote totals from 47,236 local reporting areas. In the Ohio Senate race, the digits in Republican vote counts looked unusual against two expected patterns. The cause is unresolved: these checks cannot tell me whether it reflects ordinary differences between reporting areas, a data problem or manipulation. <a href="#ohio">See the Ohio finding ↓</a></p></div>
+          </div>
+          <div class="verdict flip">
+            <div class="check warn" aria-hidden="true">⇄</div>
+            <div><p class="flip-head">Could other candidates’ voters change the winner?</p>
+            <p class="v-line">In <b>ten races</b>, votes for candidates outside the top two outnumbered the winner’s lead. If enough of those voters had chosen the runner-up instead, the winner could have changed. I do not know whether they would have.</p></div>
+          </div>
+        </div>
+      </div>
+      <section aria-labelledby="findings">
+        <h2 id="findings">Three findings to take away</h2>
+        <div class="args">
+          <article class="arg">
+            <span class="num">1</span>
+            <h4>Ohio has a number pattern worth checking</h4>
+            <p>The Ohio Senate vote-count digits stood out against two expected patterns. That alone cannot tell me why the pattern appeared or whether anything went wrong. <a href="#ohio">Read the Ohio finding ↓</a></p>
+          </article>
+          <article class="arg">
+            <span class="num">2</span>
+            <h4>Minnesota’s hand check passed</h4>
+            <p>Minnesota checked paper ballots by hand in 219 precincts. All 657 race checks passed the state’s rules. Some small differences remained. This finding applies only to the precincts checked.</p>
+          </article>
+          <article class="arg">
+            <span class="num">3</span>
+            <h4>Other candidates’ voters could matter in ten races</h4>
+            <p>In ten close races, there were enough votes for other candidates to change the winner on paper. But counting those votes does not tell me who those voters would choose in a two-person race.</p>
+          </article>
+        </div>
+      </section>
+<section id="ohio" aria-labelledby="ohio-title">
+  <div class="res-card">
+    <span class="tag">! Needs a closer look</span>
+    <h2 id="ohio-title">Ohio Senate: what looked unusual?</h2>
+    <p><strong>The second digit in Republican vote counts appeared in an unusual pattern.</strong> For example, the second digit of 1,234 is 2. I counted how often each second digit appeared across 8,798 local Republican vote totals, then compared that pattern with two models of what I might expect.</p>
+    <p>Ohio stood out in both comparisons, even after allowing for the many tests in this study. It was the only 2024 case to do so. Seven cases from older elections also stood out in both comparisons.</p>
+    <details class="m">
+      <summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Picture guide: how the second-digit check works</span></summary>
+      <div class="m-details">
+        <figure class="fig"><img src="img/ohio_second_digit_explainer.png" alt="Illustration: 12, 123 and 1234 all have 2 as their second digit. Count the second digits across local vote totals to build a frequency chart." width="1264" height="672" loading="lazy"><figcaption>Illustration only. The examples explain the method; they are not Ohio vote totals.</figcaption></figure>
+      </div>
+    </details>
+    <details class="m">
+      <summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head">See Ohio’s actual digit pattern</span></summary>
+      <div class="m-details">
+        <p><strong>Blue bars show Ohio’s results.</strong> Each bar shows how often a second digit appeared among the 8,798 Republican vote totals. The dark line shows the Benford reference pattern. The amber markers show the range usually produced by a model fitted to the sizes of Ohio’s vote totals.</p>
+        <figure class="fig"><img src="img/ohio_second_digit_counts.png" alt="Second-digit frequencies in 8,798 Ohio Republican Senate vote totals, compared with the Benford pattern and a simulated range fitted to the vote-count sizes." width="1262" height="823" loading="lazy"><figcaption>Each local vote total counts once, regardless of how many votes it contains. Amber ranges cover the middle 95% of frequencies for each digit in 2,000 fitted-lognormal simulations. These are separate ranges for each digit, not a pass/fail rule for the whole chart. The published overall test uses 20,000 simulations.</figcaption></figure>
+        <p><strong>What stands out:</strong> about 10% of Ohio’s totals have 0 as the second digit, compared with about 12% in the Benford pattern. Digits 7, 8 and 9 appear more often than that pattern predicts. Overall, Ohio’s bars are flatter than the reference line.</p>
+        <p>A gap between a bar and a reference shows a difference from that model. It does not show how many votes were wrong. The overall finding considers the pattern across all ten digits.</p>
+        <p><a href="analysis/expanded/ohio_second_digit_frequencies.csv" download>Download the numbers behind this chart (CSV)</a></p>
+      </div>
+    </details>
+    <h3>What does that tell me?</h3>
+    <p>It gives me a reason to look more closely at the records. It does not tell me that votes were added, removed or switched. The two comparisons use the same vote counts, so they are not two independent pieces of evidence.</p>
+    <p>The models do not fully account for differences in reporting-area size or voter makeup. Those differences could help explain the pattern. This check cannot tell me how many votes might be affected or whether the winner would change.</p>
+    <h3>What would help explain it?</h3>
+    <p>A useful next step would be to check the original Ohio records, see which areas contribute most to the pattern, and repeat the comparison using areas of similar size and voting habits. Paper-ballot checks would provide evidence that digit patterns alone cannot.</p>
+    <details class="m">
+      <summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head">See the Ohio test results and source limits</span></summary>
+      <div class="m-details">
+        <p>This is a Benford second-digit test of 8,798 Republican Senate vote counts of at least 10. The theoretical comparison gives p = 9.44 × 10<sup>−14</sup> and adjusted q = 2.18 × 10<sup>−11</sup>. The fitted-lognormal comparison, refined with 20,000 simulations, gives p = 1/20,001 (about 0.00005) and adjusted q = 0.00496. Both pass the q &lt; 0.05 threshold after separate adjustments across the full family of 694 digit tests. These values are not probabilities that fraud occurred.</p>
+        <p>The Ohio data is a pinned mirror copy, not a fresh download from the state. It omits 640 Senate write-in votes compared with the House Clerk’s totals; the named Republican candidate’s counts remain available for this test. The models do not capture all differences between reporting areas.</p>
+        <p><a href="analysis/expanded/precinct_digits.csv" download>All digit-test results (CSV)</a> · <a href="EXPANDED_REPORT.md">Full statistical report</a> · <a href="RECONCILIATION.md">Source checks and discrepancies</a></p>
+      </div>
+    </details>
+  </div>
+</section>
+<section id="expanded-analysis" aria-labelledby="expanded-title">
+<h2 id="expanded-title">What did the number checks find?</h2>
+<p>The clearest lead was in Ohio. The other checks did not establish fraud. Normal differences between communities can also produce unusual-looking results, and these tests can miss problems.</p>
+<details class="m"><summary><span class="m-head">See the overview chart and test totals</span></summary><div class="m-details">
+<p class="sub">110 current contest samples · 65 historical samples · 694 digit tests.</p>
+<p>Ten digit tests flag against theoretical distributions and eight against a fitted lognormal model; eight flag under both, after separate Benjamini–Hochberg adjustments for multiple testing. Only one of those eight is from 2024. Neither reference model captures every difference in precinct size or voter composition.</p>
+<figure class="fig"><img src="img/expanded_fingerprints.png" alt="Six panels of turnout against Republican votes per ballot in newly analyzed state sources" width="1950" height="1200" loading="lazy"><figcaption>Observed geographic patterns across the sampled states. Iowa and South Carolina panels pool House districts for display only; statistical tests separate districts.</figcaption></figure>
+</div></details>
+<div class="methods">
+<details class="m" id="shpilkin"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>How many votes came from very high-turnout areas?</h3><p>Those votes alone do not tell me whether anything went wrong.</p></span></summary><div class="m-details"><p>The own-sample registration-weighted 99.5th-percentile tails contain 0–1.489% of leading-bloc votes in current samples. No honest-core model is established, so there is no defensible stuffed-vote total or corrected outcome. Historical samples are comparisons, not matched-precinct controls.</p></div></details>
+<details class="m" id="comet"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Do places with more voters favor one party?</h3><p>The pattern changes from state to state. Differences between communities can explain it.</p></span></summary><div class="m-details"><p>Weighted and county-demeaned correlations are exported for every tested contest. Geographic gradients and the sign changing between states make a national fraud interpretation unjustified. Support uses candidate votes / all ballots, including contest nonvoting.</p></div></details>
+<details class="m" id="fingerprints"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Do reporting areas fall into different groups?</h3><p>They do, but different voting patterns are not evidence of fraud.</p></span></summary><div class="m-details"><p>Two Gaussian components are fitted within each eligible contest. This is a descriptive surrogate for population heterogeneity, not the paper’s mechanistic fraud model; component weights are not fraud rates.</p></div></details>
+<details class="m" id="integer-peaks"><summary><span class="badge" aria-hidden="true">✓</span><span class="m-head"><h3>Were there too many round percentages?</h3><p>No warning remained after allowing for the number of tests I ran.</p></span></summary><div class="m-details"><p>525 metric screens, each with 1,000 binomial simulations; integer and multiple-of-five excesses form a jointly adjusted family of 1050 approximate one-sided normal-tail tests. 0 metric screens flag in that approximation. Sparse discrete tails and endogenous binomial probabilities require calibration; the table is a follow-up queue.</p></div></details>
+<details class="m" id="digit-tests"><summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head"><h3>Did the digits in vote counts look unusual?</h3><p>Ohio’s Republican Senate counts stood out against two expected patterns. This needs a closer look.</p></span></summary><div class="m-details"><p>694 tests; counts must be ≥10 / ≥100, with ≥100 eligible counts per test. 10 theoretical and 8 lognormal-null flags after separate BH adjustments; 8 overlap. The initial fitted-lognormal null uses 400 simulations. All theoretical BH flags and all minimum-p Monte Carlo hits (12 tests) are rechecked with 20,000 simulations (minimum p=1/20,001); unselected tests receive p=1 before a fresh full-family BH adjustment. This avoids interpreting a coarse simulation floor as absence of a signal. Neither null models all election heterogeneity.</p></div></details>
+<details class="m" id="outliers"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Which places looked different from the others?</h3><p>The checks give me places to review, not a list of fraudulent results.</p></span></summary><div class="m-details"><p>2,753 county median/MAD flags; 1,451 Isolation Forest flags over current and historical unit–contest observations. County peers are not physical neighbors or socioeconomic matches. Isolation Forest uses 1% imposed contamination and no labeled fraud training set.</p></div></details>
+<details class="m" id="duplicates"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Did some places report exactly the same numbers?</h3><p>Yes. Small reporting areas can match by chance.</p></span></summary><div class="m-details"><p>1,673 repeated-vector rows (registration, ballots, DEM, REP, other). Repetition is not itself improbable without a conditional null; small precincts can match by chance. Splits and overlapping Washington sources are not counted as independent precincts.</p></div></details>
+<details class="m" id="selftest"><summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head"><h3>Can these checks miss a problem?</h3><p>Yes. A made-up test case went undetected, so a clean result is no guarantee.</p></span></summary><div class="m-details"><p>Minnesota Senate: a fixed original cutoff of 92.56% gives 9,401 Republican tail votes before injection and 156,258 after 45,950 synthetic Republican votes are added. Rounded-turnout injection into 194 units changes z from -1.49 to 0.31. The rounded scenario does not flag, so detection power is limited. The tail also counts pre-existing votes moved above the cutoff; it does not recover the injection size. These scenarios do not calibrate a fraud rate.</p></div></details></div>
+<details class="m"><summary><span class="m-head">Flagged digit tests and largest integer screens</span></summary><div class="m-details"><p>Digit table includes every flag under either null, with both comparisons. Integer q-values use a normal approximation and joint integer/multiple-of-five adjustment, not exact Monte Carlo tail probabilities.</p><div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Source / office</th>
+      <th>District</th>
+      <th>Bloc</th>
+      <th>Counts</th>
+      <th>Theoretical p</th>
+      <th>Adjusted q</th>
+      <th>Fitted-model p</th>
+      <th>Fitted adjusted q</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>027</td>
+      <td>DEM</td>
+      <td>227</td>
+      <td>0.000338</td>
+      <td>0.0261</td>
+      <td>0.0005</td>
+      <td>0.0434</td>
+    </tr>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>028</td>
+      <td>DEM</td>
+      <td>215</td>
+      <td>2.19e-10</td>
+      <td>2.53e-08</td>
+      <td>5e-05</td>
+      <td>0.00496</td>
+    </tr>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>030</td>
+      <td>DEM</td>
+      <td>213</td>
+      <td>6.44e-18</td>
+      <td>4.47e-15</td>
+      <td>5e-05</td>
+      <td>0.00496</td>
+    </tr>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>032</td>
+      <td>DEM</td>
+      <td>235</td>
+      <td>7.01e-12</td>
+      <td>9.73e-10</td>
+      <td>5e-05</td>
+      <td>0.00496</td>
+    </tr>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>033</td>
+      <td>DEM</td>
+      <td>212</td>
+      <td>1.71e-08</td>
+      <td>1.69e-06</td>
+      <td>5e-05</td>
+      <td>0.00496</td>
+    </tr>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>043</td>
+      <td>DEM</td>
+      <td>224</td>
+      <td>0.000677</td>
+      <td>0.047</td>
+      <td>0.00075</td>
+      <td>0.0578</td>
+    </tr>
+    <tr>
+      <td>CA2020 PRESIDENT</td>
+      <td>STATEWIDE</td>
+      <td>DEM</td>
+      <td>15524</td>
+      <td>1.01e-14</td>
+      <td>3.49e-12</td>
+      <td>5e-05</td>
+      <td>0.00496</td>
+    </tr>
+    <tr>
+      <td>OH2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>REP</td>
+      <td>8798</td>
+      <td>9.44e-14</td>
+      <td>2.18e-11</td>
+      <td>5e-05</td>
+      <td>0.00496</td>
+    </tr>
+    <tr>
+      <td>WA2020 PRESIDENT</td>
+      <td>STATEWIDE</td>
+      <td>DEM</td>
+      <td>7117</td>
+      <td>5.96e-12</td>
+      <td>9.73e-10</td>
+      <td>5e-05</td>
+      <td>0.00496</td>
+    </tr>
+    <tr>
+      <td>WA2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>DEM</td>
+      <td>7657</td>
+      <td>6.52e-06</td>
+      <td>0.000565</td>
+      <td>0.0013</td>
+      <td>0.0902</td>
+    </tr>
+  </tbody>
+</table></div><div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Source / office</th>
+      <th>District</th>
+      <th>Metric</th>
+      <th>Units</th>
+      <th>Integer hits</th>
+      <th>z</th>
+      <th>Adjusted q (approx.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MN2016 HOUSE</td>
+      <td>006</td>
+      <td>turnout</td>
+      <td>277</td>
+      <td>12</td>
+      <td>3.36244</td>
+      <td>0.25036</td>
+    </tr>
+    <tr>
+      <td>CA2024 HOUSE</td>
+      <td>29</td>
+      <td>share:votes:REP</td>
+      <td>135</td>
+      <td>6</td>
+      <td>2.69765</td>
+      <td>0.91653</td>
+    </tr>
+    <tr>
+      <td>MN2016 HOUSE</td>
+      <td>007</td>
+      <td>share:votes:REP</td>
+      <td>1316</td>
+      <td>102</td>
+      <td>2.46101</td>
+      <td>0.95306</td>
+    </tr>
+    <tr>
+      <td>CA2024 HOUSE</td>
+      <td>32</td>
+      <td>share:votes:DEM</td>
+      <td>173</td>
+      <td>8</td>
+      <td>2.41574</td>
+      <td>0.95306</td>
+    </tr>
+    <tr>
+      <td>CA2024 HOUSE</td>
+      <td>44</td>
+      <td>share:votes:DEM</td>
+      <td>167</td>
+      <td>7</td>
+      <td>2.38953</td>
+      <td>0.95306</td>
+    </tr>
+    <tr>
+      <td>VA2024 HOUSE</td>
+      <td>010</td>
+      <td>share:votes:REP</td>
+      <td>196</td>
+      <td>5</td>
+      <td>2.07313</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <td>CA2024 HOUSE</td>
+      <td>17</td>
+      <td>share:votes:DEM</td>
+      <td>217</td>
+      <td>8</td>
+      <td>1.99799</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <td>VA2024 HOUSE</td>
+      <td>008</td>
+      <td>turnout</td>
+      <td>170</td>
+      <td>4</td>
+      <td>1.99272</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <td>CA2024 HOUSE</td>
+      <td>48</td>
+      <td>share:votes:DEM</td>
+      <td>429</td>
+      <td>21</td>
+      <td>1.83787</td>
+      <td>1.00000</td>
+    </tr>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>043</td>
+      <td>turnout</td>
+      <td>229</td>
+      <td>10</td>
+      <td>1.82714</td>
+      <td>1.00000</td>
+    </tr>
+  </tbody>
+</table></div></div></details>
+<details class="m"><summary><span class="m-head">Historical comparisons and turnout correlations</span></summary><div class="m-details"><div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Source / office</th>
+      <th>District</th>
+      <th>units</th>
+      <th>republican_weighted_r</th>
+      <th>county_demeaned_r</th>
+      <th>turnout_pct</th>
+      <th>tail_share_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CA2020 PRESIDENT</td>
+      <td>STATEWIDE</td>
+      <td>17241</td>
+      <td>0.2730</td>
+      <td>0.2728</td>
+      <td>81.047</td>
+      <td>0.6326</td>
+    </tr>
+    <tr>
+      <td>CA2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>17867</td>
+      <td>0.1176</td>
+      <td>0.3029</td>
+      <td>71.390</td>
+      <td>0.8391</td>
+    </tr>
+    <tr>
+      <td>MN2020 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>4075</td>
+      <td>0.3808</td>
+      <td>0.4847</td>
+      <td>85.576</td>
+      <td>0.3653</td>
+    </tr>
+    <tr>
+      <td>MN2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>4075</td>
+      <td>0.3154</td>
+      <td>0.4006</td>
+      <td>82.162</td>
+      <td>0.5182</td>
+    </tr>
+    <tr>
+      <td>OH2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>8878</td>
+      <td>0.5000</td>
+      <td>0.5925</td>
+      <td>71.709</td>
+      <td>0.6024</td>
+    </tr>
+    <tr>
+      <td>VA2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>2531</td>
+      <td>0.4680</td>
+      <td>0.5648</td>
+      <td>70.521</td>
+      <td>0.4785</td>
+    </tr>
+    <tr>
+      <td>WA2020 PRESIDENT</td>
+      <td>STATEWIDE</td>
+      <td>7278</td>
+      <td>-0.1233</td>
+      <td>0.0288</td>
+      <td>84.132</td>
+      <td>0.8748</td>
+    </tr>
+    <tr>
+      <td>WA2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>7822</td>
+      <td>-0.1044</td>
+      <td>0.0102</td>
+      <td>78.953</td>
+      <td>0.6375</td>
+    </tr>
+    <tr>
+      <td>WV2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>1613</td>
+      <td>0.2004</td>
+      <td>0.2494</td>
+      <td>63.893</td>
+      <td>0.4403</td>
+    </tr>
+  </tbody>
+</table></div><p>Historical precincts are not a matched panel: redistricting, reporting boundaries, pandemic voting and registration definitions differ. Minnesota 2016/2020, California 2020 and Washington 2020 cannot by themselves define a nationwide honest-election null.</p></div></details>
+<details class="m"><summary><span class="m-head">Download the statistical results</span></summary><div class="m-details"><p>Download: <a href="analysis/expanded/precinct_metrics.json">metrics</a> · <a href="analysis/expanded/precinct_digits.csv">digit tests</a> · <a href="analysis/expanded/precinct_integer_peaks.csv">integer screens</a> · <a href="analysis/expanded/precinct_outliers.csv.gz">outlier rankings</a> · <a href="analysis/expanded/precinct_selftest.json">sensitivity checks</a>.</p></div></details>
+</section>
+<section id="hand-review"><h2>What did Minnesota’s hand check find?</h2>
+<p>Every check passed the state’s rules. This gives me evidence from actual paper ballots for the places reviewed, but it cannot tell me about places that were not checked.</p>
+<details class="m"><summary><span class="badge" aria-hidden="true">✓</span><span class="m-head">See the hand-check details and official report</span></summary><div class="m-details">
+
+        <p>The official 438-page report covers 657 precinct–contest tables across 219 precinct identities. Of these, 115 tables have a nonzero raw total difference and 24 have a nonzero adjusted difference. Summed candidate/category differences are 365 raw and 28 adjusted; they are not counts of unique disputed ballots. ACCEPTABLE reflects official tolerance thresholds, not exact equality.</p>
+        <p>All table statuses and totals were parsed with arithmetic checks. Luna separately verified four tables on three page images; this was not a visual audit of all 438 pages. The hand review provides physical evidence for the reviewed sample, with no claim about unreviewed precincts. <a href="analysis/mn_hand_review_summary.json" download>Review summary (JSON)</a> · <a href="analysis/mn_hand_review.csv" download>Every review table (CSV)</a>.</p>
+<p><a href="https://www.sos.mn.gov/media/ixzn1dkx/2024-post-election-review-results.pdf">Official hand-review report</a></p></div></details></section>
+<section id="coverage"><h2>How much of the country did I check?</h2>
+<p>I used 47,236 local reporting areas, including precincts, groups of precincts and central vote-counting pools. This is only part of the country. Not every area had enough usable data for every test.</p>
+<p>The study focuses on Senate and House races. Older elections help put the findings in context, but changes in boundaries and voting rules make direct comparisons difficult.</p>
+<details class="m"><summary><span class="m-head">Coverage, exclusions and source reconciliation</span></summary><div class="m-details"><div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Source / office</th>
+      <th>Rows</th>
+      <th>Eligible</th>
+      <th>Unknown</th>
+      <th>Zero denominator</th>
+      <th>Above registration</th>
+      <th>Votes &gt; ballots</th>
+      <th>Source limits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CA2020 HOUSE</td>
+      <td>21346</td>
+      <td>17241</td>
+      <td>0</td>
+      <td>3928</td>
+      <td>357</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CA2020 PRESIDENT</td>
+      <td>21346</td>
+      <td>17241</td>
+      <td>0</td>
+      <td>3928</td>
+      <td>357</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>CA2024 HOUSE</td>
+      <td>25245</td>
+      <td>17870</td>
+      <td>1974</td>
+      <td>5431</td>
+      <td>409</td>
+      <td>0</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>CA2024 SENATE</td>
+      <td>25245</td>
+      <td>17867</td>
+      <td>1974</td>
+      <td>5431</td>
+      <td>409</td>
+      <td>3</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>IA2024 HOUSE</td>
+      <td>1653</td>
+      <td>1378</td>
+      <td>2</td>
+      <td>271</td>
+      <td>273</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>ID2024 HOUSE</td>
+      <td>986</td>
+      <td>974</td>
+      <td>1</td>
+      <td>11</td>
+      <td>10</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MD2024 SENATE</td>
+      <td>2227</td>
+      <td>0</td>
+      <td>514</td>
+      <td>4</td>
+      <td>16</td>
+      <td>335</td>
+      <td>2227</td>
+    </tr>
+    <tr>
+      <td>MN2016 HOUSE</td>
+      <td>4120</td>
+      <td>4083</td>
+      <td>0</td>
+      <td>31</td>
+      <td>6</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MN2020 HOUSE</td>
+      <td>4110</td>
+      <td>4075</td>
+      <td>0</td>
+      <td>33</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MN2020 SENATE</td>
+      <td>4110</td>
+      <td>4075</td>
+      <td>0</td>
+      <td>33</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MN2024 HOUSE</td>
+      <td>4103</td>
+      <td>4075</td>
+      <td>0</td>
+      <td>28</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MN2024 SENATE</td>
+      <td>4103</td>
+      <td>4075</td>
+      <td>0</td>
+      <td>28</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MS-Union2024 HOUSE</td>
+      <td>20</td>
+      <td>20</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MS-Union2024 SENATE</td>
+      <td>20</td>
+      <td>20</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>OH2024 HOUSE</td>
+      <td>8915</td>
+      <td>8841</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>OH2024 SENATE</td>
+      <td>8878</td>
+      <td>8878</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>SC2024 HOUSE</td>
+      <td>2674</td>
+      <td>2075</td>
+      <td>366</td>
+      <td>206</td>
+      <td>154</td>
+      <td>0</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>VA2024 HOUSE</td>
+      <td>2695</td>
+      <td>2523</td>
+      <td>156</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <td>VA2024 SENATE</td>
+      <td>2675</td>
+      <td>2531</td>
+      <td>144</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>VT2024 HOUSE</td>
+      <td>247</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>247</td>
+    </tr>
+    <tr>
+      <td>WA2020 PRESIDENT</td>
+      <td>7436</td>
+      <td>7278</td>
+      <td>85</td>
+      <td>68</td>
+      <td>6</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>WA2024 HOUSE</td>
+      <td>7824</td>
+      <td>7821</td>
+      <td>0</td>
+      <td>2</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>WA2024 SENATE</td>
+      <td>8136</td>
+      <td>7822</td>
+      <td>202</td>
+      <td>111</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>WV2024 HOUSE</td>
+      <td>1651</td>
+      <td>1613</td>
+      <td>2</td>
+      <td>35</td>
+      <td>35</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>WV2024 SENATE</td>
+      <td>1651</td>
+      <td>1613</td>
+      <td>2</td>
+      <td>35</td>
+      <td>35</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table></div><p><strong>Source limits retained:</strong> Washington statewide data replaces King County, with registration differences of 13 versus the recorded statewide table and 4,521 versus the active-voter reconciliation workbook; every county ballot total and all 33 congressional candidate columns reconcile. Iowa, West Virginia and Ohio are pinned mirror copies, not freshly retrieved official files. Ohio write-ins are missing (640 Senate, 4 House district 2 and 29 House district 11 votes versus the Clerk); named-candidate digits remain observable. West Virginia’s other-candidate pool is short by 15 Senate and 174 House district 1 votes. None is filled with inferred precinct counts.</p>
+<p><strong>Geography and exclusions:</strong> split House precinct rows are excluded when full-precinct turnout cannot be assigned to a fragment. California suppression, above-registration counts, zero denominators and missing joins remain excluded. Virginia and South Carolina use name joins with numeric padding removed, collision checks and outer-join audits; unmatched rows stay unknown. South Carolina precinct ballots and registration sum exactly to its county/state Election History totals; VREMS voter-history denominators are not substituted. Vermont’s 247 town rows contain partial district results in multi-district towns and incomplete statewide candidate totals, so all are excluded from the combined diagnostics. Maryland administrative participation is still incompatible. Wyoming and North Dakota lack registration; Pennsylvania lacks ballots; North Carolina supplies registration only. Provisional OCR rows and four Kentucky PDFs remain outside the sample: transcript arithmetic alone does not validate the needed joins, and Kentucky’s published turnout has an unofficial/roll-timing caveat.</p><h3>Nonzero Clerk reconciliation differences</h3><div class="table-wrap"><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Source / office</th>
+      <th>District</th>
+      <th>bloc</th>
+      <th>observed</th>
+      <th>clerk</th>
+      <th>difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OH2024 HOUSE</td>
+      <td>002</td>
+      <td>votes:OTHER</td>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>-4.0</td>
+    </tr>
+    <tr>
+      <td>OH2024 HOUSE</td>
+      <td>011</td>
+      <td>votes:OTHER</td>
+      <td>6107.0</td>
+      <td>6136.0</td>
+      <td>-29.0</td>
+    </tr>
+    <tr>
+      <td>OH2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>votes:OTHER</td>
+      <td>195648.0</td>
+      <td>196288.0</td>
+      <td>-640.0</td>
+    </tr>
+    <tr>
+      <td>VT2024 HOUSE</td>
+      <td>001</td>
+      <td>votes:DEM</td>
+      <td>172146.0</td>
+      <td>218398.0</td>
+      <td>-46252.0</td>
+    </tr>
+    <tr>
+      <td>VT2024 HOUSE</td>
+      <td>001</td>
+      <td>votes:REP</td>
+      <td>89076.0</td>
+      <td>104451.0</td>
+      <td>-15375.0</td>
+    </tr>
+    <tr>
+      <td>VT2024 HOUSE</td>
+      <td>001</td>
+      <td>votes:OTHER</td>
+      <td>23356.0</td>
+      <td>27767.0</td>
+      <td>-4411.0</td>
+    </tr>
+    <tr>
+      <td>WV2024 HOUSE</td>
+      <td>001</td>
+      <td>votes:OTHER</td>
+      <td>25616.0</td>
+      <td>25790.0</td>
+      <td>-174.0</td>
+    </tr>
+    <tr>
+      <td>WV2024 SENATE</td>
+      <td>STATEWIDE</td>
+      <td>votes:OTHER</td>
+      <td>26075.0</td>
+      <td>26090.0</td>
+      <td>-15.0</td>
+    </tr>
+  </tbody>
+</table></div><p>Absent Clerk minor-party categories are unknown in the reconciliation table rather than treated as a source mismatch. Complete source rows, unmatched keys and every exclusion are retained in <a href="analysis/expanded/precinct_join_audit.csv.gz">the join audit</a>.</p></div></details>
+</section>
+      <section id="paradoxes"><span id="expanded-paradoxes"></span>
+        <h2>Could vote splitting change the winner?</h2>
+        <p class="sub">In ten races, the votes for candidates outside the top two were larger than the gap between first and second place.</p>
+        <p>For example, Iowa’s 1st House district was decided by 799 votes. There were 967 write-in votes. If 800 of those voters had backed the runner-up instead, with the rest sitting out, the result would have flipped. I do not know if they would have made that choice.</p>
+        <details class="m"><summary><span class="m-head">See the chart of the ten races</span></summary><div class="m-details">
+        <figure class="fig">
+          <img src="img/spoilers.png" alt="Ten official-source races where other candidate votes exceed the top-two margin" loading="lazy">
+          <figcaption>Official returns compiled by the House Clerk. Other votes include pooled write-ins; they do not imply shared voter preferences.</figcaption>
+        </figure>
+        </div></details>
+        <details class="m"><summary><span class="m-head">See the race totals and how many votes would need to switch</span></summary><div class="m-details"><div class="table-wrap">
+          <table>
+            <caption>
+              Strict-win bounds, holding the two leaders’ existing votes fixed
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Contest</th><th scope="col" class="number">Margin</th><th scope="col" class="number">Other votes</th><th scope="col" class="number">Needed if rest abstain</th><th scope="col" class="number">Needed if rest back leader</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">AZ · House 6</th><td class="number">10,822</td><td class="number">10,850</td><td class="number">10,823</td><td class="number">10,837</td>
+              </tr>
+              <tr>
+                <th scope="row">CO · House 8</th><td class="number">2,449</td><td class="number">9,425</td><td class="number">2,450</td><td class="number">5,938</td>
+              </tr>
+              <tr>
+                <th scope="row">IA · House 1</th><td class="number">799</td><td class="number">967</td><td class="number">800</td><td class="number">884</td>
+              </tr>
+              <tr>
+                <th scope="row">MI · Senate</th><td class="number">19,006</td><td class="number">170,821</td><td class="number">19,007</td><td class="number">94,914</td>
+              </tr>
+              <tr>
+                <th scope="row">NC · House 1</th><td class="number">6,307</td><td class="number">9,949</td><td class="number">6,308</td><td class="number">8,129</td>
+              </tr>
+              <tr>
+                <th scope="row">NV · Senate</th><td class="number">24,059</td><td class="number">42,197</td><td class="number">24,060</td><td class="number">33,129</td>
+              </tr>
+              <tr>
+                <th scope="row">OH · House 9</th><td class="number">2,382</td><td class="number">15,381</td><td class="number">2,383</td><td class="number">8,882</td>
+              </tr>
+              <tr>
+                <th scope="row">OR · House 5</th><td class="number">10,945</td><td class="number">29,508</td><td class="number">10,946</td><td class="number">20,227</td>
+              </tr>
+              <tr>
+                <th scope="row">PA · Senate</th><td class="number">15,115</td><td class="number">179,662</td><td class="number">15,116</td><td class="number">97,389</td>
+              </tr>
+              <tr>
+                <th scope="row">WI · Senate</th><td class="number">28,781</td><td class="number">74,014</td><td class="number">28,782</td><td class="number">51,398</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>For margin M and other-vote pool O, O &gt; M shows arithmetic capacity. If the rest abstain, M+1 voters transferring to the runner-up reverses the result. If every remaining other voter backs the leader, the threshold is floor((O+M)/2)+1. Neither scenario is an estimate of what those voters would do. Iowa House 1’s 967 other votes are pooled write-ins, not one candidate or an observed voting bloc.</p></div></details>
+        <div class="note">
+          <p><strong>I cannot say a candidate “spoiled” a race.</strong> The totals show what is possible on paper. They do not tell me anyone’s second choice.</p>
+        </div>
+        <details class="m"><summary><span class="m-head">Sources and rules for the vote-splitting check</span></summary><div class="m-details">
+        <p>I listed all 435 House and 33 regular Senate races and screened 448 contests in which the most votes win and multiple candidate records were available. Majority-rule and ranked-choice races, non-candidate ballots and Nevada’s “None of These Candidates” were excluded.</p>
+        <p><a href="PARADOXES.md" download>Every root paradox criterion and both thresholds</a> · <a href="analysis/clerk_candidate_totals.csv" download>Candidate totals with PDF pages</a> · <a href="analysis/clerk_race_screens.csv" download>All race screens</a> · <a href="analysis/clerk_medsl_race_reconciliation.csv" download>MEDSL reconciliation</a> · <a href="https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf">Official Clerk PDF</a>.</p></div></details>
+      </section>
+      <section id="limits">
+        <h2>What this study cannot conclude</h2>
+        <p>These checks cannot tell me how many votes, if any, were fraudulent. They also cannot prove that every place without a warning sign was counted correctly.</p>
+        <p>Some records were missing or could not be compared reliably. I did not examine ballot handling or how results changed on election night. Minnesota’s hand check is the only paper-ballot review included here.</p>
+        <details class="m"><summary><span class="m-head">Read the data gaps and limits of the study</span></summary><div class="m-details">
+        <div class="data">
+          <ul>
+            <li>
+              <strong>The MEDSL source does not fully reconcile.</strong> The separate MEDSL statewide Senate table is a cross-check, not an independent certified anchor. Naming, write-ins, suppressed counts, reporting updates and missing coverage produce differences. The Clerk race-total comparison matches 387 MEDSL contests; 101 margins differ. This does not certify all underlying precinct records.
+            </li>
+            <li>
+              <strong>Earlier MEDSL diagnostics exclude seven states.</strong> Indiana has documented straight-ticket overcount; New Jersey mixes geographic levels; Louisiana lacks precinct early votes; Alaska and Maine have ranked-choice / first-round complications. Oregon has unlabeled candidates and ballot-total rows; Rhode Island has House rows without district assignments. Their raw data remains preserved.
+            </li>
+            <li>
+              <strong>Turnout coverage is narrower.</strong> Only matching county-wide EAC jurisdictions are joined. Municipal codes are not treated as counties. House county totals mix district contests, and uncontested races can distort party comparisons.
+            </li>
+            <li>
+              <strong>No ballot forensics or counting dynamics.</strong> Final returns do not supply ballot serials, custody records or election-night time series. The Minnesota hand-review report provides a limited physical anchor for 219 reviewed precincts.
+            </li>
+            <li>
+              <strong>No preference or map counterfactual was established.</strong> Alaska/Maine ranked records could not be downloaded in this run. Geographic boundaries and population data were not collected for a gerrymander test.
+            </li>
+          </ul>
+          <p>These gaps prevent estimating a reliable fraud rate, demonstrating a preference paradox, or declaring the unflagged units verified clean.</p>
+        </div>
+        </div></details>
+      </section>
+      <section id="data">
+        <h2>Want to check the work?</h2>
+        <p>This page uses the analysis dated 18 October 2026.</p>
+<details class="m"><summary><span class="m-head">Open the reports, data downloads and sources</span></summary><div class="m-details">
+        <div class="data">
+          <h3>Reports and audit trail</h3>
+          <p><a href="EXPANDED_REPORT.md">Full statistical report</a> · <a href="analysis/expanded/summary.json">Summary data</a> · <a href="RECONCILIATION.md">Source reconciliation</a> · <a href="TURNOUT_EXPANSION.md">Download provenance</a>.</p>
+          <ul>
+            <li>
+              <a href="PRECINCT_REPORT.md" download>Retained 17 October precinct report (Markdown)</a> · <a href="REPORT.md" download>Archived county baseline (Markdown)</a> · <a href="PARADOXES.md" download>Voting-paradox report (Markdown)</a> · <a href="DATA.md" download>Data and reproduction notes (Markdown)</a>
+            </li>
+            <li>
+              <a href="analysis/coverage.csv" download>State coverage</a> · <a href="analysis/race_screens.csv" download>All race screens</a> · <a href="analysis/county_turnout_join_audit.csv" download>County join audit</a> (CSV)
+            </li>
+            <li>
+              <a href="analysis/senate_reference_reconciliation.csv" download>Senate reference reconciliation</a> · <a href="analysis/county_correlations.csv" download>County correlations</a> (CSV)
+            </li>
+          </ul>
+          <h3>Trace the data</h3>
+          <ul>
+            <li>
+              <a href="https://github.com/MEDSL/2024-elections-official/tree/df531089c78e6d0098db1a6bfb3849a066a06995" rel="noopener">MIT Election Data + Science Lab: pinned 2024 returns</a>, compiled from state and local sources. <a href="data/download_urls.txt" download>Exact download URLs</a> · <a href="data/manifest.csv" download>Archive SHA-256 checksums</a>.
+            </li>
+            <li>
+              <a href="https://www.eac.gov/research-and-data/studies-and-reports" rel="noopener">U.S. Election Assistance Commission: EAVS 2024, version 2</a>. Registration and participation fields come from its official jurisdiction survey. <a href="data/supplemental_sources.json" download>Source URLs and checksums</a>.
+            </li>
+          </ul>
+          <p>The source compilation is not a new certification of election results. Raw archives remain upstream; this page includes the analysis tables and provenance needed to trace the snapshot.</p>
+        </div>
+        </div></details>
+      </section>
+      <footer>
+        Independent analysis · <a href="https://renatyv.org" rel="noopener">renatyv.org</a> · English · <a href="../index.html">All analyses</a>
+      </footer>
+    </main>
+  </body>
+</html>

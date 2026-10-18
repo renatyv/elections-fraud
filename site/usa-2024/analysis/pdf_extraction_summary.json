@@ -1,0 +1,17 @@
+{
+  "planned_batches": 710,
+  "finished_batches": 710,
+  "successful_batches": 710,
+  "failed_batches": 0,
+  "pending_batches": 0,
+  "selected_pages": 4907,
+  "transcribed_rows": 10766,
+  "coalesced_rows": 8131,
+  "source_documents": 117,
+  "unlocated_rows": 28,
+  "arithmetic_eligible_congress_rows": 1117,
+  "repaired_documents": 69,
+  "source_office_comparisons": 229,
+  "exact_source_total_agreements": 119,
+  "limit": "Provisional model extraction; no changes to published forensic sample. Relevant text pages and all scanned pages selected; local-only text pages excluded. Wyoming uses equivalent Excel; corrected MS PDFs supersede originals."
+}

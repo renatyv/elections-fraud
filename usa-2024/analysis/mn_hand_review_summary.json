@@ -1,0 +1,20 @@
+{
+  "source_url": "https://www.sos.mn.gov/media/ixzn1dkx/2024-post-election-review-results.pdf",
+  "pages": 438,
+  "tables": 657,
+  "unique_county_precincts": 219,
+  "statuses": {
+    "ACCEPTABLE": 657
+  },
+  "tables_nonzero_raw_total": 115,
+  "tables_nonzero_adjusted_total": 24,
+  "sum_abs_raw_total_difference": 365,
+  "sum_abs_adjusted_total_difference": 28,
+  "luna_pages": [
+    1,
+    4,
+    5
+  ],
+  "luna_verified_tables": 4,
+  "limit": "Report difference totals sum candidate/category discrepancies, so the same ballot can affect more than one difference and more than one contest. Selected page verification is not a full OCR audit."
+}

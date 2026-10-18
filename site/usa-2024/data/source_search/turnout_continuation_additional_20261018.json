@@ -1,0 +1,176 @@
+[
+  {
+    "official_url": "https://www.ohiosos.gov/globalassets/elections/2024/gen/official/statewide-races-precinct-level.xlsx",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://www.ohiosos.gov/globalassets/elections/2024/gen/official/statewide-races-precinct-level.xlsx",
+        "retrieved_at_utc": "2026-10-18T11:13:34.222000+00:00",
+        "resolved_url": "https://www.ohiosos.gov/globalassets/elections/2024/gen/official/statewide-races-precinct-level.xlsx",
+        "status": "failed",
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/oh-2024-statewide-races-precinct-level.xlsx",
+        "retrieved_at_utc": "2026-10-18T11:13:39.324750+00:00",
+        "resolved_url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/oh-2024-statewide-races-precinct-level.xlsx",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/oh-2024-statewide-races-precinct-level.xlsx",
+        "bytes": 23053730,
+        "sha256": "60505e339d47b98c9e2797c62fef68b38b4f271cb37921c5283b0dfd19343653"
+      }
+    ],
+    "archive_members": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "xl/workbook.xml",
+      "xl/_rels/workbook.xml.rels",
+      "xl/worksheets/sheet1.xml",
+      "xl/worksheets/sheet2.xml",
+      "xl/worksheets/sheet3.xml",
+      "xl/worksheets/sheet4.xml",
+      "xl/worksheets/sheet5.xml",
+      "xl/worksheets/sheet6.xml",
+      "xl/worksheets/sheet7.xml",
+      "xl/worksheets/sheet8.xml",
+      "xl/theme/theme1.xml",
+      "xl/styles.xml",
+      "xl/sharedStrings.xml",
+      "docProps/core.xml",
+      "docProps/app.xml"
+    ]
+  },
+  {
+    "official_url": "https://elect.ky.gov/Resources/Documents/2024G%20Voter%20Turnout%20by%20County.pdf",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://elect.ky.gov/Resources/Documents/2024G%20Voter%20Turnout%20by%20County.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:34.689087+00:00",
+        "resolved_url": "https://elect.ky.gov/Resources/Documents/2024G%20Voter%20Turnout%20by%20County.pdf",
+        "status": "failed",
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-turnout-by-county.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:35.095663+00:00",
+        "resolved_url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-turnout-by-county.pdf",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/ky-2024-general-turnout-by-county.pdf",
+        "bytes": 93428,
+        "sha256": "1cad65f15b8c27f91246bbc0999afed35cdfc3e9d6359924f6bac5f9b05b3584"
+      }
+    ]
+  },
+  {
+    "official_url": "https://elect.ky.gov/Resources/Documents/2024G%20Voter%20Turnout%20by%20Precinct.pdf",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://elect.ky.gov/Resources/Documents/2024G%20Voter%20Turnout%20by%20Precinct.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:34.694531+00:00",
+        "resolved_url": "https://elect.ky.gov/Resources/Documents/2024G%20Voter%20Turnout%20by%20Precinct.pdf",
+        "status": "failed",
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-turnout-by-precinct.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:36.641485+00:00",
+        "resolved_url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-turnout-by-precinct.pdf",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/ky-2024-general-turnout-by-precinct.pdf",
+        "bytes": 1285455,
+        "sha256": "4342302d7dbd8e9d5c544779334f0468274568797d4054c6079cd02a0df6a90d"
+      }
+    ]
+  },
+  {
+    "official_url": "https://elect.ky.gov/Resources/Documents/voterstatscounty-November%20General%202024.pdf",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://elect.ky.gov/Resources/Documents/voterstatscounty-November%20General%202024.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:34.691726+00:00",
+        "resolved_url": "https://elect.ky.gov/Resources/Documents/voterstatscounty-November%20General%202024.pdf",
+        "status": "failed",
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-registration-by-county.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:35.142657+00:00",
+        "resolved_url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-registration-by-county.pdf",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/ky-2024-general-registration-by-county.pdf",
+        "bytes": 108369,
+        "sha256": "4b2f9a101241f4618217116274b5264e87979f6954fa96cb53922d9b9e626544"
+      }
+    ]
+  },
+  {
+    "official_url": "https://elect.ky.gov/Resources/Documents/voterstatsprecinct-November%20General%202024.pdf",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://elect.ky.gov/Resources/Documents/voterstatsprecinct-November%20General%202024.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:34.697242+00:00",
+        "resolved_url": "https://elect.ky.gov/Resources/Documents/voterstatsprecinct-November%20General%202024.pdf",
+        "status": "failed",
+        "error": "curl: (56) The requested URL returned error: 403"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-registration-by-precinct.pdf",
+        "retrieved_at_utc": "2026-10-18T11:13:36.239240+00:00",
+        "resolved_url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/ky-2024-general-registration-by-precinct.pdf",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/ky-2024-general-registration-by-precinct.pdf",
+        "bytes": 1198120,
+        "sha256": "4f7cd69e2d3a2a1e7cf91e8cbee35a9fc9be7cf32641baf0812a41d5d835598f"
+      }
+    ]
+  },
+  {
+    "official_url": "https://sc.elstats.civera.com/api/download_contest/7075_table.csv?split_party=false",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://sc.elstats.civera.com/api/download_contest/7075_table.csv?split_party=false",
+        "retrieved_at_utc": "2026-10-18T11:13:36.252239+00:00",
+        "resolved_url": "https://sc.elstats3.civera.com/api/download_contest/7075_table.csv?split_party=false",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/sc-2024-election-history/voter-statistics-7075.csv",
+        "bytes": 76660,
+        "sha256": "0b98cb703b265d3442fa5ec0d131112a986669809f1b17eb5a84f62dfd2529ed"
+      }
+    ]
+  },
+  {
+    "official_url": "https://enr.elections.virginia.gov/cdn/results/d2c804ee-4ec2-46bb-91d7-5b41526eab03/Election%20Turnout_0869920c-fc10-402c-9c5c-f335d00f3d1f.csv",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://enr.elections.virginia.gov/cdn/results/d2c804ee-4ec2-46bb-91d7-5b41526eab03/Election%20Turnout_0869920c-fc10-402c-9c5c-f335d00f3d1f.csv",
+        "retrieved_at_utc": "2026-10-18T11:13:35.592493+00:00",
+        "resolved_url": "https://enr.elections.virginia.gov/cdn/results/d2c804ee-4ec2-46bb-91d7-5b41526eab03/Election%20Turnout_0869920c-fc10-402c-9c5c-f335d00f3d1f.csv",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/va-2024-enr-election-turnout.csv",
+        "bytes": 368684,
+        "sha256": "df0b1e22112cc7fdaa617315f91c72fc8c4dfbb2dacb3673a8092d8e4b6b3149"
+      }
+    ]
+  },
+  {
+    "official_url": "https://static.electionresults.vermont.gov/elections/67a35c79-05a2-4ae3-a77d-97812256188b-turnout-20260611153112.json",
+    "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+    "attempts": [
+      {
+        "url": "https://static.electionresults.vermont.gov/elections/67a35c79-05a2-4ae3-a77d-97812256188b-turnout-20260611153112.json",
+        "retrieved_at_utc": "2026-10-18T11:13:42.879959+00:00",
+        "resolved_url": "https://static.electionresults.vermont.gov/elections/67a35c79-05a2-4ae3-a77d-97812256188b-turnout-20260611153112.json",
+        "status": "downloaded",
+        "name": "data/raw/precinct_sources/continuation_20261018/vt-2024-official-sources/2024-general-turnout.json",
+        "bytes": 4037628,
+        "sha256": "7bd9a38d55893c92d8fe361c0df40de11fc66925dd947a211ba919ed560f6082"
+      }
+    ]
+  }
+]
