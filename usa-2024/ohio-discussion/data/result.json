@@ -1,0 +1,17 @@
+{
+  "n_rows": 8878,
+  "n_tested": 8798,
+  "excluded_below_10": 80,
+  "chi2": 81.17407374943636,
+  "degrees_of_freedom": 9,
+  "p_theoretical": 9.442923016702805e-14,
+  "q_theoretical": 2.1844628578639158e-11,
+  "p_lognormal": 4.999750012499375e-05,
+  "q_lognormal": 0.0049568950123922,
+  "simulations": 20000,
+  "exceedances": 0,
+  "seed": 314159,
+  "log_count_mu": 5.562915636640911,
+  "log_count_sigma_population": 0.7841524573422134,
+  "family_tests": 694
+}

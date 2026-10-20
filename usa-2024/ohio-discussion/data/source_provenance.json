@@ -1,0 +1,41 @@
+{
+  "official_url": "https://www.ohiosos.gov/globalassets/elections/2024/gen/official/statewide-races-precinct-level.xlsx",
+  "mirror_commit": "5195a57d913c839106ce1d2de32e3510d9ef3d3a",
+  "attempts": [
+    {
+      "url": "https://www.ohiosos.gov/globalassets/elections/2024/gen/official/statewide-races-precinct-level.xlsx",
+      "retrieved_at_utc": "2026-10-18T11:13:34.222000+00:00",
+      "resolved_url": "https://www.ohiosos.gov/globalassets/elections/2024/gen/official/statewide-races-precinct-level.xlsx",
+      "status": "failed",
+      "error": "curl: (56) The requested URL returned error: 403"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/oh-2024-statewide-races-precinct-level.xlsx",
+      "retrieved_at_utc": "2026-10-18T11:13:39.324750+00:00",
+      "resolved_url": "https://raw.githubusercontent.com/Camreyn/civicresultmaps/5195a57d913c839106ce1d2de32e3510d9ef3d3a/data/oh-2024-statewide-races-precinct-level.xlsx",
+      "status": "downloaded",
+      "name": "data/raw/precinct_sources/continuation_20261018/oh-2024-statewide-races-precinct-level.xlsx",
+      "bytes": 23053730,
+      "sha256": "60505e339d47b98c9e2797c62fef68b38b4f271cb37921c5283b0dfd19343653"
+    }
+  ],
+  "archive_members": [
+    "[Content_Types].xml",
+    "_rels/.rels",
+    "xl/workbook.xml",
+    "xl/_rels/workbook.xml.rels",
+    "xl/worksheets/sheet1.xml",
+    "xl/worksheets/sheet2.xml",
+    "xl/worksheets/sheet3.xml",
+    "xl/worksheets/sheet4.xml",
+    "xl/worksheets/sheet5.xml",
+    "xl/worksheets/sheet6.xml",
+    "xl/worksheets/sheet7.xml",
+    "xl/worksheets/sheet8.xml",
+    "xl/theme/theme1.xml",
+    "xl/styles.xml",
+    "xl/sharedStrings.xml",
+    "docProps/core.xml",
+    "docProps/app.xml"
+  ]
+}
