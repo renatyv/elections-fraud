@@ -10,7 +10,8 @@ portugal-2025/               — Portugal, legislativas 2021–2026: 11 MAI expo
 brazil-oct-2026-round-1/             — Brazil, rounds of 04/25.10.2026: TSE results by precinct
                               (data/votacao_secao, ~23 GB of CSV; description in
                               DATA_DESCRIPTION.md) + the 2022 control election on the
-                              same precincts (data/votacao_secao_2022); statistical
+                              same precincts (data/votacao_secao_2022); intraday
+                              round-2 trend capture (data/trends); statistical
                               fraud analysis → REPORT_statistical_fraud_analysis.md
                               ("statistical fraud analysis report"; 2022 control —
                               section 12); voting-paradox analysis (bloc cloning,
@@ -20,9 +21,17 @@ brazil-oct-2026-round-1/             — Brazil, rounds of 04/25.10.2026: TSE re
                               scripts/build_site_figures.py
 bulgaria-oct-2026/           — Bulgaria, presidential election of 25.10.2026: captures of
                               results.cik.bg (scrape_cik.py + run_every_15min.sh) →
-                              REPORT.md
+                              REPORT.md; normalized intraday trend capture incl.
+                              hourly turnout (data/trends)
 serbia-oct-2026/             — Serbia, National Assembly 25.10.2026: RIK JSON API,
-                              captures every 15 minutes → ОТЧЁТ.md ("REPORT.md")
+                              captures every 15 minutes → ОТЧЁТ.md ("REPORT.md");
+                              normalized intraday trend capture (data/trends)
+slovakia-oct-2026/           — Slovakia, municipal (OSO) + regional (OSK) elections of
+                              24.10.2026: intraday trend capture (36 snapshots,
+                              data/trends) from the official ŠÚSR portal — count
+                              progress, 8 kraj governors, mayors of the 8 regional
+                              capitals; schema + final state → DATA_DESCRIPTION.md;
+                              prebuilt charts in analysis/trends/charts
 sloveniya-referendum-2026/   — Slovenia, 4 referendums on 11.10.2026: uv project `sloref`
                               (DVK portal): totals and all 3,083 precincts, cross-check
                               against Wikipedia and election-night counting dynamics →
@@ -49,7 +58,9 @@ site/                        — public website for Vercel (static, deployed fro
                               img/<lang>/ by language: Slovenian (5 languages
                               SL/EN/HR/IT/HU), Brazilian (PT/EN/ES/RU),
                               Portuguese (PT/EN), Indian (EN/HI)
-                              → README.md in each section
+                              → README.md in each section; common country-page
+                              skeleton (hero verdict → situation → findings →
+                              deep-dive → methods → data) → site/TEMPLATE.md
 analysis-tool/               — election forensics (pandas/sklearn, uv): Shpilkin,
                               Klimek fingerprints, Kobak integer peaks, Benford/
                               last-digit, outliers vs neighbors, Isolation

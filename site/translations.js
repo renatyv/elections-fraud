@@ -1,6 +1,8 @@
 // Trusted page translations; HTML in these strings is authored with the report.
 const I18N = {
 en: {
+  br2_title: "Brazil — presidential runoff, 25 October 2026",
+  br2_desc: "Lula 51.79% × Flávio Bolsonaro 48.21%. 499,248 sections, eleven families of tests, the honest 2022 runoff on the same sections as a control — and the round-1 transfer scenario checked against the actual result. Preliminary readout: the section-level tests await TSE’s post-runoff data.",
   us_title: "United States — Senate & House, 5 November 2024",
   us_desc: "284 digit tests, county turnout diagnostics and seven potential vote-splitting cases. Statistical flags need follow-up; partial coverage prevents a fraud verdict.",
   title: "Election Forensics — Independent Statistical Audits",
@@ -21,6 +23,8 @@ en: {
   footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 sl: {
+  br2_title: "Brazilija — predsedniške volitve, 2. krog, 25. oktober 2026",
+  br2_desc: "Lula 51,79 % proti Fláviu Bolsonaru 48,21 %. 499.248 sekcij, enajst družin testov, pošten 2. krog 2022 na istih sekcijah kot kontrola — in scenarij prenosov glasov iz 1. kroga preverjen z dejanskim izidom. Začasni pregled: testi na ravni sekcij čakajo na TSE-jeve podatke po 2. krogu.",
   us_title: "Združene države — senat in predstavniški dom, 5. november 2024",
   us_desc: "284 testov števk, analiza udeležbe po okrožjih in sedem možnih primerov razpršitve glasov. Statistična opozorila zahtevajo nadaljnje preverjanje; delna pokritost ne omogoča sklepa o poneverbi.",
   title: "Volilna forenzika — neodvisne statistične preverbe",
@@ -41,6 +45,8 @@ sl: {
   footer: "Neodvisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 hr: {
+  br2_title: "Brazil — predsjednički izbori, 2. krug, 25. listopada 2026.",
+  br2_desc: "Lula 51,79 % naspram Fláviu Bolsonaru 48,21 %. 499.248 biračkih mjesta, jedanaest obitelji testova, pošteni 2. krug 2022. na istim mjestima kao kontrola — i scenarij prijenosa glasova iz 1. kruga provjeren sa stvarnim ishodom. Preliminarni prikaz: testovi na razini biračkih mjesta čekaju TSE-ove podatke nakon 2. kruga.",
   us_title: "Sjedinjene Države — Senat i Zastupnički dom, 5. studenoga 2024.",
   us_desc: "284 testa znamenki, analiza izlaznosti po okruzima i sedam mogućih slučajeva podjele glasova. Statistička upozorenja traže daljnju provjeru; djelomična pokrivenost ne dopušta zaključak o prijevari.",
   title: "Izborna forenzika — neovisne statističke provjere",
@@ -61,6 +67,8 @@ hr: {
   footer: "Neovisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 it: {
+  br2_title: "Brasile — presidenziali, 2º turno, 25 ottobre 2026",
+  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499.248 sezioni, undici famiglie di test, l’onesto 2º turno del 2022 sulle stesse sezioni come controllo — e lo scenario di trasferimenti del 1º turno confrontato con il risultato reale. Lettura preliminare: i test a livello di sezione attendono i dati post-ballottaggio del TSE.",
   us_title: "Stati Uniti — Senato e Camera, 5 novembre 2024",
   us_desc: "284 test sulle cifre, analisi dell’affluenza per contea e sette possibili casi di dispersione dei voti. I segnali statistici richiedono verifiche; la copertura parziale non consente un verdetto sui brogli.",
   title: "Election forensics — verifiche statistiche indipendenti",
@@ -81,6 +89,8 @@ it: {
   footer: "Analisi indipendente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 hu: {
+  br2_title: "Brazília — elnökválasztás, 2. forduló, 2026. október 25.",
+  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499 248 szavazókör, tizenegy tesztcsalád, a korrekt 2022-es 2. forduló ugyanazokon a körökön kontrollként — és az 1. fordulós átvitel-forgatókönyv összevetve a tényleges eredménnyel. Előzetes olvasat: a szavazókör szintű tesztek a TSE második forduló utáni adataira várnak.",
   us_title: "Egyesült Államok — Szenátus és Képviselőház, 2024. november 5.",
   us_desc: "284 számjegyteszt, megyei részvételi elemzések és hét lehetséges szavazatmegosztási eset. A statisztikai jelzések további vizsgálatot igényelnek; a részleges lefedettség nem tesz lehetővé következtetést csalásról.",
   title: "Választási statisztika — független ellenőrzések",
@@ -101,6 +111,8 @@ hu: {
   footer: "Független elemzés · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 pt: {
+  br2_title: "Brasil — presidencial, 2.º turno, 25 de outubro de 2026",
+  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499.248 seções, onze famílias de testes, o honesto 2.º turno de 2022 nas mesmas seções como controle — e o cenário de transferências do 1.º turno conferido contra o resultado real. Leitura provisória: os testes por seção aguardam os dados pós-2.º turno do TSE.",
   us_title: "Estados Unidos — Senado e Câmara, 5 de novembro de 2024",
   us_desc: "284 testes de dígitos, análise da participação por condado e sete possíveis casos de divisão de votos. Os sinais estatísticos exigem verificação; a cobertura parcial impede um veredito sobre fraude.",
   title: "Forense eleitoral — auditorias estatísticas independentes",
@@ -121,6 +133,8 @@ pt: {
   footer: "Análise independente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 es: {
+  br2_title: "Brasil — presidencial, 2.ª vuelta, 25 de octubre de 2026",
+  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499 248 secciones, once familias de pruebas, la honesta 2.ª vuelta de 2022 en las mismas secciones como control — y el escenario de transferencias de la 1.ª vuelta contrastado con el resultado real. Lectura provisional: las pruebas por sección esperan los datos posteriores a la 2.ª vuelta del TSE.",
   us_title: "Estados Unidos — Senado y Cámara, 5 de noviembre de 2024",
   us_desc: "284 pruebas de dígitos, análisis de participación por condado y siete posibles casos de división del voto. Las señales estadísticas requieren comprobación; la cobertura parcial impide un veredicto sobre fraude.",
   title: "Forense electoral — auditorías estadísticas independientes",

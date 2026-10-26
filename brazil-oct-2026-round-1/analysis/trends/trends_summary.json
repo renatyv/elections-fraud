@@ -1,0 +1,583 @@
+{
+  "n_snapshots": 13,
+  "window_utc": [
+    "2026-10-25 20:07:07+00:00",
+    "2026-10-26 07:52:00+00:00"
+  ],
+  "president_trajectory": [
+    {
+      "pct_counted": 0.21,
+      "FLAVIO BOLSONARO": 41.41,
+      "LULA": 58.59
+    },
+    {
+      "pct_counted": 0.25,
+      "FLAVIO BOLSONARO": 42.34,
+      "LULA": 57.66
+    },
+    {
+      "pct_counted": 1.56,
+      "FLAVIO BOLSONARO": 47.84,
+      "LULA": 52.16
+    },
+    {
+      "pct_counted": 28.66,
+      "FLAVIO BOLSONARO": 50.46,
+      "LULA": 49.54
+    },
+    {
+      "pct_counted": 95.33,
+      "FLAVIO BOLSONARO": 48.28,
+      "LULA": 51.72
+    },
+    {
+      "pct_counted": 99.98,
+      "FLAVIO BOLSONARO": 48.22,
+      "LULA": 51.78
+    },
+    {
+      "pct_counted": 99.99,
+      "FLAVIO BOLSONARO": 48.21,
+      "LULA": 51.79
+    },
+    {
+      "pct_counted": 100.0,
+      "FLAVIO BOLSONARO": 48.21,
+      "LULA": 51.79
+    }
+  ],
+  "president_lula_swing_pp": -6.8,
+  "president_first_last": {
+    "pct_counted": [
+      0.21,
+      100.0
+    ],
+    "LULA": [
+      58.59,
+      51.79
+    ],
+    "FLAVIO BOLSONARO": [
+      41.41,
+      48.21
+    ]
+  },
+  "president_final_votes": {
+    "FLAVIO BOLSONARO": 59826041,
+    "LULA": 64256232
+  },
+  "president_final": {
+    "registered": 158745502,
+    "voters": 128236074,
+    "turnout_pct": 80.78,
+    "blank": 1430496,
+    "null": 2723305,
+    "units_total": 499248,
+    "units_counted": 499248,
+    "source_ts_final": "25/10/2026 23:26:38 BRT",
+    "lula_pct_valid": 51.79,
+    "bolsonaro_pct_valid": 48.21,
+    "margin_pp": 3.58
+  },
+  "president_at_half_counted": {
+    "pct_counted": 28.66,
+    "LULA": 49.54,
+    "FLAVIO BOLSONARO": 50.46
+  },
+  "early_vs_late_states": {
+    "early (first half to 50% counted)": {
+      "n_ufs": 11,
+      "mean_lula_twoway_pct": 46.69
+    },
+    "late (second half)": {
+      "n_ufs": 17,
+      "mean_lula_twoway_pct": 54.02
+    },
+    "note": "UFs grouped by the snapshot at which they crossed 50% of sections counted"
+  },
+  "timeline": [
+    {
+      "fetch_ts_utc": "2026-10-25 20:07:07+00:00",
+      "source_ts": "25/10/2026 17:05:51 BRT",
+      "pct_counted": 0.21,
+      "LULA": 58.59,
+      "BOLSONARO": 41.41,
+      "turnout_pct": 48.21,
+      "invalid_pct": 1.46,
+      "blank_pct": 1.24
+    },
+    {
+      "fetch_ts_utc": "2026-10-25 21:03:57+00:00",
+      "source_ts": "25/10/2026 17:06:27 BRT",
+      "pct_counted": 0.25,
+      "LULA": 57.66,
+      "BOLSONARO": 42.34,
+      "turnout_pct": 50.53,
+      "invalid_pct": 1.49,
+      "blank_pct": 1.21
+    },
+    {
+      "fetch_ts_utc": "2026-10-25 22:07:33+00:00",
+      "source_ts": "25/10/2026 19:07:03 BRT",
+      "pct_counted": 1.56,
+      "LULA": 52.16,
+      "BOLSONARO": 47.84,
+      "turnout_pct": 73.53,
+      "invalid_pct": 1.88,
+      "blank_pct": 1.01
+    },
+    {
+      "fetch_ts_utc": "2026-10-25 23:07:52+00:00",
+      "source_ts": "25/10/2026 20:06:44 BRT",
+      "pct_counted": 28.66,
+      "LULA": 49.54,
+      "BOLSONARO": 50.46,
+      "turnout_pct": 80.69,
+      "invalid_pct": 1.96,
+      "blank_pct": 1.04
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 00:07:37+00:00",
+      "source_ts": "25/10/2026 21:06:44 BRT",
+      "pct_counted": 95.33,
+      "LULA": 51.72,
+      "BOLSONARO": 48.28,
+      "turnout_pct": 80.9,
+      "invalid_pct": 2.11,
+      "blank_pct": 1.11
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 01:07:20+00:00",
+      "source_ts": "25/10/2026 22:05:12 BRT",
+      "pct_counted": 99.98,
+      "LULA": 51.78,
+      "BOLSONARO": 48.22,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 02:06:37+00:00",
+      "source_ts": "25/10/2026 22:45:18 BRT",
+      "pct_counted": 99.99,
+      "LULA": 51.79,
+      "BOLSONARO": 48.21,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 03:04:01+00:00",
+      "source_ts": "25/10/2026 23:26:38 BRT",
+      "pct_counted": 100.0,
+      "LULA": 51.79,
+      "BOLSONARO": 48.21,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 04:03:31+00:00",
+      "source_ts": "25/10/2026 23:26:38 BRT",
+      "pct_counted": 100.0,
+      "LULA": 51.79,
+      "BOLSONARO": 48.21,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 05:05:39+00:00",
+      "source_ts": "25/10/2026 23:26:38 BRT",
+      "pct_counted": 100.0,
+      "LULA": 51.79,
+      "BOLSONARO": 48.21,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 06:02:38+00:00",
+      "source_ts": "25/10/2026 23:26:38 BRT",
+      "pct_counted": 100.0,
+      "LULA": 51.79,
+      "BOLSONARO": 48.21,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 07:03:53+00:00",
+      "source_ts": "25/10/2026 23:26:38 BRT",
+      "pct_counted": 100.0,
+      "LULA": 51.79,
+      "BOLSONARO": 48.21,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    },
+    {
+      "fetch_ts_utc": "2026-10-26 07:52:00+00:00",
+      "source_ts": "25/10/2026 23:26:38 BRT",
+      "pct_counted": 100.0,
+      "LULA": 51.79,
+      "BOLSONARO": 48.21,
+      "turnout_pct": 80.78,
+      "invalid_pct": 2.12,
+      "blank_pct": 1.12
+    }
+  ],
+  "uf_vs_country_coverage": [
+    {
+      "pct_counted": 0.21,
+      "uf_two_way": 682,
+      "country_two_way": 297104,
+      "lula_tw_uf": 86.36,
+      "lula_tw_country": 58.59
+    },
+    {
+      "pct_counted": 0.25,
+      "uf_two_way": 42647,
+      "country_two_way": 335743,
+      "lula_tw_uf": 65.36,
+      "lula_tw_country": 57.66
+    },
+    {
+      "pct_counted": 1.56,
+      "uf_two_way": 1646411,
+      "country_two_way": 1942099,
+      "lula_tw_uf": 53.05,
+      "lula_tw_country": 52.16
+    },
+    {
+      "pct_counted": 28.66,
+      "uf_two_way": 35224585,
+      "country_two_way": 35357933,
+      "lula_tw_uf": 49.52,
+      "lula_tw_country": 49.54
+    },
+    {
+      "pct_counted": 95.33,
+      "uf_two_way": 118360793,
+      "country_two_way": 118017886,
+      "lula_tw_uf": 51.71,
+      "lula_tw_country": 51.72
+    },
+    {
+      "pct_counted": 99.98,
+      "uf_two_way": 124060673,
+      "country_two_way": 124060673,
+      "lula_tw_uf": 51.78,
+      "lula_tw_country": 51.78
+    },
+    {
+      "pct_counted": 99.99,
+      "uf_two_way": 124081875,
+      "country_two_way": 124081875,
+      "lula_tw_uf": 51.79,
+      "lula_tw_country": 51.79
+    },
+    {
+      "pct_counted": 100.0,
+      "uf_two_way": 124082273,
+      "country_two_way": 124082273,
+      "lula_tw_uf": 51.79,
+      "lula_tw_country": 51.79
+    },
+    {
+      "pct_counted": 100.0,
+      "uf_two_way": 124082273,
+      "country_two_way": 124082273,
+      "lula_tw_uf": 51.79,
+      "lula_tw_country": 51.79
+    },
+    {
+      "pct_counted": 100.0,
+      "uf_two_way": 124082273,
+      "country_two_way": 124082273,
+      "lula_tw_uf": 51.79,
+      "lula_tw_country": 51.79
+    },
+    {
+      "pct_counted": 100.0,
+      "uf_two_way": 124082273,
+      "country_two_way": 124082273,
+      "lula_tw_uf": 51.79,
+      "lula_tw_country": 51.79
+    },
+    {
+      "pct_counted": 100.0,
+      "uf_two_way": 124082273,
+      "country_two_way": 124082273,
+      "lula_tw_uf": 51.79,
+      "lula_tw_country": 51.79
+    },
+    {
+      "pct_counted": 100.0,
+      "uf_two_way": 124082273,
+      "country_two_way": 124082273,
+      "lula_tw_uf": 51.79,
+      "lula_tw_country": 51.79
+    }
+  ],
+  "counting_steps": [
+    {
+      "from_pct": 0.21,
+      "to_pct": 0.25,
+      "phase": "early",
+      "inc_two_way_votes": 41965,
+      "inc_lula_twoway_pct": 65.02,
+      "national_lula_tw_after": 65.36
+    },
+    {
+      "from_pct": 0.25,
+      "to_pct": 1.56,
+      "phase": "early",
+      "inc_two_way_votes": 1603764,
+      "inc_lula_twoway_pct": 52.72,
+      "national_lula_tw_after": 53.05
+    },
+    {
+      "from_pct": 1.56,
+      "to_pct": 28.66,
+      "phase": "early",
+      "inc_two_way_votes": 33578174,
+      "inc_lula_twoway_pct": 49.34,
+      "national_lula_tw_after": 49.52
+    },
+    {
+      "from_pct": 28.66,
+      "to_pct": 95.33,
+      "phase": "middle",
+      "inc_two_way_votes": 83136208,
+      "inc_lula_twoway_pct": 52.64,
+      "national_lula_tw_after": 51.71
+    },
+    {
+      "from_pct": 95.33,
+      "to_pct": 99.98,
+      "phase": "tail",
+      "inc_two_way_votes": 5699880,
+      "inc_lula_twoway_pct": 53.23,
+      "national_lula_tw_after": 51.78
+    },
+    {
+      "from_pct": 99.98,
+      "to_pct": 99.99,
+      "phase": "tail",
+      "inc_two_way_votes": 21202,
+      "inc_lula_twoway_pct": 66.53,
+      "national_lula_tw_after": 51.79
+    },
+    {
+      "from_pct": 99.99,
+      "to_pct": 100.0,
+      "phase": "tail",
+      "inc_two_way_votes": 398,
+      "inc_lula_twoway_pct": 85.68,
+      "national_lula_tw_after": 51.79
+    }
+  ],
+  "phase_batches": {
+    "early": {
+      "two_way_votes": 35223903,
+      "lula_twoway_pct": 49.52
+    },
+    "middle": {
+      "two_way_votes": 83136208,
+      "lula_twoway_pct": 52.64
+    },
+    "tail": {
+      "two_way_votes": 5721480,
+      "lula_twoway_pct": 53.28
+    }
+  },
+  "swing_decomposed": {
+    "note": "per-UF contributions anchored at the 1.56%-counted snapshot, the first where the portal's UF table covers ~85% of the country ticker; the 58.59%→52.16% country swing before that cannot be decomposed by UF",
+    "anchor_pct_counted": 1.56,
+    "anchor_lula_tw": 53.05,
+    "final_lula_tw": 51.79,
+    "swing_pp": -1.26,
+    "sum_contributions_pp": -1.26
+  },
+  "swing_by_uf": {
+    "note": "contribution to the two-way swing of Lula from the anchor (1.56% counted, 53.05% Lula) to the final; positive = moved the line towards Lula",
+    "top_against_lula": [
+      {
+        "uf": "PR",
+        "pp": -2.23,
+        "lula_tw_final": 37.4
+      },
+      {
+        "uf": "SC",
+        "pp": -1.27,
+        "lula_tw_final": 30.6
+      },
+      {
+        "uf": "SP",
+        "pp": -1.24,
+        "lula_tw_final": 46.2
+      },
+      {
+        "uf": "RS",
+        "pp": -1.12,
+        "lula_tw_final": 42.2
+      },
+      {
+        "uf": "MT",
+        "pp": -0.68,
+        "lula_tw_final": 33.9
+      }
+    ],
+    "top_for_lula": [
+      {
+        "uf": "PB",
+        "pp": 0.9,
+        "lula_tw_final": 67.5
+      },
+      {
+        "uf": "MA",
+        "pp": 1.12,
+        "lula_tw_final": 69.5
+      },
+      {
+        "uf": "CE",
+        "pp": 1.19,
+        "lula_tw_final": 68.9
+      },
+      {
+        "uf": "PE",
+        "pp": 1.3,
+        "lula_tw_final": 69.2
+      },
+      {
+        "uf": "BA",
+        "pp": 1.94,
+        "lula_tw_final": 71.3
+      }
+    ]
+  },
+  "governor_intraday": [
+    {
+      "race": "RN",
+      "winner": "CADU DE LULA",
+      "runner_up": "ALLYSON",
+      "margin_first_snapshot_pp": 6.92,
+      "margin_final_pp": 1.54,
+      "margin_min_pp": 1.42,
+      "margin_max_pp": 6.92,
+      "lead_changes": 0,
+      "winner_led_from": "2026-10-25 22:07:33+00:00"
+    },
+    {
+      "race": "ES",
+      "winner": "LORENZO PAZOLINI",
+      "runner_up": "RICARDO FERRAÇO",
+      "margin_first_snapshot_pp": 3.96,
+      "margin_final_pp": 4.34,
+      "margin_min_pp": 3.96,
+      "margin_max_pp": 4.9,
+      "lead_changes": 0,
+      "winner_led_from": "2026-10-25 22:07:33+00:00"
+    },
+    {
+      "race": "DF",
+      "winner": "CELINA LEÃO",
+      "runner_up": "LEANDRO GRASS",
+      "margin_first_snapshot_pp": 17.08,
+      "margin_final_pp": 14.36,
+      "margin_min_pp": 14.34,
+      "margin_max_pp": 17.08,
+      "lead_changes": 0,
+      "winner_led_from": "2026-10-25 20:07:07+00:00"
+    },
+    {
+      "race": "AM",
+      "winner": "OMAR AZIZ",
+      "runner_up": "PROFESSORA MARIA DO CARMO",
+      "margin_first_snapshot_pp": 12.76,
+      "margin_final_pp": 22.84,
+      "margin_min_pp": 12.76,
+      "margin_max_pp": 22.84,
+      "lead_changes": 0,
+      "winner_led_from": "2026-10-25 22:07:33+00:00"
+    },
+    {
+      "race": "TO",
+      "winner": "VICENTINHO JÚNIOR",
+      "runner_up": "PROFESSORA DORINHA",
+      "margin_first_snapshot_pp": 16.14,
+      "margin_final_pp": 29.04,
+      "margin_min_pp": 16.14,
+      "margin_max_pp": 29.04,
+      "lead_changes": 0,
+      "winner_led_from": "2026-10-25 22:07:33+00:00"
+    },
+    {
+      "race": "AC",
+      "winner": "MAILZA ASSIS",
+      "runner_up": "ALAN RICK",
+      "margin_first_snapshot_pp": 38.64,
+      "margin_final_pp": 32.42,
+      "margin_min_pp": 32.42,
+      "margin_max_pp": 38.64,
+      "lead_changes": 0,
+      "winner_led_from": "2026-10-25 22:07:33+00:00"
+    }
+  ],
+  "governor_runoffs": [
+    {
+      "race": "AC",
+      "winner": "MAILZA ASSIS",
+      "winner_pct": 66.21,
+      "runner_up": "ALAN RICK",
+      "runner_up_pct": 33.79,
+      "margin_pp": 32.42,
+      "turnout_pct": 73.91
+    },
+    {
+      "race": "TO",
+      "winner": "VICENTINHO JÚNIOR",
+      "winner_pct": 64.52,
+      "runner_up": "PROFESSORA DORINHA",
+      "runner_up_pct": 35.48,
+      "margin_pp": 29.04,
+      "turnout_pct": 80.76
+    },
+    {
+      "race": "AM",
+      "winner": "OMAR AZIZ",
+      "winner_pct": 61.42,
+      "runner_up": "PROFESSORA MARIA DO CARMO",
+      "runner_up_pct": 38.58,
+      "margin_pp": 22.84,
+      "turnout_pct": 78.32
+    },
+    {
+      "race": "DF",
+      "winner": "CELINA LEÃO",
+      "winner_pct": 57.18,
+      "runner_up": "LEANDRO GRASS",
+      "runner_up_pct": 42.82,
+      "margin_pp": 14.36,
+      "turnout_pct": 82.63
+    },
+    {
+      "race": "ES",
+      "winner": "LORENZO PAZOLINI",
+      "winner_pct": 52.17,
+      "runner_up": "RICARDO FERRAÇO",
+      "runner_up_pct": 47.83,
+      "margin_pp": 4.34,
+      "turnout_pct": 80.52
+    },
+    {
+      "race": "RN",
+      "winner": "CADU DE LULA",
+      "winner_pct": 50.77,
+      "runner_up": "ALLYSON",
+      "runner_up_pct": 49.23,
+      "margin_pp": 1.54,
+      "turnout_pct": 83.93
+    }
+  ]
+}

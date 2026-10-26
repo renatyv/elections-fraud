@@ -62,9 +62,11 @@ The vote total of the `votacao_secao_2026_BR` file matches the "showed up" figur
 
 The analysis base is `detalhe_votacao_secao_2026_BRASIL.csv` (president: 499,248 stations
 with electorate and turnout) + votes from `votacao_secao_2026_BR.csv`; the station level
-with polling-place address also allows neighbor analysis. Data covers the 1st round only;
-2nd-round results (25.10.2026) will appear in the TSE dataset later — re-running
-`download_votacao_secao.sh` will fetch them (curl `-C -`).
+with polling-place address also allows neighbor analysis. After each turno the TSE
+regenerates the same files with both rounds included (`NR_TURNO` = 1/2 in one CSV); the
+portal states files are updated at the end of each round. Do **not** resume a changed zip
+with `curl -C -` — it corrupts the archive; `scripts/download_votacao_secao_T2.sh` does a
+fresh download of the two BR files once the 2nd round is published.
 
 ## Statistical fraud analysis (12.10.2026)
 
@@ -75,3 +77,29 @@ found. Building the section dataset — `scripts/build_sections_csv.py`
 against detalhe — 0 mismatches); running the methods — `scripts/run_forensics.py`; an extra
 binomial null for the digit tests — `scripts/digit_binomial_null.py`. Run from `analysis-tool/`
 via `uv run python ../brazil-oct-2026-round-1/scripts/<script>`.
+
+## Intraday trend capture — 2nd round (25.10.2026)
+
+`data/trends/` — 13 snapshots of the TSE results portal, 20:07 UTC 25.10 (17:07 BRT,
+minutes after polls closed) → 07:52 UTC 26.10; file schema and capture notes in
+`data/trends/README.md`. This election-night stream did not exist for the 1st round.
+
+`scripts/analyze_trends.py` → `analysis/trends/`:
+
+- `trends_summary.json` — president share trajectory vs % counted (country ticker:
+  58.59% Lula at 0.21% counted → 51.79% final, −6.8 pp), full snapshot timeline with
+  turnout-of-counted-sections and blank/null shares, early- vs late-reporting states
+  (11 states that crossed 50% counted first: mean Lula two-way 46.69% vs 54.02% in the
+  other 17), governor-runoff margins and intraday lead changes (no flips in any of the 6);
+- `swing_decomposition.csv` + `swing_by_uf` — exact per-step decomposition of the
+  national two-way share into state-batch contributions
+  (contribution_u = ΔV_u/V_t · (s_u − S_prev), anchored at the 1.56%-counted snapshot
+  where the portal's UF table reaches ~85% coverage of the country ticker; from that
+  anchor the net move is −1.26 pp: PR −2.23, SC −1.27, SP −1.24, RS −1.12 down,
+  BA +1.94, PE +1.30, CE +1.19, MA +1.12, PB +0.90 back up);
+- `uf_final_twoway.csv` — per-UF final two-way shares, 50%-counted crossing times,
+  early/late reporter flags.
+
+The final captured totals (turnout 80.78%, Lula 51.79% two-candidate valid) are the
+cross-check reference for the per-section 2nd-round dataset built by
+`scripts/build_sections_csv_T2.py` (`vs_trends_portal` block must match to the vote).

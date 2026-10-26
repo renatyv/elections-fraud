@@ -6,7 +6,7 @@ const vm = require("node:vm");
 
 const site = path.resolve(__dirname, "..");
 const runtime = readFileSync(path.join(site, "language.js"), "utf8");
-const pages = ["", "portugal-2025", "brazil-oct-2026-round-1", "india-2024", "sloveniya-referendum-2026"];
+const pages = ["", "portugal-2025", "brazil-oct-2026-round-1", "brazil-oct-2026-round-2", "india-2024", "sloveniya-referendum-2026"];
 
 function loadPage(directory, locales, saved, blocked = false) {
   const root = path.join(site, directory);

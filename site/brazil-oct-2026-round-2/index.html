@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brazil, presidential runoff — 25 Oct 2026: preliminary statistical check</title>
+    <meta name="description" content="Preliminary independent analysis of the runoff of the Brazilian presidential election of 25 October 2026: election-night counting dynamics from the official portal capture and the round-1 transfer scenario checked against the actual result; section-level forensics pending TSE's post-runoff data.">
+    <meta property="og:title" content="Brazil, presidential runoff — 25 Oct 2026: preliminary statistical check">
+    <meta property="og:description" content="Preliminary independent analysis of the runoff of the Brazilian presidential election of 25 October 2026: election-night counting dynamics from the official portal capture and the round-1 transfer scenario checked against the actual result; section-level forensics pending TSE's post-runoff data.">
+    <meta property="og:type" content="article">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231e8e5a'/%3E%3Cpath d='M18 33l9 9 19-20' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../styles.css">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="translations.js"></script>
+    <script defer src="../language.js"></script>
+  </head>
+  <body class="page-brazil-oct-2026-round-2">
+    <header class="top">
+      <div class="bar">
+        <div class="brand">
+          <span class="flag"></span><span data-i18n="brand">Brazil · presidential runoff · 25.10.2026</span>
+        </div>
+        <div class="right">
+          <a class="home" href="../" data-i18n="home">← All analyses</a> <a class="home" href="#paradoxes" data-i18n="paradox_link">The runoff as an experiment ↓</a>
+          <nav class="langs" aria-label="Language">
+            <button data-lang="pt">Português</button>
+            <button data-lang="en" aria-pressed="true">English</button>
+            <button data-lang="es">Español</button>
+            <button data-lang="ru">Русский</button>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- ══ MINTO: ANSWER ══ -->
+      <div class="hero">
+        <div class="hero-inner">
+          <div class="kicker" data-i18n="kicker">Independent statistical analysis · preliminary</div>
+          <h1 data-i18n="h1">The presidential runoff of 25 October 2026 — do the numbers add up?</h1>
+          <div class="verdict">
+            <div class="check">
+              ✓
+            </div>
+            <div>
+              <h2 data-i18n="verdict_title">Nothing anomalous in what can be checked so far — the section-level diagnostics are still pending</h2>
+              <p class="sub" data-i18n="verdict_sub">Preliminary readout from the election-night capture (13 snapshots), the first-round section dataset and the 2022 control. TSE has not yet published the post-runoff section export (checked 26 Oct 2026, ~09:00 BRT); the forensic battery runs as soon as it appears.</p>
+            </div>
+          </div>
+          <div class="verdict flip">
+            <div class="check warn">
+              ⇄
+            </div>
+            <div>
+              <p class="flip-head" data-i18n="verdict2_title">The first round’s transfer scenario called the runoff wrong — by 4.36 pp</p>
+              <p class="v-line" data-i18n="flip1_line"><b>51.79%</b> for Lula against <b>48.21%</b> for Flávio Bolsonaro: the first round’s runner-up won the runoff</p>
+              <p class="v-line" data-i18n="flip2_line">The scenario that borrowed 2022 transfer rates predicted Bolsonaro 52.6% — in 2026, voters of the eliminated candidates split differently</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ══ MINTO: SITUATION ══ -->
+      <section>
+        <h3 class="sect" data-i18n="sit_title">What happened on 25 October 2026</h3>
+        <p class="sect-sub" data-i18n="sit_intro">Brazil held the runoff of its presidential election: Lula (PT) against Flávio Bolsonaro (PL), the two leaders of the 4 October first round. Voting is compulsory and electronic; the electoral authority TSE publishes final results per section — 499,248 of them. Counting finished about four hours after polls closed; the losing candidate publicly disputed the result, which makes an independent check of the numbers all the more useful.</p>
+        <div class="cards2">
+          <div class="res-card">
+            <h4 data-i18n="cardA_t">Runoff result</h4>
+            <div class="sub" data-i18n="cardA_sub">% of valid votes, nationwide</div>
+            <div class="bar-row">
+              <span>Lula (PT)</span> 51.79%
+            </div>
+            <div class="track">
+              <div class="lula" style="width:51.79%">
+              </div>
+            </div>
+            <div class="bar-row">
+              <span data-i18n="cardA_b2">Flávio Bolsonaro (PL)</span> 48.21%
+            </div>
+            <div class="track">
+              <div class="bolsonaro" style="width:48.21%">
+              </div>
+            </div>
+            <div class="outcome hot" data-i18n="cardA_out">Margin 3.58 pp — a 4.4M-vote win, reversing the first-round order</div>
+          </div>
+          <div class="res-card">
+            <h4 data-i18n="cardB_t">Election night: the lead flipped</h4>
+            <div class="sub" data-i18n="cardB_sub">share of valid votes as counting progressed</div>
+            <ul class="plain-rows">
+              <li>
+                <span data-i18n="cardB_r1">at 0.2% counted</span><b>Lula 58.6%</b>
+              </li>
+              <li>
+                <span data-i18n="cardB_r2">at 29% counted</span><b>Bolsonaro 50.5%</b>
+              </li>
+              <li>
+                <span data-i18n="cardB_r3">at 95% counted</span><b>Lula 51.7%</b>
+              </li>
+            </ul>
+            <div class="outcome" data-i18n="cardB_out">explained by which states reported first — not by the counting</div>
+          </div>
+          <div class="res-card">
+            <h4 data-i18n="cardC_t">Turnout: 80.78%</h4>
+            <div class="sub" data-i18n="cardC_sub">up 1.86 pp on the first round</div>
+            <ul class="plain-rows">
+              <li>
+                <span data-i18n="cardC_r1">ballots cast</span><b>128.2M</b>
+              </li>
+              <li>
+                <span data-i18n="cardC_r2">registered voters</span><b>158.7M</b>
+              </li>
+              <li>
+                <span data-i18n="cardC_r3">blank + null votes</span><b>3.2%</b>
+              </li>
+            </ul>
+            <div class="outcome" data-i18n="cardC_out">abstention 19.2% (30.5M voters)</div>
+          </div>
+          <div class="res-card">
+            <h4 data-i18n="cardD_t">Governor runoffs the same day</h4>
+            <div class="sub" data-i18n="cardD_sub">six states, all decided</div>
+            <ul class="plain-rows">
+              <li>
+                <span>RN</span><b data-i18n="cardD_r1">50.77% — margin 1.54 pp</b>
+              </li>
+              <li>
+                <span>ES</span><b>52.17%</b>
+              </li>
+              <li>
+                <span data-i18n="cardD_r3">AC · AM · DF · TO</span><b data-i18n="cardD_r4">57–66%</b>
+              </li>
+            </ul>
+            <div class="outcome" data-i18n="cardD_out">turnout 73.9–83.9% — this analysis covers the presidential race</div>
+          </div>
+        </div>
+      </section>
+      <!-- ══ MINTO: THE RUNOFF AS AN EXPERIMENT ══ -->
+      <section id="paradoxes">
+        <h3 class="sect" data-i18n="px_title">The runoff as a natural experiment</h3>
+        <p class="sect-sub" data-i18n="px_intro">Three weeks separate two votes on the same 499,248 sections — first round with 13 candidates, runoff with two. Aggregate section totals can estimate where votes moved, but these are ecological estimates, not tracked voters; the same data cannot prove how any individual voted.</p>
+        <div class="args">
+          <div class="arg">
+            <div class="num px">
+              1
+            </div>
+            <h4 data-i18n="px1_t">The scenario missed by 4.36 pp</h4>
+            <p data-i18n="px1_p">Applying 2022 transfer rates to the 2026 first round gave Flávio Bolsonaro 52.6% of the two-candidate vote. The actual runoff gave Lula 51.79%. The bootstrap interval (±0.03 pp) covered model resampling only — the real uncertainty sat in the mapping and in voters changing behaviour.</p>
+          </div>
+          <div class="arg">
+            <div class="num px">
+              2
+            </div>
+            <h4 data-i18n="px2_t">The 2022 transfer pattern did not repeat</h4>
+            <p data-i18n="px2_p">The scenario carried the 2022 rates over unchanged and still put Flávio Bolsonaro ahead. The actual runoff finished 4.36 pp above the scenario for Lula — the voters of the eliminated candidates split differently than in 2022. How each round-1 vote type actually transferred will be estimated from the section files once TSE publishes them.</p>
+          </div>
+          <div class="arg">
+            <div class="num px">
+              3
+            </div>
+            <h4 data-i18n="px3_t">A smooth count, an uneven reporting order</h4>
+            <p data-i18n="px3_p">Bolsonaro led from roughly 2% to 90% counted; Lula finished ahead. The 11 states that crossed 50% counted first average 46.7% for Lula two-way; the other 17 average 54.0%. The trajectory follows the reporting order — no discontinuity appears in it.</p>
+          </div>
+        </div>
+        <h4 class="px-sub" data-i18n="pxA_t">Check · The scenario against the actual result</h4>
+        <p class="sect-sub" data-i18n="pxA_p">The round-1 analysis mapped 2026 candidates to 2022 vote categories by geographic similarity and carried the 2022 transfer rates over unchanged. The runoff is now a direct test of that scenario: every input came from the first round, the outcome from 25 October.</p>
+        <div class="figs">
+          <figure class="fig">
+            <img src="img/en/prediction.png" data-fig="prediction" data-alt="px_pred_alt" alt="The conditional scenario (Bolsonaro 52.6%) against the actual runoff (Lula 51.79%)" loading="lazy">
+            <figcaption data-i18n="px_pred_cap">The conditional scenario (Bolsonaro 52.6%) against the actual runoff (Lula 51.79%). The whisker is the scenario’s bootstrap interval — model resampling only.</figcaption>
+          </figure>
+        </div>
+        <div class="note" data-i18n="pxA_n">The bootstrap interval (47.39–47.45% for Lula) quantified resampling of the fitted 2022 model, nothing more. It excluded candidate-mapping uncertainty and any change in how voters behave between elections. The 4.36 pp miss measures those excluded parts.</div>
+        <h4 class="px-sub" data-i18n="pxB_t">Estimate · Where the round-1 votes actually went — pending data</h4>
+        <p class="sect-sub" data-i18n="pxB_p">The same NNLS transfer model, fitted on the 2026 pair of rounds (row-stochastic rates from round-1 vote types to runoff destinations, cross-validation on held-out sections, bootstrap intervals), needs the runoff section dataset. As of 26 October 2026 the post-runoff export was not yet on TSE’s open-data portal; the actual-rates table appears here when it runs.</p>
+        <h4 class="px-sub" data-i18n="pxC_t">Counting · One evening, two leads</h4>
+        <p class="sect-sub" data-i18n="pxC_p">Thirteen snapshots of the TSE results portal from 17:07 BRT (polls close) to the final tally at 23:26 BRT. Electronic counting is fast; the visible swings track which states transmit first — small northern states early, the Southeast’s giant pools later.</p>
+        <p class="sect-sub" data-i18n="pxC_dyn">The shape — converge, cross, diverge — is the reporting order at work, not a changing count. The first 0.2% was mostly fast-counted sections abroad, which lean Lula; the near-tie around 20:00 reflects the fast-transmitting, Bolsonaro-leaning South/Southeast states dominating the sample; the final 3.6-point gap reappears once the late, Lula-leaning Northeast pools arrive. A mid-evening near-tie simply means the accumulated mix happened to match the national mix — the end of the line is the actual margin.</p>
+        <div class="figs">
+          <figure class="fig">
+            <img src="img/en/counting.png" data-fig="counting" data-alt="px_count_alt" alt="Lula and Bolsonaro shares of counted votes as the count progressed; the lines cross twice" loading="lazy">
+            <figcaption data-i18n="px_count_cap">Shares of counted valid votes, 25 October evening (BRT). The lead flips as large, Lula-leaning state pools arrive late; the trajectory is smooth.</figcaption>
+          </figure>
+          <figure class="fig">
+            <img src="img/en/swing.png" data-fig="swing" data-alt="px_swing_alt" alt="Per-state contributions to the change in Lula’s share between snapshots; blue bars pull towards Bolsonaro, red towards Lula" loading="lazy">
+            <figcaption data-i18n="px_swing_cap">Decomposing the same line: each state's contribution to the change in Lula's two-way share. From 1.6% counted (Lula 53.05%) to the final 51.8% the net move is −1.26 pp: Paraná, Santa Catarina, São Paulo and Rio Grande do Sul pulled the line down while their Bolsonaro-leaning pools dominated the first half of the count; Bahia, Pernambuco, Ceará, Maranhão and Paraíba pulled it back as the Northeast reported after ~30% counted.</figcaption>
+          </figure>
+        </div>
+        <div class="note" data-i18n="pxC_n">A “blue shift” or “red shift” during counting is a reporting-order phenomenon, common to many jurisdictions (absentee and large urban pools report late). It is evidence about sequence, not about the integrity of the count; the final totals cross-check against the per-section dataset to the exact vote.</div>
+      </section>
+      <section>
+        <h3 class="sect" data-i18n="meth_title">Manipulation detection tests — pending section data</h3>
+        <p class="sect-sub" data-i18n="meth_intro">Eleven families of statistical diagnostics will be applied to the runoff section totals, with the honest 2022 runoff on the same sections as the control — the same battery already published for the first round. As of 26 October 2026 (~09:00 BRT) TSE’s post-runoff export (files “updated at the end of each round”) was still not on the open-data portal: the CDN served the 6 October generation. The results replace this panel when the data arrives.</p>
+        <div class="data">
+          <ul>
+            <li data-i18n="meth_l1">Shpilkin — votes above the descriptive turnout threshold</li>
+            <li data-i18n="meth_l2">Turnout × result scatter (“comet tail”)</li>
+            <li data-i18n="meth_l3">Election fingerprints (Klimek et al.)</li>
+            <li data-i18n="meth_l4">Round-number peaks (Kobak et al.)</li>
+            <li data-i18n="meth_l5">Benford's second digit</li>
+            <li data-i18n="meth_l6">Last digit (Beber–Scacco)</li>
+            <li data-i18n="meth_l7">2D correlations by state (Kobak et al.)</li>
+            <li data-i18n="meth_l8">Outliers vs neighbours, Isolation Forest, duplicate protocols</li>
+            <li data-i18n="meth_l9">Voting-machine generations (urna models)</li>
+            <li data-i18n="meth_l10">Controls: the 2022 runoff and round 1 on the same sections</li>
+            <li data-i18n="meth_l11">Sensitivity to two synthetic perturbations (self-test)</li>
+          </ul>
+          <p data-i18n="meth_ref">What this battery looks like in practice: the round-1 analysis — the same eleven families on the same 499,248 sections, with the honest 2022 runoff as the control.</p>
+        </div>
+      </section>
+      <section>
+        <h3 class="sect" data-i18n="limitations_title">Scope and limitations</h3>
+        <p class="sect-sub" data-i18n="limitations_body">Preliminary readout (26 Oct 2026): this page uses the election-night portal capture, the first-round section dataset and the 2022 control; section-level diagnostics of the runoff are pending TSE’s post-runoff export. Beyond that, this is an analysis of published aggregate results, not a procedural audit of voting machines or ballot handling. The 2022 comparison is a reference election, not a known fraud-free ground truth. Statistical non-detection does not prove absence of manipulation; test assumptions, spatial dependence and multiple comparisons matter. Aggregate transfer estimates do not identify individual behaviour — a section-level split does not establish who any voter supported, and good aggregate fit does not validate individual rates.</p>
+        <div class="data">
+          <h3 class="sect" data-i18n="data_title">Data &amp; reproducibility</h3>
+          <ul>
+            <li data-i18n="d1">Election-night capture: 13 snapshots of the official TSE results portal, 17:07–23:26 BRT, including the final tally — matching the press figures to the exact vote. First-round section dataset (499,248 sections) and the 2022 control on the same sections: the <a href="https://dadosabertos.tse.jus.br" rel="noopener">TSE open-data portal</a>. Runoff section dataset: pending publication.</li>
+            <li data-i18n="d2">Self-consistency so far: national totals reconcile across all 13 snapshots, and the final tally matches the independent capture and press figures to the exact vote. The runoff section dataset will pass the same checks (nominal votes vs detail files, blank/null cross-checks, no duplicated section keys) before any diagnostic runs on it.</li>
+            <li data-i18n="d3">Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco, neighbour-outlier and Isolation-Forest methods, urna-model stratification, the 2022 controls and synthetic self-tests.</li>
+            <li data-i18n="d4">Full technical report (in Russian), scripts and all figures and tables will be added to the project repository as the analysis completes; the election-night trend capture (13 snapshots) is included already.</li>
+            <li data-i18n="d5">First-round analysis, geographic grouping, modelled 2022 transfers and the conditional scenario: see the round-1 page and PARADOXES.md. Interpret all outputs with the limitations stated above.</li>
+          </ul>
+        </div>
+      </section>
+      <footer>
+        <span data-i18n="footer">Independent analysis · <a href="http://renatyv.org" rel="noopener">renatyv.org</a> · Data: TSE (resultados.tse.jus.br, dadosabertos.tse.jus.br) · Preliminary page, generated 26 October 2026</span>
+      </footer>
+    </main>
+  </body>
+</html>

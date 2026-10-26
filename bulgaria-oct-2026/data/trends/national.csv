@@ -1,0 +1,11 @@
+fetch_ts_utc,source_ts,election,race,registered,voters,turnout_pct,votes_total,votes_valid,votes_blank,votes_invalid,units_total,units_counted,pct_counted,units_label
+2026-10-25T22:07:37Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,,СИК (section protocols received)
+2026-10-25T23:07:54Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,17.86,СИК (section protocols received)
+2026-10-26T00:08:02Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,30.71,СИК (section protocols received)
+2026-10-26T01:07:23Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,47.39,СИК (section protocols received)
+2026-10-26T02:06:39Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,61.55,СИК (section protocols received)
+2026-10-26T03:04:19Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,72.43,СИК (section protocols received)
+2026-10-26T04:03:32Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,84.57,СИК (section protocols received)
+2026-10-26T05:05:42Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,95.29,СИК (section protocols received)
+2026-10-26T06:02:46Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,95.29,СИК (section protocols received)
+2026-10-26T07:03:56Z,Резултати :: Избори за президент и вицепрезидент 25 октомври 2026,BG-pvr202610,president,,,,,,,,,,98.99,СИК (section protocols received)
