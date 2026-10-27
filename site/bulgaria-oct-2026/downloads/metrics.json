@@ -1,0 +1,382 @@
+{
+ "election": "BG-pvr202610 president, round 1 (25.10.2026)",
+ "snapshots": 10,
+ "first_fetch_utc": "2026-10-25T22:07:37Z",
+ "last_fetch_utc": "2026-10-26T07:03:56Z",
+ "pct_counted_series": {
+  "2026-10-25T23:07:54Z": 17.86,
+  "2026-10-26T00:08:02Z": 30.71,
+  "2026-10-26T01:07:23Z": 47.39,
+  "2026-10-26T02:06:39Z": 61.55,
+  "2026-10-26T03:04:19Z": 72.43,
+  "2026-10-26T04:03:32Z": 84.57,
+  "2026-10-26T05:05:42Z": 95.29,
+  "2026-10-26T06:02:46Z": 95.29,
+  "2026-10-26T07:03:56Z": 98.99
+ },
+ "count_pause_pct": 95.29,
+ "count_pause_fetch_utc": [
+  "2026-10-26T05:05:42Z",
+  "2026-10-26T06:02:46Z"
+ ],
+ "register": 6637238,
+ "listed_votes_final": 1512779,
+ "listed_votes_share_of_register_pct": 22.79,
+ "listed_votes_denominator_note": "sum of votes for all listed pairs incl. “Не подкрепям никого”; invalid ballots unknown from this capture — a lower bound on turnout",
+ "official_intraday_turnout": {
+  "11:00": 5.8,
+  "16:00": 15.95
+ },
+ "shares_final_pct": {
+  "-": 4.419,
+  "1": 0.976,
+  "10": 0.247,
+  "11": 12.574,
+  "12": 0.164,
+  "13": 0.074,
+  "14": 0.241,
+  "15": 0.076,
+  "16": 0.074,
+  "17": 4.614,
+  "18": 2.399,
+  "19": 3.796,
+  "2": 0.548,
+  "20": 0.091,
+  "21": 0.265,
+  "22": 0.381,
+  "23": 0.079,
+  "24": 0.186,
+  "25": 34.699,
+  "26": 0.152,
+  "27": 0.187,
+  "3": 0.296,
+  "4": 31.984,
+  "5": 0.163,
+  "6": 0.114,
+  "7": 0.161,
+  "8": 0.102,
+  "9": 0.937
+ },
+ "runoff": {
+  "pair": [
+   "Yotova",
+   "Gyurov"
+  ],
+  "date": "2026-11-01",
+  "top_share_pct": 34.699
+ },
+ "margin_yotova_gyurov_pp": {
+  "2026-10-25 22:07:37+00:00": 5.214999999999996,
+  "2026-10-25 23:07:54+00:00": 5.02,
+  "2026-10-26 00:08:02+00:00": 3.1290000000000013,
+  "2026-10-26 01:07:23+00:00": 4.707000000000001,
+  "2026-10-26 02:06:39+00:00": 3.3980000000000032,
+  "2026-10-26 03:04:19+00:00": 3.353999999999999,
+  "2026-10-26 04:03:32+00:00": 2.7040000000000006,
+  "2026-10-26 05:05:42+00:00": 2.5600000000000023,
+  "2026-10-26 06:02:46+00:00": 2.5600000000000023,
+  "2026-10-26 07:03:56+00:00": 2.7149999999999963
+ },
+ "margin_monotonic": false,
+ "margin_bounce_at_utc": "2026-10-26 01:07:23+00:00",
+ "leaders_domestic": {
+  "yotova": 27,
+  "gyurov": 4
+ },
+ "abroad_aggregate_mir32": {
+  "yotova_pct": 22.879,
+  "gyurov_pct": 45.606,
+  "kostadinov_pct": 11.627
+ },
+ "per_mir": {
+  "1": {
+   "name": "Благоевград",
+   "yotova_pct": 39.744,
+   "gyurov_pct": 31.991,
+   "kostadinov_pct": 10.204,
+   "margin_yotova_gyurov_pp": 7.753,
+   "margin_first_snapshot_pp": -9.735,
+   "turnout16_pct": 14.16
+  },
+  "2": {
+   "name": "Бургас",
+   "yotova_pct": 38.536,
+   "gyurov_pct": 26.081,
+   "kostadinov_pct": 12.797,
+   "margin_yotova_gyurov_pp": 12.455000000000002,
+   "margin_first_snapshot_pp": 6.535000000000004,
+   "turnout16_pct": 15.68
+  },
+  "3": {
+   "name": "Варна",
+   "yotova_pct": 32.132,
+   "gyurov_pct": 30.356,
+   "kostadinov_pct": 16.337,
+   "margin_yotova_gyurov_pp": 1.7759999999999962,
+   "margin_first_snapshot_pp": -5.317,
+   "turnout16_pct": 17.93
+  },
+  "4": {
+   "name": "Велико Търново",
+   "yotova_pct": 39.638,
+   "gyurov_pct": 22.928,
+   "kostadinov_pct": 14.969,
+   "margin_yotova_gyurov_pp": 16.709999999999997,
+   "margin_first_snapshot_pp": 4.442999999999998,
+   "turnout16_pct": 16.96
+  },
+  "5": {
+   "name": "Видин",
+   "yotova_pct": 42.876,
+   "gyurov_pct": 22.974,
+   "kostadinov_pct": 12.641,
+   "margin_yotova_gyurov_pp": 19.901999999999997,
+   "margin_first_snapshot_pp": 12.170999999999996,
+   "turnout16_pct": 17.58
+  },
+  "6": {
+   "name": "Враца",
+   "yotova_pct": 42.474,
+   "gyurov_pct": 18.716,
+   "kostadinov_pct": 13.157,
+   "margin_yotova_gyurov_pp": 23.757999999999996,
+   "margin_first_snapshot_pp": 27.147000000000002,
+   "turnout16_pct": 16.56
+  },
+  "7": {
+   "name": "Габрово",
+   "yotova_pct": 36.636,
+   "gyurov_pct": 25.22,
+   "kostadinov_pct": 14.953,
+   "margin_yotova_gyurov_pp": 11.416000000000004,
+   "margin_first_snapshot_pp": 1.1379999999999981,
+   "turnout16_pct": 17.3
+  },
+  "8": {
+   "name": "Добрич",
+   "yotova_pct": 41.872,
+   "gyurov_pct": 20.993,
+   "kostadinov_pct": 16.147,
+   "margin_yotova_gyurov_pp": 20.879,
+   "margin_first_snapshot_pp": 23.029,
+   "turnout16_pct": 14.46
+  },
+  "9": {
+   "name": "Кърджали",
+   "yotova_pct": 42.628,
+   "gyurov_pct": 21.73,
+   "kostadinov_pct": 7.924,
+   "margin_yotova_gyurov_pp": 20.898,
+   "margin_first_snapshot_pp": 16.904,
+   "turnout16_pct": 6.77
+  },
+  "10": {
+   "name": "Кюстендил",
+   "yotova_pct": 40.243,
+   "gyurov_pct": 25.325,
+   "kostadinov_pct": 13.435,
+   "margin_yotova_gyurov_pp": 14.918000000000003,
+   "margin_first_snapshot_pp": 12.471,
+   "turnout16_pct": 14.67
+  },
+  "11": {
+   "name": "Ловеч",
+   "yotova_pct": 40.014,
+   "gyurov_pct": 23.098,
+   "kostadinov_pct": 13.273,
+   "margin_yotova_gyurov_pp": 16.916000000000004,
+   "margin_first_snapshot_pp": 17.750999999999998,
+   "turnout16_pct": 15.34
+  },
+  "12": {
+   "name": "Монтана",
+   "yotova_pct": 41.909,
+   "gyurov_pct": 17.954,
+   "kostadinov_pct": 15.582,
+   "margin_yotova_gyurov_pp": 23.955,
+   "margin_first_snapshot_pp": 20.707,
+   "turnout16_pct": 15.75
+  },
+  "13": {
+   "name": "Пазарджик",
+   "yotova_pct": 39.94,
+   "gyurov_pct": 23.846,
+   "kostadinov_pct": 13.304,
+   "margin_yotova_gyurov_pp": 16.093999999999998,
+   "margin_first_snapshot_pp": 11.953,
+   "turnout16_pct": 13.06
+  },
+  "14": {
+   "name": "Перник",
+   "yotova_pct": 36.265,
+   "gyurov_pct": 26.914,
+   "kostadinov_pct": 15.03,
+   "margin_yotova_gyurov_pp": 9.350999999999999,
+   "margin_first_snapshot_pp": 10.588999999999999,
+   "turnout16_pct": 16.95
+  },
+  "15": {
+   "name": "Плевен",
+   "yotova_pct": 41.53,
+   "gyurov_pct": 21.424,
+   "kostadinov_pct": 13.64,
+   "margin_yotova_gyurov_pp": 20.106,
+   "margin_first_snapshot_pp": 7.569000000000003,
+   "turnout16_pct": 14.8
+  },
+  "16": {
+   "name": "Пловдив Град",
+   "yotova_pct": 30.782,
+   "gyurov_pct": 37.909,
+   "kostadinov_pct": 12.077,
+   "margin_yotova_gyurov_pp": -7.126999999999999,
+   "margin_first_snapshot_pp": 10.247,
+   "turnout16_pct": 17.86
+  },
+  "17": {
+   "name": "Пловдив Област",
+   "yotova_pct": 39.92,
+   "gyurov_pct": 23.844,
+   "kostadinov_pct": 12.965,
+   "margin_yotova_gyurov_pp": 16.076,
+   "margin_first_snapshot_pp": 24.284,
+   "turnout16_pct": 13.97
+  },
+  "18": {
+   "name": "Разград",
+   "yotova_pct": 44.304,
+   "gyurov_pct": 22.741,
+   "kostadinov_pct": 10.046,
+   "margin_yotova_gyurov_pp": 21.563000000000002,
+   "margin_first_snapshot_pp": 14.375000000000004,
+   "turnout16_pct": 11.14
+  },
+  "19": {
+   "name": "Русе",
+   "yotova_pct": 38.854,
+   "gyurov_pct": 25.521,
+   "kostadinov_pct": 13.693,
+   "margin_yotova_gyurov_pp": 13.332999999999998,
+   "margin_first_snapshot_pp": 9.090999999999998,
+   "turnout16_pct": 16.41
+  },
+  "20": {
+   "name": "Силистра",
+   "yotova_pct": 45.877,
+   "gyurov_pct": 17.129,
+   "kostadinov_pct": 11.748,
+   "margin_yotova_gyurov_pp": 28.748,
+   "margin_first_snapshot_pp": 25.545,
+   "turnout16_pct": 13.73
+  },
+  "21": {
+   "name": "Сливен",
+   "yotova_pct": 40.249,
+   "gyurov_pct": 21.896,
+   "kostadinov_pct": 14.144,
+   "margin_yotova_gyurov_pp": 18.353,
+   "margin_first_snapshot_pp": 14.383000000000003,
+   "turnout16_pct": 11.51
+  },
+  "22": {
+   "name": "Смолян",
+   "yotova_pct": 47.219,
+   "gyurov_pct": 20.585,
+   "kostadinov_pct": 10.676,
+   "margin_yotova_gyurov_pp": 26.634,
+   "margin_first_snapshot_pp": 11.153000000000002,
+   "turnout16_pct": 16.65
+  },
+  "23": {
+   "name": "София 23 МИР",
+   "yotova_pct": 21.934,
+   "gyurov_pct": 54.383,
+   "kostadinov_pct": 9.351,
+   "margin_yotova_gyurov_pp": -32.449,
+   "margin_first_snapshot_pp": -23.024,
+   "turnout16_pct": 25.91
+  },
+  "24": {
+   "name": "София 24 МИР",
+   "yotova_pct": 23.524,
+   "gyurov_pct": 49.864,
+   "kostadinov_pct": 10.632,
+   "margin_yotova_gyurov_pp": -26.339999999999996,
+   "margin_first_snapshot_pp": -24.988000000000003,
+   "turnout16_pct": 16.77
+  },
+  "25": {
+   "name": "София 25 МИР",
+   "yotova_pct": 29.103,
+   "gyurov_pct": 38.871,
+   "kostadinov_pct": 12.636,
+   "margin_yotova_gyurov_pp": -9.768,
+   "margin_first_snapshot_pp": -7.352999999999998,
+   "turnout16_pct": 19.69
+  },
+  "26": {
+   "name": "София Област",
+   "yotova_pct": 37.168,
+   "gyurov_pct": 24.392,
+   "kostadinov_pct": 13.311,
+   "margin_yotova_gyurov_pp": 12.776,
+   "margin_first_snapshot_pp": 22.996000000000002,
+   "turnout16_pct": 18.36
+  },
+  "27": {
+   "name": "Стара Загора",
+   "yotova_pct": 39.935,
+   "gyurov_pct": 23.273,
+   "kostadinov_pct": 13.813,
+   "margin_yotova_gyurov_pp": 16.662000000000003,
+   "margin_first_snapshot_pp": 9.392000000000003,
+   "turnout16_pct": 16.85
+  },
+  "28": {
+   "name": "Търговище",
+   "yotova_pct": 44.884,
+   "gyurov_pct": 19.652,
+   "kostadinov_pct": 10.804,
+   "margin_yotova_gyurov_pp": 25.232,
+   "margin_first_snapshot_pp": 15.651,
+   "turnout16_pct": 11.77
+  },
+  "29": {
+   "name": "Хасково",
+   "yotova_pct": 47.891,
+   "gyurov_pct": 18.565,
+   "kostadinov_pct": 12.588,
+   "margin_yotova_gyurov_pp": 29.325999999999997,
+   "margin_first_snapshot_pp": 21.142,
+   "turnout16_pct": 14.18
+  },
+  "30": {
+   "name": "Шумен",
+   "yotova_pct": 39.437,
+   "gyurov_pct": 24.291,
+   "kostadinov_pct": 11.781,
+   "margin_yotova_gyurov_pp": 15.145999999999997,
+   "margin_first_snapshot_pp": 13.684999999999999,
+   "turnout16_pct": 12.6
+  },
+  "31": {
+   "name": "Ямбол",
+   "yotova_pct": 42.006,
+   "gyurov_pct": 18.597,
+   "kostadinov_pct": 15.855,
+   "margin_yotova_gyurov_pp": 23.409,
+   "margin_first_snapshot_pp": 22.637,
+   "turnout16_pct": 16.07
+  },
+  "32": {
+   "name": "Обобщени данни",
+   "yotova_pct": 22.879,
+   "gyurov_pct": 45.606,
+   "kostadinov_pct": 11.627,
+   "margin_yotova_gyurov_pp": -22.727,
+   "margin_first_snapshot_pp": -44.79900000000001,
+   "turnout16_pct": null
+  }
+ },
+ "consistency_mir_sum_equals_country_final": true
+}

@@ -2,7 +2,9 @@
 const I18N = {
 en: {
   rs_title: "Serbia — parliamentary election, 25 October 2026",
-  rs_desc: "14 counting snapshots, 8,124 territorial stations and a complete 2023 control. No convergent evidence of large-scale stuffing; accounting and statistical flags remain. Corrected seat projection: 140 Students, 104 Vučić, six minority seats.",
+  rs_desc: "Archived interim results: 14 snapshots, 8,124 territorial stations and a 2023 historical reference. Statistical screening leaves accounting gaps and model-relative flags for review. Fixed-vote seat model: 140 Students, 104 Vučić-list, six minority seats.",
+  bg_title: "Bulgaria — presidential election, 25 October 2026",
+  bg_desc: "Updated CIK results: 100% processed, Yotova 34.759%, Gyurov 31.952%. All 12,719 section totals reconcile; screening of 10,616 domestic sections covers Shpilkin tails, integer peaks and digits, with protocol discrepancies and limits stated.",
   br2_title: "Brazil — presidential runoff, 25 October 2026",
   br2_desc: "Verdict: no statistical traces of manipulation. 499,248 sections, eleven families of tests, the honest 2022 runoff on the same sections as a control — plus the election-night capture and the actual vote transfers between the rounds.",
   sk_title: "Slovakia — municipal &amp; regional elections, 24 October 2026",
@@ -28,7 +30,9 @@ en: {
 },
 sl: {
   rs_title: "Srbija — parlamentarne volitve, 25. oktober 2026",
-  rs_desc: "14 posnetkov štetja, 8.124 teritorialnih volišč in popolna kontrola iz leta 2023. Ni skladnih dokazov o množičnem dodajanju glasovnic; računovodska in statistična opozorila ostajajo. Popravljena projekcija: 140 mandatov študentski listi, 104 Vučiću, šest manjšinam.",
+  rs_desc: "Arhivirani začasni rezultati: 14 posnetkov, 8.124 teritorialnih volišč in zgodovinska referenca 2023. Statistične preverbe puščajo razlike v seštevkih in modelna opozorila za pregled. Model s fiksnimi glasovi: 140 mandatov študentski listi, 104 Vučićevi, šest manjšinam.",
+  bg_title: "Bulgarija — predsedniške volitve, 25. oktober 2026",
+  bg_desc: "Posodobljeni rezultati CIK: 100 % obdelano, Jotova 34,759 %, Gjurov 31,952 %. Seštevki vseh 12.719 volišč se ujemajo; analiza 10.616 domačih volišč vključuje Špilkina, celoštevilske vrhove in števke, z navedenimi neskladji in omejitvami.",
   br2_title: "Brazilija — predsedniške volitve, 2. krog, 25. oktober 2026",
   br2_desc: "Zaključek: statističnih sledi poneverbe ni. 499.248 sekcij, enajst družin testov, pošten 2. krog 2022 na istih sekcijah kot kontrola — plus nočni zajem rezultatov in dejanski prenosi glasov med krogoma.",
   sk_title: "Slovaška — komunalne in županijske volitve, 24. oktober 2026",
@@ -54,7 +58,9 @@ sl: {
 },
 hr: {
   rs_title: "Srbija — parlamentarni izbori, 25. listopada 2026.",
-  rs_desc: "14 presjeka prebrojavanja, 8.124 teritorijalna biračka mjesta i potpuna kontrola iz 2023. Nema suglasnih dokaza o masovnom dodavanju listića; računovodstvena i statistička upozorenja ostaju. Ispravljena projekcija: 140 mandata studentima, 104 Vučiću, šest manjinama.",
+  rs_desc: "Arhivirani privremeni rezultati: 14 presjeka, 8.124 teritorijalna mjesta i povijesna referenca 2023. Statističke provjere ostavljaju razlike u obračunu i modelne signale za pregled. Model s fiksnim glasovima: 140 mandata studentima, 104 Vučićevoj listi, šest manjinama.",
+  bg_title: "Bugarska — predsjednički izbori, 25. listopada 2026.",
+  bg_desc: "Ažurirani rezultati CIK-a: 100% obrađeno, Jotova 34,759%, Gjurov 31,952%. Zbrojevi svih 12.719 biračkih mjesta podudaraju se; analiza 10.616 domaćih mjesta obuhvaća Špilkina, cjelobrojne vrhove i znamenke, uz navedena neslaganja i ograničenja.",
   br2_title: "Brazil — predsjednički izbori, 2. krug, 25. listopada 2026.",
   br2_desc: "Zaključek: nema statističkih tragova manipulacije. 499.248 biračkih mjesta, jedanaest obitelji testova, pošteni 2. krug 2022. na istim mjestima kao kontrola — plus noćni zahvat rezultata i stvarni prijenosi glasova između krugova.",
   sk_title: "Slovačka — lokalni i regionalni izbori, 24. listopada 2026.",
@@ -80,7 +86,9 @@ hr: {
 },
 it: {
   rs_title: "Serbia — elezioni parlamentari, 25 ottobre 2026",
-  rs_desc: "14 rilevazioni dello scrutinio, 8.124 seggi territoriali e un controllo completo del 2023. Nessuna evidenza convergente di aggiunta massiccia di schede; restano discrepanze contabili e segnali statistici. Proiezione corretta: 140 seggi agli studenti, 104 a Vučić, sei alle minoranze.",
+  rs_desc: "Risultati provvisori archiviati: 14 rilevazioni, 8.124 seggi territoriali e riferimento storico 2023. Restano discrepanze contabili e segnali relativi ai modelli da verificare. Modello a voti fissi: 140 seggi agli studenti, 104 alla lista Vučić, sei alle minoranze.",
+  bg_title: "Bulgaria — elezioni presidenziali, 25 ottobre 2026",
+  bg_desc: "Risultati CIK aggiornati: 100% elaborato, Jotova 34,759%, Gjurov 31,952%. I totali di 12.719 seggi coincidono; analisi di 10.616 seggi nazionali con code di Shpilkin, picchi interi e cifre, con discrepanze e limiti espliciti.",
   br2_title: "Brasile — presidenziali, 2º turno, 25 ottobre 2026",
   br2_desc: "Verdetto: nessuna traccia statistica di manipolazione. 499.248 sezioni, undici famiglie di test, l’onesto 2º turno del 2022 sulle stesse sezioni come controllo — più la cattura notturna dei risultati e i trasferimenti di voti reali tra i turni.",
   sk_title: "Slovacchia — elezioni locali e regionali, 24 ottobre 2026",
@@ -106,7 +114,9 @@ it: {
 },
 hu: {
   rs_title: "Szerbia — parlamenti választás, 2026. október 25.",
-  rs_desc: "14 számlálási pillanatkép, 8 124 területi szavazókör és teljes 2023-as kontroll. Nincs egybehangzó bizonyíték tömeges szavazólap-hozzáadásra; elszámolási és statisztikai jelzések maradtak. Javított mandátumbecslés: 140 a diáklistának, 104 Vučićnak, hat a kisebbségeknek.",
+  rs_desc: "Archivált ideiglenes eredmények: 14 pillanatkép, 8 124 területi szavazókör és 2023-as történeti referencia. Elszámolási eltérések és modellfüggő jelzések várnak ellenőrzésre. Rögzített szavazatokkal számolt modell: 140 mandátum a diáklistának, 104 Vučić listájának, hat a kisebbségeknek.",
+  bg_title: "Bulgária — elnökválasztás, 2026. október 25.",
+  bg_desc: "Friss CIK-eredmények: 100% feldolgozva, Jotova 34,759%, Gjurov 31,952%. Mind a 12 719 szavazókör összege egyezik; 10 616 belföldi kör vizsgálata Spilkin-módszerrel, egészértékű csúcsokkal és számjegytesztekkel, feltüntetett eltérésekkel és korlátokkal.",
   br2_title: "Brazília — elnökválasztás, 2. forduló, 2026. október 25.",
   br2_desc: "Eredmény: nincs a manipulációra utaló statisztikai nyom. 499 248 szavazókör, tizenegy tesztcsalád, a korrekt 2022-es második forduló ugyanazokon a körökön kontrollként — plusz az éjszakai eredményrögzítés és a fordulók közötti tényleges szavazatáramlások.",
   sk_title: "Szlovákia — önkormányzati és megyei választások, 2026. október 24.",
@@ -132,7 +142,9 @@ hu: {
 },
 pt: {
   rs_title: "Sérvia — eleições legislativas, 25 de outubro de 2026",
-  rs_desc: "14 registos da contagem, 8 124 secções territoriais e controlo completo de 2023. Sem evidência convergente de adição massiva de boletins; subsistem discrepâncias contabilísticas e sinais estatísticos. Projeção corrigida: 140 deputados para os estudantes, 104 para Vučić, seis para as minorias.",
+  rs_desc: "Resultados provisórios arquivados: 14 registos, 8.124 secções territoriais e referência histórica de 2023. Permanecem discrepâncias de contagem e sinais dependentes dos modelos para revisão. Modelo com votos fixos: 140 deputados para os estudantes, 104 para a lista Vučić, seis para as minorias.",
+  bg_title: "Bulgária — presidencial, 25 de outubro de 2026",
+  bg_desc: "Resultados CEC atualizados: 100% processado, Yotova 34,759%, Gyurov 31,952%. Os totais das 12.719 secções coincidem; análise de 10.616 secções nacionais com Shpilkin, picos inteiros e dígitos, com discrepâncias e limitações explícitas.",
   br2_title: "Brasil — presidencial, 2.º turno, 25 de outubro de 2026",
   br2_desc: "Veredito: sem vestígios estatísticos de manipulação. 499.248 seções, onze famílias de testes, o honesto 2.º turno de 2022 nas mesmas seções como controle — mais a captura da noite eleitoral e as transferências reais de votos entre os turnos.",
   sk_title: "Eslováquia — eleições locais e regionais, 24 de outubro de 2026",
@@ -158,7 +170,9 @@ pt: {
 },
 es: {
   rs_title: "Serbia — elecciones parlamentarias, 25 de octubre de 2026",
-  rs_desc: "14 capturas del escrutinio, 8.124 mesas territoriales y control completo de 2023. Sin evidencia convergente de adición masiva de papeletas; persisten discrepancias contables y señales estadísticas. Proyección corregida: 140 escaños para estudiantes, 104 para Vučić, seis para minorías.",
+  rs_desc: "Resultados provisionales archivados: 14 capturas, 8.124 mesas territoriales y referencia histórica de 2023. Quedan discrepancias contables y señales relativas a los modelos por revisar. Modelo con votos fijos: 140 escaños para estudiantes, 104 para la lista Vučić, seis para minorías.",
+  bg_title: "Bulgaria — presidencial, 25 de octubre de 2026",
+  bg_desc: "Resultados CEC actualizados: 100% procesado, Yotova 34,759%, Gyurov 31,952%. Los totales de 12.719 mesas coinciden; análisis de 10.616 mesas nacionales con Shpilkin, picos enteros y dígitos, con discrepancias y límites explícitos.",
   br2_title: "Brasil — presidencial, 2.ª vuelta, 25 de octubre de 2026",
   br2_desc: "Veredicto: sin rastros estadísticos de manipulación. 499.248 secciones, once familias de pruebas, la honesta 2.ª vuelta de 2022 en las mismas secciones como control — más la captura de la noche electoral y las transferencias reales de votos entre vueltas.",
   sk_title: "Eslovaquia — elecciones locales y regionales, 24 de octubre de 2026",

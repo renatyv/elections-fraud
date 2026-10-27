@@ -11,32 +11,34 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from election_forensics.data import ElectionData
+
 BASE = Path(__file__).resolve().parents[1]
 SITE = BASE.parent / "site/serbia-oct-2026"
 NAVY, GOLD, GRAY = "#16324f", "#d59d26", "#9aa5b1"
 LABELS = {
     "en": {
-        "margin_title": "From an early incumbent lead to a Students majority",
+        "margin_title": "Published lead through the captured count",
         "counted": "Polling stations processed, %", "margin": "Students − Vučić, percentage points",
         "latest": "21:15 CET: +13.54 pp", "peak": "16:55 CET: +13.62 pp",
         "seats_title": "Same votes, different seat-allocation rules · 16:55 CET snapshot",
         "students": "Students", "incumbent": "Vučić", "minorities": "Minority lists",
         "legal": "Legal D’Hondt + minority bonus", "plain": "Plain D’Hondt", "hare": "Hare remainder",
-        "seats": "Seats of 250", "comparison": "The matched-station comparison · 7,935 keys",
+        "seats": "Projected seats · 250 total", "comparison": "The matched-station comparison · 7,935 keys",
         "turnout": "Turnout, % of registered voters", "share": "Incumbent share of valid votes, %",
-        "map": "Plurality winners by municipality · 189 territorial municipalities",
+        "map": "Municipality plurality tally · 16:55 CET interim snapshot",
         "municipalities": "Municipalities", "others": "Other lists",
     },
     "sr": {
-        "margin_title": "Од раног вођства власти до већине Студентске листе",
+        "margin_title": "Објављена разлика током забележеног бројања",
         "counted": "Обрађена бирачка места, %", "margin": "Студентска листа − Вучић, процентни поени",
         "latest": "21:15 CET: +13,54 п.п.", "peak": "16:55 CET: +13,62 п.п.",
         "seats_title": "Исти гласови, различита расподела мандата · пресек у 16:55 CET",
         "students": "Студентска листа", "incumbent": "Вучић", "minorities": "Мањинске листе",
         "legal": "Законски Д’Онт + мањинско увећање", "plain": "Д’Онт без увећања", "hare": "Хејров највећи остатак",
-        "seats": "Мандати од укупно 250", "comparison": "Поређење 7.935 упарених бирачких места",
+        "seats": "Пројекција мандата · укупно 250", "comparison": "Поређење 7.935 упарених бирачких места",
         "turnout": "Излазност, % уписаних бирача", "share": "Удео власти у важећим гласовима, %",
-        "map": "Листе са највише гласова по општинама · 189 општина",
+        "map": "Број општина по водећој листи · привремени пресек у 16:55 CET",
         "municipalities": "Општине", "others": "Остале листе",
     },
 }
@@ -113,8 +115,93 @@ def build_figures(lang: str) -> None:
     plt.close(fig)
 
 
+def build_diagnostic_figures() -> None:
+    """Render archived statistics with labels describing the observations shown."""
+    from election_forensics import plots
+    from election_forensics.data import load_mai_csv
+    from election_forensics.integer_peaks import integer_peaks
+    from election_forensics.selftest import SelftestReport, inject_additive_fraud
+    from election_forensics.shpilkin import ShpilkinResult
+
+    data = load_mai_csv(BASE / "data/ef/serbia2026_stn/results_freguesias.csv",
+                        election_name="Serbia 2026 · 8,124 territorial stations · 16:55 CET")
+    metrics = json.loads((BASE / "analysis/ef/stn2026_controlled/metrics.json").read_text())
+    target = BASE / "analysis/ef/stn2026_controlled/figures"
+    assert data.n == metrics["n_units"] == 8124
+    plots.plot_shpilkin(data, "votes:Students", ShpilkinResult(**metrics["shpilkin"]), target)
+    plots.plot_comet(data, ["votes:Students", "votes:Vučić", "votes:Dacić (SPS)"], target)
+    plots.plot_integer_peaks(data, integer_peaks(data, "turnout"), target)
+    neighbors = pd.read_csv(BASE / "analysis/ef/stn2026_controlled/tables/neighbors_z.csv")
+    plots.plot_neighbors(neighbors, target)
+    injected, _ = inject_additive_fraud(data, "votes:Students")
+    plots.plot_selftest(data, injected, "votes:Students", SelftestReport(**metrics["selftest"]), target)
+    build_fingerprint_comparison(data, metrics, target)
+    build_digit_figures(data, metrics, target)
+
+
+def build_fingerprint_comparison(data: ElectionData, metrics: dict, target: Path) -> None:
+    from matplotlib.colors import LogNorm
+    from election_forensics.data import load_mai_csv
+
+    old = load_mai_csv(BASE / "data/ef/serbia2023_stn/results_freguesias.csv")
+    old_metrics = json.loads((BASE / "analysis/ef/stn2023_control/metrics.json").read_text())
+    diagnostics = json.loads((BASE / "analysis/diagnostics/metrics.json").read_text())
+    panels = [(data, "Students", metrics["fingerprint"], "2026 · Students · 8,124 stations"),
+              (data, "Vučić", diagnostics["incumbent_fingerprint"], "2026 · Vučić · 8,124 stations"),
+              (old, "Vučić", old_metrics["fingerprint"], "2023 reference · Vučić · 8,163 stations")]
+    fig, axes = plt.subplots(1, 3, figsize=(13, 4.7), sharex=True, sharey=True, layout="constrained")
+    edges = np.linspace(0, 100, 81)
+    for ax, (frame, party, fit, title) in zip(axes, panels):
+        image = ax.hist2d(frame.turnout, frame.share(f"votes:{party}"), bins=[edges, edges],
+                          weights=frame.registered, cmap="viridis", cmin=1, norm=LogNorm(vmin=1, vmax=100000))
+        for key, marker, color, label in [("mean_main", "o", "white", "A: lower-turnout fitted centre"),
+                                           ("mean_anom", "s", "#ff9933", "B: higher-turnout fitted centre")]:
+            ax.plot(*fit[key], marker, ms=9, mfc="none", mec=color, mew=1.8)
+            ax.annotate(label[0], fit[key], xytext=(7, 7), textcoords="offset points", color=color,
+                        weight="bold", fontsize=10)
+        ax.set(xlabel="Turnout: reported voters / registered, %", title=title, xlim=(0, 100), ylim=(0, 100))
+    axes[0].set_ylabel("List votes / reported voters, %")
+    fig.colorbar(image[3], ax=list(axes), label="Registered electors per cell · log scale", shrink=0.8)
+    fig.suptitle("Turnout and list support: two components requested for each panel\n"
+                 "A and B are fitted centres; colours show electorate density, not suspicion", fontsize=12)
+    fig.savefig(target / "fingerprint_2d.png", dpi=150)
+    plt.close(fig)
+
+
+def build_digit_figures(data: ElectionData, metrics: dict, target: Path) -> None:
+    from election_forensics.digit_tests import BENFORD_2ND, digit_freqs, digit_null_band
+
+    for kind, key, minimum in [("benford2", "benford2", 10), ("last", "last_digit", 100)]:
+        fig, axes = plt.subplots(1, 3, figsize=(11, 3.8), sharey=True)
+        expected = BENFORD_2ND if kind == "benford2" else np.full(10, 0.1)
+        for ax, row in zip(axes, metrics[key]):
+            counts = data.df[f'votes:{row["party"]}'].to_numpy()
+            observed = digit_freqs(counts, kind)
+            band = digit_null_band(counts, kind)
+            x = np.arange(10)
+            ax.bar(x - 0.2, observed * 100, width=0.4, color=NAVY, label="Observed")
+            ax.bar(x + 0.2, expected * 100, width=0.4, color=GRAY,
+                   label="Benford reference" if kind == "benford2" else "Uniform reference")
+            ax.fill_between(x, band[0] * 100, band[1] * 100, color=GOLD, alpha=0.25,
+                            label="95% smooth-model simulation band")
+            note = " · too few for chi-square inference" if row["n_numbers"] < 50 else ""
+            ax.set(title=f'{row["party"]}\nn = {row["n_numbers"]:,}{note}', xlabel="Digit",
+                   xticks=x)
+            ax.tick_params(axis="x", labelsize=8)
+        axes[0].set_ylabel("Frequency among eligible tallies, %")
+        handles, labels = axes[0].get_legend_handles_labels()
+        fig.legend(handles, labels, loc="lower center", ncols=3, fontsize=8)
+        title = "Second digits" if kind == "benford2" else "Last digits"
+        fig.suptitle(f"2026 territorial stations · {title} · list vote counts ≥ {minimum}\n"
+                     "Each list has its own counts and fitted simulation reference", fontsize=11)
+        fig.tight_layout(rect=(0, 0.1, 1, 0.87))
+        fig.savefig(target / f"digit_{kind}.png", dpi=150)
+        plt.close(fig)
+
+
 def main() -> None:
     plt.rcParams.update({"font.size": 10, "axes.spines.top": False, "axes.spines.right": False})
+    build_diagnostic_figures()
     for lang in LABELS:
         build_figures(lang)
         target = SITE / "img/details" / lang / "stn2026_controlled"
@@ -134,6 +221,9 @@ def main() -> None:
         if source.parent.name == "diagnostics":
             name = "diagnostics.json"
         shutil.copy2(source, download / name)
+    for name, run in [("screening_2026.json", "stn2026_controlled"),
+                      ("reference_2023.json", "stn2023_control")]:
+        shutil.copy2(BASE / "analysis/ef" / run / "metrics.json", download / name)
     print(f"Built Serbian/English figures and evidence downloads: {SITE}")
 
 

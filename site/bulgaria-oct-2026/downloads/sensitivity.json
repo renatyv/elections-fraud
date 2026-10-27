@@ -1,0 +1,98 @@
+{
+  "tail_sensitivity": [
+    {
+      "percentile": 99,
+      "party": "Yotova",
+      "t_cut": 45.53072625698324,
+      "t_cut_source": "own_percentile_99",
+      "mode": 26.75,
+      "sigma": 11.295448896341936,
+      "total_votes_party": 490916,
+      "tail_voters": 40066,
+      "tail_votes_party": 13303,
+      "tail_share_of_party": 2.709832231990809,
+      "observed_share_pct": 35.076803477699194,
+      "honest_share_pct": 35.132035778385855
+    },
+    {
+      "percentile": 99.5,
+      "party": "Yotova",
+      "t_cut": 50.48231511254019,
+      "t_cut_source": "own_percentile_99.5",
+      "mode": 26.75,
+      "sigma": 11.295448896341936,
+      "total_votes_party": 490916,
+      "tail_voters": 23374,
+      "tail_votes_party": 7845,
+      "tail_share_of_party": 1.59803306471983,
+      "observed_share_pct": 35.076803477699194,
+      "honest_share_pct": 35.102516255235535
+    },
+    {
+      "percentile": 99.9,
+      "party": "Yotova",
+      "t_cut": 99.29577464788733,
+      "t_cut_source": "own_percentile_99.9",
+      "mode": 26.75,
+      "sigma": 11.295448896341936,
+      "total_votes_party": 490916,
+      "tail_voters": 6519,
+      "tail_votes_party": 2445,
+      "tail_share_of_party": 0.4980485459834269,
+      "observed_share_pct": 35.076803477699194,
+      "honest_share_pct": 35.06543663547081
+    }
+  ],
+  "digit_holm_mc": [
+    {
+      "test": "benford2",
+      "party": "Vasilev",
+      "n": 1985,
+      "p_mc": 0.0024937655860349127,
+      "p_holm": 0.017456359102244388
+    },
+    {
+      "test": "benford2",
+      "party": "Mihaylov",
+      "n": 1340,
+      "p_mc": 0.0024937655860349127,
+      "p_holm": 0.017456359102244388
+    },
+    {
+      "test": "last",
+      "party": "Yotova",
+      "n": 189,
+      "p_mc": 0.022443890274314215,
+      "p_holm": 0.11221945137157108
+    },
+    {
+      "test": "last",
+      "party": "Gyurov",
+      "n": 1015,
+      "p_mc": 0.3341645885286783,
+      "p_holm": 1.0
+    },
+    {
+      "test": "benford2",
+      "party": "Gyurov",
+      "n": 8233,
+      "p_mc": 0.6309226932668329,
+      "p_holm": 1.0
+    },
+    {
+      "test": "benford2",
+      "party": "Yotova",
+      "n": 10049,
+      "p_mc": 0.6932668329177057,
+      "p_holm": 1.0
+    },
+    {
+      "test": "benford2",
+      "party": "Kostadinov",
+      "n": 7359,
+      "p_mc": 1.0,
+      "p_holm": 1.0
+    }
+  ],
+  "digit_family_note": "7 candidate/test combinations with at least 50 usable tallies; exploratory, not preregistered"
+}

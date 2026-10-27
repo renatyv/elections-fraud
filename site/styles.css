@@ -1023,6 +1023,27 @@ details {
   background: linear-gradient(#c6363c 33%, #0c4076 33% 66%, #fff 66%);
 }
 
+.page-bulgaria-oct-2026 .flag {
+  background: linear-gradient(#fff 33%, #00966e 33% 66%, #d62612 66%);
+}
+
+.page-bulgaria-oct-2026 .p-row {
+  grid-template-columns: minmax(90px, 150px) 1fr 62px;
+}
+
+.page-bulgaria-oct-2026 .p-name {
+  white-space: normal;
+}
+
+.page-bulgaria-oct-2026 .m-details > .res-card,
+.page-bulgaria-oct-2026 .m-details > .args {
+  margin-top: 16px;
+}
+
+.page-bulgaria-oct-2026 code {
+  overflow-wrap: anywhere;
+}
+
 .page-serbia-oct-2026 .right {
   display: flex;
   align-items: center;

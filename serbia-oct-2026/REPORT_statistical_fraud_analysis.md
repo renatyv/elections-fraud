@@ -1,10 +1,14 @@
 # Serbia 2026: statistical election forensics
 
-**The published counts do not provide convergent statistical evidence of
-large-scale ballot stuffing. They do contain signals and accounting gaps
-that warrant scrutiny. These tests cannot certify an election as clean.**
+**These screening results do not establish ballot stuffing. Accounting gaps,
+model-relative digit deviations and unusual stations remain follow-up items.
+The analysis does not quantify undetected manipulation or certify election
+integrity. Non-rejection by a test is not proof of honest counting.**
 
-Analysis date: 26 October 2026. Forensic snapshot: **16:55 CET**, RIK round
+Analysis date: 26 October 2026; wording and figures reviewed 27 October.
+The review did not refresh the archived results.
+
+ Forensic snapshot: **16:55 CET**, RIK round
 680072, 8,160/8,392 stations (**97.24%**). The trend report separately extends
 to **21:15 CET**, 97.60%. The 2023 control (round 341140) is complete: all
 **8,273 stations**, with exact national per-list reconciliation.
@@ -52,7 +56,7 @@ limits cross-grain turnout comparisons and is not evidence of missing votes.
 
 Five standard runs are preserved in `analysis/ef/`:
 
-| Run | Boundary | Leader votes in estimated tail | % of leader votes | Leader share before → after tail removal |
+| Run | Boundary | Leader votes in the binned tail | % of leader votes | Leader share before → after tail removal |
 |---|---:|---:|---:|---:|
 | `mun2026`, 2023 municipality control | 77.96% | 96,390 | 4.29% | 52.65 → 52.73% |
 | `stn2026`, own q99.5 | 85.95% | 6,974 | 0.31% | 52.65 → 52.83% |
@@ -69,26 +73,44 @@ benchmark.
 
 The incumbent is tested separately in `analysis/diagnostics/metrics.json`:
 with the 2023 station boundary, **8,670 Vučić votes (0.52%)** lie in the
-estimated tail; excluding it moves his share **39.16 → 39.09%**. This small
-sensitivity is not a large incumbent stuffing signature.
+estimated tail; excluding it moves his share **39.16 → 39.09%**. This describes sensitivity to the selected cutoff, not a test with
+quantified power to detect large-scale stuffing.
 
 ![Station turnout and share](analysis/ef/stn2026_controlled/figures/comet_scatter.png)
 
-## 3. Fingerprints: a real mixture flag, an unidentified cause
+## 3. Turnout/support density: two components specified in advance
 
-The Students two-component mixture is formally separated at both grains.
-At stations the component centres are approximately **(59.0% turnout,
-34.7% Students)** and **(72.1%, 57.3%)**; the higher-turnout component has
-weight 0.746. This describes substantial heterogeneity. A mixture component's
-weight is **not the fraction of fraudulent votes or stations**.
+The model is instructed to fit **two overlapping Gaussian components** to each
+year/list dataset. It does not select the number of components or demonstrate
+that two components fit better than one. The fit uses registered-elector-weighted
+resampling. Density colour is the sum of **registered electors per cell**, not
+the number of votes, stations or suspicious cases; the colour scale is logarithmic.
 
-The separate incumbent mixture is not formally separated; its centres are
-approximately (57.2%, 45.2%) and (72.1%, 37.6%). The higher-turnout cluster
-has lower incumbent support. The 2023 incumbent mixture is also not
-separated. Geography and mobilization are plausible contributors, but this
-model alone cannot distinguish them from manipulation. The earlier assertion
-that the same formally separated structure occurs in the 2023 control was
-not supported by its metrics.
+| Dataset | Lower-turnout centre: turnout / list share | Higher-turnout centre | Higher-turnout fitted weight |
+|---|---|---|---:|
+| 2026 Students | 59.0% / 34.7% | 72.1% / 57.3% | 0.746 |
+| 2026 Vučić list | 57.2% / 45.2% | 72.1% / 37.6% | 0.777 |
+| 2023 Vučić list | 51.0% / 56.6% | 59.8% / 44.6% | 0.862 |
+
+List share here is list votes / reported voters. These are separately fitted
+datasets, not a shared fit across years or an individual-voter transfer model.
+The page now shows all three panels explicitly. The former single 2026 Students
+graph misleadingly included “2023 control” in its title although it contained
+no 2023 observations and the 2023 data did not calibrate that fit.
+
+The legacy output field `separated` is **not a statistical separation test**.
+It is true if the higher-turnout component has weight >1%, its mean turnout
+exceeds the other component by >2 percentage points, and its mean list share
+is higher. Both 2026 Students fits (station and municipality) meet this
+programmed directional rule. The 2026 and 2023 incumbent station fits do not:
+their higher-turnout components have **lower** incumbent shares. Thus the
+previous phrasing that one mixture “separates” but the others do not was
+misleading: two components were fitted in every case.
+
+Component weights do not estimate fraudulent votes, fraudulent stations or
+verified political groups. Geographic and electorate differences could
+contribute; the fit alone neither identifies their cause nor establishes or
+rules out manipulation. Neither year is a verified clean benchmark.
 
 ## 4. Integer percentages and synthetic sensitivity
 
@@ -100,8 +122,13 @@ all integer tests as “within one sigma” would therefore be incorrect.
 
 The station synthetic injection raises the own-boundary tail signal from
 6,974 to 217,414 votes (**31 times**); forced percentage rounding moves
-turnout z from +0.90 to +3.22. This checks sensitivity to those particular
+turnout z from +0.90 to +3.23. This checks sensitivity to those particular
 simulations, not detection power against every form or size of manipulation.
+The additive scenario adds 87,179 synthetic Students votes, while the tail
+statistic rises to 217,414 because it includes original votes moved into the
+tail. The cutoff is fixed from the original 2026 data (85.95%), not the
+historical 87.97% cutoff. “Original” does not mean independently verified
+clean. The separate rounding scenario is not shown in the additive figure.
 
 ## 5. Digit tests: report the deviations, respect the null model
 
@@ -120,7 +147,9 @@ Of its 3,844 eligible second-digit counts, 3,811 (99.14%) lie between
 Benford distribution is a poor null for such a restricted range. Even the
 fitted, thresholded lognormal null rejects, so this deviation remains a
 model/data diagnostic to investigate rather than being discarded. SPS's
-last-digit test has only 33 eligible counts and low power.
+last-digit test has only 33 eligible counts. Expected counts of 3.3 per
+digit make the asymptotic chi-square reference unreliable; its p-value is
+retained in the raw output but is not interpreted as a reliable pass/fail.
 
 The 2023 incumbent also deviates in second digits (chi² 23.97,
 p = 0.00436; Monte Carlo p = 0.0175), while its last digits are unremarkable
@@ -128,6 +157,14 @@ p = 0.00436; Monte Carlo p = 0.0175), while its last digits are unremarkable
 counts meeting the last-digit minimum of 100. That test is marked unavailable,
 not p = 1. Digit p-values depend on the assumed generating process and
 cannot identify fabricated tallies by themselves.
+
+The stated six-test Bonferroni family is exploratory and does not cover all
+analyses on this page. It retains the sparse SPS last-digit combination, so
+the cutoff is conservative for that family. The SPS second-digit simulation
+p-value 0.00249 is the minimum resolution of 400 simulations (1/401).
+The page's digit plots now show the three actual tested lists separately;
+the former “top-6” label was incorrect. The shaded 95% simulation bands are
+per digit, not a simultaneous acceptance region or an integrity probability.
 
 Tables for every run: `analysis/ef/<run>/tables/{benford2,last_digit}.csv`.
 
@@ -202,14 +239,15 @@ later reaches +13.62 points and narrows to +13.54 at 21:15. These snapshots
 support a composition explanation but cannot exclude changes between captures.
 They are not an audit of counting procedures.
 
-## 9. What is established, what remains open
+## 9. Scope of the findings and unresolved questions
 
 The captured list totals reconcile across grains, the historical station
 control is complete, no excess of integer turnout is detected, and both
 leader and incumbent station-tail estimates are small. The pattern does not
-supply convergent evidence of large-scale stuffing in the published totals.
+establish ballot stuffing in the published totals. This run does not quantify
+false-negative rates or the scale of manipulation that could escape its checks.
 
-Open items include the voter/ballot accounting gap, the mixture flag,
+Open items include the voter/ballot accounting gap, the imposed mixture fit,
 second-digit deviations, and individual station outliers. The station-level
 protocols, ballot papers, voter register quality, coercion, vote buying,
 media/campaign conditions and chain of custody have not been audited.

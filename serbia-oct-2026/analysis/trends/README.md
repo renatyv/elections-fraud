@@ -5,7 +5,8 @@ latest checked RIK source timestamp is **26 October 2026, 21:15 CET**
 (captured 20:19:23 UTC): 8,191/8,392 stations, **97.60%**. Students have
 52.71%, Vučić's list 39.17%, SPS 2.17% on the portal's displayed denominator;
 4,248,886 valid and 55,500 invalid ballots are reported. Turnout is 68.83%
-of the register covered by processed stations.
+of the register covered by processed stations. The last source stamp belongs
+to the archive; the wording review on 27 October did not refresh the results.
 
 This analysis uses **14 snapshots**: 11 hourly night captures, two afternoon
 captures, and the latest independent official-API check. Figures and
@@ -52,7 +53,10 @@ so this is approximate and includes any revisions. It is not a fraud test.
 Portal list percentages reproduce votes divided by **valid + invalid
 ballots**, up to rounding. Students' latest share of valid votes is about
 **53.40%**, versus the displayed 52.71%. Never compare these denominators
-without labelling them.
+without labelling them. The remaining lists together have 200,649 votes
+(**4.66%** of valid + invalid ballots); invalid ballots are a separate
+**1.29%**. The earlier page incorrectly labelled their combined remainder
+as “Other lists”.
 
 At 21:15, published voters total 4,307,042 while valid + invalid total
 4,304,386: **2,656 voters are not accounted for by those ballot fields**.

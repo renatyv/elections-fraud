@@ -275,7 +275,7 @@ def plot_selftest(data: ElectionData, injected: ElectionData, leader: str, repor
     ax.bar([label(lang, "st_after_bar")], [report.injected_added_ballots_party],
            width=0.4, color="none", edgecolor=C_MAIN, hatch="//",
            label=label(lang, "st_added", n=f"{report.injected_added_ballots_party:,}"))
-    ax.set_ylim(0, max(vals) * 1.22)
+    ax.set_ylim(0, max(*vals, report.injected_added_ballots_party) * 1.22)
     for i, v in enumerate(vals):
         ax.text(i, v, f"{v:,}", ha="center", va="bottom", fontsize=8)
     ax.set_ylabel(label(lang, "st_y"))

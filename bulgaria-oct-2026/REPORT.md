@@ -1,8 +1,18 @@
 # Bulgaria: presidential election of 25 Oct 2026 — open data and scraping
 
+**Precinct screening, updated 27 October:** [statistical report](REPORT_statistical_fraud_analysis.md).
+The official national table now shows 100% processed (26 October, 15:00 EET):
+Yotova 34.759%, Gyurov 31.952%, 1,521,711 listed votes. All 12,719 numeric
+section protocols reconcile with candidate totals; 22 voter/signature balance
+discrepancies are documented. Shpilkin and related methods were run on 10,616
+selected domestic sections, without a historical control.
+
+**Count-night analysis:** [trends through the count](analysis/trends/README.md)
+(count-night dynamics, runoff geography, turnout; updated 27 October 2026).
+
 Date confirmed by the CEC: "Избори за президент и вицепрезидент — 25 октомври 2026"
 (Elections for President and Vice President — 25 October 2026).
-If nobody wins an absolute majority — a second round on **8 November 2026**.
+If nobody wins an absolute majority — a second round on **1 November 2026**.
 Presidential election only (the early parliamentary election took place on 19 Apr 2026).
 
 ## Where the data lives (verified 10 Oct 2026)
@@ -30,6 +40,7 @@ Portal structure (based on the 2016/2021/2024/2026-04 elections): `{round}/rezul
 ## Scripts
 
 - `scrape_cik.py` — the scraper: auto-detects the 2026 portal in the index, polls `tur1`/`tur2` (results, turnout, machine protocols), raw snapshots + CSV timelines.
+- `scripts/analyze_trends.py` — count-night trend charts + metrics from the `data/trends` capture → `analysis/trends/` ([report](analysis/trends/README.md)).
 - `run_every_15min.sh` — a cron wrapper; `requirements.txt` — dependencies (`pip install -r requirements.txt`, venv already in `.venv/`).
 
 ```bash

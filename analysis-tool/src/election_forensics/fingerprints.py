@@ -1,10 +1,9 @@
-"""Electoral "fingerprints" (Klimek, Yegorov, Hanel, Thurner, PNAS 2012).
+"""Two-component Gaussian fit to turnout and list share.
 
-2D distribution (turnout × share for the party), weighted by the number of
-voters. Honest data form compact near-Gaussian clusters; fraud produces a
-"tail" towards high turnout and a high result. A mixture of two 2D Gaussians:
-the second component with high turnout and a high result is treated as the
-anomalous cluster, and its weight estimates the scale.
+Two components are requested in advance, not inferred as the optimal number.
+Registered-elector-weighted resampling approximates weighting in the fit.
+The legacy ``separated`` field is a directional screening rule, not a test
+of cluster separation or evidence that a component represents fraud.
 """
 
 from __future__ import annotations
@@ -27,7 +26,7 @@ class FingerprintResult:
     anom_cluster_voters: int
     anom_cluster_votes_party: int
     total_voters: int
-    separated: bool  # whether the mixture separated into two clusters
+    separated: bool  # directional screening rule; not statistical separation
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -38,11 +37,7 @@ def fingerprint_mixture(
     party: str,
     seed: int = 42,
 ) -> FingerprintResult:
-    """Mixture of 2D Gaussians on (turnout, party share), weighted by voters.
-
-    The anomalous component is a separate one with a markedly higher turnout
-    (mean difference > 2 p.p.) and weight > 1%.
-    """
+    """Fit two Gaussians; flag higher turnout (>2 pp), higher share, weight >1%."""
     rng = np.random.default_rng(seed)
     x = data.turnout.to_numpy(dtype=float)
     y = data.share(party).to_numpy(dtype=float)

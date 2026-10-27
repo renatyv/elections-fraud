@@ -14,6 +14,6 @@ uv run ef-analyze --data "$EF/serbia2023_mun" --out "$SRB/analysis/ef/mun2023_co
 uv run ef-analyze --data "$EF/serbia2026_mun" --out "$SRB/analysis/ef/mun2026" --title "Serbia 2026 — municipalities (ballots cast)" --controls "$EF/serbia2023_mun" --prev-party 'votes:Vučić'
 uv run ef-analyze --data "$EF/serbia2023_stn" --out "$SRB/analysis/ef/stn2023_control" --title "Serbia 2023 — polling stations (ballots cast)"
 uv run ef-analyze --data "$EF/serbia2026_stn" --out "$SRB/analysis/ef/stn2026" --title "Serbia 2026 — polling stations (ballots cast)"
-uv run ef-analyze --data "$EF/serbia2026_stn" --out "$SRB/analysis/ef/stn2026_controlled" --title "Serbia 2026 — polling stations (2023 control)" --controls "$EF/serbia2023_stn"
+uv run ef-analyze --data "$EF/serbia2026_stn" --out "$SRB/analysis/ef/stn2026_controlled" --title "Serbia 2026 — processed territorial stations, 16:55 CET" --controls "$EF/serbia2023_stn"
 uv run python "$SRB/scripts/analyze_diagnostics.py"
 uv run pytest "$ROOT/tests" "$SRB/tests" -q

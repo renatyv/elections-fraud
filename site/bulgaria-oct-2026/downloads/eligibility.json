@@ -1,0 +1,15 @@
+{
+  "indexed": 12719,
+  "eligible": 10616,
+  "excluded": 2103,
+  "exclusion_counts": {
+    "abroad": 613,
+    "protocol_balance": 19,
+    "register_under_100": 1471
+  },
+  "registered": 6532472,
+  "voted": 1399546,
+  "denominator": "opening register plus election-day additions",
+  "controls": [],
+  "eligible_leader_votes": 490916
+}

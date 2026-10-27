@@ -99,3 +99,36 @@ def test_district_correlations_use_region_paths_for_non_portuguese_keys() -> Non
     result = district_correlations(data, ["votes:X"])
     assert result.district.tolist() == ["North", "South"]
     assert result.n.tolist() == [40, 40]
+
+
+def test_fingerprint_flag_is_directional_not_cluster_separation(monkeypatch) -> None:
+    from election_forensics import fingerprints
+
+    class FixedMixture:
+        def __init__(self, n_components: int, **kwargs) -> None:
+            assert n_components == 2
+            self.means_ = np.array([[51.0, 56.6], [59.8, 44.6]])
+            self.weights_ = np.array([0.14, 0.86])
+
+        def fit(self, values: np.ndarray) -> None:
+            assert values.shape[1] == 2
+
+        def predict(self, values: np.ndarray) -> np.ndarray:
+            return np.ones(len(values), dtype=int)
+
+    monkeypatch.setattr(fingerprints, "GaussianMixture", FixedMixture)
+    result = fingerprints.fingerprint_mixture(_synthetic_data(), "votes:X")
+    assert result.mean_anom[0] > result.mean_main[0] + 2
+    assert result.weight_anom > 0.01
+    assert not result.separated  # Two fitted components remain; support falls with turnout.
+
+
+def test_plot_labels_do_not_certify_the_source_data() -> None:
+    from election_forensics.i18n import LABELS, label
+
+    assert label("en", "digits_pool", n=3) == "3 largest lists, pooled"
+    for lang in LABELS:
+        assert "3" in label(lang, "digits_pool", n=3)
+    assert "reference cutoff" in label("en", "honest_cut", t="88%", src="2023")
+    assert "original data" in label("en", "st_cut", t="86%")
+    assert "Registered electors" in label("en", "voters_cbar")

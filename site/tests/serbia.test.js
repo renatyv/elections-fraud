@@ -74,3 +74,40 @@ test('Serbia: discoverable from the homepage and sitemap in every existing homep
   }
   assert.match(readFileSync(path.join(root, '../sitemap.xml'), 'utf8'), /https:\/\/www\.renatyv\.org\/serbia-oct-2026\//);
 });
+
+
+test('Serbia: year/list comparisons and model assumptions agree with the archived metrics', () => {
+  const current = JSON.parse(readFileSync(path.join(root, 'downloads/screening_2026.json')));
+  const previous = JSON.parse(readFileSync(path.join(root, 'downloads/reference_2023.json')));
+  const diagnostics = JSON.parse(readFileSync(path.join(root, 'downloads/diagnostics.json')));
+  assert.equal(current.n_units, 8124);
+  assert.equal(previous.n_units, 8163);
+  assert.equal(current.fingerprint.party, 'Students');
+  assert.equal(previous.fingerprint.party, 'Vučić');
+  assert.ok(current.fingerprint.mean_anom[1] > current.fingerprint.mean_main[1]);
+  assert.ok(previous.fingerprint.mean_anom[1] < previous.fingerprint.mean_main[1]);
+  assert.equal(diagnostics.incumbent_fingerprint.separated, false);
+  assert.equal(current.benford2.length, 3);
+  assert.equal(current.last_digit.find(row => row.party === 'Dacić (SPS)').n_numbers, 33);
+  assert.equal(current.selftest.injected_added_ballots_party, 87179);
+  assert.equal(current.selftest.peaks_z_rounded.toFixed(2), '3.23');
+  assert.doesNotMatch(html, /class="badge">✓|class="check"[^>]*>✓/);
+  assert.match(translations.en.m3_p, /two overlapping Gaussian components specified in advance/);
+  assert.match(translations.en.m3_p, /not a statistical test of cluster separation/);
+  assert.match(translations.en.m3_cap, /third panel/);
+  assert.match(translations.sr.m3_guide, /трећи/);
+  assert.match(translations.en.source, /did not refresh/);
+});
+
+
+test('Serbia: other lists and invalid ballots are distinct categories', () => {
+  const { ballot_breakdown: ballots } = JSON.parse(readFileSync(path.join(root, 'downloads/metrics.json')));
+  assert.equal(ballots.valid + ballots.invalid, ballots.denominator);
+  assert.equal(Object.values(ballots.list_votes).reduce((sum, n) => sum + n, 0), ballots.valid);
+  assert.equal(ballots.other_lists + ballots.list_votes['1'] + ballots.list_votes['2'] + ballots.list_votes['3'], ballots.valid);
+  assert.equal((100 * ballots.other_lists / ballots.denominator).toFixed(2), '4.66');
+  assert.equal((100 * ballots.invalid / ballots.denominator).toFixed(2), '1.29');
+  assert.equal(translations.en.pct_others, '4.66%');
+  assert.equal(translations.en.pct_invalid, '1.29%');
+  assert.match(html, /data-i18n="invalid">Invalid ballots/);
+});

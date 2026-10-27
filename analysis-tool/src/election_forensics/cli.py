@@ -101,11 +101,11 @@ def analyze(
     counts_b = np.concatenate(pooled_b)
     plots.plot_digit_test(digit_freqs(counts_b, "benford2"), BENFORD_2ND,
                           digit_null_band(counts_b, "benford2"), "benford2",
-                          label(lang, "digits_pool"), fig_dir, lang=lang)
+                          label(lang, "digits_pool", n=len(top)), fig_dir, lang=lang)
     counts_l = np.concatenate(pooled_l)
     plots.plot_digit_test(digit_freqs(counts_l, "last"), np.full(10, 0.1),
                           digit_null_band(counts_l, "last"), "last",
-                          label(lang, "digits_pool"), fig_dir, lang=lang)
+                          label(lang, "digits_pool", n=len(top)), fig_dir, lang=lang)
     pd.DataFrame(benford_rows).to_csv(tab_dir / "benford2.csv", index=False)
     pd.DataFrame(last_rows).to_csv(tab_dir / "last_digit.csv", index=False)
     print(f"[5/9] digit tests: {len(benford_rows)} parties, see tables/")

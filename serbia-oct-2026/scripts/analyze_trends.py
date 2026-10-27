@@ -480,7 +480,16 @@ def build_metrics(nat: pd.DataFrame, reg: pd.DataFrame, res: pd.DataFrame) -> di
             "pct_counted": float(prog.pct_counted.iloc[0]) if len(prog) else None,
             "turnout_pct": float(prog.turnout_pct.iloc[0]) if len(prog) else None,
         }
+    latest_votes = c[c.fetch_ts == last_ts].groupby("candidate_id").votes.sum()
+    assert int(latest_votes.sum()) == int(nat.votes_valid.iloc[-1])
     return {
+        "ballot_breakdown": {
+            "valid": int(nat.votes_valid.iloc[-1]),
+            "invalid": int(nat.votes_invalid.iloc[-1]),
+            "denominator": int(nat.votes_total.iloc[-1]),
+            "other_lists": int(latest_votes.drop(index=[1, 2, 3]).sum()),
+            "list_votes": {int(k): int(v) for k, v in latest_votes.items()},
+        },
         "snapshots": len(nat),
         "first_fetch_utc": nat.fetch_ts_utc.iloc[0],
         "last_fetch_utc": nat.fetch_ts_utc.iloc[-1],

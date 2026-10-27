@@ -1,0 +1,444 @@
+{
+  "checked_utc": "2026-10-27T12:12:27.663918+00:00",
+  "source": "https://results.cik.bg/pvr202610/rezultati/index.html",
+  "national": {
+    "version": "?v=cbdf8e25be4090aa4303c7082de3a3b7",
+    "asof": "26.10.2026 15:00",
+    "processed_pct": 100.0,
+    "candidates": [
+      {
+        "no": 1,
+        "name": "Георги Николов Димов и Димитър Атанасов Шивиков",
+        "nominator": "Георги Димов и Димитър Шивиков",
+        "votes": 14843,
+        "pct": 0.975
+      },
+      {
+        "no": 2,
+        "name": "Росен Пламенов Миленов и Иван Стефанов Иванов",
+        "nominator": "Росен Миленов и Иван Иванов",
+        "votes": 8367,
+        "pct": 0.55
+      },
+      {
+        "no": 3,
+        "name": "Иванка Великова Цветанова-Петкова и Панайот Александров Кючуков",
+        "nominator": "Иванка Цветанова-Петкова и Панайот Кючуков",
+        "votes": 4533,
+        "pct": 0.298
+      },
+      {
+        "no": 4,
+        "name": "Андрей Атанасов Гюров и Георги Димитров Кандев",
+        "nominator": "Андрей Гюров и Георги Кандев",
+        "votes": 486214,
+        "pct": 31.952
+      },
+      {
+        "no": 5,
+        "name": "Йордан Иванов Малджански и Валентин Асенов Христов",
+        "nominator": "Йордан Малджански и Валентин Христов",
+        "votes": 2510,
+        "pct": 0.165
+      },
+      {
+        "no": 6,
+        "name": "Камен Захариев Тасков и Галя Димитрова Иванова",
+        "nominator": "Камен Тасков и Галя Иванова",
+        "votes": 1758,
+        "pct": 0.116
+      },
+      {
+        "no": 7,
+        "name": "Нако Райнов Стефанов и Нина Петкова Ламбова",
+        "nominator": "Нако Стефанов и Нина Ламбова",
+        "votes": 2460,
+        "pct": 0.162
+      },
+      {
+        "no": 8,
+        "name": "Методи Веселинов Бъчваров и Ленин Велинов Станоев",
+        "nominator": "Методи Бъчваров и Ленин Станоев",
+        "votes": 1563,
+        "pct": 0.103
+      },
+      {
+        "no": 9,
+        "name": "Ивайло Петров Симеонов и Косьо Христов Стойчев",
+        "nominator": "Ивайло Симеонов и Косьо Стойчев",
+        "votes": 14218,
+        "pct": 0.934
+      },
+      {
+        "no": 10,
+        "name": "Мария Петрова Колева и Валери Йорданов Велковски",
+        "nominator": "ПРАВОТО",
+        "votes": 3818,
+        "pct": 0.251
+      },
+      {
+        "no": 11,
+        "name": "Костадин Тодоров Костадинов и Петър Петров Волгин",
+        "nominator": "ВЪЗРАЖДАНЕ",
+        "votes": 190894,
+        "pct": 12.545
+      },
+      {
+        "no": 12,
+        "name": "Александър Трифонов Томов и Александър Цветанов Гарибов",
+        "nominator": "БЪЛГАРСКА СОЦИАЛДЕМОКРАЦИЯ – ЕВРОЛЕВИЦА",
+        "votes": 2512,
+        "pct": 0.165
+      },
+      {
+        "no": 13,
+        "name": "Борис Кирилов Анзов и Бранимир Мичев Мичев",
+        "nominator": "Борис Анзов и Бранимир Мичев",
+        "votes": 1141,
+        "pct": 0.075
+      },
+      {
+        "no": 14,
+        "name": "Румяна Методиева Ченалова и Георги Минчев Георгиев",
+        "nominator": "Румяна Ченалова и Георги Георгиев",
+        "votes": 3687,
+        "pct": 0.242
+      },
+      {
+        "no": 15,
+        "name": "Лъчезар Аспарухов Аврамов и Ивайло Дражев Атанасов",
+        "nominator": "Лъчезар Аврамов и Ивайло Атанасов",
+        "votes": 1165,
+        "pct": 0.077
+      },
+      {
+        "no": 16,
+        "name": "Иво Иванов Лулчев и Стефан Димитров Попов",
+        "nominator": "Иво Лулчев и Стефан Попов",
+        "votes": 1132,
+        "pct": 0.074
+      },
+      {
+        "no": 17,
+        "name": "Радостин Петев Василев и Красимир Цветков Манов",
+        "nominator": "ПП МЕЧ",
+        "votes": 70118,
+        "pct": 4.608
+      },
+      {
+        "no": 18,
+        "name": "Иван Маркос Христанов и Стоянка Гинева Черкезова",
+        "nominator": "Иван Христанов и Стоянка Черкезова",
+        "votes": 36414,
+        "pct": 2.393
+      },
+      {
+        "no": 19,
+        "name": "Ивелин Людмилов Михайлов и Юлиана Младенова Матеева",
+        "nominator": "ПП ВЕЛИЧИЕ",
+        "votes": 57633,
+        "pct": 3.787
+      },
+      {
+        "no": 20,
+        "name": "Величка Неделчова Георгиева и Росен Игнатов Иванов",
+        "nominator": "Величка Георгиева и Росен Иванов",
+        "votes": 1397,
+        "pct": 0.092
+      },
+      {
+        "no": 21,
+        "name": "Волен Николов Сидеров и Славчо Георгиев Велков",
+        "nominator": "Волен Сидеров и Славчо Велков",
+        "votes": 4046,
+        "pct": 0.266
+      },
+      {
+        "no": 22,
+        "name": "Николай Нанков Ненчев и Цвета Кирилова Кирилова",
+        "nominator": "БЗНС",
+        "votes": 5784,
+        "pct": 0.38
+      },
+      {
+        "no": 23,
+        "name": "Искра Йорданова Недева и Стоян Руменов Георгиев",
+        "nominator": "Искра Недева и Стоян Георгиев",
+        "votes": 1214,
+        "pct": 0.08
+      },
+      {
+        "no": 24,
+        "name": "Пламен Панайотов Пасков и Светозар Стоянов Съев",
+        "nominator": "Пламен Пасков и Светозар Съев",
+        "votes": 2831,
+        "pct": 0.186
+      },
+      {
+        "no": 25,
+        "name": "Илияна Малинова Йотова и Кирил Александров Вълчев",
+        "nominator": "Илияна Йотова и Кирил Вълчев",
+        "votes": 528929,
+        "pct": 34.759
+      },
+      {
+        "no": 26,
+        "name": "Боян Боянов Станков Расате и Йордан Стоянов Манасиев",
+        "nominator": "Боян Расате и Йордан Манасиев",
+        "votes": 2321,
+        "pct": 0.153
+      },
+      {
+        "no": 27,
+        "name": "Венцислав Атанасов Ангелов и Атанас Иванов Стефанов",
+        "nominator": "ПП НАРОДНА ПАРТИЯ ИСТИНАТА И САМО ИСТИНАТА",
+        "votes": 2856,
+        "pct": 0.188
+      },
+      {
+        "no": null,
+        "name": "Не подкрепям никого",
+        "nominator": "",
+        "votes": 67353,
+        "pct": 4.426
+      }
+    ],
+    "parties": [],
+    "stats": {}
+  },
+  "listed_votes": 1521711,
+  "indexed_sections": 12719,
+  "invalid_balances": [
+    "321320600",
+    "320271096",
+    "321210571",
+    "192700129",
+    "172600033",
+    "220900005",
+    "303000041",
+    "303000054",
+    "013300014",
+    "254618053",
+    "152100002",
+    "293400117",
+    "122400039",
+    "122400010",
+    "060800019",
+    "273100086",
+    "234615118",
+    "234623015",
+    "234615004",
+    "234615069",
+    "234609029",
+    "244607015"
+  ],
+  "section_minus_national": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0,
+    "16": 0,
+    "17": 0,
+    "18": 0,
+    "19": 0,
+    "20": 0,
+    "21": 0,
+    "22": 0,
+    "23": 0,
+    "24": 0,
+    "25": 0,
+    "26": 0,
+    "27": 0,
+    "-": 0
+  },
+  "sections_reconcile": true,
+  "balance_discrepancies": [
+    {
+      "section": "321320600",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/32/321320600.0.html",
+      "registered_opening": 77,
+      "added": 192,
+      "signatures": 56,
+      "listed_votes": 248
+    },
+    {
+      "section": "320271096",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/32/320271096.0.html",
+      "registered_opening": 37,
+      "added": 92,
+      "signatures": 31,
+      "listed_votes": 123
+    },
+    {
+      "section": "321210571",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/32/321210571.0.html",
+      "registered_opening": 83,
+      "added": 210,
+      "signatures": 282,
+      "listed_votes": 283
+    },
+    {
+      "section": "192700129",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/19/192700129.0.html",
+      "registered_opening": 646,
+      "added": 8,
+      "signatures": 162,
+      "listed_votes": 163
+    },
+    {
+      "section": "172600033",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/17/172600033.0.html",
+      "registered_opening": 319,
+      "added": 4,
+      "signatures": 83,
+      "listed_votes": 84
+    },
+    {
+      "section": "220900005",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/22/220900005.0.html",
+      "registered_opening": 417,
+      "added": 7,
+      "signatures": 86,
+      "listed_votes": 87
+    },
+    {
+      "section": "303000041",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/30/303000041.0.html",
+      "registered_opening": 774,
+      "added": 6,
+      "signatures": 121,
+      "listed_votes": 122
+    },
+    {
+      "section": "303000054",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/30/303000054.0.html",
+      "registered_opening": 869,
+      "added": 8,
+      "signatures": 202,
+      "listed_votes": 204
+    },
+    {
+      "section": "013300014",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/01/013300014.0.html",
+      "registered_opening": 842,
+      "added": 3,
+      "signatures": 138,
+      "listed_votes": 139
+    },
+    {
+      "section": "254618053",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/25/254618053.0.html",
+      "registered_opening": 520,
+      "added": 11,
+      "signatures": 191,
+      "listed_votes": 192
+    },
+    {
+      "section": "152100002",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/15/152100002.0.html",
+      "registered_opening": 588,
+      "added": 5,
+      "signatures": 79,
+      "listed_votes": 80
+    },
+    {
+      "section": "293400117",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/29/293400117.0.html",
+      "registered_opening": 744,
+      "added": 3,
+      "signatures": 125,
+      "listed_votes": 126
+    },
+    {
+      "section": "122400039",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/12/122400039.0.html",
+      "registered_opening": 355,
+      "added": 5,
+      "signatures": 64,
+      "listed_votes": 66
+    },
+    {
+      "section": "122400010",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/12/122400010.0.html",
+      "registered_opening": 454,
+      "added": 5,
+      "signatures": 93,
+      "listed_votes": 94
+    },
+    {
+      "section": "060800019",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/06/060800019.0.html",
+      "registered_opening": 498,
+      "added": 4,
+      "signatures": 67,
+      "listed_votes": 68
+    },
+    {
+      "section": "273100086",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/27/273100086.0.html",
+      "registered_opening": 1150,
+      "added": 8,
+      "signatures": 302,
+      "listed_votes": 303
+    },
+    {
+      "section": "234615118",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/23/234615118.0.html",
+      "registered_opening": 774,
+      "added": 4,
+      "signatures": 262,
+      "listed_votes": 263
+    },
+    {
+      "section": "234623015",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/23/234623015.0.html",
+      "registered_opening": 756,
+      "added": 6,
+      "signatures": 224,
+      "listed_votes": 225
+    },
+    {
+      "section": "234615004",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/23/234615004.0.html",
+      "registered_opening": 722,
+      "added": 8,
+      "signatures": 258,
+      "listed_votes": 259
+    },
+    {
+      "section": "234615069",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/23/234615069.0.html",
+      "registered_opening": 739,
+      "added": 8,
+      "signatures": 282,
+      "listed_votes": 283
+    },
+    {
+      "section": "234609029",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/23/234609029.0.html",
+      "registered_opening": 771,
+      "added": 4,
+      "signatures": 306,
+      "listed_votes": 307
+    },
+    {
+      "section": "244607015",
+      "source": "https://results.cik.bg/pvr202610/protokoli/256/24/244607015.0.html",
+      "registered_opening": 566,
+      "added": 20,
+      "signatures": 214,
+      "listed_votes": 254
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "title": "Bulgaria 2026 R1 — domestic sections, exploratory",
+  "national": {
+    "n_units": 10616,
+    "registered": 6532472,
+    "voted": 1399546,
+    "turnout_pct": 21.42444697811181,
+    "blank_pct": 4.474236645312122,
+    "null_pct": 0.12725555287214568,
+    "share:1": 0.9712435318310366,
+    "share:2": 0.5446766308502901,
+    "share:3": 0.29180891517677876,
+    "share:Gyurov": 31.499929262775215,
+    "share:5": 0.16433900707800958,
+    "share:6": 0.11296520443057963,
+    "share:7": 0.16233835829619034,
+    "share:8": 0.10446244710784783,
+    "share:9": 0.9343029811095884,
+    "share:10": 0.24429350660857163,
+    "share:Kostadinov": 12.583151964994363,
+    "share:12": 0.1539785044578742,
+    "share:13": 0.07252351834094771,
+    "share:14": 0.23872027071636087,
+    "share:15": 0.07573884674030007,
+    "share:16": 0.07409545666951997,
+    "share:Vasilev": 4.672015067743397,
+    "share:18": 2.4491513676577976,
+    "share:Mihaylov": 3.645610790927915,
+    "share:20": 0.09131532654160707,
+    "share:21": 0.26772967805273995,
+    "share:22": 0.370834542058639,
+    "share:23": 0.07859691642861327,
+    "share:24": 0.17848645203515998,
+    "share:Yotova": 35.076803477699194,
+    "share:26": 0.1549788288487838,
+    "share:27": 0.18441694663840988
+  },
+  "leader": "Yotova",
+  "n_units": 10616,
+  "shpilkin": {
+    "party": "Yotova",
+    "t_cut": 50.48231511254019,
+    "t_cut_source": "own_q995",
+    "mode": 26.75,
+    "sigma": 11.295448896341936,
+    "total_votes_party": 490916,
+    "tail_voters": 23374,
+    "tail_votes_party": 7845,
+    "tail_share_of_party": 1.59803306471983,
+    "observed_share_pct": 35.076803477699194,
+    "honest_share_pct": 35.102516255235535
+  },
+  "fingerprint": {
+    "party": "Yotova",
+    "weight_anom": 0.6763702406987456,
+    "mean_anom": [
+      24.222128504299427,
+      35.47802657935769
+    ],
+    "mean_main": [
+      15.594842371417451,
+      36.90830079992001
+    ],
+    "anom_cluster_voters": 4978338,
+    "anom_cluster_votes_party": 402555,
+    "total_voters": 6532472,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.8839487565938207,
+    "null_pct": 1.8553598342125095,
+    "z": 0.24843690589896772,
+    "z_mult5": 0.011519933542437567
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 6.254709871891484,
+    "null_pct": 5.895911831198191,
+    "z": 1.5533639089275117,
+    "z_mult5": 1.7237105455027328
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Yotova",
+      "n_numbers": 10049,
+      "min_count": 10,
+      "chi2": 46.4236153525215,
+      "dof": 9,
+      "p_value": 5.024074582178318e-07,
+      "p_null_mc": 0.6932668329177057,
+      "max_dev": 1.208892916136274
+    },
+    {
+      "test": "benford2",
+      "party": "Gyurov",
+      "n_numbers": 8233,
+      "min_count": 10,
+      "chi2": 9.861965063333843,
+      "dof": 9,
+      "p_value": 0.36177517132980086,
+      "p_null_mc": 0.6309226932668329,
+      "max_dev": 0.6155785453890519
+    },
+    {
+      "test": "benford2",
+      "party": "Kostadinov",
+      "n_numbers": 7359,
+      "min_count": 10,
+      "chi2": 13.09122792345988,
+      "dof": 9,
+      "p_value": 0.1585215609536774,
+      "p_null_mc": 1.0,
+      "max_dev": 0.945131427241598
+    },
+    {
+      "test": "benford2",
+      "party": "Vasilev",
+      "n_numbers": 1985,
+      "min_count": 10,
+      "chi2": 665.5214379559667,
+      "dof": 9,
+      "p_value": 1.7793119126298942e-137,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 11.860788505551218
+    },
+    {
+      "test": "benford2",
+      "party": "Mihaylov",
+      "n_numbers": 1340,
+      "min_count": 10,
+      "chi2": 597.3974622723141,
+      "dof": 9,
+      "p_value": 7.578154449307955e-123,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 14.076849259714908
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Yotova",
+      "n_numbers": 189,
+      "min_count": 100,
+      "chi2": 19.941798941798936,
+      "dof": 9,
+      "p_value": 0.018275000976666508,
+      "p_null_mc": 0.022443890274314215,
+      "max_dev": 5.873015873015872
+    },
+    {
+      "test": "last",
+      "party": "Gyurov",
+      "n_numbers": 1015,
+      "min_count": 100,
+      "chi2": 10.645320197044333,
+      "dof": 9,
+      "p_value": 0.3008057432776574,
+      "p_null_mc": 0.3341645885286783,
+      "max_dev": 2.315270935960592
+    },
+    {
+      "test": "last",
+      "party": "Kostadinov",
+      "n_numbers": 0,
+      "min_count": 100,
+      "chi2": null,
+      "dof": 9,
+      "p_value": null,
+      "p_null_mc": null,
+      "max_dev": null
+    },
+    {
+      "test": "last",
+      "party": "Vasilev",
+      "n_numbers": 2,
+      "min_count": 100,
+      "chi2": 8.000000000000002,
+      "dof": 9,
+      "p_value": 0.5341462169096911,
+      "p_null_mc": 0.827930174563591,
+      "max_dev": 40.0
+    },
+    {
+      "test": "last",
+      "party": "Mihaylov",
+      "n_numbers": 0,
+      "min_count": 100,
+      "chi2": null,
+      "dof": 9,
+      "p_value": null,
+      "p_null_mc": null,
+      "max_dev": null
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Yotova",
+      "pearson_w": -0.13955839220459892,
+      "spearman": -0.21023871733034802
+    },
+    {
+      "party": "Gyurov",
+      "pearson_w": 0.4202242875879978,
+      "spearman": 0.48461675904132073
+    },
+    {
+      "party": "Kostadinov",
+      "pearson_w": 0.16288134565502102,
+      "spearman": 0.08812196798532022
+    },
+    {
+      "party": "Vasilev",
+      "pearson_w": -0.39059043896088247,
+      "spearman": -0.3744848445945033
+    },
+    {
+      "party": "Mihaylov",
+      "pearson_w": -0.07595270820266141,
+      "spearman": -0.03959051468981459
+    }
+  ],
+  "neighbors_flagged": 388,
+  "ml_flagged": 107,
+  "selftest": {
+    "t_cut": 50.48231511254019,
+    "clean_tail_party": 7845,
+    "injected_added_ballots_party": 100376,
+    "injected_tail_party": 61077,
+    "signal_growth": 7.78546845124283,
+    "peaks_z_clean": 0.45011253003511337,
+    "peaks_z_rounded": 3.0669594715951183,
+    "n_rounded_units": 522
+  }
+}

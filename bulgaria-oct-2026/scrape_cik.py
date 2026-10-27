@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Scraper of interim results of Bulgarian elections
-(presidential election 25 Oct 2026, possible round II on 08 Nov 2026).
+(presidential election 25 Oct 2026, possible round II on 01 Nov 2026).
 
 Source: the official CEC portal https://results.cik.bg/
 Portal mechanics: results pages are static HTML that is regenerated
