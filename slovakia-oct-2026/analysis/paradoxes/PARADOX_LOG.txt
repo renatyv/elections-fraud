@@ -1,0 +1,63 @@
+== 1. bloc consolidation 2022 → 2026 (governor races) ==
+  joint nomination = the 2026 candidate carrying ≥3 parties of the bloc;
+  2022 combined = Σ votes of 2022 candidates whose coalition majority sits in the bloc
+  Bratislavský: vládny blok — 2022: 2 cand., combined 32,662 (best 28,911) → 2026 Gajarský R.: 30,695 (-1,967; -6.0%)
+  Bratislavský: opozičný blok — 2022: 3 cand., combined 172,848 (best 136,983) → 2026 Droba J.: 188,732 (+15,884; +9.2%)
+  Trnavský: vládny blok — 2022: 2 cand., combined 25,941 (best 21,426) → 2026 Hambálek P.: 22,263 (-3,678; -14.2%)
+  Trnavský: opozičný blok — 2022: 1 cand., combined 69,743 (best 69,743) → 2026 Viskupič J.: 103,083 (+33,340; +47.8%)
+  Trenčiansky: vládny blok — 2022: 2 cand., combined 137,506 (best 131,705) → 2026 Baška J.: 119,827 (-17,679; -12.9%)
+  Trenčiansky: opozičný blok — 2022: 1 cand., combined 32,547 (best 32,547) → 2026 Svítková N.: 81,400 (+48,853; +150.1%)
+  Nitriansky: vládny blok — 2022: 2 cand., combined 63,733 (best 58,765) → 2026 Becík B.: 115,058 (+51,325; +80.5%)
+  Nitriansky: opozičný blok — 2022: 1 cand., combined 33,467 (best 33,467) → 2026 Varga H.: 65,807 (+32,340; +96.6%)
+  Žilinský: vládny blok — 2022: 3 cand., combined 80,272 (best 55,571) → 2026 Choma I.: 66,725 (-13,547; -16.9%)
+  Žilinský: opozičný blok — 2022: 1 cand., combined 80,049 (best 80,049) → 2026 Jurinová E.: 134,617 (+54,568; +68.2%)
+  Prešovský: opozičný blok — 2022: 1 cand., combined 111,343 (best 111,343) → 2026 Majerský M.: 138,819 (+27,476; +24.7%)
+  Košický: vládny blok — 2022: 3 cand., combined 52,182 (best 32,287) → 2026 Šimko I.: 57,682 (+5,500; +10.5%)
+  Košický: opozičný blok — 2022: 2 cand., combined 122,289 (best 110,362) → 2026 Porvažník M.: 73,304 (-48,985; -40.1%)
+
+== 2. frustrated majority (FPTP winners without a majority) ==
+  2026: 2,912 mayors; elected with <50%: 395 (13.6%), <40%: 134 (4.6%), min 20.7%
+  2022: 2,913 mayors; elected with <50%: 432 (14.8%), <40%: 148 (5.1%), min 20.3%
+  2026: votes for losing mayoral candidates: 779,695 of 2,077,687 (37.5%) elected nobody
+  governor Košický: Trnka 32.00% — 68.00% voted against
+  governor Prešovský: Majerský 48.77% — 51.23% voted against
+
+== 3. counting-night dynamics (36 snapshots, 24.10 22:02 → 26.10 09:51 SELČ) ==
+  (x-axis of the progress — the national counter of the race; the portal
+   exposed no per-kraj progress for OSK)
+  16 races tracked; leader changed during the count in 0; stable in 16
+
+== 4. dual-ballot cross-check: two races, one visit ==
+  2022: 3,417 joinable precincts (obce with a single district); registered rolls differ in 171 (municipal rolls also carry EU citizens, who may not vote in the regional race)
+    participants OSK−OSO: sum -99,229 (mayor-side higher in 2246 precincts, equal in 1077, lower in 94)
+    top-12 municipalities by |ΣΔ|: Jarovnice -2083; Zlaté Klasy -1319; Lomnička -925; Nálepkovo -834; Richnava -740; Košice - Luník IX -714; Podhorany -710; Jasov -676; Kamenná Poruba -670; Rakúsy -602; Spišský Štiavnik -572; Chminianske Jakubovany -565
+  2026: 3,556 joinable precincts (obce with a single district); registered rolls differ in 113 (municipal rolls also carry EU citizens, who may not vote in the regional race)
+    participants OSK−OSO: sum -79,290 (mayor-side higher in 1938 precincts, equal in 1513, lower in 105)
+    top-12 municipalities by |ΣΔ|: Jarovnice -1726; Zlaté Klasy -1716; Bystrany -1145; Jasov -905; Pavlovce nad Uhom -742; Lomnička -723; Rakúsy -718; Veľká Ida -678; Košice - Luník IX -575; Svinia -543; Vrbnica -538; Kamenná Poruba -480
+    participation correlation OSK vs OSO: Pearson r = 0.8437; municipal-side participation is systematically higher (voters who take only the mayor ballot — concentrated in municipalities with large Romani communities, and of EU-citizen residents in cities)
+    gap 2022→2026 on 2,708 common municipalities: -99,111 → -78,282 (-21.0%)
+
+== 5. 2022 → 2026 (matched precincts, mayor race) ==
+  matched precincts: 5,442; turnout 2022 48.42% → 2026 49.34% (precinct-level mean of means, Δ +0.92 pp)
+  Progresívne Slovensko: 0.22% → 2.97% (+2.75 pp)
+  NEKA: 57.75% → 59.79% (+2.03 pp)
+  KRAJINA: 0.00% → 1.41% (+1.41 pp)
+  Team Bratislava: 0.80% → 1.87% (+1.07 pp)
+  Demokrati: 0.00% → 0.80% (+0.80 pp)
+  Tím Kraj Nitra: 0.69% → 1.25% (+0.57 pp)
+  Košická strana: 0.00% → 0.47% (+0.47 pp)
+  SV: 0.00% → 0.41% (+0.41 pp)
+  SLOVENSKO: 0.00% → 0.40% (+0.40 pp)
+  SMER - SD: 6.61% → 6.99% (+0.39 pp)
+  TPK: 0.00% → 0.39% (+0.39 pp)
+  DOBRÁ VOĽBA a Umiernení: 0.32% → 0.00% (-0.32 pp)
+  SaS: 1.77% → 1.43% (-0.34 pp)
+  OĽANO-NOVA-KÚ-ZMENA ZDOLA: 0.44% → 0.00% (-0.44 pp)
+  SNS: 1.99% → 1.35% (-0.65 pp)
+  SME RODINA: 1.03% → 0.25% (-0.78 pp)
+  SPOLU: 0.92% → 0.00% (-0.92 pp)
+  KDH: 6.16% → 4.97% (-1.19 pp)
+  Magyar Szövetség - Maďarská aliancia: 4.71% → 3.52% (-1.19 pp)
+  STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI: 2.42% → 1.19% (-1.23 pp)
+  HLAS - sociálna demokracia: 9.50% → 6.71% (-2.79 pp)
+  forensics swing flags (|Δturnout|>15pp & |Δshare|>15pp): both 635, turnout-only 1226 of 5,442 matched precincts; Δturnout median +1.5 pp — the flags ride the party realignment, not a turnout anomaly

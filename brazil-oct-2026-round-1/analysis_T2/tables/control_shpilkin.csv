@@ -1,0 +1,5 @@
+election,party,n,t_cut_control,tail_votes_party_control,tail_share_party_control_pct,honest_share_control,observed_share,t_cut_own_q995,tail_voters_own_pct,tail_share_party_own_pct,mode,sigma
+2026-R2,LULA,499205,91.52,881341.0,1.372,50.0,50.11,92.51,0.585,0.706,82.75,5.67
+2026-R2,BOLSONARO,499205,91.52,568020.0,0.949,46.75,46.65,92.51,0.585,0.461,82.75,5.67
+2022-R2,LULA,472027,,,,,48.57,91.52,0.594,0.619,82.25,6.03
+2022-R2,BOLSONARO,472027,,,,,46.85,91.52,0.594,0.572,82.25,6.03

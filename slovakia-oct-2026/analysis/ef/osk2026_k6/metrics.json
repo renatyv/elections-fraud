@@ -1,0 +1,106 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 6 (okrsky)",
+  "national": {
+    "n_units": 902,
+    "registered": 504390,
+    "voted": 209768,
+    "turnout_pct": 41.588453379329486,
+    "blank_pct": 0.0,
+    "null_pct": 10.665115746920407,
+    "share:Albert M. (Bratia Slovenska)": 3.443327866976851,
+    "share:Kotleba M. (ĽS Naše Slovensko)": 9.118645360588841,
+    "share:Lunter O. (NEKA)": 64.81970557949735,
+    "share:Malatinec R. (SV)": 5.319209793676824,
+    "share:Plančík P. (KSS)": 1.0649860798596544,
+    "share:Rusina J. (NEKA)": 1.2342206628275048,
+    "share:Suja M. (REPUBLIKA)": 14.999904656572976
+  },
+  "leader": "Lunter O. (NEKA)",
+  "n_units": 902,
+  "shpilkin": {
+    "party": "Lunter O. (NEKA)",
+    "t_cut": 67.48768472906404,
+    "t_cut_source": "controls",
+    "mode": 41.75,
+    "sigma": 9.977876055808414,
+    "total_votes_party": 135971,
+    "tail_voters": 924,
+    "tail_votes_party": 571,
+    "tail_share_of_party": 0.41994248773635556,
+    "observed_share_pct": 64.81970557949735,
+    "honest_share_pct": 64.8330811514815
+  },
+  "fingerprint": {
+    "party": "Lunter O. (NEKA)",
+    "weight_anom": 0.4332716443142221,
+    "mean_anom": [
+      44.88258153111111,
+      56.10206413195012
+    ],
+    "mean_main": [
+      39.330123642037684,
+      71.87570673455578
+    ],
+    "anom_cluster_voters": 197772,
+    "anom_cluster_votes_party": 48855,
+    "total_voters": 504390,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 2.328159645232816,
+    "null_pct": 2.1856984478935697,
+    "z": 0.3248012710041844,
+    "z_mult5": 0.9533101838130056
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 3.8802660753880267,
+    "null_pct": 4.468957871396896,
+    "z": -0.8393327458852261,
+    "z_mult5": -1.359916075487616
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Lunter O. (NEKA)",
+      "n_numbers": 883,
+      "min_count": 10,
+      "chi2": 12.19765315347253,
+      "dof": 9,
+      "p_value": 0.20239456071836293,
+      "p_null_mc": 0.26683291770573564,
+      "max_dev": 2.161878099871321
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Lunter O. (NEKA)",
+      "n_numbers": 539,
+      "min_count": 100,
+      "chi2": 8.625231910946196,
+      "dof": 9,
+      "p_value": 0.4725622176836133,
+      "p_null_mc": 0.4389027431421446,
+      "max_dev": 2.244897959183673
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Lunter O. (NEKA)",
+      "pearson_w": -0.05476139632874329,
+      "spearman": -0.07648131956341697
+    }
+  ],
+  "neighbors_flagged": 6,
+  "ml_flagged": 10,
+  "selftest": {
+    "t_cut": 65.94594594594595,
+    "clean_tail_party": 974,
+    "injected_added_ballots_party": 7983,
+    "injected_tail_party": 14071,
+    "signal_growth": 14.446611909650924,
+    "peaks_z_clean": 0.146495872830983,
+    "peaks_z_rounded": 1.4376695448483852,
+    "n_rounded_units": 51
+  }
+}

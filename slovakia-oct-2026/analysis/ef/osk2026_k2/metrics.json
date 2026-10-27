@@ -1,0 +1,106 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 2 (okrsky)",
+  "national": {
+    "n_units": 537,
+    "registered": 478700,
+    "voted": 190721,
+    "turnout_pct": 39.841445581784,
+    "blank_pct": 0.0,
+    "null_pct": 10.726663555665082,
+    "share:Berényi J. (Magyar Szövetség - Maďarská aliancia)": 20.86293591161959,
+    "share:Cehlárik J. (PRAVDA)": 2.2147534880794457,
+    "share:Dohál R. (ApS)": 2.725447119090189,
+    "share:Hambálek P. (SMER - SD)": 11.673072183975545,
+    "share:Lančarič M. (NEKA)": 7.1539054430293465,
+    "share:Pollák Š. (SPOLOČNE OBČANIA SLOVENSKA)": 1.3207774707557112,
+    "share:Viskupič J. (Progresívne Slovensko)": 54.04910838345017
+  },
+  "leader": "Viskupič J. (Progresívne Slovensko)",
+  "n_units": 537,
+  "shpilkin": {
+    "party": "Viskupič J. (Progresívne Slovensko)",
+    "t_cut": 63.07692307692308,
+    "t_cut_source": "controls",
+    "mode": 42.75,
+    "sigma": 9.72344008854006,
+    "total_votes_party": 103083,
+    "tail_voters": 4175,
+    "tail_votes_party": 1209,
+    "tail_share_of_party": 1.1728413026396205,
+    "observed_share_pct": 54.04910838345017,
+    "honest_share_pct": 54.61065903316072
+  },
+  "fingerprint": {
+    "party": "Viskupič J. (Progresívne Slovensko)",
+    "weight_anom": 0.7044279679737393,
+    "mean_anom": [
+      40.13026791840958,
+      66.8985922393804
+    ],
+    "mean_main": [
+      38.814472169812596,
+      23.513586015966176
+    ],
+    "anom_cluster_voters": 337184,
+    "anom_cluster_votes_party": 91003,
+    "total_voters": 478700,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 2.2346368715083798,
+    "null_pct": 1.0791433891992552,
+    "z": 2.7399434904100595,
+    "z_mult5": 0.3598942658843802
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 2.97951582867784,
+    "null_pct": 2.0614525139664805,
+    "z": 1.5072440803836005,
+    "z_mult5": 1.5901717897994239
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Viskupič J. (Progresívne Slovensko)",
+      "n_numbers": 533,
+      "min_count": 10,
+      "chi2": 11.577727526659986,
+      "dof": 9,
+      "p_value": 0.23817484630266467,
+      "p_null_mc": 0.26184538653366585,
+      "max_dev": 2.382065919934341
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Viskupič J. (Progresívne Slovensko)",
+      "n_numbers": 387,
+      "min_count": 100,
+      "chi2": 6.204134366925064,
+      "dof": 9,
+      "p_value": 0.7193265783805628,
+      "p_null_mc": 0.7306733167082294,
+      "max_dev": 2.2480620155038764
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Viskupič J. (Progresívne Slovensko)",
+      "pearson_w": 0.0004003860364774522,
+      "spearman": 0.07013446473531844
+    }
+  ],
+  "neighbors_flagged": 4,
+  "ml_flagged": 6,
+  "selftest": {
+    "t_cut": 66.75347222222223,
+    "clean_tail_party": 735,
+    "injected_added_ballots_party": 5835,
+    "injected_tail_party": 4709,
+    "signal_growth": 6.406802721088435,
+    "peaks_z_clean": 1.8649994628727589,
+    "peaks_z_rounded": 2.5377213744940588,
+    "n_rounded_units": 34
+  }
+}

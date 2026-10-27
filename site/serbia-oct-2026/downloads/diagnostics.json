@@ -1,0 +1,51 @@
+{
+  "forensic_snapshot": "2026-10-26 16:55 CET",
+  "stations_2023_all": 8273,
+  "stations_2026_all": 8160,
+  "matched_territorial_stations": 7935,
+  "unmatched_2026_territorial_stations": 189,
+  "cast_minus_valid_minus_invalid_2026": 2650,
+  "stations_with_ballot_gap_2026": 565,
+  "matched_turnout_pct": {
+    "2023": 58.634247966349214,
+    "2026": 68.82766266768473
+  },
+  "matched_incumbent_valid_share_pct": {
+    "2023": 47.92485372487019,
+    "2026": 39.82502002627644
+  },
+  "uncounted_registered_voters": 222716,
+  "students_vote_lead": 583521,
+  "students_minimum_valid_share_pct": 50.73342311169777,
+  "bound_assumption": "unchanged register and counted votes; remaining voters and ballot gaps all vote against Students",
+  "incumbent_shpilkin": {
+    "party": "Vučić",
+    "t_cut": 87.96992481203007,
+    "t_cut_source": "controls",
+    "mode": 72.75,
+    "sigma": 8.46381791995649,
+    "total_votes_party": 1672191,
+    "tail_voters": 14694,
+    "tail_votes_party": 8670,
+    "tail_share_of_party": 0.5184814414142882,
+    "observed_share_pct": 39.15936415454005,
+    "honest_share_pct": 39.09084329410747
+  },
+  "incumbent_fingerprint": {
+    "party": "Vučić",
+    "weight_anom": 0.777024486733742,
+    "mean_anom": [
+      72.11561437477947,
+      37.62582635454939
+    ],
+    "mean_main": [
+      57.20056510233957,
+      45.17010791075303
+    ],
+    "anom_cluster_voters": 5104748,
+    "anom_cluster_votes_party": 1389138,
+    "total_voters": 6206361,
+    "separated": false
+  },
+  "incumbent_integer_share_z": -1.457578984825678
+}

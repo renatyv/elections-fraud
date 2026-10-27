@@ -1,0 +1,287 @@
+{
+  "n_bootstrap": 200,
+  "actual_2026_runoff": {
+    "lula_votes": 64256232,
+    "bolsonaro_votes": 59826041,
+    "lula_twoway_pct": 51.79,
+    "turnout_pct": 80.78,
+    "blank": 1430496,
+    "null": 2723305
+  },
+  "match": {
+    "sections_r1": 499248,
+    "sections_r2": 499248,
+    "matched": 499248
+  },
+  "transfers_2026": {
+    "matrix": {
+      "LULA": {
+        "BOLSONARO": 0.0,
+        "CAIADO": 0.3817,
+        "CLARIANA": 0.5393,
+        "CURY": 0.6928,
+        "EDMILSON": 0.6944,
+        "FERREIRA": 0.3779,
+        "GRASSI": 0.5226,
+        "HERTZ": 0.892,
+        "LEONARDO": 0.6351,
+        "LULA": 0.9885,
+        "RUI": 0.4018,
+        "SAMARA": 0.8647,
+        "ZEMA": 0.0,
+        "BRANCO": 0.6675,
+        "NULO": 0.5748,
+        "NEW": 0.6238
+      },
+      "BOLSONARO": {
+        "BOLSONARO": 0.9923,
+        "CAIADO": 0.5403,
+        "CLARIANA": 0.1446,
+        "CURY": 0.0851,
+        "EDMILSON": 0.0,
+        "FERREIRA": 0.4396,
+        "GRASSI": 0.2187,
+        "HERTZ": 0.0,
+        "LEONARDO": 0.0,
+        "LULA": 0.0,
+        "RUI": 0.3348,
+        "SAMARA": 0.0,
+        "ZEMA": 0.8814,
+        "BRANCO": 0.0,
+        "NULO": 0.0,
+        "NEW": 0.3275
+      },
+      "BRANCO": {
+        "BOLSONARO": 0.0036,
+        "CAIADO": 0.0361,
+        "CLARIANA": 0.1346,
+        "CURY": 0.0834,
+        "EDMILSON": 0.0886,
+        "FERREIRA": 0.0521,
+        "GRASSI": 0.0583,
+        "HERTZ": 0.0219,
+        "LEONARDO": 0.1893,
+        "LULA": 0.0,
+        "RUI": 0.0278,
+        "SAMARA": 0.0247,
+        "ZEMA": 0.0343,
+        "BRANCO": 0.278,
+        "NULO": 0.022,
+        "NEW": 0.0158
+      },
+      "NULO": {
+        "BOLSONARO": 0.0025,
+        "CAIADO": 0.0419,
+        "CLARIANA": 0.1815,
+        "CURY": 0.1387,
+        "EDMILSON": 0.217,
+        "FERREIRA": 0.1304,
+        "GRASSI": 0.2004,
+        "HERTZ": 0.086,
+        "LEONARDO": 0.1756,
+        "LULA": 0.002,
+        "RUI": 0.2356,
+        "SAMARA": 0.1106,
+        "ZEMA": 0.0842,
+        "BRANCO": 0.0545,
+        "NULO": 0.4032,
+        "NEW": 0.0329
+      },
+      "NOTV2": {
+        "BOLSONARO": 0.0016,
+        "CAIADO": 0.0,
+        "CLARIANA": 0.0,
+        "CURY": 0.0,
+        "EDMILSON": 0.0,
+        "FERREIRA": 0.0,
+        "GRASSI": 0.0,
+        "HERTZ": 0.0,
+        "LEONARDO": 0.0,
+        "LULA": 0.0096,
+        "RUI": 0.0,
+        "SAMARA": 0.0,
+        "ZEMA": 0.0,
+        "BRANCO": 0.0,
+        "NULO": 0.0,
+        "NEW": 0.0
+      }
+    },
+    "cv": {
+      "cv_lula_twoway_share_rel_err_pct": -0.54,
+      "cv_pred_share_pct": 51.501,
+      "cv_obs_share_pct": 51.781,
+      "cv_section_mae_votes": 3.06,
+      "cv_r2": 0.9778
+    },
+    "boot_lula_twoway_ci": [
+      0.5148,
+      0.5152
+    ]
+  },
+  "prediction_vs_actual": {
+    "predicted_lula_twoway_pct": 47.43,
+    "predicted_ci_pct": [
+      47.39,
+      47.45
+    ],
+    "actual_lula_twoway_pct": 51.79,
+    "error_pp": -4.36,
+    "ci_covers_actual": false,
+    "note": "the CI reflects model resampling only; mapping and cross-election uncertainty were excluded by construction"
+  },
+  "decomposition": {
+    "rows": [
+      {
+        "vote_type_2026": "BRANCO",
+        "origin_2022": "BRANCO",
+        "votes_r1_2026": 2300798,
+        "to_lula_2022rates": 0.0,
+        "to_lula_actual_2026": 0.667,
+        "twoway_stay_2022rates": 0.461,
+        "twoway_stay_actual_2026": 0.667,
+        "contrib_error_pp": -1.238
+      },
+      {
+        "vote_type_2026": "CURY",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 3448569,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.693,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.778,
+        "contrib_error_pp": -1.149
+      },
+      {
+        "vote_type_2026": "NULO",
+        "origin_2022": "NULO",
+        "votes_r1_2026": 3669003,
+        "to_lula_2022rates": 0.267,
+        "to_lula_actual_2026": 0.575,
+        "twoway_stay_2022rates": 0.27,
+        "twoway_stay_actual_2026": 0.575,
+        "contrib_error_pp": -0.909
+      },
+      {
+        "vote_type_2026": "LULA",
+        "origin_2022": "LULA",
+        "votes_r1_2026": 53879538,
+        "to_lula_2022rates": 0.968,
+        "to_lula_actual_2026": 0.988,
+        "twoway_stay_2022rates": 0.968,
+        "twoway_stay_actual_2026": 0.988,
+        "contrib_error_pp": -0.873
+      },
+      {
+        "vote_type_2026": "CAIADO",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 2605148,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.382,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.922,
+        "contrib_error_pp": -0.215
+      },
+      {
+        "vote_type_2026": "FERREIRA",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 2675887,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.378,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.817,
+        "contrib_error_pp": -0.212
+      },
+      {
+        "vote_type_2026": "SAMARA",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 122911,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.865,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.865,
+        "contrib_error_pp": -0.058
+      },
+      {
+        "vote_type_2026": "HERTZ",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 43103,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.892,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.892,
+        "contrib_error_pp": -0.021
+      },
+      {
+        "vote_type_2026": "CLARIANA",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 40043,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.539,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.684,
+        "contrib_error_pp": -0.008
+      },
+      {
+        "vote_type_2026": "GRASSI",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 16881,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.523,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.741,
+        "contrib_error_pp": -0.003
+      },
+      {
+        "vote_type_2026": "LEONARDO",
+        "origin_2022": "BRANCO",
+        "votes_r1_2026": 5246,
+        "to_lula_2022rates": 0.0,
+        "to_lula_actual_2026": 0.635,
+        "twoway_stay_2022rates": 0.461,
+        "twoway_stay_actual_2026": 0.635,
+        "contrib_error_pp": -0.003
+      },
+      {
+        "vote_type_2026": "RUI",
+        "origin_2022": "TEBET",
+        "votes_r1_2026": 15024,
+        "to_lula_2022rates": 0.279,
+        "to_lula_actual_2026": 0.402,
+        "twoway_stay_2022rates": 0.779,
+        "twoway_stay_actual_2026": 0.737,
+        "contrib_error_pp": -0.001
+      },
+      {
+        "vote_type_2026": "BOLSONARO",
+        "origin_2022": "BOLSONARO",
+        "votes_r1_2026": 56104503,
+        "to_lula_2022rates": 0.0,
+        "to_lula_actual_2026": 0.0,
+        "twoway_stay_2022rates": 0.998,
+        "twoway_stay_actual_2026": 0.992,
+        "contrib_error_pp": -0.0
+      },
+      {
+        "vote_type_2026": "EDMILSON",
+        "origin_2022": "MANZANO",
+        "votes_r1_2026": 22693,
+        "to_lula_2022rates": 0.842,
+        "to_lula_actual_2026": 0.694,
+        "twoway_stay_2022rates": 0.842,
+        "twoway_stay_actual_2026": 0.694,
+        "contrib_error_pp": 0.003
+      },
+      {
+        "vote_type_2026": "ZEMA",
+        "origin_2022": "DAVILA",
+        "votes_r1_2026": 326488,
+        "to_lula_2022rates": 0.15,
+        "to_lula_actual_2026": 0.0,
+        "twoway_stay_2022rates": 0.934,
+        "twoway_stay_actual_2026": 0.881,
+        "contrib_error_pp": 0.039
+      }
+    ],
+    "sum_error_pp": -4.65
+  }
+}

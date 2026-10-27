@@ -79,3 +79,23 @@ def test_digit_test_last_digit_uniform():
     d.df["votes:X"] = counts[: len(d.df)]
     res = digit_test(d, "votes:X", "last", n_sim=100)
     assert res.p_null_mc > 0.01
+
+
+def test_digit_test_no_counts_above_cutoff() -> None:
+    data = _synthetic_data(n=20)
+    data.df["votes:X"] = 42
+    result = digit_test(data, "votes:X", "last")
+    assert result.n_numbers == 0
+    assert result.chi2 is None
+    assert result.p_value is None
+    assert result.p_null_mc is None
+
+
+def test_district_correlations_use_region_paths_for_non_portuguese_keys() -> None:
+    from election_forensics.correlations import district_correlations
+
+    data = _synthetic_data(n=80)
+    data.df["path"] = [f"Serbia > {'North' if i < 40 else 'South'} > municipality > station" for i in range(80)]
+    result = district_correlations(data, ["votes:X"])
+    assert result.district.tolist() == ["North", "South"]
+    assert result.n.tolist() == [40, 40]

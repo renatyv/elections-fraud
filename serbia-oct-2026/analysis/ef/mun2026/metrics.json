@@ -1,0 +1,177 @@
+{
+  "title": "Serbia 2026 — municipalities (ballots cast)",
+  "national": {
+    "n_units": 189,
+    "registered": 6340850,
+    "voted": 4270220,
+    "turnout_pct": 67.34459891024073,
+    "blank_pct": 0.0,
+    "null_pct": 1.2892309998079725,
+    "share:Vučić": 39.15936415454005,
+    "share:Dacić (SPS)": 2.168295778671825,
+    "share:Students": 52.65119829891668,
+    "share:Ljajić": 0.4759707930738932,
+    "share:VMSZ": 0.8135412227004698,
+    "share:Zukorlić (SPP)": 0.2727728313763694,
+    "share:Russ. party": 0.14797832430179242,
+    "share:Jovanović (NDSS)": 0.8964643507828637,
+    "share:Tepić (ES)": 0.2815077443316738,
+    "share:SDA Sandžaka": 0.2893527733934083,
+    "share:Karić": 0.4561591674433636,
+    "share:LZS": 0.060957046709537215,
+    "share:Biram pravdu": 0.027024368767885495,
+    "share:Rus.-srb. jedinstvo": 0.09734861435710572,
+    "share:Đurić (Ćale)": 0.04536066057486499,
+    "share:Gajić (Alternativa)": 0.08444529790034237,
+    "share:Alb. coalition": 0.6476481305412836,
+    "share:Majka Srbija": 0.07343883921671483
+  },
+  "leader": "Students",
+  "n_units": 189,
+  "shpilkin": {
+    "party": "Students",
+    "t_cut": 77.95860604988502,
+    "t_cut_source": "controls",
+    "mode": 71.75,
+    "sigma": 6.9883197287729075,
+    "total_votes_party": 2248322,
+    "tail_voters": 188838,
+    "tail_votes_party": 96390,
+    "tail_share_of_party": 4.287197296472658,
+    "observed_share_pct": 52.65119829891668,
+    "honest_share_pct": 52.72557187736899
+  },
+  "fingerprint": {
+    "party": "Students",
+    "weight_anom": 0.7802759891858272,
+    "mean_anom": [
+      69.87135663127951,
+      55.87596894175124
+    ],
+    "mean_main": [
+      58.50473936071221,
+      37.60275066487852
+    ],
+    "anom_cluster_voters": 5267530,
+    "anom_cluster_votes_party": 2041377,
+    "total_voters": 6340850,
+    "separated": true
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 0.5291005291005291,
+    "null_pct": 1.156084656084656,
+    "z": -0.789642955765528,
+    "z_mult5": -0.6227794288153707
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 0.5291005291005291,
+    "null_pct": 1.2037037037037037,
+    "z": -0.8387196587309922,
+    "z_mult5": 0.46734851465083466
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Students",
+      "n_numbers": 187,
+      "min_count": 10,
+      "chi2": 5.371523142866225,
+      "dof": 9,
+      "p_value": 0.8007941144955603,
+      "p_null_mc": 0.7905236907730673,
+      "max_dev": 2.874652416709668
+    },
+    {
+      "test": "benford2",
+      "party": "Vučić",
+      "n_numbers": 188,
+      "min_count": 10,
+      "chi2": 17.20383697602408,
+      "dof": 9,
+      "p_value": 0.04561796614833443,
+      "p_null_mc": 0.04488778054862843,
+      "max_dev": 5.031086070763589
+    },
+    {
+      "test": "benford2",
+      "party": "Dacić (SPS)",
+      "n_numbers": 183,
+      "min_count": 10,
+      "chi2": 20.656253400722548,
+      "dof": 9,
+      "p_value": 0.014267320760489146,
+      "p_null_mc": 0.014962593516209476,
+      "max_dev": 4.864101723076055
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Students",
+      "n_numbers": 179,
+      "min_count": 100,
+      "chi2": 7.089385474860334,
+      "dof": 9,
+      "p_value": 0.6278134911994346,
+      "p_null_mc": 0.6259351620947631,
+      "max_dev": 3.4078212290502785
+    },
+    {
+      "test": "last",
+      "party": "Vučić",
+      "n_numbers": 185,
+      "min_count": 100,
+      "chi2": 17.972972972972972,
+      "dof": 9,
+      "p_value": 0.035488398670679246,
+      "p_null_mc": 0.03740648379052369,
+      "max_dev": 5.675675675675676
+    },
+    {
+      "test": "last",
+      "party": "Dacić (SPS)",
+      "n_numbers": 158,
+      "min_count": 100,
+      "chi2": 16.050632911392405,
+      "dof": 9,
+      "p_value": 0.0658317393278814,
+      "p_null_mc": 0.04987531172069826,
+      "max_dev": 4.936708860759494
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Students",
+      "pearson_w": 0.5614620588820877,
+      "spearman": 0.49768037114061753
+    },
+    {
+      "party": "Vučić",
+      "pearson_w": -0.06800544498008693,
+      "spearman": -0.23339021312145614
+    },
+    {
+      "party": "Dacić (SPS)",
+      "pearson_w": -0.06179040223999056,
+      "spearman": -0.03454202883094261
+    }
+  ],
+  "neighbors_flagged": 3,
+  "swing": {
+    "prev_party": "Vučić",
+    "flagged_both": 0,
+    "flagged_turnout": 6,
+    "n": 189
+  },
+  "ml_flagged": 2,
+  "selftest": {
+    "t_cut": 82.48663101604278,
+    "clean_tail_party": 8827,
+    "injected_added_ballots_party": 54240,
+    "injected_tail_party": 137677,
+    "signal_growth": 15.597258411691401,
+    "peaks_z_clean": -0.5117123409806066,
+    "peaks_z_rounded": 7.493690571468228,
+    "n_rounded_units": 12
+  }
+}

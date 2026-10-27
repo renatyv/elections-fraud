@@ -1,0 +1,130 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 3 (okrsky)",
+  "national": {
+    "n_units": 654,
+    "registered": 473885,
+    "voted": 208609,
+    "turnout_pct": 44.021017757472805,
+    "blank_pct": 0.0,
+    "null_pct": 7.442152543754105,
+    "share:Baška J. (SMER - SD)": 57.44095412949585,
+    "share:Choleva L. (VLASTENCI SK)": 1.2439540000671112,
+    "share:Galas D. (SLOVEXIT)": 2.2947236217037617,
+    "share:Svítková N. (Demokrati)": 39.02036824873328
+  },
+  "leader": "Baška J. (SMER - SD)",
+  "n_units": 654,
+  "shpilkin": {
+    "party": "Baška J. (SMER - SD)",
+    "t_cut": 68.44660194174757,
+    "t_cut_source": "controls",
+    "mode": 40.25,
+    "sigma": 9.94216171511708,
+    "total_votes_party": 119827,
+    "tail_voters": 3516,
+    "tail_votes_party": 2342,
+    "tail_share_of_party": 1.9544843816502124,
+    "observed_share_pct": 57.44095412949585,
+    "honest_share_pct": 57.283768826824904
+  },
+  "fingerprint": {
+    "party": "Baška J. (SMER - SD)",
+    "weight_anom": 0.41850435682338905,
+    "mean_anom": [
+      49.21767745944163,
+      63.97000120353235
+    ],
+    "mean_main": [
+      40.270381825408045,
+      51.40664757978241
+    ],
+    "anom_cluster_voters": 181039,
+    "anom_cluster_votes_party": 61829,
+    "total_voters": 473885,
+    "separated": true
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 2.293577981651376,
+    "null_pct": 1.7492354740061162,
+    "z": 1.0934764113672006,
+    "z_mult5": 0.6194280109411816
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 2.293577981651376,
+    "null_pct": 2.623853211009174,
+    "z": -0.4623718383582126,
+    "z_mult5": -0.1176071890330274
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Baška J. (SMER - SD)",
+      "n_numbers": 653,
+      "min_count": 10,
+      "chi2": 3.618116915722298,
+      "dof": 9,
+      "p_value": 0.9347048632132933,
+      "p_null_mc": 0.942643391521197,
+      "max_dev": 1.3014921775299642
+    },
+    {
+      "test": "benford2",
+      "party": "Svítková N. (Demokrati)",
+      "n_numbers": 642,
+      "min_count": 10,
+      "chi2": 6.503181914229212,
+      "dof": 9,
+      "p_value": 0.6886907932351094,
+      "p_null_mc": 0.743142144638404,
+      "max_dev": 2.214949283119784
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Baška J. (SMER - SD)",
+      "n_numbers": 540,
+      "min_count": 100,
+      "chi2": 7.37037037037037,
+      "dof": 9,
+      "p_value": 0.5986177996445707,
+      "p_null_mc": 0.5311720698254364,
+      "max_dev": 2.037037037037036
+    },
+    {
+      "test": "last",
+      "party": "Svítková N. (Demokrati)",
+      "n_numbers": 399,
+      "min_count": 100,
+      "chi2": 9.19548872180451,
+      "dof": 9,
+      "p_value": 0.4194282095506121,
+      "p_null_mc": 0.456359102244389,
+      "max_dev": 2.531328320802004
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Baška J. (SMER - SD)",
+      "pearson_w": 0.29870375069663824,
+      "spearman": 0.3352863018531837
+    },
+    {
+      "party": "Svítková N. (Demokrati)",
+      "pearson_w": -0.2699613543575449,
+      "spearman": -0.3053468783016533
+    }
+  ],
+  "neighbors_flagged": 2,
+  "ml_flagged": 7,
+  "selftest": {
+    "t_cut": 71.02473498233215,
+    "clean_tail_party": 1201,
+    "injected_added_ballots_party": 6322,
+    "injected_tail_party": 7312,
+    "signal_growth": 6.088259783513738,
+    "peaks_z_clean": 1.0629734477045751,
+    "peaks_z_rounded": 2.0067077607303925,
+    "n_rounded_units": 40
+  }
+}

@@ -45,7 +45,8 @@ def _post(path: str, data: dict, timeout: float = 30.0,
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return resp.read()
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError,
+                ConnectionError, OSError) as e:
             last_err = e
             if attempt < retries:
                 time.sleep(backoff * attempt)

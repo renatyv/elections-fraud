@@ -68,6 +68,20 @@ portal states files are updated at the end of each round. Do **not** resume a ch
 with `curl -C -` — it corrupts the archive; `scripts/download_votacao_secao_T2.sh` does a
 fresh download of the two BR files once the 2nd round is published.
 
+## 2nd-round data (25.10.2026)
+
+After the runoff the TSE regenerated the same files with both rounds
+(`NR_TURNO` = 1/2 rows; election id 6258 for the runoff rows in both files).
+Fetched fresh (never resumed — a changed zip resumed with `curl -C -` corrupts)
+on 26–27.10.2026 by `scripts/download_votacao_secao_T2.sh`:
+`votacao_secao_2026_BR.zip` (242 MB → 1.5 GB CSV) and
+`detalhe_votacao_secao_2026.zip` (234 MB). Section dataset built by
+`scripts/build_sections_csv_T2.py` → `data/secoes_presidente_2026_T2.csv`
+(499,248 sections; all self-consistency checks zero; 43 zero-vote ZZ sections
+absent from the votes file take zeros; totals match the election-night portal
+capture to the exact vote). Forensics on it →
+`REPORT_statistical_fraud_analysis_T2.md`, outputs in `analysis_T2/`.
+
 ## Statistical fraud analysis (12.10.2026)
 
 The full run of all analysis methods on this data is in **`REPORT_statistical_fraud_analysis.md`**

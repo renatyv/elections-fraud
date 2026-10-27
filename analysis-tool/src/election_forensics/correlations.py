@@ -55,6 +55,9 @@ def district_correlations(data: ElectionData, parties: list[str]) -> pd.DataFram
     df = data.df.copy()
     df["turnout"] = data.turnout.to_numpy()
     df["district_key"] = df["key"].map(district_key)
+    # Non-Portuguese adapters expose the region in the same path position.
+    df["district_key"] = df["district_key"].mask(
+        df["district_key"].eq(""), df["path"].str.split(" > ").str[1])
     names = (
         df.groupby("district_key")["path"]
         .first()

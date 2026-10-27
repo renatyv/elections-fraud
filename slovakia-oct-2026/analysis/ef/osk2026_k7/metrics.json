@@ -1,0 +1,137 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 7 (okrsky)",
+  "national": {
+    "n_units": 1017,
+    "registered": 640835,
+    "voted": 284594,
+    "turnout_pct": 44.409871495782845,
+    "blank_pct": 0.0,
+    "null_pct": 11.648172484310983,
+    "share:Geci M. (NEKA)": 1.3008004385194347,
+    "share:Goliaš Ľ. (Jednota Slovanov)": 0.7575704336704218,
+    "share:Ištok J. (NEKA)": 0.6437240419685587,
+    "share:Kašo Z. (TÍM KOŠICE)": 0.43149187966014746,
+    "share:Laššáková J. (SMER - SD)": 1.3998889646303154,
+    "share:Lešková M. (SNS)": 1.4311615845731112,
+    "share:Majerský M. (KDH)": 48.777908177965806,
+    "share:Mazurek M. (REPUBLIKA)": 35.18380570215816,
+    "share:Migaľ S. (NEKA)": 6.057752447346044,
+    "share:Stanko J. (SLOVEXIT)": 0.6553195077900448,
+    "share:Čureja D. (NEKA)": 3.360576821717956
+  },
+  "leader": "Majerský M. (KDH)",
+  "n_units": 1017,
+  "shpilkin": {
+    "party": "Majerský M. (KDH)",
+    "t_cut": 72.26415094339623,
+    "t_cut_source": "controls",
+    "mode": 43.75,
+    "sigma": 11.115390574320474,
+    "total_votes_party": 138819,
+    "tail_voters": 2524,
+    "tail_votes_party": 1054,
+    "tail_share_of_party": 0.7592620606689287,
+    "observed_share_pct": 48.777908177965806,
+    "honest_share_pct": 48.840713298117485
+  },
+  "fingerprint": {
+    "party": "Majerský M. (KDH)",
+    "weight_anom": 0.4067945705458001,
+    "mean_anom": [
+      45.20257454460371,
+      35.74202356412622
+    ],
+    "mean_main": [
+      43.844645084025615,
+      57.03864842288898
+    ],
+    "anom_cluster_voters": 241267,
+    "anom_cluster_votes_party": 37613,
+    "total_voters": 640835,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 2.8515240904621435,
+    "null_pct": 2.343166175024582,
+    "z": 1.1615733858413289,
+    "z_mult5": 1.2216870962487618
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 4.523107177974435,
+    "null_pct": 4.237463126843658,
+    "z": 0.49208863679376796,
+    "z_mult5": 1.458691486595646
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Majerský M. (KDH)",
+      "n_numbers": 953,
+      "min_count": 10,
+      "chi2": 8.270848449036716,
+      "dof": 9,
+      "p_value": 0.5070985898993535,
+      "p_null_mc": 0.5087281795511222,
+      "max_dev": 2.0539275026123502
+    },
+    {
+      "test": "benford2",
+      "party": "Mazurek M. (REPUBLIKA)",
+      "n_numbers": 969,
+      "min_count": 10,
+      "chi2": 16.85721262081676,
+      "dof": 9,
+      "p_value": 0.05099953323918119,
+      "p_null_mc": 0.06483790523690773,
+      "max_dev": 2.636941946714398
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Majerský M. (KDH)",
+      "n_numbers": 578,
+      "min_count": 100,
+      "chi2": 4.802768166089965,
+      "dof": 9,
+      "p_value": 0.8511513219389029,
+      "p_null_mc": 0.8628428927680798,
+      "max_dev": 1.8685121107266445
+    },
+    {
+      "test": "last",
+      "party": "Mazurek M. (REPUBLIKA)",
+      "n_numbers": 493,
+      "min_count": 100,
+      "chi2": 13.713995943204866,
+      "dof": 9,
+      "p_value": 0.13286884789149098,
+      "p_null_mc": 0.1371571072319202,
+      "max_dev": 3.793103448275861
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Majerský M. (KDH)",
+      "pearson_w": 0.09004624419971746,
+      "spearman": -0.07391883886033314
+    },
+    {
+      "party": "Mazurek M. (REPUBLIKA)",
+      "pearson_w": 0.24114893570546245,
+      "spearman": 0.20139556844496076
+    }
+  ],
+  "neighbors_flagged": 9,
+  "ml_flagged": 11,
+  "selftest": {
+    "t_cut": 72.55936675461741,
+    "clean_tail_party": 1054,
+    "injected_added_ballots_party": 9372,
+    "injected_tail_party": 11387,
+    "signal_growth": 10.803605313092978,
+    "peaks_z_clean": 1.096919915703615,
+    "peaks_z_rounded": 1.9160269811795856,
+    "n_rounded_units": 55
+  }
+}

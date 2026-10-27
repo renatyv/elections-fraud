@@ -8,30 +8,58 @@ portugal-2025/               — Portugal, legislativas 2021–2026: 11 MAI expo
                               PARADOXES.md; site figures —
                               scripts/build_site_figures.py
 brazil-oct-2026-round-1/             — Brazil, rounds of 04/25.10.2026: TSE results by precinct
-                              (data/votacao_secao, ~23 GB of CSV; description in
+                              (data/votacao_secao, ~25 GB of CSV; description in
                               DATA_DESCRIPTION.md) + the 2022 control election on the
                               same precincts (data/votacao_secao_2022); intraday
-                              round-2 trend capture (data/trends); statistical
+                              round-2 trend capture (data/trends; analyze_trends.py →
+                              analysis/trends: share trajectory, exact per-state swing
+                              decomposition, governor-runoff dynamics); statistical
                               fraud analysis → REPORT_statistical_fraud_analysis.md
-                              ("statistical fraud analysis report"; 2022 control —
-                              section 12); voting-paradox analysis (bloc cloning,
-                              2022 runoff transfer matrix, 2026 runoff prediction,
-                              lesser-evil desertion; scripts/run_paradox_analysis.py)
-                              → PARADOXES.md; site figures —
-                              scripts/build_site_figures.py
+                              (1st round; 2022 control — section 12) and
+                              REPORT_statistical_fraud_analysis_T2.md (runoff: same
+                              11 method families + 2022-R2 and 2026-R1 controls +
+                              intraday; outputs in analysis_T2/); voting-paradox
+                              analysis (2022 runoff transfer matrix, conditional 2026
+                              scenario — and its validation against the actual runoff
+                              + the actual 2026 transfer matrix:
+                              scripts/run_paradox_analysis{,_T2}.py) → PARADOXES.md;
+                              site figures — scripts/build_site_figures{,_T2}.py
 bulgaria-oct-2026/           — Bulgaria, presidential election of 25.10.2026: captures of
                               results.cik.bg (scrape_cik.py + run_every_15min.sh) →
                               REPORT.md; normalized intraday trend capture incl.
                               hourly turnout (data/trends)
 serbia-oct-2026/             — Serbia, National Assembly 25.10.2026: RIK JSON API,
-                              captures every 15 minutes → ОТЧЁТ.md ("REPORT.md");
-                              normalized intraday trend capture (data/trends)
+                              captures every 15 minutes → REPORT.md; normalized
+                              intraday trend capture (13 snapshots, data/trends);
+                              polling-station-level capture of 2026 + the 2023
+                              control (capture_stations.py, data/timeline/<round>/
+                              stations.csv); trends analysis (count-night flip,
+                              regional dynamics, special registers; scripts/
+                              analyze_trends.py) → analysis/trends/; forensics at
+                              municipality + station grain, 2023 as control
+                              (build_ef_csv.py → data/ef, ef-analyze runs in
+                              analysis/ef/) → REPORT_statistical_fraud_analysis.md;
+                              voting-paradox analysis (de-cloning, threshold,
+                              D'Hondt, map vs country, count-night inversion;
+                              scripts/analyze_paradoxes.py) → PARADOXES.md
 slovakia-oct-2026/           — Slovakia, municipal (OSO) + regional (OSK) elections of
-                              24.10.2026: intraday trend capture (36 snapshots,
-                              data/trends) from the official ŠÚSR portal — count
-                              progress, 8 kraj governors, mayors of the 8 regional
-                              capitals; schema + final state → DATA_DESCRIPTION.md;
-                              prebuilt charts in analysis/trends/charts
+                              24.10.2026: official definitive exports, precinct level
+                              (data/official, gitignored, ~113 MB) + intraday trend
+                              capture (36 snapshots, data/trends) — count progress,
+                              8 kraj governors, mayors of the 8 regional capitals;
+                              schema + keys → DATA_DESCRIPTION.md; prebuilt charts in
+                              analysis/trends/charts; MAI adaptation + validation →
+                              data/ef (scripts/build_ef_csv.py); statistical fraud
+                              analysis (9 ef-analyze runs: 8 governor races at kraj
+                              level with the same kraj 2022 as control + mayors
+                              nationwide; scripts/build_ef_csv.py,
+                              analysis-tool/run_forensics_slovakia.sh) →
+                              REPORT_statistical_fraud_analysis.md; voting-paradox
+                              analysis (bloc consolidation 2022→2026, frustrated
+                              majority, count-night dynamics, differential
+                              participation OSK vs OSO; scripts/analyze_paradoxes.py)
+                              → PARADOXES.md; site figures —
+                              scripts/build_site_figures.py
 sloveniya-referendum-2026/   — Slovenia, 4 referendums on 11.10.2026: uv project `sloref`
                               (DVK portal): totals and all 3,083 precincts, cross-check
                               against Wikipedia and election-night counting dynamics →

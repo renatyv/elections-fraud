@@ -13,7 +13,7 @@
     }
     for (const locale of navigator.languages || [navigator.language]) {
       const prefix = (locale || "").slice(0, 2).toLowerCase();
-      const language = aliases[prefix] || prefix;
+      const language = languages.includes(prefix) ? prefix : aliases[prefix] || prefix;
       // Keep the existing English fallback while checking other preferred locales.
       if (language !== "en" && languages.includes(language)) return language;
     }

@@ -1,0 +1,33 @@
+## 1. Descriptive comparison of broad opposition groupings
+
+2023 opposition lists combined: 1,465,586 votes = 39.49% of valid; Vučić's list 1,783,701 = 48.07%
+2026 opposition lists combined: 2,311,286 votes = 54.63% of valid; Vučić's list 1,677,241 = 39.64%
+of which the single Students list alone: 53.44% (2,260,762) — more than every 2023 opposition list combined, +15.1 pp for the bloc, -8.4 pp for Vučić's list
+(caveat: 2023 totals are final, 2026 are the latest capture, 97% counted)
+
+## 2. The threshold: votes that elect nobody
+
+votes for lists below 3% that are not minority-exempt: 171,010 = 4.04% of valid votes
+of which Dacić's SPS-led list alone (2.19%): 92,761 votes — excluded from the projected allocation by the 3% rule
+minority-exempt lists below 3% keep their D'Hondt piece (4, 5, 6, 7, 10, 13, 14, 17, 18; verified RIK minority status; quotients +35%)
+
+## 3. Apportionment: D'Hondt vs Sainte-Laguë vs largest remainder
+
+legal projection (D'Hondt, threshold and minority bonus applied): 3. ИЗБОРНА ЛИСТА „СТУДЕНТСКА ЛИСТА - СТУДЕНТИ ПОБЕ 53.44% -> 140 of 250 seats (56.0% of the mandates, +2.6 pp premium)
+under Sainte-Laguë the winner would hold 140 seats, under largest remainder 139 — the choice of divisor moves a handful of seats but not the majority
+majorities: D'Hondt 6 lists win seats; sum for the two leading lists: 244 = 97.6% of seats
+
+## 4. One constituency vs the map
+
+region-districted D'Hondt (seats ∝ votes cast per region) vs the official single-constituency D'Hondt:
+
+municipality winners: Students 90 of 189, Vučić 94, other lists 5
+but nationally (territorial municipalities): Students 53.37% of valid votes — the country votes one way, the map splits the other; an electoral-college-style majority of municipalities would be much closer than the 13.5 pp national margin
+
+## 5. Aggregation over time: the count-night inversion
+
+first capture 22:04 CET: Vučić 48.01%, Students 41.88%
+first observed Students lead between 23:07 and 00:08 CET
+latest capture 21:19 CET: Students 52.71%, Vučić 39.17%; margin 13.54 pp
+largest observed margin 13.62 pp; change since previous snapshot -0.08 pp. Snapshots cannot resolve movements between captures.
+

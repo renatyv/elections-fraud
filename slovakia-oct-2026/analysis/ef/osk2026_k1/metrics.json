@@ -1,0 +1,106 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 1 (okrsky)",
+  "national": {
+    "n_units": 586,
+    "registered": 623410,
+    "voted": 265941,
+    "turnout_pct": 42.65908471150607,
+    "blank_pct": 0.0,
+    "null_pct": 8.330795176373707,
+    "share:Chalabala J. (KSS)": 1.2698305263197476,
+    "share:Droba J. (SaS)": 70.96762063766023,
+    "share:Gajarský R. (SMER - SD)": 11.54203375936768,
+    "share:Krajčovičová Z. (PRAVDA)": 9.609650260772126,
+    "share:Líška Ľ. (Jednota Slovanov)": 0.8866628312294832,
+    "share:Poláček P. (SLOVEXIT)": 1.1025001786110453,
+    "share:Staruch D. (NEKA)": 4.6217018060396855
+  },
+  "leader": "Droba J. (SaS)",
+  "n_units": 586,
+  "shpilkin": {
+    "party": "Droba J. (SaS)",
+    "t_cut": 54.59016393442623,
+    "t_cut_source": "controls",
+    "mode": 46.25,
+    "sigma": 7.8588848333647325,
+    "total_votes_party": 188732,
+    "tail_voters": 11498,
+    "tail_votes_party": 8848,
+    "tail_share_of_party": 4.688129199075938,
+    "observed_share_pct": 70.96762063766023,
+    "honest_share_pct": 70.69716989659767
+  },
+  "fingerprint": {
+    "party": "Droba J. (SaS)",
+    "weight_anom": 0.6918779557464537,
+    "mean_anom": [
+      45.601807493954134,
+      71.05801535663909
+    ],
+    "mean_main": [
+      36.11009025117391,
+      69.40007240086774
+    ],
+    "anom_cluster_voters": 495977,
+    "anom_cluster_votes_party": 161538,
+    "total_voters": 623410,
+    "separated": true
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.023890784982935,
+    "null_pct": 1.1697952218430034,
+    "z": -0.33288497694826735,
+    "z_mult5": 0.39888379248465994
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 1.5358361774744027,
+    "null_pct": 1.6305460750853242,
+    "z": -0.18826622817994312,
+    "z_mult5": 1.1692018679675933
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Droba J. (SaS)",
+      "n_numbers": 585,
+      "min_count": 10,
+      "chi2": 16.46019974957436,
+      "dof": 9,
+      "p_value": 0.057871505343363834,
+      "p_null_mc": 0.4014962593516209,
+      "max_dev": 2.908097799859016
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Droba J. (SaS)",
+      "n_numbers": 580,
+      "min_count": 100,
+      "chi2": 9.89655172413793,
+      "dof": 9,
+      "p_value": 0.3589247399643201,
+      "p_null_mc": 0.3690773067331671,
+      "max_dev": 2.241379310344828
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Droba J. (SaS)",
+      "pearson_w": 0.29233949396092473,
+      "spearman": 0.32279796958305434
+    }
+  ],
+  "neighbors_flagged": 19,
+  "ml_flagged": 6,
+  "selftest": {
+    "t_cut": 63.43115124153499,
+    "clean_tail_party": 1776,
+    "injected_added_ballots_party": 7633,
+    "injected_tail_party": 16485,
+    "signal_growth": 9.282094594594595,
+    "peaks_z_clean": -0.4037132225963376,
+    "peaks_z_rounded": 0.31502706834450134,
+    "n_rounded_units": 37
+  }
+}

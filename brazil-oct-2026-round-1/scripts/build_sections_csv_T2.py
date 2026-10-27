@@ -93,6 +93,10 @@ def main() -> None:
     df = det.merge(votes, left_on=KEY_COLS, right_index=True, how="left", validate="1:1")
     vote_cols = [c for c in votes.columns if c not in ("BRANCO", "NULO")]
     df[vote_cols] = df[vote_cols].fillna(0).astype("int64")
+    # sections absent from the votes file: zero-vote sections (mostly ZZ, not
+    # installed) — detalhe reports explicit zeros, the pivot leaves NaN
+    checks["zero_vote_sections_no_votacao_rows"] = int(df.BRANCO.isna().sum())
+    df[["BRANCO", "NULO"]] = df[["BRANCO", "NULO"]].fillna(0).astype("int64")
 
     # --- self-consistency checks -----------------------------------------
     checks["duplicate_section_keys"] = int(df.duplicated(subset=KEY_COLS, keep=False).sum())
@@ -139,9 +143,10 @@ def main() -> None:
     }
     checks["totals"] = totals
     # cross-check against the election-night portal capture (exact votes)
+    def _ref(name: str):
+        return totals.get(name.lower(), totals.get("candidates", {}).get(name))
     checks["vs_trends_portal"] = {
-        name: ("match" if totals.get(name.lower(), totals.get(name)) == want
-               else f"MISMATCH {totals.get(name.lower(), totals.get(name))} != {want}")
+        name: ("match" if _ref(name) == want else f"MISMATCH {_ref(name)} != {want}")
         for name, want in TRENDS_FINAL.items()
     }
 

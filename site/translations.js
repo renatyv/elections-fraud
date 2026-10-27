@@ -1,8 +1,12 @@
 // Trusted page translations; HTML in these strings is authored with the report.
 const I18N = {
 en: {
+  rs_title: "Serbia — parliamentary election, 25 October 2026",
+  rs_desc: "14 counting snapshots, 8,124 territorial stations and a complete 2023 control. No convergent evidence of large-scale stuffing; accounting and statistical flags remain. Corrected seat projection: 140 Students, 104 Vučić, six minority seats.",
   br2_title: "Brazil — presidential runoff, 25 October 2026",
-  br2_desc: "Lula 51.79% × Flávio Bolsonaro 48.21%. 499,248 sections, eleven families of tests, the honest 2022 runoff on the same sections as a control — and the round-1 transfer scenario checked against the actual result. Preliminary readout: the section-level tests await TSE’s post-runoff data.",
+  br2_desc: "Verdict: no statistical traces of manipulation. 499,248 sections, eleven families of tests, the honest 2022 runoff on the same sections as a control — plus the election-night capture and the actual vote transfers between the rounds.",
+  sk_title: "Slovakia — municipal &amp; regional elections, 24 October 2026",
+  sk_desc: "Verdict: no statistical traces of manipulation. 6,029 + 6,024 precincts, ten families of tests, the honest 2022 elections on the same precincts as a control — and a measured footprint of local machines: 79,290 more votes cast in the mayor race than in the governor race, same voters, same minute.",
   us_title: "United States — Senate & House, 5 November 2024",
   us_desc: "284 digit tests, county turnout diagnostics and seven potential vote-splitting cases. Statistical flags need follow-up; partial coverage prevents a fraud verdict.",
   title: "Election Forensics — Independent Statistical Audits",
@@ -23,8 +27,12 @@ en: {
   footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 sl: {
+  rs_title: "Srbija — parlamentarne volitve, 25. oktober 2026",
+  rs_desc: "14 posnetkov štetja, 8.124 teritorialnih volišč in popolna kontrola iz leta 2023. Ni skladnih dokazov o množičnem dodajanju glasovnic; računovodska in statistična opozorila ostajajo. Popravljena projekcija: 140 mandatov študentski listi, 104 Vučiću, šest manjšinam.",
   br2_title: "Brazilija — predsedniške volitve, 2. krog, 25. oktober 2026",
-  br2_desc: "Lula 51,79 % proti Fláviu Bolsonaru 48,21 %. 499.248 sekcij, enajst družin testov, pošten 2. krog 2022 na istih sekcijah kot kontrola — in scenarij prenosov glasov iz 1. kroga preverjen z dejanskim izidom. Začasni pregled: testi na ravni sekcij čakajo na TSE-jeve podatke po 2. krogu.",
+  br2_desc: "Zaključek: statističnih sledi poneverbe ni. 499.248 sekcij, enajst družin testov, pošten 2. krog 2022 na istih sekcijah kot kontrola — plus nočni zajem rezultatov in dejanski prenosi glasov med krogoma.",
+  sk_title: "Slovaška — komunalne in županijske volitve, 24. oktober 2026",
+  sk_desc: "Zaključek: statističnih sledi poneverbe ni. 6.029 + 6.024 volišč, deset družin testov, poštene volitve 2022 na istih voliščih kot kontrola — in izmerjena sled lokalnih strojev: 79.290 več glasov pri volitvah županov kot pri volitvah županov regij, isti volivci, ista minuta.",
   us_title: "Združene države — senat in predstavniški dom, 5. november 2024",
   us_desc: "284 testov števk, analiza udeležbe po okrožjih in sedem možnih primerov razpršitve glasov. Statistična opozorila zahtevajo nadaljnje preverjanje; delna pokritost ne omogoča sklepa o poneverbi.",
   title: "Volilna forenzika — neodvisne statistične preverbe",
@@ -45,8 +53,12 @@ sl: {
   footer: "Neodvisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 hr: {
+  rs_title: "Srbija — parlamentarni izbori, 25. listopada 2026.",
+  rs_desc: "14 presjeka prebrojavanja, 8.124 teritorijalna biračka mjesta i potpuna kontrola iz 2023. Nema suglasnih dokaza o masovnom dodavanju listića; računovodstvena i statistička upozorenja ostaju. Ispravljena projekcija: 140 mandata studentima, 104 Vučiću, šest manjinama.",
   br2_title: "Brazil — predsjednički izbori, 2. krug, 25. listopada 2026.",
-  br2_desc: "Lula 51,79 % naspram Fláviu Bolsonaru 48,21 %. 499.248 biračkih mjesta, jedanaest obitelji testova, pošteni 2. krug 2022. na istim mjestima kao kontrola — i scenarij prijenosa glasova iz 1. kruga provjeren sa stvarnim ishodom. Preliminarni prikaz: testovi na razini biračkih mjesta čekaju TSE-ove podatke nakon 2. kruga.",
+  br2_desc: "Zaključek: nema statističkih tragova manipulacije. 499.248 biračkih mjesta, jedanaest obitelji testova, pošteni 2. krug 2022. na istim mjestima kao kontrola — plus noćni zahvat rezultata i stvarni prijenosi glasova između krugova.",
+  sk_title: "Slovačka — lokalni i regionalni izbori, 24. listopada 2026.",
+  sk_desc: "Zaključak: nema statističkih tragova manipulacije. 6.029 + 6.024 biračka mjesta, deset obitelji testova, pošteni izbori 2022. na istim mjestima kao kontrola — i izmjerena lokalnih strojeva: 79.290 više glasova na izborima načelnika nego na izborima župana, isti birači, ista minuta.",
   us_title: "Sjedinjene Države — Senat i Zastupnički dom, 5. studenoga 2024.",
   us_desc: "284 testa znamenki, analiza izlaznosti po okruzima i sedam mogućih slučajeva podjele glasova. Statistička upozorenja traže daljnju provjeru; djelomična pokrivenost ne dopušta zaključak o prijevari.",
   title: "Izborna forenzika — neovisne statističke provjere",
@@ -67,8 +79,12 @@ hr: {
   footer: "Neovisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 it: {
+  rs_title: "Serbia — elezioni parlamentari, 25 ottobre 2026",
+  rs_desc: "14 rilevazioni dello scrutinio, 8.124 seggi territoriali e un controllo completo del 2023. Nessuna evidenza convergente di aggiunta massiccia di schede; restano discrepanze contabili e segnali statistici. Proiezione corretta: 140 seggi agli studenti, 104 a Vučić, sei alle minoranze.",
   br2_title: "Brasile — presidenziali, 2º turno, 25 ottobre 2026",
-  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499.248 sezioni, undici famiglie di test, l’onesto 2º turno del 2022 sulle stesse sezioni come controllo — e lo scenario di trasferimenti del 1º turno confrontato con il risultato reale. Lettura preliminare: i test a livello di sezione attendono i dati post-ballottaggio del TSE.",
+  br2_desc: "Verdetto: nessuna traccia statistica di manipolazione. 499.248 sezioni, undici famiglie di test, l’onesto 2º turno del 2022 sulle stesse sezioni come controllo — più la cattura notturna dei risultati e i trasferimenti di voti reali tra i turni.",
+  sk_title: "Slovacchia — elezioni locali e regionali, 24 ottobre 2026",
+  sk_desc: "Verdetto: nessuna traccia statistica di manipolazione. 6.029 + 6.024 sezioni, dieci famiglie di test, le oneste elezioni del 2022 sulle stesse sezioni come controllo — e un’impronta misurata delle macchine locali: 79.290 voti in più alle elezioni dei sindaci che a quelle dei presidenti di regione, stessi elettori, stesso minuto.",
   us_title: "Stati Uniti — Senato e Camera, 5 novembre 2024",
   us_desc: "284 test sulle cifre, analisi dell’affluenza per contea e sette possibili casi di dispersione dei voti. I segnali statistici richiedono verifiche; la copertura parziale non consente un verdetto sui brogli.",
   title: "Election forensics — verifiche statistiche indipendenti",
@@ -89,8 +105,12 @@ it: {
   footer: "Analisi indipendente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 hu: {
+  rs_title: "Szerbia — parlamenti választás, 2026. október 25.",
+  rs_desc: "14 számlálási pillanatkép, 8 124 területi szavazókör és teljes 2023-as kontroll. Nincs egybehangzó bizonyíték tömeges szavazólap-hozzáadásra; elszámolási és statisztikai jelzések maradtak. Javított mandátumbecslés: 140 a diáklistának, 104 Vučićnak, hat a kisebbségeknek.",
   br2_title: "Brazília — elnökválasztás, 2. forduló, 2026. október 25.",
-  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499 248 szavazókör, tizenegy tesztcsalád, a korrekt 2022-es 2. forduló ugyanazokon a körökön kontrollként — és az 1. fordulós átvitel-forgatókönyv összevetve a tényleges eredménnyel. Előzetes olvasat: a szavazókör szintű tesztek a TSE második forduló utáni adataira várnak.",
+  br2_desc: "Eredmény: nincs a manipulációra utaló statisztikai nyom. 499 248 szavazókör, tizenegy tesztcsalád, a korrekt 2022-es második forduló ugyanazokon a körökön kontrollként — plusz az éjszakai eredményrögzítés és a fordulók közötti tényleges szavazatáramlások.",
+  sk_title: "Szlovákia — önkormányzati és megyei választások, 2026. október 24.",
+  sk_desc: "Eredmény: nincs a manipulációra utaló statisztikai nyom. 6 029 + 6 024 szavazókör, tíz tesztcsalád, a korrekt 2022-es választás ugyanazokon a körökön kontrollként — és a helyi gépezet mért nyoma: 79 290-mal több szavazat a polgármesteri, mint a megyei elnök választáson, ugyanazok a választók, ugyanaz a perc.",
   us_title: "Egyesült Államok — Szenátus és Képviselőház, 2024. november 5.",
   us_desc: "284 számjegyteszt, megyei részvételi elemzések és hét lehetséges szavazatmegosztási eset. A statisztikai jelzések további vizsgálatot igényelnek; a részleges lefedettség nem tesz lehetővé következtetést csalásról.",
   title: "Választási statisztika — független ellenőrzések",
@@ -111,8 +131,12 @@ hu: {
   footer: "Független elemzés · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 pt: {
+  rs_title: "Sérvia — eleições legislativas, 25 de outubro de 2026",
+  rs_desc: "14 registos da contagem, 8 124 secções territoriais e controlo completo de 2023. Sem evidência convergente de adição massiva de boletins; subsistem discrepâncias contabilísticas e sinais estatísticos. Projeção corrigida: 140 deputados para os estudantes, 104 para Vučić, seis para as minorias.",
   br2_title: "Brasil — presidencial, 2.º turno, 25 de outubro de 2026",
-  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499.248 seções, onze famílias de testes, o honesto 2.º turno de 2022 nas mesmas seções como controle — e o cenário de transferências do 1.º turno conferido contra o resultado real. Leitura provisória: os testes por seção aguardam os dados pós-2.º turno do TSE.",
+  br2_desc: "Veredito: sem vestígios estatísticos de manipulação. 499.248 seções, onze famílias de testes, o honesto 2.º turno de 2022 nas mesmas seções como controle — mais a captura da noite eleitoral e as transferências reais de votos entre os turnos.",
+  sk_title: "Eslováquia — eleições locais e regionais, 24 de outubro de 2026",
+  sk_desc: "Veredito: sem vestígios estatísticos de manipulação. 6 029 + 6 024 seções, dez famílias de testes, as honestas eleições de 2022 nas mesmas seções como controlo — e uma pegada medida das máquinas locais: 79.290 votos a mais nas eleições de presidentes de câmara do que nas de presidentes de região, mesmos eleitores, mesmo minuto.",
   us_title: "Estados Unidos — Senado e Câmara, 5 de novembro de 2024",
   us_desc: "284 testes de dígitos, análise da participação por condado e sete possíveis casos de divisão de votos. Os sinais estatísticos exigem verificação; a cobertura parcial impede um veredito sobre fraude.",
   title: "Forense eleitoral — auditorias estatísticas independentes",
@@ -133,8 +157,12 @@ pt: {
   footer: "Análise independente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 es: {
+  rs_title: "Serbia — elecciones parlamentarias, 25 de octubre de 2026",
+  rs_desc: "14 capturas del escrutinio, 8.124 mesas territoriales y control completo de 2023. Sin evidencia convergente de adición masiva de papeletas; persisten discrepancias contables y señales estadísticas. Proyección corregida: 140 escaños para estudiantes, 104 para Vučić, seis para minorías.",
   br2_title: "Brasil — presidencial, 2.ª vuelta, 25 de octubre de 2026",
-  br2_desc: "Lula 51,79% × Flávio Bolsonaro 48,21%. 499 248 secciones, once familias de pruebas, la honesta 2.ª vuelta de 2022 en las mismas secciones como control — y el escenario de transferencias de la 1.ª vuelta contrastado con el resultado real. Lectura provisional: las pruebas por sección esperan los datos posteriores a la 2.ª vuelta del TSE.",
+  br2_desc: "Veredicto: sin rastros estadísticos de manipulación. 499.248 secciones, once familias de pruebas, la honesta 2.ª vuelta de 2022 en las mismas secciones como control — más la captura de la noche electoral y las transferencias reales de votos entre vueltas.",
+  sk_title: "Eslovaquia — elecciones locales y regionales, 24 de octubre de 2026",
+  sk_desc: "Veredicto: sin rastros estadísticos de manipulación. 6 029 + 6 024 secciones, diez familias de pruebas, las honestas elecciones de 2022 en las mismas secciones como control — y una huella medida de las máquinas locales: 79 290 votos más en las elecciones de alcaldes que en las de presidentes regionales, mismos votantes, mismo minuto.",
   us_title: "Estados Unidos — Senado y Cámara, 5 de noviembre de 2024",
   us_desc: "284 pruebas de dígitos, análisis de participación por condado y siete posibles casos de división del voto. Las señales estadísticas requieren comprobación; la cobertura parcial impide un veredicto sobre fraude.",
   title: "Forense electoral — auditorías estadísticas independientes",

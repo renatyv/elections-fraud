@@ -1,0 +1,252 @@
+{
+  "title": "Serbia 2023 — municipalities (ballots cast)",
+  "national": {
+    "n_units": 190,
+    "registered": 6452853,
+    "voted": 3782235,
+    "turnout_pct": 58.61337612990719,
+    "blank_pct": 0.0,
+    "null_pct": 2.732802165915127,
+    "share:Vučić": 46.58343545549126,
+    "share:Dacić (SPS)": 6.566540682955977,
+    "share:Šešelj (SRS)": 1.454483922865713,
+    "share:NOS—Zavetnici—Dveri": 2.7608808019596878,
+    "share:Jovanović (NDSS)": 5.0365987306447115,
+    "share:VMSZ": 1.7097033896624614,
+    "share:SPN": 23.618178140702522,
+    "share:Zukorlić (SPP)": 0.7509845369206303,
+    "share:SDA Sandžaka": 0.5752418874025543,
+    "share:Zajedno za razvoj": 0.17865098281836003,
+    "share:Narodna (Jeremić)": 0.8737162021926189,
+    "share:DJB—Tadić": 1.1826605168637063,
+    "share:Alb. Kamberi": 0.3563237080720791,
+    "share:MI-Glas (Nestorović)": 4.7005540374937045,
+    "share:Srbija na Zapadu": 0.14279916504394888,
+    "share:Russ. party": 0.2983685572155088,
+    "share:Č. Jovanović (Moramo)": 0.24155030028541324,
+    "share:Alb. ADA": 0.08487045358101758
+  },
+  "leader": "Vučić",
+  "n_units": 190,
+  "shpilkin": {
+    "party": "Vučić",
+    "t_cut": 77.95860604988502,
+    "t_cut_source": "own_q995",
+    "mode": 59.75,
+    "sigma": 6.647081141308888,
+    "total_votes_party": 1761895,
+    "tail_voters": 21412,
+    "tail_votes_party": 16173,
+    "tail_share_of_party": 0.9179321128671118,
+    "observed_share_pct": 46.58343545549126,
+    "honest_share_pct": 46.418616350729614
+  },
+  "fingerprint": {
+    "party": "Vučić",
+    "weight_anom": 0.9135940672269357,
+    "mean_anom": [
+      59.46755161013252,
+      45.122652657219575
+    ],
+    "mean_main": [
+      49.36829024733299,
+      58.551499684096534
+    ],
+    "anom_cluster_voters": 6142507,
+    "anom_cluster_votes_party": 1683138,
+    "total_voters": 6452853,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.0526315789473684,
+    "null_pct": 1.144736842105263,
+    "z": -0.12268857051486053,
+    "z_mult5": 0.7125429966007061
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 1.5789473684210527,
+    "null_pct": 1.2,
+    "z": 0.48624648437223333,
+    "z_mult5": -0.7965803667279597
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Vučić",
+      "n_numbers": 190,
+      "min_count": 10,
+      "chi2": 8.386008803399918,
+      "dof": 9,
+      "p_value": 0.4957618386535033,
+      "p_null_mc": 0.42643391521197005,
+      "max_dev": 3.2952310350487664
+    },
+    {
+      "test": "benford2",
+      "party": "SPN",
+      "n_numbers": 180,
+      "min_count": 10,
+      "chi2": 8.641624479554677,
+      "dof": 9,
+      "p_value": 0.4709908277599433,
+      "p_null_mc": 0.5087281795511222,
+      "max_dev": 4.667723580232243
+    },
+    {
+      "test": "benford2",
+      "party": "Dacić (SPS)",
+      "n_numbers": 188,
+      "min_count": 10,
+      "chi2": 1.238059300288332,
+      "dof": 9,
+      "p_value": 0.9986638470729674,
+      "p_null_mc": 0.9975062344139651,
+      "max_dev": 1.37694710605287
+    },
+    {
+      "test": "benford2",
+      "party": "Jovanović (NDSS)",
+      "n_numbers": 181,
+      "min_count": 10,
+      "chi2": 6.112098765690678,
+      "dof": 9,
+      "p_value": 0.7286486586227552,
+      "p_null_mc": 0.71571072319202,
+      "max_dev": 3.5016863999804317
+    },
+    {
+      "test": "benford2",
+      "party": "MI-Glas (Nestorović)",
+      "n_numbers": 177,
+      "min_count": 10,
+      "chi2": 10.781206636262723,
+      "dof": 9,
+      "p_value": 0.2910048111851119,
+      "p_null_mc": 0.3167082294264339,
+      "max_dev": 4.494615076716651
+    },
+    {
+      "test": "benford2",
+      "party": "NOS—Zavetnici—Dveri",
+      "n_numbers": 179,
+      "min_count": 10,
+      "chi2": 3.739149263301486,
+      "dof": 9,
+      "p_value": 0.9277272752650575,
+      "p_null_mc": 0.9451371571072319,
+      "max_dev": 2.8899475303122877
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Vučić",
+      "n_numbers": 185,
+      "min_count": 100,
+      "chi2": 8.243243243243244,
+      "dof": 9,
+      "p_value": 0.5098313583792162,
+      "p_null_mc": 0.48129675810473815,
+      "max_dev": 3.5135135135135136
+    },
+    {
+      "test": "last",
+      "party": "SPN",
+      "n_numbers": 169,
+      "min_count": 100,
+      "chi2": 12.597633136094672,
+      "dof": 9,
+      "p_value": 0.1816739189961317,
+      "p_null_mc": 0.18453865336658354,
+      "max_dev": 4.674556213017752
+    },
+    {
+      "test": "last",
+      "party": "Dacić (SPS)",
+      "n_numbers": 175,
+      "min_count": 100,
+      "chi2": 13.17142857142857,
+      "dof": 9,
+      "p_value": 0.15500149153656792,
+      "p_null_mc": 0.1371571072319202,
+      "max_dev": 4.857142857142857
+    },
+    {
+      "test": "last",
+      "party": "Jovanović (NDSS)",
+      "n_numbers": 159,
+      "min_count": 100,
+      "chi2": 9.490566037735848,
+      "dof": 9,
+      "p_value": 0.39327576827183225,
+      "p_null_mc": 0.4488778054862843,
+      "max_dev": 5.7232704402515715
+    },
+    {
+      "test": "last",
+      "party": "MI-Glas (Nestorović)",
+      "n_numbers": 157,
+      "min_count": 100,
+      "chi2": 2.5541401273885347,
+      "dof": 9,
+      "p_value": 0.9793918421611666,
+      "p_null_mc": 0.970074812967581,
+      "max_dev": 2.7388535031847128
+    },
+    {
+      "test": "last",
+      "party": "NOS—Zavetnici—Dveri",
+      "n_numbers": 155,
+      "min_count": 100,
+      "chi2": 9.580645161290322,
+      "dof": 9,
+      "p_value": 0.38548768842403924,
+      "p_null_mc": 0.3765586034912718,
+      "max_dev": 4.193548387096774
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Vučić",
+      "pearson_w": 0.20237694255902422,
+      "spearman": 0.05393326247556064
+    },
+    {
+      "party": "SPN",
+      "pearson_w": 0.2537755882003411,
+      "spearman": 0.20588381949638496
+    },
+    {
+      "party": "Dacić (SPS)",
+      "pearson_w": 0.10591054354752273,
+      "spearman": 0.04168449045825734
+    },
+    {
+      "party": "Jovanović (NDSS)",
+      "pearson_w": 0.3020846458822888,
+      "spearman": 0.17019869490424666
+    },
+    {
+      "party": "MI-Glas (Nestorović)",
+      "pearson_w": 0.1983003631462665,
+      "spearman": 0.076116785131398
+    },
+    {
+      "party": "NOS—Zavetnici—Dveri",
+      "pearson_w": 0.2556296415855469,
+      "spearman": 0.2769047871074358
+    }
+  ],
+  "neighbors_flagged": 4,
+  "ml_flagged": 2,
+  "selftest": {
+    "t_cut": 77.95860604988502,
+    "clean_tail_party": 16173,
+    "injected_added_ballots_party": 87121,
+    "injected_tail_party": 191867,
+    "signal_growth": 11.863414332529524,
+    "peaks_z_clean": -0.09144589284783743,
+    "peaks_z_rounded": 7.2155882792691095,
+    "n_rounded_units": 12
+  }
+}

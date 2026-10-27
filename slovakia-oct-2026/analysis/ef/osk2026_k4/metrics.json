@@ -1,0 +1,133 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 4 (okrsky)",
+  "national": {
+    "n_units": 745,
+    "registered": 562695,
+    "voted": 227961,
+    "turnout_pct": 40.51235571668488,
+    "blank_pct": 0.0,
+    "null_pct": 11.278683634481336,
+    "share:Becík B. (HLAS - sociálna demokracia)": 50.47266857050109,
+    "share:Blaško E. (Jednota Slovanov)": 3.5041081588517335,
+    "share:Csenger T. (Magyar Szövetség - Maďarská aliancia)": 10.40792065309417,
+    "share:Suchan K. (SLOVEXIT)": 0.8602348647356346,
+    "share:Varga H. (Tím Kraj Nitra)": 28.867657186974967,
+    "share:Čuláková J. (NEKA)": 3.442694145051127,
+    "share:Švec R. (Slovenské Hnutie Obrody)": 2.4447164207912757
+  },
+  "leader": "Becík B. (HLAS - sociálna demokracia)",
+  "n_units": 745,
+  "shpilkin": {
+    "party": "Becík B. (HLAS - sociálna demokracia)",
+    "t_cut": 66.08,
+    "t_cut_source": "controls",
+    "mode": 43.75,
+    "sigma": 9.833447656222782,
+    "total_votes_party": 115058,
+    "tail_voters": 2008,
+    "tail_votes_party": 1240,
+    "tail_share_of_party": 1.077717325175129,
+    "observed_share_pct": 50.47266857050109,
+    "honest_share_pct": 50.37242258345762
+  },
+  "fingerprint": {
+    "party": "Becík B. (HLAS - sociálna demokracia)",
+    "weight_anom": 0.446334713143901,
+    "mean_anom": [
+      43.780100513826554,
+      59.37394851314633
+    ],
+    "mean_main": [
+      38.09587887246996,
+      41.808566047517694
+    ],
+    "anom_cluster_voters": 238204,
+    "anom_cluster_votes_party": 65156,
+    "total_voters": 562695,
+    "separated": true
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.476510067114094,
+    "null_pct": 1.4221476510067115,
+    "z": 0.12315179672512029,
+    "z_mult5": 0.7369379707740683
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 1.74496644295302,
+    "null_pct": 2.5268456375838926,
+    "z": -1.3716499809974265,
+    "z_mult5": -1.0075904364799093
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Becík B. (HLAS - sociálna demokracia)",
+      "n_numbers": 743,
+      "min_count": 10,
+      "chi2": 10.324767719424234,
+      "dof": 9,
+      "p_value": 0.3248388311148495,
+      "p_null_mc": 0.5311720698254364,
+      "max_dev": 1.9680445912791569
+    },
+    {
+      "test": "benford2",
+      "party": "Varga H. (Tím Kraj Nitra)",
+      "n_numbers": 705,
+      "min_count": 10,
+      "chi2": 10.72991649952206,
+      "dof": 9,
+      "p_value": 0.2946770416758273,
+      "p_null_mc": 0.28428927680798005,
+      "max_dev": 2.717368970303165
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Becík B. (HLAS - sociálna demokracia)",
+      "n_numbers": 530,
+      "min_count": 100,
+      "chi2": 5.283018867924528,
+      "dof": 9,
+      "p_value": 0.8089718977266904,
+      "p_null_mc": 0.8329177057356608,
+      "max_dev": 1.509433962264152
+    },
+    {
+      "test": "last",
+      "party": "Varga H. (Tím Kraj Nitra)",
+      "n_numbers": 270,
+      "min_count": 100,
+      "chi2": 1.6296296296296295,
+      "dof": 9,
+      "p_value": 0.9960660020193433,
+      "p_null_mc": 0.9975062344139651,
+      "max_dev": 1.1111111111111114
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Becík B. (HLAS - sociálna demokracia)",
+      "pearson_w": 0.24435884496737315,
+      "spearman": 0.22123042492932796
+    },
+    {
+      "party": "Varga H. (Tím Kraj Nitra)",
+      "pearson_w": -0.03333174203828177,
+      "spearman": -0.053225465313644006
+    }
+  ],
+  "neighbors_flagged": 0,
+  "ml_flagged": 8,
+  "selftest": {
+    "t_cut": 66.01123595505618,
+    "clean_tail_party": 1240,
+    "injected_added_ballots_party": 8470,
+    "injected_tail_party": 11318,
+    "signal_growth": 9.12741935483871,
+    "peaks_z_clean": 0.2451306198162795,
+    "peaks_z_rounded": 1.2333333333333332,
+    "n_rounded_units": 43
+  }
+}

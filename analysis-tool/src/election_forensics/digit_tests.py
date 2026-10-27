@@ -38,11 +38,11 @@ class DigitTestResult:
     party: str
     n_numbers: int
     min_count: int
-    chi2: float
+    chi2: float | None
     dof: int
-    p_value: float  # against the theoretical digit distribution
-    p_null_mc: float  # empirical p-value against the smooth (lognormal) null
-    max_dev: float  # maximum deviation of a frequency from expectation, p.p.
+    p_value: float | None  # against the theoretical digit distribution
+    p_null_mc: float | None  # empirical p-value against the smooth (lognormal) null
+    max_dev: float | None  # maximum deviation of a frequency from expectation, p.p.
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -95,6 +95,9 @@ def digit_test(
     counts = data.df[party].to_numpy()
     counts = counts[counts >= min_count]
     expected = _expected(test)
+    if not len(counts):
+        return DigitTestResult(test, party.removeprefix("votes:"), 0, min_count,
+                               None, 9, None, None, None)
     chi2, p, max_dev = _chi2_uniform(_digits(counts, test), expected)
 
     mu, sigma = _fit_lognormal(counts)

@@ -102,6 +102,46 @@ claims about voting paradoxes. The former narrative’s 2.2M “gap to displacin
 Lula” was the gap between the two leaders, not Lula’s gap to third place; that
 argument is withdrawn. No monotonicity or no-show conclusion follows from it.
 
+## 4-b. Runoff validation (25.10.2026) and the actual 2026 transfer matrix
+
+The runoff happened: **Lula 51.79% vs Flávio Bolsonaro 48.21%** (two-candidate
+valid; turnout 80.78%). The §4 scenario said **47.43%** — a miss of **−4.36 pp**,
+with the bootstrap interval (47.39–47.45%) nowhere near the outcome. The interval
+covered model resampling only; the real error sat in the mapping and in voters
+changing behaviour, as §4 warned.
+
+Fitting the same model directly on the actual 2026 pair of rounds
+(`scripts/run_paradox_analysis_T2.py` → `analysis/paradox/transfers_2026_matrix.csv`;
+NNLS on section totals, row-stochastic, 80/20 cross-validation: held-out r² =
+0.978, MAE 3.06 votes/section; bootstrap CI for the fitted Lula share
+51.48–51.52%) gives the actual rates and, with them, an exact decomposition of
+the miss (contributions to the −4.36 pp gap; negative = scenario underestimated
+Lula):
+
+| round-1 origin | votes | scenario (2022 rates) | actual 2026 | contribution |
+|---|---|---|---|---|
+| blank | 2.30M | → neither | → **Lula 66.7%** | **−1.24** |
+| Cury | 3.45M | → Lula 27.9% | → **Lula 69.3% / B 8.5%** | **−1.15** |
+| null | 3.67M | → Lula 26.7% | → **Lula 57.5%** | **−0.91** |
+| Lula | 53.88M | stay 96.8% | stay **98.85%** | **−0.87** |
+| Caiado | 2.61M | → Lula 27.9% | → Lula 38.2% / B 54.0% | −0.22 |
+| Ferreira | 2.68M | → Lula 27.9% | → Lula 37.8% / B 44.0% | −0.21 |
+| Zema | 0.33M | → B 93.4% | → B 88.1% / Lula 0 | +0.04 |
+| runoff-only (NEW) | 10.69M | 48.1 / 47.3 | **62.4 / 32.7** | (—) |
+
+Listed origins sum to −4.65 pp; turnout-composition effects offset +0.29 pp.
+Other actual rates: Bolsonaro base 99.23% stay; Hertz (PSOL) → Lula 89.2%;
+Samara → 86.5%.
+
+**Reading.** The 2022-borrowed rates told a coherent story and still missed by
+4.4 pp: 2026 runoff re-alignment (blank/null ballots breaking for Lula, Cury's
+voters — mapped onto Tebet's — going to Lula at 2.5× the mapped rate, higher
+base loyalty, +1.86 pp turnout with new runoff-only voters splitting 62/33)
+dominates any mapping noise. An ecological scenario is a baseline, not a
+forecast; this validation quantifies exactly how far off a well-fitted one can
+be. Ecological rates remain aggregate estimates — they do not describe any
+individual voter.
+
 ## 5. Presidential and legislative vote totals
 
 Compare presidential votes and party federal-deputy votes in matched sections.
@@ -134,12 +174,16 @@ Run from the repository root:
 
 ```bash
 cd analysis-tool
-uv run python ../brazil-oct-2026-round-1/scripts/run_paradox_analysis.py
+uv run python ../brazil-oct-2026-round-1/scripts/run_paradox_analysis.py      # §1–4
+uv run python ../brazil-oct-2026-round-1/scripts/run_paradox_analysis_T2.py   # §4-b
 ```
 
 Outputs include `cloning_clusters.csv`, `cloning_corr_spearman.csv`,
 `transfers_2022_matrix.csv`, `transfers_2022_bootstrap_ci.csv`,
-`mapping_2026_to_2022.csv`, `desertion_parties.csv`, `paradox_results.json`.
+`mapping_2026_to_2022.csv`, `desertion_parties.csv`, `paradox_results.json`
+(§1–4); `transfers_2026_matrix.csv`, `transfers_2026_bootstrap_ci.csv`,
+`prediction_decomposition.csv`, `prediction_vs_actual.json` (§4-b).
 Legacy output filenames are retained; they do not imply that cloning or desertion
 has been identified. The 472,075-section match is between the two 2022 rounds;
-the separate 2022–2026 forensic comparison uses 461,218 matched sections.
+the separate 2022–2026 forensic comparison uses 461,218 matched sections;
+the §4-b fit matches all 499,248 sections of the 2026 pair of rounds 1:1.

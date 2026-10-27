@@ -11,11 +11,14 @@ brazil-oct-2026-round-1/data/
 portugal-2025/data/
 # Данные портала DVK Словении (~17 МБ) — uv-проект sloref
 sloveniya-referendum-2026/data/
+# Официальные выгрузки ŠÚSR/volbysr.sk (~113 МБ) — scripts/build_ef_csv.py
+slovakia-oct-2026/data/
 .venv/
 india-2024/data/
 # Run logs of scrapers/forensics — recreated on every run
 *.log
 portugal-2025/logs_*.txt
+data/
 
 
 # US raw/derived election datasets; reproduce with usa-2024/scripts/download.sh

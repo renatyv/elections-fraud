@@ -1,0 +1,92 @@
+{
+ "snapshots": 14,
+ "first_fetch_utc": "2026-10-25T21:04:02Z",
+ "last_fetch_utc": "2026-10-26T20:19:23Z",
+ "last_source_ts": "26.10.2026 21:15:00",
+ "registered": 6451292,
+ "turnout_pct": 68.83,
+ "stations_total": 8392,
+ "stations_counted": 8191,
+ "pct_counted": 97.6,
+ "votes_valid": 4248886,
+ "shares_final": {
+  "1": 39.17,
+  "2": 2.17,
+  "3": 52.71,
+  "4": 0.48,
+  "5": 0.81,
+  "6": 0.28,
+  "7": 0.15,
+  "8": 0.9,
+  "9": 0.28,
+  "10": 0.29,
+  "11": 0.46,
+  "12": 0.06,
+  "13": 0.03,
+  "14": 0.1,
+  "15": 0.05,
+  "16": 0.08,
+  "17": 0.64,
+  "18": 0.07
+ },
+ "flip_at_fetch_utc": "2026-10-25 23:08:05+00:00",
+ "flip_previous_fetch_utc": "2026-10-25 22:07:48+00:00",
+ "flip_counted_interval_pct": [
+  25.45,
+  41.35
+ ],
+ "margin_monotonic_at_snapshots": false,
+ "implied_tail_from_fetch_utc": "2026-10-26 07:04:06+00:00",
+ "shares_denominator": "RIK displayed percentages; valid plus invalid ballots",
+ "ballots_accounting_gap": 2656,
+ "margin_first_pp": -6.1299999999999955,
+ "margin_final_pp": 13.54,
+ "turnout_first_pct": 67.53,
+ "turnout_final_pct": 68.83,
+ "implied_late_count_turnout_pct": 68.89,
+ "implied_tail_turnout_pct": 71.12,
+ "regions_final": {
+  "Београдски регион": {
+   "students_pct": 62.96,
+   "vucic_pct": 31.63,
+   "pct_counted": 97.95,
+   "turnout_pct": 70.33
+  },
+  "Заводи за извршење кривичних санкција": {
+   "students_pct": 24.74,
+   "vucic_pct": 65.61,
+   "pct_counted": 96.55,
+   "turnout_pct": 89.24
+  },
+  "Иностранство": {
+   "students_pct": 89.57,
+   "vucic_pct": 7.72,
+   "pct_counted": 8.6,
+   "turnout_pct": 80.06
+  },
+  "Регион Јужне и Источне Србије": {
+   "students_pct": 44.22,
+   "vucic_pct": 45.91,
+   "pct_counted": 97.96,
+   "turnout_pct": 67.16
+  },
+  "Регион Војводине": {
+   "students_pct": 52.18,
+   "vucic_pct": 39.58,
+   "pct_counted": 98.77,
+   "turnout_pct": 70.37
+  },
+  "Регион Косово и Метохија": {
+   "students_pct": 20.62,
+   "vucic_pct": 71.97,
+   "pct_counted": 100.0,
+   "turnout_pct": 35.49
+  },
+  "Регион Шумадије и Западне Србије": {
+   "students_pct": 50.77,
+   "vucic_pct": 39.94,
+   "pct_counted": 99.35,
+   "turnout_pct": 69.09
+  }
+ }
+}

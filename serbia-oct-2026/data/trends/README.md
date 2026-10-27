@@ -1,31 +1,24 @@
-# Intraday trend capture — Serbia, National Assembly 25.10.2026 (RS-680072)
+# Intraday trend capture — Serbia, National Assembly 25.10.2026
 
-**11 snapshots** of the RIK results portal, roughly hourly: 25.10.2026 21:04 UTC
-(23:04 local, first numbers) through 26.10.2026 07:04 UTC. Extracted from
-`election-data-2026-10.zip` (repo root); normalized counterpart to the raw JSON
-snapshots in `../raw/` and the timeline in `../timeline/`.
+**14 snapshots**, 25 October 21:04:02 UTC (22:04 CET) through
+26 October 20:19:23 UTC (21:19 CET); latest RIK source stamp **21:15 CET**.
+The first 11 captures come from the archived election-night export; later
+ones are parsed from `../raw/680072/` and `../checks/680072/` by
+`scripts/analyze_trends.py`. Capture time and official source time differ.
+Serbia was on CET (UTC+1) during this election night.
 
-## Files
+| File | Grain |
+|---|---|
+| `national.csv` | Capture: register, voters, turnout, valid/invalid ballots, station coverage |
+| `regions.csv` | Capture × region, including prisons (100) and abroad (101) |
+| `results.csv` | Capture × country/region × list: absolute votes and displayed percentage |
 
-Common key columns: `fetch_ts_utc` (UTC capture time), `source_ts` (RIK's own
-timestamp), `election`, `race` (= parliament).
+Keys: `fetch_ts_utc`, `source_ts`, `election`, `race`, plus `area_level`,
+`area_code` and `candidate_id` where applicable. Turnout uses the register of
+processed stations; displayed list percentages use valid + invalid ballots.
+`voters` can exceed `votes_valid + votes_invalid`; retain that accounting gap.
 
-| File | Grain | Other columns |
-|---|---|---|
-| `national.csv` | fetch | `registered, voters, turnout_pct, votes_total/valid/blank/invalid, units_total, units_counted, pct_counted, units_label` (units = birackih mesta) |
-| `regions.csv` | fetch × region | same turnout/count columns; regions + Заводи за извршење кривичних санкција (prisons, area_code 100), in Cyrillic |
-| `results.csv` | fetch × area × electoral list | `votes`, `pct`; `area_level` = country / region |
-
-## State at last snapshot (2026-10-26 07:04 UTC)
-
-96.25% of polling stations counted, turnout 68.78%. Among counted votes:
-СТУДЕНТСКА ЛИСТА 53.22%, Вучић's УЈЕДИЊЕНА СРБИЈА 39.81%, Дачић 2.21%.
-
-## Quick start
-
-```python
-import pandas as pd
-res = pd.read_csv("results.csv", parse_dates=["fetch_ts_utc"])
-# list trend by snapshot
-res[res.area_level == "country"].pivot(index="fetch_ts_utc", columns="candidate_id", values="pct")
-```
+At the latest check 8,191/8,392 stations are counted, turnout is 68.83%,
+Students 52.71%, Vučić 39.17%. See the
+[trend report](../../analysis/trends/README.md) for findings and limitations.
+The forensics use the separately reconciled 16:55 CET station snapshot.

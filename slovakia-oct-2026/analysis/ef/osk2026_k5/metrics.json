@@ -1,0 +1,133 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 5 (okrsky)",
+  "national": {
+    "n_units": 728,
+    "registered": 564880,
+    "voted": 258545,
+    "turnout_pct": 45.769898031440306,
+    "blank_pct": 0.0,
+    "null_pct": 9.199945850819006,
+    "share:Belousovová A. (REPUBLIKA)": 5.322477711810323,
+    "share:Chlustinová J. (SLOVEXIT)": 1.092653116478756,
+    "share:Choma I. (SMER - SD)": 25.807886441431858,
+    "share:Jurinová E. (SLOVENSKO)": 52.06714498443211,
+    "share:Kapitulík M. (NEKA)": 12.655823937805797,
+    "share:Lučanský A. (SNS)": 2.320679185441606,
+    "share:Pova M. (KSS)": 0.7333346225995475
+  },
+  "leader": "Jurinová E. (SLOVENSKO)",
+  "n_units": 728,
+  "shpilkin": {
+    "party": "Jurinová E. (SLOVENSKO)",
+    "t_cut": 72.4609375,
+    "t_cut_source": "controls",
+    "mode": 40.75,
+    "sigma": 9.897612011688885,
+    "total_votes_party": 134617,
+    "tail_voters": 1127,
+    "tail_votes_party": 663,
+    "tail_share_of_party": 0.49250837561377836,
+    "observed_share_pct": 52.06714498443211,
+    "honest_share_pct": 52.03754205222634
+  },
+  "fingerprint": {
+    "party": "Jurinová E. (SLOVENSKO)",
+    "weight_anom": 0.4271018240185382,
+    "mean_anom": [
+      50.416001935090705,
+      53.66855268776821
+    ],
+    "mean_main": [
+      42.12515825945618,
+      50.66132143018997
+    ],
+    "anom_cluster_voters": 218419,
+    "anom_cluster_votes_party": 67159,
+    "total_voters": 564880,
+    "separated": true
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.6483516483516483,
+    "null_pct": 1.7177197802197801,
+    "z": -0.15058730479035187,
+    "z_mult5": 1.1119318485196763
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 2.197802197802198,
+    "null_pct": 2.5157967032967035,
+    "z": -0.5614571098758669,
+    "z_mult5": -1.0526105756776714
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Jurinová E. (SLOVENSKO)",
+      "n_numbers": 725,
+      "min_count": 10,
+      "chi2": 3.4283081975103964,
+      "dof": 9,
+      "p_value": 0.9448730123985988,
+      "p_null_mc": 0.9551122194513716,
+      "max_dev": 1.1707984613344145
+    },
+    {
+      "test": "benford2",
+      "party": "Choma I. (SMER - SD)",
+      "n_numbers": 719,
+      "min_count": 10,
+      "chi2": 12.309882200713796,
+      "dof": 9,
+      "p_value": 0.1963979879341721,
+      "p_null_mc": 0.29177057356608477,
+      "max_dev": 2.574538601094552
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Jurinová E. (SLOVENSKO)",
+      "n_numbers": 579,
+      "min_count": 100,
+      "chi2": 11.034542314335061,
+      "dof": 9,
+      "p_value": 0.27334866836292393,
+      "p_null_mc": 0.28428927680798005,
+      "max_dev": 2.9533678756476665
+    },
+    {
+      "test": "last",
+      "party": "Choma I. (SMER - SD)",
+      "n_numbers": 270,
+      "min_count": 100,
+      "chi2": 14.518518518518517,
+      "dof": 9,
+      "p_value": 0.10503913048309198,
+      "p_null_mc": 0.10723192019950124,
+      "max_dev": 4.074074074074074
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Jurinová E. (SLOVENSKO)",
+      "pearson_w": 0.06856971691369282,
+      "spearman": 0.026589261281035757
+    },
+    {
+      "party": "Choma I. (SMER - SD)",
+      "pearson_w": -0.14481521059743666,
+      "spearman": -0.11248568074199924
+    }
+  ],
+  "neighbors_flagged": 13,
+  "ml_flagged": 8,
+  "selftest": {
+    "t_cut": 71.45038167938931,
+    "clean_tail_party": 960,
+    "injected_added_ballots_party": 8151,
+    "injected_tail_party": 9764,
+    "signal_growth": 10.170833333333333,
+    "peaks_z_clean": -0.1258570617804183,
+    "peaks_z_rounded": 0.48278116910170316,
+    "n_rounded_units": 42
+  }
+}

@@ -1,0 +1,3 @@
+election,party,weight_anom,mean_main,mean_anom,separated,anom_voters
+2026-R2,LULA,0.6083,(79.9; 64.0),(81.3; 41.3),False,101690065
+2026-R2,BOLSONARO,0.6022,(79.8; 33.4),(81.4; 55.3),False,100745840

@@ -795,12 +795,17 @@ td.number,th.number {
   background: linear-gradient(90deg, #046a38 40%, #da291c 40%);
 }
 
-.page-brazil-oct-2026-round-1 .flag {
+.page-brazil-oct-2026-round-1 .flag,
+.page-brazil-oct-2026-round-2 .flag {
   background: linear-gradient(#009739 20%, #fedd00 20% 80%, #009739 80%);
 }
 
 .page-sloveniya-referendum-2026 .flag {
   background: linear-gradient(#fff 33%, #005da4 33% 66%, #ed1c24 66%);
+}
+
+.page-slovakia-oct-2026 .flag {
+  background: linear-gradient(#fff 33%, #0b4ea2 33% 66%, #ee1c25 66%);
 }
 
 .page-india-2024 .flag {
@@ -1011,4 +1016,33 @@ details {
 
 .page-usa-2024 #ohio .tag {
   color: var(--amber);
+}
+
+
+.page-serbia-oct-2026 .flag {
+  background: linear-gradient(#c6363c 33%, #0c4076 33% 66%, #fff 66%);
+}
+
+.page-serbia-oct-2026 .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-serbia-oct-2026 .p-row {
+  grid-template-columns: minmax(90px, 130px) 1fr 62px;
+}
+
+.page-serbia-oct-2026 .p-name {
+  white-space: normal;
+}
+
+.page-serbia-oct-2026 .m-details > .res-card,
+.page-serbia-oct-2026 .m-details > .args {
+  margin-top: 16px;
+}
+
+.page-serbia-oct-2026 code {
+  overflow-wrap: anywhere;
 }

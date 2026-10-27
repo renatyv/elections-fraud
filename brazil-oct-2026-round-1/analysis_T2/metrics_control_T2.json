@@ -1,0 +1,161 @@
+{
+  "title": "BR-2026 runoff vs controls (the same sections)",
+  "shpilkin": [
+    {
+      "election": "2026-R2",
+      "party": "LULA",
+      "n": 499205,
+      "t_cut_control": 91.52,
+      "tail_votes_party_control": 881341,
+      "tail_share_party_control_pct": 1.372,
+      "honest_share_control": 50.0,
+      "observed_share": 50.11,
+      "t_cut_own_q995": 92.51,
+      "tail_voters_own_pct": 0.585,
+      "tail_share_party_own_pct": 0.706,
+      "mode": 82.75,
+      "sigma": 5.67
+    },
+    {
+      "election": "2026-R2",
+      "party": "BOLSONARO",
+      "n": 499205,
+      "t_cut_control": 91.52,
+      "tail_votes_party_control": 568020,
+      "tail_share_party_control_pct": 0.949,
+      "honest_share_control": 46.75,
+      "observed_share": 46.65,
+      "t_cut_own_q995": 92.51,
+      "tail_voters_own_pct": 0.585,
+      "tail_share_party_own_pct": 0.461,
+      "mode": 82.75,
+      "sigma": 5.67
+    },
+    {
+      "election": "2022-R2",
+      "party": "LULA",
+      "n": 472027,
+      "t_cut_control": null,
+      "tail_votes_party_control": null,
+      "tail_share_party_control_pct": null,
+      "honest_share_control": null,
+      "observed_share": 48.57,
+      "t_cut_own_q995": 91.52,
+      "tail_voters_own_pct": 0.594,
+      "tail_share_party_own_pct": 0.619,
+      "mode": 82.25,
+      "sigma": 6.03
+    },
+    {
+      "election": "2022-R2",
+      "party": "BOLSONARO",
+      "n": 472027,
+      "t_cut_control": null,
+      "tail_votes_party_control": null,
+      "tail_share_party_control_pct": null,
+      "honest_share_control": null,
+      "observed_share": 46.85,
+      "t_cut_own_q995": 91.52,
+      "tail_voters_own_pct": 0.594,
+      "tail_share_party_own_pct": 0.572,
+      "mode": 82.25,
+      "sigma": 6.03
+    }
+  ],
+  "t_cut": {
+    "control_2022_max": 91.52,
+    "own_2026_r2": 92.51
+  },
+  "jumps_2026_r1_r2": {
+    "match": {
+      "A": "2026-R1",
+      "B": "2026-R2",
+      "sections_A": 499206,
+      "sections_B": 499205,
+      "matched": 499205,
+      "matched_pct_of_B": 100.0,
+      "matched_voters_B_pct": 100.0
+    },
+    "d_turnout": {
+      "median": 1.91,
+      "mad": 1.59,
+      "q01": -7.6,
+      "q99": 7.84,
+      "flagged_z4": 5565,
+      "flagged_pct": 1.115,
+      "up": 409,
+      "down": 5156
+    },
+    "d_share_lula": {
+      "median": 6.95,
+      "q01": 0.22,
+      "q99": 14.16
+    },
+    "d_share_bolsonaro": {
+      "median": 1.7,
+      "q01": -4.07,
+      "q99": 8.96
+    },
+    "r_turnoutA_turnoutB": 0.8984,
+    "flagged_shareB_lula": 58.92,
+    "flagged_shareB_bolsonaro": 38.7,
+    "top_decile_shareB_lula": 55.53,
+    "top_decile_shareB_bolsonaro": 40.96
+  },
+  "jumps_2022r2_2026r2": {
+    "match": {
+      "A": "2022-R2",
+      "B": "2026-R2",
+      "sections_A": 472027,
+      "sections_B": 499205,
+      "matched": 461219,
+      "matched_pct_of_B": 92.39,
+      "matched_voters_B_pct": 93.4
+    },
+    "d_turnout": {
+      "median": 1.14,
+      "mad": 2.36,
+      "q01": -7.42,
+      "q99": 13.67,
+      "flagged_z4": 3618,
+      "flagged_pct": 0.784,
+      "up": 2864,
+      "down": 754
+    },
+    "d_share_lula": {
+      "median": 1.22,
+      "q01": -10.41,
+      "q99": 10.17
+    },
+    "d_share_bolsonaro": {
+      "median": 0.15,
+      "q01": -8.47,
+      "q99": 10.99
+    },
+    "r_turnoutA_turnoutB": 0.7858,
+    "flagged_shareB_lula": 60.6,
+    "flagged_shareB_bolsonaro": 36.47,
+    "top_decile_shareB_lula": 56.68,
+    "top_decile_shareB_bolsonaro": 40.31
+  },
+  "fingerprints_2026_r2": [
+    {
+      "election": "2026-R2",
+      "party": "LULA",
+      "weight_anom": 0.6083,
+      "mean_main": "(79.9; 64.0)",
+      "mean_anom": "(81.3; 41.3)",
+      "separated": false,
+      "anom_voters": 101690065
+    },
+    {
+      "election": "2026-R2",
+      "party": "BOLSONARO",
+      "weight_anom": 0.6022,
+      "mean_main": "(79.8; 33.4)",
+      "mean_anom": "(81.4; 55.3)",
+      "separated": false,
+      "anom_voters": 100745840
+    }
+  ]
+}

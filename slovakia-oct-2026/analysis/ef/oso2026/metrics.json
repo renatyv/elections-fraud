@@ -1,0 +1,288 @@
+{
+  "title": "Slovensko, OSO 2026 — starostovia (okrsky)",
+  "national": {
+    "n_units": 6024,
+    "registered": 4478646,
+    "voted": 2077687,
+    "turnout_pct": 46.39096280438329,
+    "blank_pct": 0.0,
+    "null_pct": 4.345360971118364,
+    "share:Bratia Slovenska": 0.05029631508499596,
+    "share:DOMOV-NS": 0.029359571485021566,
+    "share:DS-ODS": 0.181596169201617,
+    "share:Demokrati": 0.7660441635337758,
+    "share:Dunaj": 0.06545740527808086,
+    "share:HLAS - sociálna demokracia": 6.6399799392305,
+    "share:Jednota Slovanov": 0.04216226987029326,
+    "share:KDH": 4.632795989001231,
+    "share:KRAJINA": 1.2724245759828117,
+    "share:KSS": 0.018915264907563074,
+    "share:Konzervatívci": 0.06646814462428653,
+    "share:Košická strana": 0.5001715850366297,
+    "share:Magyar Szövetség - Maďarská aliancia": 3.308679315026758,
+    "share:Maďarské fórum": 0.07667179897645796,
+    "share:MySlovensko": 0.06916344954750162,
+    "share:NEKA": 59.558682323179575,
+    "share:NOVA": 0.04755287971672345,
+    "share:OKS": 0.08750114911437575,
+    "share:PRAVDA": 0.246139096023607,
+    "share:PSN": 0.0005294348956315365,
+    "share:Piráti": 0.030610963056514288,
+    "share:Progresívne Slovensko": 2.9449094112828353,
+    "share:REPUBLIKA": 0.6014861718824828,
+    "share:SLOVENSKO": 0.3682460351342623,
+    "share:SLOVEXIT": 0.020551700039515095,
+    "share:SME RODINA": 0.22727196156110135,
+    "share:SMER - SD": 6.7555892682584044,
+    "share:SNS": 1.2933131891377287,
+    "share:SOM SLOVENSKO": 1.1042086705071552,
+    "share:SPOLOČNE OBČANIA SLOVENSKA": 0.0729657547070372,
+    "share:SRK": 0.28700184387735017,
+    "share:STAROSTOVIA A NEZÁVISLÍ KANDIDÁTI": 1.1019946700345142,
+    "share:SV": 0.36728342623311405,
+    "share:SaS": 1.7421295892980992,
+    "share:Slovenské Hnutie Obrody": 0.001684565577009434,
+    "share:Spoločný Cieľ": 0.1633547305248577,
+    "share:TPK": 0.3457209868473933,
+    "share:Team Bratislava": 2.1549444165555256,
+    "share:TÍM KOŠICE": 0.1222994608908849,
+    "share:TÍM RUŽINOV": 1.2919655366761211,
+    "share:Tím Kraj Nitra": 1.1952714725557796,
+    "share:VLASTENCI SK": 0.020407308704342857,
+    "share:Volt SK": 0.026760527451921295,
+    "share:ZA ĽUDÍ": 0.0037060442694207547,
+    "share:Zmena zdola": 0.014679785742510783,
+    "share:ÚSVIT": 0.0005775653406889488,
+    "share:ĽS Naše Slovensko": 0.0570345773930337,
+    "share:ŽIVOT": 0.023439526742959838
+  },
+  "leader": "NEKA",
+  "n_units": 6024,
+  "shpilkin": {
+    "party": "NEKA",
+    "t_cut": 78.64460204885737,
+    "t_cut_source": "controls",
+    "mode": 47.25,
+    "sigma": 12.21546785011234,
+    "total_votes_party": 1237443,
+    "tail_voters": 11573,
+    "tail_votes_party": 5301,
+    "tail_share_of_party": 0.4283833679611909,
+    "observed_share_pct": 59.558682323179575,
+    "honest_share_pct": 59.63572193983488
+  },
+  "fingerprint": {
+    "party": "NEKA",
+    "weight_anom": 0.7554175094864884,
+    "mean_anom": [
+      46.42504313615368,
+      45.976800606571494
+    ],
+    "mean_main": [
+      46.146299299277125,
+      99.99999999999953
+    ],
+    "anom_cluster_voters": 3381426,
+    "anom_cluster_votes_party": 732383,
+    "total_voters": 4478395,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.8924302788844622,
+    "null_pct": 1.799136786188579,
+    "z": 0.5752001236606318,
+    "z_mult5": -0.2988245857382426
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 45.91633466135458,
+    "null_pct": 46.23323373173971,
+    "z": -2.2779024230918723,
+    "z_mult5": -2.0181854105659203
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "NEKA",
+      "n_numbers": 4824,
+      "min_count": 10,
+      "chi2": 20.625823754063493,
+      "dof": 9,
+      "p_value": 0.014419527961621202,
+      "p_null_mc": 0.017456359102244388,
+      "max_dev": 1.4165172411142777
+    },
+    {
+      "test": "benford2",
+      "party": "SMER - SD",
+      "n_numbers": 1408,
+      "min_count": 10,
+      "chi2": 8.683958009867753,
+      "dof": 9,
+      "p_value": 0.4669440878408557,
+      "p_null_mc": 0.4688279301745636,
+      "max_dev": 1.0810135369144602
+    },
+    {
+      "test": "benford2",
+      "party": "HLAS - sociálna demokracia",
+      "n_numbers": 934,
+      "min_count": 10,
+      "chi2": 3.3007610032336547,
+      "dof": 9,
+      "p_value": 0.9511684319369995,
+      "p_null_mc": 0.9451371571072319,
+      "max_dev": 1.1040834134990214
+    },
+    {
+      "test": "benford2",
+      "party": "KDH",
+      "n_numbers": 699,
+      "min_count": 10,
+      "chi2": 10.505667656893626,
+      "dof": 9,
+      "p_value": 0.31111866281152134,
+      "p_null_mc": 0.32169576059850374,
+      "max_dev": 2.2666608727535453
+    },
+    {
+      "test": "benford2",
+      "party": "Magyar Szövetség - Maďarská aliancia",
+      "n_numbers": 362,
+      "min_count": 10,
+      "chi2": 9.495800649491725,
+      "dof": 9,
+      "p_value": 0.3928206458819521,
+      "p_null_mc": 0.39900249376558605,
+      "max_dev": 3.7813344693746602
+    },
+    {
+      "test": "benford2",
+      "party": "Progresívne Slovensko",
+      "n_numbers": 428,
+      "min_count": 10,
+      "chi2": 13.213958093894787,
+      "dof": 9,
+      "p_value": 0.15316147131690372,
+      "p_null_mc": 0.1571072319201995,
+      "max_dev": 3.6038314078603904
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "NEKA",
+      "n_numbers": 3873,
+      "min_count": 100,
+      "chi2": 15.987864704363542,
+      "dof": 9,
+      "p_value": 0.06713543733206881,
+      "p_null_mc": 0.06733167082294264,
+      "max_dev": 1.3503743867802744
+    },
+    {
+      "test": "last",
+      "party": "SMER - SD",
+      "n_numbers": 490,
+      "min_count": 100,
+      "chi2": 15.591836734693878,
+      "dof": 9,
+      "p_value": 0.07591003420777435,
+      "p_null_mc": 0.059850374064837904,
+      "max_dev": 3.2653061224489797
+    },
+    {
+      "test": "last",
+      "party": "HLAS - sociálna demokracia",
+      "n_numbers": 558,
+      "min_count": 100,
+      "chi2": 8.415770609318995,
+      "dof": 9,
+      "p_value": 0.4928491917912534,
+      "p_null_mc": 0.5261845386533666,
+      "max_dev": 2.365591397849462
+    },
+    {
+      "test": "last",
+      "party": "KDH",
+      "n_numbers": 346,
+      "min_count": 100,
+      "chi2": 11.687861271676299,
+      "dof": 9,
+      "p_value": 0.23148356674543405,
+      "p_null_mc": 0.22693266832917705,
+      "max_dev": 3.063583815028903
+    },
+    {
+      "test": "last",
+      "party": "Magyar Szövetség - Maďarská aliancia",
+      "n_numbers": 282,
+      "min_count": 100,
+      "chi2": 6.51063829787234,
+      "dof": 9,
+      "p_value": 0.6879214800465803,
+      "p_null_mc": 0.6583541147132169,
+      "max_dev": 3.120567375886524
+    },
+    {
+      "test": "last",
+      "party": "Progresívne Slovensko",
+      "n_numbers": 288,
+      "min_count": 100,
+      "chi2": 8.875,
+      "dof": 9,
+      "p_value": 0.4488920034257041,
+      "p_null_mc": 0.4339152119700748,
+      "max_dev": 2.8472222222222205
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "NEKA",
+      "pearson_w": 0.029092095031219865,
+      "spearman": -0.005014718634131813
+    },
+    {
+      "party": "SMER - SD",
+      "pearson_w": 0.035973923955969024,
+      "spearman": 0.03003713416439225
+    },
+    {
+      "party": "HLAS - sociálna demokracia",
+      "pearson_w": 0.04741327302480363,
+      "spearman": 0.10895925237393737
+    },
+    {
+      "party": "KDH",
+      "pearson_w": 0.038295878786622495,
+      "spearman": 0.09352419337675374
+    },
+    {
+      "party": "Magyar Szövetség - Maďarská aliancia",
+      "pearson_w": -0.008438479157707419,
+      "spearman": 0.03971098553043619
+    },
+    {
+      "party": "Progresívne Slovensko",
+      "pearson_w": -0.07183881607454129,
+      "spearman": -0.10694989967172303
+    }
+  ],
+  "neighbors_flagged": 383,
+  "swing": {
+    "prev_party": "NEKA",
+    "flagged_both": 635,
+    "flagged_turnout": 1226,
+    "n": 5442
+  },
+  "ml_flagged": 61,
+  "selftest": {
+    "t_cut": 77.06422018348624,
+    "clean_tail_party": 8919,
+    "injected_added_ballots_party": 71111,
+    "injected_tail_party": 72185,
+    "signal_growth": 8.093396120641328,
+    "peaks_z_clean": 0.8624475448988833,
+    "peaks_z_rounded": 3.3810291394089522,
+    "n_rounded_units": 294
+  }
+}

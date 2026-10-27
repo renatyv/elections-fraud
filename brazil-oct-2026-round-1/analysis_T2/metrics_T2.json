@@ -1,0 +1,224 @@
+{
+  "title": "Brazil, presidential runoff 25.10.2026 (seções)",
+  "national": {
+    "n_units": 499205,
+    "registered": 158744977,
+    "voted": 128236074,
+    "turnout_pct": 80.78118528436966,
+    "blank_pct": 1.1155176194804592,
+    "null_pct": 2.1236652956172066,
+    "share:BOLSONARO": 46.653050997178845,
+    "share:LULA": 50.10776608772349
+  },
+  "leader": "LULA",
+  "n_units": 499205,
+  "dropped_zero_voted": 43,
+  "checks_file": "data/secoes_presidente_2026_T2_checks.json",
+  "shpilkin_leader": {
+    "party": "LULA",
+    "t_cut": 92.50936329588015,
+    "t_cut_source": "own_q995",
+    "mode": 82.75,
+    "sigma": 5.672762909721568,
+    "total_votes_party": 64256232,
+    "tail_voters": 749738,
+    "tail_votes_party": 453486,
+    "tail_share_of_party": 0.7057463313441722,
+    "observed_share_pct": 50.10776608772349,
+    "honest_share_pct": 50.0467328514328
+  },
+  "shpilkin_runner_up": {
+    "party": "BOLSONARO",
+    "t_cut": 92.50936329588015,
+    "t_cut_source": "own_q995",
+    "mode": 82.75,
+    "sigma": 5.672762909721568,
+    "total_votes_party": 59826041,
+    "tail_voters": 749738,
+    "tail_votes_party": 275583,
+    "tail_share_of_party": 0.46064054280309136,
+    "observed_share_pct": 46.653050997178845,
+    "honest_share_pct": 46.71124754891379
+  },
+  "fingerprint_leader": {
+    "party": "LULA",
+    "weight_anom": 0.6082944605817223,
+    "mean_anom": [
+      81.29891795655348,
+      41.257171208889055
+    ],
+    "mean_main": [
+      79.88074573394826,
+      63.966229580659515
+    ],
+    "anom_cluster_voters": 101690065,
+    "anom_cluster_votes_party": 33634035,
+    "total_voters": 158744977,
+    "separated": false
+  },
+  "fingerprint_runner_up": {
+    "party": "BOLSONARO",
+    "weight_anom": 0.6021964878105344,
+    "mean_anom": [
+      81.3888023920267,
+      55.34197159385613
+    ],
+    "mean_main": [
+      79.76641764392731,
+      33.37717907801258
+    ],
+    "anom_cluster_voters": 100745840,
+    "anom_cluster_votes_party": 45961012,
+    "total_voters": 158744977,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.684478320529642,
+    "null_pct": 1.6982011398123014,
+    "z": -0.7825280857963421,
+    "z_mult5": 0.062071583531592436
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 2.250778738193728,
+    "null_pct": 2.2712332608848067,
+    "z": -0.9808609354840543,
+    "z_mult5": -1.5602020381749995
+  },
+  "digit_tests_eligible": {
+    "benford2": [
+      "LULA",
+      "BOLSONARO"
+    ],
+    "last": [
+      "LULA",
+      "BOLSONARO"
+    ]
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "LULA",
+      "n_numbers": 499016,
+      "min_count": 10,
+      "chi2": 6731.222119547747,
+      "dof": 9,
+      "p_value": 0.0,
+      "p_null_mc": 1.0,
+      "max_dev": 1.7813133515601405
+    },
+    {
+      "test": "benford2",
+      "party": "BOLSONARO",
+      "n_numbers": 496587,
+      "min_count": 10,
+      "chi2": 6461.013118575627,
+      "dof": 9,
+      "p_value": 0.0,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 2.153012476418677
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "LULA",
+      "n_numbers": 347454,
+      "min_count": 100,
+      "chi2": 347.2328538454011,
+      "dof": 9,
+      "p_value": 2.4046954174606263e-69,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 0.5306026121443402,
+      "excess_05": 0.446
+    },
+    {
+      "test": "last",
+      "party": "BOLSONARO",
+      "n_numbers": 328991,
+      "min_count": 100,
+      "chi2": 270.76603615296466,
+      "dof": 9,
+      "p_value": 4.0740089903393648e-53,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 0.5550607767385738,
+      "excess_05": 0.343
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "LULA",
+      "pearson_w": 0.0426068455531624,
+      "spearman": 0.06527414569757313
+    },
+    {
+      "party": "BOLSONARO",
+      "pearson_w": -0.043911691729601306,
+      "spearman": -0.06628338706876387
+    }
+  ],
+  "corr_uf_leader_range": [
+    -0.47873077672002196,
+    0.23297212194321404
+  ],
+  "neighbors_flagged": 5018,
+  "neighbors_flagged_pct": 1.0051982652417344,
+  "ml_flagged": 4993,
+  "selftest": {
+    "t_cut": 92.50936329588015,
+    "clean_tail_party": 453486,
+    "injected_added_ballots_party": 1870878,
+    "injected_tail_party": 7048037,
+    "signal_growth": 15.54190647561336,
+    "peaks_z_clean": -0.6500716520141321,
+    "peaks_z_rounded": 9.007989629703825,
+    "n_rounded_units": 24772
+  },
+  "urna_models": [
+    {
+      "urna_model": "UE 2013",
+      "sections": 12455,
+      "registered": 4300905,
+      "turnout_pct": 74.8509906635929,
+      "leader_pct": 52.12392871675877,
+      "bolsonaro_pct": 44.69625101342851,
+      "blank_pct": 1.121496488334312,
+      "null_pct": 2.0583237814784097
+    },
+    {
+      "urna_model": "UE 2015",
+      "sections": 87500,
+      "registered": 28235031,
+      "turnout_pct": 80.75574983431044,
+      "leader_pct": 50.27084946628961,
+      "bolsonaro_pct": 46.434433377829116,
+      "blank_pct": 1.1333859996646698,
+      "null_pct": 2.161331156216604
+    },
+    {
+      "urna_model": "UE 2020",
+      "sections": 200504,
+      "registered": 63235321,
+      "turnout_pct": 80.89834002740335,
+      "leader_pct": 49.87107850300036,
+      "bolsonaro_pct": 46.91687098320686,
+      "blank_pct": 1.1081405867211924,
+      "null_pct": 2.1039099270715793
+    },
+    {
+      "urna_model": "UE 2022",
+      "sections": 198746,
+      "registered": 62973720,
+      "turnout_pct": 81.07996160938245,
+      "leader_pct": 50.14495760087121,
+      "bolsonaro_pct": 46.60973247690303,
+      "blank_pct": 1.1145522671898358,
+      "null_pct": 2.130757655035928
+    }
+  ],
+  "duplicate_protocols": {
+    "rows_in_dup_groups": 2348,
+    "groups": 1172,
+    "max_group": 3,
+    "note": "groups with an identical electorate (including section size)"
+  }
+}

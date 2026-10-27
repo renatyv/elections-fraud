@@ -77,9 +77,9 @@ TURNOUT = pva["actual_2026_runoff"]["turnout_pct"]                # 80.78
 SHP = metrics["shpilkin_leader"]
 CUT = round(SHP["t_cut"], 1)
 TAIL_PCT = round(100.0 * SHP["tail_voters"] / metrics["national"]["voted"], 2)
-TAIL_LULA = round(100.0 * SHP["tail_share_of_party"], 2)
+TAIL_LULA = round(SHP["tail_share_of_party"], 2)      # already % of the party's votes
 SHP_B = metrics["shpilkin_runner_up"]
-TAIL_BOLSO = round(100.0 * SHP_B["tail_share_of_party"], 2)
+TAIL_BOLSO = round(SHP_B["tail_share_of_party"], 2)
 corr_by_party = {r["party"]: r["pearson_w"] for r in metrics["correlations_national"]}
 CORR_L = round(corr_by_party.get("LULA", 0.0), 2)
 CORR_B = round(corr_by_party.get("BOLSONARO", 0.0), 2)
@@ -292,7 +292,8 @@ def fig_turnout(lang: str, tr: dict) -> None:
     ax.axvline(CUT, color=DARK, linestyle="--", linewidth=1.6)
     ax.text(CUT - 1.2, ax.get_ylim()[1] * 0.92,
             tr["cut_lab"].format(t=num(lang, CUT, 1)), color=DARK, fontsize=10, ha="right")
-    ax.text(0.975, 0.72, tr["box"].format(tail=num(lang, TAIL_PCT, 2),
+    ax.text(0.975, 0.72, tr["box"].format(t=num(lang, CUT, 1),
+                                          tail=num(lang, TAIL_PCT, 2),
                                           tl=num(lang, TAIL_LULA, 2),
                                           tb=num(lang, TAIL_BOLSO, 2)),
             transform=ax.transAxes, fontsize=9.5, ha="right", va="top", color=DARK,

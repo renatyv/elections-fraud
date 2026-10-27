@@ -1,0 +1,159 @@
+{
+  "title": "Slovensko, OSK 2026 — predseda, kraj 8 (okrsky)",
+  "national": {
+    "n_units": 860,
+    "registered": 628662,
+    "voted": 238773,
+    "turnout_pct": 37.98114089924316,
+    "blank_pct": 0.0,
+    "null_pct": 11.168766987892266,
+    "share:Géci T. (Jednota Slovanov)": 1.3900231600725375,
+    "share:Kodrazi D. (NEKA)": 1.9424306768353206,
+    "share:Porvažník M. (Progresívne Slovensko)": 30.70028855858912,
+    "share:Soročinová M. (NEKA)": 9.803872297119021,
+    "share:Trnka R. (NEKA)": 32.00571253868737,
+    "share:Šimko I. (HLAS - sociálna demokracia)": 24.157672768696628
+  },
+  "leader": "Trnka R. (NEKA)",
+  "n_units": 860,
+  "shpilkin": {
+    "party": "Trnka R. (NEKA)",
+    "t_cut": 66.12903225806451,
+    "t_cut_source": "controls",
+    "mode": 39.25,
+    "sigma": 10.930053029368509,
+    "total_votes_party": 76421,
+    "tail_voters": 4224,
+    "tail_votes_party": 1531,
+    "tail_share_of_party": 2.0033760353829444,
+    "observed_share_pct": 32.00571253868737,
+    "honest_share_pct": 31.929362308089143
+  },
+  "fingerprint": {
+    "party": "Trnka R. (NEKA)",
+    "weight_anom": 0.4308829765933698,
+    "mean_anom": [
+      38.589236994786006,
+      44.246115929991156
+    ],
+    "mean_main": [
+      37.45525046690887,
+      21.2764164467951
+    ],
+    "anom_cluster_voters": 255208,
+    "anom_cluster_votes_party": 46509,
+    "total_voters": 628662,
+    "separated": false
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.2790697674418605,
+    "null_pct": 1.5872093023255813,
+    "z": -0.7060283366322472,
+    "z_mult5": -0.11026072302642698
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 2.6744186046511627,
+    "null_pct": 3.21453488372093,
+    "z": -0.9228256662711875,
+    "z_mult5": -0.1615871560355075
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Trnka R. (NEKA)",
+      "n_numbers": 838,
+      "min_count": 10,
+      "chi2": 7.480190182369604,
+      "dof": 9,
+      "p_value": 0.5872545213852098,
+      "p_null_mc": 0.6957605985037406,
+      "max_dev": 1.5784941556498926
+    },
+    {
+      "test": "benford2",
+      "party": "Porvažník M. (Progresívne Slovensko)",
+      "n_numbers": 777,
+      "min_count": 10,
+      "chi2": 6.725466026546579,
+      "dof": 9,
+      "p_value": 0.6656776818757898,
+      "p_null_mc": 0.6658354114713217,
+      "max_dev": 1.5432164349776512
+    },
+    {
+      "test": "benford2",
+      "party": "Šimko I. (HLAS - sociálna demokracia)",
+      "n_numbers": 823,
+      "min_count": 10,
+      "chi2": 9.084176478711488,
+      "dof": 9,
+      "p_value": 0.4295405525705586,
+      "p_null_mc": 0.4239401496259352,
+      "max_dev": 1.7623283043459461
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Trnka R. (NEKA)",
+      "n_numbers": 298,
+      "min_count": 100,
+      "chi2": 11.395973154362416,
+      "dof": 9,
+      "p_value": 0.24954007261224362,
+      "p_null_mc": 0.2718204488778055,
+      "max_dev": 3.7583892617449655
+    },
+    {
+      "test": "last",
+      "party": "Porvažník M. (Progresívne Slovensko)",
+      "n_numbers": 292,
+      "min_count": 100,
+      "chi2": 6.013698630136987,
+      "dof": 9,
+      "p_value": 0.738546493270041,
+      "p_null_mc": 0.713216957605985,
+      "max_dev": 3.013698630136985
+    },
+    {
+      "test": "last",
+      "party": "Šimko I. (HLAS - sociálna demokracia)",
+      "n_numbers": 148,
+      "min_count": 100,
+      "chi2": 7.945945945945946,
+      "dof": 9,
+      "p_value": 0.5396026428196236,
+      "p_null_mc": 0.5785536159600998,
+      "max_dev": 4.594594594594595
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Trnka R. (NEKA)",
+      "pearson_w": 0.16194089492996036,
+      "spearman": 0.18085103497840974
+    },
+    {
+      "party": "Porvažník M. (Progresívne Slovensko)",
+      "pearson_w": -0.016970036912451778,
+      "spearman": -0.17124456099312604
+    },
+    {
+      "party": "Šimko I. (HLAS - sociálna demokracia)",
+      "pearson_w": 0.07151315658331413,
+      "spearman": 0.12421198400581247
+    }
+  ],
+  "neighbors_flagged": 16,
+  "ml_flagged": 9,
+  "selftest": {
+    "t_cut": 68.20987654320987,
+    "clean_tail_party": 980,
+    "injected_added_ballots_party": 8021,
+    "injected_tail_party": 5937,
+    "signal_growth": 6.058163265306122,
+    "peaks_z_clean": -0.6413963763035095,
+    "peaks_z_rounded": 0.19137877731661426,
+    "n_rounded_units": 47
+  }
+}

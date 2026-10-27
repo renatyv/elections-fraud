@@ -6,7 +6,7 @@ const vm = require("node:vm");
 
 const site = path.resolve(__dirname, "..");
 const runtime = readFileSync(path.join(site, "language.js"), "utf8");
-const pages = ["", "portugal-2025", "brazil-oct-2026-round-1", "brazil-oct-2026-round-2", "india-2024", "sloveniya-referendum-2026"];
+const pages = ["", "portugal-2025", "brazil-oct-2026-round-1", "brazil-oct-2026-round-2", "india-2024", "sloveniya-referendum-2026", "slovakia-oct-2026", "serbia-oct-2026"];
 
 function loadPage(directory, locales, saved, blocked = false) {
   const root = path.join(site, directory);
@@ -72,4 +72,11 @@ test("saved preferences, aliases and unsupported preferences", () => {
   assert.equal(loadPage("india-2024", ["mr-IN"], null).document.documentElement.lang, "hi");
   assert.equal(loadPage("sloveniya-referendum-2026", ["sr-RS"], null).document.documentElement.lang, "hr");
   assert.equal(loadPage("brazil-oct-2026-round-1", ["en-US", "es-ES"], null).document.documentElement.lang, "es");
+});
+
+
+test("Serbian is selected directly where available; Croatian alias still works elsewhere", () => {
+  assert.equal(loadPage("serbia-oct-2026", ["sr-RS"], null).document.documentElement.lang, "sr");
+  assert.equal(loadPage("serbia-oct-2026", ["en-US"], "sr").document.documentElement.lang, "sr");
+  assert.equal(loadPage("sloveniya-referendum-2026", ["sr-RS"], null).document.documentElement.lang, "hr");
 });
