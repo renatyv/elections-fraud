@@ -114,6 +114,7 @@ en: {
   d1: "Source: official results portal of the Ministry of Internal Administration at <a href=\"https://eleicoes.mai.gov.pt\" rel=\"noopener\">eleicoes.mai.gov.pt</a> — parish-level export, 3,092 territories (mainland, Madeira, Azores).",
   d2: "Cross-checks: parish sums close exactly against the national totals; the precinct sums of the six publishing municipalities match the official totals to the exact vote.",
   d3: "Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco and other methods.",
+  d4: "Reproduce and inspect: <a href=\"https://github.com/renatyv/elections-fraud/tree/main/analysis-tool\" rel=\"noopener\">analysis-tool</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/portugal-2025/PARADOXES.md\" rel=\"noopener\">paradox analysis</a> and the <a href=\"https://github.com/renatyv/elections-fraud/tree/main/portugal-2025\" rel=\"noopener\">project repository</a>.",
   footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: MAI (eleicoes.mai.gov.pt) · Page generated 13 October 2026"
 },
 pt: {
@@ -230,6 +231,7 @@ pt: {
   d1: "Fonte: portal oficial de resultados do Ministério da Administração Interna em <a href=\"https://eleicoes.mai.gov.pt\" rel=\"noopener\">eleicoes.mai.gov.pt</a> — exportação ao nível de freguesia, 3 092 territórios (continente, Madeira, Açores).",
   d2: "Verificações cruzadas: as somas por freguesia fecham exatamente com os totais nacionais; as somas por secção dos seis municípios que publicam mapas coincidem com os totais oficiais ao voto exato.",
   d3: "Ferramentas: pipeline open-source (Python, pandas / scikit-learn) com os métodos de Shpilkin, Klimek, Kobak, Beber–Scacco e outros.",
+  d4: "Reproduzir e inspecionar: <a href=\"https://github.com/renatyv/elections-fraud/tree/main/analysis-tool\" rel=\"noopener\">analysis-tool</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/portugal-2025/PARADOXES.md\" rel=\"noopener\">análise de paradoxos</a> e o <a href=\"https://github.com/renatyv/elections-fraud/tree/main/portugal-2025\" rel=\"noopener\">repositório do projeto</a>.",
   footer: "Análise independente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Dados: MAI (eleicoes.mai.gov.pt) · Página gerada em 13 de outubro de 2026"
 }
 };

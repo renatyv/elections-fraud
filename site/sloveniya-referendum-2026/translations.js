@@ -139,6 +139,7 @@ en: {
   data_title: "Data & reproducibility",
   d1: "Source: official machine-readable results of the State Electoral Commission (DVK) at <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — precinct-level files for all four referendums, downloaded 13 October 2026 (server snapshot 12 October 2026, 99.98% counted).",
   d2: "Cross-check: my totals match the Wikipedia summary table for all four referendums to the exact vote.",
+  d3: "Reproduce and inspect: <a href=\"https://github.com/renatyv/elections-fraud/tree/main/analysis-tool\" rel=\"noopener\">analysis-tool</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/statistical_fraud_analysis.md\" rel=\"noopener\">forensic report</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/PARADOXES.md\" rel=\"noopener\">paradox analysis</a> and the <a href=\"https://github.com/renatyv/elections-fraud/tree/main/sloveniya-referendum-2026\" rel=\"noopener\">project repository</a>.",
   footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: DVK (volitve.dvk-rs.si) · Page generated 13 October 2026"
 },
 sl: {
@@ -280,6 +281,7 @@ sl: {
   data_title: "Podatki in ponovljivost",
   d1: "Vir: uradni, strojno berljivi rezultati Državne volilne komisije (DVK), <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — datoteke po voliščih za vse štiri referendume, prenešene 13. oktobra 2026 (posnetek strežnika 12. oktober 2026, preštetih 99,98 %).",
   d2: "Medsebojna preverba: moje vsote za vse štiri referendume se z analitiko Wikipedije ujemajo do zadnjega glasu.",
+  d3: "Reprodukcija in viri: <a href=\"https://github.com/renatyv/elections-fraud/tree/main/analysis-tool\" rel=\"noopener\">analysis-tool</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/statistical_fraud_analysis.md\" rel=\"noopener\">forenzično poročilo</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/PARADOXES.md\" rel=\"noopener\">analiza paradoksov</a> in <a href=\"https://github.com/renatyv/elections-fraud/tree/main/sloveniya-referendum-2026\" rel=\"noopener\">repozitorij projekta</a>.",
   footer: "Neodvisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Podatki: DVK (volitve.dvk-rs.si) · Stran ustvarjena 13. oktobra 2026"
 },
 hr: {
@@ -421,6 +423,7 @@ hr: {
   data_title: "Podaci i ponovljivost",
   d1: "Izvor: službeni rezultati Državne izborne komisije (DVK) u strojno čitljivom obliku, <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — datoteke po biračkim mjestima za sva četiri referenduma, preuzete 13. listopada 2026. (snimka poslužitelja 12. listopada 2026., prebrojano 99,98 %).",
   d2: "Usporedba: moji zbroji za sva četiri referenduma podudaraju se s Wikipedijom do zadnjeg glasa.",
+  d3: "Reprodukcija i izvori: <a href=\"https://github.com/renatyv/elections-fraud/tree/main/analysis-tool\" rel=\"noopener\">analysis-tool</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/statistical_fraud_analysis.md\" rel=\"noopener\">forenzičko izvješće</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/PARADOXES.md\" rel=\"noopener\">analiza paradoksa</a> i <a href=\"https://github.com/renatyv/elections-fraud/tree/main/sloveniya-referendum-2026\" rel=\"noopener\">repozitorij projekta</a>.",
   footer: "Neovisna analiza · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Podaci: DVK (volitve.dvk-rs.si) · Stranica izrađena 13. listopada 2026."
 },
 it: {
@@ -562,6 +565,7 @@ it: {
   data_title: "Dati e riproducibilità",
   d1: "Fonte: risultati ufficiali in formato leggibile dalle macchine della Commissione elettorale (DVK), <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — file per sezione di tutti e quattro i referendum, scaricati il 13 ottobre 2026 (istantanea del server 12 ottobre 2026, scrutinato il 99,98%).",
   d2: "Controllo incrociato: i miei totali coincidono con la tabella di Wikipedia per tutti e quattro i referendum, al voto esatto.",
+  d3: "Riproduzione e fonti: <a href=\"https://github.com/renatyv/elections-fraud/tree/main/analysis-tool\" rel=\"noopener\">analysis-tool</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/statistical_fraud_analysis.md\" rel=\"noopener\">rapporto forense</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/PARADOXES.md\" rel=\"noopener\">analisi dei paradossi</a> e <a href=\"https://github.com/renatyv/elections-fraud/tree/main/sloveniya-referendum-2026\" rel=\"noopener\">repository del progetto</a>.",
   footer: "Analisi indipendente · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Dati: DVK (volitve.dvk-rs.si) · Pagina del 13 ottobre 2026"
 },
 hu: {
@@ -703,6 +707,7 @@ hu: {
   data_title: "Adatok és reprodukálhatóság",
   d1: "Forrás: az Országos Választási Bizottság (DVK) hivatalos, géppel olvasható eredményei, <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — körönkénti fájlok mind a négy népszavazásról, letöltve 2026. október 13-án (kiszolgáló-pillanatfelvétel: 2026. október 12., megszámolva 99,98%).",
   d2: "Kereszt-ellenőrzés: az összegeim mind a négy népszavazásban a Wikipédia táblázatával szavazatra egyeznek.",
+  d3: "Reprodukció és források: <a href=\"https://github.com/renatyv/elections-fraud/tree/main/analysis-tool\" rel=\"noopener\">analysis-tool</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/statistical_fraud_analysis.md\" rel=\"noopener\">forenzikus jelentés</a>, <a href=\"https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/PARADOXES.md\" rel=\"noopener\">paradoxonelemzés</a> és a <a href=\"https://github.com/renatyv/elections-fraud/tree/main/sloveniya-referendum-2026\" rel=\"noopener\">projekt repozitóriuma</a>.",
   footer: "Független elemzés · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Adatok: DVK (volitve.dvk-rs.si) · Oldal készült: 2026. október 13."
 }
 };
