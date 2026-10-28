@@ -29,8 +29,10 @@ a collapsible test-by-test methods list, limitations, data provenance.
     1. HERO (Minto: ANSWER)  .hero > .hero-inner
        .kicker  "Independent statistical audit"
        h1       "The {election} of {date} — do the numbers add up?"
-       .verdict     icon (✓ or ! warn) + h2 one-line fraud verdict
-       .verdict.flip icon (⇄) + .flip-head + 1–2 .v-line (paradox / second finding)
+       .verdict     .check ✓ (clean) / .check warn ! (open findings),
+                    aria-hidden="true" + h2 one-line fraud verdict
+       .verdict.flip .check warn ⇄ (aria-hidden="true") + .flip-head +
+                    1–2 .v-line (paradox / second finding)
     2. SITUATION  <section> what was decided + turnout
        .res-card (or .cards2 grid): result bars — .p-row > .p-name + .p-track > .p-fill (width:%) + .p-pct
     3. KEY FINDINGS  .args > .arg ×3  (.num 1–3 + h4 + p)
@@ -51,7 +53,18 @@ a collapsible test-by-test methods list, limitations, data provenance.
 ```
 
 ## Conventions
-
+- **Checkmark follows the verdict:** use `check ✓` (not `check warn !`) only
+  when the page establishes no manipulation (portugal, india, slovakia,
+  sloveniya, brazil); keep `check warn !` while open findings remain
+  (serbia, bulgaria, usa — `serbia.test.js` fails on `class="check">✓`).
+  The paradox badge is always `check warn ⇄`. Check glyphs are decorative:
+  every `.check` div carries `aria-hidden="true"`.
+  Method badges: `✓` pass / `!` warn / `•` neutral / `≠` rejects.
+- **English fallback = `I18N.en`:** rewording means editing the HTML text and
+  the `en:` block of `translations.js` together — tests diff them (bulgaria,
+  serbia, slovakia); the landing page has no such test.
+- **Landing order:** `site/index.html` cards sorted by election date,
+  newest first.
 - **Minto order fixed:** headline verdict → context → evidence; everything
   below the hero collapses in `<details class="m">`.
 - **Measured voice:** first-person, every claim quantified and caveated;
