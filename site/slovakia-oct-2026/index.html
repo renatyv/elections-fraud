@@ -18,10 +18,10 @@
     <header class="top">
       <div class="bar">
         <div class="brand">
-          <span class="flag"></span><span data-i18n="brand">Slovakia · municipal & regional · 24.10.2026</span>
+          <span class="flag" aria-hidden="true"></span><span data-i18n="brand">Slovakia · municipal & regional · 24.10.2026</span>
         </div>
         <div class="right">
-          <a class="home" href="../" data-i18n="home">← All analyses</a> <a class="home" href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a>
+          <a class="home" href="../" data-i18n="home">← All analyses</a>
           <nav class="langs" aria-label="Language">
             <button data-lang="sk">Slovenčina</button>
             <button data-lang="en" aria-pressed="true">English</button>
@@ -36,7 +36,7 @@
           <div class="kicker" data-i18n="kicker">Independent statistical audit</div>
           <h1 data-i18n="h1">Two elections in one day, 24 October 2026 — do the numbers add up?</h1>
           <div class="verdict">
-            <div class="check">
+            <div class="check" aria-hidden="true">
               ✓
             </div>
             <div>
@@ -45,7 +45,7 @@
             </div>
           </div>
           <div class="verdict flip">
-            <div class="check warn">
+            <div class="check warn" aria-hidden="true">
               ⇄
             </div>
             <div>
@@ -54,6 +54,7 @@
               <p class="v-line" data-i18n="flip2_line">Across <b>3,556 comparable precincts</b>, the municipal election recorded <b>79,290</b> more participants than the regional election</p>
             </div>
           </div>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
@@ -205,7 +206,7 @@
         <div class="m-list">
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
               <p data-i18n="m1_b">The tail beyond the honest turnout decline holds 0.4–4.7% of the winner's votes; removing it shifts any result by at most 0.6 points. Same as 2022.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -234,7 +235,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
               <p data-i18n="m2_b">One continuous cloud with a smooth city/countryside gradient — no separate tail of high-turnout, high-result precincts.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -251,7 +252,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
               <p data-i18n="m3_b">The 2-cluster weights sit in the same range as reference clean elections; the 80–100%-turnout fraud island does not exist.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -268,7 +269,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
               <p data-i18n="m4_b">No excess of whole-percentage turnouts or results: all statistics within ±2.7, most within ±1.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -285,7 +286,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m5_t">Digit tests (Benford, last digit)</h5>
               <p data-i18n="m5_b">Governor-race digit tests do not reject their respective null models; the pooled independents column in the mayor race has second-digit p = 0.017 and needs an aggregation caveat.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -302,7 +303,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m6_t">Outliers vs neighbours + machine learning</h5>
               <p data-i18n="m6_b">0–19 flagged precincts per region (0–2.2%), 6.4% in the nationwide mayor run — small places, mixed directions; the same order as clean reference elections.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -323,7 +324,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span> <span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span> <span class="m-head">
               <h5 data-i18n="m7_t">Jumps vs the 2022 election (swing test)</h5>
               <p data-i18n="m7_b">635 of 5,442 matched precincts change by more than 15 points in both turnout and the leader's share, in either direction. The +1.5-point median turnout change describes the full matched sample, not the flagged subset.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -340,7 +341,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span> <span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span> <span class="m-head">
               <h5 data-i18n="m8_t">Two races, one visit (mutual control)</h5>
               <p data-i18n="m8_b">Participation rates correlate at r = 0.844 across 3,556 comparable precincts; a similar aggregate gap appears in 2022, but its cause is not established.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
@@ -351,7 +352,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m9_t">Self-test: the toolkit actually detects fraud</h5>
               <p data-i18n="m9_b">Injected ballot-stuffing increases the Shpilkin tail signal ×6–14 in the regional runs. This demonstrates sensitivity to the tested simulation, not every possible form of fraud.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>

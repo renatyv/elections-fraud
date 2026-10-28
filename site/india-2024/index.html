@@ -18,10 +18,10 @@
     <header class="top">
       <div class="bar">
         <div class="brand">
-          <span class="flag"></span><span data-i18n="brand">India · Lok Sabha · April–June 2024</span>
+          <span class="flag" aria-hidden="true"></span><span data-i18n="brand">India · Lok Sabha · April–June 2024</span>
         </div>
         <div class="right">
-          <a class="home" href="../" data-i18n="home">← All analyses</a> <a class="home" href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a>
+          <a class="home" href="../" data-i18n="home">← All analyses</a>
           <nav class="langs" aria-label="Language">
             <button data-lang="hi">हिन्दी</button>
             <button data-lang="en" aria-pressed="true">English</button>
@@ -38,7 +38,7 @@
           </div>
           <h1 data-i18n="h1">The Lok Sabha election of April–June 2024 — do the numbers add up?</h1>
           <div class="verdict">
-            <div class="check">
+            <div class="check" aria-hidden="true">
               ✓
             </div>
             <div>
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="verdict flip">
-            <div class="check warn">
+            <div class="check warn" aria-hidden="true">
               ⇄
             </div>
             <div>
@@ -55,6 +55,7 @@
               <p class="v-line" data-i18n="flip2_line"><b>263 winners</b> (48.5%) took their seat with less than half the vote; a fully united opposition bloc would have gained 10 seats — and changed no government</p>
             </div>
           </div>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
@@ -249,7 +250,7 @@
         <div class="m-list">
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
               <p data-i18n="m1_b">Beyond the honest-decline boundary: zero votes for the leader — nationally and in UP. Recounting without the anomaly zone moves nothing.</p>
               </span>
@@ -274,7 +275,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m2_t">Turnout × result scatter and fingerprints</h5>
               <p data-i18n="m2_b">No “comet tail”, no separated second cluster in the 2D fingerprint — the structure that appears is geography and alliance arithmetic.</p>
               </span>
@@ -303,7 +304,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m3_t">Round-number peaks (Kobak et al.)</h5>
               <p data-i18n="m3_b">No excess of exactly-integer turnouts or leader shares — at the constituency level, and across 105,000 recovered UP stations the integer-share rate is BELOW expectation (z = −3.1).</p>
               </span>
@@ -324,7 +325,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m4_t">Digit tests (Benford, last digit)</h5>
               <p data-i18n="m4_b">Last digits flat everywhere. The only borderline value — SP's last digit in UP booths (p = 0.03, +0.4 pp on 0s) — is an order of magnitude smaller than invented-number signatures and mirrors 2014's benign profile.</p>
               </span>
@@ -349,7 +350,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m5_t">Outliers, machine learning, and the swing vs 2014</h5>
               <p data-i18n="m5_b">19 of 542 constituencies (3.5%) are neighbour-outliers and 6 are ML-anomalies — small and scattered, audit candidates by construction. Not one constituency combines a 15-point turnout jump with a 15-point leader jump against 2014.</p>
               </span>
@@ -370,7 +371,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m6_t">The Form 20 recovery itself: arithmetically exact</h5>
               <p data-i18n="m6_b">1.16 million station-candidate rows parsed under per-row checksums; against the official ECI constituency totals nothing exceeds the official count anywhere, and 11 fully-recovered constituencies match within ±0.5%.</p>
               </span>
@@ -387,7 +388,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m7_t">Self-test: the toolkit actually detects fraud</h5>
               <p data-i18n="m7_b">Synthetic stuffing injected into the clean data fires every alarm (anomaly-zone signal from 0 to 17.6M votes; round-number z from 0.4 to 11.8). The “clean” verdict is a measurement, not a blind spot.</p>
               </span>

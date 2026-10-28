@@ -18,10 +18,10 @@
     <header class="top">
       <div class="bar">
         <div class="brand">
-          <span class="flag"></span><span data-i18n="brand">Portugal · Legislative elections · 18.05.2025</span>
+          <span class="flag" aria-hidden="true"></span><span data-i18n="brand">Portugal · Legislative elections · 18.05.2025</span>
         </div>
         <div class="right">
-          <a class="home" href="../" data-i18n="home">← All analyses</a> <a class="home" href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a>
+          <a class="home" href="../" data-i18n="home">← All analyses</a>
           <nav class="langs" aria-label="Language">
             <button data-lang="pt">Português</button>
             <button data-lang="en" aria-pressed="true">English</button>
@@ -38,7 +38,7 @@
           </div>
           <h1 data-i18n="h1">The legislative election of 18 May 2025 — do the numbers add up?</h1>
           <div class="verdict">
-            <div class="check">
+            <div class="check" aria-hidden="true">
               ✓
             </div>
             <div>
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="verdict flip">
-            <div class="check warn">
+            <div class="check warn" aria-hidden="true">
               ⇄
             </div>
             <div>
@@ -55,6 +55,7 @@
               <p class="v-line" data-i18n="flip2_line">Under winner-take-all districts, AD's <b>33%</b> of votes becomes <b>69–76%</b> of the wins</p>
             </div>
           </div>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
@@ -242,7 +243,7 @@
         <div class="m-list">
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
               <p data-i18n="m1_b">Beyond the honest decline: 2,980 AD votes = 0.15% of the party’s votes. Recounting without that zone moves the result from 32.72% to 32.71%.</p>
               </span>
@@ -267,7 +268,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
               <p data-i18n="m2_b">A continuous cloud with no “tail” of high-turnout, high-AD parishes — the signature ballot-stuffing produces.</p>
               </span>
@@ -288,7 +289,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
               <p data-i18n="m3_b">The distribution matches honest elections; the 2D cluster typical of fraud (80–100% turnout with a high share) is absent. The clusters that do exist track geography.</p>
               </span>
@@ -309,7 +310,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
               <p data-i18n="m4_b">Parishes with exactly whole-percentage turnout: 1.46% vs 1.44% expected by chance (z = 0.1); no excess of multiples of 5, none in the leader’s share either (z between −0.4 and +0.1).</p>
               </span>
@@ -326,7 +327,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m5_t">Digit tests (Benford, last digit)</h5>
               <p data-i18n="m5_b">12 tests on vote counts: 11 clean. The only borderline value — AD, last digit, p = 0.02 (a deficit of digit 4) — has no “invented numbers” profile and is not significant after multiple-testing correction.</p>
               </span>
@@ -347,7 +348,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m6_t">Outliers vs neighbours + machine learning</h5>
               <p data-i18n="m6_b">81 of 3,092 parishes (2.6%) flagged by the neighbour screen and 31 (top 1% by construction) by machine learning — all tiny parishes with mixed directions; a normal statistical tail, not a pattern.</p>
               </span>
@@ -368,7 +369,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m7_t">Jumps versus the 2024 election</h5>
               <p data-i18n="m7_b">Not a single parish shows a simultaneous jump in turnout and in AD share above 15 points.</p>
               </span>
@@ -385,7 +386,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m9_t">Precinct protocols cross-checked against official totals</h5>
               <p data-i18n="m9_b">In six municipalities that publish precinct maps (91 precincts, 60,711 registered voters = 0.66% of the electorate), the precinct sums match the official totals of every list to the exact vote; the row arithmetic is exact; no duplicated protocols.</p>
               </span>
@@ -396,7 +397,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">✓</span> <span class="m-head">
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
               <h5 data-i18n="m10_t">Self-test: the toolkit actually detects fraud</h5>
               <p data-i18n="m10_b">Synthetic stuffing injections fire every alarm (Shpilkin signal ×18; round-number z 0.2 → 5.1). The “clean” verdict is a real measurement.</p>
               </span>

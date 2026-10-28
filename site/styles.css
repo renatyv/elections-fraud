@@ -154,25 +154,6 @@ a.home:hover {
   font-size: 15px;
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.chip {
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 13.5px;
-}
-
-.chip b {
-  font-size: 15px;
-}
-
 h3.sect {
   font-size: clamp(19px,3vw,25px);
   margin: 0 0 6px;
@@ -570,11 +551,6 @@ footer a {
   color: var(--blue);
 }
 
-.m .badge.warn {
-  background: var(--amber-soft);
-  color: var(--amber);
-}
-
 .m-head {
   flex: 1;
   min-width: 0;
@@ -672,7 +648,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   font-size: 14px;
 }
 
-.jump a {
+.hero a {
   color: #dce8f2;
 }
 
@@ -850,13 +826,7 @@ td.number,th.number {
   font-weight: 400;
 }
 
-.page-usa-2024 #earlier-baseline .badge,
-.page-usa-2024 .m .badge.warn {
-  background: var(--amber-soft);
-  color: var(--amber);
-}
-
-.page-usa-2024 h2 {
+section > h2, .res-card > h2 {
   font-size: clamp(19px, 3vw, 25px);
   margin: 0 0 10px;
 }
@@ -945,9 +915,31 @@ section {
   background: var(--green-soft);
   color: var(--green);
   font-weight: 800;
-  font-size: 12.5px;
-  border-radius: 999px;
-  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 50%;
+}
+
+.m .badge.warn {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.m .badge.neutral {
+  background: #edf3f8;
+  color: var(--muted);
+}
+
+.context-facts {
+  padding-left: 20px;
+  margin: 14px 0;
+  font-size: 14px;
+  color: #2c4358;
 }
 
 details {
@@ -1003,11 +995,6 @@ details {
 
 .page-usa-2024 .methods {
   margin-top: 12px;
-}
-
-.page-usa-2024 .m .badge.neutral {
-  background: #edf3f8;
-  color: var(--muted);
 }
 
 .page-usa-2024 #ohio .res-card {
@@ -1066,4 +1053,16 @@ details {
 
 .page-serbia-oct-2026 code {
   overflow-wrap: anywhere;
+}
+
+.page-usa-2024 .flag {
+  background: repeating-linear-gradient(#b22234 0 1px, #fff 1px 2px);
+  position: relative;
+}
+
+.page-usa-2024 .flag::before {
+  content: "";
+  position: absolute;
+  inset: 0 50% 46% 0;
+  background: #3c3b6e;
 }

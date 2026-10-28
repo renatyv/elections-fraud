@@ -11,6 +11,11 @@ tests or reviews keep tripping on:
   (serbia/bulgaria/usa — `serbia.test.js` fails on `class="check">✓`).
   The paradox badge is always `check warn ⇄`; every `.check` div carries
   `aria-hidden="true"`
+- method badges share one shape and explicit status: `badge pass` + `✓`,
+  `badge warn` + `!` or `≠`, `badge neutral` + `i`; never use green dots.
+  All badges carry `aria-hidden="true"`. No metric chips in the hero;
+  section links belong in `nav.jump`, not in header pills. Use shared
+  `site/styles.css` for all component styling (see `site/TEMPLATE.md`).
 - landing `site/index.html`: cards sorted by election date, newest first
 - English fallback text in the HTML must equal the `en:` block of the page's
   `translations.js` (tests diff them); reword both together

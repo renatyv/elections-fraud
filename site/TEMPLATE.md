@@ -1,7 +1,6 @@
 # Country-page template
 
-Common skeleton of the country pages (`portugal-2025`, `usa-2024`,
-`brazil-oct-2026-round-1`): a Minto-pyramid single-page report — verdict
+Common skeleton of all nine country reports: a Minto-pyramid single-page report — verdict
 first in a hero, then situation, numbered findings, deep-dive sections,
 a collapsible test-by-test methods list, limitations, data provenance.
 
@@ -22,7 +21,7 @@ a collapsible test-by-test methods list, limitations, data provenance.
 <body class="page-{country}-{year}">
   <header class="top"><div class="bar">
     <div class="brand">flag + "Country · Election · date"</div>
-    <div class="right"> "← All analyses" (href="../") + anchor links ↓
+    <div class="right"> "← All analyses" (href="../")
       [multilingual: <nav class="langs"><button data-lang=...>] </div>
   </div></header>
   <main>
@@ -33,6 +32,7 @@ a collapsible test-by-test methods list, limitations, data provenance.
                     aria-hidden="true" + h2 one-line fraud verdict
        .verdict.flip .check warn ⇄ (aria-hidden="true") + .flip-head +
                     1–2 .v-line (paradox / second finding)
+       nav.jump     plain section links, below both verdicts
     2. SITUATION  <section> what was decided + turnout
        .res-card (or .cards2 grid): result bars — .p-row > .p-name + .p-track > .p-fill (width:%) + .p-pct
     3. KEY FINDINGS  .args > .arg ×3  (.num 1–3 + h4 + p)
@@ -40,7 +40,7 @@ a collapsible test-by-test methods list, limitations, data provenance.
        .px-sub subsections: intro p + .figs > figure.fig (img + figcaption) + table.splits + .note
     5. METHODS  <section> "Manipulation detection test results" > .m-list
        <details class="m"> per test family:
-         summary: .badge (✓ pass / ! warn / • neutral / ≠ rejects) + .m-head (h5 title + one-line p)
+         summary: .badge.pass ✓ / .badge.warn ! or ≠ / .badge.neutral i + .m-head (h5 title + one-line p)
          .m-details: p (numbers + caveats) + .m-figs > figure(.fig, some .wide)
        canonical test order: Shpilkin tail · comet tail · Klimek fingerprints ·
          Kobak integer peaks · Benford 2nd digit · last digit · outliers+ML ·
@@ -59,7 +59,15 @@ a collapsible test-by-test methods list, limitations, data provenance.
   (serbia, bulgaria, usa — `serbia.test.js` fails on `class="check">✓`).
   The paradox badge is always `check warn ⇄`. Check glyphs are decorative:
   every `.check` div carries `aria-hidden="true"`.
-  Method badges: `✓` pass / `!` warn / `•` neutral / `≠` rejects.
+  Method badges use the same fixed 28 × 28 px circle on every page:
+  `badge pass` + `✓` (green, a check explicitly passed), `badge warn` + `!`
+  (amber, an unresolved flag), `badge warn` + `≠` (amber, a rejected reference
+  distribution), `badge neutral` + `i` (gray, context, descriptive evidence or
+  an inconclusive check). Do not use dots or give neutral findings a green
+  background. A rejected distribution is not proof of manipulation. Do not
+  change status to make pages look alike: use the finding's actual meaning.
+  Every `.badge` also carries `aria-hidden="true"`; adjacent text explains
+  the result without relying on a glyph or color.
 - **English fallback = `I18N.en`:** rewording means editing the HTML text and
   the `en:` block of `translations.js` together — tests diff them (bulgaria,
   serbia, slovakia); the landing page has no such test.
@@ -76,6 +84,24 @@ a collapsible test-by-test methods list, limitations, data provenance.
 - **Figures:** always `figure.fig > img loading="lazy" + figcaption`; `.wide`
   variants for hero charts; tables use `table.splits` or
   `table.data-table` inside `.table-wrap`.
-- **Minor divergences:** `usa-2024` uses an emoji brand, `h3` in `.m-head`,
-  a cache-busted CSS query and no translations; PT/BR pages use
-  `span.flag`, `h5` in `.m-head` and the language switcher.
+- **One visual system:** use only `../styles.css`; no page-local `<style>`,
+  stylesheet copies, or country-specific component overrides. Country selectors
+  may define flags, data-dependent chart/table widths or spacing inside a
+  report, but must not change status colors, badge shapes or hero typography.
+  Keep layout and component changes in the shared stylesheet.
+- **Header:** `.brand` uses `span.flag[aria-hidden="true"]` plus country,
+  election and date; `.right` contains the home link and language buttons only.
+  Put section anchors in `nav.jump` below both verdicts, never in header pills.
+- **Hero:** kicker, h1, main verdict, second finding, then section navigation.
+  Do not add metric chips, tags, extra status pills or a third verdict card.
+  Put snapshot dates, coverage and sample sizes in context or data sections;
+  `ul.context-facts > li[data-i18n]` is available for compact provenance facts.
+- **Details:** every `details.m > summary` starts with one decorative status
+  badge, followed by `.m-head`; use a neutral `i` for context/download sections.
+  The shared CSS supplies the expand chevron. Method titles use `h5` (`h3` is
+  supported for the English-only U.S. report), with identical visual styling.
+- **Verification:** run `node --test site/tests/*.test.js` and
+  `python3 -m unittest discover -s site/tests -p 'test_*.py'`. The shared
+  report-style test checks every country directory, including newly added ones.
+  Preview the affected pages on desktop and mobile and check long headings,
+  warning/neutral/pass badges, navigation and expanded details.

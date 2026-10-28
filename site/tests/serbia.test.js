@@ -91,7 +91,7 @@ test('Serbia: year/list comparisons and model assumptions agree with the archive
   assert.equal(current.last_digit.find(row => row.party === 'Dacić (SPS)').n_numbers, 33);
   assert.equal(current.selftest.injected_added_ballots_party, 87179);
   assert.equal(current.selftest.peaks_z_rounded.toFixed(2), '3.23');
-  assert.doesNotMatch(html, /class="badge">✓|class="check"[^>]*>✓/);
+  assert.doesNotMatch(html, /class="badge(?: pass)?"[^>]*>\s*✓|class="check"[^>]*>\s*✓/);
   assert.match(translations.en.m3_p, /two overlapping Gaussian components specified in advance/);
   assert.match(translations.en.m3_p, /not a statistical test of cluster separation/);
   assert.match(translations.en.m3_cap, /third panel/);

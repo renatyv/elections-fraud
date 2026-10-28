@@ -18,10 +18,10 @@
     <header class="top">
       <div class="bar">
         <div class="brand">
-          <span class="flag"></span><span data-i18n="brand">Brazil · presidential · 04.10.2026</span>
+          <span class="flag" aria-hidden="true"></span><span data-i18n="brand">Brazil · presidential · 04.10.2026</span>
         </div>
         <div class="right">
-          <a class="home" href="../" data-i18n="home">← All analyses</a> <a class="home" href="#paradoxes" data-i18n="paradox_link">Scenarios ↓</a>
+          <a class="home" href="../" data-i18n="home">← All analyses</a>
           <nav class="langs" aria-label="Language">
             <button data-lang="pt">Português</button>
             <button data-lang="en" aria-pressed="true">English</button>
@@ -38,7 +38,7 @@
           <div class="kicker" data-i18n="kicker">Independent statistical analysis</div>
           <h1 data-i18n="h1">The presidential election of 4 October 2026 — do the numbers add up?</h1>
           <div class="verdict">
-            <div class="check">
+            <div class="check" aria-hidden="true">
               ✓
             </div>
             <div>
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="verdict flip">
-            <div class="check warn">
+            <div class="check warn" aria-hidden="true">
               ⇄
             </div>
             <div>
@@ -55,6 +55,7 @@
               <p class="v-line" data-i18n="flip2_line">No individual candidate exceeded 50%; the sum does not establish support for a single joint candidate</p>
             </div>
           </div>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Scenarios ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
@@ -225,7 +226,7 @@
         <div class="m-list">
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m1_t">Votes above a descriptive turnout threshold</h5>
               <p data-i18n="m1_b">The threshold of 91.6% is the sample’s 99.5th turnout percentile. Sections above it contain 0.62% of ballots cast, including 0.49% of Flávio Bolsonaro’s and 0.80% of Lula’s votes. This is a descriptive tail count: it neither identifies fraudulent votes nor bounds their total. A sample-defined percentile necessarily selects a small fraction of sections.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -254,7 +255,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
               <p data-i18n="m2_b">National weighted turnout–share correlations are −0.03 for Flávio Bolsonaro and +0.05 for Lula. Some ballot-addition mechanisms can produce a rising tail, but neither a nonzero correlation proves fraud nor a near-zero value rules it out. Geography and aggregation can affect these relationships.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -275,7 +276,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
               <p data-i18n="m3_b">A descriptive two-Gaussian mixture places both components near 78–80% turnout. No high-turnout/high-share corner cluster appears in the 12 candidate–region fits. This is a diagnostic inspired by election fingerprints, not identification of a fraud mechanism or a causal explanation of the clusters.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -300,7 +301,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
               <p data-i18n="m4_b">The share of sections with whole-percent turnout matches the size-adjusted random null (z = +0.5); for the leader's share z = −0.03. For comparison, in documented falsification cases z reaches dozens.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -317,7 +318,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge warn">≠</span><span class="m-head">
+              <span class="badge warn" aria-hidden="true">≠</span><span class="m-head">
               <h5 data-i18n="m5_t">Benford's second digit</h5>
               <p data-i18n="m5_b">The second-digit test rejects its reference distribution (p &lt; 0.01). Small vote counts and heterogeneous sections can violate Benford assumptions. The smooth digit profile does not by itself prove either fraud or its absence; this rejection requires a better-calibrated null before a substantive conclusion.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -334,7 +335,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m6_t">Last digit (Beber–Scacco)</h5>
               <p data-i18n="m6_b">Last-digit frequencies are close to uniform in the full set. Filtering to counts of at least 100 yields a maximum deviation of 0.65 pp; the excess of digits 0 and 5 is at most 0.12 pp. Size filters affect the reference distribution, so uniformity is not a universal test of authenticity.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -351,7 +352,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m7_t">2D correlations by state (Kobak et al.)</h5>
               <p data-i18n="m7_b">State-level turnout–share correlations range from −0.30 to +0.49 for Flávio Bolsonaro. Opposing patterns for the two leading candidates can arise mechanically because vote shares sum to one. These correlations alone do not distinguish mobilisation from manipulation.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -368,7 +369,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m8_t">Outliers vs neighbours, machine learning, duplicates</h5>
               <p data-i18n="m8_b">The within-municipality outlier rule flags 4,665 sections (0.93%). Isolation Forest flags about 1% by its configured threshold. One exact duplicate result pair is reported. Flag counts and duplication require contextual investigation; neither a flag nor its absence determines whether a section was manipulated.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -389,7 +390,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m9_t">Voting-machine generations (urna models)</h5>
               <p data-i18n="m9_b">Observed vote shares differ across voting-machine generations. Deployment geography and electorate composition may confound this comparison. Unadjusted differences neither establish a machine effect nor certify machine security.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -400,7 +401,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m10_t">Control: the same sections in 2022</h5>
               <p data-i18n="m10_b">The comparison matches 461,218 sections across 2022 and 2026 (92.4% of 2026 sections, 93.3% of votes). The turnout thresholds are 91.5% and 91.6%; tail ballot shares are 0.52–0.59% in 2022 and 0.62% in 2026. Similarity is descriptive evidence, not proof of absence of manipulation in either election.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
@@ -429,7 +430,7 @@
           </details>
           <details class="m">
             <summary>
-              <span class="badge">•</span><span class="m-head">
+              <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
               <h5 data-i18n="m11_t">Sensitivity to two synthetic perturbations</h5>
               <p data-i18n="m11_b">Adding about 2 million synthetic ballots under the specified injection scheme increases the tail statistic 22-fold. Rounding turnout to integer percentages in 5% of sections increases z from 0.35 to 9.9. These experiments demonstrate sensitivity to those mechanisms and parameters, not to every manipulation of comparable size.</p>
               </span><span class="chev" aria-hidden="true">▸</span>

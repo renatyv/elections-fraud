@@ -19,4 +19,7 @@ from user input. Language switching works even if browser storage is disabled.
 
 Preview from this directory with `python3 -m http.server 8000`. Run the shared
 language checks from the repository root with `node --test site/tests/language.test.js`.
+The visual contract and new-page skeleton live in [TEMPLATE.md](TEMPLATE.md).
+Run all page checks with `node --test site/tests/*.test.js` and
+`python3 -m unittest discover -s site/tests -p 'test_*.py'`.
 Country-specific data and publishing notes remain in each report's README.
