@@ -26,7 +26,7 @@ en: {
   in_title: "India — Lok Sabha, April–June 2024",
   in_desc: "Verdict: no statistical traces of manipulation at the levels official data allows. 542 constituencies, 646M ballots — plus 109,952 Uttar Pradesh polling stations recovered from scanned Form 20 PDFs and the honest 2014 booths as a control.",
   open: "Open the analysis →",
-  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
+  footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a>"
 },
 sl: {
   rs_title: "Srbija — parlamentarne volitve, 25. oktober 2026",

@@ -112,7 +112,7 @@ A useful review should proceed in this order:
 
 ### Suggested description for journalists
 
-An independent analysis found an unusual digit distribution in precinct-level Republican totals for Ohio's 2024 Senate election. The pattern remained unusual under two reference models after multiple-testing adjustments, but neither model captures all ordinary differences between precincts. The analysis does not establish fraud or a changed outcome. Its author is seeking source verification and methodological review.
+An analysis by Renat Iuldashev found an unusual digit distribution in precinct-level Republican totals for Ohio's 2024 Senate election. The pattern remained unusual under two reference models after multiple-testing adjustments, but neither model captures all ordinary differences between precincts. The analysis does not establish fraud or a changed outcome. Its author is seeking source verification and methodological review.
 
 <!-- pagebreak -->
 

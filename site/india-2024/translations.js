@@ -96,7 +96,7 @@ en: {
   d1: "National results: the Election Commission of India's official constituencywise export (results.eci.gov.in) — 542 constituencies.",
   d2: "UP booth-level results: 315 Form 20 PDFs from UP district-administration websites, recovered via the Wayback Machine and cdn.s3waas.gov.in — <a href=\"https://github.com/renatyv/elections_analysis\" rel=\"noopener\">dataset in the repository</a>.",
   d3: "Control election: ECI 2014 constituency and booth exports.",
-  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: Election Commission of India (results.eci.gov.in), Wayback Machine · Page generated on 17 October 2026"
+  footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: Election Commission of India (results.eci.gov.in), Wayback Machine · Page generated on 17 October 2026"
 },
 hi: {
   title: "भारत, लोकसभा — अप्रैल–जून 2024: सांख्यिकीय जाँच",

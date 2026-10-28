@@ -50,7 +50,7 @@ en: {
   fig2_cap: "Turnout × candidate share of ballots cast, each dot a section. The dark line is the voter-weighted mean by turnout group — flat for both candidates.",
   flip1_line: "<b>51.79%</b> for Lula against <b>48.21%</b> for Flávio Bolsonaro: the first round’s runner-up won the runoff",
   flip2_line: "The scenario using 2022 transfer rates predicted Bolsonaro 52.6%; the result shows that those assumptions did not carry over to 2026",
-  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: TSE (resultados.tse.jus.br, dadosabertos.tse.jus.br) · Generated 27 October 2026",
+  footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: TSE (resultados.tse.jus.br, dadosabertos.tse.jus.br) · Generated 27 October 2026",
   h1: "The presidential runoff of 25 October 2026 — do the numbers add up?",
   home: "← All analyses",
   kicker: "Independent statistical analysis",

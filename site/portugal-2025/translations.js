@@ -114,7 +114,7 @@ en: {
   d1: "Source: official results portal of the Ministry of Internal Administration at <a href=\"https://eleicoes.mai.gov.pt\" rel=\"noopener\">eleicoes.mai.gov.pt</a> — parish-level export, 3,092 territories (mainland, Madeira, Azores).",
   d2: "Cross-checks: parish sums close exactly against the national totals; the precinct sums of the six publishing municipalities match the official totals to the exact vote.",
   d3: "Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco and other methods.",
-  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: MAI (eleicoes.mai.gov.pt) · Page generated 13 October 2026"
+  footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: MAI (eleicoes.mai.gov.pt) · Page generated 13 October 2026"
 },
 pt: {
   title: "Portugal, legislativas 2025 — 18.05.2025: verificação estatística",

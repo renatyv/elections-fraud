@@ -104,7 +104,7 @@ const I18N = {
     "download_reports": "Download reports (English): <a href=\"downloads/REPORT_statistical_fraud_analysis.md\" download>full forensics</a> · <a href=\"downloads/PARADOXES.md\" download>voting paradoxes</a> · <a href=\"downloads/trends.md\" download>counting trends</a>.",
     "download_data": "Inspect outputs: <a href=\"downloads/seats.csv\" download>seat projections (CSV)</a> · <a href=\"downloads/threshold.csv\" download>threshold table (CSV)</a> · <a href=\"downloads/metrics.json\" download>trend metrics (JSON)</a> · <a href=\"downloads/diagnostics.json\" download>incumbent and matched-station diagnostics (JSON)</a>. Model outputs: <a href=\"downloads/screening_2026.json\" download>2026 station metrics</a> · <a href=\"downloads/reference_2023.json\" download>2023 reference metrics</a>.",
     "reproduce": "Reproduce locally: <code>zsh analysis-tool/run_forensics_serbia.sh</code>. Page figures: <code>analysis-tool/.venv/bin/python serbia-oct-2026/scripts/build_site_figures.py</code>. Source code: <a href=\"https://github.com/renatyv/elections-fraud\" rel=\"noopener\">elections-fraud repository</a>. Raw captures are retained locally and are not bundled into this page.",
-    "footer": "Independent analysis · <a href=\"https://www.renatyv.org/\" rel=\"noopener\">renatyv.org</a> · Data: RIK archive · Wording and charts reviewed 27 October 2026",
+    "footer": "Renat Iuldashev · <a href=\"https://www.renatyv.org/\" rel=\"noopener\">renatyv.org</a> · Data: RIK archive · Wording and charts reviewed 27 October 2026",
     "pct_students": "52.71%",
     "pct_incumbent": "39.17%",
     "pct_sps": "2.17%",

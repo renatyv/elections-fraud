@@ -141,7 +141,7 @@ en: {
   d2: "Self-consistency: zero discrepancies in all checks (nominal votes vs detail files, blank/null cross-checks, no duplicated section keys, no turnout above electorate); the national total matches the official result to the exact vote. Control dataset: TSE resultados-2022, both rounds, matched to the same sections (92.4% coverage).",
   d3: "Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco, neighbour-outlier and Isolation-Forest methods, urna-model stratification, the 2022 control and synthetic self-tests.",
   d4: "Full technical report (in Russian), the section dataset, scripts and all 18 figures / 21 tables are available in the project repository.",
-  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: TSE (dadosabertos.tse.jus.br) · Page generated 17 October 2026",
+  footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: TSE (dadosabertos.tse.jus.br) · Page generated 17 October 2026",
   limitations_title: "Scope and limitations",
   limitations_body: "This is an analysis of published aggregate results, not a procedural audit of voting machines or ballot handling. The 2022 comparison is a reference, not a known fraud-free ground truth. Statistical non-detection does not prove absence of manipulation; test assumptions, spatial dependence and multiple comparisons matter. Aggregate fits do not identify individual behaviour."
 },

@@ -46,7 +46,7 @@ a collapsible test-by-test methods list, limitations, data provenance.
     6. LIMITATIONS  <section> scope caveats ("cannot conclude…" / .data ul)
     7. DATA  <section> .data ul: official source portal · cross-checks · toolkit · repo/links
   </main>
-  <footer>Independent analysis · renatyv.org · Data: {SOURCE} · Page generated {date}</footer>
+  <footer>Renat Iuldashev · renatyv.org · Data: {SOURCE} · Page generated {date}</footer>
 </body>
 ```
 

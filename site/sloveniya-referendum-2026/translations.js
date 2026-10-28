@@ -139,7 +139,7 @@ en: {
   data_title: "Data & reproducibility",
   d1: "Source: official machine-readable results of the State Electoral Commission (DVK) at <a href=\"https://volitve.dvk-rs.si\" rel=\"noopener\">volitve.dvk-rs.si</a> — precinct-level files for all four referendums, downloaded 13 October 2026 (server snapshot 12 October 2026, 99.98% counted).",
   d2: "Cross-check: my totals match the Wikipedia summary table for all four referendums to the exact vote.",
-  footer: "Independent analysis · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: DVK (volitve.dvk-rs.si) · Page generated 13 October 2026"
+  footer: "Renat Iuldashev · <a href=\"http://renatyv.org\" rel=\"noopener\">renatyv.org</a> · Data: DVK (volitve.dvk-rs.si) · Page generated 13 October 2026"
 },
 sl: {
   title: "Slovenija, 4 referendumi — 11. 10. 2026: statistična preverba",
