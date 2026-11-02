@@ -1,6 +1,7 @@
 """Add explicit tail sensitivity and multiple-test adjustment to the toolkit run."""
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
 import sys
@@ -12,9 +13,13 @@ from election_forensics.shpilkin import shpilkin_estimate
 
 
 def main() -> None:
-    output = BASE / "analysis/ef"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data", default="data/ef")
+    parser.add_argument("--out", default="analysis/ef")
+    args = parser.parse_args()
+    output = BASE / args.out
     metrics = json.loads((output / "metrics.json").read_text())
-    data = load_mai_csv(BASE / "data/ef/results_freguesias.csv")
+    data = load_mai_csv(BASE / args.data / "results_freguesias.csv")
     tail = []
     for quantile in (99, 99.5, 99.9):
         result = shpilkin_estimate(data, "votes:Yotova", q=quantile)
@@ -28,9 +33,9 @@ def main() -> None:
     for i, row in enumerate(eligible):
         row["p_holm"] = min(1.0, max(previous, row["p_mc"] * (len(eligible) - i)))
         previous = row["p_holm"]
-    assert len(eligible) == 7 and all(0 <= r["p_holm"] <= 1 for r in eligible)
+    assert eligible and all(0 <= r["p_holm"] <= 1 for r in eligible)
     summary = {"tail_sensitivity": tail, "digit_holm_mc": eligible,
-               "digit_family_note": "7 candidate/test combinations with at least 50 usable tallies; exploratory, not preregistered"}
+               "digit_family_note": f"{len(eligible)} candidate/test combinations with at least 50 usable tallies; exploratory, not preregistered"}
     (output / "sensitivity.json").write_text(json.dumps(summary, indent=2))
     print(json.dumps(summary, indent=2))
 

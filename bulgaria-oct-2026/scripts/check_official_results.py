@@ -52,7 +52,8 @@ def fetch(path: str) -> bytes:
     return body
 
 
-def parse_protocol(body: bytes, section: str, district: str, form: int, source: str) -> Protocol:
+def parse_protocol(body: bytes, section: str, district: str, form: int, source: str,
+                   expected: set[str] | None = None) -> Protocol:
     soup = BeautifulSoup(body, "lxml")
     text = soup.get_text(" ", strip=True)
     if f"№ {section}" not in text:
@@ -79,7 +80,7 @@ def parse_protocol(body: bytes, section: str, district: str, form: int, source: 
             if label in votes:
                 raise ValueError(f"Duplicate candidate: {source}")
             votes[label] = value
-    if None in (registered, added, voted, nobody) or set(votes) != {str(i) for i in range(1, 28)}:
+    if None in (registered, added, voted, nobody) or set(votes) != (expected if expected is not None else {str(i) for i in range(1, 28)}):
         raise ValueError(f"Incomplete protocol schema: {source}")
     assert registered is not None and added is not None and voted is not None and nobody is not None
     return Protocol(section, district, form, registered, added, voted, nobody, votes, source)

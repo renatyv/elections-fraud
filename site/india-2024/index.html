@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>India, Lok Sabha — Apr–Jun 2024: statistical fraud check</title>
-    <meta name="description" content="Independent election-forensics analysis of the Indian 2024 Lok Sabha election: no traces of fraud in the data, plus what the first-past-the-post rule itself did to the votes. Includes a booth-level dataset for Uttar Pradesh recovered from scanned Form 20 PDFs.">
-    <meta property="og:title" content="India, Lok Sabha — Apr–Jun 2024: statistical fraud check">
-    <meta property="og:description" content="Independent election-forensics analysis of the Indian 2024 Lok Sabha election: no traces of fraud in the data, plus what the first-past-the-post rule itself did to the votes. Includes a booth-level dataset for Uttar Pradesh recovered from scanned Form 20 PDFs.">
+    <title>India, Lok Sabha 2024 — checking the election numbers</title>
+    <meta name="description" content="I checked India’s 2024 Lok Sabha results and recovered polling-station records from Uttar Pradesh. These tests found no clear sign of manipulation within their coverage. See the findings, limits and how voting rules affect seats.">
+    <meta property="og:title" content="India, Lok Sabha 2024 — checking the election numbers">
+    <meta property="og:description" content="I checked India’s 2024 Lok Sabha results and recovered polling-station records from Uttar Pradesh. These tests found no clear sign of manipulation within their coverage. See the findings, limits and how voting rules affect seats.">
     <meta property="og:type" content="article">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff9933'/%3E%3Crect y='22' width='64' height='21' fill='white'/%3E%3Crect y='42' width='64' height='22' fill='%23138808'/%3E%3Ccircle cx='32' cy='32' r='8' fill='none' stroke='%23000080' stroke-width='3'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="../styles.css">
@@ -33,16 +33,14 @@
       <!-- ══ MINTO: ANSWER ══ -->
       <div class="hero">
         <div class="hero-inner">
-          <div class="kicker" data-i18n="kicker">
-            Independent statistical audit
-          </div>
-          <h1 data-i18n="h1">The Lok Sabha election of April–June 2024 — do the numbers add up?</h1>
+          <div class="kicker" data-i18n="kicker">An independent check of the election numbers</div>
+          <h1 data-i18n="h1">India’s 2024 Lok Sabha election — do the numbers add up?</h1>
           <div class="verdict">
             <div class="check" aria-hidden="true">
               ✓
             </div>
             <div>
-              <h2 data-i18n="verdict_title">No traces of fraud in the data</h2>
+              <h2 data-i18n="verdict_title">These checks found no clear sign of manipulation in the data available</h2>
             </div>
           </div>
           <div class="verdict flip">
@@ -50,23 +48,21 @@
               ⇄
             </div>
             <div>
-              <p class="flip-head" data-i18n="verdict2_title">Same votes, first past the post — fragmentation decided a third of the seats</p>
-              <p class="v-line" data-i18n="flip1_line"><b>182 of 542 seats</b> (33.6%) were decided by vote splitting — a third candidate's votes exceeded the winner's entire margin</p>
-              <p class="v-line" data-i18n="flip2_line"><b>263 winners</b> (48.5%) took their seat with less than half the vote; a fully united opposition bloc would have gained 10 seats — and changed no government</p>
+              <p class="flip-head" data-i18n="verdict2_title">Other candidates’ votes could matter in a third of the seats</p>
+              <p class="v-line" data-i18n="flip1_line">In <b>182 of 542 seats</b> (33.6%), a losing candidate had more votes than the winner’s lead. Those votes could have changed the winner if enough had gone to the runner-up.</p>
+              <p class="v-line" data-i18n="flip2_line"><b>263 winners</b> (48.5%) had less than half the vote. Combining the opposition’s votes in a fixed-vote model adds 10 seats, but leaves the same governing bloc ahead.</p>
             </div>
           </div>
-          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a></nav>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">How the voting rules matter ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
       <section>
-        <h3 class="sect" data-i18n="sit_title">What was decided in April–June 2024</h3>
-        <p class="sect-sub" data-i18n="sit_intro">General election to the Lok Sabha (543 seats, seven phases from 19 April to 1 June). The BJP won 240 seats with 36.5% of the vote; the Indian National Congress 99 seats with 21.2%. The NDA returned to government with a reduced majority. National turnout: 66.1% — 646 million ballots.</p>
+        <h3 class="sect" data-i18n="sit_title">What voters decided in April–June 2024</h3>
+        <p class="sect-sub" data-i18n="sit_intro">India elected its 543-seat Lok Sabha, the lower house of parliament, in seven phases from 19 April to 1 June. The BJP won 240 seats with 36.5% of the vote; the Indian National Congress won 99 with 21.2%. The BJP-led NDA alliance returned to government with a smaller majority. Turnout was 66.1%: 646 million ballots.</p>
         <div class="res-card">
-          <h4 data-i18n="res_title">National result — 542 contested constituencies</h4>
-          <div class="sub" data-i18n="res_sub">
-            percentages of ballots polled · rejected ballots 1.15% · NOTA 0.99%
-          </div>
+          <h4 data-i18n="res_title">National results — 542 seats with a vote count</h4>
+          <div class="sub" data-i18n="res_sub">shares of ballots cast · rejected ballots 1.15% · “None of the above” (NOTA) 0.99%</div>
           <div class="p-row">
             <span class="p-name">BJP</span>
             <div class="p-track">
@@ -140,49 +136,49 @@
             <span class="p-pct">1.8%</span>
           </div>
           <div class="p-row rest">
-            <span class="p-name" data-i18n="p_rest">others + NOTA</span>
+            <span class="p-name" data-i18n="p_rest">others + “None of the above”</span>
             <div class="p-track">
               <div class="p-fill" style="width:22.6%">
               </div>
             </div>
             <span class="p-pct">22.6%</span>
           </div>
-          <p class="p-note" data-i18n="res_note">Surat was won without a poll (unopposed) and has no count. The booth-level recovery covers Uttar Pradesh — 80 constituencies, 12.6% of the national electorate — which is also the state every serious 2024 fraud debate concentrated on.</p>
+          <p class="p-note" data-i18n="res_note">Surat’s candidate won unopposed, so there was no poll or vote count there. The polling-station records recovered for this analysis cover Uttar Pradesh: 80 constituencies with 12.6% of India’s electorate. These records cover part of the country, not every polling station nationwide.</p>
         </div>
       </section>
       <!-- ══ MINTO: PARADOXES — SAME VOTES, DIFFERENT RULES ══ -->
       <section id="paradoxes">
-        <h3 class="sect" data-i18n="px_title">Same votes, different rules — different results</h3>
-        <p class="sect-sub" data-i18n="px_intro">The fraud check asks whether the count is honest; this section asks what the counting rule itself did to the votes. India elects the Lok Sabha by first past the post — one mark per ballot, highest single tally takes the seat. I re-counted the official results under different rules to measure how much the rule, not the voters, decides. Full analysis: <a href="https://github.com/renatyv/elections-fraud/blob/main/india-2024/PARADOXES.md" rel="noopener">PARADOXES.md</a>.</p>
+        <h3 class="sect" data-i18n="px_title">How the rules affect who wins</h3>
+        <p class="sect-sub" data-i18n="px_intro">This section looks at the voting rules. In India, each voter chooses one candidate and the candidate with the most votes wins the seat, even below 50%. I tried different ways of combining the same official votes. These calculations show what could change under the stated assumptions; they do not reveal voters’ second choices. <a href="https://github.com/renatyv/elections-fraud/blob/main/india-2024/PARADOXES.md" rel="noopener">Read the full analysis</a>.</p>
         <div class="args">
           <div class="arg">
             <div class="num px">
               1
             </div>
-            <h4 data-i18n="px1_t">One seat in three was decided by vote splitting</h4>
-            <p data-i18n="px1_p">In 182 of 542 constituencies (33.6%) at least one losing candidate polled more votes than the winner's entire margin — the runner-up would have won by taking only those ballots. The BSP alone was the largest spoiler in 54 seats. Extreme case: Attingal (Kerala), won by 684 votes with the third candidate at 311,779.</p>
+            <h4 data-i18n="px1_t">In one seat in three, other candidates had enough votes to matter</h4>
+            <p data-i18n="px1_p">In 182 of 542 constituencies (33.6%), at least one losing candidate had more votes than the winner’s lead. If enough of those voters had chosen the runner-up instead, the result could have changed. I cannot tell whether they would have. The BSP was the largest such losing candidate’s party in 54 seats. In Attingal, Kerala, the winner’s lead was 684 votes while the third candidate had 311,779.</p>
           </div>
           <div class="arg">
             <div class="num px">
               2
             </div>
-            <h4 data-i18n="px2_t">Nearly half the winners lack a majority</h4>
-            <p data-i18n="px2_p">263 winners (48.5%) took their seat with less than half the vote — in Uttar Pradesh, the combined opposition outpolled the BJP in 18 of its 33 seats there. Above 50% the frustrated-majority paradox is provably impossible; below it, a plurality count cannot tell.</p>
+            <h4 data-i18n="px2_t">Nearly half the winners had less than half the vote</h4>
+            <p data-i18n="px2_p">263 winners (48.5%) won with less than half the votes. In Uttar Pradesh, opposing parties together had more votes than the BJP in 18 of its 33 seats. A winner above 50% cannot be outvoted by all losing candidates combined. Below 50%, that can happen, but the count does not tell us whether those voters would agree on one alternative.</p>
           </div>
           <div class="arg">
             <div class="num px">
               3
             </div>
-            <h4 data-i18n="px3_t">Unite the blocs — 12 seats move, no government changes</h4>
-            <p data-i18n="px3_p">Pooling every vote the INDIA bloc received into one candidate per seat adds 10 seats (NDA 292 → 285 — still a governing majority); a fully united NDA adds 2. The two blocs' votes split nearly evenly — 282.7M vs 264.8M — yet the seats split 292 : 233.</p>
+            <h4 data-i18n="px3_t">Combining alliance votes changes seats, but leaves the government ahead</h4>
+            <p data-i18n="px3_p">In a model that gives each INDIA-alliance candidate all votes cast for that alliance in the seat, INDIA gains 10 seats and the NDA falls from 292 to 285, still a majority. Doing the same for the NDA adds 2 seats to its total: 12 gains across the two separate scenarios. The two alliances had 282.7M and 264.8M votes, while their actual seats were 292 and 233.</p>
           </div>
         </div>
-        <h4 class="px-sub" data-i18n="pxA_t">Rule 1 · First past the post — a plurality, not a majority</h4>
-        <p class="sect-sub" data-i18n="pxA_p">India's rule needs no majority: the single highest tally wins the seat, however split the field. Three elections under the same rule show how far from half the mandate can sit:</p>
+        <h4 class="px-sub" data-i18n="pxA_t">Rule 1 · The candidate with the most votes wins</h4>
+        <p class="sect-sub" data-i18n="pxA_p">A candidate needs more votes than each rival, not more than all rivals combined. Here is how winners’ vote shares compare across three elections under this rule:</p>
         <table class="splits">
           <thead>
             <tr>
-              <th data-i18n="tq_year">Election</th> <th data-i18n="tq_med">Median winner share</th> <th data-i18n="tq_over">Winners above 50%</th> <th data-i18n="tq_under">Winners below 50%</th> <th data-i18n="tq_spoiler">Spoiler-decided seats</th>
+              <th data-i18n="tq_year">Election</th> <th data-i18n="tq_med">Middle winner’s vote share (median)</th> <th data-i18n="tq_over">Winners above 50%</th> <th data-i18n="tq_under">Winners below 50%</th> <th data-i18n="tq_spoiler">Seats where another candidate’s votes exceed the lead</th>
             </tr>
           </thead>
           <tbody>
@@ -199,19 +195,17 @@
         </table>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/spoilers.png" data-fig="spoilers" data-alt="fig4_alt" alt="Winner-share distributions across three elections with a 50% line, and spoiler-decided seats per election" loading="lazy">
-            <figcaption data-i18n="px_spo_cap">Left: the winner's vote share in the three latest elections — nearly half of 2024 winners sit left of the 50% line, where the frustrated-majority paradox is possible. Right: seats where a third candidate's votes exceeded the whole winning margin.</figcaption>
+            <img src="img/en/spoilers.png" data-fig="spoilers" data-alt="fig4_alt" alt="Winners’ vote shares in three elections, and seats where a third candidate’s votes exceed the winning lead" loading="lazy">
+            <figcaption data-i18n="px_spo_cap">Left: winners’ vote shares in the three latest elections. Nearly half the 2024 winners are below the 50% line. Right: seats where a third candidate had more votes than the winner’s lead. This measures the possibility of a different result, not voters’ preferences.</figcaption>
           </figure>
         </div>
-        <div class="note" data-i18n="pxA_n">
-          The extreme 2024 cases: Attingal — the INC won by 684 votes with the BJP at 311,779 (the margin is 0.2% of the spoiler's vote); Medak, Maldaha Uttar, Baharampur, Patiala — the same family. The spoiling cut both blocs: the winner belonged to INDIA in 112 of these seats, to the NDA in 61.
-        </div>
-        <h4 class="px-sub" data-i18n="pxB_t">Rule 2 · One bloc, one candidate (the unity counterfactual)</h4>
-        <p class="sect-sub" data-i18n="pxB_p">What would party unity have been worth? Pool every vote a bloc's members received in a seat into a single candidate — the rival bloc stays exactly as split as it actually was, third parties keep their votes:</p>
+        <div class="note" data-i18n="pxA_n">In Attingal in 2024, the INC won by 684 votes and the BJP had 311,779: the lead was just 0.2% of the BJP total. Medak, Maldaha Uttar, Baharampur and Patiala show similar arithmetic. Both alliances won seats of this kind: INDIA in 112 and NDA in 61.</div>
+        <h4 class="px-sub" data-i18n="pxB_t">Rule 2 · What if each alliance had one candidate per seat?</h4>
+        <p class="sect-sub" data-i18n="pxB_p">For each seat, I combined all votes cast for one alliance’s candidates into a single total. I left the rival alliance’s candidates and all third parties as they were. This assumes that every voter would support the joint candidate:</p>
         <table class="splits">
           <thead>
             <tr>
-              <th data-i18n="tb_bloc">Bloc</th> <th data-i18n="tb_votes">Votes</th> <th data-i18n="tb_actual">Seats — actual</th> <th data-i18n="tb_india">If INDIA unites</th> <th data-i18n="tb_nda">If NDA unites</th>
+              <th data-i18n="tb_bloc">Alliance</th> <th data-i18n="tb_votes">Votes</th> <th data-i18n="tb_actual">Actual seats</th> <th data-i18n="tb_india">INDIA votes combined</th> <th data-i18n="tb_nda">NDA votes combined</th>
             </tr>
           </thead>
           <tbody>
@@ -226,49 +220,43 @@
             </tr>
           </tbody>
         </table>
-        <div class="note" data-i18n="pxB_n">
-          The asymmetry is structural: the NDA entered 2024 mostly seat-adjusted, the INDIA bloc did not (INC+AAP in Punjab, SP+INC leftovers, West Bengal's four-cornered contests). These are upper bounds with a behavioural assumption — pooling assumes bloc voters would transfer, which Rule 3 shows is plausible in some states and questionable in others. Even full INDIA unity leaves the NDA at 285 — above the 272 needed to govern. The bloc map covers 85.7% of candidate votes; regional parties and independents count as “others”.
-        </div>
-        <h4 class="px-sub" data-i18n="pxC_t">Rule 3 · Where the spoiler votes sit — Uttar Pradesh, booth by booth</h4>
-        <p class="sect-sub" data-i18n="pxC_p">“The BSP's votes would have gone to the SP” is the assumption behind every unity counterfactual. The recovered Form 20 counts (68 of 80 UP constituencies, ~1,300–1,700 stations each) make it checkable as geography: correlate the spoiler's booth-level share with the runner-up's and with the winner's. Both correlations are negative by construction — shares compete for the same 100% — so the informative quantity is the asymmetry between them.</p>
+        <div class="note" data-i18n="pxB_n">The NDA had already coordinated candidates in most seats in 2024. INDIA had more internal contests, including INC and AAP in Punjab, some SP and INC candidates, and four-way races in West Bengal. Combining every vote gives an upper-bound scenario, not a forecast. The area comparisons below cannot establish whether voters would transfer to a joint candidate. Even with all INDIA votes combined, the NDA keeps 285 seats, above the 272 needed for a majority. The alliance classification covers 85.7% of candidate votes; regional parties and independents outside it count as “others”.</div>
+        <h4 class="px-sub" data-i18n="pxC_t">Rule 3 · Where do these voters live? A closer look at Uttar Pradesh</h4>
+        <p class="sect-sub" data-i18n="pxC_p">Would BSP voters have supported the SP instead? Area totals cannot answer that, but they show where support overlaps. Recovered Form 20 records cover 68 of Uttar Pradesh’s 80 constituencies, each with about 1,300–1,700 polling stations. I compared the third candidate’s vote share with the runner-up’s and winner’s shares. Because all shares fit within 100%, negative relationships alone tell us little. I therefore compared the two relationships.</p>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/transfer.png" data-fig="transfer" data-alt="fig5_alt" alt="Correlation asymmetry for 46 UP spoiler cases: blue bars sit on the runner-up's turf, red on the winner's" loading="lazy">
-            <figcaption data-i18n="px_tr_cap">Correlation asymmetry, r(spoiler, runner-up) − r(spoiler, winner), for all 46 spoiler cases. Positive (blue) — the spoiler's votes sit on the runner-up's turf, a pool the runner-up could plausibly absorb; negative (red) — on the winner's. Faint bars: not significant (permutation p ≥ 0.05, 2,000 shuffles).</figcaption>
+            <img src="img/en/transfer.png" data-fig="transfer" data-alt="fig5_alt" alt="Geographic overlap in 46 Uttar Pradesh cases: blue is closer to the runner-up’s support, red to the winner’s" loading="lazy">
+            <figcaption data-i18n="px_tr_cap">For 46 cases, the score is r(third candidate, runner-up) − r(third candidate, winner), where r measures how closely vote shares move together across polling stations. Blue means more overlap with the runner-up’s areas; red means more with the winner’s. Faint bars do not stand out in 2,000 shuffled-data comparisons (permutation p ≥ 0.05).</figcaption>
           </figure>
         </div>
-        <div class="note" data-i18n="pxC_n">
-          In 27 of 46 cases the asymmetry is significant (p &lt; 0.05); in the strong majority the BSP's support overlaps the opposition's (SP/INC) booths far more than the BJP's — Sambhal (+0.32), Dhaurahra (+0.24), Sultanpur (+0.22). Reversed cases exist (Bhadohi −0.20): there the BSP is no obvious SP reservoir. This is ecological overlap — where votes <i>are</i>, not where they <i>would go</i>.
-        </div>
-        <div class="note" data-i18n="pxD_n">
-          Two paradoxes are provably absent: first past the post cannot reward staying home (no-show) or punish a candidate for extra support (perverse response) — a single-round plurality count is immune to both. And everything preference-based — Condorcet loser, centre squeeze, lesser-evil voting — is untestable from any plurality count: India's ballots record one mark each, and no ranked or approval data exists for this election.
-        </div>
+        <div class="note" data-i18n="pxC_n">The difference stands out in 27 of 46 cases (p < 0.05). In most of those cases, BSP support overlaps more with SP/INC support than with BJP support: Sambhal (+0.32), Dhaurahra (+0.24) and Sultanpur (+0.22), for example. Bhadohi goes the other way (−0.20). This shows where votes <i>are</i>, not where they <i>would go</i>.</div>
+        <div class="note" data-i18n="pxD_n">With this single-round counting rule and all other votes fixed, gaining votes cannot make a candidate lose, and staying home cannot help a voter’s chosen candidate win. Other questions need voters’ preferences: for example, who would win a head-to-head contest, or whether people voted for a “lesser evil”. These ballots record one choice, not a ranking or all acceptable candidates, so I cannot test those questions here.</div>
       </section>
       <section>
-        <h3 class="sect" data-i18n="meth_title">Manipulation detection test results</h3>
-        <p class="sect-sub" data-i18n="meth_intro">Seven families of tests used by election statisticians worldwide, run with open-source code on the official ECI constituency export and the recovered Form 20 booth tables — every level India publishes. Summary: all clean at the available levels.</p>
+        <h3 class="sect" data-i18n="meth_title">What the checks found</h3>
+        <p class="sect-sub" data-i18n="meth_intro">I ran seven groups of checks on the Election Commission of India’s constituency data and recovered Form 20 polling-station tables, using code anyone can inspect. Together they do not show a clear pattern of manipulation at these levels. The polling-station coverage is incomplete, and these checks cannot rule out every kind of wrongdoing.</p>
         <div class="m-list">
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
-              <p data-i18n="m1_b">Beyond the honest-decline boundary: zero votes for the leader — nationally and in UP. Recounting without the anomaly zone moves nothing.</p>
+              <h5 data-i18n="m1_t">Votes in unusually high-turnout areas (Shpilkin)</h5>
+              <p data-i18n="m1_b">No votes fall above the turnout cutoffs used here, nationally or in the Uttar Pradesh sample. This check finds no high-turnout group to remove.</p>
               </span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m1_d">What it checks: the Shpilkin method models the honest bell curve of turnout and measures the votes beyond its decline. The boundary (87.6%) is not fitted to 2024: it is the 99.5th percentile of the 2014 election's elector-weighted turnout. To its right stand zero constituencies and zero votes; the “result without the anomalous zone” (36.73%) differs from the observed one (36.50%) only because there is nothing to remove. In Uttar Pradesh's 81 assembly segments with published electors: boundary 82.8% (from UP-2014), tail zero.</p>
+              <p data-i18n="m1_d">This method looks for votes above a turnout cutoff set using an earlier election. The national cutoff is 87.6%, the 99.5th percentile of 2014 turnout weighted by registered voters: only 0.5% of that weighted distribution lies above it. No 2024 constituency, and therefore no votes, falls beyond it. The output lists a recomputed BJP share of 36.73% and an observed share of 36.50%; this is not a count of detected fraudulent votes. For the 81 Uttar Pradesh assembly areas with published registered-voter counts, the 2014-based cutoff is 82.8%, and again no votes fall above it.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Constituency turnout 2024 vs 2014: one bell curve each, no high-turnout tail" loading="lazy">
-                  <figcaption data-i18n="fig1_cap">Turnout of the 542 contested constituencies in 2024 against the 2014 control. One bell curve, fading out by ~80%; the 88–100% zone where stuffing lands contains nothing.</figcaption>
+                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Constituency turnout in 2024 and 2014, with no separate high-turnout group" loading="lazy">
+                  <figcaption data-i18n="fig1_cap">Turnout in the 542 contested constituencies in 2024, compared with 2014. Both have one broad peak and thin out around 80%. There are no constituencies in the 88–100% zone checked for unusually high turnout.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/shpilkin_core.png" loading="lazy" alt="Turnout histogram with the 87.6% boundary and leader votes by turnout">
-                  <figcaption data-i18n="m1_c1">Constituency turnout with the 87.6% anomaly boundary, and BJP votes by turnout — the zone beyond the boundary is empty.</figcaption>
+                  <img src="img/details/en/shpilkin_core.png" loading="lazy" alt="Constituency turnout and BJP votes, with an 87.6% turnout cutoff">
+                  <figcaption data-i18n="m1_c1">Turnout by constituency and BJP votes by turnout. No constituency lies above the 87.6% cutoff.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/controls_turnout.png" loading="lazy" alt="Turnout distributions of 2014 and 2024">
-                  <figcaption data-i18n="m1_c2">Control: turnout distributions of 2014 and 2024 over the constituencies — same shape, same ceiling; no drift toward a high-turnout tail.</figcaption>
+                  <img src="img/details/en/controls_turnout.png" loading="lazy" alt="Turnout in 2014 and 2024 compared">
+                  <figcaption data-i18n="m1_c2">Turnout in 2014 and 2024 has a similar shape and upper limit. There is no new group at unusually high turnout.</figcaption>
                 </figure>
               </div>
             </div>
@@ -276,28 +264,28 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m2_t">Turnout × result scatter and fingerprints</h5>
-              <p data-i18n="m2_b">No “comet tail”, no separated second cluster in the 2D fingerprint — the structure that appears is geography and alliance arithmetic.</p>
+              <h5 data-i18n="m2_t">Does BJP do better where turnout is higher?</h5>
+              <p data-i18n="m2_b">The charts show no separate group with both high turnout and a high BJP share. The visible differences fit regional voting patterns and alliances.</p>
               </span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m2_d">What it checks: in a manipulated count the turnout × result cloud stretches up-right — high-turnout units carry a sharply higher leader share. Here BJP's correlation with turnout is negative (−0.12 nationally, −0.29 in UP segments). The Klimek fingerprint (2D density of turnout × leader share) finds no separated cluster; the second Gaussian component (weight 0.18) is degenerate — pinned near zero share. The correlations that are positive (AITC +0.38, YSRCP +0.33) belong to regional parties whose strongholds vote more — mirrored between government and opposition, i.e. heterogeneity, not direction.</p>
+              <p data-i18n="m2_d">Extra ballots for one party can create a group of areas with both high turnout and a high party share. Here BJP’s share tends to fall slightly as turnout rises: r = −0.12 nationally and −0.29 in the Uttar Pradesh assembly areas. The Klimek “fingerprint” chart, which groups areas by turnout and BJP share, finds no separate group of that kind. A two-group statistical model gives its second component a weight of 0.18, near zero BJP share. Some regional parties show positive relationships (AITC +0.38, YSRCP +0.33). These occur on both sides of the governing-alliance divide and are consistent with differing regional strongholds; correlation alone does not establish the cause.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/comet.png" data-fig="comet" data-alt="fig2_alt" alt="Turnout vs BJP, INC and SP share: clouds slope flat or down, no comet tail" loading="lazy">
-                  <figcaption data-i18n="fig2_cap">Each dot is a constituency (size = electors). The BJP share does not rise with turnout (r = −0.12); the cloud even slopes slightly down — the opposite of a stuffing “comet”.</figcaption>
+                  <img src="img/en/comet.png" data-fig="comet" data-alt="fig2_alt" alt="BJP, INC and SP vote shares against turnout, with no separate high-turnout, high-share group" loading="lazy">
+                  <figcaption data-i18n="fig2_cap">Each dot is a constituency; its size shows registered voters. BJP’s vote share does not rise with turnout (r = −0.12). There is no separate group with both very high turnout and a high BJP share.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/comet_scatter.png" loading="lazy" alt="Turnout vs BJP share cloud, compact and flat">
-                  <figcaption data-i18n="m2_c1">Turnout vs BJP share, one dot per constituency (area = electors): a compact horizontal band, no up-right tail.</figcaption>
+                  <img src="img/details/en/comet_scatter.png" loading="lazy" alt="BJP vote share against turnout, with no separate high-turnout group">
+                  <figcaption data-i18n="m2_c1">Each dot is a constituency, sized by registered voters. There is no separate group with both high turnout and a high BJP share.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/fingerprint_2d.png" loading="lazy" alt="2D fingerprint: one main mass, no fraud cluster">
-                  <figcaption data-i18n="m2_c2">2D election fingerprint weighted by electors: one main mass; the compact up-right cluster typical of manipulated elections is absent.</figcaption>
+                  <img src="img/details/en/fingerprint_2d.png" loading="lazy" alt="Constituencies grouped by turnout and BJP share, with no separate high-turnout, high-share group">
+                  <figcaption data-i18n="m2_c2">Areas grouped by turnout and BJP vote share, weighted by registered voters. There is no separate dense group in the high-turnout, high-share corner.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/correlations.png" loading="lazy" alt="Turnout × share correlation by party, nationally and by state">
-                  <figcaption data-i18n="m2_c3">Turnout × share correlation by party (bars) and by state (heatmap). The leader's is negative; regional parties' positives mirror each other across the alliance divide.</figcaption>
+                  <img src="img/details/en/correlations.png" loading="lazy" alt="How turnout and party vote shares move together, nationally and by state">
+                  <figcaption data-i18n="m2_c3">How turnout and party vote share move together, nationally and by state. BJP’s relationship is negative; positive values for regional parties occur across both alliances.</figcaption>
                 </figure>
               </div>
             </div>
@@ -305,20 +293,20 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m3_t">Round-number peaks (Kobak et al.)</h5>
-              <p data-i18n="m3_b">No excess of exactly-integer turnouts or leader shares — at the constituency level, and across 105,000 recovered UP stations the integer-share rate is BELOW expectation (z = −3.1).</p>
+              <h5 data-i18n="m3_t">Are round percentages unusually common? (Kobak)</h5>
+              <p data-i18n="m3_b">Whole-number turnout and BJP percentages are not unusually common. Across 105,000 recovered Uttar Pradesh polling stations, whole-number BJP shares are slightly less common than expected (z = −3.1).</p>
               </span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m3_d">What it checks: numbers invented at a desk cluster on round values. Among 542 constituencies, 1.11% have exactly integer turnout vs 0.98% expected (z = +0.3) — at ~1.8M electors per unit the test is nearly vacuous, and reported only for completeness. Where the data is fine-grained it is clean too: across the recovered UP stations, 7.85% have an exactly integer BJP share vs 7.95% expected from the binomial null — a deficit, the opposite of the desk-drawn signature. The honest 2014 booth control gives the same picture (turnout peaks 2.02% vs 2.05%, z = −1.1).</p>
+              <p data-i18n="m3_d">People making up totals may favour round numbers. Of 542 constituencies, 1.11% have exactly whole-number turnout percentages, close to the simulated 0.98% (z = +0.3). With about 1.8M registered voters per constituency, this check has little sensitivity. At the recovered Uttar Pradesh polling stations, 7.85% have a whole-number BJP share, below the 7.95% expected by a model of random ballot variation. The 2014 polling-station comparison also shows no excess: whole-number turnout occurs in 2.02%, versus 2.05% expected (z = −1.1). The z score measures distance from the model’s expectation; negative values mean fewer cases.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/integer_peaks.png" loading="lazy" alt="Turnout histogram with 5% gridlines and observed vs Monte-Carlo integer-turnout share">
-                  <figcaption data-i18n="m3_c1">Left: constituency turnout, gridlines at multiples of 5 — no spikes. Right: 1.11% exactly-integer turnouts vs the 0.98% Monte-Carlo expectation.</figcaption>
+                  <img src="img/details/en/integer_peaks.png" loading="lazy" alt="Turnout with lines at multiples of 5%, and whole-number turnout percentages compared with simulations">
+                  <figcaption data-i18n="m3_c1">Left: turnout by constituency, with lines at multiples of 5%. Right: whole-number turnout occurs in 1.11%, versus 0.98% in simulations. There are no unusual spikes.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/booth2014_integer_peaks.png" loading="lazy" alt="2014 booth-level integer turnout peaks at null">
-                  <figcaption data-i18n="m3_c2">The same test on the 2014 booth control (137,969 stations): 2.02% integer turnouts vs 2.05% expected (z = −1.1). This is what honest UP booth data looks like.</figcaption>
+                  <img src="img/details/en/booth2014_integer_peaks.png" loading="lazy" alt="Whole-number turnout percentages at 2014 polling stations compared with the expected rate">
+                  <figcaption data-i18n="m3_c2">The same check on 137,969 polling stations from 2014: 2.02% have whole-number turnout, versus 2.05% expected (z = −1.1). This is a comparison, not proof of how either election was conducted.</figcaption>
                 </figure>
               </div>
             </div>
@@ -326,45 +314,24 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m4_t">Digit tests (Benford, last digit)</h5>
-              <p data-i18n="m4_b">Last digits flat everywhere. The only borderline value — SP's last digit in UP booths (p = 0.03, +0.4 pp on 0s) — is an order of magnitude smaller than invented-number signatures and mirrors 2014's benign profile.</p>
+              <h5 data-i18n="m4_t">Do the digits in vote counts look unusual?</h5>
+              <p data-i18n="m4_b">Last digits are broadly evenly spread. SP’s counts in Uttar Pradesh show a small difference (p = 0.03; 0 endings about 0.4 percentage points above expectation). It is about ten times smaller than the fabrication effects cited in the analysis and resembles the 2014 pattern. It needs rechecking, not a fraud conclusion.</p>
               </span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m4_d">What it checks: fabricated numbers leave fingerprints in the digits. Benford's law on second digits rejects its smooth-count null at booth level (p ≈ 0.002, deviation ≤1.3 pp) — but identically for all four major parties and identically in the honest 2014 control: a stable structural property of UP's booth-size mixture (urban/rural regimes), not a party-specific fabrication trace. Last-digit uniformity — the classic Beber–Scacco test — holds for BJP (p = 0.46), INC (0.25) and BSP (0.06); SP shows the single mildest deviation of this whole analysis (+0.37 pp on trailing 0s, −0.25 pp on 8s; p_mc = 0.027), an order of magnitude below documented fabrication effects. Worth re-checking when the remaining ACs are recovered — not a fraud finding.</p>
+              <p data-i18n="m4_d">I checked second digits against Benford’s expected pattern and last digits against equal frequencies, using the Beber–Scacco approach. At polling-station level, second digits differ from the Benford model (p ≈ 0.002; differences ≤1.3 percentage points), similarly for all four main parties and in 2014. That fits a stable feature of polling-station sizes rather than a party-specific signal, but the check cannot determine the cause. Last-digit tests give BJP p = 0.46, INC 0.25 and BSP 0.06. SP has a small difference: 0 endings are 0.37 points higher and 8 endings 0.25 points lower (simulation p_mc = 0.027), about ten times smaller than the documented fabrication effects cited. I would repeat this check when more assembly-area records are recovered. A small p-value means a poor fit to a model, not the probability of fraud.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/booths.png" data-fig="booths" data-alt="fig3_alt" alt="UP booth counts: last digits flat against the 2014 control; integer shares at or below the null" loading="lazy">
-                  <figcaption data-i18n="fig3_cap">Left: last digits of BJP vote counts (counts ≥ 100) in 2024 and in the honest 2014 control — both flat. Right: share of stations with an exactly integer BJP share, at or below the Monte-Carlo expectation in both years.</figcaption>
+                  <img src="img/en/booths.png" data-fig="booths" data-alt="fig3_alt" alt="Uttar Pradesh polling-station digits and whole-number vote shares compared with 2014 and simulations" loading="lazy">
+                  <figcaption data-i18n="fig3_cap">Left: the last digits of BJP counts of at least 100 votes look evenly spread in both 2024 and the 2014 comparison. Right: the share of polling stations with a whole-number BJP percentage is at or below the simulated expectation in both years.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/booth2024_digit_last.png" loading="lazy" alt="Last-digit distribution of UP booth counts against uniformity">
-                  <figcaption data-i18n="m4_c1">Last digits of booth-level counts (parties pooled), against the uniform expectation and its 95% Monte-Carlo band: within the band everywhere.</figcaption>
+                  <img src="img/details/en/booth2024_digit_last.png" loading="lazy" alt="Last digits of Uttar Pradesh polling-station counts compared with equally likely digits">
+                  <figcaption data-i18n="m4_c1">Last digits of polling-station counts, combining parties. Each stays within the 95% range from simulations with equally likely last digits.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/digit_benford2.png" loading="lazy" alt="Second digits at constituency level against Benford's law">
-                  <figcaption data-i18n="m4_c2">Constituency-level second digits against Benford's law: comfortable (BJP p_mc = 0.29). At booth level the same test deviates equally in 2024 and in the honest 2014 control — structure, not fraud.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </details>
-          <details class="m">
-            <summary>
-              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m5_t">Outliers, machine learning, and the swing vs 2014</h5>
-              <p data-i18n="m5_b">19 of 542 constituencies (3.5%) are neighbour-outliers and 6 are ML-anomalies — small and scattered, audit candidates by construction. Not one constituency combines a 15-point turnout jump with a 15-point leader jump against 2014.</p>
-              </span>
-            </summary>
-            <div class="m-details">
-              <p data-i18n="m5_d">What it checks: two independent screens for odd constituencies. Each constituency is a z-score against the median of its own state: 19 exceed |z| > 4 — an ordinary tail, mixed directions, no clustering. 507 constituencies matched by name between 2014 and 2024: zero double-jumps (turnout AND leader share up sharply together), the sharpest cross-election manipulation signature. The Δ-turnout/Δ-share cloud is structureless.</p>
-              <div class="m-figs">
-                <figure class="fig">
-                  <img src="img/details/en/neighbors_outliers.png" loading="lazy" alt="Neighbour outliers in the robust-z plane, both directions">
-                  <figcaption data-i18n="m5_c1">The 19 outliers in the plane of robust z of turnout × robust z of BJP share: scattered both ways, no high-turnout clustering.</figcaption>
-                </figure>
-                <figure class="fig">
-                  <img src="img/details/en/swing_previous.png" loading="lazy" alt="Turnout swing vs BJP share swing 2014 to 2024; the double-jump corner is empty">
-                  <figcaption data-i18n="m5_c2">Swing in turnout × swing in BJP share, 2014 → 2024, one dot per matched constituency: the up-right double-jump corner is empty.</figcaption>
+                  <img src="img/details/en/digit_benford2.png" loading="lazy" alt="Second digits of constituency vote counts compared with Benford’s expected pattern">
+                  <figcaption data-i18n="m4_c2">At constituency level, second digits show no clear mismatch with Benford’s pattern (BJP p_mc = 0.29). Polling-station counts differ similarly in 2024 and 2014, which limits what that difference can tell us about manipulation.</figcaption>
                 </figure>
               </div>
             </div>
@@ -372,16 +339,20 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m6_t">The Form 20 recovery itself: arithmetically exact</h5>
-              <p data-i18n="m6_b">1.16 million station-candidate rows parsed under per-row checksums; against the official ECI constituency totals nothing exceeds the official count anywhere, and 11 fully-recovered constituencies match within ±0.5%.</p>
+              <h5 data-i18n="m5_t">Which constituencies stand out, and what changed since 2014?</h5>
+              <p data-i18n="m5_b">One comparison flags 19 of 542 constituencies (3.5%); a computer-based screen flags 6. They are scattered and worth inspecting, not established cases of fraud. No matched constituency has both turnout and BJP share jump by 15 percentage points since 2014.</p>
               </span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m6_d">What it checks: the recovery itself. The UP Form 20s are scans and prints scattered across 54 district websites, most of them gone; everything was recovered from the Wayback Machine and a government CDN. Every parsed row must satisfy sum(candidates) = valid and valid + NOTA + rejected = total under exactly one reading of the table layout; rows that fail are withheld, not guessed. Aggregated and compared with the official ECI export: every delta is ≤ 0 — the recovery never counts more votes than the official result — and where the source files are complete the match is within half a percent. Party labels for candidate columns were assigned by matching each constituency's column sums to the official candidate totals (validated &lt;5% deviation wherever station coverage exceeds 90%).</p>
+              <p data-i18n="m5_d">I used two screens to find unusual constituencies. Comparing each with the middle value in its state flags 19 with |z| > 4, meaning a large difference on that comparison scale. The differences go in both directions without one cluster. I also matched 507 constituencies by name between 2014 and 2024. None shows both turnout and BJP share rising sharply together; the chart shows no separate group of such jumps. These comparisons identify places to inspect and do not establish why they differ.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/booth2014_shpilkin_core.png" loading="lazy" alt="2014 booth-level Shpilkin baseline: 0.75% tail">
-                  <figcaption data-i18n="m6_c1">The 2014 booth-level control — the one year with official per-station electors: Shpilkin tail 0.75% of BJP votes, turnout×BJP correlation +0.06. This is the honest baseline the 2024 statistics sit inside.</figcaption>
+                  <img src="img/details/en/neighbors_outliers.png" loading="lazy" alt="Constituencies that differ most from their state’s middle turnout and BJP vote share">
+                  <figcaption data-i18n="m5_c1">The 19 flagged constituencies, compared by turnout and BJP share on a scale measuring distance from their state’s middle values. They are scattered in both directions.</figcaption>
+                </figure>
+                <figure class="fig">
+                  <img src="img/details/en/swing_previous.png" loading="lazy" alt="Change in turnout and BJP vote share from 2014 to 2024, with no group where both rise sharply">
+                  <figcaption data-i18n="m5_c2">Change in turnout and BJP share from 2014 to 2024, one dot per matched constituency. No dot occupies the corner where both rise sharply.</figcaption>
                 </figure>
               </div>
             </div>
@@ -389,16 +360,33 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m7_t">Self-test: the toolkit actually detects fraud</h5>
-              <p data-i18n="m7_b">Synthetic stuffing injected into the clean data fires every alarm (anomaly-zone signal from 0 to 17.6M votes; round-number z from 0.4 to 11.8). The “clean” verdict is a measurement, not a blind spot.</p>
+              <h5 data-i18n="m6_t">Do the recovered Form 20 records add up?</h5>
+              <p data-i18n="m6_b">I checked the arithmetic of 1.16 million polling-station/candidate rows. Their sums never exceed the official constituency counts. The 11 constituencies with complete recovered records match within ±0.5%. This checks the recovered data, not the ballots themselves.</p>
               </span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m7_d">What it checks: the toolkit itself — a clean verdict is only meaningful if the tools can fire. Injecting additive stuffing into the 2024 constituencies grows the anomalous-zone estimate from zero to 17.6 million votes and drives the integer-peak statistic from z = 0.4 to 11.8; in the UP assembly segments the signal reaches 0.87M; at 2014 booth level the tail multiplies ×7. On this data the machinery would see millions of stuffed ballots — it sees none.</p>
+              <p data-i18n="m6_d">Uttar Pradesh’s Form 20 result sheets were scans and printouts on 54 district websites, most no longer available there. I recovered them from the Wayback Machine and a government file server. Each row must have one clear table reading: candidate votes sum to valid votes, and valid votes + NOTA + rejected ballots equal the total. Rows that fail are held back rather than guessed. Recovered sums never exceed the official ECI totals (every difference ≤ 0); where source files are complete, they match within half a percent. I identified party columns by matching their constituency sums to official candidate totals, checking for less than 5% difference where more than 90% of polling stations are covered. These checks do not make incomplete records complete.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/selftest.png" loading="lazy" alt="Self-test: injected stuffing creates the tail the real data lacks">
-                  <figcaption data-i18n="m7_c1">Self-test: the injected mass appears exactly where honest distributions never reach, and every statistic fires. The real 2024 data (blue) stays flat.</figcaption>
+                  <img src="img/details/en/booth2014_shpilkin_core.png" loading="lazy" alt="2014 polling-station comparison: 0.75% of BJP votes above the high-turnout cutoff">
+                  <figcaption data-i18n="m6_c1">The 2014 polling-station comparison includes official registered-voter counts. Its high-turnout zone holds 0.75% of BJP votes, and turnout’s relationship with BJP share is +0.06. It provides context for the 2024 checks.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="m">
+            <summary>
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
+              <h5 data-i18n="m7_t">Can the checks detect changes I deliberately add?</h5>
+              <p data-i18n="m7_b">Adding made-up votes in a simulation increases the unusual-zone estimate from 0 to 17.6M votes and the round-percentage score from z = 0.4 to 11.8. The tools respond to this example of manipulation; that does not mean they detect every kind.</p>
+              </span>
+            </summary>
+            <div class="m-details">
+              <p data-i18n="m7_d">I tested the tools by adding made-up votes to the 2024 constituency data. The unusual-zone estimate rose from zero to 17.6 million votes, while the round-percentage score rose from z = 0.4 to 11.8. The signal reached 0.87M in Uttar Pradesh assembly areas; using 2014 polling stations, the high-turnout estimate grew ×7. These results show sensitivity to the simulated changes, not a guarantee of detecting all real manipulation.</p>
+              <div class="m-figs">
+                <figure class="fig">
+                  <img src="img/details/en/selftest.png" loading="lazy" alt="Deliberately added votes create a high-turnout signal in a simulation">
+                  <figcaption data-i18n="m7_c1">The deliberately added votes create a signal in the high-turnout zone. The original 2024 data are shown in blue. This tests the simulated case only.</figcaption>
                 </figure>
               </div>
             </div>
@@ -408,17 +396,11 @@
       <!-- ══ MINTO: DATA ══ -->
       <section>
         <div class="data">
-          <h3 class="sect" data-i18n="data_title">Data & reproducibility</h3>
+          <h3 class="sect" data-i18n="data_title">Data and how to repeat the checks</h3>
           <ul>
-            <li data-i18n="d1">
-              National results: the Election Commission of India's official constituencywise export (results.eci.gov.in) — 542 constituencies.
-            </li>
-            <li data-i18n="d2">
-              UP booth-level results: 315 Form 20 PDFs from UP district-administration websites, recovered via the Wayback Machine and cdn.s3waas.gov.in — <a href="https://github.com/renatyv/elections-fraud/tree/main/india-2024/release" rel="noopener">dataset in the repository</a>.
-            </li>
-            <li data-i18n="d3">
-              Control election: ECI 2014 constituency and booth exports.
-            </li>
+            <li data-i18n="d1">National results: the Election Commission of India’s official constituency data (results.eci.gov.in), covering 542 constituencies.</li>
+            <li data-i18n="d2">Uttar Pradesh polling-station results: 315 Form 20 PDFs from district-administration websites, recovered through the Wayback Machine and cdn.s3waas.gov.in. <a href="https://github.com/renatyv/elections-fraud/tree/main/india-2024/release" rel="noopener">Download the dataset from the repository</a>.</li>
+            <li data-i18n="d3">Earlier-election comparison: ECI constituency and polling-station data from 2014.</li>
           </ul>
         </div>
       </section>

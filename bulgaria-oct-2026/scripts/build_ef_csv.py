@@ -1,6 +1,7 @@
 """Adapt reconciled CIK numeric protocols for ef-analyze; preserve exclusions."""
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 from pathlib import Path
@@ -9,12 +10,17 @@ BASE = Path(__file__).resolve().parents[1]
 
 
 def main() -> None:
-    source = BASE / "data/official_20261027"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source", default="data/official_20261027")
+    parser.add_argument("--out", default="data/ef")
+    parser.add_argument("--control-label", default="")
+    args = parser.parse_args()
+    source = BASE / args.source
     summary = json.loads((source / "summary.json").read_text())
     sections = json.loads((source / "sections.json").read_text())
     if not summary["sections_reconcile"] or len(sections) != summary["indexed_sections"]:
         raise ValueError("All indexed sections must reconcile candidate by candidate before analysis")
-    output = BASE / "data/ef"
+    output = BASE / args.out
     output.mkdir(parents=True, exist_ok=True)
     excluded, rows = [], []
     names = {"25": "Yotova", "4": "Gyurov", "11": "Kostadinov", "17": "Vasilev", "19": "Mihaylov"}
@@ -47,7 +53,7 @@ def main() -> None:
     audit = {"indexed": len(sections), "eligible": len(rows), "excluded": len(excluded),
              "exclusion_counts": {reason: sum(r["reason"] == reason for r in excluded) for reason in sorted({r["reason"] for r in excluded})},
              "registered": sum(r["registered_voters"] for r in rows), "voted": sum(r["voted"] for r in rows),
-             "denominator": "opening register plus election-day additions", "controls": [],
+             "denominator": "opening register plus election-day additions", "controls": [args.control_label] if args.control_label else [],
              "eligible_leader_votes": sum(r["votes:Yotova"] for r in rows)}
     (output / "audit.json").write_text(json.dumps(audit, indent=2))
     print(json.dumps(audit, indent=2))

@@ -18,6 +18,16 @@ class ProtocolTests(unittest.TestCase):
         self.assertEqual((p.votes["25"], p.votes["4"]), (78, 81))
         self.assertEqual(sum(p.votes.values()) + p.nobody, p.voted)
 
+    def test_runoff_schema_requires_exact_candidate_pair(self) -> None:
+        body = (FIXTURES / "runoff_machine_total.html").read_bytes()
+        p = module.parse_protocol(body, "010100004", "01", 0, "fixture", expected={"4", "25"})
+        self.assertEqual(set(p.votes), {"4", "25"})
+        self.assertLessEqual(sum(p.votes.values()) + p.nobody, p.voted)
+        with self.assertRaisesRegex(ValueError, "schema"):
+            module.parse_protocol(body, "010100004", "01", 0, "fixture")
+        with self.assertRaisesRegex(ValueError, "schema"):
+            module.parse_protocol(body, "010100004", "01", 0, "fixture", expected={"4"})
+
     def test_source_discrepancy_is_preserved(self) -> None:
         p = module.parse_protocol((FIXTURES / "abroad_balance.html").read_bytes(), "321320600", "32", 45, "fixture")
         self.assertEqual(sum(p.votes.values()) + p.nobody, 248)

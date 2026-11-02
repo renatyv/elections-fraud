@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Election Forensics — Independent Statistical Audits</title>
-    <meta name="description" content="Independent election-forensics analyses: Serbia, Bulgaria, Slovakia, Slovenia, Brazil, Portugal, India and the United States. Statistical tests, voting paradoxes, sources and limitations.">
-    <meta property="og:title" content="Election Forensics — Independent Statistical Audits">
-    <meta property="og:description" content="Independent election-forensics analyses: Serbia, Bulgaria, Slovakia, Slovenia, Brazil, Portugal, India and the United States. Statistical tests, voting paradoxes, sources and limitations.">
+    <title>Election Forensics — Checking the election numbers</title>
+    <meta name="description" content="Election results explained in everyday language: what the checks found, how voting rules affect winners, and what the numbers cannot tell us.">
+    <meta property="og:title" content="Election Forensics — Checking the election numbers">
+    <meta property="og:description" content="Election results explained in everyday language: what the checks found, how voting rules affect winners, and what the numbers cannot tell us.">
     <meta property="og:type" content="website">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316324f'/%3E%3Cpath d='M14 34l12 12 24-28' stroke='%231e8e5a' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
@@ -34,58 +34,61 @@
     <main>
       <div class="hero">
         <div class="hero-inner">
-          <div class="kicker" data-i18n="kicker">
-            Independent statistical audits of official results
-          </div>
+          <div class="kicker" data-i18n="kicker">An independent check of official election results</div>
           <h1 data-i18n="h1">Do election numbers add up?</h1>
-          <p class="lead" data-i18n="lead">Precinct-level election-forensics analyses of official results — turnout distributions, digit tests, cross-checks between simultaneous ballots — explained in plain language.</p>
+          <p class="lead" data-i18n="lead">I look for unusual patterns in official election results, one local voting area at a time. Each report explains what I found, how I checked it and what the numbers cannot tell us.</p>
         </div>
       </div>
       <section>
         <h3 class="sect" data-i18n="reports_title">Analyses</h3>
+        <a class="card" href="bulgaria-oct-2026-round-2/index.html">
+          <h4 data-i18n="bg2_title">Bulgaria — presidential runoff, 1 November 2026</h4>
+          <p data-i18n="bg2_desc">Yotova 57.566%, Gyurov 39.483%. All 12,717 protocol totals reconcile. Screening of 10,656 domestic sections does not establish ballot stuffing; one digit flag and 14 protocol discrepancies remain open.</p>
+          <span class="open" data-i18n="open">Open the analysis →</span>
+        </a>
         <a class="card" href="serbia-oct-2026/index.html">
           <h4 data-i18n="rs_title">Serbia — parliamentary election, 25 October 2026</h4>
-          <p data-i18n="rs_desc">Archived interim results: 14 snapshots, 8,124 territorial stations and a 2023 historical reference. Statistical screening leaves accounting gaps and model-relative flags for review. Fixed-vote seat model: 140 Students, 104 Vučić-list, six minority seats.</p>
+          <p data-i18n="rs_desc">I saved 14 updates from the unfinished count, covering 8,124 polling stations, and compared them with 2023. Some totals and unusual patterns still need checking. Keeping the votes fixed, a seat calculation gives 140 seats to Students, 104 to the Vučić list and six to minorities; this is not a prediction.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="bulgaria-oct-2026/index.html">
           <h4 data-i18n="bg_title">Bulgaria — presidential election, 25 October 2026</h4>
-          <p data-i18n="bg_desc">Updated CIK results: 100% processed, Yotova 34.759%, Gyurov 31.952%. All 12,719 section totals reconcile; screening of 10,616 domestic sections covers Shpilkin tails, integer peaks and digits, with protocol discrepancies and limits stated.</p>
+          <p data-i18n="bg_desc">With 100% of results processed, Yotova has 34.759% and Gyurov 31.952%. All 12,719 polling-station totals add up to the national figures. Checks of 10,616 domestic stations found some tally-sheet and digit differences that still need a closer look.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="brazil-oct-2026-round-2/index.html">
           <h4 data-i18n="br2_title">Brazil — presidential runoff, 25 October 2026</h4>
-          <p data-i18n="br2_desc">Verdict: no statistical traces of manipulation. 499,248 sections, eleven families of tests, the honest 2022 runoff on the same sections as a control — plus the election-night capture and the actual vote transfers between the rounds.</p>
+          <p data-i18n="br2_desc">Eleven groups of checks on 499,248 polling sections found no clear evidence of manipulation. I compared the results with the 2022 runoff and saved election-night updates. Estimates of where votes went between rounds have limits: area totals cannot reveal individual choices.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="slovakia-oct-2026/index.html">
           <h4 data-i18n="sk_title">Slovakia — municipal &amp; regional elections, 24 October 2026</h4>
-          <p data-i18n="sk_desc">Verdict: no statistical traces of manipulation. 6,029 + 6,024 precincts, ten families of tests, the honest 2022 elections on the same precincts as a control — and a measured footprint of local machines: 79,290 more votes cast in the mayor race than in the governor race, same voters, same minute.</p>
+          <p data-i18n="sk_desc">Ten groups of checks on 6,029 regional and 6,024 local polling stations found no clear signs of manipulation, using 2022 for comparison. Local races had 79,290 more participants than regional races. That gap alone does not tell us why.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="sloveniya-referendum-2026/index.html">
           <h4 data-i18n="si_title">Slovenia — four referendums, 11 October 2026</h4>
-          <p data-i18n="si_desc">Verdict: no statistical traces of manipulation. 2,984 precincts, four ballots each, eight families of tests, results checked against Wikipedia to the exact vote.</p>
+          <p data-i18n="si_desc">Eight groups of checks on 2,984 polling stations, each with four ballots, found no clear signs of manipulation. The totals match those published on Wikipedia exactly. The report also shows how counting areas instead of votes could change the result.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="brazil-oct-2026-round-1/index.html">
           <h4 data-i18n="br_title">Brazil — presidential 1st round, 4 October 2026</h4>
-          <p data-i18n="br_desc">Verdict: no statistical traces of manipulation. 499,206 sections, 125 million ballots, eleven families of tests, the honest 2022 elections on the same sections as a control.</p>
+          <p data-i18n="br_desc">Eleven groups of checks on 499,206 polling sections and 125 million ballots found no clear evidence of manipulation. The 2022 election provides a comparison. These tests cannot rule out every kind of fraud.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="portugal-2025/index.html">
           <h4 data-i18n="pt_title">Portugal — legislative elections, 18 May 2025</h4>
-          <p data-i18n="pt_desc">Verdict: no statistical traces of manipulation. 3,092 parishes, ten families of tests, precinct protocols of six municipalities checked against official totals to the exact vote. Same votes, different rules: PS leads on votes, trails on seats.</p>
+          <p data-i18n="pt_desc">Ten groups of checks on 3,092 parishes found no clear signs of manipulation. Polling-station totals in six municipalities match the official figures exactly. The voting rules matter too: PS won more votes than CH but fewer seats.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="usa-2024/index.html">
-          <h4 data-i18n="us_title">United States — Senate &amp; House, 5 November 2024</h4>
-          <p data-i18n="us_desc">284 digit tests, county turnout diagnostics and seven potential vote-splitting cases. Statistical flags need follow-up; partial coverage prevents a fraud verdict.</p>
+          <h4 data-i18n="us_title">United States — Senate and House, 5 November 2024</h4>
+          <p data-i18n="us_desc">284 checks of vote-count digits, county turnout comparisons and ten races where other candidates’ votes outnumbered the winner’s lead. Ohio’s unusual digit pattern needs a closer look. The data cover only part of the country and cannot settle whether fraud occurred.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
         <a class="card" href="india-2024/index.html">
           <h4 data-i18n="in_title">India — Lok Sabha, April–June 2024</h4>
-          <p data-i18n="in_desc">Verdict: no statistical traces of manipulation at the levels official data allows. 542 constituencies, 646M ballots — plus 109,952 Uttar Pradesh polling stations recovered from scanned Form 20 PDFs and the honest 2014 booths as a control.</p>
+          <p data-i18n="in_desc">The checks found no clear signs of manipulation in the available data: 542 constituencies, 646 million ballots and 109,952 Uttar Pradesh polling stations recovered from scanned Form 20 tally sheets. I used 2014 for comparison. Missing local data limit what I can conclude.</p>
           <span class="open" data-i18n="open">Open the analysis →</span>
         </a>
       </section>

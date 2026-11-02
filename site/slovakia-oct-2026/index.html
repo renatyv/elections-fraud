@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Slovakia, municipal &amp; regional elections — 24 Oct 2026: statistical fraud check</title>
-    <meta name="description" content="Independent election-forensics analysis of the Slovak local and regional elections of 24 October 2026: tests do not establish statistical traces of manipulation — but the rules let a 32% candidate win.">
-    <meta property="og:title" content="Slovakia, municipal &amp; regional elections — 24 Oct 2026: statistical fraud check">
-    <meta property="og:description" content="Independent election-forensics analysis of the Slovak local and regional elections of 24 October 2026: tests do not establish statistical traces of manipulation — but the rules let a 32% candidate win.">
+    <title>Slovakia, 24 October 2026 — checking the election numbers</title>
+    <meta name="description" content="I checked Slovakia’s local and regional election numbers from 24 October 2026. The tests found no clear signs of manipulation; winners below 50% and turnout gaps need careful interpretation.">
+    <meta property="og:title" content="Slovakia, 24 October 2026 — checking the election numbers">
+    <meta property="og:description" content="I checked Slovakia’s local and regional election numbers from 24 October 2026. The tests found no clear signs of manipulation; winners below 50% and turnout gaps need careful interpretation.">
     <meta property="og:type" content="article">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316324f'/%3E%3Cpath d='M14 36h36M14 28h36' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M14 44h36' stroke='%23ee1c25' stroke-width='6'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="../styles.css">
@@ -33,15 +33,15 @@
       <!-- ══ MINTO: ANSWER ══ -->
       <div class="hero">
         <div class="hero-inner">
-          <div class="kicker" data-i18n="kicker">Independent statistical audit</div>
+          <div class="kicker" data-i18n="kicker">An independent check of the election numbers</div>
           <h1 data-i18n="h1">Two elections in one day, 24 October 2026 — do the numbers add up?</h1>
           <div class="verdict">
             <div class="check" aria-hidden="true">
               ✓
             </div>
             <div>
-              <h2 data-i18n="verdict_title">Tests do not establish statistical traces of manipulation</h2>
-              <p class="v-line" data-i18n="verdict_sub"><b>6,029</b> regional-race precincts and <b>6,024</b> municipal-race precincts, checked against the same races in 2022. Statistical tests cannot rule out all manipulation.</p>
+              <h2 data-i18n="verdict_title">These tests found no clear signs of manipulation</h2>
+              <p class="v-line" data-i18n="verdict_sub">I checked <b>6,029</b> polling stations in the regional races and <b>6,024</b> in the local races, using 2022 for comparison. These tests cannot rule out every kind of manipulation.</p>
             </div>
           </div>
           <div class="verdict flip">
@@ -49,18 +49,18 @@
               ⇄
             </div>
             <div>
-              <p class="flip-head" data-i18n="verdict2_title">Plurality winners and a participation gap between races</p>
+              <p class="flip-head" data-i18n="verdict2_title">A candidate can win with 32%, and turnout differs between races</p>
               <p class="v-line" data-i18n="flip1_line"><b>68%</b> of valid votes in Košický kraj went to other candidates — Rastislav Trnka won with <b>32.0%</b></p>
-              <p class="v-line" data-i18n="flip2_line">Across <b>3,556 comparable precincts</b>, the municipal election recorded <b>79,290</b> more participants than the regional election</p>
+              <p class="v-line" data-i18n="flip2_line">The local races had <b>79,290</b> more participants than the regional races across <b>3,556 comparable polling stations</b></p>
             </div>
           </div>
-          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a></nav>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">What the rules change ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
       <section>
         <h3 class="sect" data-i18n="sit_title">What was decided on 24 October 2026</h3>
-        <p class="sect-sub" data-i18n="sit_intro">Slovakia elected governors of 8 self-governing regions (OSK) and mayors of 2,921 municipalities plus the Bratislava and Košice city mayors (OSO). These offices use single-round plurality. Council elections were held alongside them. Official participation: 46.56% regional, 48.48% municipal (2022: 43.75% and 44.86%). All eight incumbent governors were re-elected.</p>
+        <p class="sect-sub" data-i18n="sit_intro">Slovakia elected governors for 8 regions (OSK) and mayors for 2,921 municipalities, plus the city mayors of Bratislava and Košice (OSO). Whoever gets the most votes wins in one round, even below 50%. Voters also chose councils. Official turnout was 46.56% in regional elections and 48.48% in local elections (2022: 43.75% and 44.86%). All eight governors kept their posts.</p>
         <div class="table-wrap">
           <table class="splits">
             <thead>
@@ -116,7 +116,7 @@
           </div>
           <div class="res-card rejected">
             <h4 data-i18n="ke_name">Ladislav Lörinc — Košice</h4>
-            <div class="sub" data-i18n="ke_sub">city mayor, Košická strana — a minority winner</div>
+            <div class="sub" data-i18n="ke_sub">city mayor, Košická strana — won with less than half the votes</div>
             <div class="bar-row">
               <span>Lörinc</span> 39.89%
             </div>
@@ -132,120 +132,103 @@
             <div class="outcome rejected" data-i18n="ke_out">68,592 valid ballots; 60.11% went to other candidates</div>
           </div>
         </div>
-        <div class="note" data-i18n="mayors_note">Mayors: 2,912 elected, 59.6% of all mayor-race votes went to independents. In 395 municipalities (13.6%) the winner took less than half of the valid votes.</div>
+        <div class="note" data-i18n="mayors_note">2,912 mayors were elected. Independents received 59.6% of all votes for mayor. In 395 municipalities (13.6%), the winner had less than half the valid votes.</div>
       </section>
       <!-- ══ MINTO: KEY FINDINGS ══ -->
       <section>
-        <h3 class="sect" data-i18n="f_title">Three things the numbers say</h3>
+        <h3 class="sect" data-i18n="f_title">Three main findings</h3>
         <div class="args">
           <div class="arg">
             <div class="num">
               1
             </div>
-            <h4 data-i18n="f1_t">No manipulation signature established by the tests</h4>
-            <p data-i18n="f1_p">The Shpilkin high-turnout tail contains 0.4–4.7% of the leaders' votes; removing it changes their shares by at most 0.6 percentage points. Round-number statistics stay within |z| < 3. Candidate digit tests do not reject their null models; the municipal independents aggregate needs a caveat (second-digit p = 0.017). Simulated stuffing increases the regional tail signal ×6–14, demonstrating sensitivity to that simulation.</p>
+            <h4 data-i18n="f1_t">The checks found no clear pattern of manipulation</h4>
+            <p data-i18n="f1_p">The high-turnout areas selected by the Shpilkin check hold 0.4–4.7% of the leaders’ votes. Removing them changes vote shares by at most 0.6 percentage points. Round percentages are not unusually common (|z| < 3). Candidate vote-count digits fit the comparison patterns; combining all local independents gives one result needing caution (second-digit p = 0.017). Adding made-up ballots in a test increases the regional high-turnout measure ×6–14.</p>
           </div>
           <div class="arg">
             <div class="num">
               2
             </div>
-            <h4 data-i18n="f2_t">The rules let a 32% candidate win</h4>
-            <p data-i18n="f2_p">Two of eight governors were elected by a minority (Trnka 32.0%, Majerský 48.8%). For mayors: 13.6% won without a majority, and 37.5% of all mayor-race votes — 779,695 ballots — elected nobody. A second round exists nowhere in the system.</p>
+            <h4 data-i18n="f2_t">The rules let a candidate win with 32%</h4>
+            <p data-i18n="f2_p">Two of eight governors won with less than half the votes: Trnka with 32.0%, Majerský with 48.8%. Among mayors, 13.6% won below 50%. Losing candidates received 37.5% of all mayoral votes, or 779,695 ballots. There is no second round.</p>
           </div>
           <div class="arg">
             <div class="num">
               3
             </div>
-            <h4 data-i18n="f3_t">Two ballots, one visit — and two different electorates</h4>
-            <p data-i18n="f3_p">Across 3,556 comparable precincts in municipalities with a single municipal electoral district, municipal participation exceeded regional participation by a net 79,290. The largest municipal gaps include Jarovnice (1,726), Zlaté Klasy (1,716) and Bystrany (1,145). The 2022 sample shows a similar gap (99,229 across 3,417 precincts). These aggregate counts do not identify why individuals participated in only one election.</p>
+            <h4 data-i18n="f3_t">Two races on one day, with different turnout</h4>
+            <p data-i18n="f3_p">I compared 3,556 polling stations in municipalities with one local electoral district. The local races had 79,290 more participants overall. Some of the largest gaps were in Jarovnice (1,726), Zlaté Klasy (1,716) and Bystrany (1,145). A similar comparison for 2022 shows a gap of 99,229 across 3,417 stations. The totals cannot tell me why a person took part in only one race.</p>
           </div>
         </div>
       </section>
       <!-- ══ MINTO: PARADOXES ══ -->
       <section id="paradoxes">
-        <h3 class="sect" data-i18n="px_title">Same voters, different races — what the rules decide</h3>
-        <p class="sect-sub" data-i18n="px_intro">How much do the rules themselves decide? The joint Slovak election is a natural laboratory: two first-past-the-post races, one visit, one electorate. Theory calls the consequences voting paradoxes; here they are simply measurements.</p>
-        <h4 class="px-sub" data-i18n="pxA_t">1 · Joint candidacies: bloc totals changed between elections</h4>
-        <p class="sect-sub" data-i18n="pxA_p">Joint candidacies in 2026 can be compared with the combined 2022 votes of candidates assigned to the same bloc. Viskupič gained 48%, Becík 81%, Jurinová 68% and Svítková 150%; Baška lost 13%. Several of these blocs already had only one candidate in 2022, so growth cannot be attributed to consolidation alone. In Košický, the opposition total fell from 122,289 to 73,304 (−40.1%). These are comparisons across four years, not a controlled test of vote-splitting or voter transfers.</p>
+        <h3 class="sect" data-i18n="px_title">How the rules and the races affect the result</h3>
+        <p class="sect-sub" data-i18n="px_intro">The governor and mayor races took place on the same day. In both, the candidate with the most votes wins. I looked at winners below 50%, changes since 2022 and differences in turnout between the two races.</p>
+        <h4 class="px-sub" data-i18n="pxA_t">1 · How support for party groups changed since 2022</h4>
+        <p class="sect-sub" data-i18n="pxA_p">I compared each joint candidate in 2026 with the combined 2022 votes of candidates put in the same political group. Viskupič gained 48%, Becík 81%, Jurinová 68% and Svítková 150%; Baška lost 13%. Several groups already had one candidate in 2022, so joining forces cannot explain all the gains. In Košický, the opposition total fell from 122,289 to 73,304 (−40.1%). Four years also brought changes in candidates and turnout. This comparison cannot show which voters switched or isolate the effect of splitting votes.</p>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/blocs.png" data-fig="blocs" data-alt="blocs_alt" alt="Per region and bloc: the combined 2022 vote of the bloc's candidates versus the 2026 joint candidate's vote" loading="lazy">
-            <figcaption data-i18n="px_blocs_cap">Governor races: combined 2022 votes for candidates assigned to each bloc (grey) and the 2026 joint candidate (green). Changes also reflect turnout, candidates and four years of political change.</figcaption>
+            <img src="img/en/blocs.png" data-fig="blocs" data-alt="blocs_alt" alt="Votes for each political group in 2022 compared with its joint candidate in 2026, by region" loading="lazy">
+            <figcaption data-i18n="px_blocs_cap">Governor races: grey bars add up each political group’s candidates in 2022; green bars show its joint candidate in 2026. Changes can also come from turnout, different candidates and four years of political change.</figcaption>
           </figure>
         </div>
-        <h4 class="px-sub" data-i18n="pxB_t">2 · Plurality winners without a majority</h4>
-        <p class="sect-sub" data-i18n="pxB_p">In Košický kraj, Trnka won 32.0% of valid votes; 68.0% went to other candidates. His margin was 3,117 votes. Majerský won 48.8% in Prešovský. Among mayors, 134 won with under 40%. A runoff in Košický would involve the top two candidates, with about 37% of first-round votes cast for others. Plurality ballots do not record later preferences, so they cannot determine the hypothetical runoff result. Voting for someone else does not establish opposition to the winner in a runoff.</p>
+        <h4 class="px-sub" data-i18n="pxB_t">2 · Winning with less than half the votes</h4>
+        <p class="sect-sub" data-i18n="pxB_p">Trnka won Košický kraj with 32.0% of valid votes and a lead of 3,117; other candidates had 68.0% between them. Majerský won Prešovský with 48.8%. Among mayors, 134 winners had under 40%. In a hypothetical Košický run-off, the top two would compete again, while about 37% of first-round votes had gone to others. The ballots record one choice. They cannot tell me how those voters would choose between the finalists. Voting for another candidate does not necessarily mean opposing the winner in a second round.</p>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/winners.png" data-fig="winners" data-alt="winners_alt" alt="Histogram of the winning mayor's share of valid votes, 2022 versus 2026, with the 50% line" loading="lazy">
-            <figcaption data-i18n="px_win_cap">Winning mayor's share of valid votes: 2,912 municipalities in 2026 (green) against 2,913 in 2022 (grey). The mass below the 50% line barely moves.</figcaption>
+            <img src="img/en/winners.png" data-fig="winners" data-alt="winners_alt" alt="Winning mayors’ vote shares in 2022 and 2026, with a line at 50%" loading="lazy">
+            <figcaption data-i18n="px_win_cap">The winning mayor’s share in 2,912 municipalities in 2026 (green) and 2,913 in 2022 (grey). A similar share of winners falls below the 50% line.</figcaption>
           </figure>
         </div>
-        <h4 class="px-sub" data-i18n="pxC_t">3 · Counting night: no reversal after 38% counted</h4>
-        <p class="sect-sub" data-i18n="pxC_p">Thirty-six snapshots cover all eight governor races and eight regional-capital mayor races. No observed leader changed. The first snapshot was taken with about 38% of regional precincts counted nationally; regional count progress was unavailable. Stable leads do not establish that counting was uniform or exclude manipulation before or between snapshots.</p>
+        <h4 class="px-sub" data-i18n="pxC_t">3 · The leaders stayed ahead in the saved count updates</h4>
+        <p class="sect-sub" data-i18n="pxC_p">I saved 36 updates covering all eight governor races and eight regional-capital mayor races. The leader never changed in these updates. Recording began after about 38% of regional polling stations had been counted nationwide; progress by region was unavailable. This covers only the saved updates. Stable leads cannot rule out manipulation before or between them, or show that every area counted at the same pace.</p>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/intraday.png" data-fig="intraday" data-alt="intraday_alt" alt="Candidate shares versus count progress in Košický region: Trnka's green line stays on top throughout" loading="lazy">
-            <figcaption data-i18n="px_int_cap">Košický governor race: candidate shares against national regional-election count progress, from about 38% counted to the final snapshot. Trnka leads in every captured snapshot.</figcaption>
+            <img src="img/en/intraday.png" data-fig="intraday" data-alt="intraday_alt" alt="Trnka’s green line stays ahead in every saved update of the Košický governor race" loading="lazy">
+            <figcaption data-i18n="px_int_cap">Košický governor race: candidate shares from about 38% counted nationwide to the last saved update. Trnka leads throughout. The progress figure is national, rather than specific to Košický.</figcaption>
           </figure>
         </div>
-        <h4 class="px-sub" data-i18n="pxD_t">4 · One visit, different participation</h4>
-        <p class="sect-sub" data-i18n="pxD_p">The matched sample covers 3,556 precincts in municipalities with a single municipal electoral district. Municipal participation is higher by a net 79,290, with participation rates correlated at r = 0.844. The gap includes 113 precincts with different registered-voter totals. Foreign residents with permanent residence can vote in both elections; EU citizenship does not explain a municipal-only entitlement. The counts show different participation, but do not establish clientelism, coercion or individual voter motives.</p>
+        <h4 class="px-sub" data-i18n="pxD_t">4 · More people took part in the local race</h4>
+        <p class="sect-sub" data-i18n="pxD_p">The comparison covers 3,556 polling stations in municipalities with one local electoral district. Local participation is higher by 79,290 overall. Places with high turnout in one race usually also have high turnout in the other (r = 0.844). In 113 stations, the registered-voter totals differ. Foreign permanent residents can vote in both races; EU citizenship does not give a local-only voting right. The gap cannot tell me whether pressure, favours in return for votes or other motives played a part.</p>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/dual.png" data-fig="dual" data-alt="dual_alt" alt="Scatter of participation in the two races per polling station; red dots mark stations with gaps over 300 voters" loading="lazy">
-            <figcaption data-i18n="px_dual_cap">Participation in the governor race (x) against the mayor race (y), 3,556 comparable stations. Red: the differential-participation extremes.</figcaption>
+            <img src="img/en/dual.png" data-fig="dual" data-alt="dual_alt" alt="Participation in the two races by polling station; red dots mark gaps above 300 voters" loading="lazy">
+            <figcaption data-i18n="px_dual_cap">Each dot is one of 3,556 comparable polling stations. Governor-race participation runs left to right; mayor-race participation runs bottom to top. Red dots have the largest gaps.</figcaption>
           </figure>
         </div>
-        <div class="note" data-i18n="pxD_n">Out of scope, and why: Condorcet, centre-squeeze and spoiler items need ranked preferences that plurality ballots do not carry; the governor races are at-large in fixed regions, so there is nothing to gerrymander; and lesser-evil desertion is identifiable only from individual panel data. The full paradox analysis — with tables and the 2022 comparisons — is in PARADOXES.md of the repository.</div>
+        <div class="note" data-i18n="pxD_n">Some voting questions need people’s second and later choices, which these ballots do not record: Condorcet comparisons, whether a compromise candidate was squeezed out, and which other candidate a losing candidate’s voters preferred. Governor races cover whole, fixed regions, so this analysis has no smaller districts to redraw. To know whether someone switched to a “lesser evil”, I would need to follow individual voters over time. The full analysis and 2022 comparisons are in PARADOXES.md in the repository.</div>
       </section>
       <!-- ══ MINTO: METHODS ══ -->
       <section>
-        <h3 class="sect" data-i18n="meth_title">Manipulation detection test results</h3>
-        <p class="sect-sub" data-i18n="meth_intro">The official precinct data were checked with the open-source toolkit: eight governor races at regional level, each with its 2022 counterpart as a reference, and the mayor race nationwide. The tests do not establish statistical traces of manipulation. Figures below show Košický, the closest governor race, and the national mayor run; the full report discusses the other regions and limitations.</p>
+        <h3 class="sect" data-i18n="meth_title">What the checks found</h3>
+        <p class="sect-sub" data-i18n="meth_intro">I used code anyone can inspect to check the official polling-station totals: each of the eight governor races against 2022, and the mayor races nationwide. Together, the tests found no clear signs of manipulation. The charts show Košický, the closest governor race, and the national mayor results. The full report covers the other regions and the limits of the checks.</p>
         <div class="m-list">
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
-              <p data-i18n="m1_b">The tail beyond the honest turnout decline holds 0.4–4.7% of the winner's votes; removing it shifts any result by at most 0.6 points. Same as 2022.</p>
+              <h5 data-i18n="m1_t">Votes in unusually high-turnout areas (Shpilkin)</h5>
+              <p data-i18n="m1_b">Areas above the turnout cutoff hold 0.4–4.7% of the winners’ votes. Removing all ballots there changes any vote share by at most 0.6 percentage points, similar to 2022. These votes are not necessarily fraudulent.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m1_d">This implementation sets its high-turnout boundary at the electorate-weighted 99.5th percentile of the 2022 reference turnout distribution. It counts all leader votes above that boundary, then recalculates shares after removing all ballots in that tail. It does not fit a Gaussian to estimate fraudulent votes. Governor tails contain 0.42–4.69% of the leaders' votes; the municipal independents aggregate has a 0.43% tail. These are sensitivity calculations, not counts of proven fraudulent ballots.</p>
+              <p data-i18n="m1_d">I set the turnout cutoff using the 2022 results: the 99.5th percentile, weighted by registered voters, near the top of that turnout distribution. I then counted leaders’ votes above the cutoff and recalculated shares without any ballots from those areas. This counts a high-turnout zone; it does not estimate how many ballots were fake by fitting a bell curve. The zone holds 0.42–4.69% of governor-race leaders’ votes and 0.43% of the combined independent candidates’ mayoral votes. Removing the zone is a what-if check, not a count of fraudulent ballots.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Turnout histograms of the mayor race, 2026 against the 2022 control: the same smooth bell" loading="lazy">
-                  <figcaption data-i18n="fig1_cap">Turnout across 6,024 precincts, mayor race: 2026 (green) against the 2022 control (grey) — one smooth bell, fading out by ~85%.</figcaption>
+                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Mayoral turnout in 2026 and 2022 forms a similar broad peak" loading="lazy">
+                  <figcaption data-i18n="fig1_cap">Mayoral turnout across 6,024 polling stations: 2026 in green, 2022 in grey. Both form one broad peak and thin out around 85%.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/kosicky/shpilkin_core.png" data-dfig="kosicky/shpilkin_core" data-alt="m1_a1" alt="Turnout distribution and winner votes by turnout, Košický region: small tail beyond the boundary" loading="lazy">
-                  <figcaption data-i18n="m1_c1">Košický: the tail beyond the honest-decline boundary holds 2.0% of Trnka's votes; without it 31.93% instead of 32.01% — the winner is unchanged.</figcaption>
+                  <img src="img/details/en/kosicky/shpilkin_core.png" data-dfig="kosicky/shpilkin_core" data-alt="m1_a1" alt="Košický turnout and the winner’s votes, with the small high-turnout zone marked" loading="lazy">
+                  <figcaption data-i18n="m1_c1">In Košický, the high-turnout zone holds 2.0% of Trnka’s votes. Removing all ballots there changes his share from 32.01% to 31.93%; he still wins.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/mayors/shpilkin_core.png" data-dfig="mayors/shpilkin_core" data-alt="m1_a2" alt="Turnout distribution and leader votes by turnout, mayor race nationwide: small tail" loading="lazy">
-                  <figcaption data-i18n="m1_c2">Mayor race nationwide: the tail holds 0.43% of the independents' votes — 59.56% → 59.64% honest.</figcaption>
+                  <img src="img/details/en/mayors/shpilkin_core.png" data-dfig="mayors/shpilkin_core" data-alt="m1_a2" alt="Mayoral turnout and independent candidates’ votes, with the high-turnout zone marked" loading="lazy">
+                  <figcaption data-i18n="m1_c2">In mayor races nationwide, the high-turnout zone holds 0.43% of independents’ votes. Removing all ballots there changes their combined share from 59.56% to 59.64%.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/kosicky/controls_turnout.png" data-dfig="kosicky/controls_turnout" data-alt="m1_a3" alt="Turnout histograms of 2026 and 2022 overlap" loading="lazy">
-                  <figcaption data-i18n="m1_c3">The 2022 control (blue) against 2026 (green) in Košický: the same histogram shape. The boundary is read off the honest 2022 election.</figcaption>
-                </figure>
-              </div>
-            </div>
-          </details>
-          <details class="m">
-            <summary>
-              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
-              <p data-i18n="m2_b">One continuous cloud with a smooth city/countryside gradient — no separate tail of high-turnout, high-result precincts.</p>
-              </span> <span class="chev" aria-hidden="true">▶</span>
-            </summary>
-            <div class="m-details">
-              <p data-i18n="m2_d">What it checks: ballot-stuffing ties high turnout to high result — on falsified data a separate “tail” of 80–100%-turnout precincts stretches toward high results. Here the cloud is one body: the winner's share moves smoothly with turnout, in the winner's favour in Bratislavský and Trenčiansky (urban) and against in Košický (rural mobilisation). Precincts above 80% turnout are rare and small.</p>
-              <div class="m-figs">
-                <figure class="fig">
-                  <img src="img/details/en/kosicky/comet_scatter.png" data-dfig="kosicky/comet_scatter" data-alt="m2_a1" alt="Turnout vs winner share scatter, Košický region: one continuous cloud" loading="lazy">
-                  <figcaption data-i18n="m2_c1">Košický: turnout × Trnka's share. The negative gradient is the city/village split; there is no separate cloud at high turnout.</figcaption>
+                  <img src="img/details/en/kosicky/controls_turnout.png" data-dfig="kosicky/controls_turnout" data-alt="m1_a3" alt="Košický turnout curves for 2026 and 2022 overlap" loading="lazy">
+                  <figcaption data-i18n="m1_c3">Košický turnout has a similar shape in 2022 (blue) and 2026 (green). I used the 2022 results to set the cutoff.</figcaption>
                 </figure>
               </div>
             </div>
@@ -253,16 +236,16 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
-              <p data-i18n="m3_b">The 2-cluster weights sit in the same range as reference clean elections; the 80–100%-turnout fraud island does not exist.</p>
+              <h5 data-i18n="m2_t">Does the winner do better where turnout is higher?</h5>
+              <p data-i18n="m2_b">The chart shows one continuous group, with gradual differences between cities and villages. There is no separate group with both high turnout and a high vote share for the winner.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m3_d">What it checks: Klimek et al. (PNAS 2012) model precincts as a mix of two 2D clusters in the turnout × result plane; falsified elections produce a compact second cluster at 80–100% turnout with near-unanimous results. The second-component weights here (0.41–0.75) match the reference clean elections run with the same tool (Portugal 2025: 0.66; Slovenia 2026: 0.42–0.48), and the density above 80% turnout is empty.</p>
+              <p data-i18n="m2_d">Adding ballots for one candidate can create a rising “comet tail”: areas with 80–100% turnout and very high support. Here the dots form one continuous group. The winner’s share rises with turnout in Bratislavský and Trenčiansky, and falls in Košický, alongside urban and rural differences. Stations above 80% turnout are rare and small. A relationship on this chart would not by itself prove added ballots.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/kosicky/fingerprint_2d.png" data-dfig="kosicky/fingerprint_2d" data-alt="m3_a1" alt="Election fingerprint, Košický region: a single cloud, no cluster at 80–100% turnout" loading="lazy">
-                  <figcaption data-i18n="m3_c1">Košický: the fingerprint is one cloud; the empty upper-right corner is where a fraud island would sit.</figcaption>
+                  <img src="img/details/en/kosicky/comet_scatter.png" data-dfig="kosicky/comet_scatter" data-alt="m2_a1" alt="Košický turnout against the winner’s share: one continuous group of dots" loading="lazy">
+                  <figcaption data-i18n="m2_c1">Košický: Trnka’s share falls as turnout rises, alongside the city–village split. There is no separate group at high turnout.</figcaption>
                 </figure>
               </div>
             </div>
@@ -270,16 +253,16 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
-              <p data-i18n="m4_b">No excess of whole-percentage turnouts or results: all statistics within ±2.7, most within ±1.</p>
+              <h5 data-i18n="m3_t">Groups on the turnout chart (Klimek)</h5>
+              <p data-i18n="m3_b">The model’s two group sizes are in the range seen in comparison elections. There is no separate high-support group at 80–100% turnout.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m4_d">What it checks: numbers typed in by hand cluster at round values — a turnout ending exactly at a whole percent should be rare. The test compares the share of integer values against a Monte Carlo null built from the same data. Turnout z-scores run −0.3…+2.7 (Trnavský's +2.7 — its 2022 reference scores +3.0, a stable property of its small villages, not handwriting); winner-share z-scores −2.3…+1.5.</p>
+              <p data-i18n="m3_d">The Klimek approach (PNAS 2012) fits two groups to the chart of turnout and the winner’s vote share. A separate group with 80–100% turnout and almost unanimous support can be a warning sign. Here the second group’s weight is 0.41–0.75, similar to comparisons run with the same tool: Portugal 2025, 0.66; Slovenia 2026, 0.42–0.48. There is no dense group above 80% turnout. The model describes groups; their size alone cannot show whether votes were manipulated.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/kosicky/integer_peaks.png" data-dfig="kosicky/integer_peaks" data-alt="m4_a1" alt="Integer-percentage peaks, Košický region: observed bars match the Monte Carlo null" loading="lazy">
-                  <figcaption data-i18n="m4_c1">Košický: integer turnout z = −0.7, winner share z = −0.9 — within noise.</figcaption>
+                  <img src="img/details/en/kosicky/fingerprint_2d.png" data-dfig="kosicky/fingerprint_2d" data-alt="m3_a1" alt="Košický turnout and vote-share chart: no separate group at 80–100% turnout" loading="lazy">
+                  <figcaption data-i18n="m3_c1">Košický: the dots form one main group. The upper-right corner, where high turnout would meet high support, is empty.</figcaption>
                 </figure>
               </div>
             </div>
@@ -287,16 +270,16 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m5_t">Digit tests (Benford, last digit)</h5>
-              <p data-i18n="m5_b">Governor-race digit tests do not reject their respective null models; the pooled independents column in the mayor race has second-digit p = 0.017 and needs an aggregation caveat.</p>
+              <h5 data-i18n="m4_t">Are round percentages unusually common? (Kobak)</h5>
+              <p data-i18n="m4_b">Whole-number turnout and vote-share percentages show no clear excess. All test scores are within ±2.7, most within ±1; these scores measure distance from the expected pattern.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m5_d">Last-digit tests compare vote-count endings with a uniform distribution; second-digit tests compare with Benford's distribution. Across the eight governor runs, winner and runner-up columns each undergo both tests; the lowest candidate-level Monte Carlo p is 0.065. The municipal independents column pools thousands of candidates and has second-digit p = 0.017. Aggregation and local variation complicate interpretation; this result alone neither proves nor rules out manipulation.</p>
+              <p data-i18n="m4_d">Invented totals can favour round percentages. I compared how often whole percentages appear with random simulations based on these data. The z score measures distance from that expected result. Turnout scores range from −0.3 to +2.7, and winner-share scores from −2.3 to +1.5. Trnavský has +2.7, compared with +3.0 in 2022. That recurring result is consistent with the area’s small villages and does not by itself establish invented totals.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/mayors/digit_last.png" data-dfig="mayors/digit_last" data-alt="m5_a1" alt="Last-digit distribution, mayor race: uniform, no excess of 0s and 5s" loading="lazy">
-                  <figcaption data-i18n="m5_c1">Mayor race, last digits of the independents' counts: uniform, no excess of 0s and 5s (p = 0.06).</figcaption>
+                  <img src="img/details/en/kosicky/integer_peaks.png" data-dfig="kosicky/integer_peaks" data-alt="m4_a1" alt="Košický whole-percentage frequencies compared with random simulations" loading="lazy">
+                  <figcaption data-i18n="m4_c1">Košický scores are close to the simulated expectation: z = −0.7 for whole-number turnout and −0.9 for the winner’s share.</figcaption>
                 </figure>
               </div>
             </div>
@@ -304,20 +287,37 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m6_t">Outliers vs neighbours + machine learning</h5>
-              <p data-i18n="m6_b">0–19 flagged precincts per region (0–2.2%), 6.4% in the nationwide mayor run — small places, mixed directions; the same order as clean reference elections.</p>
+              <h5 data-i18n="m5_t">Do the digits in vote counts look unusual?</h5>
+              <p data-i18n="m5_b">Governor candidates’ digits do not differ clearly from the comparison patterns. Combining all independent mayor candidates gives second-digit p = 0.017; pooling many different candidates makes that result harder to interpret.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m6_d">What it checks: two independent screens — each precinct against the median of its district (robust z-scores, |z| &gt; 4) and an Isolation Forest over four features. Governor races flag 0–19 precincts each (Portugal 2025, same tool: 2.6%). The mayor run flags 383 of 6,024 — expected, because the comparison group (an entire county) mixes municipalities of wildly different competitiveness; the flagged names are the small villages whose mayor race legitimately turns out 80–90% while their region averages 45 (see the differential-participation paradox above).</p>
+              <p data-i18n="m5_d">I checked whether final digits occur equally often and whether second digits follow the Benford comparison pattern. Both the winner and runner-up in each of the eight governor races undergo both tests. Their lowest simulated p-value is 0.065. The mayoral independents total combines thousands of candidates and gives second-digit p = 0.017. Pooling candidates and local differences can affect this result. It cannot settle whether manipulation occurred.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/mayors/neighbors_outliers.png" data-dfig="mayors/neighbors_outliers" data-alt="m6_a1" alt="Outliers versus county neighbours, mayor race: scattered small precincts" loading="lazy">
-                  <figcaption data-i18n="m6_c1">Mayor race: precincts against their county median. The flags are small villages at legitimately extreme mayor-race turnout.</figcaption>
+                  <img src="img/details/en/mayors/digit_last.png" data-dfig="mayors/digit_last" data-alt="m5_a1" alt="Independent mayor candidates’ final digits, with no excess of 0 or 5" loading="lazy">
+                  <figcaption data-i18n="m5_c1">Independent mayor candidates’ final digits occur about equally often, with no excess of 0 or 5 (p = 0.06).</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+          <details class="m">
+            <summary>
+              <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
+              <h5 data-i18n="m6_t">Which polling stations differ most from others?</h5>
+              <p data-i18n="m6_b">The comparison flags 0–19 stations per region (0–2.2%) and 6.4% in the national mayor races. These are small places with differences in several directions, at rates of a similar order to the comparison elections.</p>
+              </span> <span class="chev" aria-hidden="true">▶</span>
+            </summary>
+            <div class="m-details">
+              <p data-i18n="m6_d">I used two screens: compare each station with the middle value in its district (a robust z score, flagged at |z| &gt; 4), and use Isolation Forest, a computer method that finds unusual combinations of four measurements. Governor races flag 0–19 stations each; Portugal 2025 gave 2.6% with the same tool. The mayoral comparison flags 383 of 6,024. Comparing a whole county mixes towns and villages with very different contests. Flagged places include small villages with 80–90% mayoral turnout while their regional turnout averages 45%. These differences can have ordinary explanations; the screen does not establish the cause in each place.</p>
+              <div class="m-figs">
+                <figure class="fig">
+                  <img src="img/details/en/mayors/neighbors_outliers.png" data-dfig="mayors/neighbors_outliers" data-alt="m6_a1" alt="Mayoral polling stations that differ from others in their county" loading="lazy">
+                  <figcaption data-i18n="m6_c1">Mayoral polling stations compared with the middle value in their county. Flags include small villages with very high local turnout; a flag alone does not show wrongdoing.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/mayors/ml_anomalies.png" data-dfig="mayors/ml_anomalies" data-alt="m6_a2" alt="Isolation Forest anomaly scores, mayor race: smooth distribution" loading="lazy">
-                  <figcaption data-i18n="m6_c2">Mayor race: Isolation Forest scores; 61 precincts (1%) are flagged. The 1% rate is configured in the model; matching that rate in other elections is not evidence of a clean count.</figcaption>
+                  <img src="img/details/en/mayors/ml_anomalies.png" data-dfig="mayors/ml_anomalies" data-alt="m6_a2" alt="Computer scores of how unusual each mayoral polling station looks" loading="lazy">
+                  <figcaption data-i18n="m6_c2">Isolation Forest selects 61 mayoral polling stations (1%). I set the model to select 1%, so seeing that rate in another election is not evidence of a clean count.</figcaption>
                 </figure>
               </div>
             </div>
@@ -325,16 +325,16 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span> <span class="m-head">
-              <h5 data-i18n="m7_t">Jumps vs the 2022 election (swing test)</h5>
-              <p data-i18n="m7_b">635 of 5,442 matched precincts change by more than 15 points in both turnout and the leader's share, in either direction. The +1.5-point median turnout change describes the full matched sample, not the flagged subset.</p>
+              <h5 data-i18n="m7_t">How much changed since 2022?</h5>
+              <p data-i18n="m7_b">In 635 of 5,442 matched stations, both turnout and the leading group’s share changed by over 15 percentage points, up or down. The middle turnout change, +1.5 points, is for all matched stations, rather than just those flagged.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m7_d">Across 5,442 matched precincts, mean valid-ballot turnout rises from 48.42% to 49.34%, with a median change of +1.5 points. The swing screen flags 635 precincts where both absolute changes exceed 15 points. National party-share comparisons show independents at 57.75% → 59.79% and HLAS at 9.50% → 6.71%. Party realignment can affect the screen, but small national changes or a small overall median do not explain each flagged precinct.</p>
+              <p data-i18n="m7_d">Across 5,442 matched stations, average turnout measured from valid ballots rises from 48.42% to 49.34%. The middle change is +1.5 percentage points. The check flags 635 stations where both turnout and the leading group’s share move by over 15 points in either direction. Nationally, independents rise from 57.75% to 59.79% and HLAS falls from 9.50% to 6.71%. Changes in party alliances can affect this comparison. Small national shifts cannot explain every flagged station.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/en/swing.png" data-fig="swing" data-alt="swing_alt" alt="Party shares of the mayor-race vote, 2022 versus 2026: independents up, HLAS and the Hungarian alliance down" loading="lazy">
-                  <figcaption data-i18n="m7_c1">Mayor race, national shares of valid votes: renamed and dissolved parties are merged into their 2026 successors. The independents' column grows by 2 points — the leader whose swing the test watches.</figcaption>
+                  <img src="img/en/swing.png" data-fig="swing" data-alt="swing_alt" alt="Mayoral vote shares in 2022 and 2026: independents up, HLAS and the Hungarian alliance down" loading="lazy">
+                  <figcaption data-i18n="m7_c1">National mayoral vote shares. Renamed or dissolved parties are grouped with their 2026 successors. Independents gain 2 percentage points; their combined share is the leading group tracked by the change test.</figcaption>
                 </figure>
               </div>
             </div>
@@ -342,31 +342,31 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span> <span class="m-head">
-              <h5 data-i18n="m8_t">Two races, one visit (mutual control)</h5>
-              <p data-i18n="m8_b">Participation rates correlate at r = 0.844 across 3,556 comparable precincts; a similar aggregate gap appears in 2022, but its cause is not established.</p>
+              <h5 data-i18n="m8_t">Comparing turnout in the two races</h5>
+              <p data-i18n="m8_b">Across 3,556 comparable stations, turnout in the two races tends to rise together (r = 0.844). A similar overall gap appears in 2022. Neither comparison tells me what caused it.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m8_d">The comparison joins precincts by municipality and precinct number, restricted to municipalities with one municipal electoral district. Of 3,556 matched precincts, 113 have different registered-voter totals. Municipal participation is higher in 1,938, equal in 1,513 and lower in 105; the net gap is 79,290. In 2022 the separately matched sample contains 3,417 precincts and a net gap of 99,229. Foreign permanent residents are eligible in both elections. This is an aggregate comparison, not a record of the same individuals choosing different ballots.</p>
+              <p data-i18n="m8_d">I matched stations by municipality and station number, using only municipalities with one local electoral district. Of 3,556 matches, 113 have different registered-voter totals. Local participation is higher in 1,938, equal in 1,513 and lower in 105; the net gap is 79,290. A separate 2022 comparison covers 3,417 stations and gives a gap of 99,229. Foreign permanent residents can vote in both races. These are area totals; I cannot track a person’s ballot choices.</p>
             </div>
           </details>
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m9_t">Self-test: the toolkit actually detects fraud</h5>
-              <p data-i18n="m9_b">Injected ballot-stuffing increases the Shpilkin tail signal ×6–14 in the regional runs. This demonstrates sensitivity to the tested simulation, not every possible form of fraud.</p>
+              <h5 data-i18n="m9_t">Can the checks detect made-up ballots I add?</h5>
+              <p data-i18n="m9_b">Adding made-up ballots raises the regional Shpilkin high-turnout measure ×6–14. The checks detect these simulated changes; this does not mean they can detect every kind of fraud.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m9_d">What it checks: the toolkit itself. Turnout is raised by 5–35 points in 10% of precincts, with 60–95% of the added ballots for the leader. The Shpilkin anomalous zone grows ×6–14 per region (e.g. Košický: the tail would grow from 2% of the winner's votes to tens of thousands) — on this exact data the methods have power, so their silence on the real numbers means something.</p>
+              <p data-i18n="m9_d">I tested the tools by raising turnout by 5–35 percentage points in 10% of stations, with 60–95% of added ballots going to the leader. The high-turnout measure grows ×6–14 by region. In Košický, it grows from 2% of the winner’s votes to tens of thousands of votes. This shows the tools respond to these changes in this dataset. Other kinds of manipulation may leave different traces or none that these checks can detect.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/mayors/selftest.png" data-dfig="mayors/selftest" data-alt="m9_a1" alt="Self-test, mayor race: injected stuffing separates from the clean distribution" loading="lazy">
-                  <figcaption data-i18n="m9_c1">Mayor race: clean tail 0.43% of the leader's votes → ×8 after injection. The signal would be unmissable.</figcaption>
+                  <img src="img/details/en/mayors/selftest.png" data-dfig="mayors/selftest" data-alt="m9_a1" alt="Mayoral simulation: added ballots create a separate high-turnout pattern" loading="lazy">
+                  <figcaption data-i18n="m9_c1">In mayor races, the high-turnout zone starts at 0.43% of the leading group’s votes. Adding made-up ballots increases the measure ×8.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/kosicky/selftest.png" data-dfig="kosicky/selftest" data-alt="m9_a2" alt="Self-test, Košický region: injected stuffing separates from the clean distribution" loading="lazy">
-                  <figcaption data-i18n="m9_c2">Košický: signal ×6. The four tiny tail precincts of the real count (grey) sit nowhere near the injected zone (red).</figcaption>
+                  <img src="img/details/en/kosicky/selftest.png" data-dfig="kosicky/selftest" data-alt="m9_a2" alt="Košický simulation: added ballots create a separate high-turnout pattern" loading="lazy">
+                  <figcaption data-i18n="m9_c2">In Košický, the measure rises ×6. The four small high-turnout stations in the actual data (grey) lie far from the added-ballot zone (red).</figcaption>
                 </figure>
               </div>
             </div>
@@ -374,20 +374,20 @@
         </div>
       </section>
       <section>
-        <h3 class="sect" data-i18n="lim_title">Limitations — what this analysis cannot say</h3>
+        <h3 class="sect" data-i18n="lim_title">What these checks cannot tell us</h3>
         <ul class="data">
-          <li data-i18n="lim1">These tests do not establish manipulation, but cannot exclude it. They cannot identify coercion, clientelist pressure or administrative-resource effects from aggregate counts alone. The participation gap is an observation, not proof of any such mechanism.</li>
-          <li data-i18n="lim2">The regional and municipal council races are present in the exports but were not analysed here. Each election also includes a council ballot; “two races” on this page refers only to the governor and mayor contests.</li>
-          <li data-i18n="lim3">“Voted” means valid ballots of the analysed race; the official turnout (46.56%/48.48%) additionally counts participants who took no valid ballot of that race (9.6% of regional-race participants in 2026). Bratislava and Košice city-mayor races (2 of 2,914) are checked but not part of the precinct files.</li>
-          <li data-i18n="lim4">Precinct keys match the 2022 control for 90–99.5% of precincts (Košice renumbered); the swing test runs on the matched subset only.</li>
+          <li data-i18n="lim1">The tests found no clear signs of manipulation, but cannot rule it out. Area totals alone cannot reveal pressure on voters, favours exchanged for votes or misuse of official resources. The turnout gap does not prove any of these explanations.</li>
+          <li data-i18n="lim2">The downloads also contain regional and local council elections, which I did not analyse. Voters received council ballots too. “Two races” here means only the governor and mayor contests.</li>
+          <li data-i18n="lim3">Here, “voted” counts valid ballots in the race being analysed. Official turnout (46.56%/48.48%) also includes participants without a valid ballot for that race: 9.6% of regional participants in 2026. I checked the Bratislava and Košice city-mayor results (2 of 2,914), but they are outside the polling-station files.</li>
+          <li data-i18n="lim4">I can match 90–99.5% of polling-station IDs with 2022; Košice changed its numbering. The change test uses only stations that can be matched.</li>
         </ul>
       </section>
       <section>
         <div class="data">
-          <h3 class="sect" data-i18n="data_title">Data & reproducibility</h3>
+          <h3 class="sect" data-i18n="data_title">Data and how to repeat the checks</h3>
           <ul>
             <li data-i18n="d1">Source: official definitive exports of the Statistical Office of the Slovak Republic — <a href="https://volbysr.sk/osk/sk/subory_na_stiahnutie.html" rel="noopener">volbysr.sk</a> (OSK/OSO 2026, downloaded 26 October 2026) and <a href="https://volby.statistics.sk/osk/osk2022/sk" rel="noopener">volby.statistics.sk</a> (2022 controls).</li>
-            <li data-i18n="d2">Cross-checks: precinct sums equal the official regional and national tables to the exact vote; they also equal the final snapshot of my election-night capture (36 intraday snapshots) for all 8 regions and all 8 city races, and the media-reported headline results (Trnka's ~3,000-vote margin, computed here as exactly 3,117).</li>
+            <li data-i18n="d2">I added the polling-station totals and matched the official regional and national tables exactly. For all 8 regions and 8 city races, they also match the last of my 36 saved election-night updates. They agree with the headline results reported by media: Trnka’s lead of about 3,000 votes is exactly 3,117 here.</li>
             <li data-i18n="d4">Eligibility and ballot rules: <a href="https://www.slovensko.sk/sk/zivotne-situacie/zivotna-situacia/_volby-v-slovenskej-republike/" rel="noopener">Slovak public-administration portal</a>. Foreign permanent residents can vote in both regional and municipal elections.</li>
             <li data-i18n="d3">Reproduce and inspect: <a href="https://github.com/renatyv/elections-fraud/tree/main/analysis-tool" rel="noopener">analysis-tool</a>, <a href="https://github.com/renatyv/elections-fraud/blob/main/slovakia-oct-2026/REPORT_statistical_fraud_analysis.md" rel="noopener">full statistical report</a>, <a href="https://github.com/renatyv/elections-fraud/blob/main/slovakia-oct-2026/PARADOXES.md" rel="noopener">paradox analysis</a> and <a href="https://github.com/renatyv/elections-fraud/blob/main/slovakia-oct-2026/DATA_DESCRIPTION.md" rel="noopener">data description</a>.</li>
           </ul>

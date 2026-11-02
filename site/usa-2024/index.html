@@ -16,7 +16,7 @@
   <body class="page-usa-2024">
     <header class="top">
       <div class="bar">
-        <div class="brand"><span class="flag" aria-hidden="true"></span><span>United States · Election Forensics</span></div>
+        <div class="brand"><span class="flag" aria-hidden="true"></span><span>United States · Checking the election numbers</span></div>
         <div class="right">
           <a class="home" href="../index.html">← All analyses</a>
         </div>
@@ -26,7 +26,7 @@
       <div class="hero">
         <div class="hero-inner">
           <div class="kicker">
-            Independent statistical audit · 5 November 2024
+            An independent check of the numbers · 5 November 2024
           </div>
           <h1>Senate and House 2024 —<br>do the numbers add up?</h1>
           <div class="verdict">
@@ -66,13 +66,13 @@
   <div class="res-card">
     <span class="tag">! Needs a closer look</span>
     <h2 id="ohio-title">Ohio Senate: what looked unusual?</h2>
-    <p><strong>The second digit in Republican vote counts appeared in an unusual pattern.</strong> The second digit of 1,234 is 2. Under the Benford model, second digits should follow Benford’s law for the second-digit distribution. I compared the frequencies of digits 0–9 across 8,798 local Republican vote totals with that distribution and with a model fitted to the sizes of Ohio’s vote totals.</p>
+    <p><strong>The second digit in Republican vote counts appeared in an unusual pattern.</strong> The second digit of 1,234 is 2. Benford’s law gives one expected pattern for these digits, although it does not fit every dataset. I compared how often digits 0–9 appeared across 8,798 local Republican vote totals with that pattern. I also used a second model fitted to the sizes of Ohio’s vote totals.</p>
     <p>Ohio stood out in both comparisons, even after allowing for the many tests in this study. It was the only 2024 case to do so. Seven cases from older elections also stood out in both comparisons.</p>
     <details class="m">
       <summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head">See Ohio’s actual digit pattern</span></summary>
       <div class="m-details">
         <p><strong>Blue bars show Ohio’s results.</strong> Each bar shows how often a second digit appeared among the 8,798 Republican vote totals. The dark line shows the Benford reference pattern. The amber markers show the range usually produced by a model fitted to the sizes of Ohio’s vote totals.</p>
-        <figure class="fig"><img src="img/ohio_second_digit_counts.png" alt="Second-digit frequencies in 8,798 Ohio Republican Senate vote totals, compared with the Benford pattern and a simulated range fitted to the vote-count sizes." width="1262" height="823" loading="lazy"><figcaption>Each local vote total counts once, regardless of how many votes it contains. Amber ranges cover the middle 95% of frequencies for each digit in 2,000 fitted-lognormal simulations. These are separate ranges for each digit, not a pass/fail rule for the whole chart. The published overall test uses 20,000 simulations.</figcaption></figure>
+        <figure class="fig"><img src="img/ohio_second_digit_counts.png" alt="Second-digit frequencies in 8,798 Ohio Republican Senate vote totals, compared with the Benford pattern and a simulated range fitted to the vote-count sizes." width="1262" height="823" loading="lazy"><figcaption>Each local vote total counts once, regardless of its size. I generated 2,000 simulated datasets using a lognormal model fitted to the vote-count sizes. The amber range shows the middle 95% of simulated frequencies for each digit. Each range applies to one digit; it is not a pass/fail rule for the whole chart. The overall test uses 20,000 simulations.</figcaption></figure>
         <p><strong>What stands out:</strong> about 10% of Ohio’s totals have 0 as the second digit, compared with about 12% in the Benford pattern. Digits 7, 8 and 9 appear more often than that pattern predicts. Overall, Ohio’s bars are flatter than the reference line.</p>
         <p>A gap between a bar and a reference shows a difference from that model. It does not show how many votes were wrong. The overall finding considers the pattern across all ten digits.</p>
         <p><a href="analysis/expanded/ohio_second_digit_frequencies.csv" download>Download the numbers behind this chart (CSV)</a></p>
@@ -86,8 +86,8 @@
     <details class="m">
       <summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head">See the Ohio test results and source limits</span></summary>
       <div class="m-details">
-        <p>This is a Benford second-digit test of 8,798 Republican Senate vote counts of at least 10. The theoretical comparison gives p = 9.44 × 10<sup>−14</sup> and adjusted q = 2.18 × 10<sup>−11</sup>. The fitted-lognormal comparison, refined with 20,000 simulations, gives p = 1/20,001 (about 0.00005) and adjusted q = 0.00496. Both pass the q &lt; 0.05 threshold after separate adjustments across the full family of 694 digit tests. These values are not probabilities that fraud occurred.</p>
-        <p>The Ohio data is a pinned mirror copy, not a fresh download from the state. It omits 640 Senate write-in votes compared with the House Clerk’s totals; the named Republican candidate’s counts remain available for this test. The models do not capture all differences between reporting areas.</p>
+        <p>I tested the second digits of 8,798 Republican Senate vote totals, each at least 10. Against Benford’s expected pattern, p = 9.44 × 10<sup>−14</sup> and adjusted q = 2.18 × 10<sup>−11</sup>. Against the fitted lognormal model, using 20,000 simulations, p = 1/20,001 (about 0.00005) and adjusted q = 0.00496. A p-value describes how unusual a result is under the chosen model. The q-value also allows for the many tests run. Both comparisons remain below q &lt; 0.05 after separate adjustments across all 694 digit tests. Neither value is the probability that fraud occurred.</p>
+        <p>I used an archived copy of the Ohio data from a separate repository. I did not download it directly from the state for this analysis. It is missing 640 Senate write-in votes compared with the House Clerk’s totals, but it includes the named Republican candidate’s counts used here. The models also leave out some differences between reporting areas.</p>
         <p><a href="analysis/expanded/precinct_digits.csv" download>All digit-test results (CSV)</a> · <a href="EXPANDED_REPORT.md">Full statistical report</a> · <a href="RECONCILIATION.md">Source checks and discrepancies</a></p>
       </div>
     </details>
@@ -97,25 +97,25 @@
 <h2 id="expanded-title">What did the number checks find?</h2>
 <p>The clearest lead was in Ohio. The other checks did not establish fraud. Normal differences between communities can also produce unusual-looking results, and these tests can miss problems.</p>
 <details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">See the overview chart and test totals</span></summary><div class="m-details">
-<p class="sub">110 current contest samples · 65 historical samples · 694 digit tests.</p>
-<p>Ten digit tests flag against theoretical distributions and eight against a fitted lognormal model; eight flag under both, after separate Benjamini–Hochberg adjustments for multiple testing. Only one of those eight is from 2024. Neither reference model captures every difference in precinct size or voter composition.</p>
-<figure class="fig"><img src="img/expanded_fingerprints.png" alt="Six panels of turnout against Republican votes per ballot in newly analyzed state sources" width="1950" height="1200" loading="lazy"><figcaption>Observed geographic patterns across the sampled states. Iowa and South Carolina panels pool House districts for display only; statistical tests separate districts.</figcaption></figure>
+<p class="sub">110 samples from 2024 races · 65 samples from earlier races · 694 digit tests.</p>
+<p>Ten digit tests found unusual patterns against the standard expected distributions. Eight did so against a lognormal model fitted to the vote-count sizes, and all eight also stood out in the first comparison. These results allow for the number of tests run, using the Benjamini–Hochberg adjustment separately for each comparison. Only one of the eight cases is from 2024. Neither model captures every difference in area size or voter makeup.</p>
+<figure class="fig"><img src="img/expanded_fingerprints.png" alt="Six state charts comparing turnout with Republican votes as a share of all ballots" width="1950" height="1200" loading="lazy"><figcaption>Each chart shows how turnout and Republican support vary across the areas studied. The Iowa and South Carolina charts combine House districts for display; the tests treat each district separately.</figcaption></figure>
 </div></details>
 <div class="methods">
-<details class="m" id="shpilkin"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>How many votes came from very high-turnout areas?</h3><p>Those votes alone do not tell me whether anything went wrong.</p></span></summary><div class="m-details"><p>The own-sample registration-weighted 99.5th-percentile tails contain 0–1.489% of leading-bloc votes in current samples. No honest-core model is established, so there is no defensible stuffed-vote total or corrected outcome. Historical samples are comparisons, not matched-precinct controls.</p></div></details>
-<details class="m" id="comet"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Do places with more voters favor one party?</h3><p>The pattern changes from state to state. Differences between communities can explain it.</p></span></summary><div class="m-details"><p>Weighted and county-demeaned correlations are exported for every tested contest. Geographic gradients and the sign changing between states make a national fraud interpretation unjustified. Support uses candidate votes / all ballots, including contest nonvoting.</p></div></details>
-<details class="m" id="fingerprints"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Do reporting areas fall into different groups?</h3><p>They do, but different voting patterns are not evidence of fraud.</p></span></summary><div class="m-details"><p>Two Gaussian components are fitted within each eligible contest. This is a descriptive surrogate for population heterogeneity, not the paper’s mechanistic fraud model; component weights are not fraud rates.</p></div></details>
-<details class="m" id="integer-peaks"><summary><span class="badge pass" aria-hidden="true">✓</span><span class="m-head"><h3>Were there too many round percentages?</h3><p>No warning remained after allowing for the number of tests I ran.</p></span></summary><div class="m-details"><p>525 metric screens, each with 1,000 binomial simulations; integer and multiple-of-five excesses form a jointly adjusted family of 1050 approximate one-sided normal-tail tests. 0 metric screens flag in that approximation. Sparse discrete tails and endogenous binomial probabilities require calibration; the table is a follow-up queue.</p></div></details>
-<details class="m" id="digit-tests"><summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head"><h3>Did the digits in vote counts look unusual?</h3><p>Ohio’s Republican Senate counts stood out against two expected patterns. This needs a closer look.</p></span></summary><div class="m-details"><p>694 tests; counts must be ≥10 / ≥100, with ≥100 eligible counts per test. 10 theoretical and 8 lognormal-null flags after separate BH adjustments; 8 overlap. The initial fitted-lognormal null uses 400 simulations. All theoretical BH flags and all minimum-p Monte Carlo hits (12 tests) are rechecked with 20,000 simulations (minimum p=1/20,001); unselected tests receive p=1 before a fresh full-family BH adjustment. This avoids interpreting a coarse simulation floor as absence of a signal. Neither null models all election heterogeneity.</p></div></details>
-<details class="m" id="outliers"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Which places looked different from the others?</h3><p>The checks give me places to review, not a list of fraudulent results.</p></span></summary><div class="m-details"><p>2,753 county median/MAD flags; 1,451 Isolation Forest flags over current and historical unit–contest observations. County peers are not physical neighbors or socioeconomic matches. Isolation Forest uses 1% imposed contamination and no labeled fraud training set.</p></div></details>
-<details class="m" id="duplicates"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Did some places report exactly the same numbers?</h3><p>Yes. Small reporting areas can match by chance.</p></span></summary><div class="m-details"><p>1,673 repeated-vector rows (registration, ballots, DEM, REP, other). Repetition is not itself improbable without a conditional null; small precincts can match by chance. Splits and overlapping Washington sources are not counted as independent precincts.</p></div></details>
-<details class="m" id="selftest"><summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head"><h3>Can these checks miss a problem?</h3><p>Yes. A made-up test case went undetected, so a clean result is no guarantee.</p></span></summary><div class="m-details"><p>Minnesota Senate: a fixed original cutoff of 92.56% gives 9,401 Republican tail votes before injection and 156,258 after 45,950 synthetic Republican votes are added. Rounded-turnout injection into 194 units changes z from -1.49 to 0.31. The rounded scenario does not flag, so detection power is limited. The tail also counts pre-existing votes moved above the cutoff; it does not recover the injection size. These scenarios do not calibrate a fraud rate.</p></div></details></div>
-<details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Flagged digit tests and largest integer screens</span></summary><div class="m-details"><p>Digit table includes every flag under either null, with both comparisons. Integer q-values use a normal approximation and joint integer/multiple-of-five adjustment, not exact Monte Carlo tail probabilities.</p><div class="table-wrap"><table class="dataframe data-table">
+<details class="m" id="shpilkin"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>How many votes came from very high-turnout areas?</h3><p>Those votes alone do not tell me whether anything went wrong.</p></span></summary><div class="m-details"><p>For each sample, I set a high-turnout cutoff at its own 99.5th percentile, weighting areas by registered voters. Only 0.5% of that weighted distribution lies above the cutoff. In the 2024 samples, the areas above it contain 0–1.489% of votes for the leading party group. I have not established what the turnout curve would look like without manipulation, so I cannot turn this into a count of fake votes or a corrected result. Earlier elections provide context; they do not compare exactly the same precincts.</p></div></details>
+<details class="m" id="comet"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Does one party do better where turnout is higher?</h3><p>The pattern changes from state to state. Differences between communities can explain it.</p></span></summary><div class="m-details"><p>For each race, I measured the link between turnout and party support, giving areas different weights. I also measured the link after removing each county’s average. These correlation values are available to download. The direction of the link changes between states and follows geography, so it does not support a nationwide fraud claim. Support means candidate votes divided by all ballots, including ballots with no vote in that race.</p></div></details>
+<details class="m" id="fingerprints"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Do reporting areas fall into different groups?</h3><p>They do, but different voting patterns are not evidence of fraud.</p></span></summary><div class="m-details"><p>For each race with usable data, a model fits two bell-shaped groups to the chart. It describes differences between reporting areas. It does not model how fraud would add or change votes, as the original research method does. The share assigned to either group is not a fraud rate.</p></div></details>
+<details class="m" id="integer-peaks"><summary><span class="badge pass" aria-hidden="true">✓</span><span class="m-head"><h3>Were there too many round percentages?</h3><p>No warning remained after allowing for the number of tests I ran.</p></span></summary><div class="m-details"><p>I checked 525 measures, using 1,000 binomial simulations for each: made-up counts generated under the chance model. I looked for too many whole percentages and too many multiples of five, giving 1050 comparisons in all. After allowing for all those comparisons, 0 measures raised a warning under the bell-curve (normal) approximation used here. That approximation can be unreliable when unusual outcomes are rare, and the simulations use probabilities estimated from the same data. The largest results in the table are starting points for further checks.</p></div></details>
+<details class="m" id="digit-tests"><summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head"><h3>Did the digits in vote counts look unusual?</h3><p>Ohio’s Republican Senate counts stood out against two expected patterns. This needs a closer look.</p></span></summary><div class="m-details"><p>I ran 694 digit tests. Second-digit tests use vote totals ≥10 and last-digit tests use totals ≥100; each test needs ≥100 usable totals. After separate Benjamini–Hochberg (BH) adjustments for the number of tests, 10 tests stood out against the standard patterns and 8 against the fitted lognormal model; 8 stood out in both. The first model check used 400 simulations. I then repeated 12 tests with 20,000 simulations: every standard-pattern BH flag and every result at the smallest p-value the first simulation could measure. The finer check can reach p=1/20,001. Before applying BH again across the full set, I assigned p=1 to tests not selected for the finer check. This avoids treating a coarse simulation limit as evidence that no pattern exists. Neither model captures all differences between election areas.</p></div></details>
+<details class="m" id="outliers"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Which places looked different from the others?</h3><p>The checks give me places to review, not a list of fraudulent results.</p></span></summary><div class="m-details"><p>Comparing areas with their county’s typical result flagged 2,753 area-and-race records across current and earlier elections. This uses the median and median absolute deviation (MAD), a measure of spread. A separate computer method, Isolation Forest, flagged 1,451 records. Areas in the same county are not necessarily neighbours or socially similar. The computer method is set to select 1% as unusual; it was not trained on known fraud cases.</p></div></details>
+<details class="m" id="duplicates"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head"><h3>Did some places report exactly the same numbers?</h3><p>Yes. Small reporting areas can match by chance.</p></span></summary><div class="m-details"><p>In 1,673 rows, all five totals repeat another row: registered voters, ballots, Democratic votes, Republican votes and other votes. Small precincts can match by chance. To judge whether this is unusually common, I would need a chance model suited to these areas. Split precincts and overlapping Washington sources are not counted as separate independent precincts.</p></div></details>
+<details class="m" id="selftest"><summary><span class="badge warn" aria-hidden="true">!</span><span class="m-head"><h3>Can these checks miss a problem?</h3><p>Yes. A made-up test case went undetected, so a clean result is no guarantee.</p></span></summary><div class="m-details"><p>I added 45,950 made-up Republican votes to a copy of the Minnesota Senate data. Keeping the original turnout cutoff at 92.56%, Republican votes above it rose from 9,401 to 156,258. This includes genuine votes in areas pushed above the cutoff, so the increase does not measure the number added. In another test, I altered 194 areas to produce round turnout percentages. The z score, which measures distance from the expected result, rose from -1.49 to 0.31 and raised no warning. That simulated problem went undetected. These examples show limits on detection; they do not let me estimate a fraud rate.</p></div></details></div>
+<details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Digit warnings and the largest round-percentage results</span></summary><div class="m-details"><p>The digit table lists every warning from either comparison model and shows both results. For round percentages, the adjusted q-values use a normal approximation, allowing jointly for whole percentages and multiples of five. They are not exact probabilities from the simulations.</p><div class="table-wrap"><table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Source / office</th>
       <th>District</th>
-      <th>Bloc</th>
+      <th>Party group</th>
       <th>Counts</th>
       <th>Theoretical p</th>
       <th>Adjusted q</th>
@@ -330,16 +330,16 @@
     </tr>
   </tbody>
 </table></div></div></details>
-<details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Historical comparisons and turnout correlations</span></summary><div class="m-details"><div class="table-wrap"><table class="dataframe data-table">
+<details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Earlier elections and links between turnout and support</span></summary><div class="m-details"><div class="table-wrap"><table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Source / office</th>
       <th>District</th>
-      <th>units</th>
-      <th>republican_weighted_r</th>
-      <th>county_demeaned_r</th>
-      <th>turnout_pct</th>
-      <th>tail_share_pct</th>
+      <th>Reporting areas</th>
+      <th>Turnout–Republican link (weighted r)</th>
+      <th>Link after removing county averages (r)</th>
+      <th>Turnout (%)</th>
+      <th>Votes above turnout cutoff (%)</th>
     </tr>
   </thead>
   <tbody>
@@ -425,28 +425,28 @@
       <td>0.4403</td>
     </tr>
   </tbody>
-</table></div><p>Historical precincts are not a matched panel: redistricting, reporting boundaries, pandemic voting and registration definitions differ. Minnesota 2016/2020, California 2020 and Washington 2020 cannot by themselves define a nationwide honest-election null.</p></div></details>
+</table></div><p>The earlier data do not follow exactly the same precincts over time. District maps, reporting boundaries, pandemic voting and definitions of registration differ. Minnesota 2016/2020, California 2020 and Washington 2020 therefore cannot, by themselves, show what a nationwide election without manipulation should look like.</p></div></details>
 <details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Download the statistical results</span></summary><div class="m-details"><p>Download: <a href="analysis/expanded/precinct_metrics.json">metrics</a> · <a href="analysis/expanded/precinct_digits.csv">digit tests</a> · <a href="analysis/expanded/precinct_integer_peaks.csv">integer screens</a> · <a href="analysis/expanded/precinct_outliers.csv.gz">outlier rankings</a> · <a href="analysis/expanded/precinct_selftest.json">sensitivity checks</a>.</p></div></details>
 </section>
 <section id="hand-review"><h2>What did Minnesota’s hand check find?</h2>
 <p>Every check passed the state’s rules. This gives me evidence from actual paper ballots for the places reviewed, but it cannot tell me about places that were not checked.</p>
 <details class="m"><summary><span class="badge pass" aria-hidden="true">✓</span><span class="m-head">See the hand-check details and official report</span></summary><div class="m-details">
 
-        <p>The official 438-page report covers 657 precinct–contest tables across 219 precinct identities. Of these, 115 tables have a nonzero raw total difference and 24 have a nonzero adjusted difference. Summed candidate/category differences are 365 raw and 28 adjusted; they are not counts of unique disputed ballots. ACCEPTABLE reflects official tolerance thresholds, not exact equality.</p>
-        <p>All table statuses and totals were parsed with arithmetic checks. Luna separately verified four tables on three page images; this was not a visual audit of all 438 pages. The hand review provides physical evidence for the reviewed sample, with no claim about unreviewed precincts. <a href="analysis/mn_hand_review_summary.json" download>Review summary (JSON)</a> · <a href="analysis/mn_hand_review.csv" download>Every review table (CSV)</a>.</p>
+        <p>The official 438-page report contains 657 tables, each covering one race in one of 219 precincts. Before the report’s adjustments, 115 tables show a difference between totals; afterward, 24 do. Adding the differences across candidate and ballot categories gives 365 before adjustment and 28 afterward. These sums do not count unique disputed ballots. The official label ACCEPTABLE means a check met the state’s allowed tolerance, even if the totals were not identical.</p>
+        <p>I extracted each table’s status and totals and checked the arithmetic. The Luna model separately checked four tables on three page images; it did not visually review all 438 pages. The hand count gives paper-ballot evidence for the sample reviewed. It says nothing directly about precincts outside that sample. <a href="analysis/mn_hand_review_summary.json" download>Review summary (JSON)</a> · <a href="analysis/mn_hand_review.csv" download>Every review table (CSV)</a>.</p>
 <p><a href="https://www.sos.mn.gov/media/ixzn1dkx/2024-post-election-review-results.pdf">Official hand-review report</a></p></div></details></section>
 <section id="coverage"><h2>How much of the country did I check?</h2>
 <p>I used 47,236 local reporting areas, including precincts, groups of precincts and central vote-counting pools. This is only part of the country. Not every area had enough usable data for every test.</p>
 <p>The study focuses on Senate and House races. Older elections help put the findings in context, but changes in boundaries and voting rules make direct comparisons difficult.</p>
-<details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Coverage, exclusions and source reconciliation</span></summary><div class="m-details"><div class="table-wrap"><table class="dataframe data-table">
+<details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Which records I used, left out or could not match</span></summary><div class="m-details"><div class="table-wrap"><table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Source / office</th>
       <th>Rows</th>
-      <th>Eligible</th>
+      <th>Usable</th>
       <th>Unknown</th>
-      <th>Zero denominator</th>
-      <th>Above registration</th>
+      <th>Zero base for percentage</th>
+      <th>Count above registered voters</th>
       <th>Votes &gt; ballots</th>
       <th>Source limits</th>
     </tr>
@@ -703,16 +703,16 @@
       <td>0</td>
     </tr>
   </tbody>
-</table></div><p><strong>Source limits retained:</strong> Washington statewide data replaces King County, with registration differences of 13 versus the recorded statewide table and 4,521 versus the active-voter reconciliation workbook; every county ballot total and all 33 congressional candidate columns reconcile. Iowa, West Virginia and Ohio are pinned mirror copies, not freshly retrieved official files. Ohio write-ins are missing (640 Senate, 4 House district 2 and 29 House district 11 votes versus the Clerk); named-candidate digits remain observable. West Virginia’s other-candidate pool is short by 15 Senate and 174 House district 1 votes. None is filled with inferred precinct counts.</p>
-<p><strong>Geography and exclusions:</strong> split House precinct rows are excluded when full-precinct turnout cannot be assigned to a fragment. California suppression, above-registration counts, zero denominators and missing joins remain excluded. Virginia and South Carolina use name joins with numeric padding removed, collision checks and outer-join audits; unmatched rows stay unknown. South Carolina precinct ballots and registration sum exactly to its county/state Election History totals; VREMS voter-history denominators are not substituted. Vermont’s 247 town rows contain partial district results in multi-district towns and incomplete statewide candidate totals, so all are excluded from the combined diagnostics. Maryland administrative participation is still incompatible. Wyoming and North Dakota lack registration; Pennsylvania lacks ballots; North Carolina supplies registration only. Provisional OCR rows and four Kentucky PDFs remain outside the sample: transcript arithmetic alone does not validate the needed joins, and Kentucky’s published turnout has an unofficial/roll-timing caveat.</p><h3>Nonzero Clerk reconciliation differences</h3><div class="table-wrap"><table class="dataframe data-table">
+</table></div><p><strong>Limits of the source files:</strong> I used Washington’s statewide file instead of the separate King County file to avoid overlap. Registration differs by 13 from the saved statewide table and by 4,521 from the active-voter comparison workbook. All county ballot totals and all 33 congressional candidate columns match. For Iowa, West Virginia and Ohio, I used archived copies from a separate repository rather than new downloads from official sites. Compared with the House Clerk’s totals, Ohio is missing write-ins: 640 Senate votes, 4 House district 2 votes and 29 House district 11 votes. The named candidates’ counts can still be tested. West Virginia’s other-candidate totals are short by 15 Senate votes and 174 House district 1 votes. I did not invent precinct counts to fill these gaps.</p>
+<p><strong>Records left out and why:</strong> Some House precincts are split between districts. I left out those fragments when turnout for the whole precinct could not be assigned to them reliably. In California, I also left out hidden counts, counts above registration, records where calculating a percentage would mean dividing by zero and records that could not be matched. Virginia and South Carolina records were matched by name after removing extra zero-padding from numeric codes; I checked for duplicate matches and kept unmatched records as unknown. South Carolina’s precinct ballots and registration add up exactly to its county and state Election History totals. I did not replace them with VREMS voter-history counts. All 247 Vermont town rows are excluded from the combined checks because towns crossing district lines have partial results and statewide candidate totals are incomplete. Maryland’s administrative participation figures still cannot be compared reliably. Wyoming and North Dakota lack registration totals; Pennsylvania lacks ballot totals; North Carolina provides registration only. I also left out provisional text extracted from scanned documents and four Kentucky PDFs. Correct arithmetic in extracted text does not establish that records have been matched correctly. Kentucky’s published turnout is unofficial, and its voter-roll date needs care.</p><h3>Where source totals differ from the House Clerk’s totals</h3><div class="table-wrap"><table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
       <th>Source / office</th>
       <th>District</th>
-      <th>bloc</th>
-      <th>observed</th>
-      <th>clerk</th>
-      <th>difference</th>
+      <th>Party group</th>
+      <th>Source total</th>
+      <th>Clerk total</th>
+      <th>Difference</th>
     </tr>
   </thead>
   <tbody>
@@ -781,7 +781,7 @@
       <td>-15.0</td>
     </tr>
   </tbody>
-</table></div><p>Absent Clerk minor-party categories are unknown in the reconciliation table rather than treated as a source mismatch. Complete source rows, unmatched keys and every exclusion are retained in <a href="analysis/expanded/precinct_join_audit.csv.gz">the join audit</a>.</p></div></details>
+</table></div><p>When the Clerk’s table has no category for a minor party, the comparison marks it unknown rather than counting it as a mismatch. All source rows, records that could not be matched and reasons for exclusion are saved in <a href="analysis/expanded/precinct_join_audit.csv.gz">the record-matching audit</a>.</p></div></details>
 </section>
       <section id="paradoxes"><span id="expanded-paradoxes"></span>
         <h2>Could vote splitting change the winner?</h2>
@@ -789,14 +789,14 @@
         <p>For example, Iowa’s 1st House district was decided by 799 votes. There were 967 write-in votes. If 800 of those voters had backed the runner-up instead, with the rest sitting out, the result would have flipped. I do not know if they would have made that choice.</p>
         <details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">See the chart of the ten races</span></summary><div class="m-details">
         <figure class="fig">
-          <img src="img/spoilers.png" alt="Ten official-source races where other candidate votes exceed the top-two margin" loading="lazy">
-          <figcaption>Official returns compiled by the House Clerk. Other votes include pooled write-ins; they do not imply shared voter preferences.</figcaption>
+          <img src="img/spoilers.png" alt="Ten races where votes for other candidates outnumbered the gap between the top two" loading="lazy">
+          <figcaption>Results compiled by the House Clerk from official returns. “Other votes” includes all write-ins added together. Those voters need not share a second choice.</figcaption>
         </figure>
         </div></details>
         <details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">See the race totals and how many votes would need to switch</span></summary><div class="m-details"><div class="table-wrap">
           <table>
             <caption>
-              Strict-win bounds, holding the two leaders’ existing votes fixed
+              Votes needed for the runner-up to win, keeping the two leaders’ existing votes fixed
             </caption>
             <thead>
               <tr>
@@ -837,13 +837,13 @@
             </tbody>
           </table>
         </div>
-        <p>For margin M and other-vote pool O, O &gt; M shows arithmetic capacity. If the rest abstain, M+1 voters transferring to the runner-up reverses the result. If every remaining other voter backs the leader, the threshold is floor((O+M)/2)+1. Neither scenario is an estimate of what those voters would do. Iowa House 1’s 967 other votes are pooled write-ins, not one candidate or an observed voting bloc.</p></div></details>
+        <p>Let M be the winner’s lead and O the votes for all other candidates. When O &gt; M, those votes are numerous enough to change the winner on paper. If M+1 of those voters chose the runner-up and the rest sat out, the runner-up would win. If every remaining voter in that group backed the leader, the number needed is floor((O+M)/2)+1: half of O+M, rounded down, plus one. Neither scenario predicts their choices. Iowa House 1’s 967 other votes are all write-ins combined, not support for one candidate or a known group of like-minded voters.</p></div></details>
         <div class="note">
           <p><strong>I cannot say a candidate “spoiled” a race.</strong> The totals show what is possible on paper. They do not tell me anyone’s second choice.</p>
         </div>
         <details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Sources and rules for the vote-splitting check</span></summary><div class="m-details">
         <p>I listed all 435 House and 33 regular Senate races and screened 448 contests in which the most votes win and multiple candidate records were available. Majority-rule and ranked-choice races, non-candidate ballots and Nevada’s “None of These Candidates” were excluded.</p>
-        <p><a href="PARADOXES.md" download>Every root paradox criterion and both thresholds</a> · <a href="analysis/clerk_candidate_totals.csv" download>Candidate totals with PDF pages</a> · <a href="analysis/clerk_race_screens.csv" download>All race screens</a> · <a href="analysis/clerk_medsl_race_reconciliation.csv" download>MEDSL reconciliation</a> · <a href="https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf">Official Clerk PDF</a>.</p></div></details>
+        <p><a href="PARADOXES.md" download>Full voting-rule checks and both vote-switch thresholds</a> · <a href="analysis/clerk_candidate_totals.csv" download>Candidate totals with PDF pages</a> · <a href="analysis/clerk_race_screens.csv" download>All race screens</a> · <a href="analysis/clerk_medsl_race_reconciliation.csv" download>MEDSL reconciliation</a> · <a href="https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf">Official Clerk PDF</a>.</p></div></details>
       </section>
       <section id="limits">
         <h2>What this study cannot conclude</h2>
@@ -853,22 +853,22 @@
         <div class="data">
           <ul>
             <li>
-              <strong>The MEDSL source does not fully reconcile.</strong> The separate MEDSL statewide Senate table is a cross-check, not an independent certified anchor. Naming, write-ins, suppressed counts, reporting updates and missing coverage produce differences. The Clerk race-total comparison matches 387 MEDSL contests; 101 margins differ. This does not certify all underlying precinct records.
+              <strong>The MEDSL totals do not all match the comparison sources.</strong> MIT Election Data + Science Lab (MEDSL) provides a separate statewide Senate table for comparison. It is not an independent certification. Differences can come from names, write-ins, hidden counts, updates and missing records. Comparing race totals with the House Clerk’s figures gives matches for 387 MEDSL races; 101 winning margins differ. Even matching race totals would not verify every precinct record.
             </li>
             <li>
-              <strong>Earlier MEDSL diagnostics exclude seven states.</strong> Indiana has documented straight-ticket overcount; New Jersey mixes geographic levels; Louisiana lacks precinct early votes; Alaska and Maine have ranked-choice / first-round complications. Oregon has unlabeled candidates and ballot-total rows; Rhode Island has House rows without district assignments. Their raw data remains preserved.
+              <strong>The earlier MEDSL checks leave out seven states.</strong> Indiana’s data have a documented overcount involving straight-ticket votes. New Jersey combines results for different sizes of area, and Louisiana lacks precinct-level early votes. Alaska and Maine use ranked-choice voting, making first-round counts harder to compare. Oregon has unnamed candidates and rows containing ballot totals; Rhode Island has House records with no district assignment. I kept the original data for all seven states.
             </li>
             <li>
-              <strong>Turnout coverage is narrower.</strong> Only matching county-wide EAC jurisdictions are joined. Municipal codes are not treated as counties. House county totals mix district contests, and uncontested races can distort party comparisons.
+              <strong>Turnout coverage is narrower.</strong> I only matched Election Assistance Commission (EAC) records that cover a whole county. A town or city code does not count as a county code. County House totals can combine several district races, and races with only one candidate can distort party comparisons.
             </li>
             <li>
-              <strong>No ballot forensics or counting dynamics.</strong> Final returns do not supply ballot serials, custody records or election-night time series. The Minnesota hand-review report provides a limited physical anchor for 219 reviewed precincts.
+              <strong>I did not examine ballot handling or election-night changes.</strong> Final totals do not include ballot serial numbers, records of who handled ballots, or updates throughout election night. Minnesota’s hand-review report gives paper-ballot evidence for the 219 precincts reviewed.
             </li>
             <li>
-              <strong>No preference or map counterfactual was established.</strong> Alaska/Maine ranked records could not be downloaded in this run. Geographic boundaries and population data were not collected for a gerrymander test.
+              <strong>I could not test voters’ second choices or alternative district maps.</strong> I could not download Alaska’s and Maine’s ranked-choice records for this analysis. I did not collect the boundaries and population data needed to test maps drawn to favour a party.
             </li>
           </ul>
-          <p>These gaps prevent estimating a reliable fraud rate, demonstrating a preference paradox, or declaring the unflagged units verified clean.</p>
+          <p>Because of these gaps, I cannot estimate a reliable fraud rate, establish a paradox involving voters’ preferences, or verify that every area without a warning was counted correctly.</p>
         </div>
         </div></details>
       </section>
@@ -877,32 +877,32 @@
         <p>This page uses the analysis dated 18 October 2026.</p>
 <details class="m"><summary><span class="badge neutral" aria-hidden="true">i</span><span class="m-head">Open the reports, data downloads and sources</span></summary><div class="m-details">
         <div class="data">
-          <h3>Reports and audit trail</h3>
-          <p><a href="EXPANDED_REPORT.md">Full statistical report</a> · <a href="analysis/expanded/summary.json">Summary data</a> · <a href="RECONCILIATION.md">Source reconciliation</a> · <a href="TURNOUT_EXPANSION.md">Download provenance</a>.</p>
+          <h3>Reports and records of the checks</h3>
+          <p><a href="EXPANDED_REPORT.md">Full statistical report</a> · <a href="analysis/expanded/summary.json">Summary data</a> · <a href="RECONCILIATION.md">Comparing source totals</a> · <a href="TURNOUT_EXPANSION.md">Where the downloads came from</a>.</p>
           <ul>
             <li>
-              <a href="PRECINCT_REPORT.md" download>Retained 17 October precinct report (Markdown)</a> · <a href="REPORT.md" download>Archived county baseline (Markdown)</a> · <a href="PARADOXES.md" download>Voting-paradox report (Markdown)</a> · <a href="DATA.md" download>Data and reproduction notes (Markdown)</a>
+              <a href="PRECINCT_REPORT.md" download>Earlier precinct report, 17 October (Markdown)</a> · <a href="REPORT.md" download>Earlier county-level checks (Markdown)</a> · <a href="PARADOXES.md" download>Voting-paradox report (Markdown)</a> · <a href="DATA.md" download>Data and reproduction notes (Markdown)</a>
             </li>
             <li>
-              <a href="analysis/coverage.csv" download>State coverage</a> · <a href="analysis/race_screens.csv" download>All race screens</a> · <a href="analysis/county_turnout_join_audit.csv" download>County join audit</a> (CSV)
+              <a href="analysis/coverage.csv" download>State coverage</a> · <a href="analysis/race_screens.csv" download>All race screens</a> · <a href="analysis/county_turnout_join_audit.csv" download>County record-matching checks</a> (CSV)
             </li>
             <li>
-              <a href="analysis/senate_reference_reconciliation.csv" download>Senate reference reconciliation</a> · <a href="analysis/county_correlations.csv" download>County correlations</a> (CSV)
+              <a href="analysis/senate_reference_reconciliation.csv" download>Senate comparison totals</a> · <a href="analysis/county_correlations.csv" download>Links between turnout and party support by county</a> (CSV)
             </li>
             <li>
               Source code, scripts and figures: <a href="https://github.com/renatyv/elections-fraud/tree/main/usa-2024" rel="noopener">elections-fraud repository</a>.
             </li>
           </ul>
-          <h3>Trace the data</h3>
+          <h3>Where the data came from</h3>
           <ul>
             <li>
-              <a href="https://github.com/MEDSL/2024-elections-official/tree/df531089c78e6d0098db1a6bfb3849a066a06995" rel="noopener">MIT Election Data + Science Lab: pinned 2024 returns</a>, compiled from state and local sources. <a href="data/download_urls.txt" download>Exact download URLs</a> · <a href="data/manifest.csv" download>Archive SHA-256 checksums</a>.
+              <a href="https://github.com/MEDSL/2024-elections-official/tree/df531089c78e6d0098db1a6bfb3849a066a06995" rel="noopener">MIT Election Data + Science Lab: archived 2024 results</a>, compiled from state and local sources. <a href="data/download_urls.txt" download>Exact download URLs</a> · <a href="data/manifest.csv" download>SHA-256 file checksums</a>.
             </li>
             <li>
-              <a href="https://www.eac.gov/research-and-data/studies-and-reports" rel="noopener">U.S. Election Assistance Commission: EAVS 2024, version 2</a>. Registration and participation fields come from its official jurisdiction survey. <a href="data/supplemental_sources.json" download>Source URLs and checksums</a>.
+              <a href="https://www.eac.gov/research-and-data/studies-and-reports" rel="noopener">U.S. Election Assistance Commission: EAVS 2024, version 2</a>. Registered-voter and participation totals come from its official survey of local election authorities. <a href="data/supplemental_sources.json" download>Source URLs and checksums</a>.
             </li>
           </ul>
-          <p>The source compilation is not a new certification of election results. Raw archives remain upstream; this page includes the analysis tables and provenance needed to trace the snapshot.</p>
+          <p>Bringing these sources together does not certify the election results again. The original archives remain with their providers. The tables and source notes here let you trace which saved data I used.</p>
         </div>
         </div></details>
       </section>

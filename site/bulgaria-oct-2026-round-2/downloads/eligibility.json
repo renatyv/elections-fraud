@@ -1,0 +1,17 @@
+{
+  "indexed": 12717,
+  "eligible": 10656,
+  "excluded": 2061,
+  "exclusion_counts": {
+    "abroad": 613,
+    "protocol_balance": 12,
+    "register_under_100": 1436
+  },
+  "registered": 6555339,
+  "voted": 1750174,
+  "denominator": "opening register plus election-day additions",
+  "controls": [
+    "round 1 of the same election, 25 Oct 2026 (matched by section key)"
+  ],
+  "eligible_leader_votes": 1020862
+}

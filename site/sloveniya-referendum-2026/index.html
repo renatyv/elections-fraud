@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Slovenia, 4 referendums — 11 Oct 2026: statistical fraud check</title>
-    <meta name="description" content="Independent election-forensics analysis of the four Slovenian referendums of 11 October 2026: no traces of fraud in the data.">
-    <meta property="og:title" content="Slovenia, 4 referendums — 11 Oct 2026: statistical fraud check">
-    <meta property="og:description" content="Independent election-forensics analysis of the four Slovenian referendums of 11 October 2026: no traces of fraud in the data.">
+    <title>Slovenia, four referendums — 11 October 2026: checking the numbers</title>
+    <meta name="description" content="A clear guide to Slovenia’s four referendums of 11 October 2026: what the number checks found, and how different rules could change the results.">
+    <meta property="og:title" content="Slovenia, four referendums — 11 October 2026: checking the numbers">
+    <meta property="og:description" content="A clear guide to Slovenia’s four referendums of 11 October 2026: what the number checks found, and how different rules could change the results.">
     <meta property="og:type" content="article">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231e8e5a'/%3E%3Cpath d='M18 33l9 9 19-20' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="../styles.css">
@@ -36,16 +36,14 @@
       <!-- ══ MINTO: ANSWER ══ -->
       <div class="hero">
         <div class="hero-inner">
-          <div class="kicker" data-i18n="kicker">
-            Independent statistical audit
-          </div>
+          <div class="kicker" data-i18n="kicker">An independent check of the numbers</div>
           <h1 data-i18n="h1">Four referendums on 11 October 2026 — do the numbers add up?</h1>
           <div class="verdict">
             <div class="check" aria-hidden="true">
               ✓
             </div>
             <div>
-              <h2 data-i18n="verdict_title">No traces of fraud in the data</h2>
+              <h2 data-i18n="verdict_title">These tests found no clear signs of manipulation</h2>
             </div>
           </div>
           <div class="verdict flip">
@@ -53,24 +51,22 @@
               ⇄
             </div>
             <div>
-              <p class="flip-head" data-i18n="verdict2_title">Same ballots, territorial count — the winner flips</p>
-              <p class="v-line" data-i18n="flip1_line"><b>62%</b> of units and <b>60%</b> of stations said YES to the 'RTV Slovenia fee'</p>
-              <p class="v-line" data-i18n="flip2_line"><b>62%</b> of units and <b>56%</b> of stations said YES to the 'Parliamentary Investigations Act'</p>
+              <p class="flip-head" data-i18n="verdict2_title">Count areas instead of votes, and the winner changes</p>
+              <p class="v-line" data-i18n="flip1_line">YES led in <b>62%</b> of regions and <b>60%</b> of polling stations on abolishing the RTV Slovenia fee.</p>
+              <p class="v-line" data-i18n="flip2_line">YES led in <b>62%</b> of regions and <b>56%</b> of polling stations on the Parliamentary Investigations Act.</p>
             </div>
           </div>
-          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Paradoxes ↓</a></nav>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">How the rules change the result ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
       <section>
         <h3 class="sect" data-i18n="sit_title">What was decided on 11 October 2026</h3>
-        <p class="sect-sub" data-i18n="sit_intro">Slovenia voted on four questions at once — one binding referendum on a law and three consultative ones. Every voter received all four ballots. National turnout: 54.6%.</p>
+        <p class="sect-sub" data-i18n="sit_intro">Voters received four ballots. One referendum could decide whether a law stayed in force; the other three asked for voters’ views without making a binding decision. Turnout across Slovenia was 54.6%.</p>
         <div class="cards2">
           <div class="res-card rejected">
             <h4 data-i18n="r1_name">Parliamentary Investigations Act (ZPPre-B)</h4>
-            <div class="sub" data-i18n="r1_sub">
-              binding referendum on the law
-            </div>
+            <div class="sub" data-i18n="r1_sub">the result decides whether the law stays in force</div>
             <div class="bar-row">
               <span data-i18n="yes_label">YES</span> 48.74%
             </div>
@@ -83,15 +79,11 @@
             <div class="bar-row">
               <span data-i18n="no_label">NO</span> 51.26%
             </div>
-            <div class="outcome rejected" data-i18n="r1_out">
-              Law rejected — NO 51.26% (quorum met)
-            </div>
+            <div class="outcome rejected" data-i18n="r1_out">Law rejected — NO 51.26% (enough registered voters voted NO)</div>
           </div>
           <div class="res-card">
             <h4 data-i18n="r2_name">Social assistance</h4>
-            <div class="sub" data-i18n="r2_sub">
-              consultative — work requirement for welfare
-            </div>
+            <div class="sub" data-i18n="r2_sub">asks whether welfare should require work; result is advisory</div>
             <div class="bar-row">
               <span data-i18n="yes_label">YES</span> 60.54%
             </div>
@@ -104,15 +96,11 @@
             <div class="bar-row">
               <span data-i18n="no_label">NO</span> 39.46%
             </div>
-            <div class="outcome approved" data-i18n="r2_out">
-              Approved — YES 60.54%
-            </div>
+            <div class="outcome approved" data-i18n="r2_out">Approved — YES 60.54%</div>
           </div>
           <div class="res-card">
             <h4 data-i18n="r3_name">Local voting rights</h4>
-            <div class="sub" data-i18n="r3_sub">
-              consultative — local vote for EU citizens only
-            </div>
+            <div class="sub" data-i18n="r3_sub">asks whether local voting rights should be limited to EU citizens; result is advisory</div>
             <div class="bar-row">
               <span data-i18n="yes_label">YES</span> 55.30%
             </div>
@@ -125,15 +113,11 @@
             <div class="bar-row">
               <span data-i18n="no_label">NO</span> 44.70%
             </div>
-            <div class="outcome approved" data-i18n="r3_out">
-              Approved — YES 55.30%
-            </div>
+            <div class="outcome approved" data-i18n="r3_out">Approved — YES 55.30%</div>
           </div>
           <div class="res-card rejected">
             <h4 data-i18n="r4_name">RTV Slovenia fee</h4>
-            <div class="sub" data-i18n="r4_sub">
-              consultative — abolish the broadcaster fee
-            </div>
+            <div class="sub" data-i18n="r4_sub">asks whether to abolish the fee; result is advisory</div>
             <div class="bar-row">
               <span data-i18n="yes_label">YES</span> 49.97%
             </div>
@@ -146,41 +130,39 @@
             <div class="bar-row">
               <span data-i18n="no_label">NO</span> 50.03%
             </div>
-            <div class="outcome rejected" data-i18n="r4_out">
-              Rejected — NO 50.03% (margin: 546 votes)
-            </div>
+            <div class="outcome rejected" data-i18n="r4_out">Rejected — NO 50.03% (margin: 546 votes)</div>
           </div>
         </div>
       </section>
       <!-- ══ MINTO: PARADOXES — SAME VOTES, DIFFERENT RULES ══ -->
       <section id="paradoxes">
         <h3 class="sect" data-i18n="px_title">Same votes, different rules — different results</h3>
-        <p class="sect-sub" data-i18n="px_intro">How much do the rules themselves decide? I swapped the counting rule to see if it matters. Theory calls these voting paradoxes; on this data they are simply measurements.</p>
+        <p class="sect-sub" data-i18n="px_intro">I counted the same votes under different rules. The examples below show which results would change. These are hypothetical comparisons, not the rules used in the referendums.</p>
         <div class="args">
           <div class="arg">
             <div class="num px">
               1
             </div>
-            <h4 data-i18n="px1_t">Count by territory — the winner flips</h4>
-            <p data-i18n="px1_p">The RTV-fee question lost nationally by 546 votes. Count the same votes by Slovenia's 8 regions: YES wins 5 : 3. By the 88 election districts: YES 46 : 42. Polling station by polling station: YES 1,857 : 1,198. The rejected investigations law flips the same way at regions and stations.</p>
+            <h4 data-i18n="px1_t">More areas voted YES, but more people voted NO</h4>
+            <p data-i18n="px1_p">Abolishing the RTV fee lost nationally by 546 votes. But YES led in 5 of Slovenia’s 8 regions, against 3 for NO; in 46 of 88 districts, against 42; and in 1,857 polling stations, against 1,198. Counting areas equally would therefore change the winner. The investigations law also changes winner when counted by regions or polling stations.</p>
           </div>
           <div class="arg">
             <div class="num px">
               2
             </div>
-            <h4 data-i18n="px2_t">Count only election day — all four go YES</h4>
-            <p data-i18n="px2_p">In the polling stations on 11 October YES won every question — the investigations law by 10,255 votes. Early voting (75,000+ voters, the second largest in Slovenian referendum history) and postal votes went NO on all four. About 9% of ballots, cast before election day, decided both rejections.</p>
+            <h4 data-i18n="px2_t">Election-day voters favoured YES on all four questions</h4>
+            <p data-i18n="px2_p">Among votes cast at polling stations on 11 October, YES led on every question, including by 10,255 votes on the investigations law. Early voting involved 75,000+ people, the second largest number in Slovenian referendum history. Early and postal voters favoured NO on all four questions. These votes, about 9% of ballots, changed the overall result on the two rejected questions.</p>
           </div>
           <div class="arg">
             <div class="num px">
               3
             </div>
-            <h4 data-i18n="px3_t">Tiny margins, giant swings</h4>
-            <p data-i18n="px3_p">547 extra YES votes and the RTV fee is abolished. 23,148 extra YES voters — 3% of abstainers — and the investigations law survives. And 664,854 extra names on the voter roll, without one vote changing, and the constitutional quorum swallows the rejection.</p>
+            <h4 data-i18n="px3_t">How many extra votes would change the result?</h4>
+            <p data-i18n="px3_p">547 extra YES votes would reverse the RTV-fee result; as an advisory vote, that would not itself abolish the fee. 23,148 extra YES voters — 3% of those who stayed home — would keep the investigations law in force. A different hypothetical change also matters: add 664,854 names to the voter roll, keep every vote the same, and NO would fall below the constitutional minimum needed to reject the law.</p>
           </div>
         </div>
-        <h4 class="px-sub" data-i18n="pxA_t">Rule 1 · Territorial majorities instead of the national total</h4>
-        <p class="sect-sub" data-i18n="pxA_p">Slovenia adds up the whole country: more votes wins. Much of the world instead counts territories — whoever carries more regions or districts wins overall. Apply that to the same ballots:</p>
+        <h4 class="px-sub" data-i18n="pxA_t">Rule 1 · Give each area one win</h4>
+        <p class="sect-sub" data-i18n="pxA_p">The actual referendums add up votes across Slovenia. What if each region, district or polling station instead counted as one win, regardless of size? Here is what happens with the same ballots:</p>
         <table class="splits">
           <thead>
             <tr>
@@ -205,74 +187,68 @@
         <div class="figs">
           <figure class="fig">
             <img src="img/en/territory.png" data-fig="territory" data-alt="ter_alt" alt="Districts won by YES per referendum: on both rejected questions the national winner loses the district majority or comes close" loading="lazy">
-            <figcaption data-i18n="px_ter_cap">Districts won by YES, % of 88. On both rejected questions the national winner loses the territorial majority — for the RTV fee, at the district level too.</figcaption>
+            <figcaption data-i18n="px_ter_cap">Share of the 88 districts where YES led. The two proposals rejected nationally led in most regions and polling stations; the RTV-fee proposal also led in most districts.</figcaption>
           </figure>
         </div>
-        <div class="note" data-i18n="pxA_n">
-          The same sensitivity runs through the counting night: after the first fifth of ballots was counted, YES led on all four questions (reconstruction from media partial results) — YES-leaning cities count faster. The lead melted away as rural and early votes arrived.
-        </div>
-        <h4 class="px-sub" data-i18n="pxB_t">Rule 2 · Only ballots cast on election day</h4>
-        <p class="sect-sub" data-i18n="pxB_p">Where a vote is cast should not matter — here it decided everything. Election-day precincts said YES to all four questions (+10,255 to +208,991); early and postal votes said NO to all four. Both rejections were decided by the ~9% of ballots cast outside election day.</p>
+        <div class="note" data-i18n="pxA_n">Partial results reported by the media show YES leading on all four questions after the first fifth of ballots had been counted. Cities favouring YES reported sooner. The leads disappeared as rural and early votes were added. Early leads do not necessarily predict the final result.</div>
+        <h4 class="px-sub" data-i18n="pxB_t">Rule 2 · Count election-day votes separately</h4>
+        <p class="sect-sub" data-i18n="pxB_p">YES led by 10,255 to 208,991 votes among election-day polling-station ballots. Early and postal voters favoured NO on every question. Including those ballots, about 9% of the total, changed the overall result on both rejected questions. All of these ballots belong in the actual count.</p>
         <div class="figs">
           <figure class="fig">
             <img src="img/en/decomposition.png" data-fig="decomposition" data-alt="dec_alt" alt="Net YES-NO margin by voting channel: election-day precincts positive on all four questions, early and postal negative" loading="lazy">
-            <figcaption data-i18n="px_dec_cap">Net margin YES − NO by voting channel. On election-day precincts YES won every question; early and postal votes decided both rejections.</figcaption>
+            <figcaption data-i18n="px_dec_cap">YES votes minus NO votes, separated into election-day, early and postal voting. Election-day voters favoured YES on all four questions; adding the other votes changed two overall results.</figcaption>
           </figure>
         </div>
-        <h4 class="px-sub" data-i18n="pxC_t">Rule 3 · Winner-take-all districts (the gerrymander test)</h4>
-        <p class="sect-sub" data-i18n="pxC_p">Slovenia does not use districts for referendums — so how much would a district map matter? Build 88 equal-size districts from precincts and draw them as favourably as possible for the losing side: where the vote is near parity (RTV fee 51.7%, investigations law 50.5% of election-day votes) the loser reaches 45 districts of 88 — a majority. Against a 60.5% defeat even the best map manages only 17.</p>
-        <div class="note" data-i18n="pxC_n">
-          The arithmetic floor: with perfectly equal winner-take-all districts, 25.6% of the vote is enough for 45 of 88. These numbers measure how much the rule — not the voters — would decide.
-        </div>
-        <h4 class="px-sub" data-i18n="pxD_t">Rule 4 · The turnout quorum (Article 90)</h4>
-        <p class="sect-sub" data-i18n="pxD_p">For the binding investigations referendum the Constitution sets two locks on rejection: a NO majority, and NO votes from at least 1/5 of all registered voters. NO cleared both — by 132,971 over the quorum. But the quorum counts people who did not vote: with 664,854 more registered voters (+39%), the same 472,444 NO votes would miss 1/5 — the law would stand, without a single ballot changing.</p>
+        <h4 class="px-sub" data-i18n="pxC_t">Rule 3 · Draw districts to favour one side</h4>
+        <p class="sect-sub" data-i18n="pxC_p">Slovenia does not decide referendums by districts. I tested a hypothetical map of 88 equally sized districts, drawn to help the side that lost nationally. On the close questions — RTV fee 51.7% YES and investigations law 50.5% YES in election-day votes — that side could win 45 of 88 districts. Against a 60.5% majority, the most favourable map in this test gave it only 17.</p>
+        <div class="note" data-i18n="pxC_n">With perfectly equal districts, a side could in theory win 45 of 88 with just 25.6% of all votes, by winning those districts narrowly and losing the rest heavily. This illustrates how district rules could change representation.</div>
+        <h4 class="px-sub" data-i18n="pxD_t">Rule 4 · Require enough registered voters to vote NO (Article 90)</h4>
+        <p class="sect-sub" data-i18n="pxD_p">Rejecting the investigations law required both a NO majority and NO votes from at least 1/5 of registered voters. The 472,444 NO votes cleared that minimum by 132,971. The voter roll therefore matters too: with 664,854 more registered voters (+39%), the same NO total would fall below 1/5 and the law would stay in force.</p>
         <div class="figs">
           <figure class="fig">
             <img src="img/en/quorum.png" data-fig="quorum" data-alt="quo_alt" alt="NO votes against the two rejection thresholds: the quorum line and the half-of-valid-votes line" loading="lazy">
-            <figcaption data-i18n="px_quo_cap">NO votes against both rejection thresholds: the quorum (1/5 of registered voters) and half of valid votes.</figcaption>
+            <figcaption data-i18n="px_quo_cap">NO totals compared with the two requirements for rejecting a law: more than half of valid votes and at least 1/5 of registered voters.</figcaption>
           </figure>
         </div>
-        <div class="note" data-i18n="pxD_n">
-          One paradox is provably absent: the rule is monotone — an extra YES vote can never cause a rejection — so staying home can never help your side (the classic no-show paradox). And the RTV margin of 546 votes is smaller than its 2,913 invalid ballots; 547 extra YES votes would flip it. Even so, applying Article 90 counterfactually to all four questions changes no outcome.
-        </div>
+        <div class="note" data-i18n="pxD_n">Under this rule, voting for your preferred side cannot make its result worse; staying home cannot help it win. The RTV-fee margin was 546 votes, smaller than the 2,913 invalid ballots: 547 extra YES votes would reverse the result. Applying Article 90 to all four questions as a hypothetical check would change none of their outcomes.</div>
       </section>
       <section>
-        <h3 class="sect" data-i18n="meth_title">Manipulation detection test results</h3>
-        <p class="sect-sub" data-i18n="meth_intro">Eight families of tests used by election statisticians worldwide, run on the official precinct data with open-source code. Summary: all clean.</p>
+        <h3 class="sect" data-i18n="meth_title">What the checks found</h3>
+        <p class="sect-sub" data-i18n="meth_intro">I ran eight groups of statistical checks on the official polling-station data, using code anyone can inspect. Taken together, they do not establish manipulation. The details below explain the findings and what the checks can miss.</p>
         <div class="m-list">
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m1_t">Anomalous-vote estimate (Shpilkin method)</h5>
-              <p data-i18n="m1_b">Votes beyond the honest turnout decline: at most 1% of YES votes and 0.45% of NO votes — and removing them would shift any outcome by at most 0.15 points.</p>
+              <h5 data-i18n="m1_t">Votes at unusually high turnout (Shpilkin method)</h5>
+              <p data-i18n="m1_b">The high-turnout area contains at most 1% of YES votes and 0.45% of NO votes. Leaving it out would change any result by at most 0.15 percentage points. These are not automatically fraudulent votes.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m1_d">What it checks: stuffed ballot boxes push precincts out to the right of the turnout curve and concentrate extra votes for one side there. The method fits a smooth bell to the turnout distribution, finds where the honest decline ends (the 70.1% line, read off the three other referendums, which share the same precincts and electorate), and counts the votes beyond it. In all four referendums the anomalous zone holds 4,135–4,651 YES votes (0.89–1.00% of each YES total) and 1,297–1,812 NO votes (0.41–0.45%) — the right edge of the same city/countryside gradient, not a separate cluster; deleting it would shift any outcome by at most 0.15 points.</p>
+              <p data-i18n="m1_d">Adding ballots can raise both turnout and one side’s vote total. This method fits a bell-shaped turnout curve and counts votes beyond a chosen boundary. I used the other three referendums, with the same stations and voters, to set that boundary at 70.1%. Across the four questions, this area contains 4,135–4,651 YES votes (0.89–1.00% of YES totals) and 1,297–1,812 NO votes (0.41–0.45%). It continues the city–rural pattern rather than forming a separate group. Removing it would change any result by at most 0.15 percentage points. The estimate alone does not identify fake votes.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Turnout histogram: one smooth bell curve fading out by 70%" loading="lazy">
-                  <figcaption data-i18n="fig1_cap">Turnout across 2,984 precincts (parliamentary-investigation referendum). The curve is one smooth bell — by 70% turnout it has faded to nearly zero.</figcaption>
+                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Polling-station turnout forms a bell-shaped curve, with very few stations above 70%" loading="lazy">
+                  <figcaption data-i18n="fig1_cap">Turnout at 2,984 polling stations for the investigations referendum. Most stations sit near the middle of a smooth bell-shaped curve. Very few had turnout above 70%.</figcaption>
                 </figure>
                 <figure class="fig">
                   <img src="img/details/en/preiskava/shpilkin_core.png" data-dfig="preiskava/shpilkin_core" data-alt="m1_a1" alt="Turnout distribution and leader votes by turnout, parliamentary investigations referendum: small red tail beyond 70%" loading="lazy">
-                  <figcaption data-i18n="m1_c1">Parliamentary Investigations Act (ZPPre-B): 4,223 YES votes (1.00% of the YES total) beyond the 70.1% boundary; without the zone the outcome moves 50.32% → 50.17%.</figcaption>
+                  <figcaption data-i18n="m1_c1">Parliamentary Investigations Act (ZPPre-B): 4,223 YES votes (1.00% of the YES total) beyond the 70.1% boundary; without the zone the YES share moves 50.32% → 50.17%.</figcaption>
                 </figure>
                 <figure class="fig">
                   <img src="img/details/en/socialna_pomoc/shpilkin_core.png" data-dfig="socialna_pomoc/shpilkin_core" data-alt="m1_a2" alt="Turnout distribution and leader votes by turnout, social assistance referendum: small red tail beyond 70%" loading="lazy">
-                  <figcaption data-i18n="m1_c2">Social assistance: 4,651 YES votes (0.89%) in the tail — outcome 62.20% → 62.09%.</figcaption>
+                  <figcaption data-i18n="m1_c2">Social assistance: 4,651 YES votes (0.89%) above the boundary — YES share 62.20% → 62.09%.</figcaption>
                 </figure>
                 <figure class="fig">
                   <img src="img/details/en/volilna_pravica/shpilkin_core.png" data-dfig="volilna_pravica/shpilkin_core" data-alt="m1_a3" alt="Turnout distribution and leader votes by turnout, local voting rights referendum: small red tail beyond 70%" loading="lazy">
-                  <figcaption data-i18n="m1_c3">Local voting rights: 4,438 YES votes (0.92%) — outcome 56.93% → 56.81%.</figcaption>
+                  <figcaption data-i18n="m1_c3">Local voting rights: 4,438 YES votes (0.92%) — YES share 56.93% → 56.81%.</figcaption>
                 </figure>
                 <figure class="fig">
                   <img src="img/details/en/rtv_prispevek/shpilkin_core.png" data-dfig="rtv_prispevek/shpilkin_core" data-alt="m1_a4" alt="Turnout distribution and leader votes by turnout, RTV fee referendum: small red tail beyond 70%" loading="lazy">
-                  <figcaption data-i18n="m1_c4">RTV fee: 4,135 YES votes (0.95%) — outcome 51.60% → 51.48%.</figcaption>
+                  <figcaption data-i18n="m1_c4">RTV fee: 4,135 YES votes (0.95%) — YES share 51.60% → 51.48%.</figcaption>
                 </figure>
                 <figure class="fig wide">
-                  <img src="img/details/en/preiskava/controls_turnout.png" data-dfig="preiskava/controls_turnout" data-alt="m1_a5" alt="Turnout histograms of the four referendums overlap almost exactly" loading="lazy">
-                  <figcaption data-i18n="m1_c5">Turnout distributions of all four referendums overlaid: same precincts, same electorate. The honest-decline boundary (70.1%) is read off the other three referendums — they serve as the control.</figcaption>
+                  <img src="img/details/en/preiskava/controls_turnout.png" data-dfig="preiskava/controls_turnout" data-alt="m1_a5" alt="Turnout charts of the four referendums overlap almost exactly" loading="lazy">
+                  <figcaption data-i18n="m1_c5">Turnout patterns of all four referendums overlaid: same precincts, same electorate. The comparison boundary (70.1%) is read off the other three referendums — they provide the comparison.</figcaption>
                 </figure>
               </div>
             </div>
@@ -280,32 +256,32 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
-              <p data-i18n="m2_b">One continuous cloud with a smooth gradient — no separate “tail” of high-turnout, high-YES precincts that ballot-stuffing produces.</p>
+              <h5 data-i18n="m2_t">Does high turnout come with unusually high YES support?</h5>
+              <p data-i18n="m2_b">The points form one connected group. There is no separate high-turnout, high-YES group of the kind that added ballots can produce.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m2_d">What it checks: ballot-stuffing ties high turnout to high result — on falsified data a separate “tail” of 80–100%-turnout precincts stretches toward 80–95% results while the rival’s share collapses in exactly those precincts. Here the cloud is one continuous body: the YES share rises smoothly with turnout (+4 points per 10 points; weighted correlation +0.27…+0.38), with no kink at the right edge. Above 80% turnout sit only 10 tiny precincts — 0.1% of ballots.</p>
+              <p data-i18n="m2_d">Added ballots can create a separate group of stations at 80–100% turnout and 80–95% support for one side, with support for the other side falling. Here YES support rises gradually: about 4 percentage points for each 10-point increase in turnout. The weighted correlation, a measure of how closely the two move together while accounting for station size, is +0.27…+0.38. There is no sudden change at high turnout. Only 10 small stations exceed 80% turnout, accounting for 0.1% of ballots.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/comet.png" data-fig="comet" data-alt="fig2_alt" alt="Turnout vs YES share: smooth gradient, no separate tail" loading="lazy">
-                  <figcaption data-i18n="fig2_cap">Each dot is a precinct. YES share grows smoothly with turnout — the city/countryside gradient; there is no separate cloud at high turnout.</figcaption>
+                  <img src="img/en/comet.png" data-fig="comet" data-alt="fig2_alt" alt="YES vote share rises gradually with turnout, with no separate group at high turnout" loading="lazy">
+                  <figcaption data-i18n="fig2_cap">Each dot is a polling station. YES support rises gradually with turnout, alongside differences between cities and rural areas. There is no separate group of stations with unusually high turnout and YES support.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/preiskava/comet_scatter.png" data-dfig="preiskava/comet_scatter" data-alt="m2_a1" alt="Turnout vs YES share scatter, parliamentary investigations act: one continuous cloud, no separate tail" loading="lazy">
-                  <figcaption data-i18n="m2_c1">Parliamentary Investigations Act: turnout × YES share, weighted correlation +0.36 — one smooth gradient.</figcaption>
+                  <img src="img/details/en/preiskava/comet_scatter.png" data-dfig="preiskava/comet_scatter" data-alt="m2_a1" alt="Turnout vs YES share scatter, parliamentary investigations act: one connected group, no separate tail" loading="lazy">
+                  <figcaption data-i18n="m2_c1">Parliamentary Investigations Act: turnout × YES share, relationship score (weighted correlation) +0.36 — one gradual pattern.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/socialna_pomoc/comet_scatter.png" data-dfig="socialna_pomoc/comet_scatter" data-alt="m2_a2" alt="Turnout vs YES share scatter, social assistance: one continuous cloud, no separate tail" loading="lazy">
-                  <figcaption data-i18n="m2_c2">Social assistance: +0.35; the gradient is the city/countryside split, not a fraud tail.</figcaption>
+                  <img src="img/details/en/socialna_pomoc/comet_scatter.png" data-dfig="socialna_pomoc/comet_scatter" data-alt="m2_a2" alt="Turnout vs YES share scatter, social assistance: one connected group, no separate tail" loading="lazy">
+                  <figcaption data-i18n="m2_c2">Social assistance: +0.35; the pattern follows city–rural differences, without a separate high-turnout group.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/volilna_pravica/comet_scatter.png" data-dfig="volilna_pravica/comet_scatter" data-alt="m2_a3" alt="Turnout vs YES share scatter, local voting rights: one continuous cloud, no separate tail" loading="lazy">
-                  <figcaption data-i18n="m2_c3">Local voting rights: +0.38 — the steepest of the four, still a single continuous cloud.</figcaption>
+                  <img src="img/details/en/volilna_pravica/comet_scatter.png" data-dfig="volilna_pravica/comet_scatter" data-alt="m2_a3" alt="Turnout vs YES share scatter, local voting rights: one connected group, no separate tail" loading="lazy">
+                  <figcaption data-i18n="m2_c3">Local voting rights: +0.38 — the strongest of the four relationships, still one connected group.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/comet_scatter.png" data-dfig="rtv_prispevek/comet_scatter" data-alt="m2_a4" alt="Turnout vs YES share scatter, RTV fee: one continuous cloud, no separate tail" loading="lazy">
-                  <figcaption data-i18n="m2_c4">RTV fee: +0.27; no separate cluster at high turnout.</figcaption>
+                  <img src="img/details/en/rtv_prispevek/comet_scatter.png" data-dfig="rtv_prispevek/comet_scatter" data-alt="m2_a4" alt="Turnout vs YES share scatter, RTV fee: one connected group, no separate tail" loading="lazy">
+                  <figcaption data-i18n="m2_c4">RTV fee: +0.27; no separate group at high turnout.</figcaption>
                 </figure>
               </div>
             </div>
@@ -313,32 +289,32 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
-              <p data-i18n="m3_b">The distribution matches honest elections; the specific 2D cluster typical of fraud (80–100% turnout) is absent.</p>
+              <h5 data-i18n="m3_t">Look for a separate high-turnout group (Klimek method)</h5>
+              <p data-i18n="m3_b">The model splits the data into two groups, but both have ordinary turnout. It does not find the separate group at 80–100% turnout associated with some forms of manipulation.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m3_d">What it checks: Klimek et al. (PNAS 2012) model precincts as a mix of two 2D clusters in the turnout × result plane; in falsified elections the second cluster is compact and sits at 80–100% turnout with high results. The formal criterion fires here as well, but both components lie at mid-range turnout (51–56%) — a gradient inside one continuous cloud, identical in all four referendums (share correlations 0.94–0.96). The classic fraud island at 80–100% turnout does not exist: above 85% only two precincts remain (19 and 21 voters).</p>
+              <p data-i18n="m3_d">Klimek and colleagues (PNAS 2012) fit two groups to a chart of turnout and vote share. Some manipulated elections show a separate group at 80–100% turnout with very high support for one side. The model also selects two groups here, but both sit at 51–56% turnout within one connected pattern. All four referendums look similar (vote-share correlations 0.94–0.96). The separate high-turnout group is absent. Only two stations exceed 85% turnout, with 19 and 21 voters.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/cross.png" data-fig="cross" data-alt="fig3_alt" alt="YES share pairs across the four referendums, r = 0.94–0.96" loading="lazy">
-                  <figcaption data-i18n="fig3_cap">All four referendums, same precincts. A YES-heavy precinct is YES-heavy on every question — one electorate, one consistent geography (r = 0.94–0.96).</figcaption>
+                  <img src="img/en/cross.png" data-fig="cross" data-alt="fig3_alt" alt="YES vote shares track each other closely across the four referendums, r = 0.94–0.96" loading="lazy">
+                  <figcaption data-i18n="fig3_cap">Stations with more YES votes on one question usually had more YES votes on the others too. The relationship is very strong (r = 0.94–0.96, where 1 means a perfect match).</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/preiskava/fingerprint_2d.png" data-dfig="preiskava/fingerprint_2d" data-alt="m3_a1" alt="Election fingerprint, parliamentary investigations act: a single cloud, no cluster at 80–100% turnout" loading="lazy">
-                  <figcaption data-i18n="m3_c1">Parliamentary Investigations Act: 2nd-component weight 0.42; both clusters at mid-range turnout — no fraud island.</figcaption>
+                  <img src="img/details/en/preiskava/fingerprint_2d.png" data-dfig="preiskava/fingerprint_2d" data-alt="m3_a1" alt="Turnout and vote-share chart, parliamentary investigations act: one connected group, no separate group at 80–100% turnout" loading="lazy">
+                  <figcaption data-i18n="m3_c1">Parliamentary Investigations Act: share assigned to the model’s second group 0.42; both groups have ordinary turnout; no separate high-turnout group.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/socialna_pomoc/fingerprint_2d.png" data-dfig="socialna_pomoc/fingerprint_2d" data-alt="m3_a2" alt="Election fingerprint, social assistance: a single cloud, no cluster at 80–100% turnout" loading="lazy">
-                  <figcaption data-i18n="m3_c2">Social assistance: weight 0.49. The “second cluster” is the rural, YES-leaning half of one gradient.</figcaption>
+                  <img src="img/details/en/socialna_pomoc/fingerprint_2d.png" data-dfig="socialna_pomoc/fingerprint_2d" data-alt="m3_a2" alt="Turnout and vote-share chart, social assistance: one connected group, no separate group at 80–100% turnout" loading="lazy">
+                  <figcaption data-i18n="m3_c2">Social assistance: model group share 0.49. The model’s second group covers the more rural, YES-leaning stations within one gradual pattern.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/volilna_pravica/fingerprint_2d.png" data-dfig="volilna_pravica/fingerprint_2d" data-alt="m3_a3" alt="Election fingerprint, local voting rights: a single cloud, no cluster at 80–100% turnout" loading="lazy">
-                  <figcaption data-i18n="m3_c3">Local voting rights: weight 0.48 — the same picture.</figcaption>
+                  <img src="img/details/en/volilna_pravica/fingerprint_2d.png" data-dfig="volilna_pravica/fingerprint_2d" data-alt="m3_a3" alt="Turnout and vote-share chart, local voting rights: one connected group, no separate group at 80–100% turnout" loading="lazy">
+                  <figcaption data-i18n="m3_c3">Local voting rights: model group share 0.48 — the same picture.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/fingerprint_2d.png" data-dfig="rtv_prispevek/fingerprint_2d" data-alt="m3_a4" alt="Election fingerprint, RTV fee: a single cloud, no cluster at 80–100% turnout" loading="lazy">
-                  <figcaption data-i18n="m3_c4">RTV fee: weight 0.43; the density above 80% turnout is empty.</figcaption>
+                  <img src="img/details/en/rtv_prispevek/fingerprint_2d.png" data-dfig="rtv_prispevek/fingerprint_2d" data-alt="m3_a4" alt="Turnout and vote-share chart, RTV fee: one connected group, no separate group at 80–100% turnout" loading="lazy">
+                  <figcaption data-i18n="m3_c4">RTV fee: model group share 0.43; very few stations have turnout above 80%.</figcaption>
                 </figure>
               </div>
             </div>
@@ -346,27 +322,27 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
-              <p data-i18n="m4_b">Protocol values show no preference for whole percentages of turnout or result (all statistics ≤ 1.3) — no sign of numbers typed in by hand.</p>
+              <h5 data-i18n="m4_t">Are round percentages unusually common? (Kobak method)</h5>
+              <p data-i18n="m4_b">Whole percentages of turnout and vote share are no more common than expected from chance (all test scores ≤ 1.3). This check has limited sensitivity in small polling stations.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m4_d">What it checks: numbers typed in by hand cluster at round values — a turnout or result ending exactly at a whole percent (or a multiple of 5) should be rare. The test compares the share of precincts with integer values against a Monte Carlo null built from the same data. Every statistic lands within ±1.3 (turnout z −0.0…+0.4; YES share z ≤ +1.1; NO share z ≤ +1.3): no handwriting signature. Honest caveat: with ~460 voters per precinct the test detects only mass falsification — quantified in the self-test below.</p>
+              <p data-i18n="m4_d">Invented totals can favour round percentages. I compared the frequency of whole percentages and multiples of 5 with repeated random simulations based on the same data (Monte Carlo). The z score measures the distance from that simulated expectation: all scores are within ±1.3 (turnout −0.0…+0.4; YES share ≤ +1.1; NO share ≤ +1.3). Nothing stands out on this check. With about 460 voters per station, however, the test can miss substantial changes; the self-test below shows this limit.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/preiskava/integer_peaks.png" data-dfig="preiskava/integer_peaks" data-alt="m4_a1" alt="Integer-percentage peaks, parliamentary investigations act: observed bars match the Monte Carlo null" loading="lazy">
-                  <figcaption data-i18n="m4_c1">Parliamentary Investigations Act: integer turnout z = 0.0, multiples of 5 z = −0.1, YES share z = +1.1 — all within noise.</figcaption>
+                  <img src="img/details/en/preiskava/integer_peaks.png" data-dfig="preiskava/integer_peaks" data-alt="m4_a1" alt="Whole-percentage frequencies, parliamentary investigations act: the observed counts match random simulations" loading="lazy">
+                  <figcaption data-i18n="m4_c1">Parliamentary Investigations Act: whole-percentage turnout z = 0.0, multiples of 5 z = −0.1, YES share z = +1.1 — within the range expected from chance.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/socialna_pomoc/integer_peaks.png" data-dfig="socialna_pomoc/integer_peaks" data-alt="m4_a2" alt="Integer-percentage peaks, social assistance: observed bars match the Monte Carlo null" loading="lazy">
+                  <img src="img/details/en/socialna_pomoc/integer_peaks.png" data-dfig="socialna_pomoc/integer_peaks" data-alt="m4_a2" alt="Whole-percentage frequencies, social assistance: the observed counts match random simulations" loading="lazy">
                   <figcaption data-i18n="m4_c2">Social assistance: turnout z = +0.4; YES share z = +0.4.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/volilna_pravica/integer_peaks.png" data-dfig="volilna_pravica/integer_peaks" data-alt="m4_a3" alt="Integer-percentage peaks, local voting rights: observed bars match the Monte Carlo null" loading="lazy">
+                  <img src="img/details/en/volilna_pravica/integer_peaks.png" data-dfig="volilna_pravica/integer_peaks" data-alt="m4_a3" alt="Whole-percentage frequencies, local voting rights: the observed counts match random simulations" loading="lazy">
                   <figcaption data-i18n="m4_c3">Local voting rights: turnout z = −0.0; YES share z = +0.2.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/integer_peaks.png" data-dfig="rtv_prispevek/integer_peaks" data-alt="m4_a4" alt="Integer-percentage peaks, RTV fee: observed bars match the Monte Carlo null" loading="lazy">
+                  <img src="img/details/en/rtv_prispevek/integer_peaks.png" data-dfig="rtv_prispevek/integer_peaks" data-alt="m4_a4" alt="Whole-percentage frequencies, RTV fee: the observed counts match random simulations" loading="lazy">
                   <figcaption data-i18n="m4_c4">RTV fee: turnout z = +0.2; YES share z = +0.2.</figcaption>
                 </figure>
               </div>
@@ -375,20 +351,20 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m5_t">Digit tests (Benford, last digit)</h5>
-              <p data-i18n="m5_b">16 tests on vote counts: 13 fully clean, 3 borderline values with the opposite of the “fabricated numbers” profile — and not significant after multiple-testing correction.</p>
+              <h5 data-i18n="m5_t">Do vote-count digits look unusual? (Benford and last-digit checks)</h5>
+              <p data-i18n="m5_b">Of 16 checks, 13 raised no concern and 3 were borderline. None remained unusual after allowing for the number of checks run. The borderline results do not show an excess of round numbers.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m5_d">What it checks: fabricated numbers leave fingerprints in the digits — an excess of round 0s and 5s (Beber–Scacco last-digit test) and departures from Benford’s law in the second digit. Sixteen tests (two options × two digit tests × four referendums): 13 fully clean. The three borderline values (Monte Carlo p = 0.005–0.12) deviate toward an excess of the digit 4 and a deficit of 0 — the opposite of the round-number profile of invented numbers — and none survives the Bonferroni correction for 16 tests (threshold 0.003).</p>
+              <p data-i18n="m5_d">These checks ask whether the last digit, or the second digit compared with Benford’s expected pattern, is unusual. Made-up counts can sometimes favour endings such as 0 and 5, but digit patterns alone cannot establish fraud. Of 16 checks (two sides × two digit checks × four questions), 13 raised no concern. Three borderline results (Monte Carlo p = 0.005–0.12) showed more 4s and fewer 0s. None passed the stricter Bonferroni threshold of 0.003, which allows for the chance of a false alarm when running 16 checks.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/digit_benford2.png" data-dfig="rtv_prispevek/digit_benford2" data-alt="m5_a1" alt="Second-digit distribution against Benford’s law, RTV referendum: all bars within the 95% Monte Carlo band" loading="lazy">
-                  <figcaption data-i18n="m5_c1">RTV fee — the most-voted ballot — second digits vs Benford’s law: YES p = 0.12, NO p = 0.47 against the Monte Carlo null (2,977 and 2,900 numbers).</figcaption>
+                  <img src="img/details/en/rtv_prispevek/digit_benford2.png" data-dfig="rtv_prispevek/digit_benford2" data-alt="m5_a1" alt="Second-digit distribution compared with Benford’s expected pattern, RTV referendum: all bars fall inside the range covering 95% of simulated results" loading="lazy">
+                  <figcaption data-i18n="m5_c1">RTV fee — the most-voted ballot — second digits vs Benford’s law: YES p = 0.12, NO p = 0.47 compared with random simulations (2,977 and 2,900 numbers).</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/digit_last.png" data-dfig="rtv_prispevek/digit_last" data-alt="m5_a2" alt="Last-digit distribution, RTV referendum: uniform, no excess of 0s and 5s" loading="lazy">
-                  <figcaption data-i18n="m5_c2">Same referendum, last digits of counts ≥ 100: uniform, no excess of 0s and 5s (YES p = 0.23, NO p = 0.05). The other three referendums are analogous — see sections 6–7 of the report.</figcaption>
+                  <img src="img/details/en/rtv_prispevek/digit_last.png" data-dfig="rtv_prispevek/digit_last" data-alt="m5_a2" alt="Last-digit distribution, RTV referendum: roughly even, with no excess of 0s and 5s" loading="lazy">
+                  <figcaption data-i18n="m5_c2">Same referendum, last digits of counts ≥ 100: roughly even, with no excess of 0s and 5s (YES p = 0.23, NO p = 0.05). The other three referendums are analogous — see sections 6–7 of the report.</figcaption>
                 </figure>
               </div>
             </div>
@@ -396,20 +372,20 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m6_t">Outliers vs neighbours + machine learning</h5>
-              <p data-i18n="m6_b">A few dozen precincts flagged — all tiny (16–342 voters) with mixed directions; a normal statistical tail, not a pattern.</p>
+              <h5 data-i18n="m6_t">Find polling stations that differ from the others</h5>
+              <p data-i18n="m6_b">A few dozen stations stand out. All are small (16–342 voters), and their differences point in different directions rather than consistently helping one side.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m6_d">What it checks: two independent screens for odd precincts — each precinct against the median of its district (robust z-scores, threshold |z| &gt; 4), and an Isolation Forest over four features (turnout, leader share, invalid ballots, size). Neighbours flag 22–40 precincts per referendum (0.7–1.3%); machine learning flags exactly 30 (1% by construction). All are tiny places (16–342 voters) with mixed directions — largely the same extremes in all four ballots (e.g. a 19-voter precinct at 100% turnout): a normal statistical tail, not a pattern. Figures show the RTV fee ballot, the most-voted one; the rest are analogous.</p>
+              <p data-i18n="m6_d">I used two ways to find unusual stations. The first compares a station with the middle value in its district, flagging large differences (robust z-score |z| > 4). The second, Isolation Forest, compares turnout, the leading side’s vote share, invalid ballots and station size. The first flags 22–40 stations per question (0.7–1.3%); the second is set to flag 30 (1%). All are small, with 16–342 voters. Differences favour different sides, and many of the same stations stand out on all four questions, including one with 19 voters and 100% turnout. This does not show a shared pattern of manipulation. The charts show the RTV-fee question; the others look similar.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/neighbors_outliers.png" data-dfig="rtv_prispevek/neighbors_outliers" data-alt="m6_a1" alt="Outliers versus district neighbours, RTV referendum: scattered small precincts, no cluster at high turnout" loading="lazy">
-                  <figcaption data-i18n="m6_c1">RTV fee: precincts vs their district median. The 29 flagged (|z| &gt; 4) are small rural precincts with mixed directions.</figcaption>
+                  <img src="img/details/en/rtv_prispevek/neighbors_outliers.png" data-dfig="rtv_prispevek/neighbors_outliers" data-alt="m6_a1" alt="Outliers versus district neighbours, RTV referendum: scattered small precincts, no separate group at high turnout" loading="lazy">
+                  <figcaption data-i18n="m6_c1">RTV fee: precincts compared with the middle value in their district. The 29 flagged (|z| > 4) are small rural precincts with differences favouring different sides.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/ml_anomalies.png" data-dfig="rtv_prispevek/ml_anomalies" data-alt="m6_a2" alt="Isolation Forest anomaly scores, RTV referendum: smooth distribution, top-25 anomalies marked" loading="lazy">
-                  <figcaption data-i18n="m6_c2">RTV fee: Isolation Forest anomaly scores; the top 30 are size extremes such as a 16-voter premises at 81% turnout.</figcaption>
+                  <img src="img/details/en/rtv_prispevek/ml_anomalies.png" data-dfig="rtv_prispevek/ml_anomalies" data-alt="m6_a2" alt="Isolation Forest scores for unusual stations, RTV referendum: gradually changing scores, 25 highest-scoring stations marked" loading="lazy">
+                  <figcaption data-i18n="m6_c2">RTV fee: Isolation Forest scores for unusual stations; the top 30 are unusually small stations, such as a 16-voter premises at 81% turnout.</figcaption>
                 </figure>
               </div>
             </div>
@@ -417,39 +393,39 @@
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m7_t">Duplicate protocols</h5>
-              <p data-i18n="m7_b">Repeated result vectors occur at exactly the rate chance predicts (38–60 observed vs 37–53 expected). No copy-paste.</p>
+              <h5 data-i18n="m7_t">Are identical results too common?</h5>
+              <p data-i18n="m7_b">Identical YES, NO and invalid-vote totals recur 38–60 times per referendum, compared with 37–53 expected by chance. This gives no clear evidence of copied results.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m7_d">What it checks: copied protocols surface as identical result vectors (YES, NO, invalid) repeated across precincts more often than chance allows. Observed: 38–60 repeated vectors per referendum against a bootstrap expectation of 37–53 — natural collisions of similar precincts (37 of the 38 preiskava pairs lie in different districts). A cross-ballot check closes the case: the difference in YES votes between referendums equals 0 twice less often than 1 (412 vs 798 precincts) — a decay to zero, the opposite of a copy-paste spike.</p>
+              <p data-i18n="m7_d">Copied results could create too many identical sets of YES, NO and invalid-vote totals. I found 38–60 repeated sets per question, compared with 37–53 expected from repeated resampling of the data (bootstrap). In the investigations question, 37 of 38 matching pairs were in different districts. I also compared YES counts between questions: 412 stations had exactly the same count, while 798 differed by one vote. Exact matches do not form an unusual spike. These checks give no clear evidence of copying.</p>
             </div>
           </details>
           <details class="m">
             <summary>
               <span class="badge pass" aria-hidden="true">✓</span> <span class="m-head">
-              <h5 data-i18n="m8_t">Self-test: the toolkit actually detects fraud</h5>
-              <p data-i18n="m8_b">I injected synthetic ballot-stuffing into the data — the estimated anomalous zone grew 12-fold and every alarm fired. The “clean” verdict is a real measurement, not a blind spot.</p>
+              <h5 data-i18n="m8_t">Can these checks detect deliberately added fake votes?</h5>
+              <p data-i18n="m8_b">I added fake ballots to a copy of the data. The high-turnout vote estimate grew 12-fold. This shows that the method can detect the simulated change; it does not mean every kind of manipulation would be caught.</p>
               </span> <span class="chev" aria-hidden="true">▶</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m8_d">What it checks: the toolkit itself. A synthetic stuffing is injected into the real data — turnout raised by 5–35 points in 10% of precincts, 60–95% of the added ballots for the leader — and every alarm fires: the Shpilkin anomalous zone grows ×12–13 (4,135–4,651 votes become 51,792–59,247). A second injection (5% of precincts rounded to a whole turnout percent) lifts the integer-peaks z only to 0.8–1.6 — an honest measurement of that test’s power at ~460 voters per precinct, as flagged above.</p>
+              <p data-i18n="m8_d">I tested the tools on a copy of the real data with fake ballots added. Turnout rose by 5–35 percentage points in 10% of stations; 60–95% of added ballots went to the leading side. The Shpilkin high-turnout estimate grew 12–13 times, from 4,135–4,651 votes to 51,792–59,247. In a separate test, I rounded turnout to whole percentages at 5% of stations. The round-number test’s z score rose only to 0.8–1.6. With about 460 voters per station, that check has limited sensitivity. Detecting the first simulation does not guarantee that every kind of manipulation would be detected.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/preiskava/selftest.png" data-dfig="preiskava/selftest" data-alt="m8_a1" alt="Self-test, parliamentary investigations act: injected stuffing (red) separates from the clean distribution; Shpilkin response ×12" loading="lazy">
-                  <figcaption data-i18n="m8_c1">Parliamentary Investigations Act: clean 4,223 → 51,792 leader votes after injection — signal ×12.</figcaption>
+                  <img src="img/details/en/preiskava/selftest.png" data-dfig="preiskava/selftest" data-alt="m8_a1" alt="Self-test, parliamentary investigations act: added fake ballots (red) change the original pattern; change in Shpilkin estimate ×12" loading="lazy">
+                  <figcaption data-i18n="m8_c1">Parliamentary Investigations Act: original estimate 4,223 → 51,792 votes for the leading side after adding fake ballots — estimate ×12.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/socialna_pomoc/selftest.png" data-dfig="socialna_pomoc/selftest" data-alt="m8_a2" alt="Self-test, social assistance: injected stuffing (red) separates from the clean distribution; Shpilkin response ×13" loading="lazy">
-                  <figcaption data-i18n="m8_c2">Social assistance: 4,651 → 59,247 — signal ×13.</figcaption>
+                  <img src="img/details/en/socialna_pomoc/selftest.png" data-dfig="socialna_pomoc/selftest" data-alt="m8_a2" alt="Self-test, social assistance: added fake ballots (red) change the original pattern; change in Shpilkin estimate ×13" loading="lazy">
+                  <figcaption data-i18n="m8_c2">Social assistance: 4,651 → 59,247 — estimate ×13.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/volilna_pravica/selftest.png" data-dfig="volilna_pravica/selftest" data-alt="m8_a3" alt="Self-test, local voting rights: injected stuffing (red) separates from the clean distribution; Shpilkin response ×13" loading="lazy">
-                  <figcaption data-i18n="m8_c3">Local voting rights: 4,438 → 55,628 — signal ×13.</figcaption>
+                  <img src="img/details/en/volilna_pravica/selftest.png" data-dfig="volilna_pravica/selftest" data-alt="m8_a3" alt="Self-test, local voting rights: added fake ballots (red) change the original pattern; change in Shpilkin estimate ×13" loading="lazy">
+                  <figcaption data-i18n="m8_c3">Local voting rights: 4,438 → 55,628 — estimate ×13.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/rtv_prispevek/selftest.png" data-dfig="rtv_prispevek/selftest" data-alt="m8_a4" alt="Self-test, RTV fee: injected stuffing (red) separates from the clean distribution; Shpilkin response ×13" loading="lazy">
-                  <figcaption data-i18n="m8_c4">RTV fee: 4,135 → 52,231 — signal ×13; the method would catch stuffing of this scale with a wide margin.</figcaption>
+                  <img src="img/details/en/rtv_prispevek/selftest.png" data-dfig="rtv_prispevek/selftest" data-alt="m8_a4" alt="Self-test, RTV fee: added fake ballots (red) change the original pattern; change in Shpilkin estimate ×13" loading="lazy">
+                  <figcaption data-i18n="m8_c4">RTV fee: 4,135 → 52,231 — estimate ×13; the estimate responds strongly to the added ballots in this simulation.</figcaption>
                 </figure>
               </div>
             </div>
@@ -458,17 +434,11 @@
       </section>
       <section>
         <div class="data">
-          <h3 class="sect" data-i18n="data_title">Data &amp; reproducibility</h3>
+          <h3 class="sect" data-i18n="data_title">Data and how to repeat the checks</h3>
           <ul>
-            <li data-i18n="d1">
-              Source: official machine-readable results of the State Electoral Commission (DVK) at <a href="https://volitve.dvk-rs.si" rel="noopener">volitve.dvk-rs.si</a> — precinct-level files for all four referendums, downloaded 13 October 2026 (server snapshot 12 October 2026, 99.98% counted).
-            </li>
-            <li data-i18n="d2">
-              Cross-check: my totals match the Wikipedia summary table for all four referendums to the exact vote.
-            </li>
-            <li data-i18n="d3">
-              Reproduce and inspect: <a href="https://github.com/renatyv/elections-fraud/tree/main/analysis-tool" rel="noopener">analysis-tool</a>, <a href="https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/statistical_fraud_analysis.md" rel="noopener">forensic report</a>, <a href="https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/PARADOXES.md" rel="noopener">paradox analysis</a> and the <a href="https://github.com/renatyv/elections-fraud/tree/main/sloveniya-referendum-2026" rel="noopener">project repository</a>.
-            </li>
+            <li data-i18n="d1">Source: official machine-readable results of the State Electoral Commission (DVK) at <a href="https://volitve.dvk-rs.si" rel="noopener">volitve.dvk-rs.si</a> — precinct-level files for all four referendums, downloaded 13 October 2026 (server snapshot 12 October 2026, 99.98% counted).</li>
+            <li data-i18n="d2">I checked my totals against Wikipedia’s summary table. They match to the exact vote on all four questions.</li>
+            <li data-i18n="d3">Reproduce and inspect: <a href="https://github.com/renatyv/elections-fraud/tree/main/analysis-tool" rel="noopener">analysis-tool</a>, <a href="https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/statistical_fraud_analysis.md" rel="noopener">forensic report</a>, <a href="https://github.com/renatyv/elections-fraud/blob/main/sloveniya-referendum-2026/PARADOXES.md" rel="noopener">paradox analysis</a> and the <a href="https://github.com/renatyv/elections-fraud/tree/main/sloveniya-referendum-2026" rel="noopener">project repository</a>.</li>
           </ul>
         </div>
       </section>

@@ -1,0 +1,77 @@
+{
+  "tail_sensitivity": [
+    {
+      "percentile": 99,
+      "party": "Yotova",
+      "t_cut": 52.56198347107438,
+      "t_cut_source": "own_percentile_99",
+      "mode": 32.75,
+      "sigma": 11.82679832815078,
+      "total_votes_party": 1020862,
+      "tail_voters": 44984,
+      "tail_votes_party": 22530,
+      "tail_share_of_party": 2.2069584331672645,
+      "observed_share_pct": 58.32917184234253,
+      "honest_share_pct": 58.54667221834517
+    },
+    {
+      "percentile": 99.5,
+      "party": "Yotova",
+      "t_cut": 58.4051724137931,
+      "t_cut_source": "own_percentile_99.5",
+      "mode": 32.75,
+      "sigma": 11.82679832815078,
+      "total_votes_party": 1020862,
+      "tail_voters": 26572,
+      "tail_votes_party": 14683,
+      "tail_share_of_party": 1.4382943042252527,
+      "observed_share_pct": 58.32917184234253,
+      "honest_share_pct": 58.37652775988889
+    },
+    {
+      "percentile": 99.9,
+      "party": "Yotova",
+      "t_cut": 100.0,
+      "t_cut_source": "own_percentile_99.9",
+      "mode": 32.75,
+      "sigma": 11.82679832815078,
+      "total_votes_party": 1020862,
+      "tail_voters": 0,
+      "tail_votes_party": 0,
+      "tail_share_of_party": 0.0,
+      "observed_share_pct": 58.32917184234253,
+      "honest_share_pct": 58.32917184234253
+    }
+  ],
+  "digit_holm_mc": [
+    {
+      "test": "benford2",
+      "party": "Yotova",
+      "n": 10445,
+      "p_mc": 0.0024937655860349127,
+      "p_holm": 0.00997506234413965
+    },
+    {
+      "test": "last",
+      "party": "Yotova",
+      "n": 5089,
+      "p_mc": 0.04738154613466334,
+      "p_holm": 0.14214463840399003
+    },
+    {
+      "test": "last",
+      "party": "Gyurov",
+      "n": 2037,
+      "p_mc": 0.19451371571072318,
+      "p_holm": 0.38902743142144636
+    },
+    {
+      "test": "benford2",
+      "party": "Gyurov",
+      "n": 10006,
+      "p_mc": 0.44389027431421446,
+      "p_holm": 0.44389027431421446
+    }
+  ],
+  "digit_family_note": "4 candidate/test combinations with at least 50 usable tallies; exploratory, not preregistered"
+}

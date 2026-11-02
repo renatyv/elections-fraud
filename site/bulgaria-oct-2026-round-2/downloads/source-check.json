@@ -1,0 +1,172 @@
+{
+  "checked_utc": "2026-11-02T15:35:59.729055+00:00",
+  "source": "https://results.cik.bg/pvr202610/tur2/rezultati/index.html",
+  "national": {
+    "version": "?v=31d75023bcaefd0356a00990ee39c0a9",
+    "asof": "02.11.2026 09:15",
+    "processed_pct": 100.0,
+    "candidates": [
+      {
+        "no": 4,
+        "name": "Андрей Атанасов Гюров и Георги Димитров Кандев",
+        "nominator": "Андрей Гюров и Георги Кандев",
+        "votes": 750251,
+        "pct": 39.483
+      },
+      {
+        "no": 25,
+        "name": "Илияна Малинова Йотова и Кирил Александров Вълчев",
+        "nominator": "Илияна Йотова и Кирил Вълчев",
+        "votes": 1093852,
+        "pct": 57.566
+      },
+      {
+        "no": null,
+        "name": "Не подкрепям никого",
+        "nominator": "",
+        "votes": 56080,
+        "pct": 2.951
+      }
+    ],
+    "parties": [],
+    "stats": {}
+  },
+  "listed_votes": 1900183,
+  "indexed_sections": 12717,
+  "invalid_balances": [
+    "091600094",
+    "030602096",
+    "131900160",
+    "012800003",
+    "143200032",
+    "303000069",
+    "320922340",
+    "321210571",
+    "254620039",
+    "122900027",
+    "244604038",
+    "234602059",
+    "234610008",
+    "234609067"
+  ],
+  "balance_discrepancies": [
+    {
+      "section": "091600094",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/09/091600094.0.html",
+      "registered_opening": 753,
+      "added": 9,
+      "signatures": 75,
+      "listed_votes": 76
+    },
+    {
+      "section": "030602096",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/03/030602096.0.html",
+      "registered_opening": 1070,
+      "added": 11,
+      "signatures": 398,
+      "listed_votes": 400
+    },
+    {
+      "section": "131900160",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/13/131900160.0.html",
+      "registered_opening": 563,
+      "added": 7,
+      "signatures": 154,
+      "listed_votes": 155
+    },
+    {
+      "section": "012800003",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/01/012800003.0.html",
+      "registered_opening": 247,
+      "added": 0,
+      "signatures": 250,
+      "listed_votes": 247
+    },
+    {
+      "section": "143200032",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/14/143200032.0.html",
+      "registered_opening": 535,
+      "added": 6,
+      "signatures": 134,
+      "listed_votes": 135
+    },
+    {
+      "section": "303000069",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/30/303000069.0.html",
+      "registered_opening": 869,
+      "added": 9,
+      "signatures": 301,
+      "listed_votes": 302
+    },
+    {
+      "section": "320922340",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/32/320922340.0.html",
+      "registered_opening": 74,
+      "added": 143,
+      "signatures": 182,
+      "listed_votes": 183
+    },
+    {
+      "section": "321210571",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/32/321210571.0.html",
+      "registered_opening": 83,
+      "added": 294,
+      "signatures": 309,
+      "listed_votes": 310
+    },
+    {
+      "section": "254620039",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/25/254620039.0.html",
+      "registered_opening": 60,
+      "added": 7,
+      "signatures": 237,
+      "listed_votes": 237
+    },
+    {
+      "section": "122900027",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/12/122900027.0.html",
+      "registered_opening": 230,
+      "added": 6,
+      "signatures": 222,
+      "listed_votes": 230
+    },
+    {
+      "section": "244604038",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/24/244604038.0.html",
+      "registered_opening": 513,
+      "added": 5,
+      "signatures": 242,
+      "listed_votes": 248
+    },
+    {
+      "section": "234602059",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/23/234602059.0.html",
+      "registered_opening": 802,
+      "added": 9,
+      "signatures": 363,
+      "listed_votes": 364
+    },
+    {
+      "section": "234610008",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/23/234610008.0.html",
+      "registered_opening": 566,
+      "added": 10,
+      "signatures": 212,
+      "listed_votes": 213
+    },
+    {
+      "section": "234609067",
+      "source": "https://results.cik.bg/pvr202610/tur2/protokoli/256/23/234609067.0.html",
+      "registered_opening": 555,
+      "added": 7,
+      "signatures": 229,
+      "listed_votes": 230
+    }
+  ],
+  "section_minus_national": {
+    "4": 0,
+    "25": 0,
+    "-": 0
+  },
+  "sections_reconcile": true
+}

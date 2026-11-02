@@ -1,0 +1,134 @@
+{
+  "title": "Bulgaria 2026 R2 runoff — domestic sections, round 1 control",
+  "national": {
+    "n_units": 10656,
+    "registered": 6555339,
+    "voted": 1750174,
+    "turnout_pct": 26.698451445455376,
+    "blank_pct": 2.9693619034450287,
+    "null_pct": 0.08342027706959422,
+    "share:Gyurov": 38.61804597714284,
+    "share:Yotova": 58.32917184234253
+  },
+  "leader": "Yotova",
+  "n_units": 10656,
+  "shpilkin": {
+    "party": "Yotova",
+    "t_cut": 50.48231511254019,
+    "t_cut_source": "controls",
+    "mode": 32.75,
+    "sigma": 11.82679832815078,
+    "total_votes_party": 1020862,
+    "tail_voters": 60230,
+    "tail_votes_party": 28904,
+    "tail_share_of_party": 2.8313327364521355,
+    "observed_share_pct": 58.32917184234253,
+    "honest_share_pct": 58.697684657006384
+  },
+  "fingerprint": {
+    "party": "Yotova",
+    "weight_anom": 0.75057353904863,
+    "mean_anom": [
+      28.86638120615752,
+      62.21067767229165
+    ],
+    "mean_main": [
+      20.15289070821042,
+      51.14264621605324
+    ],
+    "anom_cluster_voters": 5423298,
+    "anom_cluster_votes_party": 926535,
+    "total_voters": 6555339,
+    "separated": true
+  },
+  "integer_peaks_turnout": {
+    "observed_pct": 1.6234984984984986,
+    "null_pct": 1.8187406156156156,
+    "z": -1.7978381062420572,
+    "z_mult5": -0.08169331205343429
+  },
+  "integer_peaks_leader_share": {
+    "observed_pct": 4.420045045045045,
+    "null_pct": 4.499296171171171,
+    "z": -0.4303903261784349,
+    "z_mult5": 0.01576736760265587
+  },
+  "benford2": [
+    {
+      "test": "benford2",
+      "party": "Yotova",
+      "n_numbers": 10445,
+      "min_count": 10,
+      "chi2": 297.5806564789351,
+      "dof": 9,
+      "p_value": 8.507768766926586e-59,
+      "p_null_mc": 0.0024937655860349127,
+      "max_dev": 2.176729946265836
+    },
+    {
+      "test": "benford2",
+      "party": "Gyurov",
+      "n_numbers": 10006,
+      "min_count": 10,
+      "chi2": 9.730493292531786,
+      "dof": 9,
+      "p_value": 0.37274072040734363,
+      "p_null_mc": 0.44389027431421446,
+      "max_dev": 0.5103138580017069
+    }
+  ],
+  "last_digit": [
+    {
+      "test": "last",
+      "party": "Yotova",
+      "n_numbers": 5089,
+      "min_count": 100,
+      "chi2": 20.571625073688345,
+      "dof": 9,
+      "p_value": 0.01469444382747606,
+      "p_null_mc": 0.04738154613466334,
+      "max_dev": 1.1809785812536833
+    },
+    {
+      "test": "last",
+      "party": "Gyurov",
+      "n_numbers": 2037,
+      "min_count": 100,
+      "chi2": 13.569464899361806,
+      "dof": 9,
+      "p_value": 0.13848548279402897,
+      "p_null_mc": 0.19451371571072318,
+      "max_dev": 1.487481590574373
+    }
+  ],
+  "correlations_national": [
+    {
+      "party": "Yotova",
+      "pearson_w": -0.15069547342032344,
+      "spearman": -0.2576729737492955
+    },
+    {
+      "party": "Gyurov",
+      "pearson_w": 0.15505100065250388,
+      "spearman": 0.2552235464229437
+    }
+  ],
+  "neighbors_flagged": 364,
+  "swing": {
+    "prev_party": "Yotova",
+    "flagged_both": 199,
+    "flagged_turnout": 258,
+    "n": 10581
+  },
+  "ml_flagged": 107,
+  "selftest": {
+    "t_cut": 58.4051724137931,
+    "clean_tail_party": 14683,
+    "injected_added_ballots_party": 126104,
+    "injected_tail_party": 78570,
+    "signal_growth": 5.351086290267657,
+    "peaks_z_clean": -1.9118700303911822,
+    "peaks_z_rounded": 0.6628592903515033,
+    "n_rounded_units": 522
+  }
+}

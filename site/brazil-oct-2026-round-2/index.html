@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brazil, presidential runoff — 25 Oct 2026: statistical fraud check</title>
-    <meta name="description" content="Independent statistical analysis of the runoff of the Brazilian presidential election of 25 October 2026: eleven families of forensics tests on 499,248 polling sections, the 2022 runoff and round 1 as controls, election-night counting dynamics, and the actual vote transfers between the rounds.">
-    <meta property="og:title" content="Brazil, presidential runoff — 25 Oct 2026: statistical fraud check">
-    <meta property="og:description" content="Independent statistical analysis of the runoff of the Brazilian presidential election of 25 October 2026: eleven families of forensics tests on 499,248 polling sections, the 2022 runoff and round 1 as controls, election-night counting dynamics, and the actual vote transfers between the rounds.">
+    <title>Brazil runoff, 25 October 2026 — checking the election results</title>
+    <meta name="description" content="Checks of 499,248 polling sections found no evidence of manipulation. See the results, the model that picked the wrong winner, and what the data cannot tell us.">
+    <meta property="og:title" content="Brazil runoff, 25 October 2026 — checking the election results">
+    <meta property="og:description" content="Checks of 499,248 polling sections found no evidence of manipulation. See the results, the model that picked the wrong winner, and what the data cannot tell us.">
     <meta property="og:type" content="article">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231e8e5a'/%3E%3Cpath d='M18 33l9 9 19-20' stroke='white' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="../styles.css">
@@ -42,8 +42,8 @@
               ✓
             </div>
             <div>
-              <h2 data-i18n="verdict_title">The tests do not establish evidence of manipulation</h2>
-              <p class="sub" data-i18n="verdict_sub">Eleven families of statistical diagnostics on all 499,248 sections, with the honest 2022 runoff and the 2026 first round on the same sections as controls, plus the election-night portal capture: no signal of the kind these methods read as manipulation; the self-test shows the battery would have seen it. The digit tests’ formal rejections repeat the first round’s structural artifact.</p>
+              <h2 data-i18n="verdict_title">The tests found no evidence of manipulation</h2>
+              <p class="sub" data-i18n="verdict_sub">I checked all 499,248 polling sections with eleven groups of statistical tests. I compared them with the 2022 runoff and the 2026 first round, and checked saved election-night results. Taken together, these checks do not show manipulation. Some digit patterns differ from the test models, as in the first round. The simulation checks show sensitivity to two specific changes; they cannot rule out every kind of fraud.</p>
             </div>
           </div>
           <div class="verdict flip">
@@ -51,18 +51,18 @@
               ⇄
             </div>
             <div>
-              <p class="flip-head" data-i18n="verdict2_title">The first round’s transfer scenario called the runoff wrong — by 4.36 pp</p>
+              <p class="flip-head" data-i18n="verdict2_title">The first-round model picked the wrong winner: a 4.36 percentage-point miss</p>
               <p class="v-line" data-i18n="flip1_line"><b>51.79%</b> for Lula against <b>48.21%</b> for Flávio Bolsonaro: the first round’s runner-up won the runoff</p>
               <p class="v-line" data-i18n="flip2_line">The scenario using 2022 transfer rates predicted Bolsonaro 52.6%; the result shows that those assumptions did not carry over to 2026</p>
             </div>
           </div>
-          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">The runoff as an experiment ↓</a></nav>
+          <nav class="jump" aria-label="Sections"><a href="#paradoxes" data-i18n="paradox_link">Between the two rounds ↓</a></nav>
         </div>
       </div>
       <!-- ══ MINTO: SITUATION ══ -->
       <section>
         <h3 class="sect" data-i18n="sit_title">What happened on 25 October 2026</h3>
-        <p class="sect-sub" data-i18n="sit_intro">The runoff of 25 October 2026: Lula (PT) against Flávio Bolsonaro (PL), the two leaders of the 4 October first round. The section-level export published by TSE on 26–27 October reconciles with the election-night portal capture to the exact vote: 499,248 sections, 128,236,074 ballots, zero failed self-consistency checks. The final portal update is timestamped 23:26 BRT, about six and a half hours after polls closed.</p>
+        <p class="sect-sub" data-i18n="sit_intro">Lula (PT) and Flávio Bolsonaro (PL), the top two candidates on 4 October, faced each other in the 25 October 2026 runoff. TSE published results by section on 26–27 October: 499,248 sections and 128,236,074 ballots. Every arithmetic check passed, and the totals match the saved election-night portal results exactly. The portal’s final update is marked 23:26 BRT, about six and a half hours after polls closed.</p>
         <div class="cards2">
           <div class="res-card">
             <h4 data-i18n="cardA_t">Runoff result</h4>
@@ -81,7 +81,7 @@
               <div class="bolsonaro" style="width:48.21%">
               </div>
             </div>
-            <div class="outcome hot" data-i18n="cardA_out">Margin 3.58 pp — a 4.4M-vote win, reversing the first-round order</div>
+            <div class="outcome hot" data-i18n="cardA_out">Lula won by 3.58 percentage points, or 4.4M votes, after finishing second in round 1</div>
           </div>
           <div class="res-card">
             <h4 data-i18n="cardB_t">Election night: the lead flipped</h4>
@@ -97,11 +97,11 @@
                 <span data-i18n="cardB_r3">at 95% counted</span><b data-i18n="cardB_v3">Lula 51.7%</b>
               </li>
             </ul>
-            <div class="outcome" data-i18n="cardB_out">the state decomposition supports a reporting-order effect</div>
+            <div class="outcome" data-i18n="cardB_out">The state results help explain why the lead changed as different areas reported</div>
           </div>
           <div class="res-card">
             <h4 data-i18n="cardC_t">Turnout: 80.78%</h4>
-            <div class="sub" data-i18n="cardC_sub">up 1.86 pp on the first round</div>
+            <div class="sub" data-i18n="cardC_sub">1.86 percentage points higher than round 1</div>
             <ul class="plain-rows">
               <li>
                 <span data-i18n="cardC_r1">ballots cast</span><b data-i18n="cardC_v1">128.2M</b>
@@ -135,52 +135,52 @@
       </section>
       <!-- ══ MINTO: THE RUNOFF AS AN EXPERIMENT ══ -->
       <section id="paradoxes">
-        <h3 class="sect" data-i18n="px_title">The runoff as a natural experiment</h3>
-        <p class="sect-sub" data-i18n="px_intro">Three weeks separate a first round with 13 candidates and a runoff with two — the same 499,248 sections, fully matched. Aggregate section totals can estimate vote transfers between the rounds, but cannot identify how any individual voted.</p>
+        <h3 class="sect" data-i18n="px_title">What changed between the two rounds?</h3>
+        <p class="sect-sub" data-i18n="px_intro">Three weeks after a first round with 13 candidates, voters chose between two finalists. I matched the same 499,248 polling sections across rounds. Their totals let me model how support may have shifted, but cannot reveal anyone’s individual vote.</p>
         <div class="args">
           <div class="arg">
             <div class="num px">
               1
             </div>
-            <h4 data-i18n="px1_t">The scenario missed by 4.36 pp</h4>
-            <p data-i18n="px1_p">Applying 2022 transfer rates to the 2026 first round gave Flávio Bolsonaro 52.6% of the two-candidate vote. The actual runoff gave Lula 51.79%. The bootstrap interval (±0.03 pp) covered model resampling only; candidate mapping and changes in voter behaviour introduce additional uncertainty.</p>
+            <h4 data-i18n="px1_t">The model missed by 4.36 percentage points</h4>
+            <p data-i18n="px1_p">The first-round model assumed that support would shift as estimated for 2022. It gave Flávio Bolsonaro 52.6%; Lula actually won 51.79%. The model’s narrow uncertainty range (±0.03 percentage points) came only from repeatedly sampling its data. It left out uncertainty about matching different candidates and changes in voter behaviour.</p>
           </div>
           <div class="arg">
             <div class="num px">
               2
             </div>
-            <h4 data-i18n="px2_t">The scenario’s assumptions did not carry over — and the matrix says why</h4>
-            <p data-i18n="px2_p">Fitting the same model on the actual 2026 pair of rounds decomposes the 4.36 pp miss: blank ballots alone account for −1.24 pp (in 2022 they went to neither candidate; in 2026 two thirds of them went to Lula), Cury’s voters −1.15 pp (27.9% of the mapped 2022 voters chose Lula; Cury’s own voters gave him 69.3%), null ballots −0.91 pp, and Lula’s base proved more loyal than its 2022 counterpart (98.9% vs 96.8%), another −0.87 pp.</p>
+            <h4 data-i18n="px2_t">The model’s assumptions did not hold in 2026</h4>
+            <p data-i18n="px2_p">Refitting the model to both 2026 rounds breaks down the 4.36 percentage-point error. It assigns −1.24 points to blank votes: the 2022 model sent them to neither finalist, while the 2026 model sends two thirds to Lula. Cury’s category accounts for −1.15 points (27.9% for Lula in the mapped 2022 model, versus 69.3% in 2026), null votes for −0.91, and higher estimated retention of Lula’s support for −0.87 (98.9% versus 96.8%). These are model estimates from section totals, not observed voter movements.</p>
           </div>
           <div class="arg">
             <div class="num px">
               3
             </div>
-            <h4 data-i18n="px3_t">Reporting order matters; the snapshots are sparse</h4>
-            <p data-i18n="px3_p">Lula led at 1.56% counted, Bolsonaro at 28.66%, and Lula again at 95.33%. The snapshots bracket two lead changes but do not locate them exactly. The 11 reporting areas that first crossed 50% counted average 46.7% for Lula; the other 17 average 54.0%. These 28 areas include the Federal District and votes abroad.</p>
+            <h4 data-i18n="px3_t">The lead changed as different areas reported</h4>
+            <p data-i18n="px3_p">Lula led with 1.56% counted, Bolsonaro with 28.66%, and Lula again with 95.33%. The saved updates show two changes of leader, but not their exact times. Lula averaged 46.7% in the 11 areas that first passed 50% counted, versus 54.0% in the other 17. These 28 areas include the Federal District and votes abroad.</p>
           </div>
         </div>
-        <h4 class="px-sub" data-i18n="pxA_t">Check · The scenario against the actual result</h4>
-        <p class="sect-sub" data-i18n="pxA_p">The round-1 analysis mapped 2026 candidates to 2022 vote categories by geographic similarity and carried the 2022 transfer rates over unchanged. The runoff is now a direct test of that scenario: every input came from the first round, the outcome from 25 October.</p>
+        <h4 class="px-sub" data-i18n="pxA_t">How the model compared with the result</h4>
+        <p class="sect-sub" data-i18n="pxA_p">For the first-round analysis, I matched 2026 candidates with 2022 vote categories that had similar geographic support. I then used the estimated 2022 transfer rates without changing them. The 25 October runoff tests that scenario against a result the model had not used.</p>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/prediction.png" data-fig="prediction" data-alt="px_pred_alt" alt="The conditional scenario (Bolsonaro 52.6%) against the actual runoff (Lula 51.79%)" loading="lazy">
-            <figcaption data-i18n="px_pred_cap">The conditional scenario (Bolsonaro 52.6%) against the actual runoff (Lula 51.79%). The whisker is the scenario’s bootstrap interval — model resampling only.</figcaption>
+            <img src="img/en/prediction.png" data-fig="prediction" data-alt="px_pred_alt" alt="The model gave Bolsonaro 52.6%; Lula actually won 51.79%" loading="lazy">
+            <figcaption data-i18n="px_pred_cap">The model gave Bolsonaro 52.6%; the runoff gave Lula 51.79%. The small error bar shows uncertainty from repeated samples of the model only, leaving other assumptions untested.</figcaption>
           </figure>
         </div>
-        <div class="note" data-i18n="pxA_n">The bootstrap interval (47.39–47.45% for Lula) covers resampling of the fitted 2022 model. It excludes candidate-mapping uncertainty and changes in behaviour between elections. The 4.36 pp miss shows that this narrow interval did not describe total predictive uncertainty; it does not isolate the causes of the error.</div>
-        <h4 class="px-sub" data-i18n="pxB_t">Estimate · Where the round-1 votes actually went</h4>
-        <p class="sect-sub" data-i18n="pxB_p">The same transfer model fitted directly on the 2026 pair of rounds — row-stochastic rates from each round-1 vote type to each runoff destination (NNLS on section totals, 80/20 cross-validation on held-out sections, 200-draw bootstrap). Held-out fit: r² 0.978, mean absolute error 3.1 votes per section. Both bases stayed locked (98.9% of Lula’s and 99.2% of Bolsonaro’s round-1 voters); Zema’s voters consolidated behind Bolsonaro (88.1%), while Cury’s broke for Lula (69.3%) — the decisive block of the runoff.</p>
+        <div class="note" data-i18n="pxA_n">The 47.39–47.45% interval for Lula comes from repeatedly sampling the fitted 2022 model (a bootstrap). It leaves out uncertainty in matching candidates and changes in behaviour between elections. The 4.36 percentage-point error shows that the narrow interval missed important uncertainty. It does not tell us which assumption caused the error.</div>
+        <h4 class="px-sub" data-i18n="pxB_t">Where support may have shifted: model estimates</h4>
+        <p class="sect-sub" data-i18n="pxB_p">I fitted the transfer model to both 2026 rounds. For each first-round vote category, it estimates a split between the two finalists, blank or null votes, and not voting. I used non-negative least squares (NNLS), trained on 80% of sections and checked on the remaining 20%, with 200 repeated samples (bootstrap). On sections kept out of fitting, r² was 0.978 and the average absolute error was 3.1 votes per section. Estimated retention was 98.9% for Lula and 99.2% for Bolsonaro; the model assigns 88.1% of Zema’s category to Bolsonaro and 69.3% of Cury’s to Lula. A close fit to section totals does not confirm these individual transfer rates.</p>
         <div class="figs">
           <figure class="fig">
-            <img src="img/en/transfers_2026.png" data-fig="transfers_2026" data-alt="px_tr_alt" alt="Stacked bars: destination of each round-1 vote type in the runoff" loading="lazy">
-            <figcaption data-i18n="px_tr_cap">Ecological estimates from section totals, not observed individual transitions. Each row: where a round-1 vote type went in the runoff — the two candidates, blank/null, or staying home.</figcaption>
+            <img src="img/en/transfers_2026.png" data-fig="transfers_2026" data-alt="px_tr_alt" alt="Model-estimated destinations of each first-round vote category" loading="lazy">
+            <figcaption data-i18n="px_tr_cap">Estimated shifts from section totals. Each row shows the model’s split of a first-round vote category between the finalists, blank/null votes and not voting. These are estimates, not observed individual choices.</figcaption>
           </figure>
         </div>
         <table class="splits">
           <thead>
             <tr>
-              <th data-i18n="px_tab_origin">round-1 vote</th> <th data-i18n="px_tab_2022">rates the scenario borrowed (2022)</th> <th data-i18n="px_tab_actual">actual 2026 rates (this model)</th> <th data-i18n="px_tab_err">contribution to the 4.36 pp gap</th>
+              <th data-i18n="px_tab_origin">round-1 vote</th> <th data-i18n="px_tab_2022">2022 rates used in the model</th> <th data-i18n="px_tab_actual">estimated 2026 rates</th> <th data-i18n="px_tab_err">part of the 4.36-point error</th>
             </tr>
           </thead>
           <tbody>
@@ -207,47 +207,47 @@
             </tr>
           </tbody>
         </table>
-        <div class="note" data-i18n="pxB_n">Columns: the 2022 rates the scenario borrowed, the rates the same model estimates on the actual 2026 pair of rounds, and each origin’s contribution to the 4.36 pp gap (negative — the scenario underestimated Lula). The listed origins sum to −4.65 pp; turnout-composition effects offset +0.29 pp. The contributions are additive under the model and inherit its assumptions; they are not observed voter histories.</div>
-        <h4 class="px-sub" data-i18n="pxC_t">Counting · One evening, two leads</h4>
-        <p class="sect-sub" data-i18n="pxC_p">Thirteen portal captures were collected from 17:07 BRT on 25 October to 04:52 BRT on 26 October. They contain eight distinct national updates; the final update is timestamped 23:26 BRT on 25 October. Repeated captures of that final update are not additional counting steps.</p>
-        <p class="sect-sub" data-i18n="pxC_dyn">The national ticker shows Lula at 58.59% with 0.21% counted, 52.16% at 1.56%, 49.54% at 28.66%, and 51.72% at 95.33%. State-level updates lag the national ticker early in the count, so the first swing cannot be reliably attributed to particular states or votes abroad. From the 1.56% snapshot onward, the state decomposition shows southern states pulling Lula’s share down and northeastern states pulling it back up. The sparse captures cannot establish a continuous, anomaly-free trajectory.</p>
+        <div class="note" data-i18n="pxB_n">The columns compare the borrowed 2022 rates with rates estimated from 2026, then show each category’s contribution to the 4.36 percentage-point error. Negative values mean the old scenario underestimated Lula. The listed categories add to −4.65 points; changes in who turned out offset this by +0.29 points. These parts add up within the model and depend on its assumptions. They are not records of individual votes.</div>
+        <h4 class="px-sub" data-i18n="pxC_t">How the lead changed on election night</h4>
+        <p class="sect-sub" data-i18n="pxC_p">I saved 13 portal snapshots between 17:07 BRT on 25 October and 04:52 BRT on 26 October. They contain eight different national updates. The last update is timestamped 23:26 BRT on 25 October. Saving it again later does not make it a new stage of the count.</p>
+        <p class="sect-sub" data-i18n="pxC_dyn">The national total gives Lula 58.59% with 0.21% counted, 52.16% at 1.56%, 49.54% at 28.66%, and 51.72% at 95.33%. Early state tables lag behind the national total, so I cannot reliably assign the first shift to particular states or votes abroad. From the 1.56% snapshot, the state figures show southern results lowering Lula’s share and northeastern results raising it again. The gaps between snapshots leave parts of the count unobserved.</p>
         <div class="figs">
           <figure class="fig">
             <img src="img/en/counting.png" data-fig="counting" data-alt="px_count_alt" alt="Lula and Bolsonaro shares of counted votes as the count progressed; the lines cross twice" loading="lazy">
-            <figcaption data-i18n="px_count_cap">National shares of counted valid votes at the saved portal updates (BRT). Two lead changes occur between observations; connecting lines do not show unobserved counting steps.</figcaption>
+            <figcaption data-i18n="px_count_cap">The candidates’ national shares at saved updates (BRT, Brasília time). The lead changes twice between snapshots. Lines connect observations; they do not show what happened in the gaps.</figcaption>
           </figure>
           <figure class="fig">
-            <img src="img/en/swing.png" data-fig="swing" data-alt="px_swing_alt" alt="Per-state contributions to the change in Lula’s share between snapshots; blue bars pull towards Bolsonaro, red towards Lula" loading="lazy">
-            <figcaption data-i18n="px_swing_cap">State-level decomposition from the snapshot labelled 1.56% counted: the state table then covers about 85% of the national two-candidate tally and gives Lula 53.05%, versus 52.16% on the national ticker. Its change to the final 51.79% is −1.26 pp. This explains the state-table trajectory, not the entire national swing; blue bars pull towards Bolsonaro and red bars towards Lula.</figcaption>
+            <img src="img/en/swing.png" data-fig="swing" data-alt="px_swing_alt" alt="Per-state contributions to the change in Lula&#x27;s share between snapshots; blue bars pull towards Bolsonaro, red towards Lula" loading="lazy">
+            <figcaption data-i18n="px_swing_cap">State contributions from the snapshot marked 1.56% counted. At that point the state table covers about 85% of the national two-candidate vote and gives Lula 53.05%, versus 52.16% nationally. The state-table change to the final 51.79% is −1.26 percentage points. This explains the state-table change, not the full national one. Blue bars lower Lula’s share; red bars raise it.</figcaption>
           </figure>
         </div>
-        <div class="note" data-i18n="pxC_n">Reporting order can change the apparent lead during counting. These snapshots describe that sequence, not the integrity of the count — which the section-level battery below examines. The final capture reconciles with the section export to the exact vote; early state totals and the national ticker are not synchronized.</div>
+        <div class="note" data-i18n="pxC_n">Different reporting speeds can change who appears to lead. These snapshots show the sequence of published results, not whether the count was handled correctly. The section checks below add other evidence. The final snapshot matches the section data exactly; early state tables and the national total were out of sync.</div>
       </section>
       <section>
-        <h3 class="sect" data-i18n="meth_title">Manipulation detection test results</h3>
-        <p class="sect-sub" data-i18n="meth_intro">Eleven families of statistical diagnostics applied to the runoff section totals, with the honest 2022 runoff and the 2026 first round on the same sections as controls. Taken together they do not establish manipulation in the runoff counts; the tail, digit and correlation diagnostics stay inside the envelope the 2022 control sets. These diagnostics cannot certify an election as fraud-free.</p>
+        <h3 class="sect" data-i18n="meth_title">What each check found</h3>
+        <p class="sect-sub" data-i18n="meth_intro">I ran eleven groups of checks on the runoff totals by polling section. The 2022 runoff and the 2026 first round provide comparisons on the same sections. The turnout, digit and correlation patterns broadly resemble those comparisons. Together, the checks do not show manipulation, but cannot certify that an election was free of fraud.</p>
         <div class="m-list">
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m1_t">Votes above a descriptive turnout threshold</h5>
-              <p data-i18n="m1_b">The threshold of 92.5% is the runoff sample’s 99.5th turnout percentile. Sections above it contain 0.59% of ballots cast, including 0.71% of Lula’s and 0.46% of Flávio Bolsonaro’s votes. This is a descriptive tail count: it neither identifies fraudulent votes nor bounds their total.</p>
+              <h5 data-i18n="m1_t">Votes in sections with very high turnout</h5>
+              <p data-i18n="m1_b">I set the high-turnout cutoff at 92.5%: 99.5% of sections are at or below it. Sections above it hold 0.59% of ballots, including 0.71% of Lula’s votes and 0.46% of Flávio Bolsonaro’s. These are high-turnout votes, not a count or upper limit of fraudulent votes.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m1_d">The threshold of 92.5% is the runoff sample’s 99.5th turnout percentile. Sections above it contain 0.59% of ballots cast (749,738 voters), including 453,486 of Lula’s votes (0.71% of his total) and 275,583 of Bolsonaro’s (0.46%). This is a descriptive tail count: it neither identifies fraudulent votes nor bounds their total. A sample-defined percentile necessarily selects a small fraction of sections.</p>
+              <p data-i18n="m1_d">The 92.5% cutoff leaves 99.5% of runoff sections at or below it. Above it are 749,738 voters, or 0.59% of ballots, including 453,486 Lula votes (0.71% of his total) and 275,583 Bolsonaro votes (0.46%). A cutoff chosen this way always selects a small fraction of sections. It describes unusually high turnout; it does not identify fraudulent votes or limit how many could exist.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Turnout histogram: one smooth bell near 83%, boundary at 92.5%" loading="lazy">
-                  <figcaption data-i18n="fig1_cap">Turnout across sections: one bell, mode 82.75%, σ 5.7 pp; the boundary is the distribution’s own q99.5 (92.5%).</figcaption>
+                  <img src="img/en/turnout.png" data-fig="turnout" data-alt="fig1_alt" alt="Sections by turnout: one bell-shaped group near 83%, with a cutoff at 92.5%" loading="lazy">
+                  <figcaption data-i18n="fig1_cap">Turnout by section forms one bell-shaped group. The most common value is 82.75%; the standard deviation, a measure of spread, is 5.7 percentage points. The 92.5% cutoff leaves 99.5% of sections at or below it.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/shpilkin_lula.png" data-dfig="shpilkin_lula" data-alt="m1_c1_alt" alt="Lula's votes by turnout with the tail above the boundary highlighted" loading="lazy">
-                  <figcaption data-i18n="m1_c1">Lula’s votes by turnout: the zone above the boundary holds 453,486 votes (0.71% of his total). His share there is close to his national one — the tail does not favour him.</figcaption>
+                  <img src="img/details/en/shpilkin_lula.png" data-dfig="shpilkin_lula" data-alt="m1_c1_alt" alt="Lula votes by turnout, with sections above the cutoff highlighted" loading="lazy">
+                  <figcaption data-i18n="m1_c1">Lula’s votes by turnout. Sections above the cutoff hold 453,486 votes, or 0.71% of his total. His share there is close to his nationwide share.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/shpilkin_bolsonaro.png" data-dfig="shpilkin_bolsonaro" data-alt="m1_c2_alt" alt="Bolsonaro's votes by turnout with the tail highlighted" loading="lazy">
-                  <figcaption data-i18n="m1_c2">The same for Bolsonaro: above the boundary 275,583 votes (0.46% of his total) — a smaller tail than the winner’s.</figcaption>
+                  <img src="img/details/en/shpilkin_bolsonaro.png" data-dfig="shpilkin_bolsonaro" data-alt="m1_c2_alt" alt="Bolsonaro votes by turnout, with sections above the cutoff highlighted" loading="lazy">
+                  <figcaption data-i18n="m1_c2">Bolsonaro’s votes by turnout. Sections above the cutoff hold 275,583 votes, or 0.46% of his total, a smaller fraction than Lula’s.</figcaption>
                 </figure>
               </div>
             </div>
@@ -255,20 +255,20 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m2_t">Turnout × result scatter (“comet tail”)</h5>
-              <p data-i18n="m2_b">National weighted turnout–share correlations are +0.04 for Lula and −0.04 for Flávio Bolsonaro. Horizontal clouds, no rising tail. Neither a nonzero correlation proves fraud nor a near-zero value rules it out.</p>
+              <h5 data-i18n="m2_t">Does higher turnout come with a higher candidate share?</h5>
+              <p data-i18n="m2_b">Across Brazil, neither candidate’s vote share rises much with turnout: the weighted correlations are +0.04 for Lula and −0.04 for Flávio Bolsonaro. The dots do not form a rising “tail”. This pattern alone cannot confirm or rule out fraud.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m2_d">National weighted turnout–share correlations are +0.04 for Lula and −0.04 for Flávio Bolsonaro. Horizontal clouds, no rising tail. Neither a nonzero correlation proves fraud nor a near-zero value rules it out; geography and aggregation shape these relationships.</p>
+              <p data-i18n="m2_d">The nationwide weighted correlations are +0.04 for Lula and −0.04 for Flávio Bolsonaro. A value near zero means little overall relationship between turnout and vote share. The dots show no separate group with both high turnout and high support for either candidate. Geography and the way totals are grouped affect the pattern. A strong relationship would not prove fraud, and a weak one does not rule it out.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/comet.png" data-fig="comet" data-alt="fig2_alt" alt="Turnout vs share for Lula and Bolsonaro: horizontal clouds" loading="lazy">
-                  <figcaption data-i18n="fig2_cap">Turnout × candidate share of ballots cast, each dot a section. The dark line is the voter-weighted mean by turnout group — flat for both candidates.</figcaption>
+                  <img src="img/en/comet.png" data-fig="comet" data-alt="fig2_alt" alt="Turnout and support for Lula and Bolsonaro: nearly flat relationships" loading="lazy">
+                  <figcaption data-i18n="fig2_cap">Each dot is a section: turnout runs across, and the candidate’s share of all ballots runs up. The dark line averages sections within turnout groups, giving larger electorates more weight. It is nearly flat for both candidates.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/comet_scatter.png" data-dfig="comet_scatter" data-alt="m2_c1_alt" alt="Turnout vs share scatter, both candidates" loading="lazy">
-                  <figcaption data-i18n="m2_c1">The same scatter without aggregation lines: two horizontal clouds with the runoff’s characteristic spread — no high-turnout/high-share “comet”.</figcaption>
+                  <img src="img/details/en/comet_scatter.png" data-dfig="comet_scatter" data-alt="m2_c1_alt" alt="Turnout and support for both candidates, section by section" loading="lazy">
+                  <figcaption data-i18n="m2_c1">The section-by-section dots, without average lines. Neither candidate has a separate group with both very high turnout and very high support.</figcaption>
                 </figure>
               </div>
             </div>
@@ -276,20 +276,20 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m3_t">Election fingerprints (Klimek et al.)</h5>
-              <p data-i18n="m3_b">A descriptive two-Gaussian mixture on (turnout × share) does not separate an anomalous cluster for either candidate: the second component sits at normal turnout (≈81%) on the opposite side of the same geography. No cluster in the high-turnout/high-share corner.</p>
+              <h5 data-i18n="m3_t">Do sections form an unusual group? (Klimek method)</h5>
+              <p data-i18n="m3_b">I fitted a model with two groups of sections, using turnout and candidate share. Neither candidate has a separate group with both very high turnout and very high support. The second group has ordinary turnout, around 81%, and different candidate support.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m3_d">A descriptive two-Gaussian mixture on (turnout × share) does not separate an anomalous cluster for either candidate: Lula’s components sit at (79.9; 64.0) and (81.3; 41.3) with weight 0.61, Bolsonaro’s mirror the pattern. Both components are at normal turnout — the structure is the two-candidate split of the same regions, not an anomaly.</p>
+              <p data-i18n="m3_d">The two-group model uses bell-shaped groups (a two-Gaussian mixture). For Lula, their centres are (79.9% turnout; 64.0% support) and (81.3%; 41.3%), with a mixture weight of 0.61. Bolsonaro’s groups mirror them. Both have ordinary turnout. The model describes regional differences in support, without separating a high-turnout, high-support group that would merit a closer look.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/fingerprint_lula.png" data-dfig="fingerprint_lula" data-alt="m3_c1_alt" alt="2D density of turnout and Lula's share with mixture component means" loading="lazy">
-                  <figcaption data-i18n="m3_c1">Density of (turnout × Lula share), weighted by voters; circles mark the two mixture components — both at ≈80% turnout.</figcaption>
+                  <img src="img/details/en/fingerprint_lula.png" data-dfig="fingerprint_lula" data-alt="m3_c1_alt" alt="Turnout and Lula share, with centres of the two fitted groups" loading="lazy">
+                  <figcaption data-i18n="m3_c1">Sections grouped by turnout and Lula’s share, weighted by voters. Circles show the centres of the two fitted groups, both near 80% turnout.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/fingerprint_bolsonaro.png" data-dfig="fingerprint_bolsonaro" data-alt="m3_c2_alt" alt="The same fingerprint for Bolsonaro" loading="lazy">
-                  <figcaption data-i18n="m3_c2">The same for Bolsonaro: the mirror image of Lula’s fingerprint, second component again at normal turnout.</figcaption>
+                  <img src="img/details/en/fingerprint_bolsonaro.png" data-dfig="fingerprint_bolsonaro" data-alt="m3_c2_alt" alt="Turnout and Bolsonaro share, with the two fitted groups" loading="lazy">
+                  <figcaption data-i18n="m3_c2">The same plot for Bolsonaro mirrors Lula’s. Its second group also has ordinary turnout.</figcaption>
                 </figure>
               </div>
             </div>
@@ -297,16 +297,16 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m4_t">Round-number peaks (Kobak et al.)</h5>
-              <p data-i18n="m4_b">Whole-percent turnout appears in 1.68% of sections against 1.70% expected under the size-adjusted random null (z = −0.8); the leader’s share: z = −1.0; at multiples of 5, |z| ≤ 1.6. In documented falsification cases this statistic reaches dozens.</p>
+              <h5 data-i18n="m4_t">Too many round percentages? (Kobak method)</h5>
+              <p data-i18n="m4_b">Exactly whole-percent turnout occurs in 1.68% of sections, close to the 1.70% expected in random simulations that keep section sizes. The difference is small (z = −0.8). Lula’s share also shows no excess (z = −1.0); for multiples of 5, |z| ≤ 1.6. Documented falsification cases can produce scores in the dozens.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m4_d">Whole-percent turnout appears in 1.68% of sections against 1.70% expected under the size-adjusted random null (z = −0.8); Lula’s share landing on a whole percent: z = −1.0; at multiples of 5 — the stronger prior — |z| ≤ 1.6. In documented falsification cases this statistic reaches dozens.</p>
+              <p data-i18n="m4_d">I compare the number of whole percentages with random simulations that account for section size. Turnout lands on a whole percent in 1.68% of sections, versus 1.70% expected (z = −0.8). Lula’s whole-percent share gives z = −1.0. For percentages divisible by 5, the more targeted check, |z| ≤ 1.6. Here z measures how far the result is from the simulation average in units of its usual variation. Scores in documented falsification cases can reach dozens; these are small.</p>
               <div class="m-figs">
                 <figure class="fig">
                   <img src="img/details/en/integer_peaks.png" data-dfig="integer_peaks" data-alt="m4_c1_alt" alt="Section turnout histogram with verticals at multiples of 5 — no spikes" loading="lazy">
-                  <figcaption data-i18n="m4_c1">Left: the turnout histogram with verticals at multiples of 5 — no spikes at round values. Right: observed whole-percent share vs the Monte Carlo null.</figcaption>
+                  <figcaption data-i18n="m4_c1">Left: turnout, with lines at multiples of 5; no spikes stand out on those lines. Right: the frequency of whole percentages compared with random simulations.</figcaption>
                 </figure>
               </div>
             </div>
@@ -314,16 +314,16 @@
           <details class="m">
             <summary>
               <span class="badge warn" aria-hidden="true">≠</span><span class="m-head">
-              <h5 data-i18n="m5_t">Benford's second digit</h5>
-              <p data-i18n="m5_b">The second-digit test rejects its reference distributions (max deviation 2.15 pp; p &lt; 0.01) — the same formal rejection, with the same smooth monotone profile, as in the honest-2022-tested first round. Small counts and heterogeneous sections violate Benford assumptions; the rejection is structural, not a fraud signal.</p>
+              <h5 data-i18n="m5_t">Second digits in vote totals (Benford test)</h5>
+              <p data-i18n="m5_b">Second digits differ from the test’s expected patterns (largest gap 2.15 percentage points; p < 0.01). The first round showed a similar smooth pattern. Small vote counts and differences between sections can break the test’s assumptions, so this mismatch alone does not show fraud.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m5_d">The second-digit test on candidate counts rejects Benford’s expectation (max deviation 2.15 pp; theoretical p &lt; 0.01 for both candidates; against the smooth-count Monte Carlo null Lula passes at p = 1.0, Bolsonaro sits at the null’s resolution floor). This repeats the first round’s finding on the same sections: with hundreds of thousands of small-count sections, tiny structural biases swamp the theoretical distribution. The smooth profile proves neither fraud nor its absence.</p>
+              <p data-i18n="m5_d">Benford’s rule predicts how often each second digit should appear in suitable sets of numbers. These candidate totals differ from it: the largest gap is 2.15 percentage points, with theoretical p < 0.01 for both candidates. Against a separate smooth-count simulation, Lula gives p = 1.0; Bolsonaro is at the simulation’s lowest measurable p value. With hundreds of thousands of small-count sections, small departures from a model’s assumptions can trigger a rejection. The first round showed a similar pattern. A smooth digit profile proves neither fraud nor its absence.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/digit_benford2.png" data-dfig="digit_benford2" data-alt="m5_c1_alt" alt="Second-digit frequencies vs Benford expectation with Monte Carlo band" loading="lazy">
-                  <figcaption data-i18n="m5_c1">Second-digit frequencies of the pooled candidate counts vs Benford’s expectation with the 95% Monte Carlo band: a smooth monotone profile, no digit stands out.</figcaption>
+                  <img src="img/details/en/digit_benford2.png" data-dfig="digit_benford2" data-alt="m5_c1_alt" alt="Second digits compared with Benford and a 95% simulation band" loading="lazy">
+                  <figcaption data-i18n="m5_c1">Second digits in the combined candidate counts, compared with Benford’s rule. The shaded band contains 95% of simulated results. The pattern changes smoothly, without one digit standing out.</figcaption>
                 </figure>
               </div>
             </div>
@@ -331,16 +331,16 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m6_t">Last digit (Beber–Scacco)</h5>
-              <p data-i18n="m6_b">Last digits of counts ≥ 100: maximum deviation 0.56 pp from uniform, combined excess of digits 0 and 5 at most 0.45 pp. A flat profile within noise — the formal chi-square rejections at this sample size again track structural artefacts, not hand-crafted numbers.</p>
+              <h5 data-i18n="m6_t">Last digits in vote totals (Beber–Scacco test)</h5>
+              <p data-i18n="m6_b">For vote counts of at least 100, last digits are close to equally common: the largest difference is 0.56 percentage points. The combined excess of 0 and 5 is at most 0.45 points. The chi-square test still rejects equal frequencies in this large sample, but that alone cannot tell whether numbers were invented.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m6_d">Last digits of counts ≥ 100: maximum deviation 0.56 pp from uniform (Lula 0.53, Bolsonaro 0.56), combined excess of digits 0 and 5 at most 0.45 pp — the opposite of the concentration psychological rounding produces. A flat profile within noise.</p>
+              <p data-i18n="m6_d">I use counts of at least 100 votes. Compared with equally common last digits, the largest difference is 0.56 percentage points (Lula 0.53; Bolsonaro 0.56). Digits 0 and 5 together exceed their expected frequency by at most 0.45 points. There is no large pile-up on these round-number endings. The differences are small, but a small difference is not a guarantee that every number is genuine.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/digit_last.png" data-dfig="digit_last" data-alt="m6_c1_alt" alt="Last-digit frequencies vs uniform with Monte Carlo band" loading="lazy">
-                  <figcaption data-i18n="m6_c1">Last-digit frequencies vs uniform with the 95% Monte Carlo band: flat within noise, no 0/5 elevation.</figcaption>
+                  <img src="img/details/en/digit_last.png" data-dfig="digit_last" data-alt="m6_c1_alt" alt="Last digits compared with equal frequencies and a 95% simulation band" loading="lazy">
+                  <figcaption data-i18n="m6_c1">Last digits compared with equal frequencies and a band containing 95% of simulated results. Frequencies are close to flat, without a large excess of 0 or 5.</figcaption>
                 </figure>
               </div>
             </div>
@@ -348,16 +348,16 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m7_t">2D correlations by state (Kobak et al.)</h5>
-              <p data-i18n="m7_b">State-level turnout–share correlations for Lula range from −0.48 to +0.23; Bolsonaro’s are the mirror image (vote shares sum to one). Heterogeneous geography, the same pattern the first round and 2022 show — these correlations alone do not distinguish mobilisation from manipulation.</p>
+              <h5 data-i18n="m7_t">Turnout and candidate support within each state</h5>
+              <p data-i18n="m7_b">Within states, the relationship between turnout and Lula’s share varies: correlations range from −0.48 to +0.23. Bolsonaro’s values run the other way because their valid-vote shares sum to one. The first round and 2022 show similar variation. These relationships alone cannot separate voter mobilisation from manipulation.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m7_d">State-level turnout–share correlations for Lula range from −0.48 to +0.23; Bolsonaro’s are the mirror image (vote shares sum to one). The same spread the first round showed on these sections; nationally the correlation collapses to ≈0.</p>
+              <p data-i18n="m7_d">For Lula, state-level correlations between turnout and vote share range from −0.48 to +0.23. A negative value means less support where turnout is higher; a positive value means more support. Bolsonaro’s values mirror Lula’s because their valid-vote shares add to one. The first round showed a similar spread in these sections. These different local relationships mostly cancel out nationally, leaving a correlation near zero.</p>
               <div class="m-figs">
                 <figure class="fig">
                   <img src="img/details/en/correlations.png" data-dfig="correlations" data-alt="m7_c1_alt" alt="Correlation by state for both candidates" loading="lazy">
-                  <figcaption data-i18n="m7_c1">Left: national weighted correlations — near zero. Right: by state, Lula from −0.48 to +0.23, mirrored between the two candidates.</figcaption>
+                  <figcaption data-i18n="m7_c1">Left: the national relationships are near zero. Right: state values for Lula range from −0.48 to +0.23; Bolsonaro’s run in the opposite direction.</figcaption>
                 </figure>
               </div>
             </div>
@@ -365,20 +365,20 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m8_t">Outliers vs neighbours, Isolation Forest, duplicate protocols</h5>
-              <p data-i18n="m8_b">The within-municipality outlier rule flags 5,018 sections (1.005%) — the same baseline rate as the first round (0.93%) and the honest 2022. Isolation Forest flags 4,993 (~1% by its configured threshold). Duplicate identical result vectors: 2,348 rows in 1,172 groups — with a two-candidate race, small sections coincide naturally; the largest group holds 3 sections. Flags are audit candidates, not findings.</p>
+              <h5 data-i18n="m8_t">Unusual sections and repeated vote totals</h5>
+              <p data-i18n="m8_b">Comparing sections within each municipality flags 5,018 (1.005%), close to round 1 (0.93%) and the 2022 comparison. Isolation Forest, a computer method set to flag about 1%, selects 4,993. Identical result totals appear in 2,348 rows across 1,172 groups, at most 3 sections per group. Small sections can match by chance. These flags suggest places to check, not findings of fraud.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m8_d">The within-municipality outlier rule (robust z of turnout and share, |z|&gt;4) flags 5,018 sections (1.005%) — the baseline level this rule produces on clean data of this size, in both directions. Isolation Forest flags 4,993 (1% by construction). Duplicate identical result vectors: 2,348 rows in 1,172 groups, maximum group size 3 — in a two-candidate race many small sections share the same (voters, Lula, Bolsonaro, blank, null) vector by chance. Flags require contextual investigation; neither a flag nor its absence settles whether a section was manipulated.</p>
+              <p data-i18n="m8_d">The municipality comparison flags sections more than four usual units from the local pattern in turnout or support (robust |z|>4). It selects 5,018 sections (1.005%), with differences in both directions. Isolation Forest selects 4,993, about 1% by its setting. There are 2,348 identical rows in 1,172 groups, with at most 3 rows per group. The matching values are voters, Lula, Bolsonaro, blank and null votes. Such matches can occur by chance in small sections with only two candidates. Each flag needs local context; neither a flag nor its absence settles whether manipulation occurred.</p>
               <div class="m-figs">
                 <figure class="fig">
-                  <img src="img/details/en/neighbors_outliers.png" data-dfig="neighbors_outliers" data-alt="m8_c1_alt" alt="Robust z of turnout vs share with flagged sections" loading="lazy">
-                  <figcaption data-i18n="m8_c1">Robust z of turnout vs Lula’s share (within municipalities). Red — the 5,018 flagged sections (1.005%): scattered, no cluster.</figcaption>
+                  <img src="img/details/en/neighbors_outliers.png" data-dfig="neighbors_outliers" data-alt="m8_c1_alt" alt="Local deviations in turnout and Lula share, with flagged sections" loading="lazy">
+                  <figcaption data-i18n="m8_c1">How far each section’s turnout and Lula share are from its municipality’s usual pattern (robust z scores). The 5,018 flagged sections (1.005%) are red and scattered rather than grouped together.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/ml_anomalies.png" data-dfig="ml_anomalies" data-alt="m8_c2_alt" alt="Isolation Forest anomaly scores and top anomalies" loading="lazy">
-                  <figcaption data-i18n="m8_c2">Isolation Forest: the anomaly-score distribution with its 1% threshold and the top anomalies on the (turnout × share) plane — ordinary small sections, nothing patterned.</figcaption>
+                  <img src="img/details/en/ml_anomalies.png" data-dfig="ml_anomalies" data-alt="m8_c2_alt" alt="Computer-selected unusual sections and their scores" loading="lazy">
+                  <figcaption data-i18n="m8_c2">Isolation Forest’s scores, its cutoff selecting 1% of sections, and the highest-scoring sections plotted by turnout and support. These are mostly small sections without a distinct shared pattern.</figcaption>
                 </figure>
               </div>
             </div>
@@ -386,39 +386,39 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m9_t">Voting-machine generations (urna models)</h5>
-              <p data-i18n="m9_b">Four ballot-machine generations carried the runoff. The two-candidate split stays within 51.5–53.8% for Lula across generations with at least 4M registered voters; the oldest fleet (UE2013, 2.7% of the electorate) runs highest for Lula — deployment geography and electorate composition confound the comparison, so unadjusted differences neither establish a machine effect nor certify machine security.</p>
+              <h5 data-i18n="m9_t">Results by voting-machine model</h5>
+              <p data-i18n="m9_b">Four generations of voting machines were used. Among generations covering at least 4M registered voters, Lula’s share ranges from 51.5% to 53.8%. His highest share is on the oldest model, UE2013 (2.7% of voters). Models are used in different places with different electorates, so the raw differences do not show a machine effect or establish security.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m9_d">Four ballot-machine generations carried the runoff: UE2013 (12,455 sections), UE2015 (87,500), UE2020 (200,504), UE2022 (198,746). Two-candidate Lula share: 53.8% / 52.0% / 51.5% / 51.8% respectively — the newest machines are not the most pro-government, and the spread tracks the generations’ geographic deployment. Unadjusted differences neither establish a machine effect nor certify machine security.</p>
+              <p data-i18n="m9_d">The four models are UE2013 (12,455 sections), UE2015 (87,500), UE2020 (200,504) and UE2022 (198,746). Lula’s shares are 53.8%, 52.0%, 51.5% and 51.8%, respectively. His highest share is not on the newest machines. The models are used in different regions, so comparing these raw percentages mixes machine type with voter geography. It cannot establish a machine effect or certify machine security.</p>
             </div>
           </details>
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m10_t">Controls: the 2022 runoff and round 1 on the same sections</h5>
-              <p data-i18n="m10_b">The 2022 control’s own boundary (91.5%) nearly coincides with the runoff’s (92.5%). Runoff tails at the control boundary: 1.37% of Lula’s and 0.95% of Bolsonaro’s votes, against the honest 2022 runoff’s own 0.57–0.62%. Between the 2026 rounds turnout rose a median +1.91 pp with jumps of both directions (5,156 down / 409 up); four years apart, same stage: median +1.14 pp, 0.78% flagged. Nothing separates 2026 from its controls.</p>
+              <h5 data-i18n="m10_t">Comparison with 2022 and the first round</h5>
+              <p data-i18n="m10_b">The high-turnout cutoffs are close: 91.5% in the 2022 runoff and 92.5% here. Above the 2022 cutoff sit 1.37% of Lula’s votes and 0.95% of Bolsonaro’s, versus 0.57–0.62% in 2022 at its own cutoff. The middle turnout increase was +1.91 percentage points between the 2026 rounds, with unusual drops and rises (5,156 down; 409 up). Between the two runoffs it was +1.14 points, with 0.78% of sections flagged. These comparisons do not establish manipulation.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m10_d">The 2022 control’s own q99.5 boundary (91.5%) nearly coincides with the runoff’s (92.5%): the turnout distribution did not change shape, it shifted up with the +1.86 pp turnout. Runoff tails at the stricter control boundary: 1.37% of Lula’s and 0.95% of Bolsonaro’s votes — against the honest 2022 runoff’s own tails of 0.57–0.62% at its own boundary. Matched-section jumps: 2026 R1→R2 median Δturnout +1.91 pp, symmetric dispersion, 1.12% flagged |z|&gt;4 in both directions (5,156 down / 409 up — a stuffing signature would skew the opposite way); 2022-R2→2026-R2 median +1.14 pp, 0.78% flagged (2,864 up / 754 down), swing uniform across turnout deciles. Similarity is descriptive evidence, not proof of absence of manipulation.</p>
+              <p data-i18n="m10_d">The cutoff above 99.5% of sections is 91.5% in 2022 and 92.5% in 2026. The turnout shape is similar but shifted up, alongside the +1.86 percentage-point increase. At the stricter 2022 cutoff, the 2026 high-turnout votes are 1.37% of Lula’s total and 0.95% of Bolsonaro’s; 2022 gave 0.57–0.62% at its own cutoff. In matched sections, the middle turnout change (median) from round 1 to round 2 in 2026 is +1.91 points. The screen flags 1.12% with unusual changes (|z|>4): 5,156 down and 409 up. From the 2022 runoff to the 2026 runoff, the median is +1.14 points and 0.78% are flagged: 2,864 up and 754 down. Vote-share changes are similar across ten turnout groups. These similarities describe the data; they do not prove absence of fraud.</p>
               <div class="m-figs">
                 <figure class="fig wide">
                   <img src="img/en/control.png" data-fig="control" data-alt="fig10_alt" alt="Turnout distributions of 2022 and 2026, both rounds" loading="lazy">
                   <figcaption data-i18n="fig10_cap">Turnout distributions of both rounds of 2022 and 2026: same shape, 2026 shifted up (runoff turnout 80.78%).</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/control_jumps_2026.png" data-dfig="control_jumps_2026" data-alt="m10_c1_alt" alt="2026 R1 to runoff turnout change on matched sections" loading="lazy">
-                  <figcaption data-i18n="m10_c1">2026 R1 → runoff on the same sections (n=499,205): Δturnout median +1.91 pp, symmetric; flagged jumps 1.12% (409 up / 5,156 down); Δshares — the mirror swings of a real campaign.</figcaption>
+                  <img src="img/details/en/control_jumps_2026.png" data-dfig="control_jumps_2026" data-alt="m10_c1_alt" alt="Turnout changes between the 2026 rounds on matched sections" loading="lazy">
+                  <figcaption data-i18n="m10_c1">First round to runoff in 2026, on 499,205 matched sections. The median turnout increase is +1.91 percentage points. The screen flags 1.12% with large changes: 409 up and 5,156 down. The candidate-share plots show the two candidates moving in opposite directions.</figcaption>
                 </figure>
                 <figure class="fig">
                   <img src="img/details/en/control_jumps_2022r2.png" data-dfig="control_jumps_2022r2" data-alt="m10_c2_alt" alt="2022 runoff to 2026 runoff turnout change" loading="lazy">
-                  <figcaption data-i18n="m10_c2">2022 runoff → 2026 runoff (n=472,027 matched): Δturnout median +1.14 pp; jumps 0.78% (2,864 up / 754 down); Lula’s flagged-section share ≈ his national share — jump sections favour neither candidate.</figcaption>
+                  <figcaption data-i18n="m10_c2">2022 to 2026 runoff, on 472,027 matched sections. The median turnout increase is +1.14 percentage points; 0.78% have flagged changes (2,864 up; 754 down). Lula’s share in flagged sections is close to his national share.</figcaption>
                 </figure>
                 <figure class="fig">
-                  <img src="img/details/en/control_fingerprint_2026r2.png" data-dfig="control_fingerprint_2026r2" data-alt="m10_c3_alt" alt="Runoff fingerprints with mixture components marked" loading="lazy">
-                  <figcaption data-i18n="m10_c3">Runoff fingerprints: both mixture components at normal turnout for each candidate — no corner cluster, against the controls’ shape.</figcaption>
+                  <img src="img/details/en/control_fingerprint_2026r2.png" data-dfig="control_fingerprint_2026r2" data-alt="m10_c3_alt" alt="Runoff turnout and support with the two fitted groups" loading="lazy">
+                  <figcaption data-i18n="m10_c3">Turnout and support in the runoff, with the two modelled groups marked. Both have ordinary turnout; neither forms a separate high-turnout, high-support group.</figcaption>
                 </figure>
               </div>
             </div>
@@ -426,16 +426,16 @@
           <details class="m">
             <summary>
               <span class="badge neutral" aria-hidden="true">i</span><span class="m-head">
-              <h5 data-i18n="m11_t">Sensitivity to two synthetic perturbations (self-test)</h5>
-              <p data-i18n="m11_b">Injecting 1.87M synthetic ballots for the leader (10% of sections) grows the tail statistic 15.5-fold; “painting” turnout to whole percentages in 5% of sections moves the peaks statistic from z = −0.65 to z = 9. The battery demonstrably sees the mechanisms it looks for on this very data.</p>
+              <h5 data-i18n="m11_t">Can the checks spot two simulated changes?</h5>
+              <p data-i18n="m11_b">I added 1.87M simulated votes for the leader in 10% of sections: the high-turnout vote count grew 15.5-fold. Setting turnout to whole percentages in 5% of sections moved the round-number score from z = −0.65 to 9. The checks respond to these two changes; this does not test every kind of manipulation.</p>
               </span><span class="chev" aria-hidden="true">▸</span>
             </summary>
             <div class="m-details">
-              <p data-i18n="m11_d">Injecting 1,870,878 synthetic ballots for the leader under the specified scheme (10% of sections, above-threshold) grows his tail votes from 453,486 to 7,048,037 — a 15.5-fold signal. “Painting” turnout to whole percentages in 5% of sections (24,772 sections) moves the integer-peaks statistic from z = −0.65 to z = 9.0. These experiments demonstrate sensitivity to those specific mechanisms and parameters, not to every manipulation of comparable size.</p>
+              <p data-i18n="m11_d">In the specified simulation, I added 1,870,878 votes for the leader in 10% of sections, above the turnout cutoff. His high-turnout votes rose from 453,486 to 7,048,037, a factor of 15.5. In a second simulation, I set turnout to whole percentages in 5% of sections (24,772 sections); the round-number score rose from z = −0.65 to 9.0. These results show sensitivity to the specific changes tested, not to every manipulation of a similar size.</p>
               <div class="m-figs">
                 <figure class="fig wide">
-                  <img src="img/en/selftest.png" data-fig="selftest" data-alt="fig11_alt" alt="Self-test: tail growth and peaks response to injections" loading="lazy">
-                  <figcaption data-i18n="fig11_cap">Left: leader votes in the selected tail before/after the synthetic injection — ×15.5. Right: the round-number statistic before/after painting — z from −0.65 to 9.0.</figcaption>
+                  <img src="img/en/selftest.png" data-fig="selftest" data-alt="fig11_alt" alt="Response of the high-turnout and round-number checks to simulated changes" loading="lazy">
+                  <figcaption data-i18n="fig11_cap">Left: adding simulated votes increases the leader’s votes above the turnout cutoff 15.5-fold. Right: setting turnout to whole percentages changes the round-number score from z = −0.65 to 9.0.</figcaption>
                 </figure>
               </div>
             </div>
@@ -443,16 +443,16 @@
         </div>
       </section>
       <section>
-        <h3 class="sect" data-i18n="limitations_title">Scope and limitations</h3>
-        <p class="sect-sub" data-i18n="limitations_body">This is an analysis of published aggregate results, not a procedural audit of voting machines or ballot handling. The 2022 comparison is a reference election, not a known fraud-free ground truth. Statistical non-detection does not prove absence of manipulation; test assumptions, spatial dependence and multiple comparisons matter — the digit tests’ formal rejections are the standing example. Aggregate transfer estimates do not identify individual behaviour — a section-level split does not establish who any voter supported, and good aggregate fit does not validate individual rates. The intraday capture is sparse (13 snapshots) and its early per-state table lags the national ticker.</p>
+        <h3 class="sect" data-i18n="limitations_title">What these checks cannot tell us</h3>
+        <p class="sect-sub" data-i18n="limitations_body">I checked published totals, not voting-machine security or how ballots were handled. The 2022 election is a comparison, not a guarantee of clean data. Tests can miss manipulation. Their assumptions matter: nearby sections may behave alike, and running many tests raises the chance of a flag. The digit results illustrate these limits. Vote-transfer models use section totals and cannot tell how any person voted, even when they fit those totals well. I saved only 13 election-night snapshots; early state tables were behind the national total.</p>
         <div class="data">
-          <h3 class="sect" data-i18n="data_title">Data &amp; reproducibility</h3>
+          <h3 class="sect" data-i18n="data_title">Data, code and sources</h3>
           <ul>
-            <li data-i18n="d1">Runoff section dataset (published by TSE 26–27 October): 499,248 sections, all self-consistency checks zero, every headline total — ballots, blank, null, both candidates — matches the independent election-night portal capture to the exact vote. First-round section dataset and the 2022 control: the <a href="https://dadosabertos.tse.jus.br" rel="noopener">TSE open-data portal</a>.</li>
-            <li data-i18n="d2">64,256,232 + 59,826,041 valid votes, 1,430,496 blank and 2,723,305 null sum to 128,236,074 ballots cast (turnout 80.78% of 158,745,502 registered). The 13 election-night snapshots and their per-state decomposition are archived alongside the section files.</li>
-            <li data-i18n="d3">Toolkit: open-source election-forensics pipeline (Python, pandas / scikit-learn) implementing Shpilkin, Klimek, Kobak, Beber–Scacco, neighbour-outlier and Isolation-Forest methods, urna-model stratification, the 2022/round-1 controls and synthetic self-tests.</li>
+            <li data-i18n="d1">TSE published the runoff data on 26–27 October: 499,248 polling sections. All arithmetic checks pass. Total ballots, blank and null votes, and both candidates’ votes match my separate election-night portal record exactly. First-round data and the 2022 comparison are also on the <a href="https://dadosabertos.tse.jus.br" rel="noopener">TSE open-data portal</a>.</li>
+            <li data-i18n="d2">64,256,232 and 59,826,041 valid votes, plus 1,430,496 blank and 2,723,305 null votes, add to 128,236,074 ballots. That is 80.78% turnout among 158,745,502 registered voters. The archive includes the 13 election-night snapshots and their results by state.</li>
+            <li data-i18n="d3">The analysis code is open source (Python, pandas and scikit-learn). It includes the Shpilkin, Klimek, Kobak and Beber–Scacco methods, local comparisons, Isolation Forest, comparisons by machine model and election year, and checks with simulated changes.</li>
             <li data-i18n="d4">The <a href="https://github.com/renatyv/elections-fraud/tree/main/brazil-oct-2026-round-1">project repository</a> contains the capture, scripts, figures and the full technical report for the runoff.</li>
-            <li data-i18n="d5">See the <a href="../brazil-oct-2026-round-1/">first-round analysis</a> and <a href="https://github.com/renatyv/elections-fraud/blob/main/brazil-oct-2026-round-1/PARADOXES.md">PARADOXES.md</a> for the modelled 2022 transfers, the conditional scenario and its validation against this runoff. Interpret the outputs with the limitations above.</li>
+            <li data-i18n="d5">The <a href="../brazil-oct-2026-round-1/">first-round analysis</a> and <a href="https://github.com/renatyv/elections-fraud/blob/main/brazil-oct-2026-round-1/PARADOXES.md">PARADOXES.md</a> explain the 2022 transfer estimates, the scenario built from them, and how it compared with this runoff. The limits above apply to these estimates too.</li>
           </ul>
         </div>
       </section>

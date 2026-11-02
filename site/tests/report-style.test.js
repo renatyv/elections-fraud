@@ -4,7 +4,7 @@ const path = require('node:path');
 const { test } = require('node:test');
 
 const site = path.resolve(__dirname, '..');
-const openFindings = new Set(['serbia-oct-2026', 'bulgaria-oct-2026', 'usa-2024']);
+const openFindings = new Set(['serbia-oct-2026', 'bulgaria-oct-2026', 'bulgaria-oct-2026-round-2', 'usa-2024']);
 
 for (const directory of readdirSync(site, { withFileTypes: true })) {
   const file = path.join(site, directory.name, 'index.html');
